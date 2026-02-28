@@ -12,9 +12,7 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<link
-href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
 
@@ -55,36 +53,47 @@ color:#111;
 }
 
 
-/* HERO */
+/* HERO SLIDER */
 
 .hero{
-
 height:100vh;
-
-background:
-linear-gradient(rgba(49,46,129,.8),
-rgba(124,58,237,.8)),
-url("https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600");
-
-background-size:cover;
-background-position:center;
-
+position:relative;
+overflow:hidden;
 display:flex;
 align-items:center;
 justify-content:center;
-color:#fff;
+color:white;
 text-align:center;
+}
 
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:1s;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(
+rgba(49,46,129,.75),
+rgba(124,58,237,.75)
+);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:800px;
 }
 
 .hero h1{
 font-size:60px;
 font-weight:800;
-}
-
-.hero p{
-max-width:700px;
-margin:20px auto;
 }
 
 .btn{
@@ -94,6 +103,8 @@ padding:15px 30px;
 border-radius:40px;
 font-weight:700;
 text-decoration:none;
+display:inline-block;
+margin-top:20px;
 }
 
 
@@ -114,8 +125,11 @@ text-align:center;
 margin-bottom:30px;
 }
 
-
-/* CARD */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
 
 .card{
 background:#fff;
@@ -129,12 +143,6 @@ transition:.3s;
 transform:translateY(-5px);
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
 .bg{
 background:#eef2ff;
 }
@@ -145,10 +153,7 @@ background:#eef2ff;
 <body>
 
 
-<!-- HEADER -->
-
 <header>
-
 <div class="nav">
 
 <div class="logo">
@@ -162,7 +167,6 @@ background:#eef2ff;
 </div>
 
 </div>
-
 </header>
 
 
@@ -171,7 +175,13 @@ background:#eef2ff;
 
 <div class="hero">
 
-<div data-aos="fade-up">
+<img class="slide" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600" style="opacity:1">
+<img class="slide" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600">
+<img class="slide" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600">
+
+<div class="overlay"></div>
+
+<div class="hero-content" data-aos="fade-up">
 
 <h1>Rank Your Business In Google Maps</h1>
 
@@ -180,9 +190,7 @@ GMB Setup, GMB Ranking & Local SEO
 Kolkata, Dankuni, Uttarpara, Howrah, Hooghly
 </p>
 
-<a
-class="btn"
-href="https://wa.me/919330629573">
+<a href="https://wa.me/919330629573" class="btn">
 Get Free Consultation
 </a>
 
@@ -206,15 +214,12 @@ Get Free Consultation
 
 <p>
 
-Google Business Profile helps your business appear in Google Maps and Search.
-
-We provide GMB Setup, GMB Ranking and Local SEO in  
-Kolkata, Dankuni, Uttarpara, Howrah, Hooghly.
+We provide GMB Setup, GMB Ranking and Local SEO
+in Kolkata, Dankuni, Uttarpara, Howrah, Hooghly.
 
 </p>
 
 </div>
-
 
 <div data-aos="fade-left">
 
@@ -238,46 +243,14 @@ style="width:100%;border-radius:20px">
 
 <div class="container">
 
-<h2 data-aos="fade-up">Our Services</h2>
+<h2>Our Services</h2>
 
 <div class="grid">
 
-
-<div class="card" data-aos="zoom-in">
-
-<h3>GMB Setup</h3>
-
-<p>Complete Google Business Profile setup</p>
-
-</div>
-
-
-<div class="card" data-aos="zoom-in">
-
-<h3>GMB Ranking</h3>
-
-<p>Rank in Google Maps top results</p>
-
-</div>
-
-
-<div class="card" data-aos="zoom-in">
-
-<h3>Local SEO</h3>
-
-<p>Citations, reviews, keywords, signals</p>
-
-</div>
-
-
-<div class="card" data-aos="zoom-in">
-
-<h3>Lead Generation</h3>
-
-<p>Get real calls from Google</p>
-
-</div>
-
+<div class="card">GMB Setup</div>
+<div class="card">GMB Ranking</div>
+<div class="card">Local SEO</div>
+<div class="card">Lead Generation</div>
 
 </div>
 
@@ -293,35 +266,15 @@ style="width:100%;border-radius:20px">
 
 <div class="container">
 
-<h2>Contact Geolift</h2>
+<h2>Contact</h2>
 
-<form
-onsubmit="sendWhatsApp();return false;"
-style="max-width:500px;margin:auto">
+<form onsubmit="sendWhatsApp();return false;">
 
-<input id="name" placeholder="Name"
-style="width:100%;padding:12px;margin:10px 0">
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<textarea id="msg"></textarea>
 
-<input id="phone" placeholder="Phone"
-style="width:100%;padding:12px;margin:10px 0">
-
-<textarea id="msg"
-placeholder="Message"
-style="width:100%;padding:12px;margin:10px 0"></textarea>
-
-<button
-type="submit"
-style="
-background:#4f46e5;
-color:#fff;
-padding:14px;
-width:100%;
-border:none;
-border-radius:8px">
-
-Send on WhatsApp
-
-</button>
+<button type="submit">Send</button>
 
 </form>
 
@@ -331,56 +284,11 @@ Send on WhatsApp
 
 
 
-<!-- FOOTER -->
+<footer style="background:#111827;color:#fff;padding:60px 20px">
 
-<footer
-style="
-background:#111827;
-color:#fff;
-padding:60px 20px">
+<div style="max-width:1100px;margin:auto">
 
-<div
-style="
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px">
-
-
-<div>
-
-<img
-src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png"
-style="height:50px">
-
-<p>
-Local SEO & GMB Ranking  
-Kolkata, Dankuni, Uttarpara  
-Howrah, Hooghly
-</p>
-
-</div>
-
-
-<div>
-
-<h3>Links</h3>
-
-<p><a href="#" style="color:#fff">Home</a></p>
-<p><a href="#services" style="color:#fff">Services</a></p>
-<p><a href="#contact" style="color:#fff">Contact</a></p>
-
-</div>
-
-
-<div>
-
-<h3>Contact</h3>
-
-<p>+91 9330629573</p>
-
-</div>
+Geolift | Local SEO
 
 </div>
 
@@ -388,56 +296,38 @@ Howrah, Hooghly
 
 
 
-<!-- WHATSAPP -->
-
-<a
-href="https://wa.me/919330629573"
-style="
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center">
-
-<img
-src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-style="width:32px">
-
-</a>
-
-
-
 <script>
+
+let s=document.querySelectorAll(".slide")
+let i=0
+
+setInterval(()=>{
+
+s[i].style.opacity=0
+i++
+if(i>=s.length)i=0
+s[i].style.opacity=1
+
+},4000)
+
 
 function sendWhatsApp(){
 
-let n=document.getElementById("name").value
-let p=document.getElementById("phone").value
-let m=document.getElementById("msg").value
+let n=name.value
+let p=phone.value
+let m=msg.value
 
 window.open(
 "https://wa.me/919330629573?text="
-+"Name:"+n+"%0A"
-+"Phone:"+p+"%0A"
-+"Message:"+m)
++n+" "+p+" "+m)
 
 }
 
 </script>
 
 
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-AOS.init();
-</script>
-
+<script>AOS.init()</script>
 
 </body>
 </html>
