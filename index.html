@@ -424,48 +424,148 @@ transform:translateY(0);
 
 <!-- CONTACT -->
 
-<div id="contact"
-style="padding:100px 20px;background:white;">
+<section
+style="
+padding:120px 20px;
+background:#f4f6fb;
+font-family:Poppins,sans-serif;
+">
 
-<h2 style="text-align:center;font-size:40px;">
+<div
+style="
+max-width:800px;
+margin:auto;
+text-align:center;
+">
+
+<h2
+style="
+font-size:42px;
+font-weight:800;
+margin-bottom:10px;
+color:#111;
+">
 Contact
 </h2>
+
+<p
+style="
+color:#555;
+margin-bottom:40px;
+font-size:16px;
+">
+Get free consultation for GMB Ranking & Local SEO
+</p>
+
 
 
 <form
 onsubmit="sendWhatsApp();return false;"
-style="max-width:400px;margin:auto;text-align:center;">
+style="
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.3s;
+"
+onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 25px 50px rgba(0,0,0,.15)'"
+onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 15px 40px rgba(0,0,0,.08)'"
+>
 
 
-<input id="name"
-placeholder="Name"
-style="width:100%;padding:12px;margin:10px 0">
 
-<input id="phone"
-placeholder="Phone"
-style="width:100%;padding:12px;margin:10px 0">
+<input
+id="name"
+placeholder="Your Name"
+style="
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:15px;
+outline:none;
+transition:.3s;
+"
+onfocus="this.style.borderColor='#6366f1';this.style.boxShadow='0 0 8px rgba(99,102,241,.4)'"
+onblur="this.style.borderColor='#ddd';this.style.boxShadow='none'"
+>
 
-<textarea id="msg"
-placeholder="Message"
-style="width:100%;padding:12px;margin:10px 0"></textarea>
+
+
+<input
+id="phone"
+placeholder="Phone Number"
+style="
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:15px;
+outline:none;
+transition:.3s;
+"
+onfocus="this.style.borderColor='#6366f1';this.style.boxShadow='0 0 8px rgba(99,102,241,.4)'"
+onblur="this.style.borderColor='#ddd';this.style.boxShadow='none'"
+>
+
+
+
+<textarea
+id="msg"
+placeholder="Your Message"
+style="
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:15px;
+outline:none;
+height:120px;
+transition:.3s;
+"
+onfocus="this.style.borderColor='#6366f1';this.style.boxShadow='0 0 8px rgba(99,102,241,.4)'"
+onblur="this.style.borderColor='#ddd';this.style.boxShadow='none'"
+></textarea>
+
 
 
 <button
+type="submit"
 style="
-background:#4f46e5;
-color:white;
-padding:12px;
-border:none;
 width:100%;
-">
-
-Send
-
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:700;
+color:white;
+background:linear-gradient(45deg,#6366f1,#8b5cf6);
+cursor:pointer;
+transition:.3s;
+box-shadow:0 10px 20px rgba(99,102,241,.3);
+"
+onmouseover="
+this.style.transform='scale(1.05)';
+this.style.boxShadow='0 15px 30px rgba(99,102,241,.5)';
+"
+onmouseout="
+this.style.transform='scale(1)';
+this.style.boxShadow='0 10px 20px rgba(99,102,241,.3)';
+"
+>
+Send Message
 </button>
+
+
 
 </form>
 
 </div>
+
+</section>
 
 
 
