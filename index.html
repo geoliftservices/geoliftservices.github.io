@@ -17,184 +17,149 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 <body style="margin:0;font-family:Poppins;background:#f5f7ff;">
 
 
-<!-- ================= PREMIUM HEADER ================= -->
+<!-- ===== PREMIUM MOBILE FIRST HEADER ===== -->
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-margin:0;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;}
 
-/* HEADER */
-
-.header{
+header{
 position:fixed;
+width:100%;
 top:0;
 left:0;
-width:100%;
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(14px);
-box-shadow:0 4px 30px rgba(0,0,0,0.05);
-z-index:999;
-padding:18px 30px;
-transition:.3s ease;
+background:#ffffff;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+z-index:9999;
 }
 
-.header-container{
+.container{
 max-width:1200px;
 margin:auto;
 display:flex;
-align-items:center;
 justify-content:space-between;
+align-items:center;
+padding:15px 20px;
 }
-
-/* LOGO */
 
 .logo img{
-height:42px;
+height:38px;
 }
 
-/* NAVIGATION */
-
-.nav-menu{
+/* MOBILE MENU DEFAULT */
+nav{
+position:fixed;
+top:0;
+right:-100%;
+width:260px;
+height:100vh;
+background:white;
 display:flex;
-align-items:center;
-gap:35px;
+flex-direction:column;
+padding:120px 30px;
+gap:25px;
+transition:.4s ease;
+box-shadow:-10px 0 30px rgba(0,0,0,0.1);
 }
 
-.nav-menu a{
+nav a{
 text-decoration:none;
 color:#1e293b;
 font-weight:500;
-font-size:15px;
-position:relative;
-transition:.3s;
+font-size:16px;
 }
 
-/* Hover underline animation */
-.nav-menu a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:0%;
-height:2px;
+nav.active{
+right:0;
+}
+
+/* CTA */
+.cta{
+padding:10px 20px;
 background:#6366f1;
-transition:.3s;
-}
-
-.nav-menu a:hover::after{
-width:100%;
-}
-
-/* CTA BUTTON */
-
-.nav-cta{
-padding:10px 22px;
-background:#6366f1;
-color:white;
+color:white !important;
 border-radius:30px;
-font-size:14px;
 font-weight:600;
-text-decoration:none;
-transition:.3s;
-box-shadow:0 10px 25px rgba(99,102,241,0.35);
+text-align:center;
 }
 
-.nav-cta:hover{
-transform:translateY(-3px);
-box-shadow:0 15px 35px rgba(99,102,241,0.45);
-}
-
-/* MOBILE MENU ICON */
-
-.hamburger{
-display:none;
+/* HAMBURGER ALWAYS VISIBLE ON MOBILE */
+.menu-toggle{
+display:flex;
 flex-direction:column;
-cursor:pointer;
 gap:5px;
+cursor:pointer;
 }
 
-.hamburger span{
+.menu-toggle span{
 width:26px;
 height:3px;
 background:#1e293b;
 border-radius:3px;
-transition:.3s;
 }
 
-/* MOBILE */
+/* DESKTOP */
+@media(min-width:992px){
 
-@media(max-width:992px){
-
-.nav-menu{
-position:fixed;
-top:0;
-right:-100%;
-height:100vh;
-width:260px;
-background:white;
-flex-direction:column;
-align-items:flex-start;
-padding:120px 30px;
-gap:25px;
-box-shadow:-10px 0 40px rgba(0,0,0,0.1);
-transition:.4s ease;
-}
-
-.nav-menu.active{
+nav{
+position:static;
+height:auto;
+flex-direction:row;
+background:transparent;
+padding:0;
+box-shadow:none;
+width:auto;
 right:0;
 }
 
-.hamburger{
-display:flex;
+.menu-toggle{
+display:none;
+}
+
+nav a{
+font-size:15px;
 }
 
 }
 
 </style>
 
-<header class="header">
-
-<div class="header-container">
+<header>
+<div class="container">
 
 <div class="logo">
-<a href="#">
 <img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
-</a>
 </div>
 
-<nav class="nav-menu" id="navMenu">
+<nav id="menu">
 <a href="#">Home</a>
 <a href="#services">Services</a>
 <a href="#">About</a>
 <a href="#">Case Studies</a>
 <a href="#">Blog</a>
 <a href="#contact">Contact</a>
-<a href="#contact" class="nav-cta">Free Strategy Call</a>
+<a href="#contact" class="cta">Free Strategy Call</a>
 </nav>
 
-<div class="hamburger" onclick="toggleMenu()">
+<div class="menu-toggle" onclick="toggleMenu()">
 <span></span>
 <span></span>
 <span></span>
 </div>
 
 </div>
-
 </header>
 
 <script>
 function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("active");
+document.getElementById("menu").classList.toggle("active");
 }
 </script>
 
-<!-- Spacer so content doesn't hide behind fixed header -->
-<div style="height:95px;"></div>
+<div style="height:75px;"></div>
 
 
 <!-- HERO SLIDER -->
