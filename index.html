@@ -5,12 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Geolift | GMB Ranking & Local SEO Kolkata</title>
+<title>Geolift | GMB Ranking & Local SEO</title>
 
 <link rel="icon"
 href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a3b2-80f37302ffd6.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,9 +21,9 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Inter',sans-serif;
-background:#f4f6fb;
-color:#111827;
+font-family:'Poppins',sans-serif;
+background:#f5f7ff;
+color:#111;
 line-height:1.7;
 }
 
@@ -34,7 +34,7 @@ position:fixed;
 top:0;
 width:100%;
 background:#ffffff;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 z-index:999;
 }
 
@@ -55,7 +55,7 @@ height:45px;
 margin-left:20px;
 text-decoration:none;
 font-weight:600;
-color:#111827;
+color:#111;
 }
 
 .nav a:hover{
@@ -63,58 +63,86 @@ color:#6366f1;
 }
 
 
+
 /* HERO */
 
 .hero{
 
-height:100vh;
+min-height:100vh;
 
 background:
-linear-gradient(135deg,#4f46e5,#9333ea);
+linear-gradient(135deg,#312e81,#7c3aed);
+
+color:#fff;
 
 display:flex;
 align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-padding:20px;
+
+}
+
+.hero-wrap{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+padding:100px 20px 40px;
+
+align-items:center;
 
 }
 
 .hero h1{
+
 font-size:58px;
+
 font-weight:800;
+
 }
 
 .hero p{
-max-width:700px;
-margin:20px auto;
+
+margin-top:20px;
+
 font-size:18px;
+
 opacity:.9;
+
 }
 
 .btn{
 
 display:inline-block;
 
-background:#ffffff;
+margin-top:25px;
+
+background:#fff;
+
 color:#4f46e5;
 
-padding:15px 32px;
+padding:15px 30px;
 
-border-radius:30px;
-
-text-decoration:none;
+border-radius:40px;
 
 font-weight:700;
 
-margin-top:15px;
+text-decoration:none;
 
 }
 
-.btn:hover{
+.hero img{
 
-background:#e0e7ff;
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.3);
 
 }
 
@@ -122,41 +150,41 @@ background:#e0e7ff;
 /* SECTION */
 
 section{
+
 padding:90px 20px;
+
 }
 
 .container{
+
 max-width:1100px;
+
 margin:auto;
+
 }
 
 h2{
+
 font-size:40px;
-text-align:center;
+
 margin-bottom:30px;
+
+text-align:center;
+
 }
 
 
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-
-/* CARD */
+/* GLASS CARD */
 
 .card{
 
-background:#fff;
+background:rgba(255,255,255,.9);
 
 padding:30px;
 
-border-radius:16px;
+border-radius:18px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 15px 30px rgba(0,0,0,.08);
 
 transition:.3s;
 
@@ -165,6 +193,19 @@ transition:.3s;
 .card:hover{
 
 transform:translateY(-5px);
+
+}
+
+
+/* GRID */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
 
 }
 
@@ -208,7 +249,11 @@ background:#eef2ff;
 
 
 
+<!-- HERO -->
+
 <div class="hero" id="home">
+
+<div class="hero-wrap">
 
 <div>
 
@@ -216,8 +261,9 @@ background:#eef2ff;
 
 <p>
 
-GMB Setup, GMB Ranking & Local SEO service in  
-Kolkata, Dankuni, Uttarpara, Howrah, Hooghly.
+GMB Setup, GMB Ranking & Local SEO  
+in Kolkata, Dankuni, Uttarpara,  
+Howrah, Hooghly.
 
 </p>
 
@@ -230,6 +276,15 @@ Get Free Consultation
 
 </div>
 
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200">
+
+</div>
+
+</div>
+
 </div>
 
 <!-- ABOUT -->
@@ -238,9 +293,13 @@ Get Free Consultation
 
 <div class="container">
 
+<div class="grid">
+
+<div>
+
 <h2>Google Business Profile Optimization</h2>
 
-<p style="text-align:center;max-width:800px;margin:auto">
+<p>
 
 Google Business Profile is the best way to get local customers
 from Google Search and Google Maps.
@@ -251,11 +310,23 @@ and more customers.
 
 Geolift provides professional GMB Setup,
 GMB Ranking and Local SEO service in
-
 Kolkata, Dankuni, Uttarpara,
 Howrah, Hooghly and nearby areas.
 
 </p>
+
+</div>
+
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200"
+style="width:100%;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2)">
+
+</div>
+
+</div>
 
 </div>
 
@@ -280,8 +351,8 @@ Howrah, Hooghly and nearby areas.
 
 <p>
 
-Complete Google Business Profile setup
-with category optimization,
+Complete Google Business Profile setup,
+category optimization,
 keyword placement,
 image optimization,
 and authority signals.
@@ -302,8 +373,6 @@ We optimize your profile to rank in
 Top 3 Google Map results
 for high intent keywords.
 
-More ranking = more calls.
-
 </p>
 
 </div>
@@ -319,9 +388,9 @@ More ranking = more calls.
 Local SEO includes
 citations,
 reviews,
-keyword signals,
-location relevance,
-and website optimization.
+keywords,
+location signals,
+and website authority.
 
 </p>
 
@@ -335,11 +404,11 @@ and website optimization.
 
 <p>
 
-We focus on enquiries,
-not traffic.
+Our goal is real enquiries,
+not just traffic.
 
-Our goal is to bring
-real customers from Google.
+We help you get customers
+from Google search.
 
 </p>
 
@@ -371,8 +440,8 @@ real customers from Google.
 
 <p>
 
-No fake promises.
-Only real Google Business optimization.
+No fake promises,
+only real ranking methods.
 
 </p>
 
@@ -385,8 +454,8 @@ Only real Google Business optimization.
 
 <p>
 
-We focus only on Local SEO,
-GMB ranking,
+Focused on GMB,
+Local SEO,
 and lead generation.
 
 </p>
@@ -400,8 +469,8 @@ and lead generation.
 
 <p>
 
-Safe methods
-for stable ranking.
+Safe optimization
+for stable results.
 
 </p>
 
@@ -410,12 +479,12 @@ for stable ranking.
 
 <div class="card">
 
-<h3>✔ More Enquiries</h3>
+<h3>✔ More Calls</h3>
 
 <p>
 
-Our goal is calls,
-not just traffic.
+Ranking higher means
+more enquiries.
 
 </p>
 
@@ -447,7 +516,7 @@ not just traffic.
 
 <p>
 
-We check your profile,
+We check profile,
 keywords,
 and competitors.
 
@@ -463,7 +532,6 @@ and competitors.
 <p>
 
 Profile,
-description,
 images,
 keywords,
 category.
@@ -481,7 +549,7 @@ category.
 
 Citations,
 reviews,
-location signals.
+signals.
 
 </p>
 
@@ -523,97 +591,59 @@ in Google Maps.
 ✔ More calls  
 ✔ More enquiries  
 ✔ More customers  
-✔ No daily ads cost  
-✔ Long term results  
+✔ No ads cost  
+✔ Long term ranking  
 ✔ Local authority  
 
 If your business appears in top results,
 you get customers automatically.
 
-Local SEO is one of the best marketing methods.
-
 </p>
 
 </div>
 
 </section>
 
-<!-- LOCATIONS -->
-
-<section class="bg">
-
-<div class="container">
-
-<h2>Service Areas</h2>
-
-<p style="text-align:center;max-width:900px;margin:auto">
-
-We provide GMB Ranking and Local SEO service in
-
-Kolkata,
-Dankuni,
-Uttarpara,
-Howrah,
-Hooghly,
-Serampore,
-Bally,
-Rishra,
-Konnagar,
-Barrackpore,
-Belur,
-Chandannagar,
-Bhadreswar.
-
-If your business is located in these areas,
-we can help you rank in Google Maps
-and generate more enquiries.
-
-</p>
-
-</div>
-
-</section>
-
-
-
-<!-- LONG SEO CONTENT -->
+<!-- ABOUT -->
 
 <section>
 
 <div class="container">
 
-<h2>Local SEO & GMB Ranking Service</h2>
+<div class="grid">
+
+<div>
+
+<h2>Google Business Profile Optimization</h2>
 
 <p>
 
-Most customers search on Google before calling any business.
+Google Business Profile is the best way to get local customers
+from Google Search and Google Maps.
 
-If your business is not visible,
-you lose customers.
+If your business ranks in top results,
+you get more calls, more enquiries,
+and more customers.
 
-Google Business Profile optimization helps
-your business appear in local search results.
-
-Ranking depends on:
-
-Profile optimization  
-Keywords  
-Reviews  
-Location signals  
-Citations  
-Website authority  
-
-Geolift provides complete Local SEO solution
-for contractors,
-manufacturers,
-suppliers,
-consultants,
-and local service providers.
-
-Our goal is to generate real enquiries,
-not just traffic.
+Geolift provides professional GMB Setup,
+GMB Ranking and Local SEO service in
+Kolkata, Dankuni, Uttarpara,
+Howrah, Hooghly and nearby areas.
 
 </p>
+
+</div>
+
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200"
+style="width:100%;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.2)">
+
+</div>
+
+</div>
 
 </div>
 
@@ -621,191 +651,272 @@ not just traffic.
 
 
 
-<!-- FAQ -->
+<!-- SERVICES -->
+
+<section class="bg" id="services">
+
+<div class="container">
+
+<h2>Our Services</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>GMB Setup</h3>
+
+<p>
+
+Complete Google Business Profile setup,
+category optimization,
+keyword placement,
+image optimization,
+and authority signals.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>GMB Ranking</h3>
+
+<p>
+
+We optimize your profile to rank in
+Top 3 Google Map results
+for high intent keywords.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Local SEO</h3>
+
+<p>
+
+Local SEO includes
+citations,
+reviews,
+keywords,
+location signals,
+and website authority.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Lead Generation</h3>
+
+<p>
+
+Our goal is real enquiries,
+not just traffic.
+
+We help you get customers
+from Google search.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- WHY CHOOSE -->
+
+<section>
+
+<div class="container">
+
+<h2>Why Choose Geolift</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>✔ Real Optimization</h3>
+
+<p>
+
+No fake promises,
+only real ranking methods.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>✔ Local SEO Expert</h3>
+
+<p>
+
+Focused on GMB,
+Local SEO,
+and lead generation.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>✔ Long Term Ranking</h3>
+
+<p>
+
+Safe optimization
+for stable results.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>✔ More Calls</h3>
+
+<p>
+
+Ranking higher means
+more enquiries.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROCESS -->
 
 <section class="bg">
 
 <div class="container">
 
-<h2>Frequently Asked Questions</h2>
+<h2>Our Ranking Process</h2>
 
-<p><b>How long does GMB ranking take?</b><br>
-Usually 1–3 months depending on competition.</p>
-
-<p><b>Will my business rank in top 3?</b><br>
-We optimize for best ranking,
-but results depend on competition.</p>
-
-<p><b>Do I need website?</b><br>
-Website helps but not always required.</p>
-
-<p><b>Is Local SEO better than ads?</b><br>
-Yes, SEO gives long term results.</p>
-
-<p><b>How to start?</b><br>
-Contact us on WhatsApp.</p>
-
-</div>
-
-</section>
+<div class="grid">
 
 
+<div class="card">
 
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<h2>Contact Geolift</h2>
-
-<form
-onsubmit="sendWhatsApp();return false;"
-style="max-width:500px;margin:auto">
-
-<input
-id="name"
-placeholder="Name"
-style="width:100%;padding:12px;margin:10px 0">
-
-<input
-id="phone"
-placeholder="Phone"
-style="width:100%;padding:12px;margin:10px 0">
-
-<textarea
-id="msg"
-placeholder="Message"
-style="width:100%;padding:12px;margin:10px 0"></textarea>
-
-<button
-type="submit"
-style="
-background:#4f46e5;
-color:#fff;
-padding:14px;
-width:100%;
-border:none;
-border-radius:8px">
-
-Send on WhatsApp
-
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer
-style="
-background:#111827;
-color:#fff;
-padding:60px 20px">
-
-<div
-style="
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:40px">
-
-
-<div>
-
-<img
-src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png"
-style="height:50px;margin-bottom:10px">
+<h3>Audit</h3>
 
 <p>
 
-Local SEO & GMB Ranking service in  
-Kolkata, Dankuni, Uttarpara,  
-Howrah, Hooghly.
+We check profile,
+keywords,
+and competitors.
 
 </p>
 
 </div>
 
 
+<div class="card">
 
-<div>
+<h3>Optimization</h3>
 
-<h3>Quick Links</h3>
+<p>
 
-<p><a href="#home" style="color:#fff">Home</a></p>
-<p><a href="#services" style="color:#fff">Services</a></p>
-<p><a href="#contact" style="color:#fff">Contact</a></p>
+Profile,
+images,
+keywords,
+category.
 
-</div>
-
-
-
-<div>
-
-<h3>Contact</h3>
-
-<p>+91 9330629573</p>
-
-<p>Kolkata / Dankuni / Uttarpara</p>
+</p>
 
 </div>
 
 
+<div class="card">
+
+<h3>Authority</h3>
+
+<p>
+
+Citations,
+reviews,
+signals.
+
+</p>
+
 </div>
 
-</footer>
+
+<div class="card">
+
+<h3>Ranking</h3>
+
+<p>
+
+Improve position
+in Google Maps.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
 
 
 
-<!-- WHATSAPP -->
+<!-- BENEFITS -->
 
-<a
-href="https://wa.me/919330629573"
-style="
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center">
+<section>
 
-<img
-src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-style="width:32px">
+<div class="container">
 
-</a>
+<h2>Benefits of Google Maps Ranking</h2>
 
+<p style="text-align:center;max-width:800px;margin:auto">
 
+✔ More calls  
+✔ More enquiries  
+✔ More customers  
+✔ No ads cost  
+✔ Long term ranking  
+✔ Local authority  
 
-<script>
+If your business appears in top results,
+you get customers automatically.
 
-function sendWhatsApp(){
+</p>
 
-let n=document.getElementById("name").value
-let p=document.getElementById("phone").value
-let m=document.getElementById("msg").value
+</div>
 
-window.open(
-"https://wa.me/919330629573?text="
-+"Name:"+n+"%0A"
-+"Phone:"+p+"%0A"
-+"Message:"+m)
-
-}
-
-</script>
-
-
-</body>
-</html>
+</section>
