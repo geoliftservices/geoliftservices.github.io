@@ -1,23 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Geolift | Local SEO & GMB Ranking</title>
-
-<link rel="icon"
-href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a3b2-80f37302ffd6.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-</head>
-
-<body style="margin:0;font-family:Poppins;background:#f5f7ff;">
-
-
-
 <!-- PREMIUM HEADER -->
 
 <div
@@ -29,6 +9,7 @@ width:100%;
 background:white;
 box-shadow:0 4px 20px rgba(0,0,0,.08);
 z-index:999;
+font-family:Poppins;
 ">
 
 <div
@@ -38,94 +19,75 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 20px;
-flex-wrap:wrap;
+padding:10px 15px;
 ">
 
 <!-- LOGO -->
 
 <img
 src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png"
-style="
-height:42px;
-">
+style="height:40px"
+>
 
+
+<!-- MENU BUTTON (MOBILE) -->
+
+<div
+onclick="toggleMenu()"
+style="
+font-size:26px;
+cursor:pointer;
+display:block;
+"
+id="menuBtn"
+>
+☰
+</div>
 
 
 <!-- MENU -->
 
 <div
+id="menu"
 style="
-display:flex;
-align-items:center;
-gap:25px;
-font-size:16px;
-font-weight:600;
-flex-wrap:wrap;
+position:absolute;
+top:60px;
+right:0;
+background:white;
+width:200px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+border-radius:10px;
+display:none;
+flex-direction:column;
+padding:10px;
 ">
 
 <a href="#"
-style="
-text-decoration:none;
-color:#111;
-transition:.3s;
-"
-onmouseover="this.style.color='#6366f1'"
-onmouseout="this.style.color='#111'"
->
+style="padding:10px;text-decoration:none;color:#111;font-weight:600">
 Home
 </a>
 
-
 <a href="#services"
-style="
-text-decoration:none;
-color:#111;
-transition:.3s;
-"
-onmouseover="this.style.color='#6366f1'"
-onmouseout="this.style.color='#111'"
->
+style="padding:10px;text-decoration:none;color:#111;font-weight:600">
 Services
 </a>
 
-
 <a href="#contact"
-style="
-text-decoration:none;
-color:#111;
-transition:.3s;
-"
-onmouseover="this.style.color='#6366f1'"
-onmouseout="this.style.color='#111'"
->
+style="padding:10px;text-decoration:none;color:#111;font-weight:600">
 Contact
 </a>
-
-
-
-<!-- BUTTON -->
 
 <a
 href="https://wa.me/919330629573"
 style="
+margin-top:5px;
 background:linear-gradient(45deg,#6366f1,#8b5cf6);
 color:white;
-padding:8px 18px;
-border-radius:25px;
+padding:8px;
+text-align:center;
+border-radius:20px;
 text-decoration:none;
-font-size:14px;
 font-weight:600;
-transition:.3s;
-box-shadow:0 6px 15px rgba(99,102,241,.4);
-"
-onmouseover="
-this.style.transform='scale(1.05)';
-this.style.boxShadow='0 10px 25px rgba(99,102,241,.6)';
-"
-onmouseout="
-this.style.transform='scale(1)';
-this.style.boxShadow='0 6px 15px rgba(99,102,241,.4)';
 "
 >
 Free Audit
@@ -138,10 +100,25 @@ Free Audit
 </div>
 
 
+<div style="height:60px"></div>
 
-<!-- HEADER SPACE -->
 
-<div style="height:70px"></div>
+
+<script>
+
+function toggleMenu(){
+
+var m = document.getElementById("menu");
+
+if(m.style.display=="block"){
+m.style.display="none";
+}else{
+m.style.display="block";
+}
+
+}
+
+</script>
 
 
 
