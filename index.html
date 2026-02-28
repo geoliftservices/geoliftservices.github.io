@@ -569,17 +569,276 @@ Send Message
 
 
 
-<!-- FOOTER -->
+<!-- ================= PREMIUM FOOTER ================= -->
 
-<div style="
-background:#111827;
-color:white;
-padding:50px;
+<style>
+
+.footer{
+background:linear-gradient(180deg,#f8faff,#eef2ff);
+padding:80px 20px 30px;
+font-family:Poppins,sans-serif;
+color:#1e293b;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:40px;
+}
+
+.footer-logo img{
+height:45px;
+margin-bottom:15px;
+}
+
+.footer-tagline{
+font-size:14px;
+line-height:1.6;
+margin-bottom:15px;
+color:#475569;
+}
+
+.footer-phone{
+font-weight:700;
+margin:8px 0;
+}
+
+.footer-email{
+font-size:14px;
+margin-bottom:15px;
+}
+
+.google-badge img{
+height:45px;
+margin-top:10px;
+}
+
+.footer h4{
+font-size:16px;
+margin-bottom:18px;
+font-weight:700;
+color:#111827;
+}
+
+.footer ul{
+list-style:none;
+padding:0;
+}
+
+.footer ul li{
+margin-bottom:10px;
+}
+
+.footer ul li a{
+text-decoration:none;
+color:#475569;
+font-size:14px;
+transition:.3s;
+}
+
+.footer ul li a:hover{
+color:#6366f1;
+padding-left:4px;
+}
+
+.location-block{
+margin-bottom:20px;
+}
+
+.location-block strong{
+display:block;
+font-size:14px;
+color:#111827;
+margin-bottom:5px;
+}
+
+.footer-social{
+margin-top:15px;
+}
+
+.footer-social a{
+display:inline-block;
+margin-right:10px;
+font-size:18px;
+color:#6366f1;
+text-decoration:none;
+transition:.3s;
+}
+
+.footer-social a:hover{
+transform:scale(1.2);
+}
+
+.footer-bottom{
+margin-top:50px;
+padding-top:20px;
+border-top:1px solid #e2e8f0;
 text-align:center;
-">
+font-size:13px;
+color:#64748b;
+}
 
-Geolift | Local SEO & GMB Ranking
+.footer-legal{
+margin-top:10px;
+}
 
+.footer-legal a{
+margin:0 10px;
+font-size:13px;
+text-decoration:none;
+color:#64748b;
+transition:.3s;
+}
+
+.footer-legal a:hover{
+color:#6366f1;
+}
+
+.back-to-top{
+position:fixed;
+right:20px;
+bottom:90px;
+background:#6366f1;
+color:white;
+width:45px;
+height:45px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(99,102,241,.3);
+transition:.3s;
+}
+
+.back-to-top:hover{
+transform:translateY(-4px);
+}
+
+@media(max-width:768px){
+.footer{
+text-align:center;
+}
+.footer-social{
+margin-top:20px;
+}
+}
+
+</style>
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- COMPANY INFO -->
+<div>
+<div class="footer-logo">
+<img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
+</div>
+
+<p class="footer-tagline">
+We help local businesses dominate Google Maps and generate real enquiries.
+</p>
+
+<div class="footer-phone">
+📞 +91 9330629573
+</div>
+
+<div class="footer-email">
+✉ contact.geolift@gmail.com
+</div>
+
+<div class="google-badge">
+<img src="https://www.gstatic.com/partners/badge/images/2023/PartnerBadgeClickable.svg">
+</div>
+
+<div class="footer-social">
+<a href="#">🌐</a>
+<a href="#">📘</a>
+<a href="#">📸</a>
+<a href="#">💼</a>
+<a href="#">▶</a>
+</div>
+
+</div>
+
+
+<!-- QUICK LINKS -->
+<div>
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Case Studies</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+
+
+<!-- SERVICES -->
+<div>
+<h4>Our Services</h4>
+<ul>
+<li><a href="#">Google Business Profile Setup</a></li>
+<li><a href="#">Google Maps Ranking</a></li>
+<li><a href="#">Local SEO Optimization</a></li>
+<li><a href="#">Citation Building</a></li>
+<li><a href="#">Reputation Management</a></li>
+<li><a href="#">Lead Generation SEO</a></li>
+</ul>
+</div>
+
+
+<!-- LOCATIONS -->
+<div>
+<h4>Our Locations</h4>
+
+<div class="location-block">
+<strong>KOLKATA</strong>
+West Bengal, India
+</div>
+
+<div class="location-block">
+<strong>DANKUNI</strong>
+West Bengal, India
+</div>
+
+<div class="location-block">
+<strong>UTTARPARA</strong>
+West Bengal, India
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BOTTOM -->
+
+<div class="footer-bottom">
+
+© 2026 Geolift | Local SEO & GMB Ranking Experts
+
+<div class="footer-legal">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms & Conditions</a>
+<a href="#">Disclaimer</a>
+<a href="#">Sitemap</a>
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+<div class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
 </div>
 
 
