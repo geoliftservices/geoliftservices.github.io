@@ -3,302 +3,424 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeoLift | GMB & Local SEO Experts</title>
+<title>Geolift | Local SEO & GMB Ranking</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
+/* ---------------- GLOBAL ---------------- */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:#f5f7fb;
-    color:#222;
+font-family:Poppins,sans-serif;
+background:#f4f6fb;
+color:#111;
 }
 
-/* ================= HEADER ================= */
+.container{
+max-width:1150px;
+margin:auto;
+padding:0 20px;
+}
+
+/* ---------------- HEADER ---------------- */
 
 header{
-    width:100%;
-    background:#fff;
-    padding:15px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:999;
-    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:fixed;
+width:100%;
+background:white;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:999;
 }
 
-.logo{
-    font-size:24px;
-    font-weight:700;
-    color:#1a1a1a;
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
 }
 
-.logo span{
-    color:#4f46e5;
+.nav img{
+height:45px;
 }
 
-/* Desktop Nav */
-nav{
-    display:flex;
-    gap:30px;
+.nav a{
+margin-left:25px;
+text-decoration:none;
+color:#111;
+font-weight:600;
+transition:.3s;
 }
 
-nav a{
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-    transition:0.3s;
+.nav a:hover{
+color:#6366f1;
 }
 
-nav a:hover{
-    color:#4f46e5;
-}
-
-/* Hamburger */
-.menu-toggle{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* ================= HERO ================= */
+/* ---------------- HERO ---------------- */
 
 .hero{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 20px;
-    color:#fff;
+height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+transition:opacity 1s ease-in-out;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7));
 }
 
 .hero-content{
-    max-width:800px;
+position:relative;
+z-index:2;
+max-width:800px;
 }
 
 .hero h1{
-    font-size:50px;
-    font-weight:700;
-    margin-bottom:20px;
+font-size:55px;
+margin-bottom:20px;
 }
 
 .hero p{
-    font-size:18px;
-    margin-bottom:30px;
+font-size:18px;
+margin-bottom:30px;
 }
 
 .btn{
-    padding:14px 30px;
-    background:#fff;
-    color:#4f46e5;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:0.3s;
+display:inline-block;
+padding:14px 28px;
+background:white;
+color:#6366f1;
+font-weight:700;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
 }
 
 .btn:hover{
-    background:#4f46e5;
-    color:#fff;
+transform:scale(1.05);
 }
 
-/* ================= FOOTER ================= */
+/* ---------------- SERVICES ---------------- */
 
-footer{
-    background:#0f172a;
-    color:#ccc;
-    padding:50px 8% 20px;
+section{
+padding:100px 0;
 }
 
-.footer-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-    gap:30px;
-    margin-bottom:30px;
+.section-title{
+text-align:center;
+margin-bottom:60px;
 }
 
-/* Smaller premium boxes */
+.section-title h2{
+font-size:40px;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.section-title p{
+color:#555;
+max-width:700px;
+margin:auto;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,.15);
+}
+
+.card h3{
+margin:15px 0;
+}
+
+/* ---------------- CONTACT ---------------- */
+
+.contact-form{
+max-width:700px;
+margin:auto;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:8px;
+border:1px solid #ddd;
+font-family:Poppins;
+}
+
+.contact-form button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+background:linear-gradient(45deg,#6366f1,#8b5cf6);
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact-form button:hover{
+transform:scale(1.05);
+}
+
+/* ================= PREMIUM FOOTER ================= */
+
+.footer{
+background:linear-gradient(to bottom,#f8f9ff,#eef1ff);
+padding:80px 0 30px;
+margin-top:80px;
+}
+
+.footer-top{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+flex-wrap:wrap;
+gap:40px;
+}
+
+.footer-brand{
+max-width:320px;
+}
+
+.footer-brand img{
+height:45px;
+margin-bottom:15px;
+}
+
+.footer-brand p{
+color:#555;
+font-size:14px;
+line-height:1.6;
+}
+
+/* Small Floating Boxes */
+
 .footer-box{
-    background:#111827;
-    padding:25px;
-    border-radius:12px;
-    transition:0.3s;
+background:white;
+padding:22px;
+border-radius:16px;
+width:240px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
 }
 
 .footer-box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-.footer-logo{
-    font-size:22px;
-    font-weight:700;
-    margin-bottom:15px;
-    color:#fff;
-}
-
-.footer-logo span{
-    color:#6366f1;
+transform:translateY(-8px);
+box-shadow:0 25px 50px rgba(0,0,0,.15);
 }
 
 .footer-box h4{
-    margin-bottom:15px;
-    color:#fff;
+margin-bottom:15px;
+font-size:16px;
 }
 
-.footer-box p,
 .footer-box a{
-    font-size:14px;
-    line-height:1.6;
-    color:#ccc;
-    text-decoration:none;
+display:block;
+text-decoration:none;
+color:#555;
+font-size:14px;
+margin-bottom:8px;
+transition:.3s;
 }
 
 .footer-box a:hover{
-    color:#6366f1;
+color:#6366f1;
+transform:translateX(5px);
+}
+
+.footer-btn{
+margin-top:10px;
+display:block;
+text-align:center;
+padding:10px;
+background:linear-gradient(45deg,#6366f1,#8b5cf6);
+color:white;
+border-radius:30px;
+font-size:14px;
+text-decoration:none;
+transition:.3s;
+}
+
+.footer-btn:hover{
+transform:scale(1.05);
 }
 
 .footer-bottom{
-    text-align:center;
-    border-top:1px solid #1f2937;
-    padding-top:15px;
-    font-size:13px;
-    color:#888;
+margin-top:50px;
+text-align:center;
+font-size:13px;
+color:#555;
 }
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    font-size:24px;
-    text-decoration:none;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-/* ================= MOBILE ================= */
 
 @media(max-width:768px){
-
-    nav{
-        position:absolute;
-        top:70px;
-        left:0;
-        width:100%;
-        background:#fff;
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
-        padding:20px 0;
-        display:none;
-        box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    nav.active{
-        display:flex;
-    }
-
-    .menu-toggle{
-        display:block;
-    }
-
-    .hero h1{
-        font-size:36px;
-    }
-
+.hero h1{font-size:38px;}
+.footer-top{flex-direction:column;}
+.footer-box{width:100%;}
 }
 
 </style>
 </head>
+
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
-    <div class="logo">Geo<span>Lift</span></div>
-
-    <nav id="nav">
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<div class="container nav">
+<img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
 </header>
 
-<!-- ================= HERO ================= -->
-
 <section class="hero">
-    <div class="hero-content">
-        <h1>Rank Your Business In Google Maps</h1>
-        <p>GMB Setup, GMB Ranking & Local SEO Services in Kolkata, Dankuni, Uttarpara, Howrah & Hooghly</p>
-        <a href="#contact" class="btn">Get Free Consultation</a>
-    </div>
+<img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1600" class="slide active">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600" class="slide">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600" class="slide">
+<div class="overlay"></div>
+<div class="hero-content">
+<h1>Rank Your Business In Google Maps</h1>
+<p>GMB Setup, GMB Ranking & Local SEO in Kolkata, Dankuni, Uttarpara, Howrah & Hooghly</p>
+<a href="https://wa.me/919330629573" class="btn">Get Free Consultation</a>
+</div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<section id="services">
+<div class="container">
+<div class="section-title">
+<h2>Our Services</h2>
+<p>Professional Google Business Profile optimization and Local SEO services.</p>
+</div>
 
-<footer id="contact">
+<div class="services-grid">
+<div class="card"><h3>GMB Setup</h3><p>Complete optimized profile setup.</p></div>
+<div class="card"><h3>GMB Ranking</h3><p>Rank in Top 3 Google Maps results.</p></div>
+<div class="card"><h3>Local SEO</h3><p>Citations, on-page SEO & geo signals.</p></div>
+<div class="card"><h3>Lead Generation</h3><p>Real calls & enquiries.</p></div>
+</div>
+</div>
+</section>
 
-<div class="footer-container">
+<section id="contact">
+<div class="container">
+<div class="section-title">
+<h2>Contact</h2>
+<p>Get Free Consultation</p>
+</div>
 
-    <div class="footer-box">
-        <div class="footer-logo">Geo<span>Lift</span></div>
-        <p>We help businesses rank in Google Maps and generate real enquiries through expert GMB Setup and Local SEO services.</p>
-    </div>
+<form class="contact-form" onsubmit="sendWhatsApp(); return false;">
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<textarea id="msg" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
 
-    <div class="footer-box">
-        <h4>Quick Links</h4>
-        <p><a href="#">Home</a></p>
-        <p><a href="#">Services</a></p>
-        <p><a href="#contact">Contact</a></p>
-    </div>
+</div>
+</section>
 
-    <div class="footer-box">
-        <h4>Contact Info</h4>
-        <p>📍 Kolkata, West Bengal</p>
-        <p>📞 +91 9330629573</p>
-        <p>✉ contact.geolift@gmail.com</p>
-    </div>
+<!-- PREMIUM FOOTER -->
+
+<footer class="footer">
+<div class="container">
+
+<div class="footer-top">
+
+<div class="footer-brand">
+<img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
+<p>
+Helping businesses dominate Google Maps with expert Local SEO & GMB Ranking services.
+</p>
+</div>
+
+<div class="footer-box">
+<h4>Quick Links</h4>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="footer-box">
+<h4>Contact</h4>
+<a>Kolkata, West Bengal</a>
+<a>+91 9330629573</a>
+<a>contact.geolift@gmail.com</a>
+<a href="https://wa.me/919330629573" class="footer-btn">Free Consultation</a>
+</div>
 
 </div>
 
 <div class="footer-bottom">
-    © 2026 GeoLift | Local SEO & GMB Ranking Experts
+© 2026 GeoLift | Local SEO & GMB Ranking Experts
 </div>
 
+</div>
 </footer>
 
-<!-- WhatsApp Button -->
-<a href="https://wa.me/919330629573" class="whatsapp">💬</a>
-
 <script>
-function toggleMenu(){
-    document.getElementById("nav").classList.toggle("active");
+let slides=document.querySelectorAll(".slide")
+let index=0
+setInterval(()=>{
+slides[index].classList.remove("active")
+index=(index+1)%slides.length
+slides[index].classList.add("active")
+},4000)
+
+function sendWhatsApp(){
+let n=document.getElementById("name").value
+let p=document.getElementById("phone").value
+let m=document.getElementById("msg").value
+let url="https://wa.me/919330629573?text="+encodeURIComponent(
+"Name: "+n+"\nPhone: "+p+"\nMessage: "+m)
+window.open(url,"_blank")
 }
 </script>
 
