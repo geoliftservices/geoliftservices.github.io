@@ -2,134 +2,314 @@
 <html lang="en">
 <head>
 
+<title>Local SEO Consultant | Kolkata</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Local SEO & Google Business Profile Optimization for manufacturers and contractors in Kolkata. Generate consistent enquiries from Google.">
 
-<title>GMB Setup & Local SEO | Kolkata</title>
-
-<meta name="description" content="GMB Setup, GMB Ranking and Business Website service in Kolkata. Improve Google Maps ranking and get more local customers.">
-
-<link rel="icon" type="image/png" href="https://image2url.com/r2/default/images/1772262515512-25e77107-72d6-4abe-ac21-0a2cc4293f54.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
-font-family: Arial, Helvetica, sans-serif;
-background:#f5f6f8;
-margin:0;
-padding:0;
-color:#111;
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(8,27,53,.85);
+backdrop-filter:blur(10px);
+padding:15px 0;
+z-index:999;
 }
 
-.container{
-max-width:800px;
+.nav-container{
+max-width:1200px;
 margin:auto;
-background:white;
-padding:40px;
-margin-top:40px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
 }
 
-h1{
-font-size:32px;
-margin-bottom:10px;
+.logo{color:#fff;font-weight:600;font-size:20px}
+
+.nav-links a{
+color:#cbd5e1;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:.3s;
 }
 
-h2{
-margin-top:30px;
+.nav-links a:hover{color:#3b82f6}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(8,27,53,.75),rgba(8,27,53,.75)),
+url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+padding:0 20px;
 }
 
-p{
-line-height:1.6;
-font-size:16px;
-}
-
-ul{
-line-height:1.8;
-}
+.hero h1{font-size:48px;margin-bottom:20px}
+.hero p{max-width:650px;margin:auto;margin-bottom:30px;color:#e2e8f0}
 
 .btn{
 display:inline-block;
-padding:14px 22px;
-background:#000;
-color:white;
+background:#3b82f6;
+color:#fff;
+padding:14px 30px;
+border-radius:8px;
 text-decoration:none;
-border-radius:6px;
-margin-top:20px;
-font-weight:bold;
+font-weight:600;
+transition:.3s;
 }
 
-.btn:hover{
-background:#333;
+.btn:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,.3)}
+
+/* SECTIONS */
+section{padding:100px 20px}
+.container{max-width:1100px;margin:auto}
+
+h2{text-align:center;font-size:36px;margin-bottom:60px}
+
+/* ABOUT */
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
-.logo{
-width:60px;
-margin-bottom:15px;
+.about img{
+width:100%;
+border-radius:16px;
+box-shadow:0 20px 50px rgba(0,0,0,.1);
 }
 
-.footer{
-margin-top:40px;
-font-size:14px;
-color:#666;
+/* SERVICES */
+.services{
+background:#0f172a;
+color:#fff;
 }
 
-@media(max-width:600px){
-
-.container{
-margin:10px;
-padding:20px;
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-h1{
-font-size:24px;
+.card{
+background:#fff;
+color:#0f172a;
+padding:30px;
+border-radius:16px;
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+transition:.3s;
 }
 
+.card:hover{transform:translateY(-8px)}
+
+/* GALLERY */
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+border-radius:14px;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+background:#f1f5f9;
+text-align:center;
+}
+
+.testimonial-box{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:40px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+/* CONTACT */
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.contact-card{
+background:#fff;
+padding:30px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+color:#94a3b8;
+padding:60px 20px;
+text-align:center;
+}
+
+footer h3{color:#fff;margin-bottom:15px}
+
+footer a{color:#3b82f6;text-decoration:none}
+
+/* FLOATING BUTTONS */
+.float-btn{
+position:fixed;
+right:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.call-btn{bottom:90px;background:#2563eb}
+.whatsapp-btn{bottom:20px;background:#25D366}
+
+.float-btn img{width:28px}
+
+/* MOBILE */
+@media(max-width:768px){
+.about{grid-template-columns:1fr}
+.hero h1{font-size:34px}
 }
 
 </style>
-
 </head>
-
 <body>
 
+<nav>
+<div class="nav-container">
+<div class="logo">Subhajit SEO</div>
+<div class="nav-links">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+<div>
+<h1>Get More Local Enquiries From Google</h1>
+<p>I help manufacturers & contractors rank in Google Maps and generate consistent B2B leads.</p>
+<a href="https://wa.me/919330629573" class="btn">Get Free SEO Audit</a>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container about">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070">
+<div>
+<h2>About Me</h2>
+<p>I specialize in Local SEO and Google Business Profile optimization for industrial and B2B businesses. My focus is simple — generate enquiries, not vanity traffic.</p>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
 <div class="container">
-
-<img class="logo" src="https://image2url.com/r2/default/images/1772262515512-25e77107-72d6-4abe-ac21-0a2cc4293f54.png">
-
-<h1>Get More Customers from Google Maps</h1>
-
-<p>
-I provide GMB Setup, GMB Ranking and Business Website service for local businesses in Kolkata.
-Improve your Google visibility and get more calls and enquiries.
-</p>
-
-<h2>Services</h2>
-
-<ul>
-<li>Google Business Profile Setup</li>
-<li>GMB Ranking Optimization</li>
-<li>Local SEO Setup</li>
-<li>Business Website (1 Page)</li>
-</ul>
-
-<h2>Why Choose My Service</h2>
-
-<p>
-Simple, fast and result focused service for small business, contractors and manufacturers.
-No monthly contract required.
-</p>
-
-<a class="btn" href="https://wa.me/919330629573">Contact on WhatsApp</a>
-
-<div class="footer">
-
-<p>Kolkata Local SEO & GMB Service</p>
-
+<h2>My Services</h2>
+<div class="service-grid">
+<div class="card">
+<h3>Google Business Profile Optimization</h3>
+<p>Rank in the Top 3 Google Map results and increase direct calls.</p>
 </div>
-
+<div class="card">
+<h3>Local SEO Setup</h3>
+<p>On-page, technical and local authority signals implementation.</p>
 </div>
+<div class="card">
+<h3>Keyword Strategy</h3>
+<p>Target high buyer-intent keywords that convert into enquiries.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section>
+<div class="container">
+<h2>Results & Work</h2>
+<div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+<h2>Client Feedback</h2>
+<div class="testimonial-box">
+<p>"We started receiving consistent enquiries within 3 months. Clear strategy and transparent reporting."</p>
+<strong>— Industrial Client, Kolkata</strong>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2>Contact</h2>
+<div class="contact-grid">
+<div class="contact-card">
+<h3>Call</h3>
+<p><a href="tel:+919330629573">+91 93306-29573</a></p>
+</div>
+<div class="contact-card">
+<h3>Email</h3>
+<p>youremail@gmail.com</p>
+</div>
+<div class="contact-card">
+<h3>Location</h3>
+<p>Kolkata, India</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<h3>Subhajit | Local SEO Consultant</h3>
+<p>Helping businesses dominate Google Search & Maps.</p>
+<p>© 2026 All Rights Reserved</p>
+</footer>
+
+<a href="tel:+919330629573" class="float-btn call-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/724/724664.png">
+</a>
+
+<a href="https://wa.me/919330629573" class="float-btn whatsapp-btn">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
 </body>
 </html>
