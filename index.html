@@ -17,7 +17,7 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 <body style="margin:0;font-family:Poppins;background:#f5f7ff;">
 
 
-<!-- ===== FINAL PROFESSIONAL HEADER FIXED ===== -->
+<!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -26,29 +26,54 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;}
 
-/* ===== HEADER ===== */
+/* ===== HEADER BASE ===== */
 
 header{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-background:#ffffff;
-box-shadow:0 4px 20px rgba(0,0,0,0.06);
+background:rgba(255,255,255,0.55);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+transition:all .3s ease;
 z-index:9999;
 }
+
+/* Scroll effect */
+header.scrolled{
+background:rgba(255,255,255,0.85);
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* ===== CONTAINER ===== */
 
 .container{
 max-width:1200px;
 margin:auto;
 display:flex;
-align-items:center;
+align-items:center;   /* PERFECT vertical alignment */
 justify-content:space-between;
-padding:15px 20px;
+padding:18px 20px;
+}
+
+/* ===== LOGO ===== */
+
+.logo{
+display:flex;
+align-items:center;
 }
 
 .logo img{
-height:40px;
+height:42px;
+display:block;
+filter:drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+transition:.3s;
+}
+
+/* Slight hover lift */
+.logo img:hover{
+transform:translateY(-2px);
 }
 
 /* ===== NAV ===== */
@@ -71,7 +96,7 @@ nav a:hover{
 color:#6366f1;
 }
 
-/* ===== CTA BUTTON ===== */
+/* CTA */
 
 .cta{
 padding:10px 22px;
@@ -106,7 +131,7 @@ background:#1e293b;
 border-radius:3px;
 }
 
-/* ===== MOBILE STYLE ===== */
+/* ===== MOBILE ===== */
 
 @media(max-width:992px){
 
@@ -123,7 +148,6 @@ padding:110px 30px;
 gap:25px;
 box-shadow:-10px 0 30px rgba(0,0,0,0.15);
 transition:.4s ease;
-z-index:10000;
 }
 
 nav.active{
@@ -138,7 +162,7 @@ display:flex;
 
 </style>
 
-<header>
+<header id="header">
 <div class="container">
 
 <div class="logo">
@@ -167,30 +191,40 @@ display:flex;
 <script>
 
 const menu = document.getElementById("menu");
+const header = document.getElementById("header");
 
-/* Toggle */
+/* Toggle mobile menu */
 function toggleMenu(e){
 e.stopPropagation();
 menu.classList.toggle("active");
 }
 
-/* Close when clicking outside */
+/* Close on outside click */
 document.addEventListener("click", function(e){
 if(menu.classList.contains("active") && !menu.contains(e.target)){
 menu.classList.remove("active");
 }
 });
 
-/* Close when clicking link (mobile) */
+/* Close on link click */
 document.querySelectorAll("#menu a").forEach(link=>{
 link.addEventListener("click",()=>{
 menu.classList.remove("active");
 });
 });
 
+/* Scroll effect */
+window.addEventListener("scroll", function(){
+if(window.scrollY > 50){
+header.classList.add("scrolled");
+}else{
+header.classList.remove("scrolled");
+}
+});
+
 </script>
 
-<div style="height:80px;"></div>
+<div style="height:90px;"></div>
 
 <!-- HERO SLIDER -->
 
