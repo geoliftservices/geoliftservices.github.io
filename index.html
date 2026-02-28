@@ -17,7 +17,7 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 <body style="margin:0;font-family:Poppins;background:#f5f7ff;">
 
 
-<!-- ===== PREMIUM MOBILE FIRST HEADER ===== -->
+<!-- ===== FINAL PROFESSIONAL HEADER FIXED ===== -->
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -26,13 +26,15 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;}
 
+/* ===== HEADER ===== */
+
 header{
 position:fixed;
-width:100%;
 top:0;
 left:0;
+width:100%;
 background:#ffffff;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
+box-shadow:0 4px 20px rgba(0,0,0,0.06);
 z-index:9999;
 }
 
@@ -40,55 +42,58 @@ z-index:9999;
 max-width:1200px;
 margin:auto;
 display:flex;
-justify-content:space-between;
 align-items:center;
+justify-content:space-between;
 padding:15px 20px;
 }
 
 .logo img{
-height:38px;
+height:40px;
 }
 
-/* MOBILE MENU DEFAULT */
+/* ===== NAV ===== */
+
 nav{
-position:fixed;
-top:0;
-right:-100%;
-width:260px;
-height:100vh;
-background:white;
 display:flex;
-flex-direction:column;
-padding:120px 30px;
-gap:25px;
-transition:.4s ease;
-box-shadow:-10px 0 30px rgba(0,0,0,0.1);
+align-items:center;
+gap:30px;
 }
 
 nav a{
 text-decoration:none;
 color:#1e293b;
+font-size:15px;
 font-weight:500;
-font-size:16px;
+transition:.3s;
 }
 
-nav.active{
-right:0;
+nav a:hover{
+color:#6366f1;
 }
 
-/* CTA */
+/* ===== CTA BUTTON ===== */
+
 .cta{
-padding:10px 20px;
+padding:10px 22px;
 background:#6366f1;
-color:white !important;
+color:#fff !important;
 border-radius:30px;
 font-weight:600;
-text-align:center;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(99,102,241,0.35);
+transition:.3s;
 }
 
-/* HAMBURGER ALWAYS VISIBLE ON MOBILE */
+.cta:hover{
+transform:translateY(-2px);
+}
+
+/* ===== HAMBURGER ===== */
+
 .menu-toggle{
-display:flex;
+display:none;
 flex-direction:column;
 gap:5px;
 cursor:pointer;
@@ -101,26 +106,32 @@ background:#1e293b;
 border-radius:3px;
 }
 
-/* DESKTOP */
-@media(min-width:992px){
+/* ===== MOBILE STYLE ===== */
+
+@media(max-width:992px){
 
 nav{
-position:static;
-height:auto;
-flex-direction:row;
-background:transparent;
-padding:0;
-box-shadow:none;
-width:auto;
+position:fixed;
+top:0;
+right:-100%;
+width:260px;
+height:100vh;
+background:white;
+flex-direction:column;
+align-items:flex-start;
+padding:110px 30px;
+gap:25px;
+box-shadow:-10px 0 30px rgba(0,0,0,0.15);
+transition:.4s ease;
+z-index:10000;
+}
+
+nav.active{
 right:0;
 }
 
 .menu-toggle{
-display:none;
-}
-
-nav a{
-font-size:15px;
+display:flex;
 }
 
 }
@@ -144,7 +155,7 @@ font-size:15px;
 <a href="#contact" class="cta">Free Strategy Call</a>
 </nav>
 
-<div class="menu-toggle" onclick="toggleMenu()">
+<div class="menu-toggle" onclick="toggleMenu(event)">
 <span></span>
 <span></span>
 <span></span>
@@ -154,13 +165,32 @@ font-size:15px;
 </header>
 
 <script>
-function toggleMenu(){
-document.getElementById("menu").classList.toggle("active");
+
+const menu = document.getElementById("menu");
+
+/* Toggle */
+function toggleMenu(e){
+e.stopPropagation();
+menu.classList.toggle("active");
 }
+
+/* Close when clicking outside */
+document.addEventListener("click", function(e){
+if(menu.classList.contains("active") && !menu.contains(e.target)){
+menu.classList.remove("active");
+}
+});
+
+/* Close when clicking link (mobile) */
+document.querySelectorAll("#menu a").forEach(link=>{
+link.addEventListener("click",()=>{
+menu.classList.remove("active");
+});
+});
+
 </script>
 
-<div style="height:75px;"></div>
-
+<div style="height:80px;"></div>
 
 <!-- HERO SLIDER -->
 
