@@ -943,18 +943,19 @@ Send Message
 
 
 
-<!-- ================= PROFESSIONAL FOOTER ================= -->
+<!-- ================= MODERN RESPONSIVE FOOTER ================= -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
 .footer{
-background:#f8faff;
-padding:90px 20px 40px;
-font-family:Poppins,sans-serif;
+background:#ffffff;
+padding:80px 20px 30px;
+font-family:'Poppins',sans-serif;
 color:#1e293b;
 border-top:1px solid #e5e7eb;
+position:relative;
 }
 
 .footer-container{
@@ -965,60 +966,82 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:50px;
 }
 
-/* ===== BRAND COLUMN ===== */
+/* BRAND */
 
 .footer-brand img{
-height:48px;
+height:44px;
 margin-bottom:20px;
 }
 
 .footer-tagline{
-font-size:15px;
+font-size:14px;
 line-height:1.7;
-color:#475569;
-margin-bottom:25px;
+color:#64748b;
+margin-bottom:20px;
+max-width:280px;
 }
 
 .footer-contact-item{
 display:flex;
 align-items:center;
 margin-bottom:14px;
-font-size:15px;
-color:#111827;
+font-size:14px;
 font-weight:500;
+color:#0f172a;
 }
 
 .footer-contact-item i{
-width:32px;
-height:32px;
+width:34px;
+height:34px;
 background:#eef2ff;
 color:#6366f1;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:8px;
+border-radius:10px;
 margin-right:12px;
 font-size:14px;
 }
 
-.google-badge{
+/* SOCIAL */
+
+.footer-social{
 margin-top:20px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
-.google-badge img{
-height:45px;
+.footer-social a{
+width:38px;
+height:38px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+background:#f1f5f9;
+color:#6366f1;
+font-size:15px;
+transition:.3s;
 }
 
-/* ===== HEADINGS ===== */
+.footer-social a:hover{
+background:#6366f1;
+color:#fff;
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(99,102,241,.3);
+}
+
+/* HEADINGS */
 
 .footer h4{
-font-size:17px;
-margin-bottom:22px;
+font-size:16px;
+margin-bottom:20px;
 font-weight:700;
-color:#111827;
+color:#0f172a;
 }
 
-/* ===== LINKS ===== */
+/* LINKS */
 
 .footer ul{
 list-style:none;
@@ -1026,12 +1049,12 @@ padding:0;
 }
 
 .footer ul li{
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 .footer ul li a{
 text-decoration:none;
-color:#475569;
+color:#64748b;
 font-size:14px;
 transition:.3s;
 }
@@ -1041,47 +1064,23 @@ color:#6366f1;
 padding-left:4px;
 }
 
-/* ===== SERVICE AREA BLOCK ===== */
+/* SERVICE AREA */
+
+.service-area{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
 
 .service-area span{
-display:inline-block;
 background:#eef2ff;
 color:#4f46e5;
-font-size:13px;
+font-size:12px;
 padding:6px 12px;
 border-radius:20px;
-margin:5px 6px 5px 0;
 }
 
-/* ===== SOCIAL ===== */
-
-.footer-social{
-margin-top:25px;
-}
-
-.footer-social a{
-width:38px;
-height:38px;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-background:white;
-border:1px solid #e5e7eb;
-border-radius:10px;
-margin-right:8px;
-color:#6366f1;
-font-size:16px;
-transition:.3s;
-}
-
-.footer-social a:hover{
-background:#6366f1;
-color:white;
-transform:translateY(-4px);
-box-shadow:0 10px 20px rgba(99,102,241,.25);
-}
-
-/* ===== BOTTOM ===== */
+/* BOTTOM */
 
 .footer-bottom{
 margin-top:60px;
@@ -1095,8 +1094,13 @@ font-size:13px;
 color:#64748b;
 }
 
+.footer-legal{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+}
+
 .footer-legal a{
-margin-left:18px;
 text-decoration:none;
 color:#64748b;
 transition:.3s;
@@ -1106,16 +1110,16 @@ transition:.3s;
 color:#6366f1;
 }
 
-/* ===== BACK TO TOP ===== */
+/* BACK TO TOP */
 
 .back-top{
 position:fixed;
 right:20px;
-bottom:95px;
+bottom:90px;
 width:45px;
 height:45px;
 background:#6366f1;
-color:white;
+color:#fff;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -1123,24 +1127,55 @@ border-radius:50%;
 cursor:pointer;
 box-shadow:0 10px 25px rgba(99,102,241,.35);
 transition:.3s;
+z-index:999;
 }
 
 .back-top:hover{
 transform:translateY(-4px);
 }
 
-/* ===== MOBILE ===== */
+/* WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+z-index:999;
+}
+
+/* MOBILE FIX */
 
 @media(max-width:768px){
 
+.footer{
+padding:60px 20px 120px;
+}
+
+.footer-container{
+grid-template-columns:1fr;
+gap:35px;
+}
+
+.footer-tagline{
+max-width:100%;
+}
+
 .footer-bottom{
 flex-direction:column;
-gap:15px;
+gap:12px;
 text-align:center;
 }
 
-.footer-legal a{
-margin:0 10px;
+.footer-legal{
+justify-content:center;
 }
 
 }
@@ -1152,7 +1187,7 @@ margin:0 10px;
 
 <div class="footer-container">
 
-<!-- ===== BRAND INFO ===== -->
+<!-- BRAND -->
 
 <div class="footer-brand">
 
@@ -1172,10 +1207,6 @@ We help local businesses dominate Google Maps and generate real enquiries.
 contact.geolift@gmail.com
 </div>
 
-<div class="google-badge">
-<img src="https://www.gstatic.com/partners/badge/images/2023/PartnerBadgeClickable.svg">
-</div>
-
 <div class="footer-social">
 <a href="#"><i class="fab fa-facebook-f"></i></a>
 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1187,7 +1218,7 @@ contact.geolift@gmail.com
 </div>
 
 
-<!-- ===== QUICK LINKS ===== -->
+<!-- QUICK LINKS -->
 
 <div>
 <h4>Quick Links</h4>
@@ -1202,7 +1233,7 @@ contact.geolift@gmail.com
 </div>
 
 
-<!-- ===== SERVICES ===== -->
+<!-- SERVICES -->
 
 <div>
 <h4>Our Services</h4>
@@ -1217,11 +1248,11 @@ contact.geolift@gmail.com
 </div>
 
 
-<!-- ===== OFFICE + SERVICE AREA ===== -->
+<!-- OFFICE -->
 
 <div>
 <h4>Our Office</h4>
-<p style="font-size:14px;color:#475569;margin-bottom:20px;">
+<p style="font-size:14px;color:#64748b;margin-bottom:15px;">
 <strong>Dankuni, West Bengal</strong><br>
 India
 </p>
@@ -1240,8 +1271,6 @@ India
 </div>
 
 
-<!-- ===== BOTTOM ===== -->
-
 <div class="footer-bottom">
 
 <div>
@@ -1250,7 +1279,7 @@ India
 
 <div class="footer-legal">
 <a href="#">Privacy Policy</a>
-<a href="#">Terms & Conditions</a>
+<a href="#">Terms</a>
 <a href="#">Disclaimer</a>
 <a href="#">Sitemap</a>
 </div>
@@ -1258,6 +1287,16 @@ India
 </div>
 
 </footer>
+
+
+<div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<i class="fas fa-arrow-up"></i>
+</div>
+
+
+<a href="https://wa.me/919330629573" class="whatsapp-float">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" style="width:32px">
+</a>
 
 
 <div class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
