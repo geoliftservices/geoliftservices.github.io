@@ -2309,15 +2309,6 @@ behavior:"smooth"
 
 /* Show / Hide Scroll To Top */
 
-const topBtn = document.querySelector(".top-btn");
-
-window.addEventListener("scroll", function(){
-if(window.scrollY > 400){
-topBtn.classList.add("show");
-}else{
-topBtn.classList.remove("show");
-}
-});
 
 </script>
 
@@ -2349,5 +2340,24 @@ topBtn.classList.remove("show");
 </button>
 
 </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const topBtn = document.querySelector(".top-btn");
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 400) {
+      topBtn.style.opacity = "1";
+      topBtn.style.visibility = "visible";
+      topBtn.style.transform = "translateY(0)";
+    } else {
+      topBtn.style.opacity = "0";
+      topBtn.style.visibility = "hidden";
+      topBtn.style.transform = "translateY(15px)";
+    }
+  });
+
+});
+</script>
 </body>
 </html>
