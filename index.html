@@ -1170,6 +1170,178 @@ A structured, data-driven approach designed to improve visibility, authority, an
 
 </section>
 
+  <!-- ================= TESTIMONIAL SECTION ================= -->
+
+<style>
+
+.testimonial-section{
+padding:120px 20px;
+background:linear-gradient(135deg,#eef2ff,#f8faff);
+font-family:Poppins,sans-serif;
+text-align:center;
+}
+
+.testimonial-container{
+max-width:900px;
+margin:auto;
+position:relative;
+}
+
+.testimonial-header{
+margin-bottom:60px;
+}
+
+.testimonial-header h2{
+font-size:40px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:15px;
+}
+
+.testimonial-header p{
+color:#64748b;
+font-size:16px;
+}
+
+.testimonial-card{
+background:#ffffff;
+padding:45px 35px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+display:none;
+transition:.4s;
+}
+
+.testimonial-card.active{
+display:block;
+animation:fadeIn .5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(15px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.testimonial-text{
+font-size:17px;
+line-height:1.8;
+color:#475569;
+margin-bottom:25px;
+}
+
+.testimonial-name{
+font-weight:700;
+color:#0f172a;
+font-size:16px;
+}
+
+.testimonial-role{
+font-size:14px;
+color:#6366f1;
+margin-top:4px;
+}
+
+.testimonial-controls{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:12px;
+}
+
+.testimonial-dot{
+width:12px;
+height:12px;
+border-radius:50%;
+background:#cbd5e1;
+cursor:pointer;
+transition:.3s;
+}
+
+.testimonial-dot.active{
+background:#6366f1;
+transform:scale(1.2);
+}
+
+@media(max-width:768px){
+.testimonial-header h2{
+font-size:30px;
+}
+}
+
+</style>
+
+<section class="testimonial-section">
+
+<div class="testimonial-container">
+
+<div class="testimonial-header">
+<h2>What Our Clients Say</h2>
+<p>Real businesses. Real ranking improvements. Real enquiries.</p>
+</div>
+
+<div class="testimonial-card active">
+<div class="testimonial-text">
+“Within 2 months, our clinic started appearing in the Top 3 Google Maps results. Calls increased significantly and we started receiving consistent patient enquiries.”
+</div>
+<div class="testimonial-name">Dr. Sharma</div>
+<div class="testimonial-role">Clinic Owner – Mumbai</div>
+</div>
+
+<div class="testimonial-card">
+<div class="testimonial-text">
+“GeoLift helped our real estate business dominate local searches. The visibility boost directly increased our monthly site visits and phone enquiries.”
+</div>
+<div class="testimonial-name">Amit Verma</div>
+<div class="testimonial-role">Real Estate Consultant – Delhi NCR</div>
+</div>
+
+<div class="testimonial-card">
+<div class="testimonial-text">
+“Our service business struggled with map visibility before. After optimization, we now consistently rank in top positions and get daily enquiries.”
+</div>
+<div class="testimonial-name">Ravi Patel</div>
+<div class="testimonial-role">Local Contractor – Bangalore</div>
+</div>
+
+<div class="testimonial-controls">
+<div class="testimonial-dot active"></div>
+<div class="testimonial-dot"></div>
+<div class="testimonial-dot"></div>
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+const testimonials = document.querySelectorAll(".testimonial-card");
+const dots = document.querySelectorAll(".testimonial-dot");
+let current = 0;
+
+function showTestimonial(index){
+testimonials.forEach((card,i)=>{
+card.classList.remove("active");
+dots[i].classList.remove("active");
+});
+testimonials[index].classList.add("active");
+dots[index].classList.add("active");
+current = index;
+}
+
+dots.forEach((dot,i)=>{
+dot.addEventListener("click",()=>{
+showTestimonial(i);
+});
+});
+
+setInterval(()=>{
+current = (current + 1) % testimonials.length;
+showTestimonial(current);
+}, 5000);
+
+</script>
+
 <!-- CONTACT -->
 
 <section
