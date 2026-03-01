@@ -2141,6 +2141,34 @@ bottom:85px;
 background:#2563eb;
 }
 
+/* ===== PREMIUM BACK TO TOP ===== */
+
+.top-btn{
+bottom:145px; /* above call button */
+background:rgba(99,102,241,0.18);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.4);
+
+opacity:0;
+visibility:hidden;
+transform:translateY(15px);
+transition:all .35s ease;
+}
+
+/* Show when scrolling */
+.top-btn.show{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.top-btn:hover{
+background:rgba(99,102,241,0.35);
+box-shadow:0 12px 30px rgba(99,102,241,0.35);
+transform:translateY(-4px);
+}
+
 /* Mobile */
 @media(max-width:768px){
 .float-btn{
@@ -2283,6 +2311,18 @@ top:0,
 behavior:"smooth"
 });
 }
+
+/* Show / Hide Scroll To Top */
+
+const topBtn = document.querySelector(".top-btn");
+
+window.addEventListener("scroll", function(){
+if(window.scrollY > 400){
+topBtn.classList.add("show");
+}else{
+topBtn.classList.remove("show");
+}
+});
 
 </script>
 
