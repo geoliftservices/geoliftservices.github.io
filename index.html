@@ -891,6 +891,159 @@ We focus on real growth — not vanity metrics. Our strategies are built to gene
 
 </section>
 
+  <!-- ================= FAQ SECTION ================= -->
+
+<style>
+
+.faq-section{
+padding:120px 20px;
+background:#f8fafc;
+font-family:Poppins,sans-serif;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+.faq-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.faq-header h2{
+font-size:38px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:15px;
+}
+
+.faq-header p{
+color:#64748b;
+font-size:16px;
+line-height:1.7;
+}
+
+.faq-item{
+background:#ffffff;
+margin-bottom:20px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+overflow:hidden;
+transition:.3s;
+}
+
+.faq-question{
+padding:22px 25px;
+cursor:pointer;
+font-weight:600;
+color:#0f172a;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:16px;
+}
+
+.faq-question:hover{
+background:#f1f5f9;
+}
+
+.faq-answer{
+padding:0 25px;
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease;
+color:#475569;
+font-size:15px;
+line-height:1.7;
+}
+
+.faq-item.active .faq-answer{
+padding:0 25px 20px 25px;
+max-height:200px;
+}
+
+.faq-icon{
+font-size:18px;
+transition:.3s;
+}
+
+.faq-item.active .faq-icon{
+transform:rotate(45deg);
+}
+
+@media(max-width:768px){
+.faq-header h2{
+font-size:28px;
+}
+}
+
+</style>
+
+<section class="faq-section">
+
+<div class="faq-container">
+
+<div class="faq-header">
+<h2>Frequently Asked Questions</h2>
+<p>Everything you need to know about our local SEO and Google Maps optimization services.</p>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+How long does it take to rank on Google Maps?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+Most businesses start seeing noticeable improvement within 30–60 days, depending on competition and current profile strength.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+Do you guarantee #1 ranking?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+We don’t promise unrealistic guarantees. Instead, we implement proven optimization strategies that consistently improve visibility and local enquiries.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+Do you work with all types of businesses?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+We primarily work with local service-based businesses such as clinics, contractors, agencies, and home service providers.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+Will I receive performance reports?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+Yes. You receive structured monthly reports detailing ranking improvements, calls, traffic growth, and optimization updates.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+document.querySelectorAll(".faq-question").forEach(item=>{
+item.addEventListener("click",()=>{
+const parent=item.parentElement;
+parent.classList.toggle("active");
+});
+});
+
+</script>
+
 <!-- CONTACT -->
 
 <section
