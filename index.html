@@ -367,13 +367,31 @@ display:flex;
 </div>
 
 <nav id="menu">
+
 <a href="#">Home</a>
-<a href="#services">Services</a>
+
+<div class="dropdown">
+  <a href="#services" class="dropbtn">
+    Services <span class="arrow">▾</span>
+  </a>
+
+  <div class="dropdown-content">
+    <a href="#">Google Business Profile Setup</a>
+    <a href="#">Google Maps Ranking</a>
+    <a href="#">Advanced Local SEO</a>
+    <a href="#">Multi-Location SEO</a>
+    <a href="#">Citation & Authority Building</a>
+    <a href="#">Reputation Management</a>
+    <a href="#">Local SEO Audit</a>
+  </div>
+</div>
+
 <a href="#">About</a>
 <a href="#">Case Studies</a>
 <a href="#">Blog</a>
 <a href="#contact">Contact</a>
 <a href="#contact" class="cta">Free Strategy Call</a>
+
 </nav>
 
 <div class="menu-toggle" id="toggle">
@@ -424,7 +442,17 @@ header.classList.add("scrolled");
 header.classList.remove("scrolled");
 }
 });
+/* MOBILE DROPDOWN TOGGLE */
+document.querySelectorAll(".dropbtn").forEach(btn=>{
+btn.addEventListener("click", function(e){
 
+if(window.innerWidth <= 992){
+e.preventDefault();
+this.parentElement.classList.toggle("active");
+}
+
+});
+});
 </script>
 
 <div style="height:90px;"></div>
@@ -432,7 +460,98 @@ header.classList.remove("scrolled");
 <!-- ===== PREMIUM HIGH-CONVERTING HERO SECTION ===== -->
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+/* ===== DROPDOWN ===== */
 
+.dropdown{
+position:relative;
+}
+
+.dropbtn{
+display:flex;
+align-items:center;
+gap:6px;
+cursor:pointer;
+}
+
+.arrow{
+font-size:12px;
+transition:.3s;
+}
+
+.dropdown-content{
+position:absolute;
+top:120%;
+left:0;
+background:#ffffff;
+min-width:260px;
+border-radius:14px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+padding:10px 0;
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:.3s ease;
+z-index:999;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px 22px;
+font-size:14px;
+color:#1e293b;
+border-bottom:1px solid #f1f5f9;
+}
+
+.dropdown-content a:last-child{
+border-bottom:none;
+}
+
+.dropdown-content a:hover{
+background:#f8faff;
+color:#6366f1;
+padding-left:26px;
+}
+
+@media(min-width:993px){
+.dropdown:hover .dropdown-content{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.dropdown:hover .arrow{
+transform:rotate(180deg);
+}
+}
+
+@media(max-width:992px){
+
+.dropdown-content{
+position:static;
+background:transparent;
+box-shadow:none;
+padding:0;
+opacity:1;
+visibility:visible;
+transform:none;
+display:none;
+}
+
+.dropdown.active .dropdown-content{
+display:block;
+}
+
+.dropdown-content a{
+color:#e5e7eb;
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding-left:10px;
+}
+
+.arrow{
+margin-left:auto;
+}
+
+}
 <style>
 
 body{
