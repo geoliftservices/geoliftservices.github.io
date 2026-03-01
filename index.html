@@ -2263,21 +2263,23 @@ background:#2563eb;
 
 /* ===== SUBTLE PREMIUM BACK TO TOP ===== */
 
+/* ===== BALANCED PREMIUM BACK TO TOP ===== */
+
 .top-btn{
 bottom:145px;
 
-/* Smaller size */
-width:42px;
-height:42px;
+/* Small size */
+width:44px;
+height:44px;
 font-size:16px;
 
-/* Softer background */
-background:rgba(99,102,241,0.12);
-backdrop-filter:blur(8px);
--webkit-backdrop-filter:blur(8px);
-border:1px solid rgba(99,102,241,0.25);
+/* More visible but not loud */
+background:rgba(99,102,241,0.22);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+border:1px solid rgba(99,102,241,0.35);
 
-box-shadow:0 6px 18px rgba(79,70,229,0.15);
+box-shadow:0 8px 22px rgba(79,70,229,0.25);
 
 opacity:0;
 visibility:hidden;
@@ -2287,15 +2289,15 @@ transition:all .3s ease;
 
 /* Show when scrolling */
 .top-btn.show{
-opacity:0.85;   /* slightly transparent */
+opacity:0.95;
 visibility:visible;
 transform:translateY(0);
 }
 
-/* Hover (still elegant, not aggressive) */
+/* Hover */
 .top-btn:hover{
-background:rgba(99,102,241,0.2);
-box-shadow:0 10px 22px rgba(79,70,229,0.25);
+background:rgba(99,102,241,0.35);
+box-shadow:0 14px 30px rgba(79,70,229,0.35);
 transform:translateY(-3px);
 }
 
