@@ -172,6 +172,46 @@ height:1px;
 background:rgba(15,23,42,0.04);
 }
 
+  /* ===== PREMIUM HERO FLOATING EFFECT ===== */
+
+.hero{
+position:relative;
+overflow:hidden;
+}
+
+.floating-shape{
+position:absolute;
+width:350px;
+height:350px;
+background:radial-gradient(circle,#6366f1,transparent 70%);
+filter:blur(100px);
+opacity:0.25;
+animation:float 14s ease-in-out infinite;
+z-index:0;
+}
+
+.shape1{
+top:-120px;
+left:-120px;
+}
+
+.shape2{
+bottom:-120px;
+right:-120px;
+animation-delay:6s;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(50px);}
+100%{transform:translateY(0px);}
+}
+
+/* Keep hero text above animation */
+.hero *{
+position:relative;
+z-index:2;
+}
 </style>
   
 </head>
@@ -750,46 +790,6 @@ Strategic Local SEO and professional business websites designed to drive consist
 
   <!-- ================= RESULTS / PROOF SECTION ================= -->
 
-  /* ===== PREMIUM HERO FLOATING EFFECT ===== */
-
-.hero{
-position:relative;
-overflow:hidden;
-}
-
-.floating-shape{
-position:absolute;
-width:350px;
-height:350px;
-background:radial-gradient(circle,#6366f1,transparent 70%);
-filter:blur(100px);
-opacity:0.25;
-animation:float 14s ease-in-out infinite;
-z-index:0;
-}
-
-.shape1{
-top:-120px;
-left:-120px;
-}
-
-.shape2{
-bottom:-120px;
-right:-120px;
-animation-delay:6s;
-}
-
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(50px);}
-100%{transform:translateY(0px);}
-}
-
-/* Keep hero text above animation */
-.hero *{
-position:relative;
-z-index:2;
-}
   
 <style>
 
