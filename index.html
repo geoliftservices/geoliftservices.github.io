@@ -923,8 +923,28 @@ line-height:1.8;
 max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(5,1fr);
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:20px;
+}
+@media(max-width:768px){
+
+.services-section{
+padding:80px 20px;
+}
+
+.service-card{
+padding:35px 25px;
+}
+
+.services-title{
+font-size:30px;
+}
+
+.services-subtitle{
+font-size:15px;
+margin-bottom:40px;
+}
+
 }
 
 /* CARD STYLE */
