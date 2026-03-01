@@ -25,7 +25,6 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 
 <!-- ===== PREMIUM HEADER IMPROVED MOBILE DESIGN ===== -->
 
-<style>
 
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;}
@@ -254,41 +253,6 @@ link.addEventListener("click",()=>{
 menu.classList.remove("active");
 overlay.classList.remove("active");
 toggle.classList.remove("active");
-});
-});
-
-/* Scroll effect */
-window.addEventListener("scroll", function(){
-if(window.scrollY > 50){
-header.classList.add("scrolled");
-}else{
-header.classList.remove("scrolled");
-}
-});
-
-</script>
-<script>
-
-const menu = document.getElementById("menu");
-const header = document.getElementById("header");
-
-/* Toggle mobile menu */
-function toggleMenu(e){
-e.stopPropagation();
-menu.classList.toggle("active");
-}
-
-/* Close on outside click */
-document.addEventListener("click", function(e){
-if(menu.classList.contains("active") && !menu.contains(e.target)){
-menu.classList.remove("active");
-}
-});
-
-/* Close on link click */
-document.querySelectorAll("#menu a").forEach(link=>{
-link.addEventListener("click",()=>{
-menu.classList.remove("active");
 });
 });
 
@@ -1112,44 +1076,11 @@ color:#6366f1;
 
 /* BACK TO TOP */
 
-.back-top{
-position:fixed;
-right:20px;
-bottom:90px;
-width:45px;
-height:45px;
-background:#6366f1;
-color:#fff;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-cursor:pointer;
-box-shadow:0 10px 25px rgba(99,102,241,.35);
-transition:.3s;
-z-index:999;
-}
 
-.back-top:hover{
-transform:translateY(-4px);
-}
+=
 
 /* WHATSAPP */
 
-.whatsapp-float{
-position:fixed;
-right:20px;
-bottom:20px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 10px 25px rgba(0,0,0,.2);
-z-index:999;
-}
 
 /* MOBILE FIX */
 
@@ -1179,7 +1110,56 @@ justify-content:center;
 }
 
 }
+/* ===== FLOATING BUTTONS ===== */
 
+.float-btn{
+position:fixed;
+right:20px;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+cursor:pointer;
+z-index:9999;
+transition:.3s;
+}
+
+.float-btn:hover{
+transform:translateY(-5px);
+}
+
+/* WhatsApp */
+.whatsapp{
+bottom:20px;
+background:#25D366;
+}
+
+/* Call */
+.call{
+bottom:90px;
+background:#2563eb;
+}
+
+/* Back to top */
+.top-btn{
+bottom:160px;
+background:#6366f1;
+border:none;
+}
+
+/* Mobile */
+@media(max-width:768px){
+.float-btn{
+right:15px;
+width:50px;
+height:50px;
+}
+}
 </style>
 
 
@@ -1310,20 +1290,42 @@ Remote Local SEO & Google Maps ranking services available PAN India.
 </footer>
 
 
+<script>
+
 function sendWhatsApp(){
 
-let n=name.value
-let p=phone.value
-let m=msg.value
+let n = document.getElementById("name").value;
+let p = document.getElementById("phone").value;
+let m = document.getElementById("msg").value;
 
 window.open(
 "https://wa.me/919330629573?text="
-+n+" "+p+" "+m)
++ encodeURIComponent("Name: "+n+" Phone: "+p+" Message: "+m)
+);
 
+}
+
+function scrollToTop(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 }
 
 </script>
 
+<!-- FLOATING BUTTONS -->
 
+<a href="https://wa.me/919330629573" class="float-btn whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="tel:+919330629573" class="float-btn call">
+<i class="fas fa-phone"></i>
+</a>
+
+<button onclick="scrollToTop()" class="float-btn top-btn">
+<i class="fas fa-arrow-up"></i>
+</button>
 </body>
 </html>
