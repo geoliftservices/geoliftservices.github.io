@@ -518,10 +518,19 @@ toggle.classList.remove("active");
 
 /* Close on link click */
 document.querySelectorAll("#menu a").forEach(link=>{
-link.addEventListener("click",()=>{
+link.addEventListener("click",(e)=>{
+
+// If it's dropdown button, don't close menu
+if(link.classList.contains("dropbtn")){
+e.preventDefault();
+return;
+}
+
+// Close only for normal links
 menu.classList.remove("active");
 overlay.classList.remove("active");
 toggle.classList.remove("active");
+
 });
 });
 
