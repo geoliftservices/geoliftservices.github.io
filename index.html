@@ -2261,22 +2261,42 @@ background:#2563eb;
 
 /* ===== PREMIUM BACK TO TOP ===== */
 
+/* ===== SUBTLE PREMIUM BACK TO TOP ===== */
+
 .top-btn{
 bottom:145px;
-background:linear-gradient(135deg,#6366f1,#4f46e5);
-box-shadow:0 12px 30px rgba(79,70,229,0.35);
-border:none;
+
+/* Smaller size */
+width:42px;
+height:42px;
+font-size:16px;
+
+/* Softer background */
+background:rgba(99,102,241,0.12);
+backdrop-filter:blur(8px);
+-webkit-backdrop-filter:blur(8px);
+border:1px solid rgba(99,102,241,0.25);
+
+box-shadow:0 6px 18px rgba(79,70,229,0.15);
 
 opacity:0;
 visibility:hidden;
 transform:translateY(15px);
-transition:all .35s ease;
+transition:all .3s ease;
 }
 
+/* Show when scrolling */
+.top-btn.show{
+opacity:0.85;   /* slightly transparent */
+visibility:visible;
+transform:translateY(0);
+}
+
+/* Hover (still elegant, not aggressive) */
 .top-btn:hover{
-background:linear-gradient(135deg,#4f46e5,#4338ca);
-box-shadow:0 18px 40px rgba(79,70,229,0.5);
-transform:translateY(-4px);
+background:rgba(99,102,241,0.2);
+box-shadow:0 10px 22px rgba(79,70,229,0.25);
+transform:translateY(-3px);
 }
 
 /* Mobile */
