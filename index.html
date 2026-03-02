@@ -2259,20 +2259,17 @@ transform:translateY(-5px);
 
 /* WhatsApp */
 .whatsapp{ 
-bottom:40px; 
 background:#25D366; 
 }
 
 /* Call */
 .call{
-bottom:90px;
 background:#2563eb;
 }
 
 /* ===== BALANCED PREMIUM BACK TO TOP ===== */
 
 .top-btn{
-bottom:145px;
 
 /* Small size */
 width:44px;
@@ -2314,6 +2311,34 @@ right:20px;
 width:50px;
 height:50px;
 }
+}
+
+.floating-buttons{
+position:fixed;
+right:20px;
+bottom:60px;      /* distance from footer */
+display:flex;
+flex-direction:column;
+gap:18px;         /* equal spacing */
+z-index:9999;
+}
+
+.float-btn{
+width:48px;
+height:48px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+cursor:pointer;
+transition:.3s;
+}
+
+.float-btn:hover{
+transform:translateY(-4px);
 }
   
 </style>
