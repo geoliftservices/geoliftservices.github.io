@@ -392,6 +392,20 @@ border-radius:16px;
 box-shadow:0 15px 40px rgba(15,23,42,0.06);
 }
 
+.services-grid{
+    grid-template-columns:repeat(6, 1fr);
+}
+
+.service-card{
+    grid-column: span 2;
+}
+
+  @media(max-width:768px){
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+}
+
 </style>
 
   <!-- Open Graph for WhatsApp -->
@@ -1161,11 +1175,11 @@ line-height:1.8;
 }
 
 .services-grid{
-max-width:1200px;
-margin:0 auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+    max-width:1100px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr); /* 3 cards per row */
+    gap:25px;
 }
 
 /* Tablet */
@@ -1207,17 +1221,15 @@ margin-bottom:40px;
 
 .service-card{
     background:#ffffff;
-    border-radius:22px;
-    padding:30px 22px;
-    min-height:340px;
+    border-radius:18px;
+    padding:24px 20px;      /* reduced padding */
+    min-height:260px;       /* reduced height */
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
+    justify-content:flex-start;
     transition:0.4s ease;
-    box-shadow:0 25px 60px rgba(99,102,241,0.18);
+    box-shadow:0 15px 40px rgba(99,102,241,0.15);
     border:2px solid #6366f1;
-    position:relative;
-    overflow:hidden;
 }
 
 .service-card::before{
@@ -1245,15 +1257,10 @@ box-shadow:0 25px 60px rgba(99,102,241,0.25);
 /* ICON */
 
 .service-icon{
-width:75px;
-height:75px;
-margin:0 auto 25px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:18px;
-font-size:28px;
-color:white;
+    width:60px;
+    height:60px;
+    margin:0 auto 18px;
+    font-size:22px;
 }
 
 .icon1{background:linear-gradient(135deg,#6366f1,#4f46e5);}
