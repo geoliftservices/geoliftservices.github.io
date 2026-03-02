@@ -700,6 +700,33 @@ margin-left:auto;
         text-align:center;
     }
 }
+
+  .footer-bottom{
+    border-top:1px solid rgba(0,0,0,0.08); /* full width thin line */
+    margin-top:50px;
+    padding:18px 0;
+
+    display:flex;
+    justify-content:center;   /* center everything */
+    align-items:center;
+    gap:40px;                 /* gap between copyright & links */
+
+    font-size:13px;
+    color:#6b7280;
+}
+
+.footer-links a{
+    margin:0 10px;
+    text-decoration:none;
+    color:#6b7280;
+}
+
+  @media (max-width:768px){
+  .footer-bottom{
+    flex-direction:column;
+    gap:10px;
+  }
+}
   
 </style>
 
@@ -2799,8 +2826,14 @@ Remote Local SEO & Google Maps ranking services available PAN India.
 </div> <!-- footer-container -->
 
 <div class="footer-bottom">
-<div>
-© 2026 GeoLift — Google Business Profile Consultant
+  <span>© 2026 GeoLift — Google Business Profile Consultant</span>
+
+  <span class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Sitemap</a>
+  </span>
 </div>
 
 <div class="footer-legal">
