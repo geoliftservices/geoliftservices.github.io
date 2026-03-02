@@ -4,24 +4,14 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | GeoLift</title>
 
-<link rel="icon"
-href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a3b2-80f37302ffd6.png">
+<title>Contact Us | GeoLift</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===== GLOBAL ===== */
-
-:root{
---primary:#6366f1;
---primary-dark:#4f46e5;
---dark:#0f172a;
---light:#f8fafc;
---text:#334155;
-}
+/* ===== BASIC RESET ===== */
 
 *{
 margin:0;
@@ -31,33 +21,76 @@ box-sizing:border-box;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#f1f5f9;
-color:var(--dark);
+background:#f8fafc;
+color:#0f172a;
 line-height:1.7;
 }
 
-section{
-padding:100px 20px;
+/* ===== HEADER COPY FROM INDEX ===== */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+z-index:999;
+transition:.3s;
+}
+
+header.scrolled{
+background:#ffffff;
+box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 20px;
+}
+
+.logo img{
+height:42px;
+}
+
+nav{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#1e293b;
+font-size:15px;
+font-weight:500;
+}
+
+.cta{
+padding:10px 22px;
+background:#6366f1;
+color:#fff !important;
+border-radius:30px;
+font-weight:600;
 }
 
 /* ===== HERO ===== */
 
 .contact-hero{
-background:linear-gradient(135deg,#0f172a,#1e1b4b,#312e81);
-color:white;
+padding:180px 20px 120px;
 text-align:center;
-padding:160px 20px 120px;
-position:relative;
-overflow:hidden;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+color:white;
 }
 
 .contact-hero h1{
-font-size:52px;
+font-size:44px;
 font-weight:800;
 margin-bottom:20px;
-background:linear-gradient(to right,#a5b4fc,#ffffff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
 }
 
 .contact-hero p{
@@ -70,250 +103,183 @@ opacity:.9;
 /* ===== CONTACT SECTION ===== */
 
 .contact-section{
-margin-top:-80px;
+padding:120px 20px;
+background:#ffffff;
 }
 
 .contact-container{
-max-width:1150px;
+max-width:1000px;
 margin:auto;
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:start;
+gap:60px;
 }
 
 /* INFO SIDE */
 
-.contact-info{
-background:white;
-padding:50px;
-border-radius:24px;
-box-shadow:0 25px 70px rgba(0,0,0,0.08);
-}
-
-.contact-info h2{
-font-size:30px;
-font-weight:800;
+.contact-info h3{
+font-size:26px;
 margin-bottom:20px;
 }
 
 .contact-info p{
-color:var(--text);
-margin-bottom:30px;
+color:#475569;
+margin-bottom:25px;
 }
 
-.info-item{
-display:flex;
-align-items:center;
-margin-bottom:22px;
+.contact-box{
+margin-bottom:20px;
+font-weight:500;
 }
 
-.info-icon{
-width:50px;
-height:50px;
-background:linear-gradient(45deg,#6366f1,#8b5cf6);
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:14px;
-margin-right:18px;
-font-size:20px;
-}
-
-.info-text{
-font-size:15px;
-color:var(--text);
-}
-
-/* FORM SIDE */
+/* FORM */
 
 .contact-form{
-background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
-padding:50px;
-border-radius:24px;
-box-shadow:0 25px 70px rgba(0,0,0,0.1);
-}
-
-.contact-form h3{
-font-size:24px;
-margin-bottom:25px;
-font-weight:700;
+background:#f8faff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.06);
 }
 
 .contact-form input,
 .contact-form textarea{
 width:100%;
-padding:15px;
-margin-bottom:18px;
+padding:14px;
+margin-bottom:15px;
 border-radius:10px;
 border:1px solid #e2e8f0;
 font-size:15px;
-font-family:Poppins;
-transition:.3s;
+outline:none;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus{
-border-color:var(--primary);
-box-shadow:0 0 0 3px rgba(99,102,241,.2);
-outline:none;
-}
-
-.contact-form textarea{
-height:130px;
-resize:none;
+border-color:#6366f1;
 }
 
 .contact-form button{
 width:100%;
-padding:16px;
+padding:15px;
 border:none;
 border-radius:12px;
-font-size:16px;
 font-weight:700;
+background:linear-gradient(135deg,#6366f1,#8b5cf6);
 color:white;
-background:linear-gradient(45deg,#6366f1,#8b5cf6);
 cursor:pointer;
 transition:.3s;
-box-shadow:0 15px 30px rgba(99,102,241,.3);
 }
 
 .contact-form button:hover{
 transform:translateY(-3px);
-box-shadow:0 20px 40px rgba(99,102,241,.4);
+box-shadow:0 15px 35px rgba(99,102,241,.4);
 }
 
-/* ===== MAP ===== */
+/* ===== FOOTER SIMPLE ===== */
 
-.map-section{
-padding-top:40px;
+footer{
+background:linear-gradient(135deg,#f8faff,#eef2ff);
+padding:60px 20px;
 text-align:center;
-}
-
-.map-section h2{
-font-size:30px;
-font-weight:800;
-margin-bottom:30px;
-}
-
-.map-container{
-max-width:1000px;
-margin:auto;
-border-radius:24px;
-overflow:hidden;
-box-shadow:0 25px 70px rgba(0,0,0,0.1);
+margin-top:80px;
+color:#64748b;
+font-size:14px;
 }
 
 /* ===== RESPONSIVE ===== */
 
 @media(max-width:900px){
-
 .contact-container{
 grid-template-columns:1fr;
 }
-
 .contact-hero h1{
-font-size:36px;
+font-size:32px;
 }
-
 }
 
 </style>
 
 </head>
+
 <body>
+
+<!-- HEADER -->
+
+<header id="header">
+<div class="container">
+<div class="logo">
+<img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
+</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="index.html#services">Services</a>
+<a href="index.html#plans">Plans</a>
+<a href="contact.html">Contact</a>
+<a href="tel:+919330629573" class="cta">Free Consultation</a>
+</nav>
+</div>
+</header>
+
+<div style="height:90px;"></div>
 
 <!-- HERO -->
 
 <section class="contact-hero">
-<h1>Let’s Elevate Your Local Presence</h1>
+<h1>Let’s Discuss Your Business Growth</h1>
 <p>
-Ready to rank higher on Google Maps and generate consistent enquiries? 
-Get in touch and let’s build your growth strategy.
+If you're ready to improve your Google Maps visibility and generate consistent local enquiries, let's start the conversation.
 </p>
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- CONTACT -->
 
 <section class="contact-section">
-
 <div class="contact-container">
 
 <div class="contact-info">
-<h2>Contact Information</h2>
+<h3>Get In Touch</h3>
 <p>
-GeoLift helps businesses across India dominate local search and improve enquiry flow through strategic Google Business optimization.
+Every business has different local challenges. Share your current situation and I’ll guide you with structured next steps.
 </p>
 
-<div class="info-item">
-<div class="info-icon">📞</div>
-<div class="info-text">+91 93306 29573</div>
-</div>
-
-<div class="info-item">
-<div class="info-icon">💬</div>
-<div class="info-text">WhatsApp Consultation Available</div>
-</div>
-
-<div class="info-item">
-<div class="info-icon">📍</div>
-<div class="info-text">Serving Businesses Across India</div>
-</div>
+<div class="contact-box">📞 +91 9330629573</div>
+<div class="contact-box">📍 Serving Businesses Across India</div>
+<div class="contact-box">💬 WhatsApp Available</div>
 
 </div>
 
 <div class="contact-form">
-
-<h3>Request a Free Consultation</h3>
-
-<form onsubmit="sendWhatsApp(); return false;">
-
+<form onsubmit="sendWhatsApp();return false;">
 <input id="name" placeholder="Your Name" required>
 <input id="phone" placeholder="Phone Number" required>
-<textarea id="message" placeholder="Tell us about your business goals..." required></textarea>
-
-<button type="submit">Send Message on WhatsApp</button>
-
+<textarea id="msg" placeholder="Tell us about your business..." rows="5"></textarea>
+<button type="submit">Send Message</button>
 </form>
-
 </div>
 
 </div>
-
 </section>
 
-<!-- MAP -->
-
-<section class="map-section">
-
-<h2>Our Service Coverage</h2>
-
-<div class="map-container">
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14738.174978675195!2d88.363895!3d22.572646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277f0d8e3a7b7%3A0x8c7a2b7b0d3d5c3!2sKolkata!5e0!3m2!1sen!2sin!4v0000000000000"
-width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-</iframe>
-</div>
-
-</section>
+<footer>
+© 2026 GeoLift. All Rights Reserved.
+</footer>
 
 <script>
 
+window.addEventListener("scroll", function(){
+if(window.scrollY > 50){
+document.getElementById("header").classList.add("scrolled");
+}else{
+document.getElementById("header").classList.remove("scrolled");
+}
+});
+
 function sendWhatsApp(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("msg").value;
 
-var name = document.getElementById("name").value;
-var phone = document.getElementById("phone").value;
-var message = document.getElementById("message").value;
-
-var url = "https://wa.me/919330629573?text="
-+ "Name: " + encodeURIComponent(name)
-+ "%0aPhone: " + encodeURIComponent(phone)
-+ "%0aMessage: " + encodeURIComponent(message);
-
-window.open(url, "_blank");
-
+let text=`Name: ${name}%0APhone: ${phone}%0AMessage: ${msg}`;
+window.open(`https://wa.me/919330629573?text=${text}`,'_blank');
 }
 
 </script>
