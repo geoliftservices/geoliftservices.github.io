@@ -713,51 +713,6 @@ margin-left:auto;
   
 </style>
 
-
-<header id="header">
-<div class="container">
-
-<div class="logo">
-<img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
-</div>
-
-<nav id="menu">
-
-<a href="#">Home</a>
-
-<div class="dropdown">
-  <a href="#services" class="dropbtn">
-    Services <span class="arrow">▾</span>
-  </a>
-
-  <div class="dropdown-content">
-    <a href="#services">Google Business Profile Setup</a>
-    <a href="#services">Google Maps Ranking</a>
-    <a href="#services">Advanced Local SEO</a>
-    <a href="#services">Lead Generation Strategy</a>
-    <a href="#services">SEO-Optimized Website Development</a>
-  </div>
-</div>
-
-<a href="#">About</a>
-<a href="#">Case Studies</a>
-<a href="#">Blog</a>
-<a href="#contact">Contact</a>
-<a href="tel:+919330629573" class="cta">Get Free Consultation</a>
-
-</nav>
-
-<div class="menu-toggle" id="toggle">
-<span></span>
-<span></span>
-<span></span>
-</div>
-
-</div>
-</header>
-
-<div class="menu-overlay" id="overlay"></div>
-
 <script>
 
 const menu = document.getElementById("menu");
@@ -2717,108 +2672,6 @@ transform:translateY(-4px);
 </style>
 
 
-<footer class="footer">
-
-<div class="footer-container">
-
-<!-- BRAND -->
-<div class="footer-brand">
-<img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
-
-<p class="footer-tagline">
-Independent Google Business Profile consulting focused on improving visibility, accuracy, and enquiry growth.
-</p>
-
-<div class="footer-contact-item">
-<i class="fas fa-phone"></i>
-+91 9330629573
-</div>
-
-<div class="footer-contact-item">
-<i class="fas fa-envelope"></i>
-contact.geolift@gmail.com
-</div>
-
-<div class="footer-social">
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
-<a href="#"><i class="fab fa-x-twitter"></i></a>
-</div>
-</div>
-
-
-<!-- QUICK LINKS -->
-<div>
-<h4>Quick Links</h4>
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#">About Us</a></li>
-<li><a href="#">Case Studies</a></li>
-<li><a href="#">Blog</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</div>
-
-
-<!-- SERVICES -->
-<div>
-<h4>Our Services</h4>
-<ul>
-<li><a href="#">Google Business Profile Setup</a></li>
-<li><a href="#">Google Maps Ranking</a></li>
-<li><a href="#">Local SEO Optimization</a></li>
-<li><a href="#">Citation Building</a></li>
-<li><a href="#">Lead Generation SEO</a></li>
-<li><a href="#">SEO-Optimized Website Development</a></li>
-</ul>
-</div>
-
-
-<!-- ADDRESS SECTION (FIXED WRAPPER) -->
-<div>
-<h4>Our Office</h4>
-<p style="font-size:14px;color:#64748b;margin-bottom:15px;">
-<strong>GeoLift Services</strong><br>
-Dankuni, Hooghly<br>
-West Bengal – 712311<br>
-India
-</p>
-
-<h4>Primary Service Areas</h4>
-<div class="service-area">
-<span>Kolkata</span>
-<span>Mumbai</span>
-<span>Delhi</span>
-<span>Bangalore</span>
-<span>Hyderabad</span>
-</div>
-
-
-
-<p style="font-size:13px;color:#64748b;margin-top:12px;">
-Remote Local SEO & Google Maps ranking services available PAN India.
-</p>
-</div>
-
-</div> <!-- footer-container -->
-
-<div class="footer-bottom">
-  <span>© 2026 GeoLift — Google Business Profile Consultant</span>
-
-  <span class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms</a>
-    <a href="#">Disclaimer</a>
-    <a href="#">Sitemap</a>
-  </span>
-</div>
-
-</footer>
-
-
 <script>
 
 function sendWhatsApp(){
@@ -2893,5 +2746,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+
+<body>
+
+  <!-- Header will load here -->
+  <div id="header"></div>
+
+  <!-- Your page content -->
+  <section class="hero">
+    <h1>Rank. Convert. Grow.</h1>
+  </section>
+
+  <!-- Footer will load here -->
+  <div id="footer"></div>
+
+  <!-- JavaScript to connect files -->
+  <script>
+    // Load Header
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    // Load Footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+</body>
+  
 </body>
 </html>
