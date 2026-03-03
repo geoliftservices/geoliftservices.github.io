@@ -5,7 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Geolift | Local SEO & GMB Ranking</title>
+  <meta name="robots" content="noindex, nofollow">
+
+<title>Rank. Convert. Grow. | GeoLift</title>
 
 <link rel="icon"
 href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a3b2-80f37302ffd6.png">
@@ -104,7 +106,9 @@ background:var(--bg-white);
 }
 
 footer{
-background:var(--bg-white);
+background:linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
+padding:80px 0;
+border-top:1px solid #e5e7ff;
 }
 
 /* ============================= */
@@ -170,7 +174,224 @@ height:1px;
 background:rgba(15,23,42,0.04);
 }
 
+/* ================= PRICING SECTION ================= */
+
+.pricing-section{
+padding:130px 20px;
+background:linear-gradient(135deg,#ffffff,#f8faff);
+font-family:Poppins,sans-serif;
+overflow:hidden;
+}
+
+.pricing-container{
+max-width:1200px;
+margin:auto;
+}
+
+.pricing-header{
+text-align:center;
+margin-bottom:80px;
+}
+
+.pricing-header h2{
+font-size:42px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:18px;
+}
+
+.pricing-header p{
+max-width:750px;
+margin:auto;
+color:#64748b;
+font-size:17px;
+line-height:1.7;
+}
+
+/* GRID */
+
+.pricing-wrapper{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+
+/* CARD */
+
+.pricing-item{
+position:relative;
+background:#ffffff;
+border-radius:22px;
+padding:70px 35px 50px 35px; /* Added extra top space */
+box-shadow:0 25px 60px rgba(15,23,42,0.08);
+transition:.5s ease;
+overflow:hidden;
+}
+
+.pricing-item:hover{
+transform:translateY(-12px);
+box-shadow:0 35px 80px rgba(99,102,241,0.25);
+}
+
+
+/* Featured */
+
+.featured{
+border:2px solid #6366f1;
+}
+
+.pricing-badge{
+position:relative;
+display:inline-block;
+margin-bottom:20px;
+background:#6366f1;
+color:#fff;
+padding:8px 18px;
+border-radius:30px;
+font-size:12px;
+font-weight:600;
+box-shadow:0 10px 25px rgba(99,102,241,0.35);
+}
+
+/* Content */
+
+.pricing-content h3{
+font-size:22px;
+font-weight:700;
+margin-bottom:8px;
+color:#0f172a;
+}
+
+.pricing-type{
+color:#6366f1;
+font-weight:600;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.pricing-price{
+font-size:38px;
+font-weight:800;
+margin-bottom:25px;
+color:#0f172a;
+}
+
+.pricing-price span{
+font-size:16px;
+font-weight:500;
+color:#64748b;
+margin-left:4px;
+}
+
+/* List */
+
+.pricing-item ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.pricing-item ul li{
+margin-bottom:12px;
+color:#475569;
+font-size:15px;
+position:relative;
+padding-left:20px;
+}
+
+.pricing-item ul li::before{
+content:"✔";
+position:absolute;
+left:0;
+color:#6366f1;
+font-weight:700;
+}
+
+/* Note */
+
+.pricing-note{
+text-align:center;
+margin-top:70px;
+font-size:16px;
+color:#475569;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.pricing-header h2{
+font-size:30px;
+}
+
+.pricing-item{
+padding:35px 25px;
+}
+
+.pricing-price{
+font-size:30px;
+}
+
+}
+
+.pricing-desc{
+margin-top:20px;
+font-size:14px;
+color:#64748b;
+line-height:1.6;
+}
+
+.pricing-min{
+margin-top:15px;
+font-size:13px;
+font-weight:600;
+color:#6366f1;
+}
+
+.standalone-section{
+margin-top:100px;
+text-align:center;
+}
+
+.standalone-section h3{
+font-size:24px;
+margin-bottom:40px;
+color:#0f172a;
+}
+
+.standalone-list{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+font-size:16px;
+color:#475569;
+}
+
+.standalone-list div{
+background:#ffffff;
+padding:25px 35px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(15,23,42,0.06);
+}
+
+  html{
+scroll-behavior:smooth;
+}
+
+  .footer-bottom,
+.copyright{
+    padding: 20px 5%;
+}
+  
 </style>
+
+  <!-- Open Graph for WhatsApp -->
+<meta property="og:title" content="Rank. Convert. Grow. | GeoLift">
+<meta property="og:description" content="Strategic Local SEO and professional business websites designed to drive consistent leads and long-term growth.">
+<meta property="og:image" content="https://www.geolift.co.in/preview.png">
+<meta property="og:url" content="https://geolift.co.in/">
+<meta property="og:type" content="website">
   
 </head>
 
@@ -197,8 +418,6 @@ top:0;
 left:0;
 width:100%;
 background:rgba(255,255,255,0.55);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
 transition:all .3s ease;
 z-index:9999;
 }
@@ -287,7 +506,7 @@ transform:rotate(-45deg) translateY(-8px);
 .menu-overlay{
 position:fixed;
 inset:0;
-background:rgba(0,0,0,0.45);
+background:rgba(15,23,42,0.35);
 opacity:0;
 visibility:hidden;
 transition:.3s;
@@ -309,7 +528,8 @@ top:0;
 right:-100%;
 width:280px;
 height:100vh;
-background:linear-gradient(180deg,#111827,#1e293b);
+background:linear-gradient(180deg,#f8faff,#eef2ff);
+border-left:1px solid #e5e7eb;
 flex-direction:column;
 align-items:flex-start;
 padding:90px 30px 40px;
@@ -324,12 +544,16 @@ right:0;
 
 /* Mobile Links */
 
+/* Mobile Boxed Links */
+
 nav a{
-color:#e5e7eb;
-font-size:16px;
+display:block;
 width:100%;
-padding-bottom:10px;
-border-bottom:1px solid rgba(255,255,255,0.08);
+padding:14px 10px;
+font-size:16px;
+color:#1e293b;
+border-bottom:1px solid #e5e7eb;
+transition:0.3s ease;
 }
 
 nav a:last-child{
@@ -337,7 +561,7 @@ border-bottom:none;
 }
 
 nav a:hover{
-color:#fff;
+color:#4f46e5;
 padding-left:6px;
 }
 
@@ -437,9 +661,13 @@ display:block;
 }
 
 .dropdown-content a{
-color:#e5e7eb;
-border-bottom:1px solid rgba(255,255,255,0.08);
-padding-left:10px;
+display:block;
+padding:12px 14px;
+margin:0 15px 8px 15px;   /* left + right spacing */
+border:1px solid #e5e7eb;
+border-radius:8px;
+background:#ffffff;
+color:#334155;
 }
 
 .arrow{
@@ -447,6 +675,42 @@ margin-left:auto;
 }
 
 }
+
+  @media (max-width:768px){
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+}
+
+  .footer-bottom{
+    border-top:1px solid rgba(0,0,0,0.08); /* full width thin line */
+    margin-top:50px;
+    padding:18px 0;
+
+    display:flex;
+    justify-content:center;   /* center everything */
+    align-items:center;
+    gap:40px;                 /* gap between copyright & links */
+
+    font-size:13px;
+    color:#6b7280;
+}
+
+.footer-links a{
+    margin:0 10px;
+    text-decoration:none;
+    color:#6b7280;
+}
+
+  @media (max-width:768px){
+  .footer-bottom{
+    flex-direction:column;
+    gap:10px;
+  }
+}
+  
 </style>
 
 
@@ -467,12 +731,11 @@ margin-left:auto;
   </a>
 
   <div class="dropdown-content">
-    <a href="#">Google Business Profile Setup</a>
-    <a href="#">Google Maps Ranking</a>
-    <a href="#">Advanced Local SEO</a>
-    <a href="#">Multi-Location SEO</a>
-    <a href="#">Citation & Authority Building</a>
-    <a href="#">Local SEO Audit</a>
+    <a href="#services">Google Business Profile Setup</a>
+    <a href="#services">Google Maps Ranking</a>
+    <a href="#services">Advanced Local SEO</a>
+    <a href="#services">Lead Generation Strategy</a>
+    <a href="#services">SEO-Optimized Website Development</a>
   </div>
 </div>
 
@@ -480,7 +743,7 @@ margin-left:auto;
 <a href="#">Case Studies</a>
 <a href="#">Blog</a>
 <a href="#contact">Contact</a>
-<a href="#contact" class="cta">Free Strategy Call</a>
+<a href="tel:+919330629573" class="cta">Get Free Consultation</a>
 
 </nav>
 
@@ -557,7 +820,6 @@ this.parentElement.classList.toggle("active");
 <div style="height:90px;"></div>
 
 
-
 <!-- ================= MODERN RESPONSIVE FOOTER ================= -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -565,12 +827,9 @@ this.parentElement.classList.toggle("active");
 <style>
 
 .footer{
-background:#ffffff;
+background:linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
 padding:80px 20px 30px;
-font-family:'Poppins',sans-serif;
-color:#1e293b;
-border-top:1px solid #e5e7eb;
-position:relative;
+border-top:1px solid #e5e7ff;
 }
 
 .footer-container{
@@ -688,25 +947,29 @@ gap:8px;
 }
 
 .service-area span{
-background:#eef2ff;
+background:#ffffff;
 color:#4f46e5;
 font-size:12px;
-padding:6px 12px;
-border-radius:20px;
+padding:7px 14px;
+border-radius:30px;   /* More pill shape */
+border:1.5px solid #6366f1;  /* Makes radius visible */
+font-weight:500;
+transition:0.3s;
+}
+
+.service-area span:hover{
+background:#6366f1;
+color:#ffffff;
 }
 
 /* BOTTOM */
 
 .footer-bottom{
-margin-top:60px;
-padding-top:20px;
-border-top:1px solid #e5e7eb;
-display:flex;
-flex-wrap:wrap;
-justify-content:space-between;
-align-items:center;
-font-size:13px;
-color:#64748b;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    margin-top: 50px;
+    padding: 18px 0;
+    font-size: 13.5px;
+    color: #6b7280;
 }
 
 .footer-legal{
@@ -762,8 +1025,6 @@ justify-content:center;
 /* ===== FLOATING BUTTONS ===== */
 
 .float-btn{
-position:fixed;
-right:20px;
 width:45px;
 height:45px;
 border-radius:50%;
@@ -784,14 +1045,47 @@ transform:translateY(-5px);
 
 /* WhatsApp */
 .whatsapp{ 
-bottom:25px; 
 background:#25D366; 
 }
 
 /* Call */
 .call{
-bottom:90px;
 background:#2563eb;
+}
+
+/* ===== BALANCED PREMIUM BACK TO TOP ===== */
+
+.top-btn{
+
+/* Small size */
+width:44px;
+height:44px;
+font-size:16px;
+
+/* More visible but not loud */
+background:rgba(99,102,241,0.22);
+border:1px solid rgba(99,102,241,0.35);
+
+box-shadow:0 8px 22px rgba(79,70,229,0.25);
+
+opacity:0;
+visibility:hidden;
+transform:translateY(15px);
+transition:all .3s ease;
+}
+
+/* Show when scrolling */
+.top-btn.show{
+opacity:0.95;
+visibility:visible;
+transform:translateY(0);
+}
+
+/* Hover */
+.top-btn:hover{
+background:rgba(99,102,241,0.35);
+box-shadow:0 14px 30px rgba(79,70,229,0.35);
+transform:translateY(-3px);
 }
 
 /* Mobile */
@@ -802,12 +1096,35 @@ width:50px;
 height:50px;
 }
 }
-  
-@media (max-width: 768px) {
-  .top-btn {
-    display: none !important;
-  }
+
+.floating-buttons{
+position:fixed;
+right:25px;
+bottom:30px;      /* distance from footer */
+display:flex;
+flex-direction:column;
+gap:20px;         /* equal spacing *
+z-index:9999;
 }
+
+.float-btn{
+width:48px;
+height:48px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+cursor:pointer;
+transition:.3s;
+}
+
+.float-btn:hover{
+transform:translateY(-4px);
+}
+  
 </style>
 
 
@@ -820,7 +1137,7 @@ height:50px;
 <img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
 
 <p class="footer-tagline">
-We help local businesses dominate Google Maps and generate real enquiries.
+Independent Google Business Profile consulting focused on improving visibility, accuracy, and enquiry growth.
 </p>
 
 <div class="footer-contact-item">
@@ -866,6 +1183,7 @@ contact.geolift@gmail.com
 <li><a href="#">Local SEO Optimization</a></li>
 <li><a href="#">Citation Building</a></li>
 <li><a href="#">Lead Generation SEO</a></li>
+<li><a href="#">SEO-Optimized Website Development</a></li>
 </ul>
 </div>
 
@@ -880,7 +1198,7 @@ West Bengal – 712311<br>
 India
 </p>
 
-<h4>Primary Local Service Areas</h4>
+<h4>Primary Service Areas</h4>
 <div class="service-area">
 <span>Kolkata</span>
 <span>Mumbai</span>
@@ -899,16 +1217,14 @@ Remote Local SEO & Google Maps ranking services available PAN India.
 </div> <!-- footer-container -->
 
 <div class="footer-bottom">
-<div>
-© 2026 Geolift | Local SEO & GMB Ranking Experts
-</div>
+  <span>© 2026 GeoLift — Google Business Profile Consultant</span>
 
-<div class="footer-legal">
-<a href="#">Privacy Policy</a>
-<a href="#">Terms</a>
-<a href="#">Disclaimer</a>
-<a href="#">Sitemap</a>
-</div>
+  <span class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Sitemap</a>
+  </span>
 </div>
 
 </footer>
@@ -936,23 +1252,14 @@ behavior:"smooth"
 });
 }
 
+/* Show / Hide Scroll To Top */
+
+
 </script>
 
 <!-- FLOATING BUTTONS -->
 
 <div class="floating-buttons">
-
-<a href="https://wa.me/919330629573" class="float-btn whatsapp" target="_blank">
-<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
-  <path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H8l-4 4V6a2 2 0 012-2z"/>
-</svg>
-</a>
-
-<a href="tel:+919330629573" class="float-btn call">
-<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
-<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
-</svg>
-</a>
 
 <button onclick="scrollToTop()" class="float-btn top-btn">
 <svg viewBox="0 0 24 24" width="22" height="22" 
@@ -965,6 +1272,37 @@ behavior:"smooth"
 </svg>
 </button>
 
+<a href="tel:+919330629573" class="float-btn call">
+<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+</svg>
+</a>
+  
+<a href="https://wa.me/919330629573" class="float-btn whatsapp" target="_blank">
+<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+  <path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H8l-4 4V6a2 2 0 012-2z"/>
+</svg>
+</a>
+
 </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const topBtn = document.querySelector(".top-btn");
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 400) {
+      topBtn.style.opacity = "1";
+      topBtn.style.visibility = "visible";
+      topBtn.style.transform = "translateY(0)";
+    } else {
+      topBtn.style.opacity = "0";
+      topBtn.style.visibility = "hidden";
+      topBtn.style.transform = "translateY(15px)";
+    }
+  });
+
+});
+</script>
 </body>
 </html>
