@@ -723,26 +723,27 @@ margin-left:auto;
 
 <nav id="menu">
 
-<a href="#">Home</a>
+  <a href="index.html">Home</a>
 
-<div class="dropdown">
-  <a href="/" class="dropbtn">
-    Services <span class="arrow">▾</span>
-  </a>
+  <div class="dropdown">
+    <a href="#" class="dropbtn">
+      Services <span class="arrow">▾</span>
+    </a>
 
-  <div class="dropdown-content">
-    <a href="/">Google Business Profile Setup</a>
-    <a href="/">Google Maps Ranking</a>
-    <a href="/">Advanced Local SEO</a>
-    <a href="/">Lead Generation Strategy</a>
-    <a href="/">SEO-Optimized Website Development</a>
+    <div class="dropdown-content">
+      <a href="google-business-profile-setup/">Google Business Profile Setup</a>
+      <a href="google-maps-ranking/">Google Maps Ranking</a>
+      <a href="advanced-local-seo/">Advanced Local SEO</a>
+      <a href="lead-generation-strategy/">Lead Generation Strategy</a>
+      <a href="seo-website-development/">SEO-Optimized Website Development</a>
+    </div>
   </div>
-</div>
 
-<a href="/">About</a>
-<a href="/">Blog</a>
-<a href="/">Contact</a>
-<a href="tel:+919330629573" class="cta">Get Free Consultation</a>
+  <a href="about/">About</a>
+  <a href="blog/">Blog</a>
+  <a href="contact/">Contact</a>
+
+  <a href="tel:+919330629573" class="cta">Get Free Consultation</a>
 
 </nav>
 
@@ -818,135 +819,177 @@ this.parentElement.classList.toggle("active");
 
 <div style="height:90px;"></div>
 
-<!-- ================= ABOUT HERO ================= -->
+<!-- ================= ANIMATION STYLE ================= -->
+<style>
+.fade-up {
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+.fade-up.show {
+opacity:1;
+יזם:translateY(0);
+}
 
-<section style="background:linear-gradient(135deg,#f8fafc,#eef2ff);padding:120px 20px;">
+@media(max-width:900px){
+.about-grid{
+grid-template-columns:1fr !important;
+gap:40px !important;
+}
+.hero-title{
+font-size:34px !important;
+}
+.section-title{
+font-size:30px !important;
+}
+}
+</style>
 
-<div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center;">
-
-<div>
-<h1 style="font-size:52px;font-weight:800;line-height:1.1;margin-bottom:25px;">
-Elevating Local Visibility With Precision
-</h1>
-
-<p style="font-size:18px;color:#475569;margin-bottom:25px;line-height:1.8;">
-GeoLift is a focused Local SEO consultancy built for service-based businesses that want structured ranking growth — not temporary boosts.
-</p>
-
-<p style="font-size:16px;color:#64748b;margin-bottom:35px;line-height:1.8;">
-We engineer measurable visibility systems that improve Google Maps positioning, strengthen local authority, and convert impressions into enquiries.
-</p>
-
-<div style="display:flex;flex-wrap:wrap;gap:18px;">
-<span style="background:#4f46e515;color:#4f46e5;padding:10px 18px;border-radius:50px;font-size:13px;font-weight:600;">Google Maps Ranking</span>
-<span style="background:#6366f115;color:#6366f1;padding:10px 18px;border-radius:50px;font-size:13px;font-weight:600;">Local SEO Systems</span>
-<span style="background:#7c3aed15;color:#7c3aed;padding:10px 18px;border-radius:50px;font-size:13px;font-weight:600;">Authority Building</span>
-</div>
-</div>
-
-<div style="background:#ffffff;padding:60px;border-radius:24px;box-shadow:0 25px 60px rgba(79,70,229,0.12);border:1px solid #eef2ff;">
-<h3 style="font-size:22px;font-weight:700;margin-bottom:20px;color:#1e293b;">Our Positioning</h3>
-<p style="color:#475569;font-size:15px;line-height:1.8;margin-bottom:15px;">
-We do not operate as a general digital agency.
-</p>
-<p style="color:#475569;font-size:15px;line-height:1.8;">
-GeoLift specializes exclusively in structured local visibility frameworks that create long-term ranking stability.
-</p>
-</div>
-
-</div>
-</section>
+<script>
+window.addEventListener("scroll",function(){
+document.querySelectorAll(".fade-up").forEach(el=>{
+let top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+el.classList.add("show");
+}
+});
+});
+</script>
 
 
 
-<!-- ================= CORE SERVICES ================= -->
-
-<section style="background:#ffffff;padding:120px 20px;">
-
+<!-- ================= HERO SECTION ================= -->
+<section style="background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:120px 20px;">
 <div style="max-width:1200px;margin:auto;">
 
-<div style="text-align:center;margin-bottom:80px;">
-<h2 style="font-size:42px;font-weight:800;margin-bottom:20px;">
-What We Deliver
-</h2>
-<p style="color:#64748b;font-size:17px;max-width:700px;margin:auto;">
-Strategic execution designed to strengthen search signals and generate consistent enquiry growth.
+<div class="about-grid" style="display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center;">
+
+<div class="fade-up">
+<h1 class="hero-title" style="font-size:52px;font-weight:800;margin-bottom:25px;line-height:1.2;">
+Engineering Local Visibility That Converts
+</h1>
+
+<p style="font-size:18px;opacity:.9;margin-bottom:20px;">
+GeoLift is a performance-focused Local SEO consultancy built to help service-based businesses dominate Google Maps and local search.
 </p>
-</div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;">
-
-<div style="background:linear-gradient(145deg,#ffffff,#f8fafc);padding:45px;border-radius:22px;border:1px solid #e2e8f0;box-shadow:0 15px 40px rgba(15,23,42,0.06);">
-<h3 style="font-size:20px;margin-bottom:15px;color:#4f46e5;">Google Business Optimization</h3>
-<p style="color:#475569;font-size:15px;line-height:1.7;">
-Category alignment, keyword structuring, content enhancement, and signal reinforcement for stronger Map Pack performance.
+<p style="opacity:.8;font-size:16px;margin-bottom:30px;">
+We design structured visibility systems that increase rankings, stabilize positions, and turn search impressions into measurable enquiries.
 </p>
+
+<div style="display:flex;flex-wrap:wrap;gap:15px;font-size:14px;font-weight:600;">
+<span style="background:rgba(255,255,255,.1);padding:10px 18px;border-radius:50px;">Google Maps Ranking</span>
+<span style="background:rgba(255,255,255,.1LOAT);padding:10px 18px;border-radius:50px;">Local Authority Building</span>
+<span style="background:rgba(255,255,255,.1);padding:10px 18px;border-radius:50px;">Conversion Optimization</span>
+</div>
 </div>
 
-<div style="background:linear-gradient(145deg,#ffffff,#f8fafc);padding:45px;border-radius:22px;border:1px solid #e2e8f0;box-shadow:0 15px 40px rgba(15,23,42,0.06);">
-<h3 style="font-size:20px;margin-bottom:15px;color:#6366f1;">Advanced Local SEO</h3>
-<p style="color:#475569;font-size:15px;line-height:1.7;">
-On-page structure, citation consistency, entity validation, and authority stacking strategies.
-</p>
-</div>
-
-<div style="background:linear-gradient(145deg,#ffffff,#f8fafc);padding:45px;border-radius:22px;border:1px solid #e2e8f0;box-shadow:0 15px 40px rgba(15,23,42,0.06);">
-<h3 style="font-size:20px;margin-bottom:15px;color:#7c3aed;">Lead-Focused Structuring</h3>
-<p style="color:#475569;font-size:15px;line-height:1.7;">
-SEO-aligned service pages engineered to convert traffic into measurable business enquiries.
-</p>
+<div class="fade-up">
+<img src="https://images.unsplash.com/photo-1551288049-bebdalk??" alt="Local SEO Strategy" style="width:100%;border-radius:25px;box-shadow:0 25px 60px rgba(0,0,0,.4);">
 </div>
 
 </div>
-
 </div>
 </section>
 
 
 
-<!-- ================= PROCESS ================= -->
-
-<section style="background:linear-gradient(135deg,#eef2ff,#f8fafc);padding:120px 20px;">
-
+<!-- ================= OUR STORY ================= -->
+<section style="background:#f8fafc;padding:120px 20px;">
 <div style="max-width:1100px;margin:auto;">
 
-<div style="text-align:center;margin-bottom:90px;">
-<h2 style="font-size:42px;font-weight:800;margin-bottom:20px;">
-Our Structured Framework
+<div class="fade-up" style="text-align:center;margin-bottom:70px;">
+<h2 class="section-title" style="font-size:40px;font-weight:800;margin-bottom:20px;">
+Our Mission
 </h2>
-<p style="color:#64748b;font-size:17px;">
-A defined process built for ranking growth and stability.
+<p style="color:#475569;font-size:18px;max-width:800px;margin:auto;">
+To replace unpredictable marketing with structured local visibility systems that generate stable growth.
 </p>
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;">
+<div class="about-grid fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" style="width:100%;border-radius:20px;">
 
-<div style="background:#ffffff;padding:35px;border-radius:20px;border-left:4px solid #4f46e5;box-shadow:0 10px 30px rgba(79,70,229,0.08);">
-<h4 style="margin-bottom:10px;">01. Audit & Positioning</h4>
-<p style="color:#475569;font-size:14px;line-height:1.7;">
-Complete visibility audit and competitive gap analysis.
+<div>
+<h3 style="font-size:26px;margin-bottom:20px;">Built on Precision, Not Hype</h3>
+<p style="color:#475569;margin-bottom:15px;">
+GeoLift was created to solve one problem: inconsistent local rankings.
+</p>
+<p style="color:#475569;margin-bottom:15px;">
+Instead of chasing trends, we built frameworks aligned with Google’s entity, proximity, and authority signals.
+</p>
+<p style="color:#475569;">
+Every strategy is structured, documented, and built for long-term stability.
 </p>
 </div>
-
-<div style="background:#ffffff;padding:35px;border-radius:20px;border-left:4px solid #6366f1;box-shadow:0 10px 30px rgba(99,102,241,0.08);">
-<h4 style="margin-bottom:10px;">02. Structural Optimization</h4>
-<p style="color:#475569;font-size:14px;line-height:1.7;">
-Service mapping, keyword architecture, and authority layering.
-</p>
 </div>
 
-<div style="background:#ffffff;padding:35px;border-radius:20px;border-left:4px solid #7c3aed;box-shadow:0 10px 30px rgba(124,58,237,0.08);">
-<h4 style="margin-bottom:10px;">03. Signal Strengthening</h4>
-<p style="color:#475569;font-size:14px;line-height:1.7;">
-Citation refinement, review strategy, and entity validation.
-</p>
+</div>
+</section>
+
+
+
+<!-- ================= WHAT WE DO ================= -->
+<section style="background:#fff;padding:120px 20px;">
+<div style="max-width:1200px;margin:auto;">
+
+<div class="fade-up" style="text-align:center;margin-bottom:80px;">
+<h2 class="section-title" style="font-size:40px;font-weight:800;">What We Execute</h2>
 </div>
 
-<div style="background:#ffffff;padding:35px;border-radius:20px;border-left:4px solid #4338ca;box-shadow:0 10px 30px rgba(67,56,202,0.08);">
-<h4 style="margin-bottom:10px;">04. Ranking Stabilization</h4>
-<p style="color:#475569;font-size:14px;line-height:1.7;">
-Continuous optimization to maintain map pack dominance.
-</p>
+<div class="about-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;">
+
+<div class="fade-up" style="padding:45px;background:#f1f5f9;border-radius:25px;">
+<h3 style="margin-bottom:15px;">Google Business Profile Structuring</h3>
+<p style="color:#475569;">Category alignment, service mapping, geo-relevance optimization, and engagement signals.</p>
+</div>
+
+<div class="fade-up" style="padding:45px;background:#f1f5f9;border-radius:25px;">
+<h3 style="margin-bottom:15px;">Advanced Local SEO Architecture</h3>
+<p style="color:#475569;">On-page local signals, citation structuring, schema integration, and competitor gap analysis.</p>
+</div>
+
+<div class="fade-up" style="padding:45px;background:#f1f5f9;border-radius:25px;">
+<h3 style="margin-bottom:15px;">Conversion-Focused Pages</h3>
+<p style="color:#475569;">Location-specific landing pages designed to rank and convert.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+
+<!-- ================= STATS SECTION ================= -->
+<section style="background:linear-gradient(135deg,#1e293b,#334155);color:#fff;padding:120px 20px;">
+<div style="max-width:1000px;margin:auto;text-align:center;">
+
+<div class="fade-up">
+<h2 style="font-size:38px;font-weight:800;margin-bottom:60px;">
+Performance Impact
+</h2>
+</div>
+
+<div class="about-grid fade-up" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:50px;">
+
+<div>
+<h3 style="font-size:42px;font-weight:800;">300%+</h3>
+<p>Average Visibility Growth</p>
+</div>
+
+<div>
+<h3 style="font-size:42px;font-weight:800;">Top 3</h3>
+<p>Map Pack Targeting</p>
+</div>
+
+<div>
+<h3 style="font-size:42px;font-weight:800;">90+</h3>
+<p>Signal Optimization Points</p>
+</div>
+
+<div>
+<h3 style="font-size:42px;font-weight:800;">Long-Term</h3>
+<p>Ranking Stability</p>
 </div>
 
 </div>
@@ -956,23 +999,23 @@ Continuous optimization to maintain map pack dominance.
 
 
 
-<!-- ================= DIFFERENTIATOR ================= -->
-
-<section style="background:linear-gradient(135deg,#4338ca,#6366f1);padding:120px 20px;color:white;">
-
+<!-- ================= FINAL CTA ================= -->
+<section style="background:#f8fafc;padding:120px 20px;">
 <div style="max-width:900px;margin:auto;text-align:center;">
 
-<h2 style="font-size:40px;font-weight:800;margin-bottom:25px;">
-Precision Over Volume. Strategy Over Noise.
+<div class="fade-up">
+<h2 class="section-title" style="font-size:38px;font-weight:800;margin-bottom:25px;">
+Ready to Build Predictable Local Growth?
 </h2>
 
-<p style="font-size:18px;line-height:1.9;opacity:.95;">
-GeoLift operates as a focused local visibility consultancy — prioritizing structured execution, measurable growth, and ranking stability instead of aggressive short-term marketing tactics.
+<p style="color:#475569;margin-bottom:40px;font-size:18px;">
+Let’s transform your Google visibility into measurable, consistent enquiries.
 </p>
 
-<p style="margin-top:25px;font-size:16px;opacity:.9;">
-Every engagement is data-informed, system-driven, and aligned with long-term business outcomes.
-</p>
+<a href="/contact/" style="background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;padding:16px 40px;border-radius:50px;font-weight:600;text-decoration:none;display:inline-block;">
+Start Consultation
+</a>
+</div>
 
 </div>
 </section>
