@@ -819,14 +819,14 @@ this.parentElement.classList.toggle("active");
 
 <div style="height:90px;"></div>
 
-<!-- ================= SIMPLE FADE ANIMATION ================= -->
+<!-- ================= SCROLL ANIMATION (START AFTER HERO) ================= -->
 <style>
-.fade-in{
+.section-fade{
 opacity:0;
-transform:translateY(30px);
-transition:all .7s ease;
+transform:translateY(40px);
+transition:all .8s ease;
 }
-.fade-in.show{
+.section-fade.visible{
 opacity:1;
 transform:translateY(0);
 }
@@ -836,7 +836,7 @@ grid-template-columns:1fr !important;
 gap:40px !important;
 }
 .section{
-padding:80px 20px !important;
+padding:90px 20px !important;
 }
 .hero-title{
 font-size:34px !important;
@@ -848,39 +848,45 @@ font-size:28px !important;
 </style>
 
 <script>
-window.addEventListener("scroll",function(){
-document.querySelectorAll(".fade-in").forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight-100){
-el.classList.add("show");
+window.addEventListener("scroll", function(){
+const heroHeight = document.getElementById("about-hero").offsetHeight;
+
+if(window.scrollY > heroHeight - 150){
+document.querySelectorAll(".section-fade").forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-80){
+el.classList.add("visible");
 }
 });
+}
 });
 </script>
 
 
 
 <!-- ================= HERO ================= -->
-<section class="section" style="background:#ffffff;padding:120px 20px;">
+<section id="about-hero" style="background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff;padding:140px 20px 120px 20px;">
 <div style="max-width:1200px;margin:auto;">
+
 <div class="grid-2" style="display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center;">
 
-<div class="fade-in">
-<h1 class="hero-title" style="font-size:48px;font-weight:800;margin-bottom:25px;line-height:1.2;color:#0f172a;">
-Strategic Local Visibility. Structured Growth.
+<div>
+<h1 class="hero-title" style="font-size:52px;font-weight:800;margin-bottom:25px;line-height:1.2;">
+Structured Local SEO.<br>
+<span style="color:#facc15;">Sustainable Growth.</span>
 </h1>
 
-<p style="color:#475569;font-size:18px;margin-bottom:20px;">
-GeoLift is a specialized Local SEO consultancy focused on strengthening Google Business Profile performance and local search authority for service-driven businesses.
+<p style="font-size:18px;opacity:.9;margin-bottom:20px;">
+GeoLift is a specialized Local SEO consultancy focused on improving Google Maps rankings and strengthening local search authority.
 </p>
 
-<p style="color:#64748b;font-size:16px;">
-We design structured visibility systems that improve rankings, stabilize positions, and convert search exposure into measurable business enquiries.
+<p style="opacity:.85;font-size:16px;">
+We engineer structured visibility systems that convert search impressions into consistent enquiries.
 </p>
 </div>
 
-<div class="fade-in">
-<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
-style="width:100%;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);">
+<div>
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+style="width:100%;border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.35);">
 </div>
 
 </div>
@@ -889,30 +895,32 @@ style="width:100%;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);">
 
 
 
-<!-- ================= COMPANY OVERVIEW ================= -->
-<section class="section" style="background:#f8fafc;padding:110px 20px;">
-<div style="max-width:1100px;margin:auto;text-align:center;">
+<!-- ================= COMPANY FOUNDATION ================= -->
+<section class="section section-fade" style="background:#f8fafc;padding:120px 20px;">
+<div style="max-width:1100px;margin:auto;">
 
-<div class="fade-in" style="margin-bottom:60px;">
-<h2 class="section-title" style="font-size:36px;font-weight:800;color:#0f172a;margin-bottom:20px;">
-Company Overview
+<div style="text-align:center;margin-bottom:70px;">
+<h2 class="section-title" style="font-size:38px;font-weight:800;color:#0f172a;margin-bottom:20px;">
+Our Foundation
 </h2>
 <p style="color:#475569;font-size:18px;max-width:850px;margin:auto;">
-GeoLift operates as a focused local visibility consultancy rather than a broad-spectrum marketing agency. Our work centers exclusively on strengthening map pack positioning, improving entity authority, and optimizing structured local signals.
+GeoLift was established to bring structure and precision to local visibility strategies. We replace unpredictable marketing tactics with systematic ranking frameworks.
 </p>
 </div>
 
-<div class="grid-2 fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;text-align:left;">
+<div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
 <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
 style="width:100%;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.08);">
 
 <div>
-<h3 style="font-size:24px;margin-bottom:15px;color:#0f172a;">Built on Precision</h3>
+<h3 style="font-size:24px;margin-bottom:15px;color:#1e3a8a;">
+Built on Analysis, Not Assumptions
+</h3>
 <p style="color:#475569;margin-bottom:15px;">
-Our methodology is based on structured ranking analysis, competitive signal comparison, and long-term optimization frameworks.
+Every engagement begins with detailed visibility audits and competitive positioning analysis.
 </p>
 <p style="color:#475569;">
-Every engagement is guided by measurable benchmarks and systematic improvements designed for sustainable positioning.
+Our process aligns keyword intent, service structure, authority signals, and map pack relevance into a unified ranking strategy.
 </p>
 </div>
 </div>
@@ -922,31 +930,31 @@ Every engagement is guided by measurable benchmarks and systematic improvements 
 
 
 
-<!-- ================= CORE SERVICES ================= -->
-<section class="section" style="background:#ffffff;padding:120px 20px;">
+<!-- ================= CAPABILITIES ================= -->
+<section class="section section-fade" style="background:#ffffff;padding:120px 20px;">
 <div style="max-width:1200px;margin:auto;">
 
-<div class="fade-in" style="text-align:center;margin-bottom:80px;">
-<h2 class="section-title" style="font-size:36px;font-weight:800;color:#0f172a;">
+<div style="text-align:center;margin-bottom:80px;">
+<h2 class="section-title" style="font-size:38px;font-weight:800;color:#0f172a;">
 Core Capabilities
 </h2>
 </div>
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;">
 
-<div class="fade-in" style="padding:40px;border:1px solid #e2e8f0;border-radius:16px;">
-<h4 style="margin-bottom:15px;color:#0f172a;">Google Business Profile Optimization</h4>
-<p style="color:#475569;">Structured category alignment, geo-signal refinement, service positioning, and engagement signal optimization.</p>
+<div style="padding:45px;border-top:4px solid #1e3a8a;background:#f8fafc;border-radius:18px;">
+<h4 style="margin-bottom:15px;color:#0f172a;">Google Business Profile Structuring</h4>
+<p style="color:#475569;">Category alignment, service optimization, geo-relevance signals, and review engagement strategy.</p>
 </div>
 
-<div class="fade-in" style="padding:40px;border:1px solid #e2e8f0;border-radius:16px;">
-<h4 style="margin-bottom:15px;color:#0f172a;">Advanced Local SEO Strategy</h4>
-<p style="color:#475569;">On-page localization, citation architecture, authority building, and competitor positioning.</p>
+<div style="padding:45px;border-top:4px solid #facc15;background:#f8fafc;border-radius:18px;">
+<h4 style="margin-bottom:15px;color:#0f172a;">Advanced Local SEO Architecture</h4>
+<p style="color:#475569;">Localized content mapping, citation management, and authority signal refinement.</p>
 </div>
 
-<div class="fade-in" style="padding:40px;border:1px solid #e2e8f0;border-radius:16px;">
-<h4 style="margin-bottom:15px;color:#0f172a;">Conversion-Oriented Web Structuring</h4>
-<p style="color:#475569;">SEO-aligned service pages built to convert search visibility into qualified enquiries.</p>
+<div style="padding:45px;border-top:4px solid #1e3a8a;background:#f8fafc;border-radius:18px;">
+<h4 style="margin-bottom:15px;color:#0f172a;">Conversion-Driven Page Strategy</h4>
+<p style="color:#475569;">Location-specific pages structured for ranking and lead generation.</p>
 </div>
 
 </div>
@@ -956,36 +964,36 @@ Core Capabilities
 
 
 
-<!-- ================= PROCESS SECTION ================= -->
-<section class="section" style="background:#f8fafc;padding:120px 20px;">
+<!-- ================= PROCESS ================= -->
+<section class="section section-fade" style="background:#0f172a;color:#fff;padding:120px 20px;">
 <div style="max-width:1100px;margin:auto;">
 
-<div class="fade-in" style="text-align:center;margin-bottom:70px;">
-<h2 class="section-title" style="font-size:36px;font-weight:800;color:#0f172a;">
+<div style="text-align:center;margin-bottom:70px;">
+<h2 class="section-title" style="font-size:38px;font-weight:800;margin-bottom:20px;">
 Our Structured Process
 </h2>
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:50px;text-align:center;">
 
-<div class="fade-in">
-<h3 style="color:#0f172a;margin-bottom:10px;">01. Audit & Analysis</h3>
-<p style="color:#475569;">Comprehensive visibility and ranking evaluation.</p>
+<div>
+<h3 style="color:#facc15;font-size:20px;margin-bottom:10px;">01</h3>
+<p>Visibility Audit & Benchmarking</p>
 </div>
 
-<div class="fade-in">
-<h3 style="color:#0f172a;margin-bottom:10px;">02. Strategic Alignment</h3>
-<p style="color:#475569;">Structured mapping of keywords, services, and signals.</p>
+<div>
+<h3 style="color:#facc15;font-size:20px;margin-bottom:10px;">02</h3>
+<p>Strategic Signal Alignment</p>
 </div>
 
-<div class="fade-in">
-<h3 style="color:#0f172a;margin-bottom:10px;">03. Optimization Execution</h3>
-<p style="color:#475569;">Signal strengthening and authority reinforcement.</p>
+<div>
+<h3 style="color:#facc15;font-size:20px;margin-bottom:10px;">03</h3>
+<p>Execution & Optimization</p>
 </div>
 
-<div class="fade-in">
-<h3 style="color:#0f172a;margin-bottom:10px;">04. Stabilization & Growth</h3>
-<p style="color:#475569;">Ongoing refinement for ranking stability.</p>
+<div>
+<h3 style="color:#facc15;font-size:20px;margin-bottom:10px;">04</h3>
+<p>Stabilization & Performance Scaling</p>
 </div>
 
 </div>
@@ -995,27 +1003,26 @@ Our Structured Process
 
 
 
-<!-- ================= CLOSING STATEMENT ================= -->
-<section class="section" style="background:#ffffff;padding:120px 20px;">
+<!-- ================= CLOSING ================= -->
+<section class="section section-fade" style="background:#ffffff;padding:120px 20px;">
 <div style="max-width:900px;margin:auto;text-align:center;">
 
-<div class="fade-in">
-<h2 class="section-title" style="font-size:34px;font-weight:800;color:#0f172a;margin-bottom:25px;">
-Focused Expertise. Measurable Impact.
+<h2 class="section-title" style="font-size:36px;font-weight:800;color:#0f172a;margin-bottom:25px;">
+Focused Expertise. Measurable Growth.
 </h2>
 
-<p style="color:#475569;font-size:18px;margin-bottom:35px;">
-GeoLift is committed to delivering structured local visibility systems that support long-term business growth. Our focus remains on precision execution, measurable improvements, and sustainable ranking stability.
+<p style="color:#475569;font-size:18px;margin-bottom:40px;">
+GeoLift operates with a single objective — to strengthen local visibility through structured execution and long-term ranking stability.
 </p>
 
-<a href="/contact/" style="background:#0f172a;color:#fff;padding:15px 40px;border-radius:50px;text-decoration:none;font-weight:600;display:inline-block;">
-Request Consultation
+<a href="/contact/" style="background:#1e3a8a;color:#fff;padding:16px 45px;border-radius:50px;text-decoration:none;font-weight:600;display:inline-block;">
+Schedule Consultation
 </a>
-</div>
 
 </div>
 </section>
 
+  
 <!-- ================= MODERN RESPONSIVE FOOTER ================= -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
