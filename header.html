@@ -3,15 +3,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-<!-- ===== PREMIUM HEADER IMPROVED MOBILE DESIGN ===== -->
-
-
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Poppins',sans-serif;}
 
 /* ===== HEADER BASE ===== */
-
 header{
 position:fixed;
 top:0;
@@ -27,6 +22,11 @@ background:rgba(255,255,255,0.9);
 box-shadow:0 8px 30px rgba(0,0,0,0.08);
 }
 
+/* ADD REST OF YOUR HEADER CSS HERE */
+
+</style>
+
+
 <header id="header">
 <div class="container">
 
@@ -35,7 +35,6 @@ box-shadow:0 8px 30px rgba(0,0,0,0.08);
 </div>
 
 <nav id="menu">
-
 <a href="#">Home</a>
 
 <div class="dropdown">
@@ -57,7 +56,6 @@ box-shadow:0 8px 30px rgba(0,0,0,0.08);
 <a href="#">Blog</a>
 <a href="#contact">Contact</a>
 <a href="tel:+919330629573" class="cta">Get Free Consultation</a>
-
 </nav>
 
 <div class="menu-toggle" id="toggle">
@@ -66,45 +64,36 @@ box-shadow:0 8px 30px rgba(0,0,0,0.08);
 <span></span>
 </div>
 
-  <script>
+</div>
+</header>
+
+<div class="menu-overlay" id="overlay"></div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
 
 const menu = document.getElementById("menu");
 const toggle = document.getElementById("toggle");
 const overlay = document.getElementById("overlay");
 const header = document.getElementById("header");
 
+if(toggle){
 toggle.addEventListener("click", ()=>{
 menu.classList.toggle("active");
 overlay.classList.toggle("active");
 toggle.classList.toggle("active");
 });
+}
 
-/* Close on overlay click */
+if(overlay){
 overlay.addEventListener("click", ()=>{
 menu.classList.remove("active");
 overlay.classList.remove("active");
 toggle.classList.remove("active");
 });
-
-/* Close on link click */
-document.querySelectorAll("#menu a").forEach(link=>{
-link.addEventListener("click",(e)=>{
-
-// If it's dropdown button, don't close menu
-if(link.classList.contains("dropbtn")){
-e.preventDefault();
-return;
 }
 
-// Close only for normal links
-menu.classList.remove("active");
-overlay.classList.remove("active");
-toggle.classList.remove("active");
-
-});
-});
-
-/* Scroll effect */
 window.addEventListener("scroll", function(){
 if(window.scrollY > 50){
 header.classList.add("scrolled");
@@ -112,22 +101,6 @@ header.classList.add("scrolled");
 header.classList.remove("scrolled");
 }
 });
-/* MOBILE DROPDOWN TOGGLE */
-document.querySelectorAll(".dropbtn").forEach(btn=>{
-btn.addEventListener("click", function(e){
 
-if(window.innerWidth <= 992){
-e.preventDefault();
-this.parentElement.classList.toggle("active");
-}
-
-});
 });
 </script>
-
-<div style="height:90px;"></div>
-
-</div>
-</header>
-
-<div class="menu-overlay" id="overlay"></div>
