@@ -820,222 +820,284 @@ this.parentElement.classList.toggle("active");
 <div style="height:90px;"></div>
 
 
-<!-- ================= HERO SECTION ================= -->
+<!-- ===== PAGE STYLES (ONLY FOR THIS PAGE) ===== -->
+<style>
 
-<section class="hero" style="background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;padding:140px 20px 120px;">
-<div style="max-width:1100px;margin:auto;text-align:center;">
+/* ===== GLOBAL SECTION SPACING (REDUCED GAPS) ===== */
+.section{
+padding:60px 8%;
+position:relative;
+}
 
-<h1 style="font-size:48px;font-weight:800;line-height:1.2;margin-bottom:25px;">
-Google My Business (GMB) Profile Setup Service in Dankuni, Kolkata & West Bengal
-</h1>
+.section-small{
+padding:40px 8%;
+}
 
-<p style="font-size:20px;color:#cbd5e1;max-width:850px;margin:0 auto 40px;">
-Professional Google Business Profile Setup & Optimization for Tier 2 & Tier 3 Cities Across India.
-</p>
+/* ===== LIGHT HERO SECTION ===== */
+.hero-light{
+background:linear-gradient(135deg,#f8fbff,#eef4ff);
+text-align:center;
+padding:100px 8% 70px;
+}
 
-<div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
-<a href="tel:+919330629573" style="background:#6366f1;padding:14px 32px;border-radius:40px;color:#fff;font-weight:600;text-decoration:none;box-shadow:0 10px 25px rgba(99,102,241,0.4);">
-Get Free Consultation
-</a>
+.hero-light h1{
+font-size:42px;
+font-weight:800;
+color:#111;
+margin-bottom:20px;
+}
 
-<a href="#contact" style="border:2px solid #fff;padding:14px 32px;border-radius:40px;color:#fff;font-weight:600;text-decoration:none;">
-Audit My Listing
-</a>
+.hero-light p{
+font-size:18px;
+color:#555;
+max-width:800px;
+margin:auto;
+margin-bottom:30px;
+}
+
+/* ===== ANIMATED BUTTON ===== */
+.btn-primary{
+display:inline-block;
+padding:14px 34px;
+background:#2563eb;
+color:#fff;
+font-weight:600;
+border-radius:40px;
+transition:all .3s ease;
+box-shadow:0 8px 20px rgba(37,99,235,0.25);
+text-decoration:none;
+}
+
+.btn-primary:hover{
+background:#1e40af;
+transform:translateY(-4px);
+box-shadow:0 15px 30px rgba(37,99,235,0.35);
+}
+
+/* ===== BORDERED CARD DESIGN ===== */
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:#fff;
+border:1px solid #e5e7eb;
+border-radius:18px;
+padding:28px;
+transition:all .3s ease;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+border-color:#2563eb;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:15px;
+color:#111;
+}
+
+.card p{
+font-size:15px;
+color:#555;
+line-height:1.7;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title{
+text-align:center;
+margin-bottom:20px;
+}
+
+.section-title h2{
+font-size:32px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.section-title p{
+color:#666;
+font-size:16px;
+}
+
+/* ===== FAQ DESIGN ===== */
+.faq-item{
+border:1px solid #e5e7eb;
+border-radius:14px;
+margin-bottom:15px;
+overflow:hidden;
+transition:.3s;
+}
+
+.faq-question{
+padding:18px 22px;
+cursor:pointer;
+font-weight:600;
+background:#f9fafb;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.faq-answer{
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease;
+padding:0 22px;
+background:#fff;
+color:#555;
+}
+
+.faq-item.active .faq-answer{
+max-height:200px;
+padding:15px 22px;
+}
+
+.faq-item.active{
+border-color:#2563eb;
+}
+
+@media(max-width:768px){
+.hero-light h1{font-size:30px;}
+.section{padding:50px 6%;}
+}
+
+</style>
+
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero-light">
+<h1>Google My Business Profile Setup Service in India</h1>
+<p>Professional Google Business Profile creation, verification, and optimization services designed to help businesses across India rank on Google Maps, increase local visibility, and generate consistent leads.</p>
+<a href="#contact" class="btn-primary">Get Started Today</a>
+</section>
+
+
+<!-- ===== WHY GMB IMPORTANT ===== -->
+<section class="section">
+<div class="section-title">
+<h2>Why Google Business Profile Setup Is Critical</h2>
+<p>Your visibility on Google Maps directly impacts your local growth.</p>
 </div>
 
+<div class="card-grid">
+<div class="card">
+<h3>Rank in Google Map Pack</h3>
+<p>Appear in the top 3 local listings when customers search for services near them. This placement generates maximum visibility and high intent leads.</p>
+</div>
+
+<div class="card">
+<h3>Increase Calls & Direction Requests</h3>
+<p>Optimized profiles receive significantly more direct calls, direction requests, and website clicks from local customers.</p>
+</div>
+
+<div class="card">
+<h3>Build Local Trust</h3>
+<p>Structured descriptions, categories, reviews, and images increase credibility and customer confidence.</p>
+</div>
 </div>
 </section>
 
-<!-- ================= INTRO SECTION ================= -->
 
-<section>
-<div style="max-width:1000px;margin:auto;">
+<!-- ===== WHAT WE INCLUDE ===== -->
+<section class="section-small">
+<div class="section-title">
+<h2>What We Include in Our Setup Service</h2>
+</div>
 
-<h2 style="font-size:34px;font-weight:800;margin-bottom:25px;">
-Struggling to Appear on Google Maps in Dankuni?
-</h2>
+<div class="card-grid">
+<div class="card">
+<h3>Complete Profile Creation</h3>
+<p>Business name formatting, category selection, NAP consistency, service areas, hours setup, website linking, and appointment integration.</p>
+</div>
 
-<p>
-If you are a local business owner in Dankuni struggling to appear on Google Maps or not receiving calls from nearby customers, your Google My Business profile might not be properly set up.
-</p>
+<div class="card">
+<h3>Verification Assistance</h3>
+<p>Step-by-step support for postcard, video verification, and suspended listing recovery guidance.</p>
+</div>
 
-<p>
-At GeoLift, we provide complete Google My Business Profile setup services in Dankuni, helping small businesses, startups, service providers, and shop owners rank higher in local search results.
-</p>
+<div class="card">
+<h3>Local SEO Optimization</h3>
+<p>Strategic keyword placement inside description, services, products, Q&A, and posts for higher relevance.</p>
+</div>
 
-<p>
-We also work with businesses in Kolkata, across West Bengal, and in growing Tier 2 and Tier 3 cities across India, where competition is lower but opportunity is massive.
-</p>
-
-<p>
-Whether you are a clinic in Dankuni, a coaching center in Kolkata, a restaurant in Hooghly, a service provider in Durgapur, or a small business in any Indian town — we help you create, verify, optimize and rank your Google Business Profile the right way.
-</p>
-
+<div class="card">
+<h3>Geo-Targeting Strategy</h3>
+<p>Optimizing your listing for surrounding areas to expand reach and appear in nearby location searches.</p>
+</div>
 </div>
 </section>
 
-<!-- ================= WHY GMB MATTERS ================= -->
 
-<section class="why-section">
-<div style="max-width:1100px;margin:auto;">
-
-<div class="why-header" style="text-align:center;">
-<h2 style="font-size:34px;font-weight:800;">
-Why Google My Business Setup Is Critical for Local Businesses in Dankuni
-</h2>
+<!-- ===== BENEFITS ===== -->
+<section class="section">
+<div class="section-title">
+<h2>Benefits of Professional Optimization</h2>
 </div>
 
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;">
-
-<div class="why-card" style="padding:30px;background:#fff;">
-<h3 style="font-weight:700;margin-bottom:10px;">Rank on Google Maps</h3>
-<p>Appear in the Local 3-Pack when customers search “near me”.</p>
+<div class="card-grid">
+<div class="card">
+<h3>Higher Local Visibility</h3>
+<p>Your business appears consistently for targeted local searches in your service area.</p>
 </div>
 
-<div class="why-card" style="padding:30px;background:#fff;">
-<h3 style="font-weight:700;margin-bottom:10px;">Increase Phone Calls</h3>
-<p>Optimized listings generate direct calls from ready buyers.</p>
+<div class="card">
+<h3>Improved Conversion Rate</h3>
+<p>Optimized profiles convert searchers into callers faster due to structured and persuasive setup.</p>
 </div>
 
-<div class="why-card" style="padding:30px;background:#fff;">
-<h3 style="font-weight:700;margin-bottom:10px;">Boost Walk-In Customers</h3>
-<p>More direction requests mean more store visits.</p>
+<div class="card">
+<h3>Long-Term Ranking Stability</h3>
+<p>Proper structure ensures your listing remains strong and avoids suspension risks.</p>
 </div>
-
-</div>
-
 </div>
 </section>
 
-<!-- ================= SERVICES DETAILS ================= -->
 
-<section class="services-section">
-<div style="max-width:1000px;margin:auto;">
-
-<h2 style="font-size:34px;font-weight:800;margin-bottom:30px;">
-Our Google My Business Profile Setup Service in Dankuni
-</h2>
-
-<h3 style="margin-top:40px;font-weight:700;">1. Complete Business Profile Creation</h3>
-<p>
-Correct business name formatting, primary & secondary categories, accurate NAP (Name, Address, Phone), service area configuration, business hours, website & appointment integration — all structured according to Google guidelines.
-</p>
-
-<h3 style="margin-top:40px;font-weight:700;">2. Business Verification Assistance</h3>
-<p>
-We assist with postcard verification, video verification issues, and suspended profiles to ensure your listing goes live smoothly.
-</p>
-
-<h3 style="margin-top:40px;font-weight:700;">3. Local Keyword Optimization (LSI Strategy)</h3>
-<p>
-We optimize descriptions, services, posts and Q&A using relevant local search terms such as Google Business Profile setup in Dankuni, GMB optimization services Kolkata, Local SEO services West Bengal, Google Maps ranking expert, and more.
-</p>
-
-<h3 style="margin-top:40px;font-weight:700;">4. Geo-Targeting for Dankuni & Nearby Areas</h3>
-<p>
-We optimize your listing for surrounding areas including Hooghly, Serampore, Uttarpara, Howrah and Kolkata outskirts to maximize visibility.
-</p>
-
+<!-- ===== FAQ SECTION ===== -->
+<section class="section-small">
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
 </div>
+
+<div class="faq-item">
+<div class="faq-question">Do you provide service across India? <span>+</span></div>
+<div class="faq-answer">
+<p>Yes, we work with businesses across India including metro cities and Tier 2 & Tier 3 towns.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">How long does verification take? <span>+</span></div>
+<div class="faq-answer">
+<p>Profile creation is immediate, but Google verification may take a few days depending on the method used.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">Is this useful for small businesses? <span>+</span></div>
+<div class="faq-answer">
+<p>Absolutely. Local businesses benefit the most from optimized Google Business Profiles because customers search online before visiting.</p>
+</div>
+</div>
+
 </section>
 
-<!-- ================= PROCESS SECTION ================= -->
 
-<section class="process-section">
-<div style="max-width:1100px;margin:auto;text-align:center;">
-
-<div class="process-header">
-<h2 style="font-size:34px;font-weight:800;">Our Process</h2>
-</div>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:left;">
-
-<div class="service-card" style="padding:30px;background:#fff;">
-<h3 style="font-weight:700;margin-bottom:10px;">Step 1 – Business Analysis</h3>
-<p>We analyze your category, service area and competitors.</p>
-</div>
-
-<div class="service-card" style="padding:30px;background:#fff;">
-<h3 style="font-weight:700;margin-bottom:10px;">Step 2 – Profile Creation / Audit</h3>
-<p>We create or audit your existing profile for improvement areas.</p>
-</div>
-
-<div class="service-card" style="padding:30px;background:#fff;">
-<h3 style="font-weight:700;margin-bottom:10px;">Step 3 – Optimization</h3>
-<p>We implement keyword mapping, category enhancement and conversion structure.</p>
-</div>
-
-<div class="service-card" style="padding:30px;background:#fff;">
-<h3 style="font-weight:700;margin-bottom:10px;">Step 4 – Verification & Launch</h3>
-<p>We assist with verification and provide guidance for long-term growth.</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- ================= FAQ SECTION ================= -->
-
-<section class="faq-section">
-<div style="max-width:900px;margin:auto;">
-
-<div class="faq-header" style="text-align:center;">
-<h2 style="font-size:34px;font-weight:800;">Frequently Asked Questions</h2>
-</div>
-
-<div class="faq-item" style="background:#fff;padding:25px;margin-bottom:15px;cursor:pointer;">
-<h4 style="font-weight:600;">Do you provide Google My Business setup in Dankuni?</h4>
-<p class="faq-answer" style="display:none;margin-top:10px;color:#475569;">
-Yes. We specialize in Google My Business profile setup services in Dankuni and nearby areas.
-</p>
-</div>
-
-<div class="faq-item" style="background:#fff;padding:25px;margin-bottom:15px;cursor:pointer;">
-<h4 style="font-weight:600;">Do you work with Kolkata businesses?</h4>
-<p class="faq-answer" style="display:none;margin-top:10px;color:#475569;">
-Yes. We help businesses across Kolkata optimize and rank in competitive local search results.
-</p>
-</div>
-
-<div class="faq-item" style="background:#fff;padding:25px;margin-bottom:15px;cursor:pointer;">
-<h4 style="font-weight:600;">Is this service useful for Tier 2 & Tier 3 cities?</h4>
-<p class="faq-answer" style="display:none;margin-top:10px;color:#475569;">
-Absolutely. Smaller cities often rank faster due to lower competition.
-</p>
-</div>
-
-</div>
-</section>
-
+<!-- ===== FAQ SCRIPT ===== -->
 <script>
-document.querySelectorAll(".faq-item").forEach(item=>{
+document.querySelectorAll(".faq-question").forEach(item=>{
 item.addEventListener("click",()=>{
-let answer=item.querySelector(".faq-answer");
-answer.style.display=answer.style.display==="block"?"none":"block";
+const parent=item.parentElement;
+parent.classList.toggle("active");
 });
 });
 </script>
-
-<!-- ================= FINAL CTA ================= -->
-
-<section class="cta-section">
-<div style="max-width:900px;margin:auto;text-align:center;color:#fff;">
-
-<h2 style="font-size:36px;font-weight:800;margin-bottom:20px;">
-Get Your Google Business Profile Set Up Professionally
-</h2>
-
-<p style="max-width:700px;margin:0 auto 35px;color:#e2e8f0;">
-If you are a business owner in Dankuni, Kolkata, West Bengal or any Tier 2 or Tier 3 city in India, now is the right time to build your local digital presence.
-</p>
-
-<a href="tel:+919330629573" style="background:#fff;color:#4f46e5;padding:14px 32px;border-radius:40px;font-weight:700;text-decoration:none;">
-Contact GeoLift Today
-</a>
-
-</div>
-</section>
 
 
 <!-- ================= MODERN RESPONSIVE FOOTER ================= -->
