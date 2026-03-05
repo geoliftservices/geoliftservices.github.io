@@ -1155,12 +1155,14 @@ Examples of structured profile optimization work focused on improving visibility
 </section>
 
   
-
-<!-- ================= SERVICES STYLES ================= -->
+<!-- ================= SERVICES SECTION ================= -->
 
 <style>
 
+/* ================= SERVICES SECTION ================= */
+
 .services{
+padding:100px 20px;
 background:#f6f7fb;
 font-family:'Poppins',sans-serif;
 }
@@ -1172,11 +1174,10 @@ margin:auto;
 
 .services-title{
 text-align:center;
-font-size:40px;
+font-size:38px;
 font-weight:700;
-margin-bottom:60px;
+margin-bottom:50px;
 color:#0f172a;
-letter-spacing:-0.5px;
 }
 
 /* GRID */
@@ -1184,43 +1185,43 @@ letter-spacing:-0.5px;
 .services-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:30px;
+gap:28px;
 }
 
 @media(max-width:1024px){
-.services-grid{grid-template-columns:1fr 1fr;}
+.services-grid{
+grid-template-columns:1fr 1fr;
+}
 }
 
 @media(max-width:768px){
-.services-grid{grid-template-columns:1fr;}
+.services-grid{
+grid-template-columns:1fr;
+}
 }
 
 /* CARD */
 
 .service-card{
-
 background:#fff;
-border:1px solid #e6e9f0;
+border:1px solid #e7eaf0;
 border-radius:14px;
-padding:34px 34px 38px 34px;
-box-shadow:0 8px 25px rgba(0,0,0,0.05);
-transition:.3s;
+padding:30px;
+box-shadow:0 6px 20px rgba(0,0,0,0.04);
+transition:.25s;
 
 display:flex;
 flex-direction:column;
-min-height:520px;
-
 }
 
 .service-card:hover{
-
-box-shadow:0 16px 48px rgba(0,0,0,0.09);
+transform:translateY(-6px);
+box-shadow:0 18px 45px rgba(0,0,0,0.08);
 border-color:#6d5cff;
-
 }
 
 .service-card h3{
-font-size:21px;
+font-size:20px;
 margin-bottom:12px;
 color:#0f172a;
 }
@@ -1228,7 +1229,7 @@ color:#0f172a;
 .service-desc{
 font-size:14px;
 color:#64748b;
-margin-bottom:18px;
+margin-bottom:16px;
 line-height:1.6;
 }
 
@@ -1241,63 +1242,54 @@ margin:0;
 }
 
 .features li{
-
 font-size:14px;
-padding:7px 0;
+padding:6px 0;
 color:#334155;
 display:flex;
-align-items:center;
-
+align-items:flex-start;
 }
 
 .features li:before{
-
 content:"✔";
-color:#5b6cff;
+color:#6d5cff;
 font-weight:700;
-margin-right:10px;
-font-size:14px;
-
+margin-right:9px;
+font-size:13px;
+margin-top:2px;
 }
 
 /* HIDDEN FEATURES */
 
 .more-features{
 display:none;
-margin-top:6px;
+margin-top:5px;
 }
 
 /* LINKS */
 
 .card-links{
-
-margin-top:auto;
+margin-top:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding-top:18px;
-
 }
 
 /* VIEW MORE */
 
 .view-more{
-
 color:#6d5cff;
 font-weight:600;
 cursor:pointer;
 font-size:14px;
-
 }
 
 .view-more:hover{
 text-decoration:underline;
 }
 
-/* KNOW MORE BUTTON */
+/* BUTTON */
 
 .know-more{
-
 background:#6d5cff;
 color:#fff;
 font-weight:600;
@@ -1305,8 +1297,7 @@ text-decoration:none;
 font-size:14px;
 padding:9px 18px;
 border-radius:6px;
-transition:.3s;
-
+transition:.25s;
 }
 
 .know-more:hover{
@@ -1316,8 +1307,6 @@ background:#5847ff;
 </style>
 
 
-
-<!-- ================= SERVICES HTML ================= -->
 
 <section class="services">
 
@@ -1482,9 +1471,8 @@ function toggleFeatures(btn){
 
 let currentCard = btn.closest(".service-card");
 let currentFeatures = currentCard.querySelector(".more-features");
-let currentBtn = btn;
 
-/* CLOSE ALL OTHER CARDS */
+/* CLOSE OTHER CARDS */
 
 document.querySelectorAll(".service-card").forEach(function(card){
 
@@ -1493,25 +1481,24 @@ let button = card.querySelector(".view-more");
 
 if(card !== currentCard){
 
-features.style.display = "none";
-button.textContent = "+ View More Features";
+features.style.display="none";
+button.textContent="+ View More Features";
 
 }
 
 });
 
+/* TOGGLE CURRENT */
 
-/* TOGGLE CURRENT CARD */
+if(currentFeatures.style.display==="block"){
 
-if(currentFeatures.style.display === "block"){
-
-currentFeatures.style.display = "none";
-currentBtn.textContent = "+ View More Features";
+currentFeatures.style.display="none";
+btn.textContent="+ View More Features";
 
 }else{
 
-currentFeatures.style.display = "block";
-currentBtn.textContent = "Hide Features";
+currentFeatures.style.display="block";
+btn.textContent="Hide Features";
 
 }
 
