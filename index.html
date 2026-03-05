@@ -1156,73 +1156,86 @@ Examples of structured profile optimization work focused on improving visibility
 
 </section>
 
-<!-- ================= SERVICES SECTION STYLES ================= -->
+  
+
+<!-- ================= SERVICES STYLES ================= -->
 
 <style>
 
-.services-section{
-padding:90px 20px;
+.services{
+padding:110px 20px;
 background:#f6f7fb;
+font-family:'Poppins',sans-serif;
 }
 
-.container{
+.services-container{
 max-width:1200px;
 margin:auto;
 }
 
-.services-heading{
-font-size:42px;
-font-weight:700;
+.services-title{
 text-align:center;
-margin-bottom:10px;
+font-size:40px;
+font-weight:700;
+margin-bottom:60px;
 color:#0f172a;
+letter-spacing:-0.5px;
 }
 
-.services-sub{
-text-align:center;
-max-width:720px;
-margin:auto;
-font-size:17px;
-color:#6b7280;
-margin-bottom:60px;
-}
+/* GRID */
 
 .services-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
 }
 
+@media(max-width:1024px){
+.services-grid{grid-template-columns:1fr 1fr;}
+}
+
+@media(max-width:768px){
+.services-grid{grid-template-columns:1fr;}
+}
+
+/* CARD */
+
 .service-card{
+
 background:#fff;
-padding:40px;
-border-radius:16px;
-border:1px solid #e6e8f0;
+border:1px solid #e6e9f0;
+border-radius:14px;
+padding:34px 34px 38px 34px;
 box-shadow:0 8px 25px rgba(0,0,0,0.05);
-transition:0.3s;
+transition:.3s;
+
+display:flex;
+flex-direction:column;
+min-height:520px;
+
 }
 
 .service-card:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
-}
 
-.service-icon{
-font-size:26px;
-margin-bottom:18px;
+box-shadow:0 16px 48px rgba(0,0,0,0.09);
+border-color:#6d5cff;
+
 }
 
 .service-card h3{
-font-size:22px;
-font-weight:600;
+font-size:21px;
 margin-bottom:12px;
+color:#0f172a;
 }
 
 .service-desc{
-color:#6b7280;
-font-size:15px;
-margin-bottom:20px;
+font-size:14px;
+color:#64748b;
+margin-bottom:18px;
+line-height:1.6;
 }
+
+/* FEATURES */
 
 .features{
 list-style:none;
@@ -1231,230 +1244,227 @@ margin:0;
 }
 
 .features li{
-font-size:15px;
-margin-bottom:8px;
-color:#374151;
+
+font-size:14px;
+padding:7px 0;
+color:#334155;
+display:flex;
+align-items:center;
+
 }
+
+.features li:before{
+
+content:"✔";
+color:#5b6cff;
+font-weight:700;
+margin-right:10px;
+font-size:14px;
+
+}
+
+/* HIDDEN FEATURES */
 
 .more-features{
 display:none;
-margin-top:10px;
+margin-top:6px;
 }
 
-.service-links{
+/* LINKS */
+
+.card-links{
+
+margin-top:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-top:20px;
+padding-top:18px;
+
 }
+
+/* VIEW MORE */
 
 .view-more{
+
 color:#6d5cff;
-font-weight:500;
+font-weight:600;
 cursor:pointer;
+font-size:14px;
+
 }
 
+.view-more:hover{
+text-decoration:underline;
+}
+
+/* KNOW MORE BUTTON */
+
 .know-more{
+
 background:#6d5cff;
 color:#fff;
-padding:8px 16px;
-border-radius:6px;
-font-size:14px;
+font-weight:600;
 text-decoration:none;
-transition:0.3s;
+font-size:14px;
+padding:9px 18px;
+border-radius:6px;
+transition:.3s;
+
 }
 
 .know-more:hover{
-background:#5947ff;
+background:#5847ff;
 }
 
 </style>
 
 
 
-<!-- ================= SERVICES SECTION HTML ================= -->
+<!-- ================= SERVICES HTML ================= -->
 
-<section class="services-section">
+<section class="services">
 
-<div class="container">
+<div class="services-container">
 
-<h2 class="services-heading">Our Core Services</h2>
-
-<p class="services-sub">
-Strategic digital services designed to improve Google visibility,
-strengthen local authority, and help businesses build a strong online presence.
-</p>
+<h2 class="services-title">Our Core Services</h2>
 
 <div class="services-grid">
 
 
-<!-- SERVICE 1 -->
+<!-- GBP SERVICE -->
 
 <div class="service-card">
-
-<div class="service-icon">📍</div>
 
 <h3>GBP Setup & Optimization</h3>
 
 <p class="service-desc">
-Complete Google Business Profile setup and optimization to build
-a strong foundation for local visibility and customer engagement.
+Complete Google Business Profile configuration to improve local search visibility and customer engagement.
 </p>
 
 <ul class="features">
 
-<li>✔ Business Information Setup</li>
-<li>✔ Map Pin Verification</li>
-<li>✔ WhatsApp Chat Integration</li>
-<li>✔ Call Button Setup</li>
-<li>✔ Services & Products Listing</li>
-<li>✔ Category Optimization</li>
-<li>✔ Business Description Optimization</li>
+<li>Business Information Setup</li>
+<li>Map Pin Verification</li>
+<li>WhatsApp Chat Integration</li>
+<li>Call Button Setup</li>
+<li>Services & Products Listing</li>
+<li>Category Optimization</li>
+<li>Business Description Optimization</li>
 
 </ul>
 
 <ul class="features more-features">
 
-<li>✔ Logo & Cover Photo Setup</li>
-<li>✔ Business Hours Setup</li>
-<li>✔ Service Area Setup</li>
-<li>✔ Review Link Creation</li>
-<li>✔ Google Map Embedding</li>
-<li>✔ Profile SEO Optimization</li>
-<li>✔ Spam Protection Setup</li>
-<li>✔ Trust Signal Setup</li>
-<li>✔ FAQ Section Setup</li>
-<li>✔ Business Attributes Optimization</li>
-<li>✔ Photo Geo Tag Optimization</li>
-<li>✔ Initial Ranking Foundation Setup</li>
+<li>Logo & Cover Photo Setup</li>
+<li>Business Hours Setup</li>
+<li>Service Area Configuration</li>
+<li>Review Link Creation</li>
+<li>Google Map Embedding</li>
+<li>Profile SEO Optimization</li>
+<li>Spam Protection Setup</li>
+<li>Trust Signal Setup</li>
+<li>FAQ Section Setup</li>
+<li>Business Attributes Optimization</li>
 
 </ul>
 
-<div class="service-links">
+<div class="card-links">
 
-<a class="view-more" onclick="toggleFeatures(this)">
-+ View More Features
-</a>
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
 
-<a href="/services/gbp-setup-optimization/" class="know-more">
-Know More →
-</a>
+<a class="know-more" href="/services/gbp-setup-optimization/">Know More</a>
 
 </div>
 
 </div>
 
 
-
-<!-- SERVICE 2 -->
+<!-- MAPS RANKING -->
 
 <div class="service-card">
-
-<div class="service-icon">🚀</div>
 
 <h3>Advanced Google Maps Ranking</h3>
 
 <p class="service-desc">
-Advanced strategies designed to increase Google Maps visibility
-and help businesses appear in high-intent local searches.
+Advanced optimization strategies designed to improve Google Maps rankings and generate consistent local leads.
 </p>
 
 <ul class="features">
 
-<li>✔ Local Keyword Strategy</li>
-<li>✔ Competitor Map Analysis</li>
-<li>✔ Profile Authority Optimization</li>
-<li>✔ Geo Relevance Optimization</li>
-<li>✔ Citation Building Strategy</li>
-<li>✔ Weekly Ranking Tracking</li>
-<li>✔ Local Visibility Improvement</li>
+<li>Local Keyword Strategy</li>
+<li>Competitor Analysis</li>
+<li>Profile SEO Improvements</li>
+<li>Geo Relevance Optimization</li>
+<li>Map Ranking Signals Setup</li>
+<li>Location Authority Signals</li>
+<li>Review Growth Strategy</li>
 
 </ul>
 
 <ul class="features more-features">
 
-<li>✔ Local Content Signals</li>
-<li>✔ Review Growth Strategy</li>
-<li>✔ Engagement Signal Optimization</li>
-<li>✔ Google Posts Optimization</li>
-<li>✔ Location Authority Signals</li>
-<li>✔ Service Area Optimization</li>
-<li>✔ Competitor Gap Analysis</li>
-<li>✔ Advanced Map Ranking Signals</li>
-<li>✔ Local Backlink Strategy</li>
-<li>✔ Map Pack Optimization</li>
-<li>✔ Profile Activity Boost</li>
-<li>✔ Visibility Performance Tracking</li>
+<li>Weekly Profile Optimization</li>
+<li>Google Posts Publishing</li>
+<li>Citation Building</li>
+<li>Competitor Monitoring</li>
+<li>Behavioral Ranking Signals</li>
+<li>Performance Tracking</li>
+<li>Ranking Improvement Strategy</li>
+<li>Lead Conversion Optimization</li>
 
 </ul>
 
-<div class="service-links">
+<div class="card-links">
 
-<a class="view-more" onclick="toggleFeatures(this)">
-+ View More Features
-</a>
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
 
-<a href="/services/advanced-google-maps-ranking/" class="know-more">
-Know More →
-</a>
+<a class="know-more" href="/services/advanced-google-maps-ranking/">Know More</a>
 
 </div>
 
 </div>
 
 
-
-<!-- SERVICE 3 -->
+<!-- WEBSITE -->
 
 <div class="service-card">
-
-<div class="service-icon">💻</div>
 
 <h3>Custom Business Website Development</h3>
 
 <p class="service-desc">
-Professional multi-page business websites designed for credibility,
-brand presence, and lead generation.
+Modern business websites designed for credibility, performance, and professional online presence.
 </p>
 
 <ul class="features">
 
-<li>✔ Custom Website Design</li>
-<li>✔ Mobile Responsive Layout</li>
-<li>✔ Fast Loading Performance</li>
-<li>✔ SEO Friendly Structure</li>
-<li>✔ WhatsApp Chat Integration</li>
-<li>✔ Click To Call Button</li>
-<li>✔ Google Map Integration</li>
+<li>Professional Web Design</li>
+<li>Full Website Development</li>
+<li>Mobile Responsive Layout</li>
+<li>Fast Loading Speed</li>
+<li>SEO Friendly Structure</li>
+<li>WhatsApp Chat Integration</li>
+<li>Call Button Integration</li>
 
 </ul>
 
 <ul class="features more-features">
 
-<li>✔ Free Domain Setup</li>
-<li>✔ Free Hosting Included</li>
-<li>✔ SSL Security Setup</li>
-<li>✔ Professional UI Design</li>
-<li>✔ Animated Modern Layout</li>
-<li>✔ Service Page Structure</li>
-<li>✔ Contact Form Integration</li>
-<li>✔ Image Optimization</li>
-<li>✔ Basic On-Page SEO</li>
-<li>✔ Speed Optimization</li>
-<li>✔ Custom Branding</li>
-<li>✔ Easy Future Expansion</li>
+<li>Free Hosting Setup</li>
+<li>Custom Domain Connection</li>
+<li>Google Maps Integration</li>
+<li>Modern Animated Design</li>
+<li>Secure HTTPS Setup</li>
+<li>Lead Contact Forms</li>
+<li>Optimized UI/UX Structure</li>
+<li>Full Custom Design Control</li>
 
 </ul>
 
-<div class="service-links">
+<div class="card-links">
 
-<a class="view-more" onclick="toggleFeatures(this)">
-+ View More Features
-</a>
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
 
-<a href="/services/custom-business-website-development/" class="know-more">
-Know More →
-</a>
+<a class="know-more" href="/services/custom-business-website-development/">Know More</a>
 
 </div>
 
@@ -1467,24 +1477,24 @@ Know More →
 
 
 
-<!-- ================= SERVICES SCRIPT ================= -->
+<!-- ================= SCRIPT ================= -->
 
 <script>
 
-function toggleFeatures(el){
+function toggleFeatures(btn){
 
-let card = el.closest(".service-card")
-let more = card.querySelector(".more-features")
+let card = btn.closest(".service-card");
+let more = card.querySelector(".more-features");
 
-if(more.style.display==="block"){
+if(more.style.display === "block"){
 
-more.style.display="none"
-el.innerHTML="+ View More Features"
+more.style.display = "none";
+btn.textContent = "+ View More Features";
 
 }else{
 
-more.style.display="block"
-el.innerHTML="Hide Features"
+more.style.display = "block";
+btn.textContent = "Hide Features";
 
 }
 
