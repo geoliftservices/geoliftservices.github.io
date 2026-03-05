@@ -1156,7 +1156,7 @@ Examples of structured profile optimization work focused on improving visibility
 
 </section>
 
-<!-- ================= PREMIUM SERVICES SECTION ================= -->
+<!-- ================= IMPROVED SERVICES SECTION ================= -->
 
 <style>
 
@@ -1183,27 +1183,23 @@ line-height:1.8;
 }
 
 .services-grid{
-max-width:1100px;
-margin:0 auto;
+max-width:1150px;
+margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
+gap:28px;
 }
-
-/* Tablet */
 
 @media (max-width:1024px){
 .services-grid{
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,1fr);
 }
 }
-
-/* Mobile */
 
 @media (max-width:768px){
 
 .services-grid{
-grid-template-columns:repeat(1,1fr);
+grid-template-columns:1fr;
 }
 
 .services-title{
@@ -1212,7 +1208,6 @@ font-size:30px;
 
 .services-subtitle{
 font-size:15px;
-margin-bottom:40px;
 }
 
 }
@@ -1220,71 +1215,68 @@ margin-bottom:40px;
 /* CARD */
 
 .service-card{
-position:relative;
-overflow:hidden;
-background:#ffffff;
+
+background:white;
 border-radius:18px;
-padding:28px 22px;
-min-height:270px;
+padding:28px;
+text-align:left;
+transition:.4s;
+border:2px solid #6366f1;
+box-shadow:0 15px 40px rgba(99,102,241,0.15);
+
 display:flex;
 flex-direction:column;
-justify-content:flex-start;
-transition:0.4s ease;
-box-shadow:0 15px 40px rgba(99,102,241,0.15);
-border:2px solid #6366f1;
-}
-
-.service-card::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:6px;
-background:linear-gradient(90deg,#6366f1,#8b5cf6);
 }
 
 .service-card:hover{
-transform:translateY(-12px);
-box-shadow:0 30px 70px rgba(99,102,241,0.3);
+transform:translateY(-10px);
+box-shadow:0 30px 60px rgba(99,102,241,0.25);
 }
-
-/* ICON */
 
 .service-icon{
-width:60px;
-height:60px;
-margin:0 auto 18px;
 font-size:26px;
+margin-bottom:15px;
 }
-
-/* TITLE */
 
 .service-card h3{
 font-size:20px;
-margin-bottom:14px;
+margin-bottom:10px;
 color:#0f172a;
-font-weight:700;
 }
 
-/* TEXT */
-
-.service-card p{
-font-size:15px;
+.service-desc{
+font-size:14px;
 color:#475569;
-line-height:1.7;
 margin-bottom:18px;
 }
 
-/* READ MORE LINK */
+/* FEATURE LIST */
+
+.service-features{
+list-style:none;
+padding:0;
+margin:0 0 20px 0;
+}
+
+.service-features li{
+
+font-size:14px;
+color:#334155;
+padding:6px 0;
+border-bottom:1px solid #f1f5f9;
+
+}
+
+/* READ MORE */
 
 .service-link{
+
 margin-top:auto;
 font-size:14px;
 font-weight:600;
 color:#6366f1;
 text-decoration:none;
-transition:.3s;
+
 }
 
 .service-link:hover{
@@ -1294,24 +1286,24 @@ color:#4f46e5;
 /* CTA */
 
 .services-cta{
-margin-top:70px;
+margin-top:60px;
 }
 
 .services-cta a{
-display:inline-block;
-padding:14px 32px;
+
+padding:14px 34px;
 background:#6366f1;
 color:white;
-font-weight:600;
-border-radius:50px;
 text-decoration:none;
-transition:.3s;
-box-shadow:0 15px 35px rgba(99,102,241,0.35);
+border-radius:40px;
+font-weight:600;
+display:inline-block;
+box-shadow:0 15px 40px rgba(99,102,241,0.3);
+
 }
 
 .services-cta a:hover{
-transform:translateY(-4px);
-box-shadow:0 20px 45px rgba(99,102,241,0.45);
+transform:translateY(-3px);
 }
 
 </style>
@@ -1321,12 +1313,12 @@ box-shadow:0 20px 45px rgba(99,102,241,0.45);
 <h2 class="services-title">Our Core Services</h2>
 
 <p class="services-subtitle">
-Strategic digital services designed to improve Google visibility, strengthen local authority, and help businesses build a strong online presence.
+Strategic digital services designed to improve Google visibility, strengthen local authority, and build a strong professional online presence for businesses.
 </p>
 
 <div class="services-grid">
 
-<!-- SERVICE 1 -->
+<!-- GBP SERVICE -->
 
 <div class="service-card">
 
@@ -1334,9 +1326,25 @@ Strategic digital services designed to improve Google visibility, strengthen loc
 
 <h3>GBP Setup & Optimization</h3>
 
-<p>
-Complete Google Business Profile setup and optimization including category selection, business information correction, photo optimization, and profile structure improvement to enhance local visibility.
+<p class="service-desc">
+Complete Google Business Profile setup and professional optimization for better local visibility.
 </p>
+
+<ul class="service-features">
+
+<li>✔ Business Details Setup</li>
+
+<li>✔ Google Maps Pin Integration</li>
+
+<li>✔ WhatsApp Chat Button</li>
+
+<li>✔ Call Button Integration</li>
+
+<li>✔ Products & Services Setup</li>
+
+<li>✔ Photo & Profile Optimization</li>
+
+</ul>
 
 <a class="service-link" href="/services/gbp-setup-optimization/">
 Read More →
@@ -1344,7 +1352,7 @@ Read More →
 
 </div>
 
-<!-- SERVICE 2 -->
+<!-- MAPS RANKING -->
 
 <div class="service-card">
 
@@ -1352,9 +1360,25 @@ Read More →
 
 <h3>Advanced Google Maps Ranking</h3>
 
-<p>
-Advanced strategies designed to improve Google Maps visibility and help businesses appear in high-intent local searches where potential customers are actively looking for services.
+<p class="service-desc">
+Advanced strategies designed to improve Google Maps visibility and attract more local customers.
 </p>
+
+<ul class="service-features">
+
+<li>✔ Local SEO Optimization</li>
+
+<li>✔ Business Category Optimization</li>
+
+<li>✔ Review Strategy Setup</li>
+
+<li>✔ Google Maps Ranking Signals</li>
+
+<li>✔ Profile Authority Improvement</li>
+
+<li>✔ Ongoing Ranking Improvements</li>
+
+</ul>
 
 <a class="service-link" href="/services/advanced-google-maps-ranking/">
 Read More →
@@ -1362,7 +1386,7 @@ Read More →
 
 </div>
 
-<!-- SERVICE 3 -->
+<!-- WEBSITE SERVICE -->
 
 <div class="service-card">
 
@@ -1370,9 +1394,25 @@ Read More →
 
 <h3>Custom Business Website Development</h3>
 
-<p>
-Professional multi-page business websites built for credibility, brand presence, and service presentation with fast loading speed, mobile responsiveness, and modern design.
+<p class="service-desc">
+Professional multi-page business websites designed for credibility, speed, and customer conversion.
 </p>
+
+<ul class="service-features">
+
+<li>✔ Custom Website Design & Development</li>
+
+<li>✔ Mobile Responsive Layout</li>
+
+<li>✔ Fast Loading Performance</li>
+
+<li>✔ WhatsApp & Call Integration</li>
+
+<li>✔ Google Maps Integration</li>
+
+<li>✔ Custom Domain Setup</li>
+
+</ul>
 
 <a class="service-link" href="/services/custom-business-website-development/">
 Read More →
