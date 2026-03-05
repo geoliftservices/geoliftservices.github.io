@@ -1201,16 +1201,20 @@ grid-template-columns:repeat(3,1fr);
 /* Mobile */
 
 @media (max-width:768px){
+
 .services-grid{
 grid-template-columns:repeat(1,1fr);
 }
+
 .services-title{
 font-size:30px;
 }
+
 .services-subtitle{
 font-size:15px;
 margin-bottom:40px;
 }
+
 }
 
 /* CARD */
@@ -1220,8 +1224,8 @@ position:relative;
 overflow:hidden;
 background:#ffffff;
 border-radius:18px;
-padding:24px 20px;
-min-height:260px;
+padding:28px 22px;
+min-height:270px;
 display:flex;
 flex-direction:column;
 justify-content:flex-start;
@@ -1254,17 +1258,37 @@ margin:0 auto 18px;
 font-size:26px;
 }
 
+/* TITLE */
+
 .service-card h3{
 font-size:20px;
-margin-bottom:15px;
+margin-bottom:14px;
 color:#0f172a;
 font-weight:700;
 }
+
+/* TEXT */
 
 .service-card p{
 font-size:15px;
 color:#475569;
 line-height:1.7;
+margin-bottom:18px;
+}
+
+/* READ MORE LINK */
+
+.service-link{
+margin-top:auto;
+font-size:14px;
+font-weight:600;
+color:#6366f1;
+text-decoration:none;
+transition:.3s;
+}
+
+.service-link:hover{
+color:#4f46e5;
 }
 
 /* CTA */
@@ -1297,7 +1321,7 @@ box-shadow:0 20px 45px rgba(99,102,241,0.45);
 <h2 class="services-title">Our Core Services</h2>
 
 <p class="services-subtitle">
-Strategic services designed to improve Google visibility, strengthen local authority, and help businesses establish a strong digital presence.
+Strategic digital services designed to improve Google visibility, strengthen local authority, and help businesses build a strong online presence.
 </p>
 
 <div class="services-grid">
@@ -1305,46 +1329,66 @@ Strategic services designed to improve Google visibility, strengthen local autho
 <!-- SERVICE 1 -->
 
 <div class="service-card">
+
 <div class="service-icon">📍</div>
+
 <h3>GBP Setup & Optimization</h3>
 
 <p>
-Professional Google Business Profile setup and structured optimization including category selection, business information correction, image optimization, and profile authority improvement to increase visibility in local search results.
+Complete Google Business Profile setup and optimization including category selection, business information correction, photo optimization, and profile structure improvement to enhance local visibility.
 </p>
+
+<a class="service-link" href="/services/gbp-setup-optimization/">
+Read More →
+</a>
 
 </div>
 
 <!-- SERVICE 2 -->
 
 <div class="service-card">
+
 <div class="service-icon">🚀</div>
+
 <h3>Advanced Google Maps Ranking</h3>
 
 <p>
-Advanced local ranking strategies focused on improving Google Maps visibility, strengthening local signals, and positioning your business for higher discovery in relevant local searches.
+Advanced strategies designed to improve Google Maps visibility and help businesses appear in high-intent local searches where potential customers are actively looking for services.
 </p>
+
+<a class="service-link" href="/services/advanced-google-maps-ranking/">
+Read More →
+</a>
 
 </div>
 
 <!-- SERVICE 3 -->
 
 <div class="service-card">
+
 <div class="service-icon">💻</div>
+
 <h3>Custom Business Website Development</h3>
 
 <p>
-Professional multi-page business websites designed for credibility, brand presence, and service presentation — fully responsive, fast loading, and optimized for a strong online foundation.
+Professional multi-page business websites built for credibility, brand presence, and service presentation with fast loading speed, mobile responsiveness, and modern design.
 </p>
+
+<a class="service-link" href="/services/custom-business-website-development/">
+Read More →
+</a>
 
 </div>
 
 </div>
 
 <div class="services-cta">
-<a href="/services/">Explore All Services</a>
+<a href="/services/">View All Services</a>
 </div>
 
 </section>
+
+  
 
   <!-- ================= PREMIUM PRICING SECTION ================= -->
 
