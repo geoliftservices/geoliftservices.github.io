@@ -1508,325 +1508,241 @@ btn.textContent="Hide Features";
 </script>
   
 
-<!-- ================= BUSINESS PLANS SECTION ================= -->
 
-<section class="pricing-section" id="plans">
-
-<div class="pricing-container">
+  <section class="pricing-section">
 
 <div class="pricing-header">
 <h2>Business Growth Plans</h2>
-<p>
-Built for serious businesses that want visibility, leads, and consistent local growth.
-Most new clients start with the Complete Local Growth System.
-</p>
+<p>Built for serious businesses that want visibility, leads, and consistent local growth.</p>
 </div>
 
-<div class="pricing-wrapper">
+<div class="pricing-grid">
 
 <!-- PLAN 1 -->
-
-<div class="pricing-item">
-
-<div class="pricing-content">
-
+<div class="plan-card">
 <h3>Foundation Launch</h3>
+<p class="plan-sub">One-Time Setup</p>
 
-<div class="pricing-type">One-Time Setup Investment</div>
-
-<div class="pricing-price">₹3000</div>
+<div class="price">₹3000</div>
 
 <ul>
-<li>Custom Business Website (Hosting Included)</li>
-<li>Google Business Profile Complete Setup</li>
-<li>On-Page SEO Structure</li>
-<li>HTTPS & Google Indexing</li>
-<li>Local Keyword Mapping</li>
+<li>✔ Custom Business Website</li>
+<li>✔ Google Business Profile Setup</li>
+<li>✔ On Page SEO Structure</li>
+<li>✔ HTTPS & Indexing</li>
+<li>✔ Local Keyword Mapping</li>
 </ul>
 
-<p class="pricing-desc">
-Establish your digital presence and build the foundation for local visibility.
-</p>
-
-<button class="plan-btn" onclick="openForm('Foundation Launch')">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<button onclick="openForm('Foundation Launch')" class="plan-btn">
 Discuss Plan
 </button>
 
 </div>
-</div>
+
 
 <!-- PLAN 2 -->
+<div class="plan-card">
 
-<div class="pricing-item">
+<h3>Growth Acceleration</h3>
+<p class="plan-sub">Monthly Optimization</p>
 
-<div class="pricing-content">
-
-<h3>Growth Acceleration Plan</h3>
-
-<div class="pricing-type">Monthly Optimization</div>
-
-<div class="pricing-price">₹1000 <span>/month</span></div>
+<div class="price">₹1000<span>/month</span></div>
 
 <ul>
-<li>Ongoing GMB Optimization</li>
-<li>Local Maps Ranking Strategy</li>
-<li>Monthly SEO Posts & Updates</li>
-<li>Competitor Monitoring</li>
-<li>Performance Tracking</li>
+<li>✔ Ongoing GMB Optimization</li>
+<li>✔ Google Maps Ranking Strategy</li>
+<li>✔ Monthly SEO Posts</li>
+<li>✔ Competitor Monitoring</li>
+<li>✔ Performance Tracking</li>
 </ul>
 
-<p class="pricing-desc">
-Improve map visibility, increase impressions, and generate consistent inquiries.
-</p>
-
-<p class="pricing-min">
-Minimum 3-Month Engagement Required
-</p>
-
-<button class="plan-btn" onclick="openForm('Growth Acceleration Plan')">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+<button onclick="openForm('Growth Acceleration')" class="plan-btn">
 Discuss Plan
 </button>
 
 </div>
-</div>
+
+
 
 <!-- PLAN 3 -->
+<div class="plan-card featured">
 
-<div class="pricing-item featured">
+<div class="recommended">Most Recommended</div>
 
-<div class="pricing-badge">
-Most Recommended
-</div>
+<h3>Complete Local Growth</h3>
+<p class="plan-sub">Setup + Monthly Growth</p>
 
-<div class="pricing-content">
-
-<h3>Complete Local Growth System</h3>
-
-<div class="pricing-type">Setup + Ongoing Growth</div>
-
-<div class="pricing-price">
-₹3000 <span>setup</span> + ₹1000 <span>/month</span>
+<div class="price">
+₹3000 <span>setup</span><br>
+₹1000 <span>/month</span>
 </div>
 
 <ul>
-<li>Website + GBP Complete Setup</li>
-<li>Full Optimization Foundation</li>
-<li>Ongoing Monthly Ranking Growth</li>
-<li>Visibility & Lead Improvement Strategy</li>
-<li>Structured Growth Execution Plan</li>
+<li>✔ Website + GBP Setup</li>
+<li>✔ Full Optimization Foundation</li>
+<li>✔ Monthly Ranking Growth</li>
+<li>✔ Visibility & Lead Strategy</li>
+<li>✔ Structured Growth Plan</li>
 </ul>
 
-<p class="pricing-desc">
-Designed for businesses serious about ranking higher and converting local searches into customers.
-</p>
-
-<p class="pricing-min">
-Minimum 3-Month Engagement Required
-</p>
-
-<button class="plan-btn" onclick="openForm('Complete Local Growth System')">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-Discuss Plan
+<button onclick="openForm('Complete Local Growth')" class="plan-btn primary">
+Start Plan
 </button>
 
 </div>
-</div>
 
 </div>
 
 
-<!-- FORM POPUP -->
-
-<div class="form-popup" id="planForm">
+<!-- POPUP FORM -->
+<div id="popupForm" class="form-overlay">
 
 <div class="form-box">
 
 <h3>Start Your Plan</h3>
 
-<input type="text" id="clientName" placeholder="Your Name">
+<input id="clientName" type="text" placeholder="Your Name">
 
-<input type="text" id="businessName" placeholder="Business Name">
+<input id="businessName" type="text" placeholder="Business Name">
 
-<input type="text" id="location" placeholder="Business Location">
+<input id="location" type="text" placeholder="Business Location">
 
-<input type="text" id="gmbLink" placeholder="Google Business Profile Link (optional)">
+<input id="gmbLink" type="text" placeholder="Google Business Profile Link (optional)">
 
-<input type="hidden" id="planSelected">
+<input id="selectedPlan" type="hidden">
 
-<button onclick="sendWhatsApp()">Send on WhatsApp</button>
+<button onclick="sendToWhatsApp()" class="whatsapp-btn">
+Send on WhatsApp
+</button>
 
-<span class="close-form" onclick="closeForm()">Cancel</span>
-
-</div>
-
-</div>
+<p class="cancel-btn" onclick="closeForm()">Cancel</p>
 
 </div>
+</div>
+
 </section>
 
 
 
 <style>
 
-/* SECTION */
-
 .pricing-section{
-padding:100px 20px;
-background:#f6f7fb;
-font-family:Poppins,sans-serif;
-}
-
-.pricing-container{
-max-width:1200px;
-margin:auto;
-}
-
-/* HEADER */
-
-.pricing-header{
+padding:80px 20px;
+background:#f7f9fc;
 text-align:center;
-margin-bottom:60px;
+font-family:Arial;
 }
 
 .pricing-header h2{
 font-size:36px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .pricing-header p{
-color:#555;
-max-width:700px;
-margin:auto;
-line-height:1.6;
+color:#666;
+margin-bottom:50px;
 }
 
-/* WRAPPER */
-
-.pricing-wrapper{
+.pricing-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
+max-width:1100px;
+margin:auto;
 }
 
-/* CARD */
-
-.pricing-item{
+.plan-card{
 background:white;
-border-radius:14px;
 padding:35px;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+text-align:left;
 position:relative;
 }
 
-.featured{
-border:2px solid #4f7cff;
-}
-
-/* BADGE */
-
-.pricing-badge{
-position:absolute;
-top:-12px;
-left:50%;
-transform:translateX(-50%);
-background:#4f7cff;
-color:white;
-padding:6px 16px;
-border-radius:20px;
-font-size:12px;
-font-weight:600;
-}
-
-/* CONTENT */
-
-.pricing-content h3{
+.plan-card h3{
 font-size:22px;
-margin-bottom:6px;
+margin-bottom:5px;
 }
 
-.pricing-type{
-color:#888;
-margin-bottom:12px;
+.plan-sub{
+color:#777;
+margin-bottom:20px;
 }
 
-.pricing-price{
-font-size:32px;
+.price{
+font-size:34px;
 font-weight:700;
 margin-bottom:20px;
 }
 
-.pricing-price span{
+.price span{
 font-size:14px;
 color:#777;
 }
 
-.pricing-item ul{
-padding-left:18px;
-margin-bottom:20px;
+.plan-card ul{
+padding-left:0;
+list-style:none;
+margin-bottom:30px;
 }
 
-.pricing-item li{
-margin-bottom:8px;
+.plan-card li{
+margin-bottom:10px;
+color:#444;
 }
-
-.pricing-desc{
-font-size:14px;
-color:#666;
-margin-bottom:15px;
-}
-
-.pricing-min{
-font-size:13px;
-color:#4f7cff;
-margin-bottom:20px;
-}
-
-/* BUTTON */
 
 .plan-btn{
-display:inline-flex;
-align-items:center;
-gap:10px;
-background:#5d6dfd;
-color:white;
+width:100%;
+padding:14px;
 border:none;
-padding:12px 26px;
-border-radius:30px;
-font-size:14px;
-font-weight:600;
+border-radius:8px;
+background:#4c63ff;
+color:white;
+font-size:16px;
 cursor:pointer;
-transition:.3s;
 }
 
-.plan-btn img{
-width:16px;
+.plan-btn.primary{
+background:#1db954;
 }
 
-.plan-btn:hover{
-background:#4454e6;
+.plan-card.featured{
+border:2px solid #4c63ff;
+transform:scale(1.05);
 }
 
-/* FORM POPUP */
+.recommended{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%);
+background:#4c63ff;
+color:white;
+padding:6px 14px;
+font-size:12px;
+border-radius:20px;
+}
 
-.form-popup{
+/* FORM */
+
+.form-overlay{
 display:none;
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
-justify-content:center;
+background:rgba(0,0,0,0.5);
 align-items:center;
+justify-content:center;
 z-index:9999;
 }
 
 .form-box{
 background:white;
 padding:40px;
-border-radius:10px;
+border-radius:12px;
 width:90%;
 max-width:420px;
 text-align:center;
@@ -1842,66 +1758,60 @@ padding:12px;
 margin-bottom:12px;
 border:1px solid #ddd;
 border-radius:6px;
+font-size:14px;
 }
 
-.form-box button{
+.whatsapp-btn{
 width:100%;
-padding:14px;
 background:#25D366;
 border:none;
 color:white;
-border-radius:6px;
-font-weight:600;
+padding:14px;
+border-radius:8px;
+font-size:16px;
 cursor:pointer;
 }
 
-.close-form{
-display:block;
-margin-top:10px;
+.cancel-btn{
+margin-top:12px;
+color:#666;
 cursor:pointer;
-color:#777;
 }
 
 </style>
 
 
+
 <script>
 
 function openForm(plan){
-
-document.getElementById("planForm").style.display="flex";
-document.getElementById("planSelected").value=plan;
-
+document.getElementById("popupForm").style.display="flex";
+document.getElementById("selectedPlan").value=plan;
 }
 
 function closeForm(){
-
-document.getElementById("planForm").style.display="none";
-
+document.getElementById("popupForm").style.display="none";
 }
 
-function sendWhatsApp(){
+function sendToWhatsApp(){
 
-let name=document.getElementById("clientName").value;
-let business=document.getElementById("businessName").value;
-let location=document.getElementById("location").value;
-let gmb=document.getElementById("gmbLink").value;
-let plan=document.getElementById("planSelected").value;
+var name=document.getElementById("clientName").value;
+var business=document.getElementById("businessName").value;
+var location=document.getElementById("location").value;
+var gmb=document.getElementById("gmbLink").value;
+var plan=document.getElementById("selectedPlan").value;
 
-let message=`Hello GeoLift,
+var message=
+"New Client Inquiry%0A%0A"+
+"Name: "+name+"%0A"+
+"Business: "+business+"%0A"+
+"Location: "+location+"%0A"+
+"GMB Link: "+gmb+"%0A"+
+"Selected Plan: "+plan;
 
-Client Name: ${name}
-Business Name: ${business}
-Location: ${location}
-GMB Link: ${gmb}
+var phone="919330629573";
 
-Selected Plan: ${plan}
-
-I want to start this plan.`;
-
-let url=`https://wa.me/919330629573?text=${encodeURIComponent(message)}`;
-
-window.open(url,"_blank");
+window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 
 }
 
