@@ -1158,7 +1158,6 @@ Examples of structured profile optimization work focused on improving visibility
 
 <!-- ================= PREMIUM SERVICES SECTION ================= -->
 
-
 <style>
 
 .services-section{
@@ -1184,100 +1183,76 @@ line-height:1.8;
 }
 
 .services-grid{
-    max-width:1100px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(3, 1fr); /* 3 cards per row */
-    gap:25px;
+max-width:1100px;
+margin:0 auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
 
 /* Tablet */
-@media (max-width: 1024px){
+
+@media (max-width:1024px){
 .services-grid{
 grid-template-columns:repeat(3,1fr);
 }
 }
 
 /* Mobile */
-@media (max-width: 768px){
+
+@media (max-width:768px){
 .services-grid{
 grid-template-columns:repeat(1,1fr);
 }
-}
-  
-@media(max-width:768px){
-
-.services-section{
-padding:80px 20px;
-}
-
-.service-card{
-padding:28px 18px;
-}
-
 .services-title{
 font-size:30px;
 }
-
 .services-subtitle{
 font-size:15px;
 margin-bottom:40px;
 }
-
 }
 
-/* CARD STYLE */
+/* CARD */
 
 .service-card{
-  position:relative;
+position:relative;
 overflow:hidden;
-    background:#ffffff;
-    border-radius:18px;
-    padding:24px 20px;      /* reduced padding */
-    min-height:260px;       /* reduced height */
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    transition:0.4s ease;
-    box-shadow:0 15px 40px rgba(99,102,241,0.15);
-    border:2px solid #6366f1;
+background:#ffffff;
+border-radius:18px;
+padding:24px 20px;
+min-height:260px;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+transition:0.4s ease;
+box-shadow:0 15px 40px rgba(99,102,241,0.15);
+border:2px solid #6366f1;
 }
 
 .service-card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:6px;
-    background:linear-gradient(90deg,#6366f1,#8b5cf6);
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:6px;
+background:linear-gradient(90deg,#6366f1,#8b5cf6);
 }
-
-.service-card:hover{
-    transform:translateY(-12px);
-    box-shadow:0 30px 70px rgba(99,102,241,0.3);
-}
-/* ===== FEATURED SERVICE ===== */
-
 
 .service-card:hover{
 transform:translateY(-12px);
-box-shadow:0 25px 60px rgba(99,102,241,0.25);
+box-shadow:0 30px 70px rgba(99,102,241,0.3);
 }
 
 /* ICON */
 
 .service-icon{
-    width:60px;
-    height:60px;
-    margin:0 auto 18px;
-    font-size:22px;
+width:60px;
+height:60px;
+margin:0 auto 18px;
+font-size:26px;
 }
-
-.icon1{background:linear-gradient(135deg,#6366f1,#4f46e5);}
-.icon2{background:linear-gradient(135deg,#10b981,#059669);}
-.icon3{background:linear-gradient(135deg,#f97316,#ea580c);}
-.icon4{background:linear-gradient(135deg,#06b6d4,#0891b2);}
 
 .service-card h3{
 font-size:20px;
@@ -1315,117 +1290,58 @@ transform:translateY(-4px);
 box-shadow:0 20px 45px rgba(99,102,241,0.45);
 }
 
-/* ===== READ MORE TOGGLE ===== */
-
-.more-text{
-display:none;
-margin-top:15px;
-font-size:14px;
-color:#475569;
-line-height:1.6;
-}
-
-.more-text.show{
-display:block;
-}
-
-.toggle-btn{
-display:inline-block;
-margin-top:12px;
-color:#6366f1;
-font-weight:600;
-cursor:pointer;
-font-size:14px;
-}
-
 </style>
 
 <section class="services-section" id="services">
 
-<h2 class="services-title">Digital Solutions</h2>
+<h2 class="services-title">Our Core Services</h2>
 
 <p class="services-subtitle">
-Independent Google Business Profile optimization focused on structured visibility improvement and issue resolution.
+Strategic services designed to improve Google visibility, strengthen local authority, and help businesses establish a strong digital presence.
 </p>
 
 <div class="services-grid">
 
-<div class="service-card">
-<div class="service-icon icon1">📍</div>
-<h3>Google Business Profile Setup</h3>
-<p>Complete profile setup including category research, keyword optimization, image optimization and authority building for maximum visibility.</p>
-<p class="more-text">
-Here you can add extra detailed content about this service.
-You can explain process, benefits, tools, strategy etc.
-</p>
-
-<span class="toggle-btn" onclick="this.previousElementSibling.classList.toggle('show'); this.innerText = this.innerText === 'Read More' ? 'Show Less' : 'Read More';">
-Read More
-</span>
-</div>
+<!-- SERVICE 1 -->
 
 <div class="service-card">
-<div class="service-icon icon2">🚀</div>
-<h3>Google Maps Ranking</h3>
-<p>Rank your business in Top 3 Map results for high-intent keywords in your service location to generate consistent calls and leads.</p>
-  <p class="more-text">
-Here you can add extra detailed content about this service.
-You can explain process, benefits, tools, strategy etc.
-</p>
+<div class="service-icon">📍</div>
+<h3>GBP Setup & Optimization</h3>
 
-<span class="toggle-btn" onclick="this.previousElementSibling.classList.toggle('show'); this.innerText = this.innerText === 'Read More' ? 'Show Less' : 'Read More';">
-Read More
-</span>
-</div>
-
-<div class="service-card">
-<div class="service-icon icon3">🔎</div>
-<h3>Advanced Local SEO</h3>
-<p>Full local SEO including citation building, on-page optimization, location signals and Google trust authority strengthening.</p>
-  <p class="more-text">
-Here you can add extra detailed content about this service.
-You can explain process, benefits, tools, strategy etc.
-</p>
-
-<span class="toggle-btn" onclick="this.previousElementSibling.classList.toggle('show'); this.innerText = this.innerText === 'Read More' ? 'Show Less' : 'Read More';">
-Read More
-</span>
-</div>
-
-<div class="service-card">
-<div class="service-icon icon4">📞</div>
-<h3>Lead Generation Strategy</h3>
-<p>We optimize not just for traffic — but for real enquiries, calls and customers actively searching on Google.</p>
-  <p class="more-text">
-Here you can add extra detailed content about this service.
-You can explain process, benefits, tools, strategy etc.
-</p>
-
-<span class="toggle-btn" onclick="this.previousElementSibling.classList.toggle('show'); this.innerText = this.innerText === 'Read More' ? 'Show Less' : 'Read More';">
-Read More
-</span>
-</div>
-
-  <div class="service-card">
-<div class="service-icon icon1">💻</div>
-<h3>SEO-Optimized Website Development</h3>
 <p>
-Complete business website package including professional design, domain & hosting setup, mobile responsive layout, and basic on-page SEO optimization for search visibility.
-</p>
-    <p class="more-text">
-Here you can add extra detailed content about this service.
-You can explain process, benefits, tools, strategy etc.
+Professional Google Business Profile setup and structured optimization including category selection, business information correction, image optimization, and profile authority improvement to increase visibility in local search results.
 </p>
 
-<span class="toggle-btn" onclick="this.previousElementSibling.classList.toggle('show'); this.innerText = this.innerText === 'Read More' ? 'Show Less' : 'Read More';">
-Read More
-</span>
+</div>
+
+<!-- SERVICE 2 -->
+
+<div class="service-card">
+<div class="service-icon">🚀</div>
+<h3>Advanced Google Maps Ranking</h3>
+
+<p>
+Advanced local ranking strategies focused on improving Google Maps visibility, strengthening local signals, and positioning your business for higher discovery in relevant local searches.
+</p>
+
+</div>
+
+<!-- SERVICE 3 -->
+
+<div class="service-card">
+<div class="service-icon">💻</div>
+<h3>Custom Business Website Development</h3>
+
+<p>
+Professional multi-page business websites designed for credibility, brand presence, and service presentation — fully responsive, fast loading, and optimized for a strong online foundation.
+</p>
+
 </div>
 
 </div>
 
 <div class="services-cta">
-<a href="tel:+919330629573">Get Free Consultation</a>
+<a href="/services/">Explore All Services</a>
 </div>
 
 </section>
