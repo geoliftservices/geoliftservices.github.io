@@ -1510,6 +1510,203 @@ btn.textContent="Hide Features";
 
 <!-- ================= PREMIUM PRICING SECTION ================= -->
 
+<style>
+
+.pricing-section{
+padding:80px 20px;
+background:#f8f9fc;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.pricing-container{
+max-width:1200px;
+margin:auto;
+}
+
+.pricing-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.pricing-header h2{
+font-size:34px;
+margin-bottom:15px;
+color:#1e293b;
+}
+
+.pricing-header p{
+max-width:650px;
+margin:auto;
+color:#64748b;
+font-size:16px;
+line-height:1.6;
+}
+
+/* GRID */
+
+.pricing-wrapper{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+/* CARD */
+
+.pricing-item{
+background:#fff;
+border-radius:12px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+position:relative;
+transition:.3s;
+}
+
+.pricing-item:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* FEATURED */
+
+.pricing-item.featured{
+border:2px solid #6366f1;
+transform:scale(1.03);
+}
+
+.pricing-badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#6366f1;
+color:#fff;
+padding:6px 14px;
+font-size:12px;
+border-radius:20px;
+}
+
+/* CONTENT */
+
+.pricing-content h3{
+font-size:22px;
+margin-bottom:10px;
+color:#1e293b;
+}
+
+.pricing-type{
+color:#6366f1;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.pricing-price{
+font-size:32px;
+font-weight:bold;
+margin:15px 0;
+color:#111827;
+}
+
+.pricing-price span{
+font-size:14px;
+font-weight:normal;
+color:#64748b;
+}
+
+.pricing-item ul{
+list-style:none;
+padding:0;
+margin:20px 0;
+}
+
+.pricing-item ul li{
+margin-bottom:10px;
+color:#475569;
+font-size:15px;
+}
+
+.pricing-desc{
+font-size:14px;
+color:#64748b;
+margin-top:10px;
+line-height:1.5;
+}
+
+.pricing-min{
+font-size:13px;
+color:#94a3b8;
+margin-top:10px;
+}
+
+/* BUTTON */
+
+.plan-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-top:20px;
+padding:12px 22px;
+background:#6366f1;
+color:#fff;
+border-radius:30px;
+text-decoration:none;
+font-size:14px;
+font-weight:600;
+transition:.3s;
+}
+
+.plan-btn:hover{
+background:#4f46e5;
+}
+
+.plan-btn svg{
+width:16px;
+height:16px;
+}
+
+/* STANDALONE */
+
+.standalone-section{
+margin-top:70px;
+text-align:center;
+}
+
+.standalone-section h3{
+margin-bottom:25px;
+font-size:24px;
+color:#1e293b;
+}
+
+.standalone-list{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.standalone-list div{
+background:#fff;
+padding:20px 25px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+font-size:15px;
+color:#475569;
+}
+
+/* NOTE */
+
+.pricing-note{
+margin-top:40px;
+text-align:center;
+font-size:14px;
+color:#64748b;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+</style>
+
+
 <section class="pricing-section" id="plans">
 
 <div class="pricing-container">
@@ -1524,11 +1721,10 @@ Most new clients start with the Complete Local Growth System.
 
 <div class="pricing-wrapper">
 
-<!-- FOUNDATION SETUP -->
+<!-- FOUNDATION -->
 
 <div class="pricing-item">
 <div class="pricing-content">
-
 <h3>Foundation Launch</h3>
 <div class="pricing-type">One-Time Setup Investment</div>
 <div class="pricing-price">₹3000</div>
@@ -1545,26 +1741,18 @@ Most new clients start with the Complete Local Growth System.
 Establish your digital presence and build the foundation for local visibility.
 </p>
 
-<a class="plan-btn"
-href="https://wa.me/919330629573?text=Hello%20GeoLift%2C%20I%20am%20interested%20in%20the%20Foundation%20Launch%20Plan.%0A%0ABusiness%20Name%3A%20%0ACity%3A%20%0AWebsite%20or%20GBP%20Link%3A"
-target="_blank">
-
-<svg viewBox="0 0 24 24" fill="currentColor">
-<path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.5 0 .17 5.33.17 11.89c0 2.09.55 4.13 1.6 5.94L0 24l6.32-1.66a11.87 11.87 0 005.73 1.47h.01c6.55 0 11.88-5.33 11.88-11.89 0-3.17-1.24-6.15-3.42-8.44z"/>
-</svg>
-
-Discuss This Plan
+<a class="plan-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+Discuss Plan
 </a>
 
 </div>
 </div>
 
 
-<!-- GROWTH PLAN -->
+<!-- GROWTH -->
 
 <div class="pricing-item">
 <div class="pricing-content">
-
 <h3>Growth Acceleration Plan</h3>
 <div class="pricing-type">Monthly Optimization</div>
 <div class="pricing-price">₹1000<span>/month</span></div>
@@ -1582,25 +1770,18 @@ Improve map visibility, increase impressions, and generate consistent inquiries.
 </p>
 
 <p class="pricing-min">
-Minimum 3-Month Engagement Required for Measurable Growth.
+Minimum 3-Month Engagement Required.
 </p>
 
-<a class="plan-btn"
-href="https://wa.me/919330629573?text=Hello%20GeoLift%2C%20I%20am%20interested%20in%20the%20Growth%20Acceleration%20Plan.%0A%0ABusiness%20Name%3A%20%0ACity%3A%20%0AWebsite%20or%20GBP%20Link%3A"
-target="_blank">
-
-<svg viewBox="0 0 24 24" fill="currentColor">
-<path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.5 0 .17 5.33.17 11.89c0 2.09.55 4.13 1.6 5.94L0 24l6.32-1.66a11.87 11.87 0 005.73 1.47h.01c6.55 0 11.88-5.33 11.88-11.89 0-3.17-1.24-6.15-3.42-8.44z"/>
-</svg>
-
-Discuss This Plan
+<a class="plan-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+Discuss Plan
 </a>
 
 </div>
 </div>
 
 
-<!-- COMPLETE SYSTEM -->
+<!-- COMPLETE -->
 
 <div class="pricing-item featured">
 
@@ -1609,11 +1790,10 @@ Discuss This Plan
 <div class="pricing-content">
 
 <h3>Complete Local Growth System</h3>
+
 <div class="pricing-type">Setup + Ongoing Growth</div>
 
-<div class="pricing-price">
-₹3000<span> setup</span> + ₹1000<span>/month</span>
-</div>
+<div class="pricing-price">₹3000<span> setup</span> + ₹1000<span>/month</span></div>
 
 <ul>
 <li>Website + GBP Complete Setup</li>
@@ -1631,15 +1811,8 @@ Designed for businesses serious about ranking higher and converting local search
 Minimum 3-Month Engagement Required.
 </p>
 
-<a class="plan-btn featured-btn"
-href="https://wa.me/919330629573?text=Hello%20GeoLift%2C%20I%20am%20interested%20in%20the%20Complete%20Local%20Growth%20System.%0A%0ABusiness%20Name%3A%20%0ACity%3A%20%0AWebsite%20or%20GBP%20Link%3A"
-target="_blank">
-
-<svg viewBox="0 0 24 24" fill="currentColor">
-<path d="M20.52 3.48A11.82 11.82 0 0012.05 0C5.5 0 .17 5.33.17 11.89c0 2.09.55 4.13 1.6 5.94L0 24l6.32-1.66a11.87 11.87 0 005.73 1.47h.01c6.55 0 11.88-5.33 11.88-11.89 0-3.17-1.24-6.15-3.42-8.44z"/>
-</svg>
-
-Start With This Plan
+<a class="plan-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+Discuss Plan
 </a>
 
 </div>
@@ -1647,10 +1820,40 @@ Start With This Plan
 
 </div>
 
-<!-- FOOTNOTE -->
+
+<!-- STANDALONE -->
+
+<div class="standalone-section">
+
+<h3>Standalone Services</h3>
+
+<div class="standalone-list">
+
+<div>
+<strong>Only Business Website</strong><br>
+₹2000 (One-Time)
+</div>
+
+<div>
+<strong>Only Google Business Profile Setup</strong><br>
+₹1000 (One-Time)
+</div>
+
+<div>
+<strong>Only Monthly GMB Optimization</strong><br>
+₹1000 / Month<br>
+<small>Minimum 3 Months</small>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- NOTE -->
 
 <div class="pricing-note">
-Local ranking requires consistent signals. 
+Local ranking requires consistency and data signals.
 Our 3-month engagement ensures stable improvement and sustainable growth.
 </div>
 
