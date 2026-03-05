@@ -1480,18 +1480,38 @@ Modern business websites designed for credibility, performance, and professional
 
 function toggleFeatures(btn){
 
-let card = btn.closest(".service-card");
-let more = card.querySelector(".more-features");
+let currentCard = btn.closest(".service-card");
+let currentFeatures = currentCard.querySelector(".more-features");
+let currentBtn = btn;
 
-if(more.style.display === "block"){
+/* CLOSE ALL OTHER CARDS */
 
-more.style.display = "none";
-btn.textContent = "+ View More Features";
+document.querySelectorAll(".service-card").forEach(function(card){
+
+let features = card.querySelector(".more-features");
+let button = card.querySelector(".view-more");
+
+if(card !== currentCard){
+
+features.style.display = "none";
+button.textContent = "+ View More Features";
+
+}
+
+});
+
+
+/* TOGGLE CURRENT CARD */
+
+if(currentFeatures.style.display === "block"){
+
+currentFeatures.style.display = "none";
+currentBtn.textContent = "+ View More Features";
 
 }else{
 
-more.style.display = "block";
-btn.textContent = "Hide Features";
+currentFeatures.style.display = "block";
+currentBtn.textContent = "Hide Features";
 
 }
 
