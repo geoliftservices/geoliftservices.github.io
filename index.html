@@ -1156,86 +1156,72 @@ Examples of structured profile optimization work focused on improving visibility
 
 </section>
 
-<!-- ================= IMPROVED SERVICES SECTION ================= -->
+<!-- ================= SERVICES SECTION ================= -->
 
 <style>
 
 .services-section{
 padding:120px 20px;
-background:linear-gradient(135deg,#f8faff,#eef2ff);
+background:#f7f9fc;
 font-family:Poppins,sans-serif;
+}
+
+.services-container{
+max-width:1200px;
+margin:auto;
 text-align:center;
 }
 
 .services-title{
-font-size:42px;
-font-weight:800;
-margin-bottom:20px;
+font-size:40px;
+font-weight:700;
 color:#0f172a;
+margin-bottom:20px;
 }
 
 .services-subtitle{
-max-width:750px;
-margin:0 auto 70px;
-font-size:17px;
-color:#475569;
-line-height:1.8;
+max-width:720px;
+margin:auto;
+margin-bottom:70px;
+color:#64748b;
+line-height:1.7;
 }
 
+/* GRID */
+
 .services-grid{
-max-width:1150px;
-margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:28px;
 }
 
-@media (max-width:1024px){
-.services-grid{
-grid-template-columns:repeat(2,1fr);
-}
+@media(max-width:1024px){
+.services-grid{grid-template-columns:repeat(2,1fr);}
 }
 
-@media (max-width:768px){
-
-.services-grid{
-grid-template-columns:1fr;
-}
-
-.services-title{
-font-size:30px;
-}
-
-.services-subtitle{
-font-size:15px;
-}
-
+@media(max-width:768px){
+.services-grid{grid-template-columns:1fr;}
 }
 
 /* CARD */
 
 .service-card{
-
-background:white;
-border-radius:18px;
-padding:28px;
+background:#fff;
+border:1px solid #e2e8f0;
+border-radius:14px;
+padding:30px;
 text-align:left;
-transition:.4s;
-border:2px solid #6366f1;
-box-shadow:0 15px 40px rgba(99,102,241,0.15);
-
-display:flex;
-flex-direction:column;
+transition:.3s;
 }
 
 .service-card:hover{
-transform:translateY(-10px);
-box-shadow:0 30px 60px rgba(99,102,241,0.25);
+border-color:#6366f1;
+box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
 
 .service-icon{
 font-size:26px;
-margin-bottom:15px;
+margin-bottom:12px;
 }
 
 .service-card h3{
@@ -1246,79 +1232,74 @@ color:#0f172a;
 
 .service-desc{
 font-size:14px;
-color:#475569;
+color:#64748b;
 margin-bottom:18px;
 }
 
-/* FEATURE LIST */
+/* FEATURES */
 
-.service-features{
+.features{
 list-style:none;
 padding:0;
-margin:0 0 20px 0;
+margin:0 0 15px 0;
 }
 
-.service-features li{
-
+.features li{
 font-size:14px;
-color:#334155;
 padding:6px 0;
 border-bottom:1px solid #f1f5f9;
-
+color:#334155;
 }
 
-/* READ MORE */
+/* HIDDEN FEATURES */
 
-.service-link{
-
-margin-top:auto;
-font-size:14px;
-font-weight:600;
-color:#6366f1;
-text-decoration:none;
-
+.more-features{
+display:none;
 }
 
-.service-link:hover{
+/* BUTTONS */
+
+.card-links{
+margin-top:15px;
+}
+
+.view-btn{
+cursor:pointer;
 color:#4f46e5;
-}
-
-/* CTA */
-
-.services-cta{
-margin-top:60px;
-}
-
-.services-cta a{
-
-padding:14px 34px;
-background:#6366f1;
-color:white;
-text-decoration:none;
-border-radius:40px;
 font-weight:600;
-display:inline-block;
-box-shadow:0 15px 40px rgba(99,102,241,0.3);
-
+font-size:14px;
+margin-right:15px;
 }
 
-.services-cta a:hover{
-transform:translateY(-3px);
+.know-btn{
+color:#4f46e5;
+font-weight:600;
+font-size:14px;
+text-decoration:none;
+}
+
+.know-btn:hover{
+text-decoration:underline;
 }
 
 </style>
 
-<section class="services-section" id="services">
+
+<section class="services-section">
+
+<div class="services-container">
 
 <h2 class="services-title">Our Core Services</h2>
 
 <p class="services-subtitle">
-Strategic digital services designed to improve Google visibility, strengthen local authority, and build a strong professional online presence for businesses.
+Strategic digital services designed to improve Google visibility, strengthen local authority, and help businesses build a strong online presence.
 </p>
+
 
 <div class="services-grid">
 
-<!-- GBP SERVICE -->
+
+<!-- ===== SERVICE 1 ===== -->
 
 <div class="service-card">
 
@@ -1327,32 +1308,40 @@ Strategic digital services designed to improve Google visibility, strengthen loc
 <h3>GBP Setup & Optimization</h3>
 
 <p class="service-desc">
-Complete Google Business Profile setup and professional optimization for better local visibility.
+Complete Google Business Profile setup and optimization to improve local visibility and customer engagement.
 </p>
 
-<ul class="service-features">
-
-<li>✔ Business Details Setup</li>
-
-<li>✔ Google Maps Pin Integration</li>
-
-<li>✔ WhatsApp Chat Button</li>
-
-<li>✔ Call Button Integration</li>
-
-<li>✔ Products & Services Setup</li>
-
-<li>✔ Photo & Profile Optimization</li>
-
+<ul class="features">
+<li>Business Information Setup</li>
+<li>Map Pin Verification</li>
+<li>WhatsApp Chat Integration</li>
+<li>Call Button Setup</li>
+<li>Service & Product Listing</li>
 </ul>
 
-<a class="service-link" href="/services/gbp-setup-optimization/">
-Read More →
-</a>
+<ul class="features more-features">
+<li>Profile Category Optimization</li>
+<li>Business Description Optimization</li>
+<li>Logo & Cover Photo Setup</li>
+<li>Business Hours Setup</li>
+<li>Location Service Area Setup</li>
+<li>Review Link Setup</li>
+<li>Google Maps Embedding</li>
+<li>Initial SEO Optimization</li>
+<li>Profile Structure Optimization</li>
+<li>Spam Protection Setup</li>
+</ul>
+
+<div class="card-links">
+<span class="view-btn" onclick="toggleFeatures(this)">View More Features</span>
+<a class="know-btn" href="/services/gbp-setup-optimization/">Know More →</a>
+</div>
 
 </div>
 
-<!-- MAPS RANKING -->
+
+
+<!-- ===== SERVICE 2 ===== -->
 
 <div class="service-card">
 
@@ -1361,32 +1350,40 @@ Read More →
 <h3>Advanced Google Maps Ranking</h3>
 
 <p class="service-desc">
-Advanced strategies designed to improve Google Maps visibility and attract more local customers.
+Advanced strategies designed to improve Google Maps visibility and rank higher in local searches.
 </p>
 
-<ul class="service-features">
-
-<li>✔ Local SEO Optimization</li>
-
-<li>✔ Business Category Optimization</li>
-
-<li>✔ Review Strategy Setup</li>
-
-<li>✔ Google Maps Ranking Signals</li>
-
-<li>✔ Profile Authority Improvement</li>
-
-<li>✔ Ongoing Ranking Improvements</li>
-
+<ul class="features">
+<li>Competitor Analysis</li>
+<li>Local Keyword Optimization</li>
+<li>Geo Tagging Strategy</li>
+<li>Business Authority Building</li>
+<li>Ranking Signal Optimization</li>
 </ul>
 
-<a class="service-link" href="/services/advanced-google-maps-ranking/">
-Read More →
-</a>
+<ul class="features more-features">
+<li>Google Maps SEO Strategy</li>
+<li>Location Authority Optimization</li>
+<li>Citation Optimization</li>
+<li>Local Link Building</li>
+<li>Review Strategy Setup</li>
+<li>Content Posting Strategy</li>
+<li>Profile Engagement Boost</li>
+<li>Google Map Embed Signals</li>
+<li>Geo Relevance Boosting</li>
+<li>Local Trust Signal Creation</li>
+</ul>
+
+<div class="card-links">
+<span class="view-btn" onclick="toggleFeatures(this)">View More Features</span>
+<a class="know-btn" href="/services/advanced-google-maps-ranking/">Know More →</a>
+</div>
 
 </div>
 
-<!-- WEBSITE SERVICE -->
+
+
+<!-- ===== SERVICE 3 ===== -->
 
 <div class="service-card">
 
@@ -1395,38 +1392,64 @@ Read More →
 <h3>Custom Business Website Development</h3>
 
 <p class="service-desc">
-Professional multi-page business websites designed for credibility, speed, and customer conversion.
+Professional websites designed for credibility, brand presence, and service presentation.
 </p>
 
-<ul class="service-features">
-
-<li>✔ Custom Website Design & Development</li>
-
-<li>✔ Mobile Responsive Layout</li>
-
-<li>✔ Fast Loading Performance</li>
-
-<li>✔ WhatsApp & Call Integration</li>
-
-<li>✔ Google Maps Integration</li>
-
-<li>✔ Custom Domain Setup</li>
-
+<ul class="features">
+<li>Custom Website Design</li>
+<li>Mobile Responsive Layout</li>
+<li>Fast Loading Pages</li>
+<li>WhatsApp Integration</li>
+<li>Call Button Integration</li>
 </ul>
 
-<a class="service-link" href="/services/custom-business-website-development/">
-Read More →
-</a>
+<ul class="features more-features">
+<li>Free Domain Setup</li>
+<li>Free Hosting Setup</li>
+<li>Google Map Integration</li>
+<li>SEO Friendly Structure</li>
+<li>Modern Animated UI</li>
+<li>Service Page Creation</li>
+<li>Contact Form Setup</li>
+<li>Conversion Optimized Layout</li>
+<li>Secure HTTPS Setup</li>
+<li>Full Customization</li>
+</ul>
 
+<div class="card-links">
+<span class="view-btn" onclick="toggleFeatures(this)">View More Features</span>
+<a class="know-btn" href="/services/custom-business-website-development/">Know More →</a>
 </div>
 
 </div>
 
-<div class="services-cta">
-<a href="/services/">View All Services</a>
+
+
+</div>
+
 </div>
 
 </section>
+
+
+<script>
+
+function toggleFeatures(btn){
+
+let card = btn.closest(".service-card");
+let more = card.querySelector(".more-features");
+
+if(more.style.display === "block"){
+more.style.display = "none";
+btn.innerText = "View More Features";
+}else{
+more.style.display = "block";
+btn.innerText = "Hide Features";
+}
+
+}
+
+</script>
 
   
 
