@@ -1513,9 +1513,9 @@ btn.textContent="Hide Features";
 <style>
 
 .pricing-section{
-padding:80px 20px;
-background:#f8f9fc;
-font-family:Arial, Helvetica, sans-serif;
+padding:100px 20px;
+background:#f5f7fb;
+font-family:Poppins,sans-serif;
 }
 
 .pricing-container{
@@ -1530,178 +1530,149 @@ margin-bottom:60px;
 
 .pricing-header h2{
 font-size:34px;
-margin-bottom:15px;
-color:#1e293b;
+margin-bottom:10px;
 }
 
 .pricing-header p{
+color:#555;
 max-width:650px;
 margin:auto;
-color:#64748b;
-font-size:16px;
-line-height:1.6;
 }
-
-/* GRID */
 
 .pricing-wrapper{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:30px;
+align-items:start;
 }
-
-/* CARD */
 
 .pricing-item{
 background:#fff;
-border-radius:12px;
-padding:35px;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+padding:40px;
+border-radius:14px;
+box-shadow:0 10px 35px rgba(0,0,0,0.06);
 position:relative;
-transition:.3s;
 }
-
-.pricing-item:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
-}
-
-/* FEATURED */
 
 .pricing-item.featured{
-border:2px solid #6366f1;
-transform:scale(1.03);
+border:2px solid #4f7cff;
 }
 
 .pricing-badge{
 position:absolute;
 top:-12px;
-left:50%;
-transform:translateX(-50%);
-background:#6366f1;
+right:20px;
+background:#4f7cff;
 color:#fff;
-padding:6px 14px;
 font-size:12px;
+padding:6px 12px;
 border-radius:20px;
 }
 
-/* CONTENT */
-
 .pricing-content h3{
 font-size:22px;
-margin-bottom:10px;
-color:#1e293b;
+margin-bottom:6px;
 }
 
 .pricing-type{
-color:#6366f1;
-font-size:14px;
+font-size:13px;
+color:#777;
 margin-bottom:10px;
 }
 
 .pricing-price{
 font-size:32px;
-font-weight:bold;
-margin:15px 0;
-color:#111827;
+font-weight:700;
+margin-bottom:20px;
 }
 
 .pricing-price span{
 font-size:14px;
-font-weight:normal;
-color:#64748b;
+font-weight:500;
+color:#666;
 }
 
-.pricing-item ul{
-list-style:none;
-padding:0;
-margin:20px 0;
+.pricing-content ul{
+padding-left:18px;
+margin-bottom:20px;
 }
 
-.pricing-item ul li{
-margin-bottom:10px;
-color:#475569;
-font-size:15px;
+.pricing-content ul li{
+margin-bottom:8px;
+color:#444;
 }
 
 .pricing-desc{
-font-size:14px;
-color:#64748b;
-margin-top:10px;
-line-height:1.5;
+color:#555;
+margin-bottom:10px;
 }
 
 .pricing-min{
 font-size:13px;
-color:#94a3b8;
-margin-top:10px;
+color:#6a6df0;
+font-weight:500;
+margin-bottom:20px;
 }
 
-/* BUTTON */
+/* BUTTON STYLE (Like Screenshot) */
 
 .plan-btn{
-display:inline-flex;
-align-items:center;
-gap:8px;
-margin-top:20px;
-padding:12px 22px;
-background:#6366f1;
-color:#fff;
+display:inline-block;
+padding:12px 28px;
 border-radius:30px;
-text-decoration:none;
+background:linear-gradient(135deg,#6a6df0,#4f7cff);
+color:#fff;
 font-size:14px;
 font-weight:600;
-transition:.3s;
+text-decoration:none;
+transition:all .3s ease;
+box-shadow:0 8px 20px rgba(79,124,255,0.25);
 }
 
 .plan-btn:hover{
-background:#4f46e5;
+transform:translateY(-2px);
+box-shadow:0 12px 25px rgba(79,124,255,0.35);
 }
 
-.plan-btn svg{
-width:16px;
-height:16px;
-}
-
-/* STANDALONE */
+/* Standalone */
 
 .standalone-section{
-margin-top:70px;
+margin-top:80px;
 text-align:center;
 }
 
 .standalone-section h3{
-margin-bottom:25px;
-font-size:24px;
-color:#1e293b;
+margin-bottom:30px;
 }
 
 .standalone-list{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
-gap:25px;
+gap:40px;
+flex-wrap:wrap;
 }
 
 .standalone-list div{
 background:#fff;
-padding:20px 25px;
+padding:25px;
 border-radius:10px;
 box-shadow:0 5px 20px rgba(0,0,0,0.05);
-font-size:15px;
-color:#475569;
+min-width:220px;
 }
 
-/* NOTE */
-
 .pricing-note{
-margin-top:40px;
 text-align:center;
+margin-top:50px;
 font-size:14px;
-color:#64748b;
-max-width:700px;
-margin-left:auto;
-margin-right:auto;
+color:#666;
+}
+
+@media(max-width:900px){
+
+.pricing-wrapper{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
@@ -1724,9 +1695,13 @@ Most new clients start with the Complete Local Growth System.
 <!-- FOUNDATION -->
 
 <div class="pricing-item">
+
 <div class="pricing-content">
+
 <h3>Foundation Launch</h3>
+
 <div class="pricing-type">One-Time Setup Investment</div>
+
 <div class="pricing-price">₹3000</div>
 
 <ul>
@@ -1741,20 +1716,23 @@ Most new clients start with the Complete Local Growth System.
 Establish your digital presence and build the foundation for local visibility.
 </p>
 
-<a class="plan-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
-Discuss Plan
-</a>
+<a href="https://wa.me/91XXXXXXXXXX" class="plan-btn">Discuss Plan</a>
 
 </div>
+
 </div>
 
 
-<!-- GROWTH -->
+<!-- GROWTH PLAN -->
 
 <div class="pricing-item">
+
 <div class="pricing-content">
+
 <h3>Growth Acceleration Plan</h3>
+
 <div class="pricing-type">Monthly Optimization</div>
+
 <div class="pricing-price">₹1000<span>/month</span></div>
 
 <ul>
@@ -1770,18 +1748,17 @@ Improve map visibility, increase impressions, and generate consistent inquiries.
 </p>
 
 <p class="pricing-min">
-Minimum 3-Month Engagement Required.
+Minimum 3-Month Engagement Required for Measurable Growth.
 </p>
 
-<a class="plan-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
-Discuss Plan
-</a>
+<a href="https://wa.me/91XXXXXXXXXX" class="plan-btn">Discuss Plan</a>
 
 </div>
+
 </div>
 
 
-<!-- COMPLETE -->
+<!-- COMPLETE SYSTEM -->
 
 <div class="pricing-item featured">
 
@@ -1793,7 +1770,9 @@ Discuss Plan
 
 <div class="pricing-type">Setup + Ongoing Growth</div>
 
-<div class="pricing-price">₹3000<span> setup</span> + ₹1000<span>/month</span></div>
+<div class="pricing-price">
+₹3000<span> setup</span> + ₹1000<span>/month</span>
+</div>
 
 <ul>
 <li>Website + GBP Complete Setup</li>
@@ -1811,17 +1790,16 @@ Designed for businesses serious about ranking higher and converting local search
 Minimum 3-Month Engagement Required.
 </p>
 
-<a class="plan-btn" href="https://wa.me/91XXXXXXXXXX" target="_blank">
-Discuss Plan
-</a>
+<a href="https://wa.me/919330629573" class="plan-btn">Discuss Plan</a>
 
-</div>
 </div>
 
 </div>
 
+</div>
 
-<!-- STANDALONE -->
+
+<!-- STANDALONE SERVICES -->
 
 <div class="standalone-section">
 
@@ -1850,14 +1828,13 @@ Discuss Plan
 </div>
 
 
-<!-- NOTE -->
-
 <div class="pricing-note">
 Local ranking requires consistency and data signals.
 Our 3-month engagement ensures stable improvement and sustainable growth.
 </div>
 
 </div>
+
 </section>
 
 
