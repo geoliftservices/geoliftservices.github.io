@@ -1156,12 +1156,10 @@ Examples of structured profile optimization work focused on improving visibility
 
 </section>
 
-<!-- ================= SERVICES SECTION ================= -->
-
 <style>
 
-.services-section{
-padding:120px 20px;
+.services{
+padding:110px 20px;
 background:#f7f9fc;
 font-family:Poppins,sans-serif;
 }
@@ -1169,34 +1167,24 @@ font-family:Poppins,sans-serif;
 .services-container{
 max-width:1200px;
 margin:auto;
-text-align:center;
 }
 
 .services-title{
+text-align:center;
 font-size:40px;
 font-weight:700;
+margin-bottom:60px;
 color:#0f172a;
-margin-bottom:20px;
 }
-
-.services-subtitle{
-max-width:720px;
-margin:auto;
-margin-bottom:70px;
-color:#64748b;
-line-height:1.7;
-}
-
-/* GRID */
 
 .services-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:28px;
+gap:30px;
 }
 
 @media(max-width:1024px){
-.services-grid{grid-template-columns:repeat(2,1fr);}
+.services-grid{grid-template-columns:1fr 1fr;}
 }
 
 @media(max-width:768px){
@@ -1206,27 +1194,29 @@ gap:28px;
 /* CARD */
 
 .service-card{
+
 background:#fff;
-border:1px solid #e5e7eb;
+border:1px solid #e6e9f0;
 border-radius:14px;
-padding:32px;
-text-align:left;
-transition:.35s;
+padding:30px;
+box-shadow:0 8px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+
+display:flex;
+flex-direction:column;
+
 }
 
 .service-card:hover{
-border-color:#6366f1;
-box-shadow:0 12px 35px rgba(0,0,0,0.06);
-}
 
-.service-icon{
-font-size:26px;
-margin-bottom:14px;
+box-shadow:0 14px 45px rgba(0,0,0,0.09);
+border-color:#5b6cff;
+
 }
 
 .service-card h3{
-font-size:20px;
-margin-bottom:10px;
+font-size:21px;
+margin-bottom:12px;
 color:#0f172a;
 }
 
@@ -1234,7 +1224,6 @@ color:#0f172a;
 font-size:14px;
 color:#64748b;
 margin-bottom:18px;
-line-height:1.6;
 }
 
 /* FEATURES */
@@ -1242,31 +1231,34 @@ line-height:1.6;
 .features{
 list-style:none;
 padding:0;
-margin:0 0 14px;
+margin:0;
 }
 
 .features li{
+
+font-size:14px;
+padding:7px 0;
+color:#334155;
 display:flex;
 align-items:center;
-gap:10px;
-font-size:14px;
-padding:6px 0;
-color:#334155;
+
 }
 
-/* SMALL GREY ICON */
+.features li:before{
 
-.feature-icon{
-width:14px;
-height:14px;
-flex-shrink:0;
-color:#9ca3af;
+content:"✔";
+color:#4f6cf7;
+font-weight:700;
+margin-right:10px;
+font-size:14px;
+
 }
 
 /* HIDDEN FEATURES */
 
 .more-features{
 display:none;
+margin-top:6px;
 }
 
 /* LINKS */
@@ -1274,99 +1266,67 @@ display:none;
 .card-links{
 margin-top:16px;
 display:flex;
+justify-content:space-between;
 align-items:center;
-gap:18px;
 }
 
-/* VIEW FEATURES */
+.view-more{
 
-.view-btn{
+color:#0ea5e9;
+font-weight:600;
 cursor:pointer;
-font-size:13px;
-font-weight:600;
-color:#475569;
-}
-
-/* KNOW MORE */
-
-.know-btn{
 font-size:14px;
-font-weight:600;
-color:#4f46e5;
-text-decoration:none;
+
 }
 
-.know-btn:hover{
+.view-more:hover{
+text-decoration:underline;
+}
+
+.know-more{
+
+color:#5b6cff;
+font-weight:600;
+text-decoration:none;
+font-size:14px;
+
+}
+
+.know-more:hover{
 text-decoration:underline;
 }
 
 </style>
 
 
-<section class="services-section">
+<section class="services">
 
 <div class="services-container">
 
 <h2 class="services-title">Our Core Services</h2>
 
-<p class="services-subtitle">
-Strategic digital services designed to improve Google visibility, strengthen local authority, and help businesses build a strong online presence.
-</p>
-
 <div class="services-grid">
 
 
-<!-- ===== SERVICE 1 ===== -->
+<!-- GBP SERVICE -->
 
 <div class="service-card">
-
-<div class="service-icon">📍</div>
 
 <h3>GBP Setup & Optimization</h3>
 
 <p class="service-desc">
-Complete Google Business Profile setup and optimization to improve local visibility and customer engagement.
+Complete Google Business Profile configuration to improve local search visibility and customer engagement.
 </p>
 
 <ul class="features">
 
-<li>
-<svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-<path d="M16.7 5.3l-8 8-4-4"/>
-</svg>
-Business Information Setup
-</li>
-
-<li>
-<svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-<path d="M16.7 5.3l-8 8-4-4"/>
-</svg>
-Map Pin Verification
-</li>
-
-<li>
-<svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-<path d="M16.7 5.3l-8 8-4-4"/>
-</svg>
-WhatsApp Chat Integration
-</li>
-
-<li>
-<svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-<path d="M16.7 5.3l-8 8-4-4"/>
-</svg>
-Call Button Setup
-</li>
-
-<li>
-<svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor">
-<path d="M16.7 5.3l-8 8-4-4"/>
-</svg>
-Services & Products Listing
-</li>
+<li>Business Information Setup</li>
+<li>Map Pin Verification</li>
+<li>WhatsApp Chat Integration</li>
+<li>Call Button Setup</li>
+<li>Services & Products Listing</li>
 
 </ul>
-
 
 <ul class="features more-features">
 
@@ -1374,7 +1334,7 @@ Services & Products Listing
 <li>Business Description Optimization</li>
 <li>Logo & Cover Photo Setup</li>
 <li>Business Hours Setup</li>
-<li>Service Area Setup</li>
+<li>Service Area Configuration</li>
 <li>Review Link Creation</li>
 <li>Google Map Embedding</li>
 <li>Profile SEO Optimization</li>
@@ -1383,131 +1343,107 @@ Services & Products Listing
 
 </ul>
 
-
 <div class="card-links">
 
-<span class="view-btn" onclick="toggleFeatures(this)">
-View More Features
-</span>
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
 
-<a class="know-btn" href="/services/gbp-setup-optimization/">
-Know More →
-</a>
+<a class="know-more" href="/services/gbp-setup-optimization/">Know More →</a>
 
 </div>
 
 </div>
 
 
-
-<!-- ===== SERVICE 2 ===== -->
+<!-- MAPS RANKING -->
 
 <div class="service-card">
-
-<div class="service-icon">🚀</div>
 
 <h3>Advanced Google Maps Ranking</h3>
 
 <p class="service-desc">
-Advanced strategies designed to improve Google Maps visibility and rank higher in local searches.
+Advanced optimization strategies designed to improve Google Maps rankings and generate consistent local leads.
 </p>
 
 <ul class="features">
 
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Competitor Analysis</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Local Keyword Optimization</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Geo Tagging Strategy</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Authority Signal Optimization</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Profile Engagement Boost</li>
+<li>Local Keyword Strategy</li>
+<li>Competitor Analysis</li>
+<li>Profile SEO Improvements</li>
+<li>Geo Relevance Optimization</li>
+<li>Map Ranking Signals Setup</li>
 
 </ul>
-
 
 <ul class="features more-features">
 
-<li>Google Maps SEO Strategy</li>
-<li>Local Citation Optimization</li>
+<li>Location Authority Signals</li>
 <li>Review Growth Strategy</li>
-<li>Local Backlink Building</li>
-<li>Content Posting Strategy</li>
-<li>Location Authority Boost</li>
-<li>Geo Relevance Optimization</li>
-<li>Google Maps Embed Signals</li>
-<li>Trust Signal Creation</li>
-<li>Ranking Signal Improvement</li>
+<li>Weekly Profile Optimization</li>
+<li>Google Posts Publishing</li>
+<li>Citation Building</li>
+<li>Competitor Monitoring</li>
+<li>Behavioral Ranking Signals</li>
+<li>Performance Tracking</li>
+<li>Ranking Improvement Strategy</li>
+<li>Lead Conversion Optimization</li>
 
 </ul>
 
-
 <div class="card-links">
 
-<span class="view-btn" onclick="toggleFeatures(this)">
-View More Features
-</span>
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
 
-<a class="know-btn" href="/services/advanced-google-maps-ranking/">
-Know More →
-</a>
+<a class="know-more" href="/services/advanced-google-maps-ranking/">Know More →</a>
 
 </div>
 
 </div>
 
 
-
-<!-- ===== SERVICE 3 ===== -->
+<!-- WEBSITE DEVELOPMENT -->
 
 <div class="service-card">
-
-<div class="service-icon">💻</div>
 
 <h3>Custom Business Website Development</h3>
 
 <p class="service-desc">
-Professional business websites built for credibility, brand authority, and service presentation.
+Modern business websites designed for credibility, performance, and professional online presence.
 </p>
 
 <ul class="features">
 
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Custom Website Design</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Mobile Responsive Layout</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Fast Loading Pages</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>WhatsApp Integration</li>
-<li><svg class="feature-icon" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3l-8 8-4-4"/></svg>Call Button Integration</li>
+<li>Professional Web Design</li>
+<li>Full Website Development</li>
+<li>Mobile Responsive Layout</li>
+<li>Fast Loading Speed</li>
+<li>SEO Friendly Structure</li>
 
 </ul>
-
 
 <ul class="features more-features">
 
-<li>Free Domain Setup</li>
 <li>Free Hosting Setup</li>
+<li>Custom Domain Connection</li>
+<li>WhatsApp Chat Integration</li>
+<li>Call Button Integration</li>
 <li>Google Maps Integration</li>
-<li>SEO Friendly Structure</li>
-<li>Modern Animated UI</li>
-<li>Service Page Creation</li>
-<li>Contact Form Integration</li>
-<li>Conversion Optimized Layout</li>
-<li>HTTPS Security Setup</li>
-<li>Full Customization</li>
+<li>Modern Animated Design</li>
+<li>Secure HTTPS Setup</li>
+<li>Lead Contact Forms</li>
+<li>Optimized UI/UX Structure</li>
+<li>Full Custom Design Control</li>
 
 </ul>
 
-
 <div class="card-links">
 
-<span class="view-btn" onclick="toggleFeatures(this)">
-View More Features
-</span>
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
 
-<a class="know-btn" href="/services/custom-business-website-development/">
-Know More →
-</a>
+<a class="know-more" href="/services/custom-business-website-development/">Know More →</a>
 
 </div>
 
 </div>
-
 
 
 </div>
@@ -1523,17 +1459,20 @@ let card = btn.closest(".service-card");
 let more = card.querySelector(".more-features");
 
 if(more.style.display === "block"){
+
 more.style.display = "none";
-btn.innerText="View More Features";
+btn.textContent = "+ View More Features";
+
 }else{
+
 more.style.display = "block";
-btn.innerText="Hide Features";
+btn.textContent = "Hide Features";
+
 }
 
 }
 
 </script>
-
   
 
   <!-- ================= PREMIUM PRICING SECTION ================= -->
