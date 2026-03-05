@@ -1543,7 +1543,7 @@ margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:30px;
-align-items:start;
+align-items:stretch;
 }
 
 .pricing-item{
@@ -1552,6 +1552,9 @@ padding:40px;
 border-radius:14px;
 box-shadow:0 10px 35px rgba(0,0,0,0.06);
 position:relative;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 }
 
 .pricing-item.featured{
@@ -1560,13 +1563,14 @@ border:2px solid #4f7cff;
 
 .pricing-badge{
 position:absolute;
-top:-12px;
+top:-14px;
 right:20px;
 background:#4f7cff;
 color:#fff;
 font-size:12px;
-padding:6px 12px;
+padding:6px 14px;
 border-radius:20px;
+z-index:5;
 }
 
 .pricing-content h3{
@@ -1614,24 +1618,32 @@ font-weight:500;
 margin-bottom:20px;
 }
 
-/* BUTTON STYLE (Like Screenshot) */
+/* CTA BUTTON */
 
 .plan-btn{
-display:inline-block;
-padding:12px 28px;
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:12px 26px;
 border-radius:30px;
 background:linear-gradient(135deg,#6a6df0,#4f7cff);
 color:#fff;
-font-size:14px;
 font-weight:600;
 text-decoration:none;
-transition:all .3s ease;
+font-size:14px;
+transition:.3s;
 box-shadow:0 8px 20px rgba(79,124,255,0.25);
 }
 
 .plan-btn:hover{
 transform:translateY(-2px);
-box-shadow:0 12px 25px rgba(79,124,255,0.35);
+box-shadow:0 10px 25px rgba(79,124,255,0.35);
+}
+
+.plan-btn svg{
+width:16px;
+height:16px;
+fill:white;
 }
 
 /* Standalone */
@@ -1648,7 +1660,7 @@ margin-bottom:30px;
 .standalone-list{
 display:flex;
 justify-content:center;
-gap:40px;
+gap:30px;
 flex-wrap:wrap;
 }
 
@@ -1678,21 +1690,26 @@ grid-template-columns:1fr;
 </style>
 
 
+
 <section class="pricing-section" id="plans">
 
 <div class="pricing-container">
 
 <div class="pricing-header">
 <h2>Business Growth Plans</h2>
+
 <p>
 Built for serious businesses that want visibility, leads, and consistent local growth.
 Most new clients start with the Complete Local Growth System.
 </p>
+
 </div>
+
+
 
 <div class="pricing-wrapper">
 
-<!-- FOUNDATION -->
+<!-- FOUNDATION PLAN -->
 
 <div class="pricing-item">
 
@@ -1716,11 +1733,18 @@ Most new clients start with the Complete Local Growth System.
 Establish your digital presence and build the foundation for local visibility.
 </p>
 
-<a href="https://wa.me/91XXXXXXXXXX" class="plan-btn">Discuss Plan</a>
+<a class="plan-btn"
+href="https://wa.me/919330629573?text=Hello%20GeoLift%2C%20I%20am%20interested%20in%20the%20Foundation%20Launch%20Plan.%0A%0ABusiness%20Name%3A%0ALocation%3A%0AGMB%20Profile%20Link%3A%0AClient%20Name%3A">
+
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479s1.065 2.877 1.213 3.075c.148.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.695.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.414.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+
+Discuss Plan
+
+</a>
 
 </div>
-
 </div>
+
 
 
 <!-- GROWTH PLAN -->
@@ -1751,14 +1775,21 @@ Improve map visibility, increase impressions, and generate consistent inquiries.
 Minimum 3-Month Engagement Required for Measurable Growth.
 </p>
 
-<a href="https://wa.me/91XXXXXXXXXX" class="plan-btn">Discuss Plan</a>
+<a class="plan-btn"
+href="https://wa.me/919330629573?text=Hello%20GeoLift%2C%20I%20want%20the%20Growth%20Acceleration%20Plan.%0A%0ABusiness%20Name%3A%0ALocation%3A%0AGMB%20Profile%20Link%3A%0AClient%20Name%3A">
+
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479s1.065 2.877 1.213 3.075c.148.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.695.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.414.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+
+Discuss Plan
+
+</a>
 
 </div>
-
 </div>
 
 
-<!-- COMPLETE SYSTEM -->
+
+<!-- COMPLETE PLAN -->
 
 <div class="pricing-item featured">
 
@@ -1790,13 +1821,20 @@ Designed for businesses serious about ranking higher and converting local search
 Minimum 3-Month Engagement Required.
 </p>
 
-<a href="https://wa.me/919330629573" class="plan-btn">Discuss Plan</a>
+<a class="plan-btn"
+href="https://wa.me/919330629573?text=Hello%20GeoLift%2C%20I%20want%20the%20Complete%20Local%20Growth%20System.%0A%0ABusiness%20Name%3A%0ALocation%3A%0AGMB%20Profile%20Link%3A%0AClient%20Name%3A">
 
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.15-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479s1.065 2.877 1.213 3.075c.148.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.695.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.414.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+
+Start With This Plan
+
+</a>
+
+</div>
 </div>
 
 </div>
 
-</div>
 
 
 <!-- STANDALONE SERVICES -->
@@ -1828,8 +1866,9 @@ Minimum 3-Month Engagement Required.
 </div>
 
 
+
 <div class="pricing-note">
-Local ranking requires consistency and data signals.
+Local ranking requires consistency and data signals.  
 Our 3-month engagement ensures stable improvement and sustainable growth.
 </div>
 
