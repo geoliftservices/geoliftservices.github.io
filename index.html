@@ -1510,19 +1510,149 @@ btn.textContent="Hide Features";
 
 
   
-<!-- FREE AUDIT SECTION -->
-<section id="free-audit">
+<!-- GEO LIFT PRICING SECTION -->
+<section class="glp-section">
 
-<div class="audit-container">
+<div class="glp-wrapper">
 
-<h2 class="audit-heading">Get Your Free Business Growth Audit</h2>
+<h2 class="glp-title">Plans</h2>
 
-<p class="audit-subtext">
-Not sure why your business is not ranking on Google Maps or getting enough leads?  
-Request a quick audit and we will review your online presence and suggest clear improvements.
+<div class="glp-grid">
+
+<!-- PLAN 1 -->
+<div class="glp-card">
+
+<h3>Foundation Launch</h3>
+<p class="glp-desc">Best for businesses starting online</p>
+
+<p class="glp-type">One-Time Setup</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹177 / Day</div>
+
+<div class="glp-price">
+₹13<span>/Day</span>
+</div>
+
+<div class="glp-discount">25% Off</div>
+
+</div>
+
+<ul class="glp-features">
+
+<li>Custom Business Website</li>
+<li>Google Business Profile Setup</li>
+<li>Local SEO Structure</li>
+<li>HTTPS & Indexing</li>
+<li>Basic Local Visibility</li>
+
+</ul>
+
+<button class="glp-btn openAudit">Start Plan</button>
+
+</div>
+
+
+
+<!-- PLAN 2 -->
+<div class="glp-card">
+
+<h3>Growth Acceleration</h3>
+<p class="glp-desc">Improve Google Maps visibility</p>
+
+<p class="glp-type">3-Month Growth Plan</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹66 / Day</div>
+
+<div class="glp-price">
+₹55<span>/Day</span>
+</div>
+
+<div class="glp-discount">17% Off</div>
+
+</div>
+
+<p class="glp-offer">Limited Time Offer</p>
+
+<ul class="glp-features">
+
+<li>GBP Optimization</li>
+<li>Google Maps Ranking Strategy</li>
+<li>Weekly Optimization Actions</li>
+<li>Local Keyword Targeting</li>
+<li>Performance Monitoring</li>
+
+</ul>
+
+<button class="glp-btn openAudit">Start Plan</button>
+
+</div>
+
+
+
+<!-- PLAN 3 -->
+<div class="glp-card glp-featured">
+
+<div class="glp-badge">Most Recommended</div>
+
+<h3>Complete Local Growth</h3>
+<p class="glp-desc">Website + Maps Growth Package</p>
+
+<p class="glp-type">3-Month Growth Plan</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹132 / Day</div>
+
+<div class="glp-price">
+₹99<span>/Day</span>
+</div>
+
+<div class="glp-discount">25% Off</div>
+
+</div>
+
+<p class="glp-offer">Limited Time Offer</p>
+
+<ul class="glp-features">
+
+<li>Website + GBP Setup</li>
+<li>Full Local SEO Foundation</li>
+<li>3 Months Growth Optimization</li>
+<li>Maps Visibility Strategy</li>
+<li>Performance Tracking</li>
+
+</ul>
+
+<button class="glp-btn glp-btn-featured openAudit">Start Plan</button>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-overlay"></div>
+
+<div class="audit-modal">
+
+<span class="audit-close">&times;</span>
+
+<h3>Request Your Free Business Audit</h3>
+
+<p class="audit-sub">
+Fill the details below and we will review your online presence and suggest improvements.
 </p>
-
-<div class="audit-card">
 
 <form id="auditForm">
 
@@ -1530,105 +1660,225 @@ Request a quick audit and we will review your online presence and suggest clear 
 
 <input type="text" id="business" placeholder="Business Name" required>
 
-<input type="text" id="location" placeholder="Business Location (City)" required>
+<input type="text" id="location" placeholder="Business Location" required>
 
 <input type="url" id="gbp" placeholder="Google Business Profile Link (Optional)">
 
-<textarea id="description" placeholder="Briefly describe your business or current problem..." rows="4"></textarea>
+<textarea id="description" rows="4" placeholder="Briefly describe your business or problem"></textarea>
 
-<button type="submit" class="audit-btn">
-Request Free Audit
-</button>
+<button type="submit" class="audit-submit">Request Audit</button>
 
 </form>
 
 </div>
+
 </div>
-</section>
+
 
 
 <style>
 
-#free-audit{
-background:#f6f8fc;
-padding:90px 20px;
-text-align:center;
+/* SECTION */
+
+.glp-section{
+padding:70px 20px;
+background:linear-gradient(180deg,#f6f8ff,#eef2ff);
+font-family:system-ui;
 }
 
-.audit-container{
-max-width:700px;
+.glp-wrapper{
+max-width:1200px;
 margin:auto;
 }
 
-.audit-heading{
-font-size:32px;
-margin-bottom:12px;
+.glp-title{
+text-align:center;
+font-size:34px;
 font-weight:700;
-color:#111;
+margin-bottom:50px;
 }
 
-.audit-subtext{
-font-size:16px;
-color:#555;
-margin-bottom:40px;
-line-height:1.6;
+.glp-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
 }
 
-.audit-card{
+/* CARD */
+
+.glp-card{
 background:#ffffff;
+padding:28px 24px;
+border-radius:14px;
+box-shadow:0 10px 28px rgba(0,0,0,0.06);
+transition:0.3s;
+position:relative;
+}
+
+.glp-card:hover{
+transform:translateY(-6px);
+}
+
+.glp-featured{
+border:2px solid #4f6cff;
+background:#f9faff;
+}
+
+.glp-badge{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#4f6cff;
+color:white;
+font-size:12px;
+padding:6px 16px;
+border-radius:30px;
+font-weight:600;
+}
+
+.glp-desc{
+color:#666;
+font-size:14px;
+}
+
+.glp-type{
+color:#4f6cff;
+font-weight:600;
+font-size:14px;
+margin-bottom:10px;
+}
+
+.glp-old{
+text-decoration:line-through;
+color:#999;
+font-size:14px;
+}
+
+.glp-price{
+font-size:36px;
+font-weight:700;
+}
+
+.glp-price span{
+font-size:16px;
+}
+
+.glp-discount{
+color:#16a34a;
+font-size:13px;
+font-weight:600;
+}
+
+.glp-features{
+list-style:none;
+padding:0;
+margin:18px 0;
+}
+
+.glp-features li{
+margin:8px 0;
+font-size:14px;
+}
+
+.glp-features li:before{
+content:"✔";
+color:#3b82f6;
+margin-right:6px;
+}
+
+.glp-btn{
+display:block;
+width:75%;
+margin:auto;
+padding:11px;
+background:#4f6cff;
+color:white;
+border-radius:8px;
+border:none;
+font-weight:600;
+cursor:pointer;
+}
+
+.glp-btn-featured{
+background:#16a34a;
+}
+
+/* POPUP */
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.audit-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+.audit-modal{
+position:relative;
+background:#f9fbff;
 padding:40px;
-border-radius:10px;
-border:1px solid #e3e8f0;
-box-shadow:0 4px 15px rgba(0,0,0,0.03);
+border-radius:12px;
+max-width:520px;
+width:90%;
+z-index:2;
+border:1px solid #e4e8f2;
+}
+
+.audit-close{
+position:absolute;
+top:14px;
+right:16px;
+font-size:22px;
+cursor:pointer;
+}
+
+.audit-sub{
+font-size:14px;
+color:#666;
+margin-bottom:20px;
 }
 
 #auditForm{
 display:flex;
 flex-direction:column;
-gap:16px;
+gap:14px;
 }
 
 #auditForm input,
 #auditForm textarea{
-width:100%;
-padding:14px;
-border:1px solid #d8dee8;
+padding:12px;
+border:1px solid #dbe1ea;
 border-radius:6px;
-font-size:14px;
-outline:none;
-transition:0.2s;
 }
 
-#auditForm input:focus,
-#auditForm textarea:focus{
-border-color:#2b6df3;
-}
-
-.audit-btn{
-background:#2b6df3;
+.audit-submit{
+background:#4f6cff;
 color:white;
+padding:12px;
 border:none;
-padding:14px;
-font-size:15px;
 border-radius:6px;
-cursor:pointer;
 font-weight:600;
-margin-top:10px;
-transition:0.2s;
+cursor:pointer;
 }
 
-.audit-btn:hover{
-background:#1d56c9;
-}
+/* MOBILE */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
-.audit-heading{
-font-size:26px;
-}
-
-.audit-card{
-padding:28px;
+.glp-grid{
+grid-template-columns:1fr;
 }
 
 }
@@ -1636,27 +1886,48 @@ padding:28px;
 </style>
 
 
+
 <script>
 
-document.getElementById("auditForm").addEventListener("submit", function(e){
+/* OPEN POPUP */
+
+document.querySelectorAll(".openAudit").forEach(btn=>{
+btn.onclick=function(){
+document.getElementById("auditPopup").style.display="flex";
+}
+});
+
+/* CLOSE POPUP */
+
+document.querySelector(".audit-close").onclick=function(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+document.querySelector(".audit-overlay").onclick=function(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+
+/* FORM SUBMIT */
+
+document.getElementById("auditForm").addEventListener("submit",function(e){
 
 e.preventDefault();
 
-var name = document.getElementById("name").value;
-var business = document.getElementById("business").value;
-var location = document.getElementById("location").value;
-var gbp = document.getElementById("gbp").value;
-var description = document.getElementById("description").value;
+var name=document.getElementById("name").value;
+var business=document.getElementById("business").value;
+var location=document.getElementById("location").value;
+var gbp=document.getElementById("gbp").value;
+var description=document.getElementById("description").value;
 
-var message =
-"Free Audit Request:%0A%0A" +
-"Name: " + name + "%0A" +
-"Business: " + business + "%0A" +
-"Location: " + location + "%0A" +
-"GBP Link: " + gbp + "%0A" +
-"Description: " + description;
+var message="Free Audit Request:%0A%0A"+
+"Name: "+name+"%0A"+
+"Business: "+business+"%0A"+
+"Location: "+location+"%0A"+
+"GBP Link: "+gbp+"%0A"+
+"Description: "+description;
 
-window.open("https://wa.me/YOURNUMBER?text=" + message, "_blank");
+window.open("https://wa.me/YOURNUMBER?text="+message,"_blank");
 
 });
 
