@@ -3270,223 +3270,291 @@ Get Free Audit
 </div>
 
 
-
 <!-- FREE AUDIT FLOATING BUTTON -->
-<button id="auditBtn">🔎 Free Audit</button>
+<div class="audit-float-btn" onclick="openAuditForm()">
+🔎 Free Audit
+</div>
+
+
+<!-- FREE AUDIT POPUP -->
+<div id="auditPopup" class="audit-overlay">
+
+<div class="audit-modal">
+
+<span class="audit-close" onclick="closeAuditForm()">×</span>
+
+<h3>Free Local SEO Audit</h3>
+
+<p class="audit-text">
+Find out why your business isn't ranking on Google Maps.
+</p>
+
+<ul class="audit-list">
+<li>Google Business Profile Check</li>
+<li>Local Ranking Analysis</li>
+<li>Competitor Insights</li>
+</ul>
+
+<form action="https://formspree.io/f/yourformid" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="text" name="business" placeholder="Business Name" required>
+
+<input type="text" name="location" placeholder="Business Location" required>
+
+<input type="text" name="gmb" placeholder="Google Business Profile Link (optional)">
+
+<button type="submit">Get Free Audit</button>
+
+</form>
+
+<p class="audit-note">
+Free • No obligation • Takes 60 seconds
+</p>
+
+</div>
+
+</div>
+
 
 <style>
 
 /* FLOATING BUTTON */
 
-#auditBtn{
+.audit-float-btn{
+
 position:fixed;
-right:20px;
-bottom:90px;   /* same height as chat button */
-background:linear-gradient(135deg,#4f6df5,#2f4bd8);
+
+right:85px;
+
+bottom:20px;
+
+background:linear-gradient(135deg,#5b6cff,#3d4bd8);
+
 color:#fff;
-border:none;
-padding:12px 20px;
+
+padding:12px 18px;
+
 border-radius:30px;
+
 font-size:14px;
+
 font-weight:600;
+
 cursor:pointer;
-box-shadow:0 8px 20px rgba(0,0,0,0.25);
-z-index:999;
+
+box-shadow:0 8px 18px rgba(0,0,0,0.18);
+
+z-index:9999;
+
 transition:0.3s;
+
 }
 
-#auditBtn:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 24px rgba(0,0,0,0.3);
+.audit-float-btn:hover{
+
+transform:translateY(-3px);
+
 }
 
 
-/* OVERLAY */
+/* POPUP OVERLAY */
 
-#auditOverlay{
+.audit-overlay{
+
 position:fixed;
+
 top:0;
+
 left:0;
+
 width:100%;
+
 height:100%;
+
 background:rgba(0,0,0,0.55);
+
 display:none;
+
 align-items:center;
+
 justify-content:center;
-z-index:1000;
+
+z-index:99999;
+
 }
 
 
 /* POPUP BOX */
 
-.audit-popup{
-background:#ffffff;
-width:420px;
-max-width:90%;
+.audit-modal{
+
+background:#fff;
+
+width:360px;
+
+padding:30px;
+
 border-radius:12px;
-padding:35px;
-box-shadow:0 25px 60px rgba(0,0,0,0.3);
+
+box-shadow:0 20px 50px rgba(0,0,0,0.25);
+
 text-align:center;
-animation:popupFade 0.35s ease;
-font-family:system-ui;
+
+position:relative;
+
+font-family:Arial;
+
 }
 
-@keyframes popupFade{
-from{transform:translateY(20px);opacity:0;}
-to{transform:translateY(0);opacity:1;}
-}
 
-.audit-popup h2{
+/* CLOSE BUTTON */
+
+.audit-close{
+
+position:absolute;
+
+top:10px;
+
+right:14px;
+
 font-size:22px;
-margin-bottom:8px;
-color:#111;
+
+cursor:pointer;
+
+color:#888;
+
 }
 
-.audit-popup p{
-font-size:14px;
-color:#555;
-margin-bottom:20px;
+.audit-close:hover{
+
+color:#000;
+
 }
 
 
-/* BENEFITS LIST */
+/* HEADINGS */
 
-.audit-benefits{
-text-align:left;
-margin-bottom:20px;
-}
+.audit-modal h3{
 
-.audit-benefits li{
-font-size:14px;
+font-size:20px;
+
 margin-bottom:6px;
-color:#333;
+
+color:#111;
+
+}
+
+.audit-text{
+
+font-size:14px;
+
+color:#666;
+
+margin-bottom:10px;
+
+}
+
+
+/* LIST */
+
+.audit-list{
+
+text-align:left;
+
+font-size:14px;
+
+color:#444;
+
+margin-bottom:18px;
+
+padding-left:18px;
+
+}
+
+.audit-list li{
+
+margin-bottom:6px;
+
 }
 
 
 /* INPUTS */
 
-.audit-popup input{
+.audit-modal input{
+
 width:100%;
-padding:12px;
-margin-bottom:10px;
+
+padding:11px;
+
+margin-bottom:12px;
+
 border:1px solid #ddd;
+
 border-radius:6px;
+
 font-size:14px;
+
 }
 
 
-/* CTA BUTTON */
+/* BUTTON */
 
-.audit-submit{
+.audit-modal button{
+
 width:100%;
-padding:14px;
-margin-top:8px;
-background:linear-gradient(135deg,#4f6df5,#2f4bd8);
-color:white;
+
+padding:12px;
+
+background:linear-gradient(135deg,#5b6cff,#3d4bd8);
+
 border:none;
+
 border-radius:8px;
+
+color:#fff;
+
 font-size:15px;
+
 font-weight:600;
+
 cursor:pointer;
-transition:0.3s;
+
 }
 
-.audit-submit:hover{
-transform:translateY(-2px);
-box-shadow:0 8px 18px rgba(0,0,0,0.2);
+.audit-modal button:hover{
+
+opacity:0.9;
+
 }
-
-
-/* SMALL TEXT */
 
 .audit-note{
+
 font-size:12px;
+
 color:#777;
-margin-top:8px;
-}
 
+margin-top:10px;
 
-/* CANCEL BUTTON */
-
-.audit-cancel{
-margin-top:12px;
-display:inline-block;
-font-size:14px;
-color:#666;
-cursor:pointer;
-}
-
-.audit-cancel:hover{
-color:#000;
 }
 
 </style>
 
 
-
-<!-- POPUP STRUCTURE -->
-
-<div id="auditOverlay">
-
-<div class="audit-popup">
-
-<h2>Free Local SEO Audit</h2>
-
-<p>Discover why your business is not ranking on Google Maps.</p>
-
-<ul class="audit-benefits">
-<li>✔ Google Business Profile Check</li>
-<li>✔ Local Ranking Analysis</li>
-<li>✔ Competitor Insights</li>
-</ul>
-
-<form>
-
-<input type="text" placeholder="Your Name" required>
-
-<input type="text" placeholder="Business Name" required>
-
-<input type="text" placeholder="Business Location" required>
-
-<input type="url" placeholder="Google Business Profile Link (optional)">
-
-<button class="audit-submit">Get Free Audit</button>
-
-</form>
-
-<div class="audit-note">
-Free • No obligation • Takes 60 seconds
-</div>
-
-<div class="audit-cancel" onclick="closeAudit()">Cancel</div>
-
-</div>
-
-</div>
-
-
-
 <script>
 
-/* BUTTON CLICK */
+function openAuditForm(){
 
-document.getElementById("auditBtn").onclick=function(){
-document.getElementById("auditOverlay").style.display="flex";
-};
+document.getElementById("auditPopup").style.display="flex";
 
-
-/* CLOSE POPUP */
-
-function closeAudit(){
-document.getElementById("auditOverlay").style.display="none";
 }
 
+function closeAuditForm(){
 
-/* AUTO POPUP AFTER 8s */
+document.getElementById("auditPopup").style.display="none";
 
-setTimeout(function(){
-document.getElementById("auditOverlay").style.display="flex";
-},8000);
+}
 
 </script>
   
