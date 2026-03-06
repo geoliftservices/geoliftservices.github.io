@@ -1510,37 +1510,35 @@ btn.textContent="Hide Features";
 
 
   
-
 <!-- GEO LIFT PRICING SECTION -->
-<section class="glp-section">
+<section class="glplan-section">
 
-<div class="glp-wrapper">
+<div class="glplan-wrapper">
 
-<h2 class="glp-title">Plans</h2>
+<h2 class="glplan-title">Growth Plans</h2>
 
-<div class="glp-grid">
+<div class="glplan-grid">
+
 
 <!-- PLAN 1 -->
-<div class="glp-card">
+<div class="glplan-card">
 
 <h3>Foundation Launch</h3>
-<p class="glp-desc">Best for businesses starting online</p>
+<p class="glplan-desc">Best for businesses starting online</p>
 
-<p class="glp-type">One-Time Setup</p>
+<p class="glplan-type">One-Time Setup</p>
 
-<div class="glp-price-area">
+<div class="glplan-price">
 
-<div class="glp-old">₹177 / Day</div>
+<div class="glplan-old">₹177 / Day</div>
 
-<div class="glp-price">
-₹13<span>/Day</span>
-</div>
+<div class="glplan-main">₹132<span>/Day</span></div>
 
-<div class="glp-discount">25% Off</div>
+<div class="glplan-discount">25% Off</div>
 
 </div>
 
-<ul class="glp-features">
+<ul>
 
 <li>Custom Business Website</li>
 <li>Google Business Profile Setup</li>
@@ -1550,85 +1548,87 @@ btn.textContent="Hide Features";
 
 </ul>
 
-<a href="#contact" class="glp-btn">Start Plan</a>
+<button class="glplan-btn" onclick="openPlanForm('Foundation Launch')">
+Start Plan
+</button>
 
 </div>
 
 
 
 <!-- PLAN 2 -->
-<div class="glp-card">
+<div class="glplan-card">
 
 <h3>Growth Acceleration</h3>
-<p class="glp-desc">Improve Google Maps visibility</p>
+<p class="glplan-desc">Improve Google Maps visibility</p>
 
-<p class="glp-type">3-Month Growth Plan</p>
+<p class="glplan-type">3-Month Growth Plan</p>
 
-<div class="glp-price-area">
+<div class="glplan-price">
 
-<div class="glp-old">₹66 / Day</div>
+<div class="glplan-old">₹66 / Day</div>
 
-<div class="glp-price">
-₹55<span>/Day</span>
-</div>
+<div class="glplan-main">₹55<span>/Day</span></div>
 
-<div class="glp-discount">17% Off</div>
+<div class="glplan-discount">17% Off</div>
 
 </div>
 
-<p class="glp-offer">Limited Time Offer</p>
+<p class="glplan-offer">Limited Time Offer</p>
 
-<ul class="glp-features">
+<ul>
 
 <li>GBP Optimization</li>
 <li>Google Maps Ranking Strategy</li>
-<li>Weekly Optimization Actions</li>
+<li>Weekly Optimization</li>
 <li>Local Keyword Targeting</li>
 <li>Performance Monitoring</li>
 
 </ul>
 
-<a href="#contact" class="glp-btn">Start Plan</a>
+<button class="glplan-btn" onclick="openPlanForm('Growth Acceleration')">
+Start Plan
+</button>
 
 </div>
 
 
 
 <!-- PLAN 3 -->
-<div class="glp-card glp-featured">
+<div class="glplan-card glplan-featured">
 
-<div class="glp-badge">Most Recommended</div>
+<div class="glplan-badge">Most Recommended</div>
 
 <h3>Complete Local Growth</h3>
-<p class="glp-desc">Website + Maps Growth Package</p>
+<p class="glplan-desc">Website + Maps Growth Package</p>
 
-<p class="glp-type">3-Month Growth Plan</p>
+<p class="glplan-type">3-Month Growth Plan</p>
 
-<div class="glp-price-area">
+<div class="glplan-price">
 
-<div class="glp-old">₹132 / Day</div>
+<div class="glplan-old">₹132 / Day</div>
 
-<div class="glp-price">
-₹99<span>/Day</span>
-</div>
+<div class="glplan-main">₹99<span>/Day</span></div>
 
-<div class="glp-discount">25% Off</div>
+<div class="glplan-discount">25% Off</div>
 
 </div>
 
-<p class="glp-offer">Limited Time Offer</p>
+<p class="glplan-offer">Limited Time Offer</p>
 
-<ul class="glp-features">
+<ul>
 
 <li>Website + GBP Setup</li>
 <li>Full Local SEO Foundation</li>
-<li>3 Months Growth Optimization</li>
+<li>3 Months Optimization</li>
 <li>Maps Visibility Strategy</li>
 <li>Performance Tracking</li>
 
 </ul>
 
-<a href="#contact" class="glp-btn glp-btn-featured">Start Plan</a>
+<button class="glplan-btn" onclick="openPlanForm('Complete Local Growth')">
+Start Plan
+</button>
 
 </div>
 
@@ -1639,31 +1639,59 @@ btn.textContent="Hide Features";
 
 
 
+<!-- POPUP FORM -->
+
+<div id="glplanFormPopup" class="glplan-popup">
+
+<div class="glplan-form-box">
+
+<span class="glplan-close" onclick="closePlanForm()">×</span>
+
+<h3>Start Your Growth Plan</h3>
+
+<input type="text" id="glplan-name" placeholder="Your Name">
+
+<input type="text" id="glplan-business" placeholder="Business Name">
+
+<input type="text" id="glplan-location" placeholder="Business Location / City">
+
+<input type="text" id="glplan-phone" placeholder="Phone / WhatsApp Number">
+
+<textarea id="glplan-details" placeholder="Tell us about your business (optional)"></textarea>
+
+<button onclick="sendPlanWhatsapp()">Submit & Continue</button>
+
+</div>
+
+</div>
+
+
+
 <style>
 
 /* SECTION */
 
-.glp-section{
-padding:70px 20px;
-background:linear-gradient(180deg,#f6f8ff,#eef2ff);
-font-family:system-ui;
+.glplan-section{
+padding:90px 20px;
+background:linear-gradient(180deg,#f2f6ff,#e9efff);
 }
 
-.glp-wrapper{
+.glplan-wrapper{
 max-width:1200px;
 margin:auto;
 }
 
-.glp-title{
+.glplan-title{
 text-align:center;
-font-size:34px;
+font-size:40px;
 font-weight:700;
-margin-bottom:50px;
+margin-bottom:55px;
+color:#0f172a;
 }
 
 /* GRID */
 
-.glp-grid{
+.glplan-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:35px;
@@ -1671,157 +1699,310 @@ gap:35px;
 
 /* CARD */
 
-.glp-card{
-background:#ffffff;
-padding:28px 24px;
+.glplan-card{
+
+background:linear-gradient(180deg,#ffffff,#f7f9ff);
+
+padding:30px;
+
 border-radius:14px;
-box-shadow:0 10px 28px rgba(0,0,0,0.06);
-transition:0.3s;
+
+border:1px solid #e4e8ff;
+
+box-shadow:0 10px 28px rgba(0,0,0,0.04);
+
 position:relative;
+
+transition:0.3s;
 }
 
-.glp-card:hover{
+.glplan-card:hover{
 transform:translateY(-6px);
 }
 
 /* FEATURED */
 
-.glp-featured{
+.glplan-featured{
 border:2px solid #4f6cff;
-background:#f9faff;
 }
 
-.glp-badge{
+.glplan-badge{
+
 position:absolute;
+
 top:-12px;
+
 left:50%;
+
 transform:translateX(-50%);
+
 background:#4f6cff;
+
 color:white;
+
+padding:6px 14px;
+
+border-radius:20px;
+
 font-size:12px;
-padding:6px 16px;
-border-radius:30px;
-font-weight:600;
+
 }
 
 /* TEXT */
 
-.glp-card h3{
+.glplan-card h3{
 font-size:20px;
 margin-bottom:6px;
 }
 
-.glp-desc{
-color:#666;
+.glplan-desc{
 font-size:14px;
-margin-bottom:8px;
+color:#666;
+margin-bottom:6px;
 }
 
-.glp-type{
+.glplan-type{
+font-size:14px;
 color:#4f6cff;
 font-weight:600;
-font-size:14px;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
 /* PRICE */
 
-.glp-price-area{
-margin:10px 0;
-}
-
-.glp-old{
+.glplan-old{
+text-decoration:line-through;
 color:#999;
 font-size:14px;
-text-decoration:line-through;
 }
 
-.glp-price{
+.glplan-main{
 font-size:36px;
 font-weight:700;
-margin-top:4px;
+margin-top:3px;
 }
 
-.glp-price span{
+.glplan-main span{
 font-size:16px;
-font-weight:500;
 }
 
-.glp-discount{
+.glplan-discount{
 color:#16a34a;
-font-size:13px;
 font-weight:600;
-margin-top:2px;
+font-size:13px;
 }
 
-.glp-offer{
-color:#e11d48;
-font-weight:600;
+.glplan-offer{
+color:#ef4444;
 font-size:13px;
+font-weight:600;
 margin-top:6px;
 }
 
-/* FEATURES */
+/* LIST */
 
-.glp-features{
+.glplan-card ul{
 list-style:none;
 padding:0;
 margin:18px 0;
 }
 
-.glp-features li{
+.glplan-card li{
 margin:8px 0;
 font-size:14px;
-color:#444;
 }
 
-.glp-features li:before{
+.glplan-card li:before{
 content:"✔";
-color:#3b82f6;
-font-weight:bold;
-margin-right:6px;
+color:#2563eb;
+margin-right:7px;
 }
 
 /* BUTTON */
 
-.glp-btn{
-display:block;
-width:75%;
+.glplan-btn{
+
+width:80%;
+
 margin:auto;
-text-align:center;
+
+display:block;
+
 padding:11px;
+
 background:#4f6cff;
+
 color:white;
+
+border:none;
+
 border-radius:8px;
-text-decoration:none;
+
 font-weight:600;
+
+cursor:pointer;
+
 transition:0.3s;
+
 }
 
-.glp-btn:hover{
+.glplan-btn:hover{
 transform:scale(1.05);
-box-shadow:0 8px 18px rgba(79,108,255,0.35);
 }
 
-.glp-btn-featured{
-background:#16a34a;
+/* POPUP */
+
+.glplan-popup{
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.45);
+
+z-index:9999;
+
 }
 
-.glp-btn-featured:hover{
-box-shadow:0 8px 18px rgba(22,163,74,0.35);
+.glplan-form-box{
+
+background:white;
+
+width:420px;
+
+max-width:90%;
+
+margin:8% auto;
+
+padding:30px;
+
+border-radius:12px;
+
+}
+
+.glplan-form-box h3{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.glplan-form-box input,
+.glplan-form-box textarea{
+
+width:100%;
+
+padding:10px;
+
+margin-bottom:12px;
+
+border:1px solid #ddd;
+
+border-radius:6px;
+
+}
+
+.glplan-form-box button{
+
+width:100%;
+
+padding:12px;
+
+background:#4f6cff;
+
+color:white;
+
+border:none;
+
+border-radius:6px;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.glplan-close{
+
+float:right;
+
+font-size:22px;
+
+cursor:pointer;
+
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
 
-.glp-grid{
+.glplan-grid{
 grid-template-columns:1fr;
+}
+
+.glplan-title{
+font-size:32px;
 }
 
 }
 
 </style>
+
+
+
+<script>
+
+let selectedPlan="";
+
+function openPlanForm(plan){
+
+selectedPlan=plan;
+
+document.getElementById("glplanFormPopup").style.display="block";
+
+}
+
+function closePlanForm(){
+
+document.getElementById("glplanFormPopup").style.display="none";
+
+}
+
+function sendPlanWhatsapp(){
+
+let name=document.getElementById("glplan-name").value;
+
+let business=document.getElementById("glplan-business").value;
+
+let location=document.getElementById("glplan-location").value;
+
+let phone=document.getElementById("glplan-phone").value;
+
+let details=document.getElementById("glplan-details").value;
+
+let message=
+"New Plan Inquiry%0A%0A"+
+"Plan: "+selectedPlan+"%0A"+
+"Name: "+name+"%0A"+
+"Business: "+business+"%0A"+
+"Location: "+location+"%0A"+
+"Phone: "+phone+"%0A"+
+"Details: "+details;
+
+window.open("https://wa.me/919330629573?text="+message,"_blank");
+
+}
+
+</script>
 
 
 <!-- ================= WHY CHOOSE US SECTION ================= -->
