@@ -3270,59 +3270,100 @@ Get Free Audit
 </div>
 
 
-<!-- ===== FREE AUDIT FLOATING BUTTON ===== -->
+<!-- ===== FREE AUDIT BUTTON ===== -->
+
+<a class="free-audit-btn" onclick="openAuditPopup()">Get Free GBP Audit</a>
+
+
+<!-- ===== AUDIT POPUP ===== -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-container">
+
+<span class="audit-close" onclick="closeAuditPopup()">×</span>
+
+<h3>Free Google Business Profile Audit</h3>
+
+<p>Get a quick analysis of your Google Business Profile visibility and improvement opportunities.</p>
+
+<form onsubmit="sendAuditToWhatsapp(event)">
+
+<input type="text" id="auditName" placeholder="Your Name" required>
+
+<input type="tel" id="auditPhone" placeholder="Phone / WhatsApp Number" required>
+
+<input type="text" id="auditBusiness" placeholder="Business Name">
+
+<input type="text" id="auditCity" placeholder="Business City">
+
+<input type="text" id="auditGBP" placeholder="Google Maps / GBP Link (optional)">
+
+<button type="submit">Request Free Audit</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<!-- ===== STYLE ===== -->
 
 <style>
 
-.audit-btn{
+.free-audit-btn{
 position:fixed;
-right:25px;
-bottom:140px;
-background:linear-gradient(135deg,#4f6df5,#6c4df7);
+bottom:30px;
+left:30px;
+background:#22c55e;
 color:#fff;
-padding:14px 22px;
+padding:14px 26px;
 border-radius:40px;
-font-size:15px;
 font-weight:600;
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
+font-family:Poppins,sans-serif;
+box-shadow:0 10px 25px rgba(34,197,94,0.35);
 cursor:pointer;
 z-index:9998;
-transition:all .3s ease;
+transition:0.3s;
 }
 
-.audit-btn:hover{
+.free-audit-btn:hover{
 transform:translateY(-3px);
-box-shadow:0 12px 30px rgba(0,0,0,0.2);
 }
 
+/* POPUP */
 
-.audit-overlay{
+.audit-popup{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,0.65);
 display:none;
 align-items:center;
 justify-content:center;
 z-index:99999;
 }
 
-.audit-popup{
-width:420px;
-background:#fff;
-border-radius:14px;
-padding:35px 35px 30px;
+.audit-container{
+background:#ffffff;
+padding:40px;
+border-radius:18px;
+width:90%;
+max-width:420px;
+font-family:Poppins,sans-serif;
 text-align:center;
-box-shadow:0 20px 60px rgba(0,0,0,0.25);
-animation:popupFade .35s ease;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+animation:popupFade .4s ease;
+position:relative;
 }
 
 @keyframes popupFade{
 from{
 opacity:0;
-transform:translateY(40px);
+transform:translateY(30px);
 }
 to{
 opacity:1;
@@ -3330,155 +3371,117 @@ transform:translateY(0);
 }
 }
 
-.audit-popup h2{
+.audit-container h3{
 font-size:24px;
-margin-bottom:8px;
+margin-bottom:10px;
+color:#0f172a;
 }
 
-.audit-popup p{
-font-size:15px;
-color:#666;
+.audit-container p{
+font-size:14px;
+color:#64748b;
 margin-bottom:25px;
 }
 
-.audit-input{
-position:relative;
-}
+/* INPUTS */
 
-.audit-input svg{
-position:absolute;
-left:14px;
-top:50%;
-transform:translateY(-50%);
-width:18px;
-height:18px;
-fill:#888;
-}
-
-.audit-popup input{
+.audit-container input{
 width:100%;
-padding:14px 14px 14px 42px;
-border:1px solid #ddd;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #e2e8f0;
 border-radius:8px;
 font-size:14px;
-outline:none;
+font-family:Poppins,sans-serif;
 }
 
-.audit-popup input:focus{
-border-color:#5b6df7;
-}
-
-.audit-submit{
-margin-top:18px;
+.audit-container button{
 width:100%;
-padding:14px;
-background:linear-gradient(135deg,#4f6df5,#6c4df7);
-border:none;
-border-radius:8px;
+padding:13px;
+background:#6366f1;
 color:#fff;
-font-size:15px;
+border:none;
+border-radius:10px;
 font-weight:600;
 cursor:pointer;
+transition:0.3s;
 }
 
-.audit-submit:hover{
-opacity:.95;
+.audit-container button:hover{
+background:#4f46e5;
 }
 
 .audit-close{
 position:absolute;
-top:14px;
+top:15px;
 right:18px;
 font-size:22px;
 cursor:pointer;
-color:#999;
+color:#475569;
 }
 
-.audit-note{
-margin-top:12px;
-font-size:12px;
-color:#888;
+@media(max-width:768px){
+
+.free-audit-btn{
+left:20px;
+bottom:25px;
+padding:12px 22px;
+font-size:14px;
+}
+
 }
 
 </style>
 
 
-
-<!-- FLOATING BUTTON -->
-
-<div class="audit-btn" onclick="openAudit()">
-🔎 Free Audit
-</div>
-
-
-
-<!-- POPUP -->
-
-<div class="audit-overlay" id="auditPopup">
-
-<div class="audit-popup">
-
-<div class="audit-close" onclick="closeAudit()">×</div>
-
-<h2>Free Google Maps Audit</h2>
-
-<p>Paste your Google Business Profile link to receive a quick ranking audit.</p>
-
-
-<div class="audit-input">
-
-<svg viewBox="0 0 24 24">
-<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-</svg>
-
-<input 
-type="url"
-id="gmbLink"
-placeholder="Paste Google Business Profile link"
-required>
-
-</div>
-
-
-<button class="audit-submit" onclick="sendAudit()">
-Get Free Audit
-</button>
-
-<div class="audit-note">
-Free • No obligation • Takes 60 seconds
-</div>
-
-</div>
-</div>
-
-
+<!-- ===== SCRIPT ===== -->
 
 <script>
 
-function openAudit(){
+function openAuditPopup(){
 document.getElementById("auditPopup").style.display="flex";
 }
 
-function closeAudit(){
+function closeAuditPopup(){
 document.getElementById("auditPopup").style.display="none";
 }
 
+/* CLICK OUTSIDE CLOSE */
 
+window.onclick=function(e){
 
-function sendAudit(){
+let popup=document.getElementById("auditPopup");
 
-var link=document.getElementById("gmbLink").value;
-
-if(link==""){
-alert("Please paste your Google Business Profile link");
-return;
+if(e.target==popup){
+popup.style.display="none";
 }
 
-var phone="919330629573"; 
+}
 
-var message="Hello, I would like a Free Google Maps Audit.%0A%0AGMB Link:%0A"+link;
 
-window.open("https://wa.me/"+phone+"?text="+message,"_blank");
+/* SEND TO WHATSAPP */
+
+function sendAuditToWhatsapp(e){
+
+e.preventDefault();
+
+let name=document.getElementById("auditName").value;
+let phone=document.getElementById("auditPhone").value;
+let business=document.getElementById("auditBusiness").value;
+let city=document.getElementById("auditCity").value;
+let gbp=document.getElementById("auditGBP").value;
+
+let message=
+"New Free GBP Audit Request%0A%0A"+
+"Name: "+name+"%0A"+
+"Phone: "+phone+"%0A"+
+"Business: "+business+"%0A"+
+"City: "+city+"%0A"+
+"GBP Link: "+gbp;
+
+window.open("https://wa.me/919330629573?text="+message,"_blank");
+
+closeAuditPopup();
 
 }
 
