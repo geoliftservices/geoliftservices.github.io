@@ -1513,31 +1513,40 @@ btn.textContent="Hide Features";
 
 <section class="pricing-section">
 
+<div class="pricing-wrapper">
+
+<h2 class="pricing-title">Plans</h2>
+
 <div class="pricing-container">
 
 <!-- PLAN 1 -->
 <div class="pricing-card">
 
 <h3>Foundation Launch</h3>
-<p class="plan-desc">Best for businesses starting their online presence</p>
+<p class="plan-desc">Best for businesses starting online</p>
 
 <p class="plan-type">One-Time Setup</p>
 
-<div class="price-box">
-<span class="old-price">₹10000</span>
-<span class="new-price">₹5000</span>
+<div class="price-area">
+
+<div class="old-price">₹177 / Day</div>
+
+<div class="main-price">
+₹132<span>/Day</span>
 </div>
 
-<div class="day-price">
-<span class="per-day">₹13 / Day</span>
+<div class="discount">25% Off</div>
+
 </div>
 
 <ul>
+
 <li>✔ Custom Business Website</li>
 <li>✔ Google Business Profile Setup</li>
 <li>✔ Local SEO Structure</li>
-<li>✔ HTTPS & Google Indexing</li>
-<li>✔ Basic Local Visibility Setup</li>
+<li>✔ HTTPS & Indexing</li>
+<li>✔ Basic Local Visibility</li>
+
 </ul>
 
 <a href="#contact" class="plan-btn">Start Plan</a>
@@ -1550,25 +1559,32 @@ btn.textContent="Hide Features";
 <div class="pricing-card">
 
 <h3>Growth Acceleration</h3>
-<p class="plan-desc">Best for improving Google Maps rankings</p>
+<p class="plan-desc">Improve Google Maps visibility</p>
 
 <p class="plan-type">3-Month Growth Plan</p>
 
-<div class="price-box">
-<span class="old-price">₹6000</span>
-<span class="new-price">₹5000</span>
+<div class="price-area">
+
+<div class="old-price">₹66 / Day</div>
+
+<div class="main-price">
+₹55<span>/Day</span>
 </div>
 
-<div class="day-price">
-<span class="per-day">₹55 / Day</span>
+<div class="discount">17% Off</div>
+
 </div>
+
+<p class="limited-offer">Limited Time Offer</p>
 
 <ul>
+
 <li>✔ GBP Optimization</li>
 <li>✔ Google Maps Ranking Strategy</li>
 <li>✔ Weekly Optimization Actions</li>
 <li>✔ Local Keyword Targeting</li>
 <li>✔ Performance Monitoring</li>
+
 </ul>
 
 <a href="#contact" class="plan-btn">Start Plan</a>
@@ -1585,42 +1601,37 @@ btn.textContent="Hide Features";
 <h3>Complete Local Growth</h3>
 <p class="plan-desc">Website + Maps Growth Package</p>
 
-<div class="bundle-pricing">
+<p class="plan-type">3-Month Growth Plan</p>
 
-<div class="mini-price">
-₹5000 <small>Setup</small>
+<div class="price-area">
+
+<div class="old-price">₹132 / Day</div>
+
+<div class="main-price">
+₹99<span>/Day</span>
 </div>
 
-<div class="mini-price">
-3-Month Growth
-</div>
+<div class="discount">25% Off</div>
 
 </div>
 
-<div class="bundle-total">
-<span class="old-price">₹11,000</span>
-<span class="new-price">₹9,000</span>
-</div>
-
-<p class="save-tag">Save ₹2,000</p>
-<p class="offer-tag">Limited Launch Offer</p>
-
-<div class="day-price">
-<span class="per-day">₹99 / Day</span>
-</div>
+<p class="limited-offer">Limited Time Offer</p>
 
 <ul>
+
 <li>✔ Website + GBP Setup</li>
 <li>✔ Full Local SEO Foundation</li>
 <li>✔ 3 Months Growth Optimization</li>
 <li>✔ Maps Visibility Strategy</li>
-<li>✔ Business Growth Tracking</li>
+<li>✔ Performance Tracking</li>
+
 </ul>
 
-<a href="#contact" class="plan-btn green">Start Plan</a>
+<a href="#contact" class="plan-btn featured-btn">Start Plan</a>
 
 </div>
 
+</div>
 </div>
 
 </section>
@@ -1630,28 +1641,44 @@ btn.textContent="Hide Features";
 <style>
 
 .pricing-section{
-padding:50px 20px;
-background:#f8f9ff;
+padding:70px 20px;
+background:linear-gradient(180deg,#f6f8ff,#eef2ff);
+}
+
+.pricing-wrapper{
+max-width:1200px;
+margin:auto;
+}
+
+.pricing-title{
+text-align:center;
+font-size:34px;
+font-weight:700;
+margin-bottom:45px;
 }
 
 .pricing-container{
-max-width:1150px;
-margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:40px;
 }
 
 .pricing-card{
-background:white;
-padding:26px;
-border-radius:12px;
-box-shadow:0 6px 25px rgba(0,0,0,0.05);
+background:#fbfcff;
+padding:28px 24px;
+border-radius:14px;
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
 position:relative;
+transition:0.3s;
 }
 
-.pricing-card.featured{
+.pricing-card:hover{
+transform:translateY(-6px);
+}
+
+.featured{
 border:2px solid #4f6cff;
+background:#f9faff;
 }
 
 .recommended{
@@ -1661,9 +1688,9 @@ left:50%;
 transform:translateX(-50%);
 background:#4f6cff;
 color:white;
-padding:4px 12px;
+font-size:12px;
+padding:5px 14px;
 border-radius:20px;
-font-size:11px;
 }
 
 .pricing-card h3{
@@ -1672,77 +1699,57 @@ margin-bottom:6px;
 }
 
 .plan-desc{
-color:#777;
-font-size:13px;
-margin-bottom:10px;
+color:#666;
+font-size:14px;
+margin-bottom:8px;
 }
 
 .plan-type{
 color:#4f6cff;
 font-weight:600;
 font-size:14px;
-margin-bottom:8px;
+margin-bottom:12px;
 }
 
-.price-box{
-margin:6px 0;
+.price-area{
+margin:10px 0 6px 0;
 }
 
 .old-price{
-text-decoration:line-through;
 color:#999;
-margin-right:6px;
-font-size:15px;
+font-size:14px;
+text-decoration:line-through;
+margin-bottom:3px;
 }
 
-.new-price{
-font-size:26px;
+.main-price{
+font-size:34px;
 font-weight:700;
-color:#111;
 }
 
-.bundle-pricing{
-display:flex;
-gap:15px;
-margin:6px 0;
-font-weight:600;
+.main-price span{
+font-size:16px;
+font-weight:500;
 }
 
-.mini-price{
-font-size:18px;
-}
-
-.bundle-total{
-margin:6px 0;
-}
-
-.day-price{
-margin-top:6px;
-}
-
-.per-day{
-font-size:18px;
-font-weight:700;
-color:#222;
-}
-
-.save-tag{
+.discount{
 color:#16a34a;
 font-size:13px;
 font-weight:600;
-margin-top:3px;
 }
 
-.offer-tag{
-color:#e63946;
-font-size:12px;
+.limited-offer{
+color:#e11d48;
+font-weight:600;
+font-size:13px;
+margin-top:4px;
 margin-bottom:10px;
 }
 
 .pricing-card ul{
-padding-left:0;
 list-style:none;
-margin:16px 0;
+padding:0;
+margin:18px 0;
 }
 
 .pricing-card ul li{
@@ -1751,20 +1758,38 @@ font-size:14px;
 color:#444;
 }
 
+.pricing-card ul li::before{
+content:"✔";
+color:#3b82f6;
+font-weight:bold;
+margin-right:6px;
+}
+
 .plan-btn{
 display:block;
+width:75%;
+margin:auto;
 text-align:center;
 padding:10px;
 background:#4f6cff;
 color:white;
 border-radius:8px;
 text-decoration:none;
-font-size:14px;
 font-weight:600;
+transition:0.3s;
 }
 
-.plan-btn.green{
+.plan-btn:hover{
+transform:scale(1.05);
+box-shadow:0 8px 18px rgba(79,108,255,0.3);
+}
+
+.featured-btn{
 background:#16a34a;
+}
+
+.featured-btn:hover{
+box-shadow:0 8px 18px rgba(22,163,74,0.35);
 }
 
 @media(max-width:900px){
