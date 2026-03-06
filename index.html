@@ -1529,7 +1529,7 @@ btn.textContent="Hide Features";
 
 <div class="glp-price-area">
 
-<div class="glp-old">₹177 / Day</div>
+<div class="glp-old">₹17 / Day</div>
 
 <div class="glp-price">
 ₹13<span>/Day</span>
@@ -1824,10 +1824,23 @@ border-radius:8px;
 border:none;
 font-weight:600;
 cursor:pointer;
+transition:all 0.25s ease;
+}
+
+/* HOVER EFFECT */
+
+.glp-btn:hover{
+background:#3d55e6;
+transform:translateY(-2px);
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
 }
 
 .glp-btn-featured{
 background:#16a34a;
+}
+
+.glp-btn-featured:hover{
+background:#12863c;
 }
 
 /* POPUP */
@@ -1913,8 +1926,6 @@ grid-template-columns:1fr;
 
 var selectedPlan="";
 
-/* OPEN POPUP + CAPTURE PLAN */
-
 document.querySelectorAll(".openAudit").forEach(btn=>{
 btn.onclick=function(){
 
@@ -1925,8 +1936,6 @@ document.getElementById("auditPopup").style.display="flex";
 }
 });
 
-/* CLOSE POPUP */
-
 document.querySelector(".audit-close").onclick=function(){
 document.getElementById("auditPopup").style.display="none";
 }
@@ -1934,8 +1943,6 @@ document.getElementById("auditPopup").style.display="none";
 document.querySelector(".audit-overlay").onclick=function(){
 document.getElementById("auditPopup").style.display="none";
 }
-
-/* FORM SUBMIT */
 
 document.getElementById("auditForm").addEventListener("submit",function(e){
 
