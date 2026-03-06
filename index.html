@@ -1954,8 +1954,8 @@ var location=document.getElementById("location").value;
 var gbp=document.getElementById("gbp").value;
 var description=document.getElementById("description").value;
 
-var message="Hi GeoLift, I want to take your service.%0A%0A"+
-"Selected Plan: "+selectedPlan+"%0A"+
+var message="Hi GeoLift,%0A%0A"+
+(selectedPlan ? "Selected Plan: "+selectedPlan+"%0A%0A" : "")+
 "Name: "+name+"%0A"+
 "Business: "+business+"%0A"+
 "Location: "+location+"%0A"+
