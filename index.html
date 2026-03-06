@@ -1519,7 +1519,7 @@ btn.textContent="Hide Features";
 <div class="pricing-card">
 
 <h3>Foundation Launch</h3>
-<p class="plan-desc">Best for new businesses starting online</p>
+<p class="plan-desc">Best for businesses starting their online presence</p>
 
 <p class="plan-type">One-Time Setup</p>
 
@@ -1528,12 +1528,16 @@ btn.textContent="Hide Features";
 <span class="new-price">₹5000</span>
 </div>
 
+<div class="day-price">
+<span class="per-day">₹13 / Day</span>
+</div>
+
 <ul>
 <li>✔ Custom Business Website</li>
 <li>✔ Google Business Profile Setup</li>
-<li>✔ On Page SEO Structure</li>
-<li>✔ HTTPS & Indexing</li>
-<li>✔ Local Keyword Mapping</li>
+<li>✔ Local SEO Structure</li>
+<li>✔ HTTPS & Google Indexing</li>
+<li>✔ Basic Local Visibility Setup</li>
 </ul>
 
 <a href="#contact" class="plan-btn">Start Plan</a>
@@ -1546,23 +1550,25 @@ btn.textContent="Hide Features";
 <div class="pricing-card">
 
 <h3>Growth Acceleration</h3>
-<p class="plan-desc">Best for businesses targeting Google Maps rankings</p>
+<p class="plan-desc">Best for improving Google Maps rankings</p>
 
-<p class="plan-type">Monthly Optimization</p>
+<p class="plan-type">3-Month Growth Plan</p>
 
 <div class="price-box">
-<span class="old-price">₹5000</span>
-<span class="new-price">₹2000 <small>/month</small></span>
+<span class="old-price">₹6000</span>
+<span class="new-price">₹5000</span>
 </div>
 
-<p class="plan-note">3-Month Plan</p>
+<div class="day-price">
+<span class="per-day">₹55 / Day</span>
+</div>
 
 <ul>
-<li>✔ Ongoing GMB Optimization</li>
+<li>✔ GBP Optimization</li>
 <li>✔ Google Maps Ranking Strategy</li>
-<li>✔ Monthly SEO Posts</li>
-<li>✔ Competitor Monitoring</li>
-<li>✔ Performance Tracking</li>
+<li>✔ Weekly Optimization Actions</li>
+<li>✔ Local Keyword Targeting</li>
+<li>✔ Performance Monitoring</li>
 </ul>
 
 <a href="#contact" class="plan-btn">Start Plan</a>
@@ -1577,35 +1583,38 @@ btn.textContent="Hide Features";
 <div class="recommended">Most Recommended</div>
 
 <h3>Complete Local Growth</h3>
-<p class="plan-desc">Best for businesses focused on long-term growth</p>
+<p class="plan-desc">Website + Maps Growth Package</p>
 
-<p class="plan-type">Setup + Monthly Growth</p>
+<div class="bundle-pricing">
 
-<div class="price-box">
-<span class="new-price">₹5000 <small>setup</small></span>
+<div class="mini-price">
+₹5000 <small>Setup</small>
 </div>
 
-<div class="price-box">
-<span class="new-price">₹2000 <small>/month</small></span>
+<div class="mini-price">
+3-Month Growth
 </div>
 
-<p class="plan-note">3-Month Growth Plan</p>
-
-<div class="bundle-price">
-<span class="old-bundle">₹11,000</span>
-<span class="new-bundle">₹9,000</span>
 </div>
 
-<p class="save-text">Save ₹2,000</p>
+<div class="bundle-total">
+<span class="old-price">₹11,000</span>
+<span class="new-price">₹9,000</span>
+</div>
 
+<p class="save-tag">Save ₹2,000</p>
 <p class="offer-tag">Limited Launch Offer</p>
+
+<div class="day-price">
+<span class="per-day">₹99 / Day</span>
+</div>
 
 <ul>
 <li>✔ Website + GBP Setup</li>
-<li>✔ Full Optimization Foundation</li>
-<li>✔ Monthly Ranking Growth</li>
-<li>✔ Visibility & Lead Strategy</li>
-<li>✔ Structured Growth Plan</li>
+<li>✔ Full Local SEO Foundation</li>
+<li>✔ 3 Months Growth Optimization</li>
+<li>✔ Maps Visibility Strategy</li>
+<li>✔ Business Growth Tracking</li>
 </ul>
 
 <a href="#contact" class="plan-btn green">Start Plan</a>
@@ -1621,29 +1630,28 @@ btn.textContent="Hide Features";
 <style>
 
 .pricing-section{
-padding:60px 20px;
+padding:50px 20px;
 background:#f8f9ff;
 }
 
 .pricing-container{
-max-width:1200px;
+max-width:1150px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .pricing-card{
 background:white;
-padding:35px;
-border-radius:14px;
-box-shadow:0 8px 30px rgba(0,0,0,0.05);
+padding:26px;
+border-radius:12px;
+box-shadow:0 6px 25px rgba(0,0,0,0.05);
 position:relative;
 }
 
 .pricing-card.featured{
 border:2px solid #4f6cff;
-transform:scale(1.03);
 }
 
 .recommended{
@@ -1653,98 +1661,118 @@ left:50%;
 transform:translateX(-50%);
 background:#4f6cff;
 color:white;
-padding:5px 14px;
+padding:4px 12px;
 border-radius:20px;
-font-size:12px;
+font-size:11px;
+}
+
+.pricing-card h3{
+font-size:20px;
+margin-bottom:6px;
 }
 
 .plan-desc{
 color:#777;
-font-size:14px;
-margin-bottom:15px;
+font-size:13px;
+margin-bottom:10px;
 }
 
 .plan-type{
 color:#4f6cff;
 font-weight:600;
-margin-bottom:10px;
+font-size:14px;
+margin-bottom:8px;
 }
 
 .price-box{
-margin:10px 0;
+margin:6px 0;
 }
 
 .old-price{
 text-decoration:line-through;
 color:#999;
-margin-right:10px;
-font-size:18px;
+margin-right:6px;
+font-size:15px;
 }
 
 .new-price{
-font-size:32px;
+font-size:26px;
 font-weight:700;
 color:#111;
 }
 
-.plan-note{
-font-size:14px;
-color:#555;
-margin-bottom:10px;
-}
-
-.bundle-price{
-margin-top:15px;
-font-size:22px;
-}
-
-.old-bundle{
-text-decoration:line-through;
-color:#999;
-margin-right:10px;
-}
-
-.new-bundle{
-font-weight:700;
-color:#111;
-}
-
-.save-text{
-color:#22b455;
+.bundle-pricing{
+display:flex;
+gap:15px;
+margin:6px 0;
 font-weight:600;
-margin-top:5px;
+}
+
+.mini-price{
+font-size:18px;
+}
+
+.bundle-total{
+margin:6px 0;
+}
+
+.day-price{
+margin-top:6px;
+}
+
+.per-day{
+font-size:18px;
+font-weight:700;
+color:#222;
+}
+
+.save-tag{
+color:#16a34a;
+font-size:13px;
+font-weight:600;
+margin-top:3px;
 }
 
 .offer-tag{
 color:#e63946;
-font-size:13px;
-margin-bottom:15px;
+font-size:12px;
+margin-bottom:10px;
 }
 
 .pricing-card ul{
 padding-left:0;
 list-style:none;
-margin:20px 0;
+margin:16px 0;
 }
 
 .pricing-card ul li{
-margin:10px 0;
+margin:8px 0;
+font-size:14px;
 color:#444;
 }
 
 .plan-btn{
 display:block;
 text-align:center;
-padding:12px;
+padding:10px;
 background:#4f6cff;
 color:white;
 border-radius:8px;
 text-decoration:none;
+font-size:14px;
 font-weight:600;
 }
 
 .plan-btn.green{
-background:#22b455;
+background:#16a34a;
+}
+
+@media(max-width:900px){
+
+.pricing-container{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
