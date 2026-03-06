@@ -1508,141 +1508,106 @@ btn.textContent="Hide Features";
 </script>
   
 
-<section id="plans" class="pricing-section">
+<section class="pricing-section">
 
-<div class="pricing-header">
-<h2>Business Growth Plans</h2>
-<p>Built for serious businesses that want visibility, leads, and consistent local growth.</p>
-</div>
-
-<div class="pricing-grid">
+<div class="pricing-container">
 
 <!-- PLAN 1 -->
-<div class="plan-card">
+<div class="pricing-card">
 
 <h3>Foundation Launch</h3>
+<p class="plan-desc">Best for new businesses starting online</p>
 
-<p class="best-for">Best for new businesses starting online</p>
+<p class="plan-type">One-Time Setup</p>
 
-<p class="plan-sub">One-Time Setup</p>
+<div class="price-box">
+<span class="old-price">₹10000</span>
+<span class="new-price">₹5000</span>
+</div>
 
-<p class="value-line">Website + Google Business Setup</p>
-
-<div class="price">₹5000</div>
-
-<p class="price-note">Less than ₹100/day setup</p>
+<p class="offer-tag">Limited Launch Offer</p>
 
 <ul>
-<li>Custom Business Website</li>
-<li>Google Business Profile Setup</li>
-<li>On Page SEO Structure</li>
-<li>HTTPS & Indexing</li>
-<li>Local Keyword Mapping</li>
+<li>✔ Custom Business Website</li>
+<li>✔ Google Business Profile Setup</li>
+<li>✔ On Page SEO Structure</li>
+<li>✔ HTTPS & Indexing</li>
+<li>✔ Local Keyword Mapping</li>
 </ul>
 
-<button onclick="openForm('Foundation Launch')" class="plan-btn">
-Discuss Plan
-</button>
+<a href="#contact" class="plan-btn">Discuss Plan</a>
 
 </div>
+
 
 
 <!-- PLAN 2 -->
-<div class="plan-card">
+<div class="pricing-card">
 
 <h3>Growth Acceleration</h3>
+<p class="plan-desc">Best for businesses targeting Google Maps rankings</p>
 
-<p class="best-for">Best for businesses targeting Google Maps rankings</p>
+<p class="plan-type">Monthly Optimization</p>
 
-<p class="plan-sub">Monthly Optimization</p>
+<div class="price-box">
+<span class="old-price">₹5000</span>
+<span class="new-price">₹2000 <small>/month</small></span>
+</div>
 
-<p class="value-line">Monthly Google Maps Growth</p>
+<p class="offer-tag">Limited Launch Offer</p>
 
-<div class="price">₹2000<span>/month</span></div>
-
-<p class="price-note">≈ ₹33 per day</p>
-
-<p class="commitment">3-Month Plan</p>
+<p class="plan-note">3-Month Plan</p>
 
 <ul>
-<li>Ongoing GMB Optimization</li>
-<li>Google Maps Ranking Strategy</li>
-<li>Monthly SEO Posts</li>
-<li>Competitor Monitoring</li>
-<li>Performance Tracking</li>
+<li>✔ Ongoing GMB Optimization</li>
+<li>✔ Google Maps Ranking Strategy</li>
+<li>✔ Monthly SEO Posts</li>
+<li>✔ Competitor Monitoring</li>
+<li>✔ Performance Tracking</li>
 </ul>
 
-<button onclick="openForm('Growth Acceleration')" class="plan-btn">
-Discuss Plan
-</button>
+<a href="#contact" class="plan-btn">Discuss Plan</a>
 
 </div>
 
 
 
 <!-- PLAN 3 -->
-<div class="plan-card featured">
+<div class="pricing-card featured">
 
 <div class="recommended">Most Recommended</div>
 
 <h3>Complete Local Growth</h3>
+<p class="plan-desc">Best for businesses focused on long-term growth</p>
 
-<p class="best-for">Best for businesses focused on long-term growth</p>
+<p class="plan-type">Setup + Monthly Growth</p>
 
-<p class="plan-sub">Setup + Monthly Growth</p>
-
-<p class="value-line">Complete Local Visibility System</p>
-
-<div class="price">
-₹5000 <span>setup</span><br>
-₹2000 <span>/month</span>
+<div class="price-box">
+<span class="old-price">₹10000</span>
+<span class="new-price">₹5000 <small>setup</small></span>
 </div>
 
-<p class="price-note">≈ ₹33 per day growth</p>
+<div class="price-box">
+<span class="old-price">₹5000</span>
+<span class="new-price">₹2000 <small>/month</small></span>
+</div>
 
-<p class="commitment">3-Month Plan</p>
+<p class="offer-tag">Limited Launch Offer</p>
+
+<p class="plan-note">3-Month Plan</p>
 
 <ul>
-<li>Website + GBP Setup</li>
-<li>Full Optimization Foundation</li>
-<li>Monthly Ranking Growth</li>
-<li>Visibility & Lead Strategy</li>
-<li>Structured Growth Plan</li>
+<li>✔ Website + GBP Setup</li>
+<li>✔ Full Optimization Foundation</li>
+<li>✔ Monthly Ranking Growth</li>
+<li>✔ Visibility & Lead Strategy</li>
+<li>✔ Structured Growth Plan</li>
 </ul>
 
-<button onclick="openForm('Complete Local Growth')" class="plan-btn primary">
-Start Plan
-</button>
+<a href="#contact" class="plan-btn green">Start Plan</a>
 
 </div>
 
-</div>
-
-
-<!-- POPUP FORM -->
-<div id="popupForm" class="form-overlay">
-
-<div class="form-box">
-
-<h3>Start Your Plan</h3>
-
-<input id="clientName" type="text" placeholder="Your Name">
-
-<input id="businessName" type="text" placeholder="Business Name">
-
-<input id="location" type="text" placeholder="Business Location">
-
-<input id="gmbLink" type="text" placeholder="Google Business Profile Link (optional)">
-
-<input id="selectedPlan" type="hidden">
-
-<button onclick="sendToWhatsApp()" class="whatsapp-btn">
-Send on WhatsApp
-</button>
-
-<p class="cancel-btn" onclick="closeForm()">Cancel</p>
-
-</div>
 </div>
 
 </section>
@@ -1653,251 +1618,110 @@ Send on WhatsApp
 
 .pricing-section{
 padding:60px 20px;
-background:#f7f9fc;
-text-align:center;
-font-family:Arial;
+background:#f8f9ff;
 }
 
-.pricing-header h2{
-font-size:36px;
-margin-bottom:10px;
-}
-
-.pricing-header p{
-color:#666;
-margin-bottom:50px;
-}
-
-.pricing-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-max-width:1100px;
+.pricing-container{
+max-width:1200px;
 margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
-.plan-card{
+.pricing-card{
 background:white;
 padding:35px;
 border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-text-align:left;
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
 position:relative;
-transition:0.3s;
 }
 
-.plan-card:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 40px rgba(0,0,0,0.12);
-}
-
-.plan-card h3{
-font-size:22px;
-margin-bottom:5px;
-}
-
-.best-for{
-font-size:13px;
-color:#777;
-margin-bottom:8px;
-}
-
-.plan-sub{
-color:#4c63ff;
-font-weight:600;
-margin-bottom:10px;
-}
-
-.value-line{
-font-size:14px;
-color:#333;
-margin-bottom:15px;
-}
-
-.price{
-font-size:34px;
-font-weight:700;
-margin-bottom:5px;
-}
-
-.price span{
-font-size:14px;
-color:#777;
-}
-
-.price-note{
-font-size:13px;
-color:#888;
-margin-bottom:10px;
-}
-
-.commitment{
-font-size:13px;
-color:#4c63ff;
-font-weight:600;
-margin-bottom:20px;
-}
-
-.plan-card ul{
-padding-left:0;
-list-style:none;
-margin-bottom:30px;
-}
-
-.plan-card li{
-margin-bottom:10px;
-color:#444;
-position:relative;
-padding-left:20px;
-}
-
-.plan-card li:before{
-content:"✔";
-color:#4c63ff;
-position:absolute;
-left:0;
-}
-
-.plan-btn{
-width:100%;
-padding:14px;
-border:none;
-border-radius:8px;
-background:#4c63ff;
-color:white;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.plan-btn:hover{
-transform:scale(1.05);
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
-
-.plan-btn.primary{
-background:#1db954;
-}
-
-.plan-btn.primary:hover{
-background:#17a44c;
-}
-
-.plan-card.featured{
-border:2px solid #4c63ff;
-transform:scale(1.05);
+.pricing-card.featured{
+border:2px solid #4f6cff;
+transform:scale(1.03);
 }
 
 .recommended{
 position:absolute;
-top:-14px;
+top:-12px;
 left:50%;
 transform:translateX(-50%);
-background:#4c63ff;
+background:#4f6cff;
 color:white;
-padding:6px 14px;
-font-size:12px;
+padding:5px 14px;
 border-radius:20px;
+font-size:12px;
 }
 
-/* POPUP FORM */
-
-.form-overlay{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
-
-.form-box{
-background:white;
-padding:40px;
-border-radius:12px;
-width:90%;
-max-width:420px;
-text-align:center;
-border:1px solid #4c63ff;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
-}
-
-.form-box h3{
-margin-bottom:20px;
-}
-
-.form-box input{
-width:100%;
-padding:12px;
-margin-bottom:12px;
-border:1px solid #cfd7ff;
-border-radius:6px;
+.plan-desc{
+color:#777;
 font-size:14px;
+margin-bottom:15px;
 }
 
-.whatsapp-btn{
-width:100%;
-background:#25D366;
-border:none;
+.plan-type{
+color:#4f6cff;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.price-box{
+margin:10px 0;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#999;
+margin-right:10px;
+font-size:18px;
+}
+
+.new-price{
+font-size:32px;
+font-weight:700;
+color:#111;
+}
+
+.offer-tag{
+color:#e63946;
+font-size:13px;
+margin-bottom:15px;
+}
+
+.plan-note{
+font-size:14px;
+color:#555;
+margin-bottom:10px;
+}
+
+.pricing-card ul{
+padding-left:0;
+list-style:none;
+margin:20px 0;
+}
+
+.pricing-card ul li{
+margin:10px 0;
+color:#444;
+}
+
+.plan-btn{
+display:block;
+text-align:center;
+padding:12px;
+background:#4f6cff;
 color:white;
-padding:14px;
 border-radius:8px;
-font-size:16px;
-cursor:pointer;
+text-decoration:none;
+font-weight:600;
 }
 
-.whatsapp-btn:hover{
-background:#1fb957;
-}
-
-.cancel-btn{
-margin-top:12px;
-color:#666;
-cursor:pointer;
+.plan-btn.green{
+background:#22b455;
 }
 
 </style>
-
-
-
-<script>
-
-function openForm(plan){
-document.getElementById("popupForm").style.display="flex";
-document.getElementById("selectedPlan").value=plan;
-}
-
-function closeForm(){
-document.getElementById("popupForm").style.display="none";
-}
-
-function sendToWhatsApp(){
-
-var name=document.getElementById("clientName").value;
-var business=document.getElementById("businessName").value;
-var location=document.getElementById("location").value;
-var gmb=document.getElementById("gmbLink").value;
-var plan=document.getElementById("selectedPlan").value;
-
-var message=
-"New Client Inquiry%0A%0A"+
-"Name: "+name+"%0A"+
-"Business: "+business+"%0A"+
-"Location: "+location+"%0A"+
-"GMB Link: "+gmb+"%0A"+
-"Selected Plan: "+plan;
-
-var phone="919330629573";
-
-window.open("https://wa.me/"+phone+"?text="+message,"_blank");
-
-}
-
-</script>
 
 
 <!-- ================= WHY CHOOSE US SECTION ================= -->
