@@ -1510,447 +1510,125 @@ btn.textContent="Hide Features";
 
 
   
-<!-- GEO LIFT PRICING SECTION -->
-<section class="glplan-section">
+<!-- FREE AUDIT SECTION -->
+<section id="free-audit">
 
-<div class="glplan-wrapper">
+<div class="audit-container">
 
-<h2 class="glplan-title">Growth Plans</h2>
+<h2 class="audit-heading">Get Your Free Business Growth Audit</h2>
 
-<div class="glplan-grid">
+<p class="audit-subtext">
+Not sure why your business is not ranking on Google Maps or getting enough leads?  
+Request a quick audit and we will review your online presence and suggest clear improvements.
+</p>
 
+<div class="audit-card">
 
-<!-- PLAN 1 -->
-<div class="glplan-card">
+<form id="auditForm">
 
-<h3>Foundation Launch</h3>
-<p class="glplan-desc">Best for businesses starting online</p>
+<input type="text" id="name" placeholder="Your Name" required>
 
-<p class="glplan-type">One-Time Setup</p>
+<input type="text" id="business" placeholder="Business Name" required>
 
-<div class="glplan-price">
+<input type="text" id="location" placeholder="Business Location (City)" required>
 
-<div class="glplan-old">₹177 / Day</div>
+<input type="url" id="gbp" placeholder="Google Business Profile Link (Optional)">
 
-<div class="glplan-main">₹132<span>/Day</span></div>
+<textarea id="description" placeholder="Briefly describe your business or current problem..." rows="4"></textarea>
 
-<div class="glplan-discount">25% Off</div>
-
-</div>
-
-<ul>
-
-<li>Custom Business Website</li>
-<li>Google Business Profile Setup</li>
-<li>Local SEO Structure</li>
-<li>HTTPS & Indexing</li>
-<li>Basic Local Visibility</li>
-
-</ul>
-
-<button class="glplan-btn" onclick="openPlanForm('Foundation Launch')">
-Start Plan
+<button type="submit" class="audit-btn">
+Request Free Audit
 </button>
 
-</div>
-
-
-
-<!-- PLAN 2 -->
-<div class="glplan-card">
-
-<h3>Growth Acceleration</h3>
-<p class="glplan-desc">Improve Google Maps visibility</p>
-
-<p class="glplan-type">3-Month Growth Plan</p>
-
-<div class="glplan-price">
-
-<div class="glplan-old">₹66 / Day</div>
-
-<div class="glplan-main">₹55<span>/Day</span></div>
-
-<div class="glplan-discount">17% Off</div>
-
-</div>
-
-<p class="glplan-offer">Limited Time Offer</p>
-
-<ul>
-
-<li>GBP Optimization</li>
-<li>Google Maps Ranking Strategy</li>
-<li>Weekly Optimization</li>
-<li>Local Keyword Targeting</li>
-<li>Performance Monitoring</li>
-
-</ul>
-
-<button class="glplan-btn" onclick="openPlanForm('Growth Acceleration')">
-Start Plan
-</button>
-
-</div>
-
-
-
-<!-- PLAN 3 -->
-<div class="glplan-card glplan-featured">
-
-<div class="glplan-badge">Most Recommended</div>
-
-<h3>Complete Local Growth</h3>
-<p class="glplan-desc">Website + Maps Growth Package</p>
-
-<p class="glplan-type">3-Month Growth Plan</p>
-
-<div class="glplan-price">
-
-<div class="glplan-old">₹132 / Day</div>
-
-<div class="glplan-main">₹99<span>/Day</span></div>
-
-<div class="glplan-discount">25% Off</div>
-
-</div>
-
-<p class="glplan-offer">Limited Time Offer</p>
-
-<ul>
-
-<li>Website + GBP Setup</li>
-<li>Full Local SEO Foundation</li>
-<li>3 Months Optimization</li>
-<li>Maps Visibility Strategy</li>
-<li>Performance Tracking</li>
-
-</ul>
-
-<button class="glplan-btn" onclick="openPlanForm('Complete Local Growth')">
-Start Plan
-</button>
-
-</div>
+</form>
 
 </div>
 </div>
-
 </section>
-
-
-
-<!-- POPUP FORM -->
-
-<div id="glplanFormPopup" class="glplan-popup">
-
-<div class="glplan-form-box">
-
-<span class="glplan-close" onclick="closePlanForm()">×</span>
-
-<h3>Start Your Growth Plan</h3>
-
-<input type="text" id="glplan-name" placeholder="Your Name">
-
-<input type="text" id="glplan-business" placeholder="Business Name">
-
-<input type="text" id="glplan-location" placeholder="Business Location / City">
-
-<input type="text" id="glplan-phone" placeholder="Phone / WhatsApp Number">
-
-<textarea id="glplan-details" placeholder="Tell us about your business (optional)"></textarea>
-
-<button onclick="sendPlanWhatsapp()">Submit & Continue</button>
-
-</div>
-
-</div>
-
 
 
 <style>
 
-/* SECTION */
-
-.glplan-section{
+#free-audit{
+background:#f6f8fc;
 padding:90px 20px;
-background:linear-gradient(180deg,#f2f6ff,#e9efff);
+text-align:center;
 }
 
-.glplan-wrapper{
-max-width:1200px;
+.audit-container{
+max-width:700px;
 margin:auto;
 }
 
-.glplan-title{
-text-align:center;
-font-size:40px;
-font-weight:700;
-margin-bottom:55px;
-color:#0f172a;
-}
-
-/* GRID */
-
-.glplan-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:35px;
-}
-
-/* CARD */
-
-.glplan-card{
-
-background:linear-gradient(180deg,#ffffff,#f7f9ff);
-
-padding:30px;
-
-border-radius:14px;
-
-border:1px solid #e4e8ff;
-
-box-shadow:0 10px 28px rgba(0,0,0,0.04);
-
-position:relative;
-
-transition:0.3s;
-}
-
-.glplan-card:hover{
-transform:translateY(-6px);
-}
-
-/* FEATURED */
-
-.glplan-featured{
-border:2px solid #4f6cff;
-}
-
-.glplan-badge{
-
-position:absolute;
-
-top:-12px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-background:#4f6cff;
-
-color:white;
-
-padding:6px 14px;
-
-border-radius:20px;
-
-font-size:12px;
-
-}
-
-/* TEXT */
-
-.glplan-card h3{
-font-size:20px;
-margin-bottom:6px;
-}
-
-.glplan-desc{
-font-size:14px;
-color:#666;
-margin-bottom:6px;
-}
-
-.glplan-type{
-font-size:14px;
-color:#4f6cff;
-font-weight:600;
-margin-bottom:10px;
-}
-
-/* PRICE */
-
-.glplan-old{
-text-decoration:line-through;
-color:#999;
-font-size:14px;
-}
-
-.glplan-main{
-font-size:36px;
-font-weight:700;
-margin-top:3px;
-}
-
-.glplan-main span{
-font-size:16px;
-}
-
-.glplan-discount{
-color:#16a34a;
-font-weight:600;
-font-size:13px;
-}
-
-.glplan-offer{
-color:#ef4444;
-font-size:13px;
-font-weight:600;
-margin-top:6px;
-}
-
-/* LIST */
-
-.glplan-card ul{
-list-style:none;
-padding:0;
-margin:18px 0;
-}
-
-.glplan-card li{
-margin:8px 0;
-font-size:14px;
-}
-
-.glplan-card li:before{
-content:"✔";
-color:#2563eb;
-margin-right:7px;
-}
-
-/* BUTTON */
-
-.glplan-btn{
-
-width:80%;
-
-margin:auto;
-
-display:block;
-
-padding:11px;
-
-background:#4f6cff;
-
-color:white;
-
-border:none;
-
-border-radius:8px;
-
-font-weight:600;
-
-cursor:pointer;
-
-transition:0.3s;
-
-}
-
-.glplan-btn:hover{
-transform:scale(1.05);
-}
-
-/* POPUP */
-
-.glplan-popup{
-
-display:none;
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,0.45);
-
-z-index:9999;
-
-}
-
-.glplan-form-box{
-
-background:white;
-
-width:420px;
-
-max-width:90%;
-
-margin:8% auto;
-
-padding:30px;
-
-border-radius:12px;
-
-}
-
-.glplan-form-box h3{
-
-text-align:center;
-
-margin-bottom:20px;
-
-}
-
-.glplan-form-box input,
-.glplan-form-box textarea{
-
-width:100%;
-
-padding:10px;
-
-margin-bottom:12px;
-
-border:1px solid #ddd;
-
-border-radius:6px;
-
-}
-
-.glplan-form-box button{
-
-width:100%;
-
-padding:12px;
-
-background:#4f6cff;
-
-color:white;
-
-border:none;
-
-border-radius:6px;
-
-font-weight:600;
-
-cursor:pointer;
-
-}
-
-.glplan-close{
-
-float:right;
-
-font-size:22px;
-
-cursor:pointer;
-
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.glplan-grid{
-grid-template-columns:1fr;
-}
-
-.glplan-title{
+.audit-heading{
 font-size:32px;
+margin-bottom:12px;
+font-weight:700;
+color:#111;
+}
+
+.audit-subtext{
+font-size:16px;
+color:#555;
+margin-bottom:40px;
+line-height:1.6;
+}
+
+.audit-card{
+background:#ffffff;
+padding:40px;
+border-radius:10px;
+border:1px solid #e3e8f0;
+box-shadow:0 4px 15px rgba(0,0,0,0.03);
+}
+
+#auditForm{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+#auditForm input,
+#auditForm textarea{
+width:100%;
+padding:14px;
+border:1px solid #d8dee8;
+border-radius:6px;
+font-size:14px;
+outline:none;
+transition:0.2s;
+}
+
+#auditForm input:focus,
+#auditForm textarea:focus{
+border-color:#2b6df3;
+}
+
+.audit-btn{
+background:#2b6df3;
+color:white;
+border:none;
+padding:14px;
+font-size:15px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+margin-top:10px;
+transition:0.2s;
+}
+
+.audit-btn:hover{
+background:#1d56c9;
+}
+
+@media(max-width:768px){
+
+.audit-heading{
+font-size:26px;
+}
+
+.audit-card{
+padding:28px;
 }
 
 }
@@ -1958,49 +1636,29 @@ font-size:32px;
 </style>
 
 
-
 <script>
 
-let selectedPlan="";
+document.getElementById("auditForm").addEventListener("submit", function(e){
 
-function openPlanForm(plan){
+e.preventDefault();
 
-selectedPlan=plan;
+var name = document.getElementById("name").value;
+var business = document.getElementById("business").value;
+var location = document.getElementById("location").value;
+var gbp = document.getElementById("gbp").value;
+var description = document.getElementById("description").value;
 
-document.getElementById("glplanFormPopup").style.display="block";
+var message =
+"Free Audit Request:%0A%0A" +
+"Name: " + name + "%0A" +
+"Business: " + business + "%0A" +
+"Location: " + location + "%0A" +
+"GBP Link: " + gbp + "%0A" +
+"Description: " + description;
 
-}
+window.open("https://wa.me/YOURNUMBER?text=" + message, "_blank");
 
-function closePlanForm(){
-
-document.getElementById("glplanFormPopup").style.display="none";
-
-}
-
-function sendPlanWhatsapp(){
-
-let name=document.getElementById("glplan-name").value;
-
-let business=document.getElementById("glplan-business").value;
-
-let location=document.getElementById("glplan-location").value;
-
-let phone=document.getElementById("glplan-phone").value;
-
-let details=document.getElementById("glplan-details").value;
-
-let message=
-"New Plan Inquiry%0A%0A"+
-"Plan: "+selectedPlan+"%0A"+
-"Name: "+name+"%0A"+
-"Business: "+business+"%0A"+
-"Location: "+location+"%0A"+
-"Phone: "+phone+"%0A"+
-"Details: "+details;
-
-window.open("https://wa.me/919330629573?text="+message,"_blank");
-
-}
+});
 
 </script>
 
