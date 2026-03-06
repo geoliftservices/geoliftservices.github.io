@@ -1515,7 +1515,7 @@ btn.textContent="Hide Features";
 
 <div class="glp-wrapper">
 
-<h2 class="glp-title">Plans</h2>
+<h2 class="glp-title">Growth Plans</h2>
 
 <div class="glp-grid">
 
@@ -1549,7 +1549,7 @@ btn.textContent="Hide Features";
 
 </ul>
 
-<button class="glp-btn openAudit">Start Plan</button>
+<button class="glp-btn openAudit" data-plan="Foundation Launch">Start Plan</button>
 
 </div>
 
@@ -1587,7 +1587,7 @@ btn.textContent="Hide Features";
 
 </ul>
 
-<button class="glp-btn openAudit">Start Plan</button>
+<button class="glp-btn openAudit" data-plan="Growth Acceleration">Start Plan</button>
 
 </div>
 
@@ -1627,7 +1627,7 @@ btn.textContent="Hide Features";
 
 </ul>
 
-<button class="glp-btn glp-btn-featured openAudit">Start Plan</button>
+<button class="glp-btn glp-btn-featured openAudit" data-plan="Complete Local Growth">Start Plan</button>
 
 </div>
 
@@ -1648,10 +1648,10 @@ btn.textContent="Hide Features";
 
 <span class="audit-close">&times;</span>
 
-<h3>Request Your Free Business Audit</h3>
+<h3>Start Your Business Growth Plan</h3>
 
 <p class="audit-sub">
-Fill the details below and we will review your online presence and suggest improvements.
+Fill the details below and we will contact you to start your selected growth plan.
 </p>
 
 <form id="auditForm">
@@ -1664,9 +1664,9 @@ Fill the details below and we will review your online presence and suggest impro
 
 <input type="url" id="gbp" placeholder="Google Business Profile Link (Optional)">
 
-<textarea id="description" rows="4" placeholder="Briefly describe your business or problem"></textarea>
+<textarea id="description" rows="4" placeholder="Briefly describe your business or goals"></textarea>
 
-<button type="submit" class="audit-submit">Request Audit</button>
+<button type="submit" class="audit-submit">Send Details</button>
 
 </form>
 
@@ -1693,10 +1693,12 @@ margin:auto;
 
 .glp-title{
 text-align:center;
-font-size:34px;
+font-size:38px;
 font-weight:700;
 margin-bottom:50px;
 }
+
+/* GRID */
 
 .glp-grid{
 display:grid;
@@ -1713,11 +1715,14 @@ border-radius:14px;
 box-shadow:0 10px 28px rgba(0,0,0,0.06);
 transition:0.3s;
 position:relative;
+border:1px solid #e6eaf5;
 }
 
 .glp-card:hover{
 transform:translateY(-6px);
 }
+
+/* FEATURED */
 
 .glp-featured{
 border:2px solid #4f6cff;
@@ -1737,6 +1742,8 @@ border-radius:30px;
 font-weight:600;
 }
 
+/* TEXT */
+
 .glp-desc{
 color:#666;
 font-size:14px;
@@ -1748,6 +1755,8 @@ font-weight:600;
 font-size:14px;
 margin-bottom:10px;
 }
+
+/* PRICE */
 
 .glp-old{
 text-decoration:line-through;
@@ -1770,6 +1779,8 @@ font-size:13px;
 font-weight:600;
 }
 
+/* OFFER BADGE */
+
 .glp-offer{
 display:inline-block;
 background:#fee2e2;
@@ -1779,8 +1790,9 @@ font-weight:700;
 padding:6px 12px;
 border-radius:20px;
 margin-top:8px;
-letter-spacing:0.4px;
 }
+
+/* FEATURES */
 
 .glp-features{
 list-style:none;
@@ -1798,6 +1810,8 @@ content:"✔";
 color:#3b82f6;
 margin-right:6px;
 }
+
+/* BUTTON */
 
 .glp-btn{
 display:block;
@@ -1885,14 +1899,10 @@ font-weight:600;
 cursor:pointer;
 }
 
-/* MOBILE */
-
 @media(max-width:900px){
-
 .glp-grid{
 grid-template-columns:1fr;
 }
-
 }
 
 </style>
@@ -1901,11 +1911,17 @@ grid-template-columns:1fr;
 
 <script>
 
-/* OPEN POPUP */
+var selectedPlan="";
+
+/* OPEN POPUP + CAPTURE PLAN */
 
 document.querySelectorAll(".openAudit").forEach(btn=>{
 btn.onclick=function(){
+
+selectedPlan=this.getAttribute("data-plan");
+
 document.getElementById("auditPopup").style.display="flex";
+
 }
 });
 
@@ -1919,7 +1935,6 @@ document.querySelector(".audit-overlay").onclick=function(){
 document.getElementById("auditPopup").style.display="none";
 }
 
-
 /* FORM SUBMIT */
 
 document.getElementById("auditForm").addEventListener("submit",function(e){
@@ -1932,7 +1947,8 @@ var location=document.getElementById("location").value;
 var gbp=document.getElementById("gbp").value;
 var description=document.getElementById("description").value;
 
-var message="Free Audit Request:%0A%0A"+
+var message="Hi GeoLift, I want to take your service.%0A%0A"+
+"Selected Plan: "+selectedPlan+"%0A"+
 "Name: "+name+"%0A"+
 "Business: "+business+"%0A"+
 "Location: "+location+"%0A"+
