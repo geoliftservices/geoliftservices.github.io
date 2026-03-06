@@ -3505,6 +3505,185 @@ popup.style.display="none";
 
 </script>
 
+  <!-- ===== PLAN POPUP FORM ===== -->
+
+<style>
+
+.plan-popup-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(15,23,42,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999999;
+padding:20px;
+}
+
+.plan-popup{
+background:#ffffff;
+width:100%;
+max-width:420px;
+border-radius:14px;
+padding:32px;
+box-shadow:0 30px 80px rgba(0,0,0,0.25);
+font-family:Poppins,sans-serif;
+position:relative;
+}
+
+.plan-close{
+position:absolute;
+top:12px;
+right:16px;
+font-size:22px;
+cursor:pointer;
+color:#64748b;
+}
+
+.plan-popup h3{
+margin-bottom:18px;
+font-size:22px;
+font-weight:700;
+color:#0f172a;
+}
+
+.plan-popup input,
+.plan-popup textarea{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #e5e7eb;
+border-radius:6px;
+font-family:Poppins;
+font-size:14px;
+}
+
+.plan-popup textarea{
+min-height:80px;
+resize:none;
+}
+
+.plan-popup button{
+width:100%;
+padding:14px;
+background:#6366f1;
+border:none;
+color:#fff;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+}
+
+.plan-popup button:hover{
+background:#4f46e5;
+}
+
+</style>
+
+
+
+<div class="plan-popup-overlay" id="planPopup">
+
+<div class="plan-popup">
+
+<div class="plan-close">&times;</div>
+
+<h3>Start Your Growth Plan</h3>
+
+<form id="planForm">
+
+<input type="text" id="pName" placeholder="Your Name" required>
+
+<input type="text" id="pBusiness" placeholder="Business Name" required>
+
+<input type="text" id="pLocation" placeholder="City / Location">
+
+<input type="text" id="pGBP" placeholder="Google Business Profile Link">
+
+<textarea id="pDetails" placeholder="Tell us about your business"></textarea>
+
+<button type="submit">Send Request</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded",function(){
+
+let selectedPlan="";
+
+document.querySelectorAll(".openAudit").forEach(function(btn){
+
+btn.addEventListener("click",function(){
+
+selectedPlan=this.getAttribute("data-plan") || "Plan";
+
+document.getElementById("planPopup").style.display="flex";
+
+});
+
+});
+
+
+/* CLOSE BUTTON */
+
+document.querySelector(".plan-close").addEventListener("click",function(){
+
+document.getElementById("planPopup").style.display="none";
+
+});
+
+
+/* CLOSE OUTSIDE */
+
+document.getElementById("planPopup").addEventListener("click",function(e){
+
+if(e.target.id==="planPopup"){
+
+this.style.display="none";
+
+}
+
+});
+
+
+/* FORM SUBMIT */
+
+document.getElementById("planForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("pName").value;
+let business=document.getElementById("pBusiness").value;
+let location=document.getElementById("pLocation").value;
+let gbp=document.getElementById("pGBP").value;
+let details=document.getElementById("pDetails").value;
+
+let message =
+"Hi GeoLift,%0A%0A"+
+"Plan: "+selectedPlan+"%0A"+
+"Name: "+name+"%0A"+
+"Business: "+business+"%0A"+
+"Location: "+location+"%0A"+
+"GBP: "+gbp+"%0A"+
+"Details: "+details;
+
+window.open("https://wa.me/919330629573?text="+message,"_blank");
+
+});
+
+});
+
+</script>
   
 </body>
 </html>
