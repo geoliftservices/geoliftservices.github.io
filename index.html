@@ -3484,8 +3484,34 @@ Discover why your business is not ranking on Google Maps.
 </div>
 
 
+<!-- FREE AUDIT FLOATING BUTTON -->
+<button id="auditBtn">🔎 Free Audit</button>
+
 <style>
 
+/* FLOATING BUTTON */
+#auditBtn{
+position:fixed;
+right:95px;
+bottom:95px;
+background:linear-gradient(135deg,#4f6df5,#2f4bd8);
+color:#fff;
+border:none;
+padding:12px 20px;
+border-radius:30px;
+font-weight:600;
+font-size:14px;
+cursor:pointer;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
+z-index:9990;
+transition:0.3s;
+}
+
+#auditBtn:hover{
+transform:translateY(-3px);
+}
+
+/* POPUP OVERLAY */
 #auditPopup{
 display:none;
 position:fixed;
@@ -3499,6 +3525,7 @@ align-items:center;
 justify-content:center;
 }
 
+/* POPUP BOX */
 .audit-box{
 background:#fff;
 padding:35px;
@@ -3506,20 +3533,23 @@ width:420px;
 border-radius:12px;
 text-align:center;
 border:2px solid #4f6df5;
-box-shadow:0 10px 40px rgba(0,0,0,0.25);
+box-shadow:0 12px 40px rgba(0,0,0,0.25);
 }
 
+/* TITLE */
 .audit-box h2{
 margin-bottom:8px;
 font-size:24px;
 }
 
+/* SUBTEXT */
 .audit-sub{
 font-size:14px;
 color:#666;
 margin-bottom:20px;
 }
 
+/* BENEFITS */
 .audit-benefits{
 text-align:left;
 margin-bottom:20px;
@@ -3531,6 +3561,7 @@ color:#333;
 margin:6px 0;
 }
 
+/* INPUT FIELDS */
 .audit-box input{
 width:100%;
 padding:12px;
@@ -3540,6 +3571,7 @@ border-radius:6px;
 font-size:14px;
 }
 
+/* CTA BUTTON */
 .audit-submit{
 width:100%;
 padding:14px;
@@ -3547,22 +3579,27 @@ margin-top:10px;
 background:linear-gradient(135deg,#4f6df5,#2f4bd8);
 color:#fff;
 border:none;
-border-radius:6px;
+border-radius:8px;
 font-size:16px;
 font-weight:600;
 cursor:pointer;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+transition:0.3s;
 }
 
 .audit-submit:hover{
-opacity:0.9;
+transform:translateY(-2px);
+box-shadow:0 10px 22px rgba(0,0,0,0.2);
 }
 
+/* NOTE */
 .audit-note{
 font-size:12px;
 color:#777;
 margin-top:10px;
 }
 
+/* CANCEL */
 .audit-close{
 display:block;
 margin-top:12px;
@@ -3573,16 +3610,52 @@ cursor:pointer;
 </style>
 
 
+<!-- POPUP HTML -->
+<div id="auditPopup">
+
+<div class="audit-box">
+
+<h2>Discover Why You're Not Ranking on Google Maps</h2>
+
+<p class="audit-sub">
+Free Local SEO Audit for your Google Business Profile
+</p>
+
+<div class="audit-benefits">
+<p>✓ Google Business Profile Check</p>
+<p>✓ Local Ranking Analysis</p>
+<p>✓ Competitor Insights</p>
+</div>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="business" placeholder="Business Name">
+<input type="text" id="location" placeholder="Business Location">
+<input type="text" id="gbp" placeholder="Google Business Profile Link (optional)">
+
+<button class="audit-submit" onclick="sendAudit()">Get Free Audit</button>
+
+<p class="audit-note">Free • No obligation • Takes 60 seconds</p>
+
+<span class="audit-close" onclick="closeAudit()">Cancel</span>
+
+</div>
+
+</div>
+
+
 <script>
 
+/* OPEN POPUP */
 document.getElementById("auditBtn").onclick=function(){
 document.getElementById("auditPopup").style.display="flex";
 }
 
+/* CLOSE POPUP */
 function closeAudit(){
 document.getElementById("auditPopup").style.display="none";
 }
 
+/* SEND TO WHATSAPP */
 function sendAudit(){
 
 var name=document.getElementById("name").value;
@@ -3599,6 +3672,11 @@ var message="Free Audit Request:%0A"+
 window.open("https://wa.me/919330629573?text="+message);
 
 }
+
+/* AUTO POPUP AFTER 15 SECONDS */
+setTimeout(function(){
+document.getElementById("auditPopup").style.display="flex";
+},15000);
 
 </script>
   
