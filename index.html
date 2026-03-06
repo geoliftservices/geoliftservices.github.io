@@ -3270,31 +3270,150 @@ Get Free Audit
 </div>
 
 
-<!-- FREE AUDIT FLOATING BUTTON -->
+<!-- ===== FREE AUDIT FLOATING BUTTON + POPUP ===== -->
 
-<div class="audit-float-btn" onclick="openAuditModal()">
-🔍 Free Audit
+<style>
+
+.audit-floating{
+position:fixed;
+right:20px;
+bottom:140px;
+background:linear-gradient(135deg,#5a6bff,#3b4bdb);
+color:#fff;
+padding:12px 18px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+display:flex;
+align-items:center;
+gap:8px;
+z-index:9999;
+transition:0.3s;
+}
+
+.audit-floating:hover{
+transform:translateY(-3px);
+}
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+.audit-box{
+background:#fff;
+width:380px;
+padding:34px 34px 28px;
+border-radius:12px;
+box-shadow:0 30px 70px rgba(0,0,0,0.2);
+position:relative;
+font-family:system-ui;
+}
+
+.audit-close{
+position:absolute;
+top:14px;
+right:16px;
+font-size:20px;
+cursor:pointer;
+color:#999;
+}
+
+.audit-box h3{
+font-size:22px;
+margin-bottom:10px;
+color:#1d2433;
+text-align:center;
+}
+
+.audit-sub{
+text-align:center;
+font-size:14px;
+color:#6b7280;
+margin-bottom:18px;
+}
+
+.audit-features{
+font-size:14px;
+color:#374151;
+margin-bottom:20px;
+padding-left:16px;
+}
+
+.audit-features li{
+margin-bottom:6px;
+}
+
+.audit-box input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border-radius:8px;
+border:1px solid #e4e6eb;
+font-size:14px;
+}
+
+.audit-box input:focus{
+outline:none;
+border-color:#5a6bff;
+}
+
+.audit-btn{
+width:100%;
+background:linear-gradient(135deg,#5a6bff,#3b4bdb);
+border:none;
+padding:13px;
+border-radius:8px;
+color:#fff;
+font-weight:600;
+cursor:pointer;
+font-size:15px;
+margin-top:5px;
+}
+
+.audit-note{
+text-align:center;
+font-size:12px;
+color:#888;
+margin-top:10px;
+}
+
+</style>
+
+
+<!-- Floating Button -->
+<div class="audit-floating" onclick="openAudit()">
+🔎 Free Audit
 </div>
 
 
-<!-- AUDIT POPUP -->
+<!-- Popup -->
+<div class="audit-popup" id="auditPopup">
 
-<div id="auditModal" class="audit-overlay">
+<div class="audit-box">
 
-<div class="audit-modal">
-
-<span class="audit-close" onclick="closeAuditModal()">×</span>
+<div class="audit-close" onclick="closeAudit()">×</div>
 
 <h3>Free Local SEO Audit</h3>
 
-<p class="audit-sub">
+<div class="audit-sub">
 Discover why your business is not ranking on Google Maps.
-</p>
+</div>
 
-<ul class="audit-list">
-<li>✓ Google Business Profile Check</li>
-<li>✓ Local Ranking Analysis</li>
-<li>✓ Competitor Insights</li>
+<ul class="audit-features">
+<li>✔ Google Business Profile Check</li>
+<li>✔ Local Ranking Analysis</li>
+<li>✔ Competitor Insights</li>
 </ul>
 
 <form>
@@ -3307,258 +3426,34 @@ Discover why your business is not ranking on Google Maps.
 
 <input type="text" placeholder="Google Business Profile Link (optional)">
 
-<button type="submit">Get Free Audit</button>
+<button class="audit-btn">
+Get Free Audit
+</button>
 
 </form>
 
-<p class="audit-note">
+<div class="audit-note">
 Free • No obligation • Takes 60 seconds
-</p>
-
 </div>
 
 </div>
 
-
-<style>
-
-/* FLOATING BUTTON */
-
-.audit-float-btn{
-
-position:fixed;
-right:20px;
-bottom:130px;
-
-background:linear-gradient(135deg,#5b6cff,#3c4fe0);
-
-color:#fff;
-
-padding:12px 18px;
-
-border-radius:30px;
-
-font-size:14px;
-
-font-weight:600;
-
-cursor:pointer;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-
-z-index:9999;
-
-transition:0.3s;
-
-}
-
-.audit-float-btn:hover{
-
-transform:translateY(-2px);
-
-}
-
-
-
-/* POPUP OVERLAY */
-
-.audit-overlay{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-background:rgba(0,0,0,0.6);
-
-display:none;
-
-align-items:center;
-
-justify-content:center;
-
-z-index:99999;
-
-}
-
-
-
-/* POPUP BOX */
-
-.audit-modal{
-
-background:#fff;
-
-width:360px;
-
-padding:32px;
-
-border-radius:12px;
-
-box-shadow:0 20px 60px rgba(0,0,0,0.25);
-
-text-align:center;
-
-position:relative;
-
-font-family:Arial;
-
-}
-
-
-
-/* CLOSE BUTTON */
-
-.audit-close{
-
-position:absolute;
-
-top:12px;
-
-right:15px;
-
-font-size:22px;
-
-cursor:pointer;
-
-color:#777;
-
-}
-
-
-
-/* TITLE */
-
-.audit-modal h3{
-
-margin-bottom:8px;
-
-font-size:22px;
-
-}
-
-
-
-/* SUBTEXT */
-
-.audit-sub{
-
-font-size:14px;
-
-color:#666;
-
-margin-bottom:16px;
-
-}
-
-
-
-/* FEATURE LIST */
-
-.audit-list{
-
-text-align:left;
-
-font-size:14px;
-
-color:#333;
-
-margin-bottom:18px;
-
-}
-
-.audit-list li{
-
-margin-bottom:6px;
-
-}
-
-
-
-/* FORM */
-
-.audit-modal form input{
-
-width:100%;
-
-padding:10px;
-
-margin-bottom:10px;
-
-border-radius:6px;
-
-border:1px solid #ddd;
-
-font-size:14px;
-
-}
-
-
-
-/* BUTTON */
-
-.audit-modal button{
-
-width:100%;
-
-padding:12px;
-
-border:none;
-
-border-radius:6px;
-
-background:linear-gradient(135deg,#5b6cff,#3c4fe0);
-
-color:#fff;
-
-font-size:15px;
-
-font-weight:600;
-
-cursor:pointer;
-
-margin-top:5px;
-
-}
-
-
-
-/* NOTE */
-
-.audit-note{
-
-font-size:12px;
-
-color:#888;
-
-margin-top:12px;
-
-}
-
-</style>
-
+</div>
 
 
 <script>
 
-function openAuditModal(){
-
-document.getElementById("auditModal").style.display="flex";
-
+function openAudit(){
+document.getElementById("auditPopup").style.display="flex";
 }
 
-function closeAuditModal(){
-
-document.getElementById("auditModal").style.display="none";
-
+function closeAudit(){
+document.getElementById("auditPopup").style.display="none";
 }
 
 </script>
+
+<!-- ===== END AUDIT POPUP ===== -->
   
 </body>
 </html>
