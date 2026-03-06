@@ -1510,239 +1510,452 @@ btn.textContent="Hide Features";
 
 
   
-<!-- PLANS SECTION -->
-<section id="plans" class="plans-section">
+<!-- GEO LIFT PRICING SECTION -->
+<section class="glp-section">
 
-<h2 class="plans-title">Plans</h2>
+<div class="glp-wrapper">
 
-<div class="plans-container">
+<h2 class="glp-title">Growth Plans</h2>
+
+<div class="glp-grid">
 
 <!-- PLAN 1 -->
-<div class="plan-card">
+<div class="glp-card">
 
-<h3>Starter Visibility Plan</h3>
+<h3>Foundation Launch</h3>
+<p class="glp-desc">Best for businesses starting online</p>
 
-<div class="price">
-<span class="day">₹99/Day</span>
-<div class="discount">25% Off</div>
+<p class="glp-type">One-Time Setup</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹17 / Day</div>
+
+<div class="glp-price">
+₹13<span>/Day</span>
 </div>
 
-<ul>
-<li>✔ Google Business Profile Optimization</li>
-<li>✔ 5 High Authority Citations</li>
-<li>✔ Basic Keyword Targeting</li>
-<li>✔ Monthly Performance Report</li>
+<div class="glp-discount">25% Off</div>
+
+</div>
+
+<ul class="glp-features">
+
+<li>Custom Business Website</li>
+<li>Google Business Profile Setup</li>
+<li>Local SEO Structure</li>
+<li>HTTPS & Indexing</li>
+<li>Basic Local Visibility</li>
+
 </ul>
 
-<button class="start-plan-btn" data-plan="Starter Visibility Plan">
-Start Plan
-</button>
+<button class="glp-btn openAudit" data-plan="Foundation Launch">Start Plan</button>
 
 </div>
+
 
 
 <!-- PLAN 2 -->
-<div class="plan-card recommended">
+<div class="glp-card">
 
-<div class="recommended-badge">
-Most Recommended
+<h3>Growth Acceleration</h3>
+<p class="glp-desc">Improve Google Maps visibility</p>
+
+<p class="glp-type">3-Month Growth Plan</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹66 / Day</div>
+
+<div class="glp-price">
+₹55<span>/Day</span>
 </div>
 
-<h3>3-Month Growth Plan</h3>
+<div class="glp-discount">17% Off</div>
 
-<div class="price">
-<span class="day">₹149/Day</span>
-<div class="discount">30% Off</div>
 </div>
 
-<ul>
-<li>✔ Full Google Business Optimization</li>
-<li>✔ 20 High Authority Citations</li>
-<li>✔ Google Maps Ranking Strategy</li>
-<li>✔ Competitor Analysis</li>
-<li>✔ Monthly Ranking Reports</li>
+<p class="glp-offer">Limited Time Offer</p>
+
+<ul class="glp-features">
+
+<li>GBP Optimization</li>
+<li>Google Maps Ranking Strategy</li>
+<li>Weekly Optimization Actions</li>
+<li>Local Keyword Targeting</li>
+<li>Performance Monitoring</li>
+
 </ul>
 
-<button class="start-plan-btn" data-plan="3-Month Growth Plan">
-Start Plan
-</button>
+<button class="glp-btn openAudit" data-plan="Growth Acceleration">Start Plan</button>
 
 </div>
+
 
 
 <!-- PLAN 3 -->
-<div class="plan-card">
+<div class="glp-card glp-featured">
 
-<h3>Authority Domination Plan</h3>
+<div class="glp-badge">Most Recommended</div>
 
-<div class="price">
-<span class="day">₹199/Day</span>
-<div class="discount">35% Off</div>
+<h3>Complete Local Growth</h3>
+<p class="glp-desc">Website + Maps Growth Package</p>
+
+<p class="glp-type">3-Month Growth Plan</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹132 / Day</div>
+
+<div class="glp-price">
+₹99<span>/Day</span>
 </div>
 
-<ul>
-<li>✔ Complete Google Maps Ranking System</li>
-<li>✔ 50+ Authority Citations</li>
-<li>✔ Competitor Domination Strategy</li>
-<li>✔ Reputation & Review Growth</li>
-<li>✔ Weekly Performance Tracking</li>
+<div class="glp-discount">25% Off</div>
+
+</div>
+
+<p class="glp-offer">Limited Time Offer</p>
+
+<ul class="glp-features">
+
+<li>Website + GBP Setup</li>
+<li>Full Local SEO Foundation</li>
+<li>3 Months Growth Optimization</li>
+<li>Maps Visibility Strategy</li>
+<li>Performance Tracking</li>
+
 </ul>
 
-<button class="start-plan-btn" data-plan="Authority Domination Plan">
-Start Plan
-</button>
+<button class="glp-btn glp-btn-featured openAudit" data-plan="Complete Local Growth">Start Plan</button>
 
 </div>
 
 </div>
+</div>
+
 </section>
+
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-overlay"></div>
+
+<div class="audit-modal">
+
+<span class="audit-close">&times;</span>
+
+<h3>Start Your Business Growth Plan</h3>
+
+<p class="audit-sub">
+Fill the details below and we will contact you to start your selected growth plan.
+</p>
+
+<form id="auditForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="business" placeholder="Business Name" required>
+
+<input type="text" id="location" placeholder="Business Location" required>
+
+<input type="url" id="gbp" placeholder="Google Business Profile Link (Optional)">
+
+<textarea id="description" rows="4" placeholder="Briefly describe your business or goals"></textarea>
+
+<button type="submit" class="audit-submit">Send Details</button>
+
+</form>
+
+</div>
+
+</div>
+
 
 
 <style>
 
 /* SECTION */
 
-.plans-section{
+.glp-section{
 padding:70px 20px;
-background:#f8fbff;
+background:linear-gradient(180deg,#f6f8ff,#eef2ff);
+font-family:system-ui;
+}
+
+.glp-wrapper{
+max-width:1200px;
+margin:auto;
+}
+
+.glp-title{
 text-align:center;
-}
-
-.plans-title{
-font-size:34px;
-margin-bottom:40px;
+font-size:38px;
 font-weight:700;
+margin-bottom:50px;
 }
 
+/* GRID */
 
-/* CONTAINER */
-
-.plans-container{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
+.glp-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
 }
 
+/* CARD */
 
-/* PLAN CARD */
-
-.plan-card{
+.glp-card{
 background:#ffffff;
-padding:35px 28px;
-width:280px;
-border-radius:12px;
-box-shadow:0 6px 18px rgba(0,0,0,0.05);
+padding:28px 24px;
+border-radius:14px;
+box-shadow:0 10px 28px rgba(0,0,0,0.06);
+transition:0.3s;
 position:relative;
-transition:all .35s ease;
+border:1px solid #e6eaf5;
 }
 
-/* hover lift */
-
-.plan-card:hover{
-transform:translateY(-8px);
-box-shadow:0 12px 28px rgba(0,0,0,0.08);
+.glp-card:hover{
+transform:translateY(-6px);
 }
 
+/* FEATURED */
 
-/* RECOMMENDED */
-
-.recommended{
-border:2px solid #0a66ff;
+.glp-featured{
+border:2px solid #4f6cff;
+background:#f9faff;
 }
 
-.recommended-badge{
+.glp-badge{
 position:absolute;
 top:-12px;
 left:50%;
 transform:translateX(-50%);
-background:#0a66ff;
-color:#fff;
-padding:5px 12px;
+background:#4f6cff;
+color:white;
 font-size:12px;
-border-radius:20px;
+padding:6px 16px;
+border-radius:30px;
+font-weight:600;
 }
 
+/* TEXT */
+
+.glp-desc{
+color:#666;
+font-size:14px;
+}
+
+.glp-type{
+color:#4f6cff;
+font-weight:600;
+font-size:14px;
+margin-bottom:10px;
+}
 
 /* PRICE */
 
-.price{
-margin:18px 0;
-}
-
-.day{
-font-size:32px;
-font-weight:700;
-color:#0a66ff;
-}
-
-.discount{
+.glp-old{
+text-decoration:line-through;
+color:#999;
 font-size:14px;
-color:#2f855a;
-margin-top:4px;
 }
 
+.glp-price{
+font-size:36px;
+font-weight:700;
+}
+
+.glp-price span{
+font-size:16px;
+}
+
+.glp-discount{
+color:#16a34a;
+font-size:13px;
+font-weight:600;
+}
+
+/* OFFER BADGE */
+
+.glp-offer{
+display:inline-block;
+background:#fee2e2;
+color:#b91c1c;
+font-size:12px;
+font-weight:700;
+padding:6px 12px;
+border-radius:20px;
+margin-top:8px;
+}
 
 /* FEATURES */
 
-.plan-card ul{
+.glp-features{
 list-style:none;
 padding:0;
-margin:25px 0;
-text-align:left;
+margin:18px 0;
 }
 
-.plan-card li{
-margin-bottom:10px;
-font-size:15px;
-color:#444;
+.glp-features li{
+margin:8px 0;
+font-size:14px;
 }
 
+.glp-features li:before{
+content:"✔";
+color:#3b82f6;
+margin-right:6px;
+}
 
 /* BUTTON */
 
-.start-plan-btn{
-background:#0a66ff;
-color:#fff;
+.glp-btn{
+display:block;
+width:75%;
+margin:auto;
+padding:11px;
+background:#4f6cff;
+color:white;
+border-radius:8px;
 border:none;
-padding:12px 26px;
-border-radius:6px;
-cursor:pointer;
-font-size:15px;
 font-weight:600;
-transition:all .3s ease;
+cursor:pointer;
 }
 
-/* hover animation */
+.glp-btn-featured{
+background:#16a34a;
+}
 
-.start-plan-btn:hover{
-background:#084ecf;
-transform:scale(1.05);
-box-shadow:0 6px 16px rgba(10,102,255,0.25);
+/* POPUP */
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.audit-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+.audit-modal{
+position:relative;
+background:#f9fbff;
+padding:40px;
+border-radius:12px;
+max-width:520px;
+width:90%;
+z-index:2;
+border:1px solid #e4e8f2;
+}
+
+.audit-close{
+position:absolute;
+top:14px;
+right:16px;
+font-size:22px;
+cursor:pointer;
+}
+
+.audit-sub{
+font-size:14px;
+color:#666;
+margin-bottom:20px;
+}
+
+#auditForm{
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+#auditForm input,
+#auditForm textarea{
+padding:12px;
+border:1px solid #dbe1ea;
+border-radius:6px;
+}
+
+.audit-submit{
+background:#4f6cff;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+.glp-grid{
+grid-template-columns:1fr;
+}
 }
 
 </style>
 
 
+
 <script>
 
-/* AUTO FILL PLAN INTO FORM */
+var selectedPlan="";
 
-const planButtons = document.querySelectorAll(".start-plan-btn");
+/* OPEN POPUP + CAPTURE PLAN */
 
-planButtons.forEach(btn => {
+document.querySelectorAll(".openAudit").forEach(btn=>{
+btn.onclick=function(){
 
-btn.addEventListener("click", function(){
+selectedPlan=this.getAttribute("data-plan");
 
-let plan = this.getAttribute("data-plan");
+document.getElementById("auditPopup").style.display="flex";
 
-document.getElementById("selected-plan").value = plan;
-
-/* open popup */
-
-document.getElementById("audit-popup").style.display="flex";
-
+}
 });
+
+/* CLOSE POPUP */
+
+document.querySelector(".audit-close").onclick=function(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+document.querySelector(".audit-overlay").onclick=function(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+/* FORM SUBMIT */
+
+document.getElementById("auditForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+var name=document.getElementById("name").value;
+var business=document.getElementById("business").value;
+var location=document.getElementById("location").value;
+var gbp=document.getElementById("gbp").value;
+var description=document.getElementById("description").value;
+
+var message="Hi GeoLift, I want to take your service.%0A%0A"+
+"Selected Plan: "+selectedPlan+"%0A"+
+"Name: "+name+"%0A"+
+"Business: "+business+"%0A"+
+"Location: "+location+"%0A"+
+"GBP Link: "+gbp+"%0A"+
+"Description: "+description;
+
+window.open("https://wa.me/919330629573?text="+message,"_blank");
 
 });
 
