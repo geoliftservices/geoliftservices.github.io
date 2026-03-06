@@ -1511,61 +1511,62 @@ btn.textContent="Hide Features";
 
   
 
-```html
-<section id="plans" class="pricing-section">
-
-<div class="pricing-header">
-<h2>Business Growth Plans</h2>
-<p>Simple plans designed for businesses that want visibility and steady local growth.</p>
-</div>
+<section class="pricing-section">
 
 <div class="pricing-container">
 
 <!-- PLAN 1 -->
-
 <div class="pricing-card">
 
 <h3>Foundation Launch</h3>
-<p class="plan-desc">Best for businesses starting their online presence</p>
+<p class="plan-desc">Best for new businesses starting online</p>
+
+<p class="plan-type">One-Time Setup</p>
 
 <div class="price-box">
+<span class="old-price">₹10000</span>
 <span class="new-price">₹5000</span>
-<span class="price-small">One-Time Setup</span>
 </div>
 
+<p class="offer-tag">Limited Launch Offer</p>
+
 <ul>
-<li>✔ Professional Business Website</li>
+<li>✔ Custom Business Website</li>
 <li>✔ Google Business Profile Setup</li>
-<li>✔ On-Page SEO Structure</li>
-<li>✔ Mobile Optimized Design</li>
-<li>✔ Basic Local Visibility Setup</li>
+<li>✔ On Page SEO Structure</li>
+<li>✔ HTTPS & Indexing</li>
+<li>✔ Local Keyword Mapping</li>
 </ul>
 
 <a href="#contact" class="plan-btn">Start Plan</a>
 
 </div>
+
 
 
 <!-- PLAN 2 -->
-
 <div class="pricing-card">
 
-<h3>Maps Growth</h3>
-<p class="plan-desc">Best for businesses wanting better Google Maps visibility</p>
+<h3>Growth Acceleration</h3>
+<p class="plan-desc">Best for businesses targeting Google Maps rankings</p>
+
+<p class="plan-type">Monthly Optimization</p>
 
 <div class="price-box">
-<span class="new-price">₹2000</span>
-<span class="price-small">/month</span>
+<span class="old-price">₹5000</span>
+<span class="new-price">₹2000 <small>/month</small></span>
 </div>
 
-<p class="plan-note">3-Month Growth Plan</p>
+<p class="offer-tag">Limited Launch Offer</p>
+
+<p class="plan-note">3-Month Plan</p>
 
 <ul>
-<li>✔ Full GBP Optimization</li>
+<li>✔ Ongoing GMB Optimization</li>
 <li>✔ Google Maps Ranking Strategy</li>
-<li>✔ Weekly Profile Improvements</li>
-<li>✔ Local Keyword Targeting</li>
+<li>✔ Monthly SEO Posts</li>
 <li>✔ Competitor Monitoring</li>
+<li>✔ Performance Tracking</li>
 </ul>
 
 <a href="#contact" class="plan-btn">Start Plan</a>
@@ -1573,41 +1574,37 @@ btn.textContent="Hide Features";
 </div>
 
 
-<!-- PLAN 3 -->
 
+<!-- PLAN 3 -->
 <div class="pricing-card featured">
 
 <div class="recommended">Most Recommended</div>
 
 <h3>Complete Local Growth</h3>
-<p class="plan-desc">Website + GBP Setup + 3 Months Growth</p>
+<p class="plan-desc">Best for businesses focused on long-term growth</p>
+
+<p class="plan-type">Setup + Monthly Growth</p>
 
 <div class="price-box">
-<span class="new-price">₹5000</span>
-<span class="price-small">Setup</span>
+<span class="old-price">₹10000</span>
+<span class="new-price">₹5000 <small>setup</small></span>
 </div>
 
 <div class="price-box">
-<span class="new-price">₹2000</span>
-<span class="price-small">/month</span>
+<span class="old-price">₹5000</span>
+<span class="new-price">₹2000 <small>/month</small></span>
 </div>
 
-<p class="plan-note">3-Month Growth Plan</p>
-
-<div class="bundle-price">
-<span class="old-price">₹11,000</span>
-<span class="bundle-new">₹9,000</span>
-</div>
-
-<p class="save-tag">Save ₹2,000</p>
 <p class="offer-tag">Limited Launch Offer</p>
 
+<p class="plan-note">3-Month Plan</p>
+
 <ul>
-<li>✔ Professional Business Website</li>
-<li>✔ Google Business Profile Setup</li>
-<li>✔ Complete GBP Optimization</li>
-<li>✔ Google Maps Ranking Strategy</li>
-<li>✔ Local Growth Plan</li>
+<li>✔ Website + GBP Setup</li>
+<li>✔ Full Optimization Foundation</li>
+<li>✔ Monthly Ranking Growth</li>
+<li>✔ Visibility & Lead Strategy</li>
+<li>✔ Structured Growth Plan</li>
 </ul>
 
 <a href="#contact" class="plan-btn green">Start Plan</a>
@@ -1623,99 +1620,24 @@ btn.textContent="Hide Features";
 <style>
 
 .pricing-section{
-padding:50px 20px;
+padding:60px 20px;
 background:#f8f9ff;
 }
 
-.pricing-header{
-text-align:center;
-margin-bottom:40px;
-}
-
-.pricing-header h2{
-font-size:28px;
-margin-bottom:8px;
-}
-
-.pricing-header p{
-color:#666;
-font-size:14px;
-}
-
 .pricing-container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
 .pricing-card{
-background:#fff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 6px 25px rgba(0,0,0,0.05);
-font-size:14px;
-}
-
-.pricing-card h3{
-font-size:20px;
-margin-bottom:6px;
-}
-
-.plan-desc{
-font-size:13px;
-color:#777;
-margin-bottom:15px;
-}
-
-.price-box{
-margin-bottom:8px;
-}
-
-.new-price{
-font-size:28px;
-font-weight:700;
-}
-
-.price-small{
-font-size:13px;
-color:#666;
-margin-left:6px;
-}
-
-.plan-note{
-font-size:13px;
-color:#444;
-margin:10px 0;
-}
-
-.pricing-card ul{
-list-style:none;
-padding:0;
-margin:15px 0;
-}
-
-.pricing-card ul li{
-margin:8px 0;
-color:#444;
-font-size:13px;
-}
-
-.plan-btn{
-display:block;
-text-align:center;
-padding:10px;
-background:#4f6cff;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
-font-size:14px;
-}
-
-.plan-btn.green{
-background:#16a34a;
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 8px 30px rgba(0,0,0,0.05);
+position:relative;
 }
 
 .pricing-card.featured{
@@ -1730,48 +1652,80 @@ left:50%;
 transform:translateX(-50%);
 background:#4f6cff;
 color:white;
-padding:4px 12px;
+padding:5px 14px;
 border-radius:20px;
-font-size:11px;
+font-size:12px;
 }
 
-.bundle-price{
-margin-top:10px;
+.plan-desc{
+color:#777;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.plan-type{
+color:#4f6cff;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.price-box{
+margin:10px 0;
 }
 
 .old-price{
 text-decoration:line-through;
 color:#999;
-margin-right:6px;
-font-size:16px;
+margin-right:10px;
+font-size:18px;
 }
 
-.bundle-new{
-font-size:28px;
+.new-price{
+font-size:32px;
 font-weight:700;
-}
-
-.save-tag{
-color:#16a34a;
-font-size:13px;
-font-weight:600;
+color:#111;
 }
 
 .offer-tag{
 color:#e63946;
 font-size:13px;
+margin-bottom:15px;
 }
 
-@media(max-width:900px){
-
-.pricing-container{
-grid-template-columns:1fr;
+.plan-note{
+font-size:14px;
+color:#555;
+margin-bottom:10px;
 }
 
+.pricing-card ul{
+padding-left:0;
+list-style:none;
+margin:20px 0;
+}
+
+.pricing-card ul li{
+margin:10px 0;
+color:#444;
+}
+
+.plan-btn{
+display:block;
+text-align:center;
+padding:12px;
+background:#4f6cff;
+color:white;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
+
+.plan-btn.green{
+background:#22b455;
 }
 
 </style>
-```
+
 
 
 <!-- ================= WHY CHOOSE US SECTION ================= -->
