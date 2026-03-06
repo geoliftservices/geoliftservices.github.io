@@ -3274,10 +3274,12 @@ Get Free Audit
 
 <style>
 
+/* Floating Button */
+
 .audit-floating{
 position:fixed;
 right:20px;
-bottom:140px;
+bottom:200px; /* ABOVE other floating buttons */
 background:linear-gradient(135deg,#5a6bff,#3b4bdb);
 color:#fff;
 padding:12px 18px;
@@ -3297,70 +3299,77 @@ transition:0.3s;
 transform:translateY(-3px);
 }
 
+
+/* Popup Background */
+
 .audit-popup{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,0.6);
 display:none;
 align-items:center;
 justify-content:center;
 z-index:10000;
 }
 
+
+/* Popup Box */
+
 .audit-box{
 background:#fff;
 width:380px;
-padding:34px 34px 28px;
+padding:34px;
 border-radius:12px;
-box-shadow:0 30px 70px rgba(0,0,0,0.2);
+box-shadow:0 25px 60px rgba(0,0,0,0.2);
 position:relative;
 font-family:system-ui;
 }
 
+
+/* Close Button */
+
 .audit-close{
 position:absolute;
-top:14px;
+top:12px;
 right:16px;
-font-size:20px;
+font-size:22px;
 cursor:pointer;
-color:#999;
+color:#777;
 }
+
+
+/* Title */
 
 .audit-box h3{
 font-size:22px;
-margin-bottom:10px;
-color:#1d2433;
+margin-bottom:8px;
 text-align:center;
+color:#1d2433;
 }
+
+
+/* Subtitle */
 
 .audit-sub{
 text-align:center;
 font-size:14px;
 color:#6b7280;
-margin-bottom:18px;
-}
-
-.audit-features{
-font-size:14px;
-color:#374151;
 margin-bottom:20px;
-padding-left:16px;
 }
 
-.audit-features li{
-margin-bottom:6px;
-}
+
+/* Input */
 
 .audit-box input{
 width:100%;
-padding:12px;
-margin-bottom:12px;
+padding:13px;
 border-radius:8px;
 border:1px solid #e4e6eb;
 font-size:14px;
+margin-bottom:14px;
 }
 
 .audit-box input:focus{
@@ -3368,18 +3377,23 @@ outline:none;
 border-color:#5a6bff;
 }
 
+
+/* Button */
+
 .audit-btn{
 width:100%;
 background:linear-gradient(135deg,#5a6bff,#3b4bdb);
 border:none;
-padding:13px;
+padding:14px;
 border-radius:8px;
 color:#fff;
 font-weight:600;
 cursor:pointer;
 font-size:15px;
-margin-top:5px;
 }
+
+
+/* Note */
 
 .audit-note{
 text-align:center;
@@ -3391,40 +3405,36 @@ margin-top:10px;
 </style>
 
 
-<!-- Floating Button -->
+
+<!-- FLOATING BUTTON -->
+
 <div class="audit-floating" onclick="openAudit()">
 🔎 Free Audit
 </div>
 
 
-<!-- Popup -->
+
+<!-- POPUP -->
+
 <div class="audit-popup" id="auditPopup">
 
 <div class="audit-box">
 
 <div class="audit-close" onclick="closeAudit()">×</div>
 
-<h3>Free Local SEO Audit</h3>
+<h3>Free Google Maps Audit</h3>
 
 <div class="audit-sub">
-Discover why your business is not ranking on Google Maps.
+Paste your Google Business Profile link to get a free ranking audit.
 </div>
-
-<ul class="audit-features">
-<li>✔ Google Business Profile Check</li>
-<li>✔ Local Ranking Analysis</li>
-<li>✔ Competitor Insights</li>
-</ul>
 
 <form>
 
-<input type="text" placeholder="Your Name" required>
-
-<input type="text" placeholder="Business Name" required>
-
-<input type="text" placeholder="Business Location" required>
-
-<input type="text" placeholder="Google Business Profile Link (optional)">
+<input 
+type="url" 
+placeholder="Paste Google Business Profile Link"
+required
+>
 
 <button class="audit-btn">
 Get Free Audit
@@ -3433,22 +3443,36 @@ Get Free Audit
 </form>
 
 <div class="audit-note">
-Free • No obligation • Takes 60 seconds
+100% Free • No obligation
 </div>
 
 </div>
 
 </div>
+
 
 
 <script>
+
+/* OPEN POPUP */
 
 function openAudit(){
 document.getElementById("auditPopup").style.display="flex";
 }
 
+/* CLOSE POPUP */
+
 function closeAudit(){
 document.getElementById("auditPopup").style.display="none";
+}
+
+/* CLOSE WHEN CLICK OUTSIDE */
+
+window.onclick=function(e){
+const popup=document.getElementById("auditPopup");
+if(e.target==popup){
+popup.style.display="none";
+}
 }
 
 </script>
