@@ -3423,64 +3423,184 @@ color:#000;
 
 
 
-<script>
+<!-- FREE AUDIT FLOATING BUTTON -->
+<button id="auditBtn">🔎 Free Audit</button>
 
-/* OPEN FORM */
+<style>
 
-function openAuditForm(){
-document.getElementById("auditPopup").style.display="flex";
+#auditBtn{
+position:fixed;
+right:90px;
+bottom:90px;
+background:linear-gradient(135deg,#4f6df5,#2f4bd8);
+color:#fff;
+border:none;
+padding:12px 20px;
+border-radius:30px;
+font-weight:600;
+font-size:14px;
+cursor:pointer;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
+z-index:9990;
+transition:0.3s;
 }
 
-/* CLOSE FORM */
+#auditBtn:hover{
+transform:translateY(-3px);
+}
+
+</style>
+
+
+<!-- POPUP -->
+<div id="auditPopup">
+
+<div class="audit-box">
+
+<h2>Free Local SEO Audit</h2>
+
+<p class="audit-sub">
+Discover why your business is not ranking on Google Maps.
+</p>
+
+<div class="audit-benefits">
+<p>✓ Google Business Profile Check</p>
+<p>✓ Local Ranking Analysis</p>
+<p>✓ Competitor Insights</p>
+</div>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="business" placeholder="Business Name">
+<input type="text" id="location" placeholder="Business Location">
+<input type="text" id="gbp" placeholder="Google Business Profile Link (optional)">
+
+<button class="audit-submit" onclick="sendAudit()">Get Free Audit</button>
+
+<p class="audit-note">Free • No obligation • Takes 60 seconds</p>
+
+<span class="audit-close" onclick="closeAudit()">Cancel</span>
+
+</div>
+</div>
+
+
+<style>
+
+#auditPopup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+z-index:10000;
+align-items:center;
+justify-content:center;
+}
+
+.audit-box{
+background:#fff;
+padding:35px;
+width:420px;
+border-radius:12px;
+text-align:center;
+border:2px solid #4f6df5;
+box-shadow:0 10px 40px rgba(0,0,0,0.25);
+}
+
+.audit-box h2{
+margin-bottom:8px;
+font-size:24px;
+}
+
+.audit-sub{
+font-size:14px;
+color:#666;
+margin-bottom:20px;
+}
+
+.audit-benefits{
+text-align:left;
+margin-bottom:20px;
+font-size:15px;
+color:#333;
+}
+
+.audit-benefits p{
+margin:6px 0;
+}
+
+.audit-box input{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+}
+
+.audit-submit{
+width:100%;
+padding:14px;
+margin-top:10px;
+background:linear-gradient(135deg,#4f6df5,#2f4bd8);
+color:#fff;
+border:none;
+border-radius:6px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+}
+
+.audit-submit:hover{
+opacity:0.9;
+}
+
+.audit-note{
+font-size:12px;
+color:#777;
+margin-top:10px;
+}
+
+.audit-close{
+display:block;
+margin-top:12px;
+color:#777;
+cursor:pointer;
+}
+
+</style>
+
+
+<script>
+
+document.getElementById("auditBtn").onclick=function(){
+document.getElementById("auditPopup").style.display="flex";
+}
 
 function closeAudit(){
 document.getElementById("auditPopup").style.display="none";
 }
 
-
-
-/* EXIT INTENT */
-
-document.addEventListener("mouseleave",function(e){
-
-if(e.clientY<10){
-
-setTimeout(function(){
-
-document.getElementById("auditPopup").style.display="flex";
-
-},500);
-
-}
-
-});
-
-
-
-/* SEND WHATSAPP */
-
 function sendAudit(){
 
-var name=document.getElementById("auditName").value;
-var business=document.getElementById("auditBusiness").value;
-var location=document.getElementById("auditLocation").value;
-var gmb=document.getElementById("auditGMB").value;
+var name=document.getElementById("name").value;
+var business=document.getElementById("business").value;
+var location=document.getElementById("location").value;
+var gbp=document.getElementById("gbp").value;
 
-var message=
-"Free Audit Request%0A%0A"+
+var message="Free Audit Request:%0A"+
 "Name: "+name+"%0A"+
 "Business: "+business+"%0A"+
 "Location: "+location+"%0A"+
-"GMB Link: "+gmb;
+"GBP Link: "+gbp;
 
-var phone="919330629573";
-
-window.open("https://wa.me/"+phone+"?text="+message,"_blank");
+window.open("https://wa.me/919330629573?text="+message);
 
 }
 
 </script>
-
   
 </body>
 </html>
