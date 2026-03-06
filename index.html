@@ -1517,14 +1517,6 @@ btn.textContent="Hide Features";
 
 <h2 class="glp-title">Growth Plans</h2>
 
-<div style="text-align:center;margin-bottom:40px;">
-<button class="freeAuditBtn glp-btn" style="max-width:230px;font-size:15px;">
-Get Free GBP Audit
-</button>
-</div>
-
-<div class="glp-grid">
-
 <div class="glp-grid">
 
 <!-- PLAN 1 -->
@@ -1689,7 +1681,7 @@ Fill the details below and we will contact you to start your selected growth pla
 /* SECTION */
 
 .glp-section{
-padding:110px 20px 70px 20px;
+padding:70px 20px;
 background:linear-gradient(180deg,#f6f8ff,#eef2ff);
 font-family:system-ui;
 }
@@ -1832,23 +1824,10 @@ border-radius:8px;
 border:none;
 font-weight:600;
 cursor:pointer;
-transition:all 0.25s ease;
-}
-
-/* HOVER EFFECT */
-
-.glp-btn:hover{
-background:#3d55e6;
-transform:translateY(-2px);
-box-shadow:0 6px 14px rgba(0,0,0,0.15);
 }
 
 .glp-btn-featured{
 background:#16a34a;
-}
-
-.glp-btn-featured:hover{
-background:#12863c;
 }
 
 /* POPUP */
@@ -1928,46 +1907,25 @@ grid-template-columns:1fr;
 
 </style>
 
+
+
 <script>
 
 var selectedPlan="";
-var formType="";
 
-/* OPEN POPUP */
+/* OPEN POPUP + CAPTURE PLAN */
 
 document.querySelectorAll(".openAudit").forEach(btn=>{
 btn.onclick=function(){
 
 selectedPlan=this.getAttribute("data-plan");
-formType="plan";
-
-document.querySelector(".audit-modal h3").innerText="Start Your Business Growth Plan";
-document.querySelector(".audit-sub").innerText="Fill the details below to start the selected growth plan.";
 
 document.getElementById("auditPopup").style.display="flex";
 
 }
 });
 
-
-/* FREE AUDIT BUTTON */
-
-document.querySelectorAll(".freeAuditBtn").forEach(btn=>{
-btn.onclick=function(){
-
-selectedPlan="Free GBP Audit";
-formType="audit";
-
-document.querySelector(".audit-modal h3").innerText="Request Free GBP Audit";
-document.querySelector(".audit-sub").innerText="Submit your business details and we will send your Google Business Profile audit.";
-
-document.getElementById("auditPopup").style.display="flex";
-
-}
-});
-
-
-/* CLOSE */
+/* CLOSE POPUP */
 
 document.querySelector(".audit-close").onclick=function(){
 document.getElementById("auditPopup").style.display="none";
@@ -1976,7 +1934,6 @@ document.getElementById("auditPopup").style.display="none";
 document.querySelector(".audit-overlay").onclick=function(){
 document.getElementById("auditPopup").style.display="none";
 }
-
 
 /* FORM SUBMIT */
 
@@ -1990,15 +1947,8 @@ var location=document.getElementById("location").value;
 var gbp=document.getElementById("gbp").value;
 var description=document.getElementById("description").value;
 
-var message="Hi GeoLift,%0A%0A";
-
-if(formType=="audit"){
-message+="I want a Free GBP Audit.%0A%0A";
-}else{
-message+="I want to start a Growth Plan.%0A%0A";
-}
-
-message+="Selected Plan: "+selectedPlan+"%0A"+
+var message="Hi GeoLift, I want to take your service.%0A%0A"+
+"Selected Plan: "+selectedPlan+"%0A"+
 "Name: "+name+"%0A"+
 "Business: "+business+"%0A"+
 "Location: "+location+"%0A"+
@@ -2008,6 +1958,7 @@ message+="Selected Plan: "+selectedPlan+"%0A"+
 window.open("https://wa.me/919330629573?text="+message,"_blank");
 
 });
+
 </script>
 
 <!-- ================= WHY CHOOSE US SECTION ================= -->
