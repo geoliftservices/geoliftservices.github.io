@@ -1922,6 +1922,8 @@ grid-template-columns:1fr;
 
 <script>
 
+document.addEventListener("DOMContentLoaded", function(){
+
 var selectedPlan="";
 
 document.querySelectorAll(".openAudit").forEach(btn=>{
@@ -1961,6 +1963,8 @@ var message="Hi GeoLift, I am interested in your services.%0A%0A"+
 "Description: "+description;
 
 window.open("https://wa.me/919330629573?text="+message,"_blank");
+
+});
 
 });
 
