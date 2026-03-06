@@ -1520,17 +1520,18 @@ btn.textContent="Hide Features";
 
 <!-- PLAN 1 -->
 <div class="plan-card">
+
 <h3>Foundation Launch</h3>
 <p class="plan-sub">One-Time Setup</p>
 
 <div class="price">₹3000</div>
 
 <ul>
-<li>✔ Custom Business Website</li>
-<li>✔ Google Business Profile Setup</li>
-<li>✔ On Page SEO Structure</li>
-<li>✔ HTTPS & Indexing</li>
-<li>✔ Local Keyword Mapping</li>
+<li>Custom Business Website</li>
+<li>Google Business Profile Setup</li>
+<li>On Page SEO Structure</li>
+<li>HTTPS & Indexing</li>
+<li>Local Keyword Mapping</li>
 </ul>
 
 <button onclick="openForm('Foundation Launch')" class="plan-btn">
@@ -1538,6 +1539,7 @@ Discuss Plan
 </button>
 
 </div>
+
 
 
 <!-- PLAN 2 -->
@@ -1548,14 +1550,14 @@ Discuss Plan
 
 <div class="price">₹1000<span>/month</span></div>
 
-<div class="plan-note">Minimum 3 Month Commitment</div>
+<p class="plan-note">Minimum 3 Month Commitment</p>
 
 <ul>
-<li>✔ Ongoing GMB Optimization</li>
-<li>✔ Google Maps Ranking Strategy</li>
-<li>✔ Monthly SEO Posts</li>
-<li>✔ Competitor Monitoring</li>
-<li>✔ Performance Tracking</li>
+<li>Ongoing GMB Optimization</li>
+<li>Google Maps Ranking Strategy</li>
+<li>Monthly SEO Posts</li>
+<li>Competitor Monitoring</li>
+<li>Performance Tracking</li>
 </ul>
 
 <button onclick="openForm('Growth Acceleration')" class="plan-btn">
@@ -1579,14 +1581,14 @@ Discuss Plan
 ₹1000 <span>/month</span>
 </div>
 
-<div class="plan-note">Minimum 3 Month Commitment</div>
+<p class="plan-note">Minimum 3 Month Commitment</p>
 
 <ul>
-<li>✔ Website + GBP Setup</li>
-<li>✔ Full Optimization Foundation</li>
-<li>✔ Monthly Ranking Growth</li>
-<li>✔ Visibility & Lead Strategy</li>
-<li>✔ Structured Growth Plan</li>
+<li>Website + GBP Setup</li>
+<li>Full Optimization Foundation</li>
+<li>Monthly Ranking Growth</li>
+<li>Visibility & Lead Strategy</li>
+<li>Structured Growth Plan</li>
 </ul>
 
 <button onclick="openForm('Complete Local Growth')" class="plan-btn primary">
@@ -1596,6 +1598,7 @@ Start Plan
 </div>
 
 </div>
+
 
 
 <!-- POPUP FORM -->
@@ -1678,7 +1681,7 @@ margin-bottom:6px;
 .plan-sub{
 color:#4c63ff;
 font-weight:600;
-margin-bottom:20px;
+margin-bottom:18px;
 }
 
 .price{
@@ -1708,11 +1711,15 @@ margin-bottom:30px;
 .plan-card li{
 margin-bottom:10px;
 color:#333;
+padding-left:22px;
+position:relative;
 }
 
-.plan-card li::before{
-content:"✔ ";
+.plan-card li:before{
+content:"✔";
 color:#4c63ff;
+position:absolute;
+left:0;
 font-weight:bold;
 }
 
@@ -1758,6 +1765,8 @@ font-size:12px;
 border-radius:20px;
 }
 
+
+
 /* POPUP FORM */
 
 .form-overlay{
@@ -1776,17 +1785,18 @@ z-index:9999;
 .form-box{
 background:white;
 padding:40px;
-border-radius:14px;
+border-radius:12px;
 width:90%;
 max-width:420px;
 text-align:center;
-border:1px solid #dce3ff;
+border:1px solid #4c63ff;
 box-shadow:0 20px 50px rgba(0,0,0,0.2);
 }
 
 .form-box h3{
 margin-bottom:20px;
 font-size:22px;
+color:#1a1a1a;
 }
 
 .form-box input{
@@ -1827,7 +1837,7 @@ cursor:pointer;
 }
 
 .cancel-btn:hover{
-color:#333;
+color:#000;
 }
 
 </style>
@@ -1868,7 +1878,6 @@ window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 }
 
 </script>
-
 
 
 <!-- ================= WHY CHOOSE US SECTION ================= -->
