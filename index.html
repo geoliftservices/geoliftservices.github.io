@@ -1511,123 +1511,124 @@ btn.textContent="Hide Features";
 
   
 
-<section class="pricing-section">
+<!-- GEO LIFT PRICING SECTION -->
+<section class="glp-section">
 
-<div class="pricing-wrapper">
+<div class="glp-wrapper">
 
-<h2 class="pricing-title">Plans</h2>
+<h2 class="glp-title">Plans</h2>
 
-<div class="pricing-container">
+<div class="glp-grid">
 
 <!-- PLAN 1 -->
-<div class="pricing-card">
+<div class="glp-card">
 
 <h3>Foundation Launch</h3>
-<p class="plan-desc">Best for businesses starting online</p>
+<p class="glp-desc">Best for businesses starting online</p>
 
-<p class="plan-type">One-Time Setup</p>
+<p class="glp-type">One-Time Setup</p>
 
-<div class="price-area">
+<div class="glp-price-area">
 
-<div class="old-price">₹177 / Day</div>
+<div class="glp-old">₹177 / Day</div>
 
-<div class="main-price">
+<div class="glp-price">
 ₹132<span>/Day</span>
 </div>
 
-<div class="discount">25% Off</div>
+<div class="glp-discount">25% Off</div>
 
 </div>
 
-<ul>
+<ul class="glp-features">
 
-<li>✔ Custom Business Website</li>
-<li>✔ Google Business Profile Setup</li>
-<li>✔ Local SEO Structure</li>
-<li>✔ HTTPS & Indexing</li>
-<li>✔ Basic Local Visibility</li>
+<li>Custom Business Website</li>
+<li>Google Business Profile Setup</li>
+<li>Local SEO Structure</li>
+<li>HTTPS & Indexing</li>
+<li>Basic Local Visibility</li>
 
 </ul>
 
-<a href="#contact" class="plan-btn">Start Plan</a>
+<a href="#contact" class="glp-btn">Start Plan</a>
 
 </div>
 
 
 
 <!-- PLAN 2 -->
-<div class="pricing-card">
+<div class="glp-card">
 
 <h3>Growth Acceleration</h3>
-<p class="plan-desc">Improve Google Maps visibility</p>
+<p class="glp-desc">Improve Google Maps visibility</p>
 
-<p class="plan-type">3-Month Growth Plan</p>
+<p class="glp-type">3-Month Growth Plan</p>
 
-<div class="price-area">
+<div class="glp-price-area">
 
-<div class="old-price">₹66 / Day</div>
+<div class="glp-old">₹66 / Day</div>
 
-<div class="main-price">
+<div class="glp-price">
 ₹55<span>/Day</span>
 </div>
 
-<div class="discount">17% Off</div>
+<div class="glp-discount">17% Off</div>
 
 </div>
 
-<p class="limited-offer">Limited Time Offer</p>
+<p class="glp-offer">Limited Time Offer</p>
 
-<ul>
+<ul class="glp-features">
 
-<li>✔ GBP Optimization</li>
-<li>✔ Google Maps Ranking Strategy</li>
-<li>✔ Weekly Optimization Actions</li>
-<li>✔ Local Keyword Targeting</li>
-<li>✔ Performance Monitoring</li>
+<li>GBP Optimization</li>
+<li>Google Maps Ranking Strategy</li>
+<li>Weekly Optimization Actions</li>
+<li>Local Keyword Targeting</li>
+<li>Performance Monitoring</li>
 
 </ul>
 
-<a href="#contact" class="plan-btn">Start Plan</a>
+<a href="#contact" class="glp-btn">Start Plan</a>
 
 </div>
 
 
 
 <!-- PLAN 3 -->
-<div class="pricing-card featured">
+<div class="glp-card glp-featured">
 
-<div class="recommended">Most Recommended</div>
+<div class="glp-badge">Most Recommended</div>
 
 <h3>Complete Local Growth</h3>
-<p class="plan-desc">Website + Maps Growth Package</p>
+<p class="glp-desc">Website + Maps Growth Package</p>
 
-<p class="plan-type">3-Month Growth Plan</p>
+<p class="glp-type">3-Month Growth Plan</p>
 
-<div class="price-area">
+<div class="glp-price-area">
 
-<div class="old-price">₹132 / Day</div>
+<div class="glp-old">₹132 / Day</div>
 
-<div class="main-price">
+<div class="glp-price">
 ₹99<span>/Day</span>
 </div>
 
-<div class="discount">25% Off</div>
+<div class="glp-discount">25% Off</div>
 
 </div>
 
-<p class="limited-offer">Limited Time Offer</p>
+<p class="glp-offer">Limited Time Offer</p>
 
-<ul>
+<ul class="glp-features">
 
-<li>✔ Website + GBP Setup</li>
-<li>✔ Full Local SEO Foundation</li>
-<li>✔ 3 Months Growth Optimization</li>
-<li>✔ Maps Visibility Strategy</li>
-<li>✔ Performance Tracking</li>
+<li>Website + GBP Setup</li>
+<li>Full Local SEO Foundation</li>
+<li>3 Months Growth Optimization</li>
+<li>Maps Visibility Strategy</li>
+<li>Performance Tracking</li>
 
 </ul>
 
-<a href="#contact" class="plan-btn featured-btn">Start Plan</a>
+<a href="#contact" class="glp-btn glp-btn-featured">Start Plan</a>
 
 </div>
 
@@ -1640,48 +1641,57 @@ btn.textContent="Hide Features";
 
 <style>
 
-.pricing-section{
+/* SECTION */
+
+.glp-section{
 padding:70px 20px;
 background:linear-gradient(180deg,#f6f8ff,#eef2ff);
+font-family:system-ui;
 }
 
-.pricing-wrapper{
+.glp-wrapper{
 max-width:1200px;
 margin:auto;
 }
 
-.pricing-title{
+.glp-title{
 text-align:center;
 font-size:34px;
 font-weight:700;
-margin-bottom:45px;
+margin-bottom:50px;
 }
 
-.pricing-container{
+/* GRID */
+
+.glp-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px;
+gap:35px;
 }
 
-.pricing-card{
-background:#fbfcff;
+/* CARD */
+
+.glp-card{
+background:#ffffff;
 padding:28px 24px;
 border-radius:14px;
-box-shadow:0 8px 30px rgba(0,0,0,0.05);
-position:relative;
+box-shadow:0 10px 28px rgba(0,0,0,0.06);
 transition:0.3s;
+position:relative;
 }
 
-.pricing-card:hover{
+.glp-card:hover{
 transform:translateY(-6px);
 }
 
-.featured{
+/* FEATURED */
+
+.glp-featured{
 border:2px solid #4f6cff;
 background:#f9faff;
 }
 
-.recommended{
+.glp-badge{
 position:absolute;
 top:-12px;
 left:50%;
@@ -1689,88 +1699,97 @@ transform:translateX(-50%);
 background:#4f6cff;
 color:white;
 font-size:12px;
-padding:5px 14px;
-border-radius:20px;
+padding:6px 16px;
+border-radius:30px;
+font-weight:600;
 }
 
-.pricing-card h3{
+/* TEXT */
+
+.glp-card h3{
 font-size:20px;
 margin-bottom:6px;
 }
 
-.plan-desc{
+.glp-desc{
 color:#666;
 font-size:14px;
 margin-bottom:8px;
 }
 
-.plan-type{
+.glp-type{
 color:#4f6cff;
 font-weight:600;
 font-size:14px;
 margin-bottom:12px;
 }
 
-.price-area{
-margin:10px 0 6px 0;
+/* PRICE */
+
+.glp-price-area{
+margin:10px 0;
 }
 
-.old-price{
+.glp-old{
 color:#999;
 font-size:14px;
 text-decoration:line-through;
-margin-bottom:3px;
 }
 
-.main-price{
-font-size:34px;
+.glp-price{
+font-size:36px;
 font-weight:700;
+margin-top:4px;
 }
 
-.main-price span{
+.glp-price span{
 font-size:16px;
 font-weight:500;
 }
 
-.discount{
+.glp-discount{
 color:#16a34a;
 font-size:13px;
 font-weight:600;
+margin-top:2px;
 }
 
-.limited-offer{
+.glp-offer{
 color:#e11d48;
 font-weight:600;
 font-size:13px;
-margin-top:4px;
-margin-bottom:10px;
+margin-top:6px;
 }
 
-.pricing-card ul{
+/* FEATURES */
+
+.glp-features{
 list-style:none;
 padding:0;
 margin:18px 0;
 }
 
-.pricing-card ul li{
+.glp-features li{
 margin:8px 0;
 font-size:14px;
 color:#444;
 }
 
-.pricing-card ul li::before{
+.glp-features li:before{
 content:"✔";
 color:#3b82f6;
 font-weight:bold;
 margin-right:6px;
 }
 
-.plan-btn{
+/* BUTTON */
+
+.glp-btn{
 display:block;
 width:75%;
 margin:auto;
 text-align:center;
-padding:10px;
+padding:11px;
 background:#4f6cff;
 color:white;
 border-radius:8px;
@@ -1779,22 +1798,24 @@ font-weight:600;
 transition:0.3s;
 }
 
-.plan-btn:hover{
+.glp-btn:hover{
 transform:scale(1.05);
-box-shadow:0 8px 18px rgba(79,108,255,0.3);
+box-shadow:0 8px 18px rgba(79,108,255,0.35);
 }
 
-.featured-btn{
+.glp-btn-featured{
 background:#16a34a;
 }
 
-.featured-btn:hover{
+.glp-btn-featured:hover{
 box-shadow:0 8px 18px rgba(22,163,74,0.35);
 }
 
+/* MOBILE */
+
 @media(max-width:900px){
 
-.pricing-container{
+.glp-grid{
 grid-template-columns:1fr;
 }
 
