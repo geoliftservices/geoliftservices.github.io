@@ -1954,7 +1954,11 @@ var location=document.getElementById("location").value;
 var gbp=document.getElementById("gbp").value;
 var description=document.getElementById("description").value;
 
-var message="Hi GeoLift,%0A%0A"+
+var heading = selectedPlan
+? "Hi GeoLift, I want to start a Growth Plan.%0A%0A"
+: "Hi GeoLift, I want a FREE Google Business Profile Audit.%0A%0A";
+
+var message = heading +
 (selectedPlan ? "Selected Plan: "+selectedPlan+"%0A%0A" : "")+
 "Name: "+name+"%0A"+
 "Business: "+business+"%0A"+
