@@ -1662,6 +1662,8 @@ Fill the details below and we will contact you to start your selected growth pla
 
 <input type="text" id="location" placeholder="Business Location" required>
 
+<input type="url" id="gbp" placeholder="Google Business Profile Link (Optional)">
+
 <textarea id="description" rows="4" placeholder="Briefly describe your business or goals"></textarea>
 
 <button type="submit" class="audit-submit">Send Details</button>
@@ -1922,8 +1924,6 @@ grid-template-columns:1fr;
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function(){
-
 var selectedPlan="";
 
 document.querySelectorAll(".openAudit").forEach(btn=>{
@@ -1954,7 +1954,7 @@ var location=document.getElementById("location").value;
 var gbp=document.getElementById("gbp").value;
 var description=document.getElementById("description").value;
 
-var message="Hi GeoLift, I am interested in your services.%0A%0A"+
+var message="Hi GeoLift, I want to take your service.%0A%0A"+
 "Selected Plan: "+selectedPlan+"%0A"+
 "Name: "+name+"%0A"+
 "Business: "+business+"%0A"+
@@ -1963,8 +1963,6 @@ var message="Hi GeoLift, I am interested in your services.%0A%0A"+
 "Description: "+description;
 
 window.open("https://wa.me/919330629573?text="+message,"_blank");
-
-});
 
 });
 
