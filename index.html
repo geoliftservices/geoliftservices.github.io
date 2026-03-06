@@ -3270,220 +3270,251 @@ Get Free Audit
 </div>
 
 
-<!-- ===== FREE AUDIT FLOATING BUTTON + POPUP ===== -->
+<!-- FLOATING FREE AUDIT BUTTON -->
+<div class="audit-floating" onclick="openAuditPopup()">
+🔎 Free Audit
+</div>
+
+<!-- POPUP -->
+<div id="auditPopup" class="audit-overlay">
+
+<div class="audit-box">
+
+<span class="audit-close" onclick="closeAuditPopup()">×</span>
+
+<h2>Free Google Maps Ranking Audit</h2>
+
+<p class="audit-sub">
+Paste your <b>Google Business Profile link</b> and receive a quick ranking analysis.
+</p>
+
+<form id="auditForm">
+
+<div class="input-group">
+<span class="input-icon">📍</span>
+
+<input 
+type="url"
+id="gmbLink"
+placeholder="Paste Google Business Profile Link"
+required
+>
+
+</div>
+
+<button type="submit" class="audit-submit">
+Get Free Audit
+</button>
+
+<p class="audit-note">
+Free • No obligation • Takes 30 seconds
+</p>
+
+</form>
+
+</div>
+</div>
 
 <style>
 
-/* ===== Floating Free Audit Button ===== */
+/* Floating Button */
 
-.free-audit-btn{
+.audit-floating{
 position:fixed;
 right:20px;
-top:55%;
-transform:translateY(-50%);
-background:linear-gradient(135deg,#5a6bff,#3b4bdb);
-color:#fff;
-padding:12px 18px;
+bottom:150px;
+background:linear-gradient(135deg,#4a63ff,#6d3cff);
+color:white;
+padding:12px 20px;
 border-radius:30px;
-font-size:14px;
 font-weight:600;
 cursor:pointer;
-box-shadow:0 8px 25px rgba(0,0,0,0.25);
-display:flex;
-align-items:center;
-gap:8px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 z-index:9999;
-transition:0.25s;
+transition:0.3s;
 }
 
-.free-audit-btn:hover{
-transform:translateY(-50%) scale(1.05);
+.audit-floating:hover{
+transform:translateY(-2px);
 }
 
+/* Overlay */
 
-/* ===== Popup Overlay ===== */
-
-.audit-popup{
+.audit-overlay{
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.65);
+background:rgba(0,0,0,0.55);
 display:none;
 align-items:center;
 justify-content:center;
 z-index:10000;
 }
 
+/* Popup */
 
-/* ===== Popup Box ===== */
+.audit-box{
 
-.audit-popup-box{
-background:#fff;
-width:380px;
-padding:34px;
+background:white;
+width:420px;
+max-width:90%;
+padding:40px 35px;
 border-radius:12px;
-box-shadow:0 25px 60px rgba(0,0,0,0.25);
-font-family:system-ui;
-position:relative;
-}
-
-
-/* Close */
-
-.audit-close{
-position:absolute;
-top:10px;
-right:16px;
-font-size:22px;
-cursor:pointer;
-color:#777;
-}
-
-
-/* Title */
-
-.audit-popup-box h3{
 text-align:center;
-font-size:22px;
+
+box-shadow:0 30px 80px rgba(0,0,0,0.2);
+
+animation:popupScale .35s ease;
+
+}
+
+@keyframes popupScale{
+
+0%{
+transform:scale(.8);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+.audit-box h2{
+
+font-size:24px;
 margin-bottom:10px;
-color:#1c2430;
+color:#111;
+
 }
 
+.audit-sub{
 
-/* Subtitle */
-
-.audit-desc{
-text-align:center;
 font-size:14px;
-color:#6b7280;
-margin-bottom:22px;
-}
+color:#666;
+margin-bottom:25px;
 
+}
 
 /* Input */
 
-.audit-popup-box input{
+.input-group{
+
+position:relative;
+margin-bottom:20px;
+
+}
+
+.input-icon{
+
+position:absolute;
+left:14px;
+top:50%;
+transform:translateY(-50%);
+font-size:16px;
+
+}
+
+.input-group input{
+
 width:100%;
-padding:14px;
+padding:14px 14px 14px 40px;
+border:1px solid #ddd;
 border-radius:8px;
-border:1px solid #e5e7eb;
 font-size:14px;
-margin-bottom:14px;
-}
-
-.audit-popup-box input:focus{
 outline:none;
-border-color:#5a6bff;
+transition:0.3s;
+
 }
 
+.input-group input:focus{
+
+border-color:#4a63ff;
+box-shadow:0 0 0 3px rgba(74,99,255,0.1);
+
+}
 
 /* Button */
 
 .audit-submit{
+
 width:100%;
-background:linear-gradient(135deg,#5a6bff,#3b4bdb);
+background:linear-gradient(135deg,#4a63ff,#6d3cff);
 border:none;
+color:white;
 padding:14px;
 border-radius:8px;
-color:white;
 font-weight:600;
 font-size:15px;
 cursor:pointer;
+transition:0.3s;
+
 }
 
+.audit-submit:hover{
 
-/* Small note */
+opacity:.9;
+
+}
 
 .audit-note{
-text-align:center;
+
+margin-top:10px;
 font-size:12px;
-color:#888;
-margin-top:12px;
+color:#777;
+
+}
+
+/* Close */
+
+.audit-close{
+
+position:absolute;
+right:18px;
+top:14px;
+font-size:20px;
+cursor:pointer;
+color:#777;
+
 }
 
 </style>
 
-
-
-<!-- FLOATING BUTTON -->
-
-<div class="free-audit-btn" onclick="openAuditForm()">
-🔎 Free Audit
-</div>
-
-
-
-<!-- POPUP -->
-
-<div class="audit-popup" id="auditPopup">
-
-<div class="audit-popup-box">
-
-<div class="audit-close" onclick="closeAuditForm()">×</div>
-
-<h3>Free Google Maps Audit</h3>
-
-<div class="audit-desc">
-Paste your Google Business Profile link to receive a free visibility audit.
-</div>
-
-<form>
-
-<input 
-type="url"
-placeholder="Paste Google Business Profile Link"
-required
->
-
-<button class="audit-submit">
-Get Free Audit
-</button>
-
-</form>
-
-<div class="audit-note">
-Free • Takes less than 60 seconds
-</div>
-
-</div>
-
-</div>
-
-
-
 <script>
 
-/* OPEN POPUP */
+/* Open popup */
 
-function openAuditForm(){
+function openAuditPopup(){
 document.getElementById("auditPopup").style.display="flex";
 }
 
+/* Close popup */
 
-/* CLOSE POPUP */
-
-function closeAuditForm(){
+function closeAuditPopup(){
 document.getElementById("auditPopup").style.display="none";
 }
 
+/* WhatsApp Send */
 
-/* CLOSE WHEN CLICK OUTSIDE */
+document.getElementById("auditForm").addEventListener("submit",function(e){
 
-window.addEventListener("click",function(e){
+e.preventDefault();
 
-const popup=document.getElementById("auditPopup");
+var link=document.getElementById("gmbLink").value;
 
-if(e.target===popup){
-popup.style.display="none";
-}
+var message="Hello, I want a Google Maps Ranking Audit for this GBP link:%0A"+link;
+
+var phone="91XXXXXXXXXX";
+
+window.open("https://wa.me/"+phone+"?text="+message,"_blank");
 
 });
 
 </script>
-
-<!-- ===== END CODE ===== -->
   
 </body>
 </html>
