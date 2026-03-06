@@ -3224,7 +3224,185 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 </div>
 
+<!-- ===== FLOATING GBP AUDIT BUTTON + POPUP FORM ===== -->
 
+<style>
+
+/* Floating Button */
+
+.floating-audit-btn{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#6366f1;
+color:#fff;
+padding:14px 22px;
+border-radius:50px;
+font-family:Poppins,sans-serif;
+font-weight:600;
+font-size:14px;
+cursor:pointer;
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+z-index:9999;
+transition:all 0.3s ease;
+}
+
+.floating-audit-btn:hover{
+background:#4f46e5;
+transform:translateY(-3px);
+}
+
+/* Popup Background */
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+/* Popup Box */
+
+.audit-box{
+background:#ffffff;
+padding:35px;
+border-radius:12px;
+width:90%;
+max-width:420px;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+position:relative;
+font-family:Poppins,sans-serif;
+}
+
+/* Title */
+
+.audit-box h3{
+margin-bottom:8px;
+font-size:22px;
+font-weight:600;
+}
+
+/* Subtitle */
+
+.audit-box p{
+font-size:14px;
+color:#64748b;
+margin-bottom:20px;
+}
+
+/* Inputs */
+
+.audit-box input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #e2e8f0;
+border-radius:6px;
+font-size:14px;
+}
+
+/* Submit Button */
+
+.audit-submit{
+width:100%;
+background:#6366f1;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.audit-submit:hover{
+background:#4f46e5;
+}
+
+/* Close Button */
+
+.audit-close{
+position:absolute;
+top:12px;
+right:15px;
+font-size:22px;
+cursor:pointer;
+color:#64748b;
+}
+
+</style>
+
+
+<!-- FLOATING BUTTON -->
+
+<div class="floating-audit-btn" onclick="openAuditForm()">
+Get Free GBP Audit
+</div>
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-box">
+
+<span class="audit-close" onclick="closeAuditForm()">×</span>
+
+<h3>Free Google Business Profile Audit</h3>
+
+<p>Submit your business details and get a quick visibility analysis of your Google Business Profile.</p>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Phone / WhatsApp" required>
+
+<input type="text" placeholder="Business Name">
+
+<input type="text" placeholder="Google Maps Link">
+
+<button type="submit" class="audit-submit">
+Request Audit
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* Open Popup */
+
+function openAuditForm(){
+document.getElementById("auditPopup").style.display="flex";
+}
+
+/* Close Popup */
+
+function closeAuditForm(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+/* Close if clicked outside */
+
+window.onclick=function(event){
+let popup=document.getElementById("auditPopup");
+if(event.target==popup){
+popup.style.display="none";
+}
+}
+
+</script>
 
   
 </body>
