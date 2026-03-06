@@ -605,6 +605,7 @@ min-width:260px;
 border-radius:14px;
 box-shadow:0 20px 50px rgba(0,0,0,0.08);
 padding:10px 0;
+width:100%;
 opacity:0;
 visibility:hidden;
 transform:translateY(10px);
@@ -645,7 +646,14 @@ transform:rotate(180deg);
 @media(max-width:992px){
 
 .dropdown-content{
-padding:0 10px;
+position:static;
+display:none;
+padding:10px 15px;
+margin-top:8px;
+}
+
+.dropdown.active .dropdown-content{
+display:block;
 }
 
 .dropdown-content a{
@@ -664,13 +672,6 @@ color:#334155;
 display:block;
 }
 
-}
-
-.arrow{
-margin-left:auto;
-}
-
-}
 
   @media (max-width:768px){
     .footer-bottom{
