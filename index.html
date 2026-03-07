@@ -2358,6 +2358,8 @@ and transparent implementation.
 </div>
 
 </section>
+
+  
   
  <!-- ================= ABOUT SECTION ================= -->
 
@@ -2373,7 +2375,7 @@ font-family:Poppins,sans-serif;
 max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1.1fr .9fr;
 gap:70px;
 align-items:center;
 }
@@ -2412,16 +2414,17 @@ font-size:16px;
 color:#475569;
 line-height:1.8;
 margin-bottom:16px;
+max-width:540px;
 }
 
-/* CTA button */
+/* CTA */
 
 .about-cta{
 display:inline-block;
-margin-top:20px;
+margin-top:22px;
 padding:12px 26px;
 background:#6366f1;
-color:#ffffff;
+color:#fff;
 font-size:14px;
 font-weight:600;
 border-radius:8px;
@@ -2445,11 +2448,8 @@ margin-top:45px;
 }
 
 .about-stat{
-display:flex;
-align-items:center;
-gap:18px;
-background:#ffffff;
-padding:26px 28px;
+background:#fff;
+padding:28px 28px;
 border-radius:14px;
 border:1px solid #e5e7eb;
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
@@ -2462,28 +2462,24 @@ box-shadow:0 20px 50px rgba(0,0,0,0.1);
 border-color:#6366f1;
 }
 
-/* stat number */
-
 .stat-number{
 font-size:40px;
 font-weight:800;
 color:#6366f1;
-min-width:80px;
+margin-bottom:6px;
 }
 
-/* stat text */
+.stat-title{
+font-size:15px;
+font-weight:700;
+color:#0f172a;
+margin-bottom:6px;
+}
 
 .stat-text{
 font-size:14px;
 color:#64748b;
 line-height:1.5;
-}
-
-.stat-text strong{
-display:block;
-font-size:15px;
-color:#0f172a;
-margin-bottom:3px;
 }
 
 /* ================= IMAGE ================= */
@@ -2497,8 +2493,6 @@ width:100%;
 border-radius:20px;
 box-shadow:0 30px 70px rgba(0,0,0,0.15);
 }
-
-/* decorative background */
 
 .about-image:before{
 content:"";
@@ -2556,7 +2550,7 @@ font-size:36px;
 
 <div class="about-container fade-up">
 
-<!-- TEXT SIDE -->
+<!-- TEXT -->
 
 <div class="about-text">
 
@@ -2575,14 +2569,14 @@ service businesses and industrial companies.
 </p>
 
 <p>
-The journey started in <strong>2021</strong> as a freelancer helping 
-businesses set up and optimize their Google Business Profiles, solve 
-visibility issues, and build a strong local search foundation.
+The journey started in <strong>2021</strong> helping businesses set up 
+and optimize their Google Business Profiles, solve visibility issues, 
+and build a strong local search foundation.
 </p>
 
 <p>
 Over the past <strong>4+ years</strong>, more than <strong>50 profiles</strong> 
-have been optimized with a structured approach focused on 
+have been optimized using a structured approach focused on 
 profile health, search visibility, and generating real enquiries.
 </p>
 
@@ -2594,38 +2588,29 @@ profile health, search visibility, and generating real enquiries.
 <div class="about-stats">
 
 <div class="about-stat">
-
 <div class="stat-number counter" data-target="4">0</div>
-
+<div class="stat-title">Years Experience</div>
 <div class="stat-text">
-<strong>Years Experience</strong>
 Helping businesses improve local visibility
 </div>
-
 </div>
 
 
 <div class="about-stat">
-
 <div class="stat-number counter" data-target="50">0</div>
-
+<div class="stat-title">Profiles Optimized</div>
 <div class="stat-text">
-<strong>Profiles Optimized</strong>
 Businesses supported with structured optimization
 </div>
-
 </div>
 
 
 <div class="about-stat">
-
 <div class="stat-number counter" data-target="2021">0</div>
-
+<div class="stat-title">Started Freelancing</div>
 <div class="stat-text">
-<strong>Started Freelancing</strong>
 Beginning of independent consulting journey
 </div>
-
 </div>
 
 </div>
@@ -2633,7 +2618,7 @@ Beginning of independent consulting journey
 </div>
 
 
-<!-- IMAGE SIDE -->
+<!-- IMAGE -->
 
 <div class="about-image">
 
@@ -2648,13 +2633,13 @@ Beginning of independent consulting journey
 
 <script>
 
-/* COUNTER ANIMATION */
+/* COUNTER */
 
 const counters = document.querySelectorAll('.counter');
 
 counters.forEach(counter => {
 
-const updateCount = () => {
+const update = () => {
 
 const target = +counter.getAttribute('data-target');
 const count = +counter.innerText;
@@ -2664,7 +2649,7 @@ const inc = target / speed;
 if(count < target){
 
 counter.innerText = Math.ceil(count + inc);
-setTimeout(updateCount,10);
+setTimeout(update,10);
 
 }else{
 
@@ -2674,12 +2659,12 @@ counter.innerText = target + "+";
 
 };
 
-updateCount();
+update();
 
 });
 
 
-/* SCROLL FADE */
+/* SCROLL ANIMATION */
 
 const observer = new IntersectionObserver(entries => {
 
