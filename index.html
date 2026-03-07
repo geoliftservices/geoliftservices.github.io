@@ -3310,150 +3310,167 @@ Chat on WhatsApp
 
 </section>
 
-<!-- CONTACT -->
+  
 
-<section class="contact-section">
+<!-- ================= CONTACT SECTION ================= -->
 
-<div
-style="
+<style>
+
+.contact-section{
+padding:90px 20px;
+background:#ffffff;
+font-family:Poppins,sans-serif;
+}
+
+.contact-container{
 max-width:800px;
 margin:auto;
 text-align:center;
-">
+}
 
-<h2
-style="
+/* HEADER */
+
+.contact-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.contact-title{
 font-size:42px;
 font-weight:800;
+color:#0f172a;
 margin-bottom:10px;
-color:#111;
-">
-Request a Consultation
-</h2>
+}
 
-<p
-style="
-font-size:18px;
-color:#666;
-max-width:600px;
-margin:0 auto 40px;
-line-height:1.6;
-">
-Tell us about your business goals and we’ll prepare a customized local SEO growth plan for you.
-</p>
+.contact-highlight{
+color:#6366f1;
+}
 
-<p
-style="
-color:#555;
-margin-bottom:40px;
-font-size:16px;
-">
+.contact-desc{
+font-size:17px;
+color:#64748b;
+max-width:620px;
+margin:0 auto 45px;
+line-height:1.7;
+}
 
-</p>
+/* FORM */
 
-
-
-<form
-onsubmit="sendWhatsApp();return false;"
-style="
-background:white;
+.contact-form{
+background:#ffffff;
 padding:40px;
-border-radius:20px;
+border-radius:18px;
 box-shadow:0 15px 40px rgba(0,0,0,.08);
 transition:.3s;
-"
-onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 25px 50px rgba(0,0,0,.15)'"
-onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 15px 40px rgba(0,0,0,.08)'"
->
+}
 
+.contact-form:hover{
+transform:translateY(-6px);
+box-shadow:0 25px 55px rgba(0,0,0,.12);
+}
 
-
-<input
-id="name"
-placeholder="Your Name"
-style="
+.contact-input{
 width:100%;
 padding:14px;
 margin:12px 0;
 border-radius:8px;
-border:1px solid #ddd;
+border:1px solid #e2e8f0;
 font-size:15px;
 outline:none;
-transition:.3s;
-"
-onfocus="this.style.borderColor='#6366f1';this.style.boxShadow='0 0 8px rgba(99,102,241,.4)'"
-onblur="this.style.borderColor='#ddd';this.style.boxShadow='none'"
->
+transition:.25s;
+}
 
+.contact-input:focus{
+border-color:#6366f1;
+box-shadow:0 0 8px rgba(99,102,241,.35);
+}
 
-
-<input
-id="phone"
-placeholder="Phone Number"
-style="
-width:100%;
-padding:14px;
-margin:12px 0;
-border-radius:8px;
-border:1px solid #ddd;
-font-size:15px;
-outline:none;
-transition:.3s;
-"
-onfocus="this.style.borderColor='#6366f1';this.style.boxShadow='0 0 8px rgba(99,102,241,.4)'"
-onblur="this.style.borderColor='#ddd';this.style.boxShadow='none'"
->
-
-
-
-<textarea
-id="msg"
-placeholder="Your Message"
-style="
-width:100%;
-padding:14px;
-margin:12px 0;
-border-radius:8px;
-border:1px solid #ddd;
-font-size:15px;
-outline:none;
+.contact-textarea{
 height:120px;
-transition:.3s;
-"
-onfocus="this.style.borderColor='#6366f1';this.style.boxShadow='0 0 8px rgba(99,102,241,.4)'"
-onblur="this.style.borderColor='#ddd';this.style.boxShadow='none'"
-></textarea>
+resize:none;
+}
 
+/* BUTTON */
 
-
-<button
-type="submit"
-style="
+.contact-btn{
 width:100%;
 padding:15px;
 border:none;
 border-radius:10px;
 font-size:16px;
 font-weight:700;
-color:white;
+color:#fff;
 background:linear-gradient(45deg,#6366f1,#8b5cf6);
 cursor:pointer;
 transition:.3s;
 box-shadow:0 10px 20px rgba(99,102,241,.3);
-"
-onmouseover="
-this.style.transform='scale(1.05)';
-this.style.boxShadow='0 15px 30px rgba(99,102,241,.5)';
-"
-onmouseout="
-this.style.transform='scale(1)';
-this.style.boxShadow='0 10px 20px rgba(99,102,241,.3)';
-"
+}
+
+.contact-btn:hover{
+transform:scale(1.05);
+box-shadow:0 15px 30px rgba(99,102,241,.45);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.contact-title{
+font-size:30px;
+}
+
+}
+
+</style>
+
+
+<section class="contact-section">
+
+<div class="contact-container">
+
+<span class="contact-badge">Consultation</span>
+
+<h2 class="contact-title">
+Request a <span class="contact-highlight">Consultation</span>
+</h2>
+
+<p class="contact-desc">
+Tell us about your business goals and we’ll prepare a structured plan
+to improve your Google Maps visibility and generate more enquiries.
+</p>
+
+
+<form class="contact-form" onsubmit="sendWhatsApp();return false;">
+
+<input
+class="contact-input"
+id="name"
+placeholder="Your Name"
+required
 >
+
+<input
+class="contact-input"
+id="phone"
+placeholder="Phone Number"
+required
+>
+
+<textarea
+class="contact-input contact-textarea"
+id="msg"
+placeholder="Tell us about your business"
+></textarea>
+
+<button type="submit" class="contact-btn">
 Send Message
 </button>
-
-
 
 </form>
 
