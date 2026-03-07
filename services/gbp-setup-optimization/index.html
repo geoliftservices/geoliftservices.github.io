@@ -857,7 +857,119 @@ this.parentElement.classList.toggle("active");
 
 
 
+/* ===== FLOATING BUTTONS ===== */
 
+  .float-btn{
+width:45px;
+height:45px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:18px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+cursor:pointer;
+z-index:9999;
+transition:.3s;
+}
+
+.float-btn:hover{
+transform:translateY(-5px);
+}
+
+/* WhatsApp */
+.whatsapp{ 
+background:#25D366; 
+}
+
+.whatsapp svg{
+width:30px;
+height:30px;
+}
+
+.whatsapp svg{
+display:block;
+}
+
+/* Call */
+.call{
+background:#2563eb;
+}
+
+/* ===== BALANCED PREMIUM BACK TO TOP ===== */
+
+.top-btn{
+
+/* Small size */
+width:44px;
+height:44px;
+font-size:16px;
+
+/* More visible but not loud */
+background:rgba(99,102,241,0.22);
+border:1px solid rgba(99,102,241,0.35);
+
+box-shadow:0 8px 22px rgba(79,70,229,0.25);
+
+opacity:0;
+visibility:hidden;
+transform:translateY(15px);
+transition:all .3s ease;
+}
+
+/* Show when scrolling */
+.top-btn.show{
+opacity:0.95;
+visibility:visible;
+transform:translateY(0);
+}
+
+/* Hover */
+.top-btn:hover{
+background:rgba(99,102,241,0.35);
+box-shadow:0 14px 30px rgba(79,70,229,0.35);
+transform:translateY(-3px);
+}
+
+/* Mobile */
+@media(max-width:768px){
+.float-btn{
+right:20px;
+width:50px;
+height:50px;
+}
+}
+
+.floating-buttons{
+position:fixed;
+right:25px;
+bottom:30px;      /* distance from footer */
+display:flex;
+flex-direction:column;
+gap:20px;         /* equal spacing *
+z-index:9999;
+}
+
+.float-btn{
+width:48px;
+height:48px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+font-size:18px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+cursor:pointer;
+transition:.3s;
+}
+
+.float-btn:hover{
+transform:translateY(-4px);
+}
+  
+</style>
 
   <script>
 
