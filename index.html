@@ -2207,7 +2207,7 @@ margin:auto;
 
 .why-header{
 text-align:center;
-margin-bottom:60px;
+margin-bottom:65px;
 }
 
 .why-badge{
@@ -2252,35 +2252,44 @@ gap:35px;
 /* CARD */
 
 .why-card{
-background:linear-gradient(145deg,#ffffff,#eef2ff);
-border:1px solid #e0e7ff;
+background:#ffffff;
+border:1px solid #e5e7eb;
 border-radius:20px;
-padding:40px 30px;
-text-align:left;
-box-shadow:0 20px 50px rgba(99,102,241,0.08);
-transition:.4s;
+padding:40px 28px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,0.05);
+transition:.35s;
 }
 
 .why-card:hover{
-transform:translateY(-10px);
-box-shadow:0 30px 70px rgba(99,102,241,0.2);
+transform:translateY(-8px);
+box-shadow:0 25px 60px rgba(0,0,0,0.1);
 border-color:#6366f1;
 }
 
 /* ICON */
 
 .why-icon{
-width:60px;
-height:60px;
+width:64px;
+height:64px;
+margin:auto;
+margin-bottom:22px;
 background:linear-gradient(135deg,#6366f1,#4f46e5);
-color:#fff;
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:15px;
-font-size:24px;
-margin-bottom:20px;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(99,102,241,.35);
 }
+
+.why-icon svg{
+width:28px;
+height:28px;
+stroke:white;
+stroke-width:2;
+}
+
+/* TEXT */
 
 .why-card h3{
 font-size:20px;
@@ -2294,6 +2303,8 @@ font-size:15px;
 color:#475569;
 line-height:1.7;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
@@ -2315,7 +2326,7 @@ font-size:30px;
 <span class="why-badge">Why Choose GeoLift</span>
 
 <h2>
-Why Businesses <span class="why-highlight">Work With GeoLift</span>
+Why Businesses <span class="why-highlight">Choose GeoLift</span>
 </h2>
 
 <p>
@@ -2329,29 +2340,83 @@ and transparent implementation.
 
 <div class="why-grid">
 
+
 <div class="why-card">
-<div class="why-icon">📈</div>
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M3 17L9 11L13 15L21 7"></path>
+<path d="M14 7H21V14"></path>
+</svg>
+</div>
+
 <h3>Direct Consultant Handling</h3>
-<p>You work directly with me — no outsourcing, no agency layers, no communication gaps.</p>
+
+<p>
+You work directly with me — no outsourcing, no agency layers,
+and no communication gaps.
+</p>
+
 </div>
 
+
+
 <div class="why-card">
-<div class="why-icon">📍</div>
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M12 21C12 21 4 13.5 4 8.5C4 5.5 6.5 3 9.5 3C11.2 3 12 4 12 4C12 4 12.8 3 14.5 3C17.5 3 20 5.5 20 8.5C20 13.5 12 21 12 21Z"></path>
+</svg>
+</div>
+
 <h3>Focused Expertise</h3>
-<p>Specialized in Google Business Profile optimization and local visibility improvement.</p>
+
+<p>
+Specialized in optimizing Google Business Profiles
+to improve local visibility and search performance.
+</p>
+
 </div>
 
+
+
 <div class="why-card">
-<div class="why-icon">⚡</div>
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"></path>
+</svg>
+</div>
+
 <h3>Structured Implementation</h3>
-<p>Step-by-step improvements focused on profile health, accuracy, and sustainable visibility.</p>
+
+<p>
+Step-by-step improvements focused on profile health,
+accuracy, and sustainable local visibility.
+</p>
+
 </div>
 
+
+
 <div class="why-card">
-<div class="why-icon">🤝</div>
-<h3>Transparent Process</h3>
-<p>Clear communication and practical guidance throughout the optimization process.</p>
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M16 11V5A2 2 0 0 0 14 3H10A2 2 0 0 0 8 5V11"></path>
+<rect x="4" y="11" width="16" height="10" rx="2"></rect>
+</svg>
 </div>
+
+<h3>Transparent Process</h3>
+
+<p>
+Clear communication and practical guidance throughout
+the optimization and improvement process.
+</p>
+
+</div>
+
 
 </div>
 
