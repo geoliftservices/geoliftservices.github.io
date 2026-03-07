@@ -2582,7 +2582,7 @@ profile health, search visibility, and generating real enquiries.
 </div>
 
 <div class="about-stat">
-<div class="stat-number counter" data-target="2021">0</div>
+<div class="stat-number">2021</div>
 <div class="stat-title">Started Freelancing</div>
 </div>
 
@@ -2593,27 +2593,25 @@ profile health, search visibility, and generating real enquiries.
 
 <script>
 
-/* COUNTER FIX */
-
-const counters = document.querySelectorAll('.counter');
-
-const speed = 200;
+const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
-const updateCount = () => {
+const target = +counter.getAttribute("data-target");
 
-const target = +counter.getAttribute('data-target');
+let count = 0;
 
-const count = +counter.innerText;
+const step = target / 60;
 
-const increment = Math.ceil(target / speed);
+function update(){
+
+count += step;
 
 if(count < target){
 
-counter.innerText = count + increment;
+counter.innerText = Math.ceil(count);
 
-setTimeout(updateCount,20);
+requestAnimationFrame(update);
 
 }else{
 
@@ -2621,9 +2619,9 @@ counter.innerText = target + "+";
 
 }
 
-};
+}
 
-updateCount();
+update();
 
 });
 
