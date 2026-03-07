@@ -850,6 +850,300 @@ this.parentElement.classList.toggle("active");
 }
 
 });
+
+
+
+
+
+
+
+
+
+  <script>
+
+function sendWhatsApp(){
+
+let n = document.getElementById("name").value;
+let p = document.getElementById("phone").value;
+let m = document.getElementById("msg").value;
+
+window.open(
+"https://wa.me/919330629573?text="
++ encodeURIComponent("Name: "+n+" Phone: "+p+" Message: "+m)
+);
+
+}
+
+function scrollToTop(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+/* Show / Hide Scroll To Top */
+
+
+</script>
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating-buttons">
+
+<button onclick="scrollToTop()" class="float-btn top-btn">
+<svg viewBox="0 0 24 24" width="22" height="22" 
+     fill="none" 
+     stroke="white" 
+     stroke-width="2" 
+     stroke-linecap="round" 
+     stroke-linejoin="round">
+  <polyline points="18 15 12 9 6 15"></polyline>
+</svg>
+</button>
+
+<a href="tel:+919330629573" class="float-btn call">
+<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+</svg>
+</a>
+  
+<a href="https://wa.me/919330629573" class="float-btn whatsapp" target="_blank">
+<svg viewBox="0 0 32 32" width="26" height="26" fill="white">
+<path d="M16.003 3C8.82 3 3 8.82 3 16c0 2.61.76 5.04 2.08 7.09L3 29l6.09-2.02A12.93 12.93 0 0016.003 29C23.18 29 29 23.18 29 16S23.18 3 16.003 3zm6.72 18.29c-.28.79-1.64 1.5-2.26 1.6-.58.09-1.3.13-2.09-.12-.48-.15-1.1-.36-1.9-.7-3.35-1.45-5.53-5.02-5.7-5.25-.17-.23-1.36-1.82-1.36-3.48 0-1.66.87-2.47 1.18-2.81.3-.33.66-.42.88-.42h.63c.2 0 .48-.07.75.56.29.69.98 2.39 1.07 2.56.09.17.15.36.02.58-.12.23-.18.37-.35.57-.17.2-.36.44-.51.59-.17.17-.34.34-.14.66.2.32.87 1.4 1.86 2.26 1.27 1.13 2.34 1.48 2.67 1.64.33.17.52.14.71-.08.2-.23.84-1 1.07-1.34.22-.34.45-.28.75-.17.3.11 1.92.9 2.25 1.06.33.17.56.25.64.39.08.14.08.8-.2 1.59z"/>
+</svg>
+</a>
+
+</div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const topBtn = document.querySelector(".top-btn");
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 400) {
+      topBtn.style.opacity = "1";
+      topBtn.style.visibility = "visible";
+      topBtn.style.transform = "translateY(0)";
+    } else {
+      topBtn.style.opacity = "0";
+      topBtn.style.visibility = "hidden";
+      topBtn.style.transform = "translateY(15px)";
+    }
+  });
+
+});
+</script>
+</div>
+
+
+<!-- ===== FLOATING GBP AUDIT BUTTON + POPUP FORM ===== -->
+
+<style>
+
+/* ===== DESKTOP VERTICAL BUTTON ===== */
+
+.floating-audit-btn{
+position:fixed;
+right:0;
+top:50%;
+transform:translateY(-50%);
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:#ffffff;
+padding:16px 10px;
+font-family:Poppins,sans-serif;
+font-weight:600;
+font-size:13px;
+letter-spacing:1px;
+writing-mode:vertical-rl;
+text-orientation:mixed;
+border-radius:10px 0 0 10px;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+z-index:9999;
+transition:all 0.3s ease;
+}
+
+.floating-audit-btn:hover{
+background:linear-gradient(135deg,#4f46e5,#4338ca);
+transform:translateY(-50%) translateX(-3px);
+}
+
+
+/* ===== MOBILE BUTTON ===== */
+
+@media (max-width:768px){
+
+.floating-audit-btn{
+writing-mode:horizontal-tb;
+text-orientation:initial;
+right:auto;
+left:50%;
+bottom:25px;
+top:auto;
+transform:translateX(-50%);
+padding:14px 22px;
+border-radius:50px;
+font-size:14px;
+}
+
+.floating-audit-btn:hover{
+transform:translateX(-50%) translateY(-3px);
+}
+
+}
+
+
+/* ===== POPUP BACKGROUND ===== */
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+
+/* ===== POPUP BOX ===== */
+
+.audit-box{
+background:#ffffff;
+padding:35px;
+border-radius:12px;
+width:90%;
+max-width:420px;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+position:relative;
+font-family:Poppins,sans-serif;
+}
+
+
+/* TITLE */
+
+.audit-box h3{
+margin-bottom:8px;
+font-size:22px;
+font-weight:600;
+}
+
+
+/* SUBTITLE */
+
+.audit-box p{
+font-size:14px;
+color:#64748b;
+margin-bottom:20px;
+}
+
+
+/* INPUTS */
+
+.audit-box input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #e2e8f0;
+border-radius:6px;
+font-size:14px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.audit-submit{
+width:100%;
+background:#6366f1;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.audit-submit:hover{
+background:#4f46e5;
+}
+
+
+/* CLOSE BUTTON */
+
+.audit-close{
+position:absolute;
+top:12px;
+right:15px;
+font-size:22px;
+cursor:pointer;
+color:#64748b;
+}
+
+</style>
+
+
+<!-- FLOATING BUTTON -->
+
+<div class="floating-audit-btn" onclick="openAuditForm()">
+Free GBP Audit
+</div>
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-box">
+
+<span class="audit-close" onclick="closeAuditForm()">×</span>
+
+<h3>Free Google Business Profile Audit</h3>
+
+<p>Submit your business details and get a quick visibility analysis of your Google Business Profile.</p>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Phone / WhatsApp" required>
+
+<input type="text" placeholder="Business Name">
+
+<input type="text" placeholder="Google Maps Link">
+
+<button type="submit" class="audit-submit">
+Request Audit
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openAuditForm(){
+document.getElementById("auditPopup").style.display="flex";
+}
+
+function closeAuditForm(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+window.onclick=function(event){
+let popup=document.getElementById("auditPopup");
+if(event.target==popup){
+popup.style.display="none";
+}
+}
+
+</script>
 });
 </script>
 
