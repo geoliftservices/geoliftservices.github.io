@@ -1199,5 +1199,65 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+
+<!-- FLOATING BUTTON -->
+
+<div class="floating-audit-btn" onclick="openAuditForm()">
+Free GBP Audit
+</div>
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-box">
+
+<span class="audit-close" onclick="closeAuditForm()">×</span>
+
+<h3>Free Google Business Profile Audit</h3>
+
+<p>Submit your business details and get a quick visibility analysis of your Google Business Profile.</p>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Phone / WhatsApp" required>
+
+<input type="text" placeholder="Business Name">
+
+<input type="text" placeholder="Google Maps Link">
+
+<button type="submit" class="audit-submit">
+Request Audit
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openAuditForm(){
+document.getElementById("auditPopup").style.display="flex";
+}
+
+function closeAuditForm(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+window.onclick=function(event){
+let popup=document.getElementById("auditPopup");
+if(event.target==popup){
+popup.style.display="none";
+}
+}
+
+</script>
+  
 </body>
 </html>
