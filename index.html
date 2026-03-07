@@ -2824,12 +2824,13 @@ parent.classList.toggle("active");
 </script>
   
 
-  <!-- ================= OUR PROCESS SECTION ================= -->
+
+<!-- ================= OUR PROCESS SECTION ================= -->
 
 <style>
 
 .process-section{
-padding:60px 10px;
+padding:80px 20px;
 background:#ffffff;
 font-family:Poppins,sans-serif;
 }
@@ -2839,9 +2840,22 @@ max-width:1100px;
 margin:auto;
 }
 
+/* HEADER */
+
 .process-header{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:60px;
+}
+
+.process-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
 }
 
 .process-header h2{
@@ -2849,6 +2863,11 @@ font-size:40px;
 font-weight:800;
 color:#0f172a;
 margin-bottom:15px;
+line-height:1.2;
+}
+
+.process-highlight{
+color:#6366f1;
 }
 
 .process-header p{
@@ -2859,11 +2878,12 @@ margin:auto;
 line-height:1.7;
 }
 
+/* PROCESS GRID */
+
 .process-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
 gap:40px;
-position:relative;
 }
 
 .process-card{
@@ -2900,22 +2920,34 @@ line-height:1.7;
 }
 
 @media(max-width:768px){
+
 .process-header h2{
 font-size:30px;
 }
+
 }
 
 </style>
+
 
 <section class="process-section">
 
 <div class="process-container">
 
 <div class="process-header">
-<h2>Our Proven Growth Framework</h2>
+
+<span class="process-badge">Process</span>
+
+<h2>
+Our Structured  
+<span class="process-highlight">Visibility Framework</span>
+</h2>
+
 <p>
-A structured approach to improving Google Business Profile visibility and performance.
+A clear and structured approach used to improve Google Business Profile visibility,
+identify optimization gaps, and build stronger local search performance.
 </p>
+
 </div>
 
 <div class="process-grid">
@@ -2923,25 +2955,25 @@ A structured approach to improving Google Business Profile visibility and perfor
 <div class="process-card">
 <div class="process-number">01</div>
 <h3>Profile Review</h3>
-<p>Analysis of your current Google Business Profile, categories, competitors, and visibility gaps.</p>
+<p>Analysis of your Google Business Profile, categories, competitors, and visibility gaps.</p>
 </div>
 
 <div class="process-card">
 <div class="process-number">02</div>
 <h3>Issue Identification</h3>
-<p>Finding structural, content, or consistency problems affecting visibility.</p>
+<p>Finding structural, content, and consistency problems affecting profile visibility.</p>
 </div>
 
 <div class="process-card">
 <div class="process-number">03</div>
 <h3>Structured Optimization</h3>
-<p>Refining profile details, categories, services, and local signals.</p>
+<p>Refining categories, services, descriptions, and key profile elements.</p>
 </div>
 
 <div class="process-card">
 <div class="process-number">04</div>
 <h3>Guidance & Monitoring</h3>
-<p>Providing recommendations and ongoing direction for sustainable improvement.</p>
+<p>Providing clear recommendations and monitoring improvements over time.</p>
 </div>
 
 </div>
@@ -2950,12 +2982,14 @@ A structured approach to improving Google Business Profile visibility and perfor
 
 </section>
 
-  <!-- ================= TESTIMONIAL SECTION ================= -->
+
+
+<!-- ================= TESTIMONIAL SECTION ================= -->
 
 <style>
 
 .testimonial-section{
-padding:60px 10px;
+padding:80px 20px;
 background:linear-gradient(135deg,#eef2ff,#f8faff);
 font-family:Poppins,sans-serif;
 text-align:center;
@@ -2967,8 +3001,21 @@ margin:auto;
 position:relative;
 }
 
+/* HEADER */
+
 .testimonial-header{
 margin-bottom:50px;
+}
+
+.testimonial-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
 }
 
 .testimonial-header h2{
@@ -2978,10 +3025,19 @@ color:#0f172a;
 margin-bottom:15px;
 }
 
+.testimonial-highlight{
+color:#6366f1;
+}
+
 .testimonial-header p{
 color:#64748b;
 font-size:16px;
+max-width:600px;
+margin:auto;
+line-height:1.7;
 }
+
+/* TESTIMONIAL CARD */
 
 .testimonial-card{
 background:#ffffff;
@@ -3021,6 +3077,8 @@ color:#6366f1;
 margin-top:4px;
 }
 
+/* DOT CONTROLS */
+
 .testimonial-controls{
 margin-top:30px;
 display:flex;
@@ -3043,21 +3101,36 @@ transform:scale(1.2);
 }
 
 @media(max-width:768px){
+
 .testimonial-header h2{
 font-size:30px;
 }
+
 }
 
 </style>
+
 
 <section class="testimonial-section">
 
 <div class="testimonial-container">
 
 <div class="testimonial-header">
-<h2>What Our Clients Say</h2>
-<p>Feedback from businesses after profile optimization and visibility improvements.</p>
+
+<span class="testimonial-badge">Client Feedback</span>
+
+<h2>
+What Businesses Say  
+About Their <span class="testimonial-highlight">Visibility Improvements</span>
+</h2>
+
+<p>
+Feedback from businesses after improving their Google Business Profile
+and local search visibility.
+</p>
+
 </div>
+
 
 <div class="testimonial-card active">
 <div class="testimonial-text">
@@ -3067,6 +3140,7 @@ font-size:30px;
 <div class="testimonial-role">Manufacturing Sector</div>
 </div>
 
+
 <div class="testimonial-card">
 <div class="testimonial-text">
 “Our profile had several issues affecting visibility. After corrections and optimization, performance became more stable and enquiries improved.”
@@ -3075,6 +3149,7 @@ font-size:30px;
 <div class="testimonial-role">Local Services</div>
 </div>
 
+
 <div class="testimonial-card">
 <div class="testimonial-text">
 “The structured approach helped us understand how our Google Business Profile should be properly optimized.”
@@ -3082,6 +3157,7 @@ font-size:30px;
 <div class="testimonial-name">Business Owner</div>
 <div class="testimonial-role">B2B Industry</div>
 </div>
+
 
 <div class="testimonial-controls">
 <div class="testimonial-dot active"></div>
@@ -3093,20 +3169,26 @@ font-size:30px;
 
 </section>
 
+
 <script>
 
 const testimonials = document.querySelectorAll(".testimonial-card");
 const dots = document.querySelectorAll(".testimonial-dot");
+
 let current = 0;
 
 function showTestimonial(index){
+
 testimonials.forEach((card,i)=>{
 card.classList.remove("active");
 dots[i].classList.remove("active");
 });
+
 testimonials[index].classList.add("active");
 dots[index].classList.add("active");
+
 current = index;
+
 }
 
 dots.forEach((dot,i)=>{
@@ -3118,9 +3200,10 @@ showTestimonial(i);
 setInterval(()=>{
 current = (current + 1) % testimonials.length;
 showTestimonial(current);
-}, 5000);
+},5000);
 
 </script>
+  
 
   <!-- ================= FINAL CTA SECTION ================= -->
 
