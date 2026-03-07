@@ -2628,13 +2628,12 @@ update();
 </script>
 
   
-
-  <!-- ================= FAQ SECTION ================= -->
+<!-- ================= FAQ SECTION ================= -->
 
 <style>
 
 .faq-section{
-padding:60px 10px;
+padding:80px 20px;
 background:#f8fafc;
 font-family:Poppins,sans-serif;
 }
@@ -2644,9 +2643,22 @@ max-width:900px;
 margin:auto;
 }
 
+/* HEADER */
+
 .faq-header{
 text-align:center;
 margin-bottom:60px;
+}
+
+.faq-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
 }
 
 .faq-header h2{
@@ -2654,13 +2666,22 @@ font-size:38px;
 font-weight:800;
 color:#0f172a;
 margin-bottom:15px;
+line-height:1.2;
+}
+
+.faq-highlight{
+color:#6366f1;
 }
 
 .faq-header p{
 color:#64748b;
 font-size:16px;
 line-height:1.7;
+max-width:620px;
+margin:auto;
 }
+
+/* FAQ BOX */
 
 .faq-item{
 background:#ffffff;
@@ -2711,9 +2732,11 @@ transform:rotate(45deg);
 }
 
 @media(max-width:768px){
+
 .faq-header h2{
 font-size:28px;
 }
+
 }
 
 </style>
@@ -2722,10 +2745,28 @@ font-size:28px;
 
 <div class="faq-container">
 
+<!-- HEADER -->
+
 <div class="faq-header">
-<h2>Frequently Asked Questions</h2>
-<p>Common questions about Google Business Profile optimization and local visibility consulting.</p>
+
+<span class="faq-badge">FAQ</span>
+
+<h2>
+Questions About  
+<span class="faq-highlight">Local Visibility</span>  
+and Google Profile Optimization
+</h2>
+
+<p>
+Answers to common questions about improving visibility on 
+Google Maps, optimizing your business profile, and generating 
+more enquiries through structured local search improvements.
+</p>
+
 </div>
+
+
+<!-- FAQ ITEMS -->
 
 <div class="faq-item">
 <div class="faq-question">
@@ -2781,6 +2822,7 @@ parent.classList.toggle("active");
 });
 
 </script>
+  
 
   <!-- ================= OUR PROCESS SECTION ================= -->
 
