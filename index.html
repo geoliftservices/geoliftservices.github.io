@@ -2361,7 +2361,7 @@ and transparent implementation.
 
   
   
- <!-- ================= ABOUT SECTION ================= -->
+<!-- ================= ABOUT SECTION ================= -->
 
 <style>
 
@@ -2375,7 +2375,7 @@ font-family:Poppins,sans-serif;
 max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:1.1fr .9fr;
+grid-template-columns:1fr 1fr;
 gap:70px;
 align-items:center;
 }
@@ -2414,14 +2414,13 @@ font-size:16px;
 color:#475569;
 line-height:1.8;
 margin-bottom:16px;
-max-width:540px;
 }
 
 /* CTA */
 
 .about-cta{
 display:inline-block;
-margin-top:22px;
+margin-top:20px;
 padding:12px 26px;
 background:#6366f1;
 color:#fff;
@@ -2441,15 +2440,15 @@ transform:translateY(-2px);
 /* ================= STATS ================= */
 
 .about-stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
+display:flex;
 gap:24px;
 margin-top:45px;
 }
 
 .about-stat{
+flex:1;
 background:#fff;
-padding:28px 28px;
+padding:28px;
 border-radius:14px;
 border:1px solid #e5e7eb;
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
@@ -2463,10 +2462,10 @@ border-color:#6366f1;
 }
 
 .stat-number{
-font-size:40px;
+font-size:42px;
 font-weight:800;
 color:#6366f1;
-margin-bottom:6px;
+margin-bottom:8px;
 }
 
 .stat-title{
@@ -2482,42 +2481,12 @@ color:#64748b;
 line-height:1.5;
 }
 
-/* ================= IMAGE ================= */
-
-.about-image{
-position:relative;
-}
+/* IMAGE */
 
 .about-image img{
 width:100%;
 border-radius:20px;
 box-shadow:0 30px 70px rgba(0,0,0,0.15);
-}
-
-.about-image:before{
-content:"";
-position:absolute;
-width:120px;
-height:120px;
-background:#6366f1;
-opacity:.08;
-border-radius:50%;
-top:-25px;
-left:-25px;
-z-index:-1;
-}
-
-/* ================= ANIMATION ================= */
-
-.fade-up{
-opacity:0;
-transform:translateY(30px);
-transition:all .8s ease;
-}
-
-.fade-up.show{
-opacity:1;
-transform:translateY(0);
 }
 
 /* ================= MOBILE ================= */
@@ -2534,11 +2503,7 @@ font-size:30px;
 }
 
 .about-stats{
-grid-template-columns:1fr;
-}
-
-.stat-number{
-font-size:36px;
+flex-direction:column;
 }
 
 }
@@ -2548,9 +2513,9 @@ font-size:36px;
 
 <section class="about-section" id="about">
 
-<div class="about-container fade-up">
+<div class="about-container">
 
-<!-- TEXT -->
+<!-- TEXT SIDE -->
 
 <div class="about-text">
 
@@ -2588,29 +2553,41 @@ profile health, search visibility, and generating real enquiries.
 <div class="about-stats">
 
 <div class="about-stat">
+
 <div class="stat-number counter" data-target="4">0</div>
+
 <div class="stat-title">Years Experience</div>
+
 <div class="stat-text">
 Helping businesses improve local visibility
 </div>
+
 </div>
 
 
 <div class="about-stat">
+
 <div class="stat-number counter" data-target="50">0</div>
+
 <div class="stat-title">Profiles Optimized</div>
+
 <div class="stat-text">
 Businesses supported with structured optimization
 </div>
+
 </div>
 
 
 <div class="about-stat">
+
 <div class="stat-number counter" data-target="2021">0</div>
+
 <div class="stat-title">Started Freelancing</div>
+
 <div class="stat-text">
 Beginning of independent consulting journey
 </div>
+
 </div>
 
 </div>
@@ -2633,23 +2610,25 @@ Beginning of independent consulting journey
 
 <script>
 
-/* COUNTER */
+/* COUNTER FIXED */
 
 const counters = document.querySelectorAll('.counter');
 
 counters.forEach(counter => {
 
+const target = +counter.getAttribute('data-target');
+
+let count = 0;
+
 const update = () => {
 
-const target = +counter.getAttribute('data-target');
-const count = +counter.innerText;
-const speed = 200;
-const inc = target / speed;
+count++;
+
+counter.innerText = count;
 
 if(count < target){
 
-counter.innerText = Math.ceil(count + inc);
-setTimeout(update,10);
+requestAnimationFrame(update);
 
 }else{
 
@@ -2663,26 +2642,9 @@ update();
 
 });
 
-
-/* SCROLL ANIMATION */
-
-const observer = new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-});
-
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
 </script>
+
+  
 
   <!-- ================= FAQ SECTION ================= -->
 
