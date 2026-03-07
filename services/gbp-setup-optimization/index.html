@@ -7,8 +7,6 @@
 
   <meta name="robots" content="noindex, nofollow">
 
-<title>Rank. Convert. Grow. | GeoLift</title>
-
 <link rel="icon"
 href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a3b2-80f37302ffd6.png">
 
@@ -31,8 +29,8 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 --text-medium:#475569;
 --text-light:#64748b;
 
---section-spacing:140px;
---section-spacing-mobile:90px;
+--section-spacing:60px;
+--section-spacing-mobile:40px;
 }
 
 /* Global Reset */
@@ -43,7 +41,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Poppins',sans-serif;
+font-family:'pins',sans-serif;
 background:var(--bg-light);
 color:var(--text-dark);
 line-height:1.7;
@@ -69,7 +67,7 @@ padding:var(--section-spacing-mobile) 20px;
 /* ============================= */
 
 .hero{
-padding:0 20px;
+padding:90px 20px 80px;
 }
 
 .results-section{
@@ -124,7 +122,7 @@ margin-bottom:18px;
 .process-header,
 .testimonial-header,
 .faq-header{
-margin-bottom:80px;
+margin-bottom:50px;
 }
 
 @media(max-width:768px){
@@ -177,9 +175,8 @@ background:rgba(15,23,42,0.04);
 /* ================= PRICING SECTION ================= */
 
 .pricing-section{
-padding:130px 20px;
 background:linear-gradient(135deg,#ffffff,#f8faff);
-font-family:Poppins,sans-serif;
+font-family:pins,sans-serif;
 overflow:hidden;
 }
 
@@ -400,15 +397,13 @@ scroll-behavior:smooth;
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
 <style>
 
-<!-- ===== PREMIUM HEADER IMPROVED MOBILE DESIGN ===== -->
-
 
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;}
+body{font-family:'pins',sans-serif;}
 
 /* ===== HEADER BASE ===== */
 
@@ -643,17 +638,31 @@ transform:rotate(180deg);
 }
 }
 
+  .dropdown.active .dropbtn{
+color:#6366f1;
+font-weight:600;
+}
+
+.dropdown.active .arrow{
+transform:rotate(180deg);
+}
+
 @media(max-width:992px){
 
 .dropdown-content{
 position:static;
-background:transparent;
-box-shadow:none;
-padding:0;
+display:none;
+
 opacity:1;
 visibility:visible;
 transform:none;
-display:none;
+
+padding:0;
+margin-top:8px;
+background:transparent;
+box-shadow:none;
+border-radius:0;
+width:100%;
 }
 
 .dropdown.active .dropdown-content{
@@ -662,19 +671,17 @@ display:block;
 
 .dropdown-content a{
 display:block;
-padding:12px 14px;
-margin:0 15px 8px 15px;   /* left + right spacing */
-border:1px solid #e5e7eb;
-border-radius:8px;
-background:#ffffff;
-color:#334155;
-}
-
-.arrow{
-margin-left:auto;
+width:100%;
+padding:12px 0;
+border-bottom:1px solid #e5e7eb;
+color:#1e293b;
+font-size:14px;
+white-space:normal;
+word-break:break-word;
 }
 
 }
+
 
   @media (max-width:768px){
     .footer-bottom{
@@ -710,7 +717,38 @@ margin-left:auto;
     gap:10px;
   }
 }
-  
+  .dropdown-content a:hover{
+color:#2563eb;
+}
+
+  @media(max-width:992px){
+
+.dropdown-content a{
+color:#1e293b !important;
+display:block;
+padding:12px 0;
+border-bottom:1px solid #e5e7eb;
+background:transparent !important;
+}
+
+}
+
+  .dropdown-content{
+width:100%;
+}
+
+  .dropdown-content a{
+white-space:normal;
+word-break:break-word;
+line-height:1.4;
+}
+
+  @media(max-width:992px){
+#menu{
+width:85%;
+max-width:320px;
+}
+}
 </style>
 
 
@@ -726,7 +764,7 @@ margin-left:auto;
   <a href="/">Home</a>
 
   <div class="dropdown">
-    <a href="/services/" class="dropbtn">
+    <a href="#services" class="dropbtn">
       Services <span class="arrow">▾</span>
     </a>
 
@@ -737,9 +775,9 @@ margin-left:auto;
     </div>
   </div>
 
-  <a href="/about/">About</a>
+  <a href="#about">About</a>
+  <a href="#plans">Plans</a>
   <a href="https://blog.geolift.co.in/" target="_blank" rel="noopener">Blog</a>
-  <a href="/contact/">Contact</a>
 
   <a href="tel:+919330629573" class="cta">Get Free Consultation</a>
 
@@ -816,765 +854,3 @@ this.parentElement.classList.toggle("active");
 </script>
 
 <div style="height:90px;"></div>
-
-  <!-- ===== PAGE STYLES (ONLY FOR THIS PAGE) ===== -->
-<style>
-
-/* ===== GLOBAL SECTION SPACING (REDUCED GAPS) ===== */
-.section{
-padding:60px 8%;
-position:relative;
-}
-
-.section-small{
-padding:40px 8%;
-}
-
-/* ===== LIGHT HERO SECTION ===== */
-.hero-light{
-background:linear-gradient(135deg,#f8fbff,#eef4ff);
-text-align:center;
-padding:100px 8% 70px;
-}
-
-.hero-light h1{
-font-size:42px;
-font-weight:800;
-color:#111;
-margin-bottom:20px;
-}
-
-.hero-light p{
-font-size:18px;
-color:#555;
-max-width:800px;
-margin:auto;
-margin-bottom:30px;
-}
-
-/* ===== ANIMATED BUTTON ===== */
-.btn-primary{
-display:inline-block;
-padding:14px 34px;
-background:#2563eb;
-color:#fff;
-font-weight:600;
-border-radius:40px;
-transition:all .3s ease;
-box-shadow:0 8px 20px rgba(37,99,235,0.25);
-text-decoration:none;
-}
-
-.btn-primary:hover{
-background:#1e40af;
-transform:translateY(-4px);
-box-shadow:0 15px 30px rgba(37,99,235,0.35);
-}
-
-/* ===== BORDERED CARD DESIGN ===== */
-.card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.card{
-background:#fff;
-border:1px solid #e5e7eb;
-border-radius:18px;
-padding:28px;
-transition:all .3s ease;
-}
-
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-border-color:#2563eb;
-}
-
-.card h3{
-font-size:20px;
-margin-bottom:15px;
-color:#111;
-}
-
-.card p{
-font-size:15px;
-color:#555;
-line-height:1.7;
-}
-
-/* ===== SECTION TITLE ===== */
-.section-title{
-text-align:center;
-margin-bottom:20px;
-}
-
-.section-title h2{
-font-size:32px;
-font-weight:700;
-margin-bottom:10px;
-}
-
-.section-title p{
-color:#666;
-font-size:16px;
-}
-
-/* ===== FAQ DESIGN ===== */
-.faq-item{
-border:1px solid #e5e7eb;
-border-radius:14px;
-margin-bottom:15px;
-overflow:hidden;
-transition:.3s;
-}
-
-.faq-question{
-padding:18px 22px;
-cursor:pointer;
-font-weight:600;
-background:#f9fafb;
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
-.faq-answer{
-max-height:0;
-overflow:hidden;
-transition:max-height .4s ease;
-padding:0 22px;
-background:#fff;
-color:#555;
-}
-
-.faq-item.active .faq-answer{
-max-height:200px;
-padding:15px 22px;
-}
-
-.faq-item.active{
-border-color:#2563eb;
-}
-
-@media(max-width:768px){
-.hero-light h1{font-size:30px;}
-.section{padding:50px 6%;}
-}
-
-</style>
-
-
-<!-- ===== HERO SECTION ===== -->
-<section class="hero-light">
-<h1>Google My Business Profile Setup Service in India</h1>
-<p>Professional Google Business Profile creation, verification, and optimization services designed to help businesses across India rank on Google Maps, increase local visibility, and generate consistent leads.</p>
-<a href="/contact/" class="btn-primary">Get Started Today</a>
-</section>
-
-
-<!-- ===== WHY GMB IMPORTANT ===== -->
-<section class="section">
-<div class="section-title">
-<h2>Why Google Business Profile Setup Is Critical</h2>
-<p>Your visibility on Google Maps directly impacts your local growth.</p>
-</div>
-
-<div class="card-grid">
-<div class="card">
-<h3>Rank in Google Map Pack</h3>
-<p>Appear in the top 3 local listings when customers search for services near them. This placement generates maximum visibility and high intent leads.</p>
-</div>
-
-<div class="card">
-<h3>Increase Calls & Direction Requests</h3>
-<p>Optimized profiles receive significantly more direct calls, direction requests, and website clicks from local customers.</p>
-</div>
-
-<div class="card">
-<h3>Build Local Trust</h3>
-<p>Structured descriptions, categories, reviews, and images increase credibility and customer confidence.</p>
-</div>
-</div>
-</section>
-
-
-<!-- ===== WHAT WE INCLUDE ===== -->
-<section class="section-small">
-<div class="section-title">
-<h2>What We Include in Our Setup Service</h2>
-</div>
-
-<div class="card-grid">
-<div class="card">
-<h3>Complete Profile Creation</h3>
-<p>Business name formatting, category selection, NAP consistency, service areas, hours setup, website linking, and appointment integration.</p>
-</div>
-
-<div class="card">
-<h3>Verification Assistance</h3>
-<p>Step-by-step support for postcard, video verification, and suspended listing recovery guidance.</p>
-</div>
-
-<div class="card">
-<h3>Local SEO Optimization</h3>
-<p>Strategic keyword placement inside description, services, products, Q&A, and posts for higher relevance.</p>
-</div>
-
-<div class="card">
-<h3>Geo-Targeting Strategy</h3>
-<p>Optimizing your listing for surrounding areas to expand reach and appear in nearby location searches.</p>
-</div>
-</div>
-</section>
-
-
-<!-- ===== BENEFITS ===== -->
-<section class="section">
-<div class="section-title">
-<h2>Benefits of Professional Optimization</h2>
-</div>
-
-<div class="card-grid">
-<div class="card">
-<h3>Higher Local Visibility</h3>
-<p>Your business appears consistently for targeted local searches in your service area.</p>
-</div>
-
-<div class="card">
-<h3>Improved Conversion Rate</h3>
-<p>Optimized profiles convert searchers into callers faster due to structured and persuasive setup.</p>
-</div>
-
-<div class="card">
-<h3>Long-Term Ranking Stability</h3>
-<p>Proper structure ensures your listing remains strong and avoids suspension risks.</p>
-</div>
-</div>
-</section>
-
-
-<!-- ===== FAQ SECTION ===== -->
-<section class="section-small">
-<div class="section-title">
-<h2>Frequently Asked Questions</h2>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Do you provide service across India? <span>+</span></div>
-<div class="faq-answer">
-<p>Yes, we work with businesses across India including metro cities and Tier 2 & Tier 3 towns.</p>
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">How long does verification take? <span>+</span></div>
-<div class="faq-answer">
-<p>Profile creation is immediate, but Google verification may take a few days depending on the method used.</p>
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Is this useful for small businesses? <span>+</span></div>
-<div class="faq-answer">
-<p>Absolutely. Local businesses benefit the most from optimized Google Business Profiles because customers search online before visiting.</p>
-</div>
-</div>
-
-</section>
-
-
-<!-- ===== FAQ SCRIPT ===== -->
-<script>
-document.querySelectorAll(".faq-question").forEach(item=>{
-item.addEventListener("click",()=>{
-const parent=item.parentElement;
-parent.classList.toggle("active");
-});
-});
-</script>
-
-
-<!-- ================= MODERN RESPONSIVE FOOTER ================= -->
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-
-.footer{
-background:linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
-padding:80px 20px 30px;
-border-top:1px solid #e5e7ff;
-}
-
-.footer-container{
-max-width:1200px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:50px;
-}
-
-/* BRAND */
-
-.footer-brand img{
-height:44px;
-margin-bottom:20px;
-}
-
-.footer-tagline{
-font-size:14px;
-line-height:1.7;
-color:#64748b;
-margin-bottom:20px;
-max-width:280px;
-}
-
-.footer-contact-item{
-display:flex;
-align-items:center;
-margin-bottom:14px;
-font-size:14px;
-font-weight:500;
-color:#0f172a;
-}
-
-.footer-contact-item i{
-width:34px;
-height:34px;
-background:#eef2ff;
-color:#6366f1;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-margin-right:12px;
-font-size:14px;
-}
-
-/* SOCIAL */
-
-.footer-social{
-margin-top:20px;
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.footer-social a{
-width:38px;
-height:38px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:10px;
-background:#f1f5f9;
-color:#6366f1;
-font-size:15px;
-transition:.3s;
-}
-
-.footer-social a:hover{
-background:#6366f1;
-color:#fff;
-transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(99,102,241,.3);
-}
-
-/* HEADINGS */
-
-.footer h4{
-font-size:16px;
-margin-bottom:20px;
-font-weight:700;
-color:#0f172a;
-}
-
-/* LINKS */
-
-.footer ul{
-list-style:none;
-padding:0;
-}
-
-.footer ul li{
-margin-bottom:10px;
-}
-
-.footer ul li a{
-text-decoration:none;
-color:#64748b;
-font-size:14px;
-transition:.3s;
-}
-
-.footer ul li a:hover{
-color:#6366f1;
-padding-left:4px;
-}
-
-/* SERVICE AREA */
-
-.service-area{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-}
-
-.service-area span{
-background:#ffffff;
-color:#4f46e5;
-font-size:12px;
-padding:7px 14px;
-border-radius:30px;   /* More pill shape */
-border:1.5px solid #6366f1;  /* Makes radius visible */
-font-weight:500;
-transition:0.3s;
-}
-
-.service-area span:hover{
-background:#6366f1;
-color:#ffffff;
-}
-
-/* BOTTOM */
-
-.footer-bottom{
-    border-top: 1px solid rgba(0,0,0,0.08);
-    margin-top: 50px;
-    padding: 18px 0;
-    font-size: 13.5px;
-    color: #6b7280;
-}
-
-.footer-legal{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-}
-
-.footer-legal a{
-text-decoration:none;
-color:#64748b;
-transition:.3s;
-}
-
-.footer-legal a:hover{
-color:#6366f1;
-}
-
-/* BACK TO TOP */
-
-
-/* WHATSAPP */
-
-
-/* MOBILE FIX */
-
-@media(max-width:768px){
-
-.footer{
-padding:60px 20px 120px;
-}
-
-.footer-container{
-grid-template-columns:1fr;
-gap:35px;
-}
-
-.footer-tagline{
-max-width:100%;
-}
-
-.footer-bottom{
-flex-direction:column;
-gap:12px;
-text-align:center;
-}
-
-.footer-legal{
-justify-content:center;
-}
-
-}
-/* ===== FLOATING BUTTONS ===== */
-
-.float-btn{
-width:45px;
-height:45px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:18px;
-box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-cursor:pointer;
-z-index:9999;
-transition:.3s;
-}
-
-.float-btn:hover{
-transform:translateY(-5px);
-}
-
-/* WhatsApp */
-.whatsapp{ 
-background:#25D366; 
-}
-
-/* Call */
-.call{
-background:#2563eb;
-}
-
-/* ===== BALANCED PREMIUM BACK TO TOP ===== */
-
-.top-btn{
-
-/* Small size */
-width:44px;
-height:44px;
-font-size:16px;
-
-/* More visible but not loud */
-background:rgba(99,102,241,0.22);
-border:1px solid rgba(99,102,241,0.35);
-
-box-shadow:0 8px 22px rgba(79,70,229,0.25);
-
-opacity:0;
-visibility:hidden;
-transform:translateY(15px);
-transition:all .3s ease;
-}
-
-/* Show when scrolling */
-.top-btn.show{
-opacity:0.95;
-visibility:visible;
-transform:translateY(0);
-}
-
-/* Hover */
-.top-btn:hover{
-background:rgba(99,102,241,0.35);
-box-shadow:0 14px 30px rgba(79,70,229,0.35);
-transform:translateY(-3px);
-}
-
-/* Mobile */
-@media(max-width:768px){
-.float-btn{
-right:20px;
-width:50px;
-height:50px;
-}
-}
-
-.floating-buttons{
-position:fixed;
-right:25px;
-bottom:30px;      /* distance from footer */
-display:flex;
-flex-direction:column;
-gap:20px;         /* equal spacing *
-z-index:9999;
-}
-
-.float-btn{
-width:48px;
-height:48px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#fff;
-font-size:18px;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-cursor:pointer;
-transition:.3s;
-}
-
-.float-btn:hover{
-transform:translateY(-4px);
-}
-  
-</style>
-
-
-<footer class="footer">
-
-<div class="footer-container">
-
-<!-- BRAND -->
-<div class="footer-brand">
-<img src="https://image2url.com/r2/default/images/1772265884248-84b6840b-e365-486c-8105-67b21889dfea.png">
-
-<p class="footer-tagline">
-Independent Google Business Profile consulting focused on improving visibility, accuracy, and enquiry growth.
-</p>
-
-<div class="footer-contact-item">
-<i class="fas fa-phone"></i>
-+91 9330629573
-</div>
-
-<div class="footer-contact-item">
-<i class="fas fa-envelope"></i>
-contact.geolift@gmail.com
-</div>
-
-<div class="footer-social">
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-linkedin-in"></i></a>
-<a href="#"><i class="fab fa-youtube"></i></a>
-<a href="#"><i class="fab fa-x-twitter"></i></a>
-</div>
-</div>
-
-
-<!-- QUICK LINKS -->
-<div>
-  <h4>Quick Links</h4>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/services/">Services</a></li>
-    <li><a href="/about/">About Us</a></li>
-    <li><a href="https://blog.geolift.co.in/" target="_blank" rel="noopener">Blog</a></li>
-    <li><a href="/contact/">Contact</a></li>
-  </ul>
-</div>
-
-<!-- SERVICES -->
-<div>
-  <h4>Our Services</h4>
-  <ul>
-    <li><a href="/services/gbp-setup-optimization/">GBP Setup & Optimization</a></li>
-    <li><a href="/services/advanced-google-maps-ranking/">Advanced Google Maps Ranking</a></li>
-    <li><a href="/services/custom-business-website-development/">Custom Business Website Development</a></li>
-  </ul>
-</div>
-
-
-<!-- ADDRESS SECTION (FIXED WRAPPER) -->
-<div>
-<h4>Our Office</h4>
-<p style="font-size:14px;color:#64748b;margin-bottom:15px;">
-<strong>GeoLift Services</strong><br>
-Dankuni, Hooghly<br>
-West Bengal – 712311<br>
-India
-</p>
-
-<h4>Primary Service Areas</h4>
-<div class="service-area">
-<span>Kolkata</span>
-<span>Mumbai</span>
-<span>Delhi</span>
-<span>Bangalore</span>
-<span>Hyderabad</span>
-</div>
-
-
-
-<p style="font-size:13px;color:#64748b;margin-top:12px;">
-Remote Local SEO & Google Maps ranking services available PAN India.
-</p>
-</div>
-
-</div> <!-- footer-container -->
-
-<div class="footer-bottom">
-  <span>© 2026 GeoLift — Google Business Profile Consultant</span>
-
-  <span class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms</a>
-    <a href="#">Disclaimer</a>
-    <a href="#">Sitemap</a>
-  </span>
-</div>
-
-</footer>
-
-
-<script>
-
-function sendWhatsApp(){
-
-let n = document.getElementById("name").value;
-let p = document.getElementById("phone").value;
-let m = document.getElementById("msg").value;
-
-window.open(
-"https://wa.me/919330629573?text="
-+ encodeURIComponent("Name: "+n+" Phone: "+p+" Message: "+m)
-);
-
-}
-
-function scrollToTop(){
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-}
-
-/* Show / Hide Scroll To Top */
-
-
-</script>
-
-<!-- FLOATING BUTTONS -->
-
-<div class="floating-buttons">
-
-<button onclick="scrollToTop()" class="float-btn top-btn">
-<svg viewBox="0 0 24 24" width="22" height="22" 
-     fill="none" 
-     stroke="white" 
-     stroke-width="2" 
-     stroke-linecap="round" 
-     stroke-linejoin="round">
-  <polyline points="18 15 12 9 6 15"></polyline>
-</svg>
-</button>
-
-<a href="tel:+919330629573" class="float-btn call">
-<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
-<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
-</svg>
-</a>
-  
-<a href="https://wa.me/919330629573" class="float-btn whatsapp" target="_blank">
-<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
-  <path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H8l-4 4V6a2 2 0 012-2z"/>
-</svg>
-</a>
-
-</div>
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  const topBtn = document.querySelector(".top-btn");
-
-  window.addEventListener("scroll", function() {
-    if (window.scrollY > 400) {
-      topBtn.style.opacity = "1";
-      topBtn.style.visibility = "visible";
-      topBtn.style.transform = "translateY(0)";
-    } else {
-      topBtn.style.opacity = "0";
-      topBtn.style.visibility = "hidden";
-      topBtn.style.transform = "translateY(15px)";
-    }
-  });
-
-});
-</script>
-</body>
-</html>
