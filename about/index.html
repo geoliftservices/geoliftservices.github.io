@@ -31,8 +31,8 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 --text-medium:#475569;
 --text-light:#64748b;
 
---section-spacing:140px;
---section-spacing-mobile:90px;
+--section-spacing:60px;
+--section-spacing-mobile:40px;
 }
 
 /* Global Reset */
@@ -43,7 +43,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Poppins',sans-serif;
+font-family:'pins',sans-serif;
 background:var(--bg-light);
 color:var(--text-dark);
 line-height:1.7;
@@ -69,7 +69,7 @@ padding:var(--section-spacing-mobile) 20px;
 /* ============================= */
 
 .hero{
-padding:0 20px;
+padding:90px 20px 80px;
 }
 
 .results-section{
@@ -124,7 +124,7 @@ margin-bottom:18px;
 .process-header,
 .testimonial-header,
 .faq-header{
-margin-bottom:80px;
+margin-bottom:50px;
 }
 
 @media(max-width:768px){
@@ -177,9 +177,8 @@ background:rgba(15,23,42,0.04);
 /* ================= PRICING SECTION ================= */
 
 .pricing-section{
-padding:130px 20px;
 background:linear-gradient(135deg,#ffffff,#f8faff);
-font-family:Poppins,sans-serif;
+font-family:pins,sans-serif;
 overflow:hidden;
 }
 
@@ -400,7 +399,7 @@ scroll-behavior:smooth;
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=pins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -408,7 +407,7 @@ scroll-behavior:smooth;
 
 
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;}
+body{font-family:'pins',sans-serif;}
 
 /* ===== HEADER BASE ===== */
 
@@ -643,17 +642,31 @@ transform:rotate(180deg);
 }
 }
 
+  .dropdown.active .dropbtn{
+color:#6366f1;
+font-weight:600;
+}
+
+.dropdown.active .arrow{
+transform:rotate(180deg);
+}
+
 @media(max-width:992px){
 
 .dropdown-content{
 position:static;
-background:transparent;
-box-shadow:none;
-padding:0;
+display:none;
+
 opacity:1;
 visibility:visible;
 transform:none;
-display:none;
+
+padding:0;
+margin-top:8px;
+background:transparent;
+box-shadow:none;
+border-radius:0;
+width:100%;
 }
 
 .dropdown.active .dropdown-content{
@@ -662,19 +675,17 @@ display:block;
 
 .dropdown-content a{
 display:block;
-padding:12px 14px;
-margin:0 15px 8px 15px;   /* left + right spacing */
-border:1px solid #e5e7eb;
-border-radius:8px;
-background:#ffffff;
-color:#334155;
-}
-
-.arrow{
-margin-left:auto;
+width:100%;
+padding:12px 0;
+border-bottom:1px solid #e5e7eb;
+color:#1e293b;
+font-size:14px;
+white-space:normal;
+word-break:break-word;
 }
 
 }
+
 
   @media (max-width:768px){
     .footer-bottom{
@@ -710,7 +721,38 @@ margin-left:auto;
     gap:10px;
   }
 }
-  
+  .dropdown-content a:hover{
+color:#2563eb;
+}
+
+  @media(max-width:992px){
+
+.dropdown-content a{
+color:#1e293b !important;
+display:block;
+padding:12px 0;
+border-bottom:1px solid #e5e7eb;
+background:transparent !important;
+}
+
+}
+
+  .dropdown-content{
+width:100%;
+}
+
+  .dropdown-content a{
+white-space:normal;
+word-break:break-word;
+line-height:1.4;
+}
+
+  @media(max-width:992px){
+#menu{
+width:85%;
+max-width:320px;
+}
+}
 </style>
 
 
@@ -812,50 +854,6 @@ this.parentElement.classList.toggle("active");
 }
 
 });
-});
-</script>
-
-<div style="height:90px;"></div>
-
-<!-- ================= SCROLL ANIMATION (START AFTER HERO) ================= -->
-<style>
-.section-fade{
-opacity:0;
-transform:translateY(40px);
-transition:all .8s ease;
-}
-.section-fade.visible{
-opacity:1;
-transform:translateY(0);
-}
-@media(max-width:900px){
-.grid-2{
-grid-template-columns:1fr !important;
-gap:40px !important;
-}
-.section{
-padding:90px 20px !important;
-}
-.hero-title{
-font-size:34px !important;
-}
-.section-title{
-font-size:28px !important;
-}
-}
-</style>
-
-<script>
-window.addEventListener("scroll", function(){
-const heroHeight = document.getElementById("about-hero").offsetHeight;
-
-if(window.scrollY > heroHeight - 150){
-document.querySelectorAll(".section-fade").forEach(el=>{
-if(el.getBoundingClientRect().top < window.innerHeight-80){
-el.classList.add("visible");
-}
-});
-}
 });
 </script>
 
