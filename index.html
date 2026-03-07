@@ -2359,7 +2359,7 @@ and transparent implementation.
 
 </section>
   
-  <!-- ================= ABOUT SECTION ================= -->
+ <!-- ================= ABOUT SECTION ================= -->
 
 <style>
 
@@ -2435,36 +2435,58 @@ background:#4f46e5;
 transform:translateY(-2px);
 }
 
-/* stats */
+/* ================= STATS ================= */
 
 .about-stats{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px;
-margin-top:35px;
+gap:24px;
+margin-top:45px;
 }
 
 .about-stat{
+display:flex;
+align-items:center;
+gap:18px;
 background:#ffffff;
-padding:24px;
+padding:26px 28px;
 border-radius:14px;
-text-align:center;
 border:1px solid #e5e7eb;
 box-shadow:0 10px 30px rgba(0,0,0,0.05);
+transition:.3s;
 }
 
-.about-stat h3{
-font-size:28px;
+.about-stat:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 50px rgba(0,0,0,0.1);
+border-color:#6366f1;
+}
+
+/* stat number */
+
+.stat-number{
+font-size:40px;
+font-weight:800;
 color:#6366f1;
-margin-bottom:5px;
+min-width:80px;
 }
 
-.about-stat p{
-font-size:13px;
+/* stat text */
+
+.stat-text{
+font-size:14px;
 color:#64748b;
+line-height:1.5;
 }
 
-/* image */
+.stat-text strong{
+display:block;
+font-size:15px;
+color:#0f172a;
+margin-bottom:3px;
+}
+
+/* ================= IMAGE ================= */
 
 .about-image{
 position:relative;
@@ -2476,7 +2498,7 @@ border-radius:20px;
 box-shadow:0 30px 70px rgba(0,0,0,0.15);
 }
 
-/* decorative background shape */
+/* decorative background */
 
 .about-image:before{
 content:"";
@@ -2491,7 +2513,20 @@ left:-25px;
 z-index:-1;
 }
 
-/* mobile */
+/* ================= ANIMATION ================= */
+
+.fade-up{
+opacity:0;
+transform:translateY(30px);
+transition:all .8s ease;
+}
+
+.fade-up.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
@@ -2505,7 +2540,11 @@ font-size:30px;
 }
 
 .about-stats{
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr;
+}
+
+.stat-number{
+font-size:36px;
 }
 
 }
@@ -2515,7 +2554,7 @@ grid-template-columns:1fr 1fr;
 
 <section class="about-section" id="about">
 
-<div class="about-container">
+<div class="about-container fade-up">
 
 <!-- TEXT SIDE -->
 
@@ -2550,21 +2589,43 @@ profile health, search visibility, and generating real enquiries.
 <a href="#plans" class="about-cta">View Plans</a>
 
 
+<!-- STATS -->
+
 <div class="about-stats">
 
 <div class="about-stat">
-<h3>4+</h3>
-<p>Years Experience</p>
+
+<div class="stat-number counter" data-target="4">0</div>
+
+<div class="stat-text">
+<strong>Years Experience</strong>
+Helping businesses improve local visibility
 </div>
 
-<div class="about-stat">
-<h3>50+</h3>
-<p>Profiles Optimized</p>
 </div>
 
+
 <div class="about-stat">
-<h3>2021</h3>
-<p>Started Freelancing</p>
+
+<div class="stat-number counter" data-target="50">0</div>
+
+<div class="stat-text">
+<strong>Profiles Optimized</strong>
+Businesses supported with structured optimization
+</div>
+
+</div>
+
+
+<div class="about-stat">
+
+<div class="stat-number counter" data-target="2021">0</div>
+
+<div class="stat-text">
+<strong>Started Freelancing</strong>
+Beginning of independent consulting journey
+</div>
+
 </div>
 
 </div>
@@ -2583,6 +2644,60 @@ profile health, search visibility, and generating real enquiries.
 </div>
 
 </section>
+
+
+<script>
+
+/* COUNTER ANIMATION */
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+const updateCount = () => {
+
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+const speed = 200;
+const inc = target / speed;
+
+if(count < target){
+
+counter.innerText = Math.ceil(count + inc);
+setTimeout(updateCount,10);
+
+}else{
+
+counter.innerText = target + "+";
+
+}
+
+};
+
+updateCount();
+
+});
+
+
+/* SCROLL FADE */
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+</script>
 
   <!-- ================= FAQ SECTION ================= -->
 
