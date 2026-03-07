@@ -2193,7 +2193,7 @@ window.open("https://wa.me/919330629573?text="+message,"_blank");
 <style>
 
 .why-section{
-padding:60px 10px;
+padding:90px 20px;
 background:#ffffff;
 font-family:Poppins,sans-serif;
 }
@@ -2203,31 +2203,53 @@ max-width:1200px;
 margin:auto;
 }
 
+/* HEADER */
+
 .why-header{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:60px;
+}
+
+.why-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
 }
 
 .why-header h2{
-font-size:40px;
+font-size:42px;
 font-weight:800;
 color:#0f172a;
-margin-bottom:15px;
+margin-bottom:18px;
+line-height:1.2;
+}
+
+.why-highlight{
+color:#6366f1;
 }
 
 .why-header p{
 color:#64748b;
 font-size:17px;
-max-width:700px;
+max-width:720px;
 margin:auto;
 line-height:1.7;
 }
+
+/* GRID */
 
 .why-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:35px;
 }
+
+/* CARD */
 
 .why-card{
 background:linear-gradient(145deg,#ffffff,#eef2ff);
@@ -2244,6 +2266,8 @@ transform:translateY(-10px);
 box-shadow:0 30px 70px rgba(99,102,241,0.2);
 border-color:#6366f1;
 }
+
+/* ICON */
 
 .why-icon{
 width:60px;
@@ -2272,23 +2296,36 @@ line-height:1.7;
 }
 
 @media(max-width:768px){
+
 .why-header h2{
 font-size:30px;
 }
+
 }
 
 </style>
+
 
 <section class="why-section">
 
 <div class="why-container">
 
 <div class="why-header">
-<h2>Why Work With GeoLift</h2>
+
+<span class="why-badge">Why Choose GeoLift</span>
+
+<h2>
+Why Businesses <span class="why-highlight">Work With GeoLift</span>
+</h2>
+
 <p>
-Independent, focused, and structured Google Business Profile consulting — without unrealistic promises.
+A focused consulting approach designed to improve Google Business Profile
+performance through structured optimization, practical strategy,
+and transparent implementation.
 </p>
+
 </div>
+
 
 <div class="why-grid">
 
@@ -2321,7 +2358,7 @@ Independent, focused, and structured Google Business Profile consulting — with
 </div>
 
 </section>
-
+  
   <!-- ================= ABOUT SECTION ================= -->
 
 <style>
