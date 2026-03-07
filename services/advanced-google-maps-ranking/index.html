@@ -1626,5 +1626,210 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 </script>
+
+  <!-- FLOATING BUTTON -->
+
+<div class="floating-audit-btn" onclick="openAuditForm()">
+Free GBP Audit
+</div>
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-box">
+
+<span class="audit-close" onclick="closeAuditForm()">×</span>
+
+<h3>Free Google Business Profile Audit</h3>
+
+<p>Submit your business details and get a quick visibility analysis of your Google Business Profile.</p>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Phone / WhatsApp" required>
+
+<input type="text" placeholder="Business Name">
+
+<input type="text" placeholder="Google Maps Link">
+
+<button type="submit" class="audit-submit">
+Request Audit
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openAuditForm(){
+document.getElementById("auditPopup").style.display="flex";
+}
+
+function closeAuditForm(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+window.onclick=function(event){
+let popup=document.getElementById("auditPopup");
+if(event.target==popup){
+popup.style.display="none";
+}
+}
+
+</script>
+
+/* ===== DESKTOP VERTICAL BUTTON ===== */
+
+.floating-audit-btn{
+position:fixed;
+right:0;
+top:50%;
+transform:translateY(-50%);
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:#ffffff;
+padding:16px 10px;
+font-family:Poppins,sans-serif;
+font-weight:600;
+font-size:13px;
+letter-spacing:1px;
+writing-mode:vertical-rl;
+text-orientation:mixed;
+border-radius:10px 0 0 10px;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+z-index:9999;
+transition:all 0.3s ease;
+}
+
+.floating-audit-btn:hover{
+background:linear-gradient(135deg,#4f46e5,#4338ca);
+transform:translateY(-50%) translateX(-3px);
+}
+
+
+/* ===== MOBILE BUTTON ===== */
+
+@media (max-width:768px){
+
+.floating-audit-btn{
+writing-mode:horizontal-tb;
+text-orientation:initial;
+right:auto;
+left:50%;
+bottom:25px;
+top:auto;
+transform:translateX(-50%);
+padding:14px 22px;
+border-radius:50px;
+font-size:14px;
+}
+
+.floating-audit-btn:hover{
+transform:translateX(-50%) translateY(-3px);
+}
+
+}
+
+
+/* ===== POPUP BACKGROUND ===== */
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+
+/* ===== POPUP BOX ===== */
+
+.audit-box{
+background:#ffffff;
+padding:35px;
+border-radius:12px;
+width:90%;
+max-width:420px;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+position:relative;
+font-family:Poppins,sans-serif;
+}
+
+
+/* TITLE */
+
+.audit-box h3{
+margin-bottom:8px;
+font-size:22px;
+font-weight:600;
+}
+
+
+/* SUBTITLE */
+
+.audit-box p{
+font-size:14px;
+color:#64748b;
+margin-bottom:20px;
+}
+
+
+/* INPUTS */
+
+.audit-box input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #e2e8f0;
+border-radius:6px;
+font-size:14px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.audit-submit{
+width:100%;
+background:#6366f1;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.audit-submit:hover{
+background:#4f46e5;
+}
+
+
+/* CLOSE BUTTON */
+
+.audit-close{
+position:absolute;
+top:12px;
+right:15px;
+font-size:22px;
+cursor:pointer;
+color:#64748b;
+}
+
+</style>
+  
 </body>
 </html>
