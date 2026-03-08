@@ -5179,18 +5179,18 @@ background:#4f46e5;
 </div>
 
 
-<!-- GeoLift Slim Sticky Plans Bar -->
+<!-- GeoLift Sticky Plans Bar -->
 
 <style>
 
 .geolift-sticky-bar{
 position:fixed;
-bottom:-70px;
+bottom:-80px;
 left:0;
 width:100%;
 background:linear-gradient(90deg,#1e3a8a,#2563eb);
 color:#fff;
-padding:8px 16px;
+padding:10px 18px;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -5211,10 +5211,19 @@ font-weight:500;
 letter-spacing:.2px;
 }
 
+.desktop-extra{
+display:inline;
+}
+
+.sticky-divider{
+opacity:.5;
+margin:0 6px;
+}
+
 .geolift-sticky-btn{
 background:#fff;
 color:#1e3a8a;
-padding:6px 16px;
+padding:6px 18px;
 border-radius:25px;
 text-decoration:none;
 font-size:12px;
@@ -5227,17 +5236,21 @@ transform:translateY(-1px);
 box-shadow:0 4px 10px rgba(0,0,0,0.18);
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media(max-width:768px){
 
 .geolift-sticky-bar{
-gap:10px;
 padding:8px 12px;
+gap:10px;
 }
 
 .geolift-sticky-text{
 font-size:12px;
+}
+
+.desktop-extra{
+display:none;
 }
 
 .geolift-sticky-btn{
@@ -5256,7 +5269,7 @@ padding:5px 14px;
 bottom:100px !important;
 }
 
-/* Prevent footer from hiding */
+/* Prevent footer hiding */
 
 footer{
 margin-bottom:30px;
@@ -5268,11 +5281,15 @@ margin-bottom:30px;
 <div class="geolift-sticky-bar" id="geoliftSticky">
 
 <div class="geolift-sticky-text">
-Grow Your Business
+Affordable Services
+<span class="desktop-extra">
+<span class="sticky-divider">|</span>
+Business Growth Solutions
+</span>
 </div>
 
-<a href="#plans" class="geolift-sticky-btn">
-See Plans
+<a href="/plans" class="geolift-sticky-btn">
+See Plans →
 </a>
 
 </div>
