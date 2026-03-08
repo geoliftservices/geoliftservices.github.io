@@ -4514,7 +4514,7 @@ height:50px;
 .floating-buttons{
 position:fixed;
 right:25px;
-bottom:30px;      /* distance from footer */
+bottom:60px;      /* distance from footer */
 display:flex;
 flex-direction:column;
 gap:20px;         /* equal spacing *
@@ -4725,7 +4725,7 @@ document.addEventListener("DOMContentLoaded", function() {
 .floating-audit-btn{
 position:fixed;
 right:0;
-top:50%;
+top:45%;
 transform:translateY(-50%);
 background:linear-gradient(135deg,#6366f1,#4f46e5);
 color:#ffffff;
@@ -4749,21 +4749,20 @@ transform:translateY(-50%) translateX(-3px);
 }
 
 
-/* ===== MOBILE BUTTON ===== */
+/* ===== MOBILE BUTTON (VERTICAL LIKE DESKTOP) ===== */
 
 @media (max-width:768px){
 
 .floating-audit-btn{
-writing-mode:horizontal-tb;
-text-orientation:initial;
-right:auto;
-left:50%;
-bottom:25px;
-top:auto;
-transform:translateX(-50%);
-padding:14px 22px;
-border-radius:50px;
-font-size:14px;
+top:55%;
+right:0;
+left:auto;
+bottom:auto;
+transform:translateY(-50%);
+font-size:12px;
+padding:14px 8px;
+}
+
 }
 
 .floating-audit-btn:hover{
@@ -5032,6 +5031,138 @@ background:#4f46e5;
 </div>
 
 </div>
+
+<!-- GeoLift Sticky Plans Bar -->
+
+<style>
+
+.geolift-sticky-bar{
+position:fixed;
+bottom:-80px;
+left:0;
+width:100%;
+background:linear-gradient(90deg,#1e3a8a,#2563eb);
+color:#fff;
+padding:10px 18px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:14px;
+z-index:999;
+box-shadow:0 -4px 15px rgba(0,0,0,0.12);
+font-family:inherit;
+transition:all .4s ease;
+}
+
+.geolift-sticky-bar.show{
+bottom:0;
+}
+
+.geolift-sticky-text{
+font-size:13px;
+font-weight:500;
+letter-spacing:.2px;
+}
+
+.desktop-extra{
+display:inline;
+}
+
+.sticky-divider{
+opacity:.5;
+margin:0 6px;
+}
+
+.geolift-sticky-btn{
+background:#fff;
+color:#1e3a8a;
+padding:6px 18px;
+border-radius:25px;
+text-decoration:none;
+font-size:12px;
+font-weight:600;
+transition:all .25s ease;
+}
+
+.geolift-sticky-btn:hover{
+transform:translateY(-1px);
+box-shadow:0 4px 10px rgba(0,0,0,0.18);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.geolift-sticky-bar{
+padding:8px 12px;
+gap:10px;
+}
+
+.geolift-sticky-text{
+font-size:12px;
+}
+
+.desktop-extra{
+display:none;
+}
+
+.geolift-sticky-btn{
+font-size:11px;
+padding:5px 14px;
+}
+
+}
+
+/* Move floating buttons above bar */
+
+.whatsapp-float,
+.call-float,
+.scroll-top,
+.free-audit-btn{
+bottom:100px !important;
+}
+
+/* Prevent footer hiding */
+
+footer{
+margin-bottom:30px;
+}
+
+</style>
+
+
+<div class="geolift-sticky-bar" id="geoliftSticky">
+
+<div class="geolift-sticky-text">
+Starts Only ₹13/Day
+<span class="desktop-extra">
+<span class="sticky-divider">|</span>
+Complete Online Visibility Solution
+</span>
+</div>
+
+<a href="#plans" class="geolift-sticky-btn">
+View Plans →
+</a>
+
+</div>
+
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+let bar = document.getElementById("geoliftSticky");
+
+if(window.scrollY > 400){
+bar.classList.add("show");
+}else{
+bar.classList.remove("show");
+}
+
+});
+
+</script>
 
 </body>
 </html>
