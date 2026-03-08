@@ -4681,6 +4681,84 @@ transition:.3s;
 .float-btn:hover{
 transform:translateY(-4px);
 }
+
+/* ===== STICKY PLANS BAR ===== */
+
+.plans-sticky-bar{
+
+position:fixed;
+bottom:-100px;
+left:0;
+width:100%;
+
+background:#ffffff;
+border-top:1px solid #e5e7eb;
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+
+padding:14px 20px;
+
+box-shadow:0 -6px 20px rgba(0,0,0,0.08);
+
+font-family:Poppins,sans-serif;
+
+z-index:9998;
+transition:bottom .35s ease;
+
+}
+
+/* show bar */
+.plans-sticky-bar.show{
+bottom:0;
+}
+
+.plans-text{
+font-size:15px;
+color:#374151;
+font-weight:500;
+}
+
+.plans-btn{
+
+background:#6366f1;
+color:#fff;
+
+padding:10px 22px;
+border-radius:30px;
+
+font-weight:600;
+text-decoration:none;
+
+box-shadow:0 6px 18px rgba(99,102,241,0.35);
+
+transition:.3s;
+
+}
+
+.plans-btn:hover{
+background:#4f46e5;
+transform:translateY(-2px);
+}
+
+/* mobile */
+
+@media(max-width:768px){
+
+.plans-sticky-bar{
+flex-direction:column;
+gap:10px;
+padding:12px;
+}
+
+.plans-text{
+font-size:14px;
+text-align:center;
+}
+
+}
   
 </style>
 
@@ -5068,6 +5146,26 @@ popup.style.display="none";
 
 </script>
 
+  <script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const stickyBar = document.getElementById("plansSticky");
+
+window.addEventListener("scroll", function(){
+
+if(window.scrollY > 600){
+stickyBar.classList.add("show");
+}else{
+stickyBar.classList.remove("show");
+}
+
+});
+
+});
+
+</script>
+
   <!-- ===== PLAN POPUP FORM ===== -->
 
 <style>
@@ -5173,6 +5271,20 @@ background:#4f46e5;
 </form>
 
 </div>
+
+</div>
+
+  <!-- ===== STICKY PLANS BAR ===== -->
+
+<div class="plans-sticky-bar" id="plansSticky">
+
+<div class="plans-text">
+View Affordable Website Plans for Your Business
+</div>
+
+<a href="#plans" class="plans-btn">
+See Plans
+</a>
 
 </div>
 
