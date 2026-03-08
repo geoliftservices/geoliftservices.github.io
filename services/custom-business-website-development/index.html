@@ -5179,6 +5179,128 @@ background:#4f46e5;
 </div>
 
 
+  <!-- ===== STICKY PLANS BAR ===== -->
+
+<style>
+
+/* Sticky Plans Bar */
+
+.plans-sticky-bar{
+position:fixed;
+left:0;
+bottom:-120px;
+width:100%;
+
+background:#ffffff;
+border-top:1px solid #e5e7eb;
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:20px;
+
+padding:14px 20px;
+
+font-family:Poppins,sans-serif;
+
+box-shadow:0 -6px 20px rgba(0,0,0,0.08);
+
+z-index:9998;
+
+transition:bottom .35s ease;
+}
+
+/* Show when scrolling */
+
+.plans-sticky-bar.show{
+bottom:0;
+}
+
+/* Text */
+
+.plans-text{
+font-size:15px;
+font-weight:500;
+color:#374151;
+}
+
+/* Button */
+
+.plans-btn{
+background:#6366f1;
+color:#ffffff;
+
+padding:10px 22px;
+border-radius:30px;
+
+font-weight:600;
+text-decoration:none;
+
+box-shadow:0 6px 18px rgba(99,102,241,0.35);
+
+transition:.25s;
+}
+
+.plans-btn:hover{
+background:#4f46e5;
+transform:translateY(-2px);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.plans-sticky-bar{
+flex-direction:column;
+gap:10px;
+padding:12px;
+}
+
+.plans-text{
+font-size:14px;
+text-align:center;
+}
+
+}
+
+</style>
+
+
+<div class="plans-sticky-bar" id="plansSticky">
+
+<div class="plans-text">
+View Affordable Website Plans for Your Business
+</div>
+
+<a href="#plans" class="plans-btn">
+See Plans
+</a>
+
+</div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded",function(){
+
+const stickyBar=document.getElementById("plansSticky");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>600){
+stickyBar.classList.add("show");
+}else{
+stickyBar.classList.remove("show");
+}
+
+});
+
+});
+
+</script>
+
+<!-- ===== END STICKY PLANS BAR ===== -->
+
 
 </body>
 </html>
