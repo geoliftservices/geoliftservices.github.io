@@ -5179,12 +5179,13 @@ background:#4f46e5;
 </div>
 
 
-<!-- Sticky Plans Bar -->
+<!-- GeoLift Sticky Plans Bar -->
+
 <style>
 
 .geolift-sticky-bar{
 position:fixed;
-bottom:0;
+bottom:-100px;
 left:0;
 width:100%;
 background:linear-gradient(90deg,#1e3a8a,#2563eb);
@@ -5195,9 +5196,13 @@ justify-content:center;
 align-items:center;
 gap:20px;
 z-index:999;
-box-shadow:0 -6px 20px rgba(0,0,0,0.15);
+box-shadow:0 -5px 20px rgba(0,0,0,0.15);
 font-family:inherit;
-animation:slideUpBar .6s ease;
+transition:all .4s ease;
+}
+
+.geolift-sticky-bar.show{
+bottom:0;
 }
 
 .geolift-sticky-text{
@@ -5209,7 +5214,7 @@ letter-spacing:.3px;
 .geolift-sticky-btn{
 background:#fff;
 color:#1e3a8a;
-padding:10px 20px;
+padding:10px 22px;
 border-radius:30px;
 text-decoration:none;
 font-size:14px;
@@ -5220,17 +5225,6 @@ transition:all .3s ease;
 .geolift-sticky-btn:hover{
 transform:translateY(-2px);
 box-shadow:0 6px 15px rgba(0,0,0,0.2);
-}
-
-@keyframes slideUpBar{
-from{
-transform:translateY(100%);
-opacity:0;
-}
-to{
-transform:translateY(0);
-opacity:1;
-}
 }
 
 /* Mobile */
@@ -5255,15 +5249,19 @@ font-size:13px;
 
 }
 
-/* Prevent footer hiding */
+/* Move floating buttons above bar */
 
-body{
-padding-bottom:90px;
+.whatsapp-float,
+.call-float,
+.scroll-top,
+.free-audit-btn{
+bottom:110px !important;
 }
 
 </style>
 
-<div class="geolift-sticky-bar">
+
+<div class="geolift-sticky-bar" id="geoliftSticky">
 
 <div class="geolift-sticky-text">
 View Affordable Website Plans for Your Business
@@ -5274,6 +5272,23 @@ See Plans
 </a>
 
 </div>
+
+
+<script>
+
+window.addEventListener("scroll", function(){
+
+let bar = document.getElementById("geoliftSticky");
+
+if(window.scrollY > 400){
+bar.classList.add("show");
+}else{
+bar.classList.remove("show");
+}
+
+});
+
+</script>
 
 
 </body>
