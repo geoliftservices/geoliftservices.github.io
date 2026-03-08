@@ -7,8 +7,6 @@
 
   <meta name="robots" content="noindex, nofollow">
 
-<title>Rank. Convert. Grow. | GeoLift</title>
-
 <link rel="icon"
 href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a3b2-80f37302ffd6.png">
 
@@ -31,8 +29,8 @@ href="https://image2url.com/r2/default/images/1772264544525-e1f6eb99-70f8-4f4b-a
 --text-medium:#475569;
 --text-light:#64748b;
 
---section-spacing:140px;
---section-spacing-mobile:90px;
+--section-spacing:60px;
+--section-spacing-mobile:40px;
 }
 
 /* Global Reset */
@@ -43,7 +41,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:'Poppins',sans-serif;
+font-family:'pins',sans-serif;
 background:var(--bg-light);
 color:var(--text-dark);
 line-height:1.7;
@@ -69,7 +67,7 @@ padding:var(--section-spacing-mobile) 20px;
 /* ============================= */
 
 .hero{
-padding:0 20px;
+padding:90px 20px 80px;
 }
 
 .results-section{
@@ -124,7 +122,7 @@ margin-bottom:18px;
 .process-header,
 .testimonial-header,
 .faq-header{
-margin-bottom:80px;
+margin-bottom:50px;
 }
 
 @media(max-width:768px){
@@ -177,9 +175,8 @@ background:rgba(15,23,42,0.04);
 /* ================= PRICING SECTION ================= */
 
 .pricing-section{
-padding:130px 20px;
 background:linear-gradient(135deg,#ffffff,#f8faff);
-font-family:Poppins,sans-serif;
+font-family:pins,sans-serif;
 overflow:hidden;
 }
 
@@ -400,15 +397,13 @@ scroll-behavior:smooth;
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
 <style>
 
-<!-- ===== PREMIUM HEADER IMPROVED MOBILE DESIGN ===== -->
-
 
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;}
+body{font-family:'pins',sans-serif;}
 
 /* ===== HEADER BASE ===== */
 
@@ -643,7 +638,7 @@ transform:rotate(180deg);
 }
 }
 
-.dropdown.active .dropbtn{
+  .dropdown.active .dropbtn{
 color:#6366f1;
 font-weight:600;
 }
@@ -656,13 +651,18 @@ transform:rotate(180deg);
 
 .dropdown-content{
 position:static;
-background:transparent;
-box-shadow:none;
-padding:0;
+display:none;
+
 opacity:1;
 visibility:visible;
 transform:none;
-display:none;
+
+padding:0;
+margin-top:8px;
+background:transparent;
+box-shadow:none;
+border-radius:0;
+width:100%;
 }
 
 .dropdown.active .dropdown-content{
@@ -680,11 +680,8 @@ white-space:normal;
 word-break:break-word;
 }
 
-.arrow{
-margin-left:auto;
 }
 
-}
 
   @media (max-width:768px){
     .footer-bottom{
@@ -719,10 +716,12 @@ margin-left:auto;
     flex-direction:column;
     gap:10px;
   }
-    
-  }
+}
+  .dropdown-content a:hover{
+color:#2563eb;
+}
 
-     @media(max-width:992px){
+  @media(max-width:992px){
 
 .dropdown-content a{
 color:#1e293b !important;
@@ -750,7 +749,6 @@ width:85%;
 max-width:320px;
 }
 }
-  
 </style>
 
 
@@ -777,9 +775,8 @@ max-width:320px;
     </div>
   </div>
 
-  <a href="/about/">About</a>
+  <a href="#plans">Plans</a>
   <a href="https://blog.geolift.co.in/" target="_blank" rel="noopener">Blog</a>
-  <a href="/contact/">Contact</a>
 
   <a href="tel:+919330629573" class="cta">Get Free Consultation</a>
 
@@ -857,335 +854,2295 @@ this.parentElement.classList.toggle("active");
 
 <div style="height:90px;"></div>
 
-<!-- ================= PAGE SPECIFIC STYLES ================= -->
+<!-- ===== PREMIUM HIGH-CONVERTING HERO SECTION ===== -->
+
+
 <style>
 
-/* Compact Professional Sections */
-.section{padding:60px 8%;position:relative;}
-.section-small{padding:45px 8%;}
-
-/* Light Premium Hero */
-.hero-light{
-background:linear-gradient(135deg,#f8fbff,#eef4ff);
-text-align:center;
-padding:110px 8% 80px;
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
 }
 
-.hero-light h1{
-font-size:42px;
+/* ===== HERO SECTION ===== */
+
+.hero{
+position:relative;
+min-height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+overflow:hidden;
+padding-bottom:20px; /* added space before stats */
+}
+
+/* Background Image */
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:url('https://images.seroundtable.com/google-maps-1761131878.jpg') center/cover no-repeat;
+z-index:-2;
+}
+
+/* Gradient Overlay */
+.hero::after{
+content:'';
+position:absolute;
+inset:0;
+background:linear-gradient(135deg, rgba(15,23,42,0.80), rgba(30,41,59,0.80));
+z-index:-1;
+}
+
+/* Content */
+.hero-content{
+max-width:900px;
+padding:40px 20px;
+}
+
+/* Location Text */
+.location{
+font-size:14px;
+opacity:0.9;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+/* Headline */
+.hero h1{
+font-size:48px;
 font-weight:800;
-color:#111827;
+line-height:1.2;
 margin-bottom:20px;
 }
 
-.hero-light p{
+/* Subtext */
+.hero p{
 font-size:18px;
-color:#4b5563;
-max-width:850px;
-margin:auto;
+opacity:0.9;
 margin-bottom:30px;
 }
 
-/* Premium Animated Button */
+/* Buttons */
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
 .btn-primary{
-display:inline-block;
-padding:14px 36px;
-background:#2563eb;
+background:#6366f1;
 color:#fff;
-font-weight:600;
+padding:14px 30px;
 border-radius:40px;
 text-decoration:none;
-transition:all .3s ease;
-box-shadow:0 10px 25px rgba(37,99,235,0.25);
+font-weight:600;
+box-shadow:0 10px 30px rgba(99,102,241,0.4);
+transition:0.3s;
 }
 
 .btn-primary:hover{
-background:#1e40af;
-transform:translateY(-5px);
-box-shadow:0 18px 35px rgba(37,99,235,0.35);
+transform:translateY(-3px);
 }
 
-/* Bordered Card Grid */
-.card-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+.btn-secondary{
+background:transparent;
+border:2px solid #fff;
+color:#fff;
+padding:12px 28px;
+border-radius:40px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn-secondary:hover{
+background:#fff;
+color:#111;
+}
+
+/* Trust Points */
+.trust-points{
+display:flex;
+justify-content:center;
 gap:25px;
-margin-top:40px;
+flex-wrap:wrap;
+font-size:14px;
+opacity:0.9;
+margin-bottom:60px;
 }
 
-.card{
-background:#ffffff;
-border:1px solid #e5e7eb;
-border-radius:18px;
-padding:28px;
-transition:all .3s ease;
+.trust-points span{
+display:flex;
+align-items:center;
+gap:6px;
 }
 
-.card:hover{
-transform:translateY(-8px);
-border-color:#2563eb;
-box-shadow:0 18px 40px rgba(0,0,0,0.05);
-}
+/* Responsive */
+@media(max-width:768px){
 
-.card h3{
-font-size:20px;
-margin-bottom:15px;
-}
-
-.card p{
-font-size:15px;
-color:#4b5563;
-line-height:1.7;
-}
-
-/* Section Title */
-.section-title{
-text-align:center;
-margin-bottom:25px;
-}
-
-.section-title h2{
+.hero h1{
 font-size:32px;
-font-weight:700;
-margin-bottom:10px;
 }
 
-.section-title p{
-color:#6b7280;
+.hero p{
 font-size:16px;
 }
 
-/* FAQ */
-.faq-item{
-border:1px solid #e5e7eb;
-border-radius:14px;
-margin-bottom:15px;
-overflow:hidden;
-transition:.3s;
+.stats{
+gap:40px;
 }
 
-.faq-question{
-padding:18px 22px;
-cursor:pointer;
-font-weight:600;
-background:#f9fafb;
-display:flex;
-justify-content:space-between;
 }
 
-.faq-answer{
-max-height:0;
-overflow:hidden;
-transition:max-height .4s ease;
-padding:0 22px;
-color:#4b5563;
-background:#fff;
+</style>
+
+<section class="hero">
+<div class="floating-shape shape1"></div>
+<div class="floating-shape shape2"></div>
+
+<div class="hero-content">
+
+
+<div class="location">
+📍 Serving Businesses Across India
+</div>
+
+<h1>
+Setup. Rank. Grow.
+</h1>
+
+<p>
+Strategic Google Business Profile setup designed to improve discoverability and local customer engagement.
+</p>
+
+<div class="hero-buttons">
+<a href="tel:+919330629573" class="btn-primary">Get free consultation</a>
+<a href="#plans" class="btn-secondary">See Plans</a>
+</div>
+
+<div class="trust-points">
+<span>✔ Category & Keyword Optimization</span>
+<span>✔ Profile Trust Signals</span>
+<span>✔ Category & Keyword Optimization</span>
+</div>
+
+</div>
+
+</section> <!-- CLOSE HERO SECTION -->
+
+
+
+<!-- ================= LOCATION COVERAGE SECTION ================= -->
+
+<style>
+
+.location-section{
+padding:90px 20px;
+background:#f8faff;
+font-family:Poppins,sans-serif;
 }
 
-.faq-item.active .faq-answer{
-max-height:250px;
-padding:15px 22px;
-}
-
-.faq-item.active{
-border-color:#2563eb;
-}
-
-/* Bottom CTA */
-.bottom-cta{
-background:linear-gradient(135deg,#1e40af,#2563eb);
-color:#fff;
+.location-container{
+max-width:1200px;
+margin:auto;
 text-align:center;
-padding:80px 8%;
 }
 
-.bottom-cta h2{
+/* Header */
+
+.location-badge{
+display:inline-block;
+background:#eef2ff;
+color:#4f46e5;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.location-title{
 font-size:34px;
+font-weight:700;
+color:#111827;
+margin-bottom:15px;
+}
+
+.location-sub{
+max-width:700px;
+margin:auto;
+font-size:16px;
+color:#6b7280;
+margin-bottom:50px;
+line-height:1.7;
+}
+
+/* Grid */
+
+.location-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.location-item{
+background:#ffffff;
+padding:18px;
+border-radius:10px;
+font-size:15px;
+font-weight:500;
+color:#374151;
+box-shadow:0 4px 14px rgba(0,0,0,0.05);
+transition:all .3s ease;
+}
+
+.location-item:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.location-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.location-title{
+font-size:26px;
+}
+
+}
+
+</style>
+
+<section class="location-section">
+
+<div class="location-container">
+
+<div class="location-badge">Service Areas</div>
+
+<h2 class="location-title">
+Businesses We Help Across India
+</h2>
+
+<p class="location-sub">
+We provide professional Google Business Profile setup and optimization
+services for businesses across major cities and growing local markets.
+</p>
+
+<div class="location-grid">
+
+<div class="location-item">Delhi</div>
+<div class="location-item">Mumbai</div>
+<div class="location-item">Bangalore</div>
+<div class="location-item">Hyderabad</div>
+
+<div class="location-item">Chennai</div>
+<div class="location-item">Kolkata</div>
+<div class="location-item">Pune</div>
+<div class="location-item">Ahmedabad</div>
+
+<div class="location-item">Jaipur</div>
+<div class="location-item">Chandigarh</div>
+<div class="location-item">Lucknow</div>
+<div class="location-item">Surat</div>
+
+<div class="location-item">Indore</div>
+<div class="location-item">Bhopal</div>
+<div class="location-item">Nagpur</div>
+<div class="location-item">Coimbatore</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= END LOCATION COVERAGE ================= -->
+  
+
+  
+  
+<!-- GEO LIFT PRICING SECTION -->
+
+<section id="plans" class="glp-section">
+
+<div class="glp-wrapper">
+
+<!-- HEADER -->
+
+<div class="glp-header">
+
+  <span class="glp-badge">Pricing</span>
+
+<h2 class="glp-title">
+Choose the Right <span class="glp-highlight">Growth Plan</span>
+</h2>
+
+<p class="glp-sub">
+Structured service packages designed to build a strong online presence,
+improve Google Business Profile visibility, and support long-term local growth.
+</p>
+
+</div>
+
+<div class="glp-grid">
+
+<!-- PLAN 1 -->
+<div class="glp-card">
+
+<h3>Foundation Launch</h3>
+<p class="glp-desc">Best for businesses starting online</p>
+
+<p class="glp-type">Yearly Plan</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹18 / Day</div>
+
+<div class="glp-price">
+₹13<span>/Day</span>
+</div>
+
+<div class="glp-discount">27% Off</div>
+
+</div>
+
+<ul class="glp-features">
+
+<li>Custom Business Website</li>
+<li>Google Business Profile Setup</li>
+<li>Local SEO Structure</li>
+<li>HTTPS & Indexing</li>
+<li>Basic Local Visibility</li>
+
+</ul>
+
+<button class="glp-btn openAudit" data-plan="Foundation Launch">Request This Plan</button>
+
+</div>
+
+
+
+<!-- PLAN 2 -->
+<div class="glp-card">
+
+<h3>Growth Acceleration</h3>
+<p class="glp-desc">Improve Google Maps visibility</p>
+
+<p class="glp-type">3-Month Growth Plan</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹66 / Day</div>
+
+<div class="glp-price">
+₹55<span>/Day</span>
+</div>
+
+<div class="glp-discount">17% Off</div>
+
+</div>
+
+<p class="glp-offer">Limited Time Offer</p>
+
+<ul class="glp-features">
+
+<li>GBP Optimization</li>
+<li>Google Maps Ranking Strategy</li>
+<li>Weekly Optimization Actions</li>
+<li>Local Keyword Targeting</li>
+<li>Performance Monitoring</li>
+
+</ul>
+
+<button class="glp-btn openAudit" data-plan="Growth Acceleration">Request This Plan</button>
+
+</div>
+
+
+
+<!-- PLAN 3 -->
+<div class="glp-card glp-featured">
+
+<div class="glp-badge-featured">Most Recommended</div>
+
+<h3>Complete Local Growth</h3>
+<p class="glp-desc">Website + Maps Growth Package</p>
+
+<p class="glp-type">3-Month Growth Plan</p>
+
+<div class="glp-price-area">
+
+<div class="glp-old">₹127 / Day</div>
+
+<div class="glp-price">
+₹89<span>/Day</span>
+</div>
+
+<div class="glp-discount">30% Off</div>
+
+</div>
+
+<p class="glp-offer">Limited Time Offer</p>
+
+<ul class="glp-features">
+
+<li>Website + GBP Setup</li>
+<li>Full Local SEO Foundation</li>
+<li>3 Months Growth Optimization</li>
+<li>Maps Visibility Strategy</li>
+<li>Performance Tracking</li>
+
+</ul>
+
+<button class="glp-btn glp-btn-featured openAudit" data-plan="Complete Local Growth">Request This Plan</button>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-overlay"></div>
+
+<div class="audit-modal">
+
+<span class="audit-close">&times;</span>
+
+<h3>Start Your Business Growth Plan</h3>
+
+<p class="audit-sub">
+Fill the details below and we will contact you to start your selected growth plan.
+</p>
+
+<form id="auditForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="business" placeholder="Business Name" required>
+
+<input type="text" id="location" placeholder="Business Location" required>
+
+<input type="url" id="gbp" placeholder="Google Business Profile Link (Optional)">
+
+<textarea id="description" rows="4" placeholder="Briefly describe your business or goals"></textarea>
+
+<button type="submit" class="audit-submit">Send Details</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+
+<style>
+
+/* SECTION */
+
+.glp-section{
+padding:60px 10px;
+background:linear-gradient(180deg,#f6f8ff,#eef2ff);
+font-family:system-ui;
+}
+
+.glp-wrapper{
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+.glp-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.glp-badge{
+display:inline-block;
+background:#eef2ff;
+color:#4f6cff;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.glp-title{
+font-size:42px;
 font-weight:800;
+margin-bottom:18px;
+}
+
+.glp-highlight{
+color:#4f6cff;
+}
+
+.glp-sub{
+color:#475569;
+font-size:17px;
+max-width:720px;
+margin:auto;
+line-height:1.7;
+}
+
+/* GRID */
+
+.glp-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+}
+
+/* CARD */
+
+.glp-card{
+background:#ffffff;
+padding:28px 24px;
+border-radius:14px;
+box-shadow:0 10px 28px rgba(0,0,0,0.06);
+transition:0.3s;
+position:relative;
+border:1px solid #e6eaf5;
+}
+
+.glp-card:hover{
+transform:translateY(-6px);
+}
+
+/* FEATURED */
+
+.glp-featured{
+border:2px solid #4f6cff;
+background:#f9faff;
+}
+
+.glp-badge-featured{
+position:absolute;
+top:-12px;
+left:50%;
+transform:translateX(-50%);
+background:#4f6cff;
+color:white;
+font-size:12px;
+padding:6px 16px;
+border-radius:30px;
+font-weight:600;
+}
+
+/* TEXT */
+
+.glp-desc{
+color:#666;
+font-size:14px;
+}
+
+.glp-type{
+color:#4f6cff;
+font-weight:600;
+font-size:14px;
+margin-bottom:10px;
+}
+
+/* PRICE */
+
+.glp-old{
+text-decoration:line-through;
+color:#999;
+font-size:14px;
+}
+
+.glp-price{
+font-size:36px;
+font-weight:700;
+}
+
+.glp-price span{
+font-size:16px;
+}
+
+.glp-discount{
+color:#16a34a;
+font-size:13px;
+font-weight:600;
+}
+
+/* OFFER BADGE */
+
+.glp-offer{
+display:inline-block;
+background:#fee2e2;
+color:#b91c1c;
+font-size:12px;
+font-weight:700;
+padding:6px 12px;
+border-radius:20px;
+margin-top:8px;
+}
+
+/* FEATURES */
+
+.glp-features{
+list-style:none;
+padding:0;
+margin:18px 0;
+}
+
+.glp-features li{
+margin:8px 0;
+font-size:14px;
+}
+
+.glp-features li:before{
+content:"✔";
+color:#3b82f6;
+margin-right:6px;
+}
+
+/* BUTTON */
+
+.glp-btn{
+display:block;
+width:75%;
+margin:auto;
+padding:11px;
+background:#4f6cff;
+color:white;
+border-radius:8px;
+border:none;
+font-weight:600;
+cursor:pointer;
+transition:all 0.25s ease;
+}
+
+.glp-btn:hover{
+background:#3d55e6;
+transform:translateY(-2px);
+box-shadow:0 6px 14px rgba(0,0,0,0.15);
+}
+
+.glp-btn-featured{
+background:#16a34a;
+}
+
+.glp-btn-featured:hover{
+background:#12863c;
+}
+
+/* POPUP */
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.audit-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+}
+
+.audit-modal{
+position:relative;
+background:#f9fbff;
+padding:40px;
+border-radius:12px;
+max-width:520px;
+width:90%;
+z-index:2;
+border:1px solid #e4e8f2;
+}
+
+.audit-close{
+position:absolute;
+top:14px;
+right:16px;
+font-size:22px;
+cursor:pointer;
+}
+
+.audit-sub{
+font-size:14px;
+color:#666;
 margin-bottom:20px;
 }
 
-.bottom-cta p{
-max-width:750px;
-margin:auto;
-margin-bottom:30px;
-color:#e0e7ff;
+#auditForm{
+display:flex;
+flex-direction:column;
+gap:14px;
 }
 
-@media(max-width:768px){
-.hero-light h1{font-size:30px;}
-.section{padding:50px 6%;}
+#auditForm input,
+#auditForm textarea{
+padding:12px;
+border:1px solid #dbe1ea;
+border-radius:6px;
+}
+
+.audit-submit{
+background:#4f6cff;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+.glp-grid{
+grid-template-columns:1fr;
+}
+}
+
+  @media(max-width:768px){
+.glp-title{
+font-size:30px;
+line-height:1.2;
+}
 }
 
 </style>
 
 
-<!-- ================= HERO ================= -->
-<section class="hero-light">
-<h1>Google Maps Ranking & GMB Optimization Services in India</h1>
-<p>Advanced GMB Optimization strategies designed to improve your Google Maps ranking, increase visibility in local search results, and generate consistent high-intent leads across India.</p>
-<a href="/contact/" class="btn-primary">Request Ranking Strategy</a>
-</section>
-
-
-<!-- ================= INTRO ================= -->
-<section class="section">
-<div class="section-title">
-<h2>Why Google Maps Ranking Matters</h2>
-<p>Your position in Google’s Local 3-Pack directly impacts leads, calls, and revenue.</p>
-</div>
-
-<p style="max-width:900px;margin:auto;color:#4b5563;line-height:1.8;text-align:center;">
-When customers search for services like “plumber near me”, “best dentist”, or “restaurant nearby”, Google shows a map section first. This is known as the Local Pack. Businesses ranking in the top three positions receive the highest visibility and majority of clicks.  
-
-If your business is not appearing in Google Maps results, you are losing potential customers daily. Our GMB Optimization service focuses on improving your Google Business Profile ranking using structured local SEO strategies, keyword optimization, authority building, and engagement signals.
-</p>
-</section>
-
-
-<!-- ================= WHAT IS GMB OPTIMIZATION ================= -->
-<section class="section-small">
-<div class="section-title">
-<h2>What Is GMB Optimization?</h2>
-</div>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>Local SEO Optimization</h3>
-<p>Enhancing your Google Business Profile with strategic keywords, service mapping, and geographic relevance to improve local search visibility.</p>
-</div>
-
-<div class="card">
-<h3>Google Maps Ranking Strategy</h3>
-<p>Structured improvements in categories, description, services, posts, and engagement signals to push your business higher in Google Maps results.</p>
-</div>
-
-<div class="card">
-<h3>Profile Authority Building</h3>
-<p>Strengthening your local authority using citation consistency, review strategy, and on-page alignment.</p>
-</div>
-
-<div class="card">
-<h3>Conversion-Focused Optimization</h3>
-<p>Improving call-to-action placement, structured content, and trust signals to convert searchers into customers.</p>
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= CORE STRATEGIES ================= -->
-<section class="section">
-<div class="section-title">
-<h2>Our Google Maps Ranking Strategy</h2>
-</div>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>Primary & Secondary Category Optimization</h3>
-<p>Choosing the right business categories directly impacts visibility. We analyze competitors and optimize category structure for maximum exposure.</p>
-</div>
-
-<div class="card">
-<h3>Keyword-Rich Business Description</h3>
-<p>We integrate LSI keywords like local search optimization, map pack ranking, nearby business listing, and Google Maps SEO naturally within your profile.</p>
-</div>
-
-<div class="card">
-<h3>Geo-Targeted Service Areas</h3>
-<p>Strategically configuring service areas to appear in surrounding local searches and nearby city queries.</p>
-</div>
-
-<div class="card">
-<h3>Engagement Signal Enhancement</h3>
-<p>Optimizing posts, Q&A, review replies, and images to increase activity signals which influence local ranking factors.</p>
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= BENEFITS ================= -->
-<section class="section-small">
-<div class="section-title">
-<h2>Benefits of Professional GMB Optimization</h2>
-</div>
-
-<div class="card-grid">
-
-<div class="card">
-<h3>Higher Visibility in Map Pack</h3>
-<p>Appear in top 3 results where 70% of local clicks happen.</p>
-</div>
-
-<div class="card">
-<h3>Increase in Direct Calls</h3>
-<p>Optimized listings generate more direct phone inquiries.</p>
-</div>
-
-<div class="card">
-<h3>More Direction Requests</h3>
-<p>Improved rankings drive physical store visits and offline conversions.</p>
-</div>
-
-<div class="card">
-<h3>Better Local Brand Authority</h3>
-<p>Strong Google presence builds trust and competitive advantage.</p>
-</div>
-
-</div>
-</section>
-
-
-<!-- ================= FAQ ================= -->
-<section class="section-small">
-<div class="section-title">
-<h2>Frequently Asked Questions</h2>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">How long does Google Maps ranking take? <span>+</span></div>
-<div class="faq-answer">
-<p>Ranking timelines vary depending on competition and existing optimization. Initial improvements may be seen within weeks.</p>
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Is GMB Optimization different from profile setup? <span>+</span></div>
-<div class="faq-answer">
-<p>Yes. Setup focuses on creation and structure, while optimization focuses on ranking improvement and performance growth.</p>
-</div>
-</div>
-
-<div class="faq-item">
-<div class="faq-question">Can small businesses rank in competitive markets? <span>+</span></div>
-<div class="faq-answer">
-<p>With proper local SEO strategy, even small businesses can outrank larger competitors.</p>
-</div>
-</div>
-
-</section>
-
 
 <script>
+
+var selectedPlan="";
+
+document.querySelectorAll(".openAudit").forEach(btn=>{
+btn.onclick=function(){
+
+selectedPlan=this.getAttribute("data-plan");
+
+document.getElementById("auditPopup").style.display="flex";
+
+}
+});
+
+document.querySelector(".audit-close").onclick=function(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+document.querySelector(".audit-overlay").onclick=function(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+document.getElementById("auditForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+var name=document.getElementById("name").value;
+var business=document.getElementById("business").value;
+var location=document.getElementById("location").value;
+var gbp=document.getElementById("gbp").value;
+var description=document.getElementById("description").value;
+
+var heading = selectedPlan
+? "Hi GeoLift, I want to start a Growth Plan.%0A%0A"
+: "Hi GeoLift, I want a FREE Google Business Profile Audit.%0A%0A";
+
+var message = heading +
+(selectedPlan ? "Selected Plan: "+selectedPlan+"%0A%0A" : "")+
+"Name: "+name+"%0A"+
+"Business: "+business+"%0A"+
+"Location: "+location+"%0A"+
+"GBP Link: "+gbp+"%0A"+
+"Description: "+description;
+
+window.open("https://wa.me/919330629573?text="+message,"_blank");
+
+});
+
+</script>
+  
+
+<!-- ================= WHY CHOOSE US SECTION ================= -->
+
+<style>
+
+.why-section{
+padding:60px 10px;
+background:#ffffff;
+font-family:Poppins,sans-serif;
+}
+
+.why-container{
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+.why-header{
+text-align:center;
+margin-bottom:65px;
+}
+
+.why-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.why-header h2{
+font-size:42px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:18px;
+line-height:1.2;
+}
+
+.why-highlight{
+color:#6366f1;
+}
+
+.why-header p{
+color:#64748b;
+font-size:17px;
+max-width:720px;
+margin:auto;
+line-height:1.7;
+}
+
+/* GRID */
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
+}
+
+/* CARD */
+
+.why-card{
+background:#ffffff;
+border:1px solid #e5e7eb;
+border-radius:20px;
+padding:40px 28px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,0.05);
+transition:.35s;
+}
+
+.why-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 60px rgba(0,0,0,0.1);
+border-color:#6366f1;
+}
+
+/* ICON */
+
+.why-icon{
+width:64px;
+height:64px;
+margin:auto;
+margin-bottom:22px;
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:16px;
+box-shadow:0 10px 25px rgba(99,102,241,.35);
+}
+
+.why-icon svg{
+width:28px;
+height:28px;
+stroke:white;
+stroke-width:2;
+}
+
+/* TEXT */
+
+.why-card h3{
+font-size:20px;
+font-weight:700;
+margin-bottom:12px;
+color:#0f172a;
+}
+
+.why-card p{
+font-size:15px;
+color:#475569;
+line-height:1.7;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.why-header h2{
+font-size:30px;
+}
+
+}
+
+</style>
+
+
+<section class="why-section">
+
+<div class="why-container">
+
+<div class="why-header">
+
+<span class="why-badge">Why Choose GeoLift</span>
+
+<h2>
+Why Businesses <span class="why-highlight">Choose GeoLift</span>
+</h2>
+
+<p>
+A focused consulting approach designed to improve Google Business Profile
+performance through structured optimization, practical strategy,
+and transparent implementation.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M3 17L9 11L13 15L21 7"></path>
+<path d="M14 7H21V14"></path>
+</svg>
+</div>
+
+<h3>Direct Consultant Handling</h3>
+
+<p>
+You work directly with me — no outsourcing, no agency layers,
+and no communication gaps.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M12 21C12 21 4 13.5 4 8.5C4 5.5 6.5 3 9.5 3C11.2 3 12 4 12 4C12 4 12.8 3 14.5 3C17.5 3 20 5.5 20 8.5C20 13.5 12 21 12 21Z"></path>
+</svg>
+</div>
+
+<h3>Focused Expertise</h3>
+
+<p>
+Specialized in optimizing Google Business Profiles
+to improve local visibility and search performance.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"></path>
+</svg>
+</div>
+
+<h3>Structured Implementation</h3>
+
+<p>
+Step-by-step improvements focused on profile health,
+accuracy, and sustainable local visibility.
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<div class="why-icon">
+<svg viewBox="0 0 24 24" fill="none">
+<path d="M16 11V5A2 2 0 0 0 14 3H10A2 2 0 0 0 8 5V11"></path>
+<rect x="4" y="11" width="16" height="10" rx="2"></rect>
+</svg>
+</div>
+
+<h3>Transparent Process</h3>
+
+<p>
+Clear communication and practical guidance throughout
+the optimization and improvement process.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+  
+<!-- ================= FAQ SECTION ================= -->
+
+<style>
+
+.faq-section{
+padding:60px 10px;
+background:#f8fafc;
+font-family:Poppins,sans-serif;
+}
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+/* HEADER */
+
+.faq-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.faq-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.faq-header h2{
+font-size:38px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:15px;
+line-height:1.2;
+}
+
+.faq-highlight{
+color:#6366f1;
+}
+
+.faq-header p{
+color:#64748b;
+font-size:16px;
+line-height:1.7;
+max-width:620px;
+margin:auto;
+}
+
+/* FAQ BOX */
+
+.faq-item{
+background:#ffffff;
+margin-bottom:20px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+overflow:hidden;
+transition:.3s;
+}
+
+.faq-question{
+padding:22px 25px;
+cursor:pointer;
+font-weight:600;
+color:#0f172a;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:16px;
+}
+
+.faq-question:hover{
+background:#f1f5f9;
+}
+
+.faq-answer{
+padding:0 25px;
+max-height:0;
+overflow:hidden;
+transition:max-height .4s ease;
+color:#475569;
+font-size:15px;
+line-height:1.7;
+}
+
+.faq-item.active .faq-answer{
+padding:0 25px 20px 25px;
+max-height:200px;
+}
+
+.faq-icon{
+font-size:18px;
+transition:.3s;
+}
+
+.faq-item.active .faq-icon{
+transform:rotate(45deg);
+}
+
+@media(max-width:768px){
+
+.faq-header h2{
+font-size:28px;
+}
+
+}
+
+</style>
+
+<section class="faq-section">
+
+<div class="faq-container">
+
+<!-- HEADER -->
+
+<div class="faq-header">
+
+
+<h2>
+Questions About  
+<span class="faq-highlight">Local Visibility</span>  
+and Google Profile Optimization
+</h2>
+
+<p>
+Answers to common questions about improving visibility on 
+Google Maps, optimizing your business profile, and generating 
+more enquiries through structured local search improvements.
+</p>
+
+</div>
+
+
+<!-- FAQ ITEMS -->
+
+<div class="faq-item">
+<div class="faq-question">
+How long does it take to see visibility improvement?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+Most businesses begin noticing visibility improvements within 30–90 days depending on competition, profile condition, and existing local signals.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+Do you guarantee #1 ranking?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+No. I do not guarantee specific ranking positions. The focus is on structured optimization to improve visibility and enquiry opportunities.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+What type of businesses do you work with?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+I primarily work with service-based and industrial businesses looking to improve their Google Maps visibility and profile performance.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-question">
+Will I receive performance reports?
+<span class="faq-icon">+</span>
+</div>
+<div class="faq-answer">
+Yes. You receive structured monthly reports detailing ranking improvements, calls, traffic growth, and optimization updates.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<script>
+
 document.querySelectorAll(".faq-question").forEach(item=>{
 item.addEventListener("click",()=>{
 const parent=item.parentElement;
 parent.classList.toggle("active");
 });
 });
+
+</script>
+  
+
+
+<!-- ================= OUR PROCESS SECTION ================= -->
+
+<style>
+
+.process-section{
+padding:60px 10px;
+background:#ffffff;
+font-family:Poppins,sans-serif;
+}
+
+.process-container{
+max-width:1100px;
+margin:auto;
+}
+
+/* HEADER */
+
+.process-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.process-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.process-header h2{
+font-size:40px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:15px;
+line-height:1.2;
+}
+
+.process-highlight{
+color:#6366f1;
+}
+
+.process-header p{
+color:#64748b;
+font-size:17px;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+}
+
+/* PROCESS GRID */
+
+.process-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:40px;
+}
+
+.process-card{
+text-align:center;
+padding:30px 20px;
+}
+
+.process-number{
+width:65px;
+height:65px;
+margin:0 auto 20px;
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:#fff;
+font-size:22px;
+font-weight:700;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+box-shadow:0 10px 25px rgba(99,102,241,0.3);
+}
+
+.process-card h3{
+font-size:19px;
+font-weight:700;
+margin-bottom:12px;
+color:#0f172a;
+}
+
+.process-card p{
+font-size:15px;
+color:#475569;
+line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.process-header h2{
+font-size:30px;
+}
+
+}
+
+</style>
+
+
+<section class="process-section">
+
+<div class="process-container">
+
+<div class="process-header">
+
+
+<h2>
+Our Structured  
+<span class="process-highlight">Visibility Framework</span>
+</h2>
+
+<p>
+A clear and structured approach used to improve Google Business Profile visibility,
+identify optimization gaps, and build stronger local search performance.
+</p>
+
+</div>
+
+<div class="process-grid">
+
+<div class="process-card">
+<div class="process-number">01</div>
+<h3>Profile Review</h3>
+<p>Analysis of your Google Business Profile, categories, competitors, and visibility gaps.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">02</div>
+<h3>Issue Identification</h3>
+<p>Finding structural, content, and consistency problems affecting profile visibility.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">03</div>
+<h3>Structured Optimization</h3>
+<p>Refining categories, services, descriptions, and key profile elements.</p>
+</div>
+
+<div class="process-card">
+<div class="process-number">04</div>
+<h3>Guidance & Monitoring</h3>
+<p>Providing clear recommendations and monitoring improvements over time.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= EXPECTED RESULTS SECTION ================= -->
+
+<style>
+
+.gbp-results-section{
+padding:90px 20px;
+background:linear-gradient(180deg,#ffffff 0%,#f8faff 100%);
+font-family:Poppins,sans-serif;
+}
+
+.gbp-results-container{
+max-width:1200px;
+margin:auto;
+}
+
+.gbp-results-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.gbp-results-badge{
+display:inline-block;
+background:#eef2ff;
+color:#4f46e5;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+margin-bottom:14px;
+}
+
+.gbp-results-header h2{
+font-size:36px;
+color:#111827;
+margin-bottom:14px;
+}
+
+.gbp-results-header p{
+font-size:16px;
+color:#6b7280;
+max-width:720px;
+margin:auto;
+line-height:1.7;
+}
+
+.results-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:22px;
+margin-top:40px;
+}
+
+.result-card{
+background:#ffffff;
+padding:26px;
+border-radius:14px;
+text-align:center;
+box-shadow:0 12px 30px rgba(0,0,0,0.05);
+transition:all .35s ease;
+position:relative;
+}
+
+.result-card:hover{
+transform:translateY(-8px);
+box-shadow:0 22px 45px rgba(0,0,0,0.08);
+}
+
+.result-icon{
+font-size:26px;
+margin-bottom:10px;
+}
+
+.result-card h3{
+font-size:16px;
+color:#111827;
+margin-bottom:8px;
+}
+
+.result-card p{
+font-size:14px;
+color:#6b7280;
+line-height:1.6;
+}
+
+/* subtle bottom line animation */
+
+.result-card::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:0;
+height:3px;
+background:#6366f1;
+transition:.4s;
+}
+
+.result-card:hover::after{
+width:100%;
+}
+
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.results-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.results-grid{
+grid-template-columns:1fr;
+}
+
+.gbp-results-header h2{
+font-size:28px;
+}
+
+}
+
+</style>
+
+
+<section class="gbp-results-section">
+
+<div class="gbp-results-container">
+
+<div class="gbp-results-header">
+
+<div class="gbp-results-badge">
+Expected Outcomes
+</div>
+
+<h2>
+Expected Results From a Proper Google Business Profile Setup
+</h2>
+
+<p>
+A properly optimized Google Business Profile improves your chances of appearing in local searches and helps potential customers discover your business when they are actively looking for services nearby.
+</p>
+
+</div>
+
+
+<div class="results-grid">
+
+
+<div class="result-card">
+<div class="result-icon">📍</div>
+<h3>Better Google Maps Visibility</h3>
+<p>
+Your business becomes more visible when customers search for services in your local area.
+</p>
+</div>
+
+
+<div class="result-card">
+<div class="result-icon">🔎</div>
+<h3>More Discovery Searches</h3>
+<p>
+Optimized profiles appear in searches from people who are looking for services like yours.
+</p>
+</div>
+
+
+<div class="result-card">
+<div class="result-icon">⭐</div>
+<h3>Higher Customer Trust</h3>
+<p>
+A complete and professional profile builds credibility and encourages potential customers to choose your business.
+</p>
+</div>
+
+
+<div class="result-card">
+<div class="result-icon">📞</div>
+<h3>More Calls & Direction Requests</h3>
+<p>
+Improved visibility often leads to more direct calls, website visits and map direction requests.
+</p>
+</div>
+
+
+<div class="result-card">
+<div class="result-icon">📈</div>
+<h3>Stronger Local SEO Foundation</h3>
+<p>
+A well optimized profile strengthens your overall local SEO strategy and supports long-term growth.
+</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+  
+
+
+<!-- ================= TESTIMONIAL SECTION ================= -->
+
+<style>
+
+.testimonial-section{
+padding:60px 10px;
+background:linear-gradient(135deg,#eef2ff,#f8faff);
+font-family:Poppins,sans-serif;
+text-align:center;
+}
+
+.testimonial-container{
+max-width:900px;
+margin:auto;
+position:relative;
+}
+
+/* HEADER */
+
+.testimonial-header{
+margin-bottom:50px;
+}
+
+.testimonial-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.testimonial-header h2{
+font-size:40px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:15px;
+}
+
+.testimonial-highlight{
+color:#6366f1;
+}
+
+.testimonial-header p{
+color:#64748b;
+font-size:16px;
+max-width:600px;
+margin:auto;
+line-height:1.7;
+}
+
+/* TESTIMONIAL CARD */
+
+.testimonial-card{
+background:#ffffff;
+padding:45px 35px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+display:none;
+transition:.4s;
+}
+
+.testimonial-card.active{
+display:block;
+animation:fadeIn .5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(15px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+.testimonial-text{
+font-size:17px;
+line-height:1.8;
+color:#475569;
+margin-bottom:25px;
+}
+
+.testimonial-name{
+font-weight:700;
+color:#0f172a;
+font-size:16px;
+}
+
+.testimonial-role{
+font-size:14px;
+color:#6366f1;
+margin-top:4px;
+}
+
+/* DOT CONTROLS */
+
+.testimonial-controls{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:12px;
+}
+
+.testimonial-dot{
+width:12px;
+height:12px;
+border-radius:50%;
+background:#cbd5e1;
+cursor:pointer;
+transition:.3s;
+}
+
+.testimonial-dot.active{
+background:#6366f1;
+transform:scale(1.2);
+}
+
+@media(max-width:768px){
+
+.testimonial-header h2{
+font-size:30px;
+}
+
+}
+
+</style>
+
+
+<section class="testimonial-section">
+
+<div class="testimonial-container">
+
+<div class="testimonial-header">
+
+
+<h2>
+What Businesses Say  
+About Their <span class="testimonial-highlight">Visibility Improvements</span>
+</h2>
+
+<p>
+Feedback from businesses after improving their Google Business Profile
+and local search visibility.
+</p>
+
+</div>
+
+
+<div class="testimonial-card active">
+<div class="testimonial-text">
+“After optimizing our Google Business Profile, we noticed improved visibility and more relevant enquiries coming through Maps searches.”
+</div>
+<div class="testimonial-name">Industrial Business Owner</div>
+<div class="testimonial-role">Manufacturing Sector</div>
+</div>
+
+
+<div class="testimonial-card">
+<div class="testimonial-text">
+“Our profile had several issues affecting visibility. After corrections and optimization, performance became more stable and enquiries improved.”
+</div>
+<div class="testimonial-name">Service Business Owner</div>
+<div class="testimonial-role">Local Services</div>
+</div>
+
+
+<div class="testimonial-card">
+<div class="testimonial-text">
+“The structured approach helped us understand how our Google Business Profile should be properly optimized.”
+</div>
+<div class="testimonial-name">Business Owner</div>
+<div class="testimonial-role">B2B Industry</div>
+</div>
+
+
+<div class="testimonial-controls">
+<div class="testimonial-dot active"></div>
+<div class="testimonial-dot"></div>
+<div class="testimonial-dot"></div>
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+const testimonials = document.querySelectorAll(".testimonial-card");
+const dots = document.querySelectorAll(".testimonial-dot");
+
+let current = 0;
+
+function showTestimonial(index){
+
+testimonials.forEach((card,i)=>{
+card.classList.remove("active");
+dots[i].classList.remove("active");
+});
+
+testimonials[index].classList.add("active");
+dots[index].classList.add("active");
+
+current = index;
+
+}
+
+dots.forEach((dot,i)=>{
+dot.addEventListener("click",()=>{
+showTestimonial(i);
+});
+});
+
+setInterval(()=>{
+current = (current + 1) % testimonials.length;
+showTestimonial(current);
+},5000);
+
 </script>
 
 
-<!-- ================= BOTTOM CTA ================= -->
-<section class="bottom-cta">
-<h2>Ready to Improve Your Google Maps Ranking?</h2>
-<p>Stop losing local customers to competitors. Let our professional GMB Optimization strategy position your business at the top of Google Maps results and generate consistent local leads.</p>
-<a href="tel:+919330629573" class="btn-primary" style="background:#fff;color:#1e40af;">Get Free Consultation</a>
+
+<!-- ================= RELATED SERVICES SECTION ================= -->
+
+<style>
+
+.related-services{
+padding:80px 20px;
+background:#f8faff;
+font-family:Poppins,sans-serif;
+}
+
+.related-services-container{
+max-width:1100px;
+margin:auto;
+}
+
+.related-header{
+text-align:center;
+margin-bottom:50px;
+}
+
+.related-badge{
+display:inline-block;
+background:#eef2ff;
+color:#4f46e5;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+margin-bottom:14px;
+}
+
+.related-header h2{
+font-size:34px;
+color:#111827;
+margin-bottom:12px;
+}
+
+.related-header p{
+font-size:16px;
+color:#6b7280;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+}
+
+/* GRID */
+
+.related-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:28px;
+margin-top:40px;
+}
+
+.related-card{
+background:#ffffff;
+padding:30px;
+border-radius:14px;
+box-shadow:0 14px 35px rgba(0,0,0,0.05);
+transition:all .35s ease;
+text-decoration:none;
+display:block;
+}
+
+.related-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 55px rgba(0,0,0,0.08);
+}
+
+.related-icon{
+width:44px;
+height:44px;
+border-radius:50%;
+background:#eef2ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+margin-bottom:14px;
+}
+
+.related-card h3{
+font-size:20px;
+color:#111827;
+margin-bottom:8px;
+}
+
+.related-card p{
+font-size:15px;
+color:#6b7280;
+line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.related-grid{
+grid-template-columns:1fr;
+}
+
+.related-header h2{
+font-size:28px;
+}
+
+}
+
+</style>
+
+
+<section class="related-services">
+
+<div class="related-services-container">
+
+<div class="related-header">
+
+<div class="related-badge">
+Related Services
+</div>
+
+<h2>
+Explore Related Services
+</h2>
+
+<p>
+Businesses looking to improve local visibility often combine Google Business Profile optimization with other digital growth services.
+</p>
+
+</div>
+
+
+<div class="related-grid">
+
+<a href="/google-maps-ranking-service" class="related-card">
+
+<div class="related-icon">📍</div>
+
+<h3>Advanced Google Maps Ranking</h3>
+
+<p>
+Improve your position in Google Maps and increase visibility in local search results with advanced optimization strategies.
+</p>
+
+</a>
+
+
+<a href="/business-website-development" class="related-card">
+
+<div class="related-icon">🌐</div>
+
+<h3>Business Website Development</h3>
+
+<p>
+Professional websites designed to support local SEO, improve credibility and convert visitors into customers.
+</p>
+
+</a>
+
+
+</div>
+
+</div>
+
 </section>
   
+
+  <!-- ================= FINAL CTA SECTION ================= -->
+
+<style>
+
+.cta-section{
+padding:70px 20px;
+background:linear-gradient(135deg,#4f46e5,#6366f1);
+text-align:center;
+font-family:Poppins,sans-serif;
+color:#fff;
+}
+
+.cta-container{
+max-width:900px;
+margin:auto;
+}
+
+.cta-section h2{
+font-size:42px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.cta-section p{
+font-size:18px;
+opacity:.95;
+margin-bottom:40px;
+line-height:1.7;
+}
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.cta-btn{
+padding:16px 34px;
+border-radius:50px;
+font-weight:600;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+text-decoration:none;
+display:inline-block;
+}
+
+.cta-primary{
+background:#ffffff;
+color:#4f46e5;
+}
+
+.cta-primary:hover{
+background:#f1f5ff;
+transform:translateY(-3px);
+}
+
+.cta-secondary{
+border:2px solid #ffffff;
+color:#ffffff;
+}
+
+.cta-secondary:hover{
+background:rgba(255,255,255,0.15);
+transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+.cta-section h2{
+font-size:30px;
+}
+.cta-section p{
+font-size:16px;
+}
+}
+
+</style>
+
+<section class="cta-section">
+
+<div class="cta-container">
+
+<h2>Improve Your Google Maps Visibility</h2>
+
+<p>
+If your Google Business Profile needs improvement or visibility refinement, let’s discuss your current profile condition and possible optimization steps.
+</p>
+
+<div class="cta-buttons">
+
+<a href="tel:+919330629573" class="cta-btn cta-primary">
+Get Free Consultation
+</a>
+
+<a href="https://wa.me/919330629573" class="cta-btn cta-secondary">
+Chat on WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+  
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<style>
+
+.contact-section{
+padding:60px 10px;
+background:#ffffff;
+font-family:Poppins,sans-serif;
+}
+
+.contact-container{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+/* HEADER */
+
+.contact-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.contact-title{
+font-size:42px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:10px;
+}
+
+.contact-highlight{
+color:#6366f1;
+}
+
+.contact-desc{
+font-size:17px;
+color:#64748b;
+max-width:620px;
+margin:0 auto 45px;
+line-height:1.7;
+}
+
+/* FORM */
+
+.contact-form{
+background:#ffffff;
+padding:40px;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.contact-form:hover{
+transform:translateY(-6px);
+box-shadow:0 25px 55px rgba(0,0,0,.12);
+}
+
+.contact-input{
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:8px;
+border:1px solid #e2e8f0;
+font-size:15px;
+outline:none;
+transition:.25s;
+}
+
+.contact-input:focus{
+border-color:#6366f1;
+box-shadow:0 0 8px rgba(99,102,241,.35);
+}
+
+.contact-textarea{
+height:120px;
+resize:none;
+}
+
+/* BUTTON */
+
+.contact-btn{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:700;
+color:#fff;
+background:linear-gradient(45deg,#6366f1,#8b5cf6);
+cursor:pointer;
+transition:.3s;
+box-shadow:0 10px 20px rgba(99,102,241,.3);
+}
+
+.contact-btn:hover{
+transform:scale(1.05);
+box-shadow:0 15px 30px rgba(99,102,241,.45);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.contact-title{
+font-size:30px;
+}
+
+}
+
+</style>
+
+
+<section class="contact-section">
+
+<div class="contact-container">
+
+
+<h2 class="contact-title">
+Request a <span class="contact-highlight">Consultation</span>
+</h2>
+
+<p class="contact-desc">
+Tell us about your business goals and we’ll prepare a structured plan
+to improve your Google Maps visibility and generate more enquiries.
+</p>
+
+
+<form class="contact-form" onsubmit="sendWhatsApp();return false;">
+
+<input
+class="contact-input"
+id="name"
+placeholder="Your Name"
+required
+>
+
+<input
+class="contact-input"
+id="phone"
+placeholder="Phone Number"
+required
+>
+
+<textarea
+class="contact-input contact-textarea"
+id="msg"
+placeholder="Tell us about your business"
+></textarea>
+
+<button type="submit" class="contact-btn">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+
 <!-- ================= MODERN RESPONSIVE FOOTER ================= -->
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -1390,7 +3347,7 @@ justify-content:center;
 }
 /* ===== FLOATING BUTTONS ===== */
 
-.float-btn{
+  .float-btn{
 width:45px;
 height:45px;
 border-radius:50%;
@@ -1412,6 +3369,15 @@ transform:translateY(-5px);
 /* WhatsApp */
 .whatsapp{ 
 background:#25D366; 
+}
+
+.whatsapp svg{
+width:30px;
+height:30px;
+}
+
+.whatsapp svg{
+display:block;
 }
 
 /* Call */
@@ -1531,10 +3497,10 @@ contact.geolift@gmail.com
   <h4>Quick Links</h4>
   <ul>
     <li><a href="/">Home</a></li>
-    <li><a href="/services/">Services</a></li>
-    <li><a href="/about/">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#plans">Plans</a></li>
     <li><a href="https://blog.geolift.co.in/" target="_blank" rel="noopener">Blog</a></li>
-    <li><a href="/contact/">Contact</a></li>
   </ul>
 </div>
 
@@ -1581,10 +3547,10 @@ Remote Local SEO & Google Maps ranking services available PAN India.
   <span>© 2026 GeoLift — Google Business Profile Consultant</span>
 
   <span class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms</a>
-    <a href="#">Disclaimer</a>
-    <a href="#">Sitemap</a>
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <a href="/terms/">Terms</a>
+    <a href="/disclaimer/">Disclaimer</a>
+    <a href="/sitemap/">Sitemap</a>
   </span>
 </div>
 
@@ -1618,6 +3584,372 @@ behavior:"smooth"
 
 </script>
 
+<!-- FLOATING BUTTONS -->
+
+<div class="floating-buttons">
+
+<button onclick="scrollToTop()" class="float-btn top-btn">
+<svg viewBox="0 0 24 24" width="22" height="22" 
+     fill="none" 
+     stroke="white" 
+     stroke-width="2" 
+     stroke-linecap="round" 
+     stroke-linejoin="round">
+  <polyline points="18 15 12 9 6 15"></polyline>
+</svg>
+</button>
+
+<a href="tel:+919330629573" class="float-btn call">
+<svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+<path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1A19 19 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/>
+</svg>
+</a>
   
+<a href="https://wa.me/919330629573" class="float-btn whatsapp" target="_blank">
+<svg viewBox="0 0 32 32" width="26" height="26" fill="white">
+<path d="M16.003 3C8.82 3 3 8.82 3 16c0 2.61.76 5.04 2.08 7.09L3 29l6.09-2.02A12.93 12.93 0 0016.003 29C23.18 29 29 23.18 29 16S23.18 3 16.003 3zm6.72 18.29c-.28.79-1.64 1.5-2.26 1.6-.58.09-1.3.13-2.09-.12-.48-.15-1.1-.36-1.9-.7-3.35-1.45-5.53-5.02-5.7-5.25-.17-.23-1.36-1.82-1.36-3.48 0-1.66.87-2.47 1.18-2.81.3-.33.66-.42.88-.42h.63c.2 0 .48-.07.75.56.29.69.98 2.39 1.07 2.56.09.17.15.36.02.58-.12.23-.18.37-.35.57-.17.2-.36.44-.51.59-.17.17-.34.34-.14.66.2.32.87 1.4 1.86 2.26 1.27 1.13 2.34 1.48 2.67 1.64.33.17.52.14.71-.08.2-.23.84-1 1.07-1.34.22-.34.45-.28.75-.17.3.11 1.92.9 2.25 1.06.33.17.56.25.64.39.08.14.08.8-.2 1.59z"/>
+</svg>
+</a>
+
+</div>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const topBtn = document.querySelector(".top-btn");
+
+  window.addEventListener("scroll", function() {
+    if (window.scrollY > 400) {
+      topBtn.style.opacity = "1";
+      topBtn.style.visibility = "visible";
+      topBtn.style.transform = "translateY(0)";
+    } else {
+      topBtn.style.opacity = "0";
+      topBtn.style.visibility = "hidden";
+      topBtn.style.transform = "translateY(15px)";
+    }
+  });
+
+});
+</script>
+</div>
+
+
+<!-- ===== FLOATING GBP AUDIT BUTTON + POPUP FORM ===== -->
+
+<style>
+
+/* ===== DESKTOP VERTICAL BUTTON ===== */
+
+.floating-audit-btn{
+position:fixed;
+right:0;
+top:50%;
+transform:translateY(-50%);
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:#ffffff;
+padding:16px 10px;
+font-family:Poppins,sans-serif;
+font-weight:600;
+font-size:13px;
+letter-spacing:1px;
+writing-mode:vertical-rl;
+text-orientation:mixed;
+border-radius:10px 0 0 10px;
+cursor:pointer;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+z-index:9999;
+transition:all 0.3s ease;
+}
+
+.floating-audit-btn:hover{
+background:linear-gradient(135deg,#4f46e5,#4338ca);
+transform:translateY(-50%) translateX(-3px);
+}
+
+
+/* ===== MOBILE BUTTON ===== */
+
+@media (max-width:768px){
+
+.floating-audit-btn{
+writing-mode:horizontal-tb;
+text-orientation:initial;
+right:auto;
+left:50%;
+bottom:25px;
+top:auto;
+transform:translateX(-50%);
+padding:14px 22px;
+border-radius:50px;
+font-size:14px;
+}
+
+.floating-audit-btn:hover{
+transform:translateX(-50%) translateY(-3px);
+}
+
+}
+
+
+/* ===== POPUP BACKGROUND ===== */
+
+.audit-popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:10000;
+}
+
+
+/* ===== POPUP BOX ===== */
+
+.audit-box{
+background:#ffffff;
+padding:35px;
+border-radius:12px;
+width:90%;
+max-width:420px;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+position:relative;
+font-family:Poppins,sans-serif;
+}
+
+
+/* TITLE */
+
+.audit-box h3{
+margin-bottom:8px;
+font-size:22px;
+font-weight:600;
+}
+
+
+/* SUBTITLE */
+
+.audit-box p{
+font-size:14px;
+color:#64748b;
+margin-bottom:20px;
+}
+
+
+/* INPUTS */
+
+.audit-box input{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #e2e8f0;
+border-radius:6px;
+font-size:14px;
+}
+
+
+/* SUBMIT BUTTON */
+
+.audit-submit{
+width:100%;
+background:#6366f1;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.audit-submit:hover{
+background:#4f46e5;
+}
+
+
+/* CLOSE BUTTON */
+
+.audit-close{
+position:absolute;
+top:12px;
+right:15px;
+font-size:22px;
+cursor:pointer;
+color:#64748b;
+}
+
+</style>
+
+
+<!-- FLOATING BUTTON -->
+
+<div class="floating-audit-btn" onclick="openAuditForm()">
+Free GBP Audit
+</div>
+
+
+<!-- POPUP FORM -->
+
+<div id="auditPopup" class="audit-popup">
+
+<div class="audit-box">
+
+<span class="audit-close" onclick="closeAuditForm()">×</span>
+
+<h3>Free Google Business Profile Audit</h3>
+
+<p>Submit your business details and get a quick visibility analysis of your Google Business Profile.</p>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="tel" placeholder="Phone / WhatsApp" required>
+
+<input type="text" placeholder="Business Name">
+
+<input type="text" placeholder="Google Maps Link">
+
+<button type="submit" class="audit-submit">
+Request Audit
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openAuditForm(){
+document.getElementById("auditPopup").style.display="flex";
+}
+
+function closeAuditForm(){
+document.getElementById("auditPopup").style.display="none";
+}
+
+window.onclick=function(event){
+let popup=document.getElementById("auditPopup");
+if(event.target==popup){
+popup.style.display="none";
+}
+}
+
+</script>
+
+  <!-- ===== PLAN POPUP FORM ===== -->
+
+<style>
+
+.plan-popup-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(15,23,42,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999999;
+padding:20px;
+}
+
+.plan-popup{
+background:#ffffff;
+width:100%;
+max-width:420px;
+border-radius:14px;
+padding:32px;
+box-shadow:0 30px 80px rgba(0,0,0,0.25);
+font-family:Poppins,sans-serif;
+position:relative;
+}
+
+.plan-close{
+position:absolute;
+top:12px;
+right:16px;
+font-size:22px;
+cursor:pointer;
+color:#64748b;
+}
+
+.plan-popup h3{
+margin-bottom:18px;
+font-size:22px;
+font-weight:700;
+color:#0f172a;
+}
+
+.plan-popup input,
+.plan-popup textarea{
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #e5e7eb;
+border-radius:6px;
+font-family:Poppins;
+font-size:14px;
+}
+
+.plan-popup textarea{
+min-height:80px;
+resize:none;
+}
+
+.plan-popup button{
+width:100%;
+padding:14px;
+background:#6366f1;
+border:none;
+color:#fff;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+}
+
+.plan-popup button:hover{
+background:#4f46e5;
+}
+
+</style>
+
+
+
+<div class="plan-popup-overlay" id="planPopup">
+
+<div class="plan-popup">
+
+<div class="plan-close">&times;</div>
+
+<h3>Start Your Growth Plan</h3>
+
+<form id="planForm">
+
+<input type="text" id="pName" placeholder="Your Name" required>
+
+<input type="text" id="pBusiness" placeholder="Business Name" required>
+
+<input type="text" id="pLocation" placeholder="City / Location">
+
+<input type="text" id="pGBP" placeholder="Google Business Profile Link">
+
+<textarea id="pDetails" placeholder="Tell us about your business"></textarea>
+
+<button type="submit">Send Request</button>
+
+</form>
+
+</div>
+
+</div>
+
 </body>
 </html>
