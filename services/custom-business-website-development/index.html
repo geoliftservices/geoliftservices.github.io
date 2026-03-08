@@ -5179,127 +5179,101 @@ background:#4f46e5;
 </div>
 
 
-  <!-- ===== STICKY PLANS BAR ===== -->
-
+<!-- Sticky Plans Bar -->
 <style>
 
-/* Sticky Plans Bar */
-
-.plans-sticky-bar{
+.geolift-sticky-bar{
 position:fixed;
-left:0;
-bottom:-120px;
-width:100%;
-
-background:#ffffff;
-border-top:1px solid #e5e7eb;
-
-display:flex;
-align-items:center;
-justify-content:center;
-gap:20px;
-
-padding:14px 20px;
-
-font-family:Poppins,sans-serif;
-
-box-shadow:0 -6px 20px rgba(0,0,0,0.08);
-
-z-index:9998;
-
-transition:bottom .35s ease;
-}
-
-/* Show when scrolling */
-
-.plans-sticky-bar.show{
 bottom:0;
+left:0;
+width:100%;
+background:linear-gradient(90deg,#1e3a8a,#2563eb);
+color:#fff;
+padding:14px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+z-index:999;
+box-shadow:0 -6px 20px rgba(0,0,0,0.15);
+font-family:inherit;
+animation:slideUpBar .6s ease;
 }
 
-/* Text */
-
-.plans-text{
+.geolift-sticky-text{
 font-size:15px;
 font-weight:500;
-color:#374151;
+letter-spacing:.3px;
 }
 
-/* Button */
-
-.plans-btn{
-background:#6366f1;
-color:#ffffff;
-
-padding:10px 22px;
+.geolift-sticky-btn{
+background:#fff;
+color:#1e3a8a;
+padding:10px 20px;
 border-radius:30px;
-
-font-weight:600;
 text-decoration:none;
-
-box-shadow:0 6px 18px rgba(99,102,241,0.35);
-
-transition:.25s;
+font-size:14px;
+font-weight:600;
+transition:all .3s ease;
 }
 
-.plans-btn:hover{
-background:#4f46e5;
+.geolift-sticky-btn:hover{
 transform:translateY(-2px);
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes slideUpBar{
+from{
+transform:translateY(100%);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
 }
 
 /* Mobile */
 
 @media(max-width:768px){
 
-.plans-sticky-bar{
+.geolift-sticky-bar{
 flex-direction:column;
-gap:10px;
+gap:8px;
 padding:12px;
 }
 
-.plans-text{
+.geolift-sticky-text{
 font-size:14px;
 text-align:center;
 }
 
+.geolift-sticky-btn{
+padding:9px 18px;
+font-size:13px;
+}
+
+}
+
+/* Prevent footer hiding */
+
+body{
+padding-bottom:90px;
 }
 
 </style>
 
+<div class="geolift-sticky-bar">
 
-<div class="plans-sticky-bar" id="plansSticky">
-
-<div class="plans-text">
+<div class="geolift-sticky-text">
 View Affordable Website Plans for Your Business
 </div>
 
-<a href="#plans" class="plans-btn">
+<a href="/plans" class="geolift-sticky-btn">
 See Plans
 </a>
 
 </div>
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded",function(){
-
-const stickyBar=document.getElementById("plansSticky");
-
-window.addEventListener("scroll",function(){
-
-if(window.scrollY>600){
-stickyBar.classList.add("show");
-}else{
-stickyBar.classList.remove("show");
-}
-
-});
-
-});
-
-</script>
-
-<!-- ===== END STICKY PLANS BAR ===== -->
 
 
 </body>
