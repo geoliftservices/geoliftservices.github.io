@@ -3667,7 +3667,7 @@ var selectedPlan="";
 document.querySelectorAll(".openAudit").forEach(btn=>{
 btn.onclick=function(){
 
-selectedPlan=this.getAttribute("data-plan");
+selectedPlan=this.getAttribute("data-plan") || "";
 
 document.getElementById("auditPopup").style.display="flex";
 
