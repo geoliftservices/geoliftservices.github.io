@@ -5674,6 +5674,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <style>
 
+
+
+
 /* ===== DESKTOP VERTICAL BUTTON ===== */
 
 .floating-audit-btn{
@@ -5694,33 +5697,27 @@ border-radius:10px 0 0 10px;
 cursor:pointer;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 z-index:9999;
-transition:all 0.3s ease;
+transition:background 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* PREMIUM HOVER – no movement */
 
 .floating-audit-btn:hover{
-background:linear-gradient(135deg,#4f46e5,#4338ca);
-transform:translateY(-50%) translateX(-3px);
+background:linear-gradient(135deg,#5b5ff0,#4338ca);
+box-shadow:0 14px 35px rgba(0,0,0,0.25);
 }
 
 
-/* ===== MOBILE BUTTON (VERTICAL LIKE DESKTOP) ===== */
+/* ===== MOBILE ===== */
 
 @media (max-width:768px){
 
 .floating-audit-btn{
 top:55%;
 right:0;
-left:auto;
-bottom:auto;
 transform:translateY(-50%);
 font-size:12px;
 padding:14px 8px;
-}
-
-}
-
-.floating-audit-btn:hover{
-transform:translateX(-50%) translateY(-3px);
 }
 
 }
