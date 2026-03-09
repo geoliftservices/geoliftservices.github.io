@@ -180,6 +180,11 @@ height:1px;
 background:rgba(15,23,42,0.04);
 }
 
+
+
+
+  
+
 /* ================= PRICING SECTION ================= */
 
 .pricing-section{
@@ -2788,6 +2793,409 @@ services for businesses across major cities and growing local markets.
 <!-- ================= END LOCATION COVERAGE ================= -->
   
 
+
+
+ <!-- ================= SERVICES SECTION ================= -->
+
+<style>
+
+/* ================= SERVICES SECTION ================= */
+
+.services{
+padding:60px 20px;
+background:#f6f7fb;
+font-family:'poppins',sans-serif;
+}
+
+.services-container{
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+.services-header{
+text-align:center;
+margin-bottom:60px;
+}
+
+.services-badge{
+display:inline-block;
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+margin-bottom:18px;
+}
+
+.services-title{
+font-size:42px;
+font-weight:800;
+margin-bottom:18px;
+color:#0f172a;
+line-height:1.2;
+}
+
+.services-highlight{
+color:#6366f1;
+}
+
+.services-sub{
+color:#475569;
+font-size:17px;
+max-width:720px;
+margin:auto;
+line-height:1.7;
+}
+
+/* GRID */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+align-items:start;
+}
+
+@media(max-width:1024px){
+.services-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:768px){
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.services-title{
+font-size:30px;
+}
+}
+
+/* CARD */
+
+.service-card{
+background:#fff;
+border:1px solid #e7eaf0;
+border-radius:14px;
+padding:30px;
+box-shadow:0 6px 20px rgba(0,0,0,0.04);
+transition:.25s;
+display:flex;
+flex-direction:column;
+}
+
+.service-card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 45px rgba(0,0,0,0.08);
+border-color:#6d5cff;
+}
+
+.service-card h3{
+font-size:20px;
+margin-bottom:12px;
+color:#0f172a;
+}
+
+.service-desc{
+font-size:14px;
+color:#64748b;
+margin-bottom:16px;
+line-height:1.6;
+}
+
+/* FEATURES */
+
+.features{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.features li{
+font-size:14px;
+padding:6px 0;
+color:#334155;
+display:flex;
+align-items:flex-start;
+}
+
+.features li:before{
+content:"✔";
+color:#6d5cff;
+font-weight:700;
+margin-right:9px;
+font-size:13px;
+margin-top:2px;
+}
+
+/* HIDDEN FEATURES */
+
+.more-features{
+display:none;
+margin-top:5px;
+}
+
+/* LINKS */
+
+.card-links{
+margin-top:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* VIEW MORE */
+
+.view-more{
+color:#6d5cff;
+font-weight:600;
+cursor:pointer;
+font-size:14px;
+}
+
+.view-more:hover{
+text-decoration:underline;
+}
+
+/* BUTTON */
+
+.know-more{
+background:#6d5cff;
+color:#fff;
+font-weight:600;
+text-decoration:none;
+font-size:14px;
+padding:9px 18px;
+border-radius:6px;
+transition:.25s;
+}
+
+.know-more:hover{
+background:#5847ff;
+}
+
+</style>
+
+
+
+<section id="services" class="services">
+
+<div class="services-container">
+
+<!-- HEADER -->
+
+<div class="services-header">
+
+<span class="services-badge">Our Services</span>
+
+<h2 class="services-title">
+Professional <span class="services-highlight">Local Growth</span> Solutions
+</h2>
+
+<p class="services-sub">
+Specialized services designed to improve Google Business Profile performance,
+increase local visibility, and build a strong digital presence for modern businesses.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+
+<!-- GBP SERVICE -->
+
+<div class="service-card">
+
+<h3>GBP Setup & Optimization</h3>
+
+<p class="service-desc">
+Complete Google Business Profile configuration to improve local search visibility and customer engagement.
+</p>
+
+<ul class="features">
+
+<li>Business Information Setup</li>
+<li>Map Pin Verification</li>
+<li>WhatsApp Chat Integration</li>
+<li>Call Button Setup</li>
+<li>Services & Products Listing</li>
+<li>Category Optimization</li>
+<li>Business Description Optimization</li>
+
+</ul>
+
+<ul class="features more-features">
+
+<li>Logo & Cover Photo Setup</li>
+<li>Business Hours Setup</li>
+<li>Service Area Configuration</li>
+<li>Review Link Creation</li>
+<li>Google Map Embedding</li>
+<li>Profile SEO Optimization</li>
+<li>Spam Protection Setup</li>
+<li>Trust Signal Setup</li>
+<li>FAQ Section Setup</li>
+<li>Business Attributes Optimization</li>
+
+</ul>
+
+<div class="card-links">
+
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
+
+<a class="know-more" href="/services/gbp-setup-optimization/">Know More</a>
+
+</div>
+
+</div>
+
+
+<!-- MAPS RANKING -->
+
+<div class="service-card">
+
+<h3>Advanced Google Maps Ranking</h3>
+
+<p class="service-desc">
+Advanced optimization strategies designed to improve Google Maps rankings and generate consistent local leads.
+</p>
+
+<ul class="features">
+
+<li>Local Keyword Strategy</li>
+<li>Competitor Analysis</li>
+<li>Profile SEO Improvements</li>
+<li>Geo Relevance Optimization</li>
+<li>Map Ranking Signals Setup</li>
+<li>Location Authority Signals</li>
+<li>Review Growth Strategy</li>
+
+</ul>
+
+<ul class="features more-features">
+
+<li>Weekly Profile Optimization</li>
+<li>Google Posts Publishing</li>
+<li>Citation Building</li>
+<li>Competitor Monitoring</li>
+<li>Behavioral Ranking Signals</li>
+<li>Performance Tracking</li>
+<li>Ranking Improvement Strategy</li>
+<li>Lead Conversion Optimization</li>
+
+</ul>
+
+<div class="card-links">
+
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
+
+<a class="know-more" href="/services/advanced-google-maps-ranking/">Know More</a>
+
+</div>
+
+</div>
+
+
+<!-- WEBSITE -->
+
+<div class="service-card">
+
+<h3>Custom Business Website Development</h3>
+
+<p class="service-desc">
+Modern business websites designed for credibility, performance, and professional online presence.
+</p>
+
+<ul class="features">
+
+<li>Professional Web Design</li>
+<li>Full Website Development</li>
+<li>Mobile Responsive Layout</li>
+<li>Fast Loading Speed</li>
+<li>SEO Friendly Structure</li>
+<li>WhatsApp Chat Integration</li>
+<li>Call Button Integration</li>
+
+</ul>
+
+<ul class="features more-features">
+
+<li>Free Hosting Setup</li>
+<li>Custom Domain Connection</li>
+<li>Google Maps Integration</li>
+<li>Modern Animated Design</li>
+<li>Secure HTTPS Setup</li>
+<li>Lead Contact Forms</li>
+<li>Optimized UI/UX Structure</li>
+<li>Full Custom Design Control</li>
+
+</ul>
+
+<div class="card-links">
+
+<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
+
+<a class="know-more" href="/services/custom-business-website-development/">Know More</a>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+
+<!-- ================= SCRIPT ================= -->
+
+<script>
+
+function toggleFeatures(btn){
+
+let currentCard = btn.closest(".service-card");
+let currentFeatures = currentCard.querySelector(".more-features");
+
+/* CLOSE OTHER CARDS */
+
+document.querySelectorAll(".service-card").forEach(function(card){
+
+let features = card.querySelector(".more-features");
+let button = card.querySelector(".view-more");
+
+if(card !== currentCard){
+
+features.style.display="none";
+button.textContent="+ View More Features";
+
+}
+
+});
+
+/* TOGGLE CURRENT */
+
+if(currentFeatures.style.display==="block"){
+
+currentFeatures.style.display="none";
+btn.textContent="+ View More Features";
+
+}else{
+
+currentFeatures.style.display="block";
+btn.textContent="Hide Features";
+
+}
+
+}
+
+</script>
+
+  
   
   
 <!-- GEO LIFT PRICING SECTION -->
