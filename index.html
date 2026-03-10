@@ -1057,6 +1057,12 @@ gap:70px;
 align-items:center;
 }
 
+/* LEFT CONTENT */
+
+.about-left{
+max-width:560px;
+}
+
 /* badge */
 
 .about-badge{
@@ -1200,17 +1206,31 @@ color:#0f172a;
 margin-top:6px;
 }
 
-/* mobile */
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
 .about-container{
 grid-template-columns:1fr;
-gap:40px;
+gap:35px;
 }
 
 .about-title{
 font-size:30px;
+}
+
+/* reorder */
+
+.about-left{
+order:1;
+}
+
+.about-image{
+order:2;
+}
+
+.about-desc-group{
+order:3;
 }
 
 .about-stats{
@@ -1232,9 +1252,9 @@ width:260px;
 
 <div class="about-container">
 
-<!-- LEFT CONTENT -->
+<!-- LEFT SIDE -->
 
-<div>
+<div class="about-left">
 
 <span class="about-badge">About Us</span>
 
@@ -1242,6 +1262,18 @@ width:260px;
 Helping Businesses Build  
 <span class="about-highlight">Strong Local Visibility</span>
 </h2>
+
+</div>
+
+<!-- IMAGE -->
+
+<div class="about-image">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+</div>
+
+<!-- DESCRIPTION GROUP -->
+
+<div class="about-desc-group">
 
 <p class="about-desc">
 Many businesses create a Google Business Profile but still struggle to appear in local search results. A profile alone is not enough — it requires the right structure, optimization, and consistent improvements.
@@ -1253,12 +1285,6 @@ Our work focuses on helping businesses strengthen their presence on Google so th
 
 <a class="about-cta" onclick="toggleAbout()">Read More</a>
 
-</div>
-
-<!-- IMAGE -->
-
-<div class="about-image">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
 </div>
 
 </div>
@@ -1322,7 +1348,7 @@ Many profiles were incomplete or poorly optimized, preventing them from appearin
 
 <script>
 
-/* READ MORE */
+/* read more */
 
 function toggleAbout(){
 
@@ -1339,7 +1365,7 @@ btn.innerText="Read Less";
 
 }
 
-/* COUNTER ANIMATION */
+/* counters */
 
 const counters=document.querySelectorAll(".counter");
 const yearCounters=document.querySelectorAll(".counter-year");
@@ -1354,6 +1380,7 @@ if(entry.target.classList.contains("counter")){
 
 let counter=entry.target;
 let target=+counter.dataset.target;
+
 let count=0;
 let step=target/120;
 
@@ -1377,6 +1404,7 @@ if(entry.target.classList.contains("counter-year")){
 let counter=entry.target;
 let start=+counter.dataset.start;
 let end=+counter.dataset.end;
+
 let count=start;
 
 function updateYear(){
