@@ -1038,20 +1038,23 @@ Professional websites and Google Business optimization designed to help local bu
 
 
 
-<!-- ================= PREMIUM ABOUT SECTION ================= -->
+<!-- ================= CORPORATE ABOUT SECTION ================= -->
 
 <style>
 
 .about-section{
 padding:90px 20px;
-background:linear-gradient(180deg,#f8faff 0%,#ffffff 100%);
+background:#f8fafc;
 font-family:Poppins,sans-serif;
 }
 
 .about-container{
-max-width:1000px;
+max-width:1200px;
 margin:auto;
-text-align:center;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
 }
 
 /* badge */
@@ -1064,49 +1067,37 @@ padding:6px 14px;
 border-radius:30px;
 font-size:13px;
 font-weight:600;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 /* heading */
 
 .about-title{
-font-size:42px;
+font-size:40px;
 font-weight:800;
 color:#0f172a;
 line-height:1.25;
-margin-bottom:35px;
+margin-bottom:18px;
 }
 
 .about-highlight{
 color:#6366f1;
 }
 
-/* image */
-
-.about-image img{
-width:100%;
-max-width:820px;
-border-radius:20px;
-box-shadow:0 30px 70px rgba(0,0,0,0.15);
-margin-bottom:35px;
-}
-
-/* description */
+/* text */
 
 .about-desc{
-max-width:760px;
-margin:auto;
 font-size:16px;
 color:#475569;
-line-height:1.9;
-margin-bottom:18px;
+line-height:1.8;
+margin-bottom:16px;
 }
 
 /* CTA */
 
 .about-cta{
 display:inline-block;
-margin-top:15px;
+margin-top:18px;
 padding:12px 26px;
 background:#6366f1;
 color:#fff;
@@ -1115,7 +1106,7 @@ font-weight:600;
 border-radius:8px;
 text-decoration:none;
 transition:.25s;
-box-shadow:0 12px 30px rgba(99,102,241,.25);
+box-shadow:0 12px 25px rgba(99,102,241,.25);
 cursor:pointer;
 }
 
@@ -1124,35 +1115,33 @@ background:#4f46e5;
 transform:translateY(-2px);
 }
 
-/* expandable content */
+/* image */
+
+.about-image img{
+width:100%;
+border-radius:16px;
+box-shadow:0 30px 70px rgba(0,0,0,0.15);
+}
+
+/* expanded content */
 
 .about-full{
-max-height:0;
-overflow:hidden;
-transition:max-height .6s ease;
-margin-top:30px;
+max-width:1200px;
+margin:50px auto 0;
+display:none;
 }
-
-.about-full.active{
-max-height:1000px;
-}
-
-/* card */
 
 .about-card{
 background:#ffffff;
 border:1px solid #e5e7eb;
 border-radius:16px;
-padding:35px;
+padding:40px;
 box-shadow:0 20px 50px rgba(0,0,0,0.06);
-text-align:left;
-max-width:900px;
-margin:auto;
 }
 
 .about-card h3{
 font-size:24px;
-margin-bottom:10px;
+margin-bottom:12px;
 color:#0f172a;
 }
 
@@ -1215,6 +1204,11 @@ margin-top:6px;
 
 @media(max-width:900px){
 
+.about-container{
+grid-template-columns:1fr;
+gap:40px;
+}
+
 .about-title{
 font-size:30px;
 }
@@ -1229,18 +1223,18 @@ gap:20px;
 width:260px;
 }
 
-.about-card{
-padding:25px;
-}
-
 }
 
 </style>
 
 
-<section class="about-section" id="about">
+<section class="about-section">
 
 <div class="about-container">
+
+<!-- LEFT CONTENT -->
+
+<div>
 
 <span class="about-badge">About Us</span>
 
@@ -1249,16 +1243,8 @@ Helping Businesses Build
 <span class="about-highlight">Strong Local Visibility</span>
 </h2>
 
-<!-- IMAGE -->
-
-<div class="about-image">
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80">
-</div>
-
-<!-- DESCRIPTION -->
-
 <p class="about-desc">
-Many businesses create a Google Business Profile but still struggle to appear in local search results. A profile alone is not enough — it requires the right structure, optimization, and consistent improvements to perform well.
+Many businesses create a Google Business Profile but still struggle to appear in local search results. A profile alone is not enough — it requires the right structure, optimization, and consistent improvements.
 </p>
 
 <p class="about-desc">
@@ -1267,8 +1253,20 @@ Our work focuses on helping businesses strengthen their presence on Google so th
 
 <a class="about-cta" onclick="toggleAbout()">Read More</a>
 
+</div>
 
-<!-- EXPANDABLE CONTENT -->
+<!-- IMAGE -->
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</div>
+
+
+<!-- EXPANDED CONTENT -->
 
 <div class="about-full" id="aboutFull">
 
@@ -1277,28 +1275,22 @@ Our work focuses on helping businesses strengthen their presence on Google so th
 <h3>Our Journey</h3>
 
 <p>
-The journey started in 2021 while working with businesses that needed help fixing and optimizing their Google Business Profiles. Many profiles were incomplete or poorly optimized, preventing them from appearing in local searches.
+The journey started in 2021 while working with businesses that needed help fixing and optimizing their Google Business Profiles.
 </p>
 
 <p>
-By applying structured optimization methods, businesses improved their visibility and began receiving more enquiries from nearby customers.
+Many profiles were incomplete or poorly optimized, preventing them from appearing in local searches.
 </p>
 
 <h3>What We Focus On</h3>
 
 <ul class="about-list">
-<li>Professional Google Business Profile setup</li>
-<li>Fixing profile visibility issues</li>
+<li>Google Business Profile setup</li>
+<li>Fixing visibility issues</li>
 <li>Improving profile completeness</li>
-<li>Local optimization for search visibility</li>
+<li>Local optimization for better search presence</li>
 <li>Building profiles that generate enquiries</li>
 </ul>
-
-<p>
-The goal is always practical improvement that helps businesses appear more confidently in local search results.
-</p>
-
-</div>
 
 </div>
 
@@ -1334,93 +1326,22 @@ The goal is always practical improvement that helps businesses appear more confi
 
 function toggleAbout(){
 
-const box=document.getElementById("aboutFull");
+const content=document.getElementById("aboutFull");
 const btn=document.querySelector(".about-cta");
 
-box.classList.toggle("active");
+if(content.style.display==="block"){
 
-if(box.classList.contains("active")){
-btn.innerText="Read Less";
-}else{
+content.style.display="none";
 btn.innerText="Read More";
-}
-
-}
-
-/* counters */
-
-const counters=document.querySelectorAll(".counter");
-const yearCounters=document.querySelectorAll(".counter-year");
-
-const observer=new IntersectionObserver(entries=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-if(entry.target.classList.contains("counter")){
-
-let counter=entry.target;
-let target=+counter.dataset.target;
-
-let count=0;
-let step=target/120;
-
-function update(){
-
-count+=step;
-
-if(count<target){
-
-counter.innerText=Math.ceil(count);
-requestAnimationFrame(update);
 
 }else{
 
-counter.innerText=target+"+";
+content.style.display="block";
+btn.innerText="Read Less";
 
 }
 
 }
-
-update();
-
-}
-
-if(entry.target.classList.contains("counter-year")){
-
-let counter=entry.target;
-
-let start=+counter.dataset.start;
-let end=+counter.dataset.end;
-
-let count=start;
-
-function updateYear(){
-
-counter.innerText=count;
-
-if(count>end){
-
-count--;
-setTimeout(updateYear,120);
-
-}
-
-}
-
-updateYear();
-
-}
-
-}
-
-});
-
-},{threshold:.6});
-
-counters.forEach(c=>observer.observe(c));
-yearCounters.forEach(c=>observer.observe(c));
 
 </script>
   
