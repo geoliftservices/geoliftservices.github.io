@@ -1258,9 +1258,7 @@ Our work focuses on helping businesses strengthen their presence on Google so th
 <!-- IMAGE -->
 
 <div class="about-image">
-
 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
-
 </div>
 
 </div>
@@ -1324,24 +1322,84 @@ Many profiles were incomplete or poorly optimized, preventing them from appearin
 
 <script>
 
+/* READ MORE */
+
 function toggleAbout(){
 
 const content=document.getElementById("aboutFull");
 const btn=document.querySelector(".about-cta");
 
 if(content.style.display==="block"){
-
 content.style.display="none";
 btn.innerText="Read More";
-
 }else{
-
 content.style.display="block";
 btn.innerText="Read Less";
+}
+
+}
+
+/* COUNTER ANIMATION */
+
+const counters=document.querySelectorAll(".counter");
+const yearCounters=document.querySelectorAll(".counter-year");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+if(entry.target.classList.contains("counter")){
+
+let counter=entry.target;
+let target=+counter.dataset.target;
+let count=0;
+let step=target/120;
+
+function update(){
+count+=step;
+
+if(count<target){
+counter.innerText=Math.ceil(count);
+requestAnimationFrame(update);
+}else{
+counter.innerText=target+"+";
+}
+}
+
+update();
+
+}
+
+if(entry.target.classList.contains("counter-year")){
+
+let counter=entry.target;
+let start=+counter.dataset.start;
+let end=+counter.dataset.end;
+let count=start;
+
+function updateYear(){
+counter.innerText=count;
+
+if(count>end){
+count--;
+setTimeout(updateYear,120);
+}
+}
+
+updateYear();
 
 }
 
 }
+
+});
+
+},{threshold:0.6});
+
+counters.forEach(c=>observer.observe(c));
+yearCounters.forEach(c=>observer.observe(c));
 
 </script>
   
