@@ -1360,11 +1360,18 @@ The goal remains the same — helping businesses build a reliable local search p
 function toggleAbout(){
 
 const content = document.getElementById("aboutFull");
+const btn = document.querySelector(".about-cta");
 
 if(content.style.display === "block"){
+
 content.style.display = "none";
+btn.innerText = "Read More";
+
 }else{
+
 content.style.display = "block";
+btn.innerText = "Read Less";
+
 }
 
 }
