@@ -1037,6 +1037,7 @@ Professional websites and Google Business optimization designed to help local bu
 </section> <!-- CLOSE HERO SECTION -->
 
 
+
 <!-- ================= ABOUT SECTION ================= -->
 
 <style>
@@ -1092,6 +1093,13 @@ line-height:1.8;
 margin-bottom:16px;
 }
 
+/* hidden content */
+
+.about-more{
+display:none;
+margin-top:10px;
+}
+
 /* CTA */
 
 .about-cta{
@@ -1106,6 +1114,7 @@ border-radius:8px;
 text-decoration:none;
 transition:.25s;
 box-shadow:0 10px 25px rgba(99,102,241,.25);
+cursor:pointer;
 }
 
 .about-cta:hover{
@@ -1221,7 +1230,37 @@ have been optimized using a structured approach focused on
 profile health, search visibility, and generating real enquiries.
 </p>
 
-<a href="#plans" class="about-cta">View Plans</a>
+
+<!-- HIDDEN CONTENT -->
+
+<div class="about-more" id="aboutMore">
+
+<p>
+Many businesses create a Google Business Profile but struggle to appear in local search results. 
+A profile alone does not guarantee visibility. Proper setup, structured optimization, and 
+consistent profile management play a crucial role in improving local presence.
+</p>
+
+<p>
+GeoLift focuses on helping businesses build a strong foundation for local search by improving 
+profile completeness, fixing structural issues, and optimizing important visibility signals 
+that influence how a business appears on Google.
+</p>
+
+<p>
+The goal is not simply creating a profile, but building a reliable local presence that helps 
+businesses become easier to find, build customer trust, and generate real enquiries from 
+people searching for services nearby.
+</p>
+
+<p>
+Using a practical and structured approach, businesses can strengthen their online visibility 
+and improve how they appear in local search results over time.
+</p>
+
+</div>
+
+<a class="about-cta" onclick="toggleAbout()">Read More</a>
 
 </div>
 
@@ -1230,7 +1269,7 @@ profile health, search visibility, and generating real enquiries.
 
 <div class="about-image">
 
-<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
 
 </div>
 
@@ -1263,6 +1302,20 @@ profile health, search visibility, and generating real enquiries.
 
 <script>
 
+function toggleAbout(){
+
+const more = document.getElementById("aboutMore");
+
+if(more.style.display === "block"){
+more.style.display = "none";
+}else{
+more.style.display = "block";
+}
+
+}
+
+/* COUNTERS */
+
 const normalCounters = document.querySelectorAll(".counter");
 const yearCounters = document.querySelectorAll(".counter-year");
 
@@ -1271,8 +1324,6 @@ const observer = new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
 
 if(entry.isIntersecting){
-
-/* NORMAL COUNTERS */
 
 if(entry.target.classList.contains("counter")){
 
@@ -1303,8 +1354,6 @@ update();
 
 }
 
-/* YEAR COUNTER */
-
 if(entry.target.classList.contains("counter-year")){
 
 let counter = entry.target;
@@ -1333,8 +1382,6 @@ updateYear();
 
 }else{
 
-/* RESET WHEN LEAVING SCREEN */
-
 if(entry.target.classList.contains("counter")){
 entry.target.innerText = "0";
 }
@@ -1358,7 +1405,7 @@ observer.observe(counter);
 });
 
 </script>
-
+  
 
 
   <!-- ================= SERVICES SECTION ================= -->
