@@ -1038,12 +1038,12 @@ Professional websites and Google Business optimization designed to help local bu
 
 
 
-<!-- ================= ABOUT SECTION ================= -->
+<!-- ================= PREMIUM ABOUT SECTION ================= -->
 
 <style>
 
 .about-section{
-padding:70px 20px;
+padding:90px 20px;
 background:linear-gradient(180deg,#f8faff 0%,#ffffff 100%);
 font-family:Poppins,sans-serif;
 }
@@ -1052,12 +1052,12 @@ font-family:Poppins,sans-serif;
 max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1.1fr 1fr;
 gap:70px;
 align-items:center;
 }
 
-/* badge */
+/* BADGE */
 
 .about-badge{
 display:inline-block;
@@ -1070,34 +1070,34 @@ font-weight:600;
 margin-bottom:18px;
 }
 
-/* heading */
+/* HEADING */
 
 .about-text h2{
 font-size:42px;
 font-weight:800;
 color:#0f172a;
-line-height:1.2;
-margin-bottom:18px;
+line-height:1.25;
+margin-bottom:20px;
 }
 
 .about-highlight{
 color:#6366f1;
 }
 
-/* paragraph */
+/* INTRO */
 
-.about-text p{
+.about-intro{
 font-size:16px;
 color:#475569;
 line-height:1.8;
-margin-bottom:16px;
+margin-bottom:18px;
 }
 
 /* CTA */
 
 .about-cta{
 display:inline-block;
-margin-top:20px;
+margin-top:15px;
 padding:12px 26px;
 background:#6366f1;
 color:#fff;
@@ -1106,13 +1106,61 @@ font-weight:600;
 border-radius:8px;
 text-decoration:none;
 transition:.25s;
-box-shadow:0 10px 25px rgba(99,102,241,.25);
+box-shadow:0 12px 30px rgba(99,102,241,.25);
 cursor:pointer;
 }
 
 .about-cta:hover{
 background:#4f46e5;
 transform:translateY(-2px);
+}
+
+/* EXPANDABLE CONTENT */
+
+.about-full{
+max-height:0;
+overflow:hidden;
+transition:max-height .6s ease;
+margin-top:25px;
+}
+
+.about-full.active{
+max-height:900px;
+}
+
+/* CARD STYLE */
+
+.about-card{
+background:#ffffff;
+border:1px solid #e5e7eb;
+border-radius:16px;
+padding:28px;
+box-shadow:0 20px 50px rgba(0,0,0,0.06);
+}
+
+.about-card h3{
+font-size:22px;
+margin-bottom:10px;
+color:#0f172a;
+}
+
+.about-card p{
+font-size:15px;
+color:#475569;
+line-height:1.8;
+margin-bottom:14px;
+}
+
+/* LIST */
+
+.about-list{
+margin-top:10px;
+}
+
+.about-list li{
+margin-bottom:8px;
+font-size:15px;
+color:#475569;
 }
 
 /* IMAGE */
@@ -1123,46 +1171,14 @@ border-radius:20px;
 box-shadow:0 30px 70px rgba(0,0,0,0.15);
 }
 
-/* ================= FULL CONTENT ================= */
-
-.about-full{
-max-width:1200px;
-margin:50px auto 0;
-display:none;
-}
-
-.about-full h3{
-font-size:28px;
-color:#0f172a;
-margin-bottom:14px;
-font-weight:700;
-}
-
-.about-full p{
-font-size:16px;
-color:#475569;
-line-height:1.8;
-margin-bottom:16px;
-}
-
-.about-list{
-margin-top:10px;
-margin-bottom:20px;
-}
-
-.about-list li{
-margin-bottom:8px;
-color:#475569;
-font-size:16px;
-}
-
-/* ================= STATS ================= */
+/* STATS */
 
 .about-stats{
+max-width:1000px;
+margin:70px auto 0;
 display:flex;
 justify-content:center;
 gap:40px;
-margin-top:60px;
 }
 
 .about-stat{
@@ -1186,7 +1202,7 @@ border-color:#6366f1;
 }
 
 .stat-number{
-font-size:40px;
+font-size:38px;
 font-weight:800;
 color:#6366f1;
 }
@@ -1198,13 +1214,25 @@ color:#0f172a;
 margin-top:6px;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:900px){
 
 .about-container{
 grid-template-columns:1fr;
 gap:40px;
+}
+
+.about-text{
+order:1;
+}
+
+.about-full{
+order:2;
+}
+
+.about-image{
+order:3;
 }
 
 .about-text h2{
@@ -1230,7 +1258,7 @@ width:260px;
 
 <div class="about-container">
 
-<!-- TEXT -->
+<!-- TEXT SIDE -->
 
 <div class="about-text">
 
@@ -1241,15 +1269,50 @@ Helping Businesses Build
 <span class="about-highlight">Strong Local Visibility</span>
 </h2>
 
-<p>
-Many businesses struggle to appear in local search results even after creating a Google Business Profile. A profile alone is not enough — it needs the right setup, structure, and ongoing optimization to perform well.
+<p class="about-intro">
+Many businesses create a Google Business Profile but still struggle to appear in local search results. A profile alone is not enough — it requires the right structure, optimization, and consistent improvements to perform well.
 </p>
 
-<p>
-Our work focuses on helping businesses build a strong local presence through proper Google Business Profile setup, optimization, and visibility improvement strategies. The goal is simple: help businesses become easier to find online and generate real customer enquiries.
+<p class="about-intro">
+Our work focuses on helping businesses strengthen their presence on Google so they become easier to discover and generate real customer enquiries.
 </p>
 
 <a class="about-cta" onclick="toggleAbout()">Read More</a>
+
+
+<!-- EXPANDABLE CONTENT -->
+
+<div class="about-full" id="aboutFull">
+
+<div class="about-card">
+
+<h3>Our Journey</h3>
+
+<p>
+The journey started in 2021 while working with businesses that needed help fixing and optimizing their Google Business Profiles. Many profiles were incomplete or poorly optimized, preventing them from appearing in local searches.
+</p>
+
+<p>
+By applying structured optimization methods, these businesses improved their visibility and began receiving more relevant enquiries from nearby customers.
+</p>
+
+<h3>What We Focus On</h3>
+
+<ul class="about-list">
+<li>Professional Google Business Profile setup</li>
+<li>Fixing profile visibility issues</li>
+<li>Improving profile completeness and structure</li>
+<li>Local optimization for better search presence</li>
+<li>Building profiles that generate enquiries</li>
+</ul>
+
+<p>
+The focus is always on practical improvements that help businesses appear more confidently in local search results.
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1258,95 +1321,30 @@ Our work focuses on helping businesses build a strong local presence through pro
 
 <div class="about-image">
 
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1200&q=80">
 
 </div>
 
 </div>
 
 
-
-<!-- FULL WIDTH CONTENT -->
-
-<div class="about-full" id="aboutFull">
-
-<h3>Our Journey</h3>
-
-<p>
-The journey began in 2021, working with businesses that needed help setting up and improving their Google Business Profiles. Many profiles were incomplete, poorly optimized, or facing visibility issues that prevented them from appearing in local searches.
-</p>
-
-<p>
-By applying a structured approach to profile setup, optimization, and local visibility improvement, businesses were able to improve their presence on Google and receive more relevant enquiries.
-</p>
-
-<p>
-Over the past 4+ years, more than 50+ Google Business Profiles have been worked on and improved using a consistent process focused on profile health, visibility signals, and customer trust.
-</p>
-
-
-<h3>What We Focus On</h3>
-
-<ul class="about-list">
-<li>Professional Google Business Profile Setup</li>
-<li>Fixing profile issues and visibility problems</li>
-<li>Improving profile structure and completeness</li>
-<li>Local optimization to increase search visibility</li>
-<li>Creating a profile that builds customer trust and enquiries</li>
-</ul>
-
-<p>
-Each profile is handled with a structured process designed to help businesses appear more confidently in local search results.
-</p>
-
-
-<h3>A Practical Approach to Local Presence</h3>
-
-<p>
-Instead of using complicated strategies, the focus is on practical improvements that directly impact how a business appears on Google.
-</p>
-
-<p>
-By improving profile quality, optimizing important elements, and maintaining consistency, businesses can strengthen their local presence and increase the chances of being discovered by nearby customers.
-</p>
-
-
-<h3>Supporting Businesses at Different Stages</h3>
-
-<p>Whether a business is:</p>
-
-<ul class="about-list">
-<li>Creating a new Google Business Profile</li>
-<li>Trying to fix visibility issues</li>
-<li>Looking to improve local presence</li>
-<li>Or aiming to generate more enquiries</li>
-</ul>
-
-<p>
-The goal remains the same — helping businesses build a reliable local search presence that supports long-term growth.
-</p>
-
-</div>
-
-
-
-<!-- STATS ROW -->
+<!-- STATS -->
 
 <div class="about-stats">
 
 <div class="about-stat">
 <div class="stat-number counter" data-target="4">0</div>
-<div class="stat-title">Years of Experience</div>
+<div class="stat-title">Years Experience</div>
 </div>
 
 <div class="about-stat">
 <div class="stat-number counter" data-target="50">0</div>
-<div class="stat-title">Projects Completed</div>
+<div class="stat-title">Profiles Improved</div>
 </div>
 
 <div class="about-stat">
 <div class="stat-number counter-year" data-start="2026" data-end="2021">2026</div>
-<div class="stat-title">I Started</div>
+<div class="stat-title">Journey Started</div>
 </div>
 
 </div>
@@ -1357,31 +1355,30 @@ The goal remains the same — helping businesses build a reliable local search p
 
 <script>
 
+/* READ MORE */
+
 function toggleAbout(){
 
-const content = document.getElementById("aboutFull");
+const box = document.getElementById("aboutFull");
 const btn = document.querySelector(".about-cta");
 
-if(content.style.display === "block"){
+box.classList.toggle("active");
 
-content.style.display = "none";
-btn.innerText = "Read More";
-
+if(box.classList.contains("active")){
+btn.innerText="Read Less";
 }else{
-
-content.style.display = "block";
-btn.innerText = "Read Less";
-
+btn.innerText="Read More";
 }
 
 }
 
-/* COUNTERS */
 
-const normalCounters = document.querySelectorAll(".counter");
-const yearCounters = document.querySelectorAll(".counter-year");
+/* COUNTER */
 
-const observer = new IntersectionObserver((entries)=>{
+const counters=document.querySelectorAll(".counter");
+const yearCounters=document.querySelectorAll(".counter-year");
+
+const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
@@ -1389,24 +1386,24 @@ if(entry.isIntersecting){
 
 if(entry.target.classList.contains("counter")){
 
-let counter = entry.target;
-let target = +counter.dataset.target;
+let counter=entry.target;
+let target=+counter.dataset.target;
 
-let count = 0;
-let step = target / 120;
+let count=0;
+let step=target/120;
 
 function update(){
 
-count += step;
+count+=step;
 
-if(count < target){
+if(count<target){
 
-counter.innerText = Math.ceil(count);
+counter.innerText=Math.ceil(count);
 requestAnimationFrame(update);
 
 }else{
 
-counter.innerText = target + "+";
+counter.innerText=target+"+";
 
 }
 
@@ -1418,21 +1415,21 @@ update();
 
 if(entry.target.classList.contains("counter-year")){
 
-let counter = entry.target;
+let counter=entry.target;
 
-let start = +counter.dataset.start;
-let end = +counter.dataset.end;
+let start=+counter.dataset.start;
+let end=+counter.dataset.end;
 
-let count = start;
+let count=start;
 
 function updateYear(){
 
-counter.innerText = count;
+counter.innerText=count;
 
-if(count > end){
+if(count>end){
 
 count--;
-setTimeout(updateYear,150);
+setTimeout(updateYear,120);
 
 }
 
@@ -1442,29 +1439,14 @@ updateYear();
 
 }
 
-}else{
-
-if(entry.target.classList.contains("counter")){
-entry.target.innerText = "0";
-}
-
-if(entry.target.classList.contains("counter-year")){
-entry.target.innerText = entry.target.dataset.start;
-}
-
 }
 
 });
 
-},{threshold:0.6});
+},{threshold:.6});
 
-normalCounters.forEach(counter=>{
-observer.observe(counter);
-});
-
-yearCounters.forEach(counter=>{
-observer.observe(counter);
-});
+counters.forEach(c=>observer.observe(c));
+yearCounters.forEach(c=>observer.observe(c));
 
 </script>
   
