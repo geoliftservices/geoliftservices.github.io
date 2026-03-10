@@ -1057,12 +1057,6 @@ gap:70px;
 align-items:center;
 }
 
-/* LEFT CONTENT */
-
-.about-left{
-max-width:560px;
-}
-
 /* badge */
 
 .about-badge{
@@ -1212,16 +1206,12 @@ margin-top:6px;
 
 .about-container{
 grid-template-columns:1fr;
-gap:35px;
+gap:30px;
 }
 
-.about-title{
-font-size:30px;
-}
+/* reorder elements */
 
-/* reorder */
-
-.about-left{
+.about-text{
 order:1;
 }
 
@@ -1231,6 +1221,10 @@ order:2;
 
 .about-desc-group{
 order:3;
+}
+
+.about-title{
+font-size:30px;
 }
 
 .about-stats{
@@ -1252,9 +1246,9 @@ width:260px;
 
 <div class="about-container">
 
-<!-- LEFT SIDE -->
+<!-- LEFT TEXT -->
 
-<div class="about-left">
+<div class="about-text">
 
 <span class="about-badge">About Us</span>
 
@@ -1262,16 +1256,6 @@ width:260px;
 Helping Businesses Build  
 <span class="about-highlight">Strong Local Visibility</span>
 </h2>
-
-</div>
-
-<!-- IMAGE -->
-
-<div class="about-image">
-<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
-</div>
-
-<!-- DESCRIPTION GROUP -->
 
 <div class="about-desc-group">
 
@@ -1284,6 +1268,16 @@ Our work focuses on helping businesses strengthen their presence on Google so th
 </p>
 
 <a class="about-cta" onclick="toggleAbout()">Read More</a>
+
+</div>
+
+</div>
+
+<!-- IMAGE -->
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
 
 </div>
 
