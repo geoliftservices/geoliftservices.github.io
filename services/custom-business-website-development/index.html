@@ -452,6 +452,103 @@ scroll-behavior:smooth;
 
 <body>
 
+  <!-- ===== PREMIUM TOP STRIP ===== -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+
+    <div class="top-bar-left" id="topBarText">
+      🚀 Free GBP Audit Available | 📍 Serving Kolkata & India
+    </div>
+
+    <div class="top-bar-right">
+      <span>📧 info@geolift.co.in</span>
+      <span>📞 <a href="tel:+919477469499">+91 94774 69499</a></span>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ===== PREMIUM CORPORATE TOP BAR ===== */
+
+.top-bar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:linear-gradient(90deg,#0f172a,#1e293b); /* matches your site */
+color:#e2e8f0;
+font-size:13px;
+z-index:10000;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.top-bar-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:6px 20px;
+flex-wrap:wrap;
+}
+
+.top-bar-left{
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
+font-weight:500;
+}
+
+.top-bar-right{
+display:flex;
+gap:18px;
+align-items:center;
+font-weight:500;
+}
+
+/* FIXED LINK COLOR (no green now) */
+.top-bar a{
+color:#e2e8f0;
+text-decoration:none;
+}
+
+.top-bar a:hover{
+opacity:0.8;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.top-bar-inner{
+justify-content:center;
+text-align:center;
+gap:5px;
+}
+.top-bar-right{
+display:none;
+}
+}
+</style>
+
+<script>
+/* ===== ROTATING TEXT ===== */
+
+const messages = [
+"🚀 Free GBP Audit Available",
+"🔥 Rank on Google Maps Faster",
+"📍 Serving Kolkata & India"
+];
+
+let i = 0;
+const topText = document.getElementById("topBarText");
+
+setInterval(()=>{
+i = (i + 1) % messages.length;
+topText.textContent = messages[i];
+}, 3000);
+</script>
+<!-- ===== END TOP STRIP ===== -->
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
@@ -467,7 +564,7 @@ body{font-family:'pins',sans-serif;}
 
 header{
 position:fixed;
-top:0;
+top:34px;
 left:0;
 width:100%;
 background:rgba(255,255,255,0.55);
@@ -911,7 +1008,7 @@ this.parentElement.classList.toggle("active");
 });
 </script>
 
-<div style="height:90px;"></div>
+<div style="height:120px;"></div>
 
 <!-- ===== PREMIUM HIGH-CONVERTING HERO SECTION ===== -->
 
