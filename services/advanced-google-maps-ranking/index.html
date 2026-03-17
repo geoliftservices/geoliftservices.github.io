@@ -452,6 +452,100 @@ scroll-behavior:smooth;
 
 <body>
 
+  <!-- ===== TOP STRIP BAR START ===== -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+
+    <div class="top-bar-left" id="topBarText">
+      🚀 Free GBP Audit Available | 📍 Serving Kolkata & India
+    </div>
+
+    <div class="top-bar-right">
+      📞 <a href="tel:+919477469499">+91 94774 69499</a>
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* ===== TOP STRIP BAR ===== */
+
+.top-bar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0f172a;
+color:#fff;
+font-size:13px;
+z-index:10000;
+}
+
+.top-bar-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:6px 20px;
+flex-wrap:wrap;
+}
+
+.top-bar-left{
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.top-bar-right{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.top-bar a{
+color:#22c55e;
+text-decoration:none;
+font-weight:500;
+}
+
+.top-bar a:hover{
+text-decoration:underline;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.top-bar-inner{
+justify-content:center;
+text-align:center;
+gap:5px;
+}
+.top-bar-right{
+display:none;
+}
+}
+</style>
+
+<script>
+/* ===== ROTATING TEXT (OPTIONAL HIGH CONVERSION) ===== */
+
+const messages = [
+"🚀 Free GBP Audit Available",
+"🔥 Rank on Google Maps Faster",
+"📍 Serving Kolkata & India"
+];
+
+let i = 0;
+const topText = document.getElementById("topBarText");
+
+setInterval(()=>{
+i = (i + 1) % messages.length;
+topText.textContent = messages[i];
+}, 3000);
+</script>
+<!-- ===== TOP STRIP BAR END ===== -->
+
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
@@ -911,7 +1005,7 @@ this.parentElement.classList.toggle("active");
 });
 </script>
 
-<div style="height:90px;"></div>
+<div style="height:120px;"></div>
 
 <!-- ===== PREMIUM HIGH-CONVERTING HERO SECTION ===== -->
 
