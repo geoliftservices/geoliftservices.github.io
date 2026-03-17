@@ -452,7 +452,7 @@ scroll-behavior:smooth;
 
 <body>
 
-  <!-- ===== TOP STRIP BAR START ===== -->
+ <!-- ===== PREMIUM TOP STRIP ===== -->
 <div class="top-bar">
   <div class="top-bar-inner">
 
@@ -461,24 +461,26 @@ scroll-behavior:smooth;
     </div>
 
     <div class="top-bar-right">
-      📞 <a href="tel:+919477469499">+91 94774 69499</a>
+      <span>📧 info@geolift.co.in</span>
+      <span>📞 <a href="tel:+919477469499">+91 94774 69499</a></span>
     </div>
 
   </div>
 </div>
 
 <style>
-/* ===== TOP STRIP BAR ===== */
+/* ===== PREMIUM CORPORATE TOP BAR ===== */
 
 .top-bar{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-background:#0f172a;
-color:#fff;
+background:linear-gradient(90deg,#0f172a,#1e293b); /* matches your site */
+color:#e2e8f0;
 font-size:13px;
 z-index:10000;
+border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 .top-bar-inner{
@@ -496,22 +498,24 @@ display:flex;
 gap:10px;
 align-items:center;
 flex-wrap:wrap;
+font-weight:500;
 }
 
 .top-bar-right{
 display:flex;
-gap:15px;
+gap:18px;
 align-items:center;
-}
-
-.top-bar a{
-color:#22c55e;
-text-decoration:none;
 font-weight:500;
 }
 
+/* FIXED LINK COLOR (no green now) */
+.top-bar a{
+color:#e2e8f0;
+text-decoration:none;
+}
+
 .top-bar a:hover{
-text-decoration:underline;
+opacity:0.8;
 }
 
 /* MOBILE */
@@ -528,7 +532,7 @@ display:none;
 </style>
 
 <script>
-/* ===== ROTATING TEXT (OPTIONAL HIGH CONVERSION) ===== */
+/* ===== ROTATING TEXT ===== */
 
 const messages = [
 "🚀 Free GBP Audit Available",
@@ -544,7 +548,7 @@ i = (i + 1) % messages.length;
 topText.textContent = messages[i];
 }, 3000);
 </script>
-<!-- ===== TOP STRIP BAR END ===== -->
+<!-- ===== END TOP STRIP ===== -->
 
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
