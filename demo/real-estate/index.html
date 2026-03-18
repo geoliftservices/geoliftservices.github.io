@@ -3,180 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DreamHomes | Premium Real Estate</title>
+<title>Premium Realtors | Find Property</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-body{color:#222;background:#fff;}
-
-/* TOP BAR */
-.topbar{
-  background:#0d1b2a;
-  color:#fff;
-  padding:8px 40px;
-  font-size:13px;
-  display:flex;
-  justify-content:space-between;
-}
+body{color:#1a1a1a;background:#fff;}
 
 /* HEADER */
 header{
-  position:sticky;
-  top:0;
-  background:#fff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 40px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
-  z-index:1000;
+position:sticky;
+top:0;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
 }
 
 header h2{color:#0d1b2a;}
 
 nav a{
-  margin-left:25px;
-  text-decoration:none;
-  color:#333;
-  font-weight:500;
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
 }
 
-.cta-btn{
-  background:#e63946;
-  color:#fff;
-  padding:10px 18px;
-  border-radius:5px;
+.cta{
+background:#0d1b2a;
+color:#fff;
+padding:8px 16px;
+border-radius:5px;
 }
 
 /* HERO */
 .hero{
-  height:90vh;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
-  padding:20px;
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+padding:20px;
 }
 
-.hero h1{font-size:48px;margin-bottom:15px;}
-.hero p{opacity:0.9;}
+.hero h1{font-size:48px;margin-bottom:10px;}
 
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  background:#e63946;
-  padding:14px 28px;
-  color:#fff;
-  text-decoration:none;
-  border-radius:5px;
+.search-box{
+background:#fff;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.search-box input,.search-box select{
+padding:12px;
+border:1px solid #ddd;
+border-radius:5px;
+min-width:150px;
+}
+
+.search-box button{
+background:#e63946;
+color:#fff;
+border:none;
+padding:12px 20px;
+border-radius:5px;
 }
 
 /* SECTION */
 .section{
-  padding:80px 40px;
-  max-width:1200px;
-  margin:auto;
+padding:80px 40px;
+max-width:1200px;
+margin:auto;
 }
 
-.section h2{text-align:center;margin-bottom:40px;font-size:32px;}
+.section h2{
+text-align:center;
+margin-bottom:40px;
+}
 
-/* GRID */
+/* PROPERTY CARDS */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .card{
-  background:#fff;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
-.card:hover{transform:translateY(-5px);}
-.card img{width:100%;height:200px;object-fit:cover;}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
 
 .card-content{padding:15px;}
+
 .price{color:#e63946;font-weight:600;}
 
-/* ABOUT */
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
+.badge{
+position:absolute;
+background:#e63946;
+color:#fff;
+padding:5px 10px;
+font-size:12px;
 }
-.about img{width:100%;border-radius:10px;}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+
+.stat h3{font-size:28px;color:#0d1b2a;}
 
 /* SERVICES */
 .services{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
+
 .service{
-  background:#f8f9fa;
-  padding:25px;
-  text-align:center;
-  border-radius:10px;
+background:#f8f9fa;
+padding:25px;
+text-align:center;
+border-radius:10px;
 }
 
 /* CTA */
-.cta{
-  background:#0d1b2a;
-  color:#fff;
-  text-align:center;
-  padding:60px 20px;
+.cta-section{
+background:#0d1b2a;
+color:#fff;
+text-align:center;
+padding:60px 20px;
 }
 
 /* CONTACT */
 .contact-box{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:30px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
 }
 
 form input,form textarea{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:1px solid #ddd;
-  border-radius:5px;
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
 }
 
 form button{
-  background:#e63946;
-  color:#fff;
-  padding:12px;
-  border:none;
-  width:100%;
-  border-radius:5px;
+background:#e63946;
+color:#fff;
+padding:12px;
+border:none;
+width:100%;
 }
 
-/* FLOAT BUTTONS */
+/* FLOAT BUTTON */
 .float{
-  position:fixed;
-  right:20px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  z-index:999;
+position:fixed;
+right:20px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+z-index:999;
 }
 
 .float a{
-  padding:12px 15px;
-  border-radius:50px;
-  color:#fff;
-  text-decoration:none;
-  font-size:14px;
-  text-align:center;
+padding:12px 15px;
+border-radius:50px;
+color:#fff;
+text-decoration:none;
 }
 
 .whatsapp{background:#25D366;}
@@ -184,144 +203,132 @@ form button{
 
 /* FOOTER */
 footer{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:20px;
+background:#000;
+color:#fff;
+text-align:center;
+padding:20px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  .about,.contact-box{grid-template-columns:1fr;}
-  .hero h1{font-size:28px;}
-  header{padding:15px 20px;}
-  .topbar{padding:8px 20px;}
+.contact-box{grid-template-columns:1fr;}
+.hero h1{font-size:28px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <div>📞 9477469499 | 📧 info@geolift.co.in</div>
-  <div>📍 Kolkata, India</div>
-</div>
-
 <header>
-  <h2>DreamHomes</h2>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#properties">Properties</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="cta-btn">Contact</a>
-  </nav>
+<h2>Prime Realtors</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#properties">Properties</a>
+<a href="#contact" class="cta">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div>
-    <h1>Find Your Dream Property</h1>
-    <p>Buy, Sell & Invest in Premium Real Estate</p>
-    <a href="#contact" class="btn">Book Consultation</a>
-  </div>
-</section>
+<div>
+<h1>Find Your Dream Property</h1>
 
-<section id="properties" class="section">
-  <h2>Featured Properties</h2>
-  <div class="grid">
+<div class="search-box">
+<select><option>Buy</option><option>Rent</option></select>
+<input type="text" placeholder="Location">
+<input type="text" placeholder="Budget">
+<button>Search</button>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-      <div class="card-content">
-        <h3>Luxury Villa</h3>
-        <p class="price">₹1.2 Cr</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
-      <div class="card-content">
-        <h3>Modern Apartment</h3>
-        <p class="price">₹65L</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e">
-      <div class="card-content">
-        <h3>Family House</h3>
-        <p class="price">₹85L</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="about" class="section">
-  <div class="about">
-    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa">
-    <div>
-      <h2>About Us</h2>
-      <p>We help clients buy, sell, and invest in premium properties with trust, transparency, and expert guidance.</p>
-    </div>
-  </div>
+</div>
 </section>
 
 <section class="section">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service">Property Buying</div>
-    <div class="service">Property Selling</div>
-    <div class="service">Rental Services</div>
-    <div class="service">Investment Consulting</div>
-  </div>
+<h2>Trending Properties</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+<div class="card-content">
+<h3>Luxury Villa</h3>
+<p class="price">₹1.2 Cr</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
+<div class="card-content">
+<h3>Modern Apartment</h3>
+<p class="price">₹65L</p>
+</div>
+</div>
+
+</div>
 </section>
 
-<section class="cta">
-  <h2>Looking to Buy or Sell Property?</h2>
-  <p>Contact us today for the best deals</p>
+<section class="section">
+<h2>Why Choose Us</h2>
+<div class="services">
+<div class="service">Verified Listings</div>
+<div class="service">Best Price</div>
+<div class="service">Expert Guidance</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Our Achievements</h2>
+<div class="stats">
+<div class="stat"><h3>500+</h3><p>Properties Sold</p></div>
+<div class="stat"><h3>300+</h3><p>Happy Clients</p></div>
+<div class="stat"><h3>10+</h3><p>Years Experience</p></div>
+</div>
+</section>
+
+<section class="cta-section">
+<h2>Looking to Buy or Sell?</h2>
+<p>Contact us today for exclusive deals</p>
 </section>
 
 <section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <div class="contact-box">
+<h2>Contact Us</h2>
 
-    <div>
-      <h3>Get in Touch</h3>
-      <p>📞 9477469499</p>
-      <p>📧 info@geolift.co.in</p>
-      <p>📍 Kolkata, India</p>
-    </div>
+<div class="contact-box">
 
-    <form onsubmit="sendWhatsApp(); return false;">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="text" id="phone" placeholder="Phone Number" required>
-      <textarea id="message" placeholder="Your Requirement"></textarea>
-      <button>Send Inquiry</button>
-    </form>
+<div>
+<p>📞 9477469499</p>
+<p>📧 info@geolift.co.in</p>
+<p>📍 Kolkata</p>
+</div>
 
-  </div>
+<form onsubmit="sendWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Name" required>
+<input type="text" id="phone" placeholder="Phone" required>
+<textarea id="msg" placeholder="Requirement"></textarea>
+<button>Send</button>
+</form>
+
+</div>
+
 </section>
 
 <footer>
-  <p>© 2026 DreamHomes. All Rights Reserved.</p>
+<p>© 2026 Prime Realtors</p>
 </footer>
 
-<!-- FLOAT BUTTONS -->
-<div class="float" style="bottom:20px;">
-  <a href="https://wa.me/919477469499" class="whatsapp">WhatsApp</a>
-  <a href="tel:9477469499" class="call">Call Now</a>
+<div class="float">
+<a href="https://wa.me/919477469499" class="whatsapp">WhatsApp</a>
+<a href="tel:9477469499" class="call">Call</a>
 </div>
 
 <script>
 function sendWhatsApp(){
-  let name=document.getElementById("name").value;
-  let phone=document.getElementById("phone").value;
-  let message=document.getElementById("message").value;
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let msg=document.getElementById("msg").value;
 
-  let url="https://wa.me/919477469499?text="
-  +"Hello, I am "+name+"%0aPhone: "+phone+"%0aRequirement: "+message;
+let url="https://wa.me/919477469499?text="
++"Name: "+name+"%0aPhone: "+phone+"%0aRequirement: "+msg;
 
-  window.open(url,'_blank');
+window.open(url,'_blank');
 }
 </script>
 
