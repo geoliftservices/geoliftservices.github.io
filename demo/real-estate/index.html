@@ -1,224 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Realtors | Get Best Property Deals</title>
+<!-- ===== HEADER ===== -->
+<header class="main-header">
+  <div class="logo">DreamHomes</div>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">Contact Us</a>
+    <a href="#">About Us</a>
+    <a href="#">FAQ</a>
+    <a href="#" class="offer">🎁 Offers</a>
+  </nav>
+
+  <div class="header-right">
+    <span class="phone">📞 +91 9477469499</span>
+    <span class="menu">☰</span>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Find Your Dream Property</h1>
+
+    <!-- SEARCH BAR -->
+    <div class="search-container">
+      <input type="text" placeholder="Enter Location, Project or Developer">
+      <button onclick="quickWhatsApp()">🔍</button>
+    </div>
+
+    <!-- CITY CARDS -->
+    <div class="city-box">
+      <div class="city">Kolkata</div>
+      <div class="city">Pune</div>
+      <div class="city">Siliguri</div>
+      <div class="city">Mumbai</div>
+      <div class="city">Dubai</div>
+    </div>
+  </div>
+</section>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{color:#1a1a1a;}
 
 /* HEADER */
-header{
-position:sticky;top:0;background:#fff;
-display:flex;justify-content:space-between;
-padding:15px 40px;box-shadow:0 2px 10px rgba(0,0,0,0.05);
-z-index:1000;
+.main-header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-nav a{margin-left:20px;text-decoration:none;color:#333;}
-.cta{background:#e63946;color:#fff;padding:8px 16px;border-radius:5px;}
+.logo{
+  font-weight:700;
+  color:#0d1b2a;
+}
+
+.nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
+
+.offer{
+  color:#c89b3c;
+  font-weight:600;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.phone{
+  font-size:14px;
+}
+
+.menu{
+  font-size:20px;
+  cursor:pointer;
+}
 
 /* HERO */
 .hero{
-height:90vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-display:flex;align-items:center;justify-content:center;
-text-align:center;color:#fff;padding:20px;
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  text-align:center;
 }
 
-.hero h1{font-size:44px;}
-
-.search-box{
-background:#fff;padding:20px;border-radius:10px;
-margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
 }
 
-.search-box input,select{
-padding:12px;border:1px solid #ddd;border-radius:5px;
+.hero-content{
+  position:relative;
+  color:#fff;
+  max-width:900px;
 }
 
-.search-box button{
-background:#e63946;color:#fff;border:none;padding:12px 20px;
+.hero h1{
+  font-size:48px;
+  margin-bottom:25px;
 }
 
-/* SECTION */
-.section{padding:80px 40px;max-width:1200px;margin:auto;}
-.section h2{text-align:center;margin-bottom:40px;}
-
-/* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-
-.card{
-background:#fff;border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-overflow:hidden;
+/* SEARCH */
+.search-container{
+  display:flex;
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  margin-bottom:25px;
 }
 
-.card img{width:100%;height:200px;object-fit:cover;}
-
-.card-content{padding:15px;}
-.price{color:#e63946;font-weight:600;}
-
-.btn{
-display:inline-block;margin-top:10px;
-background:#0d1b2a;color:#fff;padding:10px 15px;
-text-decoration:none;border-radius:5px;
+.search-container input{
+  flex:1;
+  padding:15px;
+  border:none;
+  outline:none;
 }
 
-/* CTA SECTION */
-.cta-section{
-background:#0d1b2a;color:#fff;text-align:center;padding:60px 20px;
+.search-container button{
+  background:#c89b3c;
+  color:#fff;
+  border:none;
+  padding:0 20px;
+  font-size:18px;
 }
 
-/* CONTACT */
-.contact-box{
-display:grid;grid-template-columns:1fr 1fr;gap:30px;
+/* CITY BOX */
+.city-box{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  flex-wrap:wrap;
+  background:rgba(255,255,255,0.1);
+  padding:15px;
+  border-radius:12px;
+  backdrop-filter:blur(10px);
 }
 
-form input,textarea{
-width:100%;padding:12px;margin:10px 0;border:1px solid #ddd;
+.city{
+  background:#fff;
+  color:#333;
+  padding:15px 20px;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-form button{
-background:#e63946;color:#fff;padding:12px;border:none;width:100%;
+.city:hover{
+  background:#c89b3c;
+  color:#fff;
 }
 
-/* FLOAT */
-.float{
-position:fixed;right:20px;bottom:20px;
-display:flex;flex-direction:column;gap:10px;
-}
-
-.float a{
-padding:12px;border-radius:50px;color:#fff;text-decoration:none;
-}
-
-.whatsapp{background:#25D366;}
-.call{background:#007bff;}
-
-footer{background:#000;color:#fff;text-align:center;padding:20px;}
-
+/* MOBILE */
 @media(max-width:768px){
-.contact-box{grid-template-columns:1fr;}
-.hero h1{font-size:28px;}
+  .nav{display:none;}
+  .hero h1{font-size:28px;}
+  .search-container input{padding:10px;}
 }
+
 </style>
-</head>
-
-<body>
-
-<header>
-<h2>Prime Realtors</h2>
-<nav>
-<a href="#">Home</a>
-<a href="#properties">Properties</a>
-<a href="#contact" class="cta">Get Deals</a>
-</nav>
-</header>
-
-<section class="hero">
-<div>
-<h1>Get Best Property Deals in Kolkata</h1>
-
-<div class="search-box">
-<select><option>Buy</option><option>Rent</option></select>
-<input type="text" placeholder="Enter Location">
-<input type="text" placeholder="Budget">
-<button onclick="quickWhatsApp()">Search</button>
-</div>
-
-</div>
-</section>
-
-<section id="properties" class="section">
-<h2>Hot Properties</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
-<div class="card-content">
-<h3>Luxury Villa</h3>
-<p class="price">₹1.2 Cr</p>
-<a href="#" class="btn" onclick="propertyWhatsApp('Luxury Villa ₹1.2Cr')">Enquire Now</a>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
-<div class="card-content">
-<h3>Modern Apartment</h3>
-<p class="price">₹65L</p>
-<a href="#" class="btn" onclick="propertyWhatsApp('Modern Apartment ₹65L')">Enquire Now</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<section class="cta-section">
-<h2>Not Finding the Right Property?</h2>
-<p>Get curated deals directly on WhatsApp</p>
-<a href="#" class="btn" onclick="quickWhatsApp()">Get Property List</a>
-</section>
-
-<section id="contact" class="section">
-<h2>Get Free Consultation</h2>
-
-<div class="contact-box">
-
-<div>
-<p>📞 9477469499</p>
-<p>📧 info@geolift.co.in</p>
-<p>📍 Kolkata</p>
-</div>
-
-<form onsubmit="formWhatsApp(); return false;">
-<input type="text" id="name" placeholder="Name" required>
-<input type="text" id="phone" placeholder="Phone" required>
-<textarea id="msg" placeholder="Requirement"></textarea>
-<button>Get Call Back</button>
-</form>
-
-</div>
-
-</section>
-
-<footer>
-<p>© 2026 Prime Realtors</p>
-</footer>
-
-<div class="float">
-<a href="#" class="whatsapp" onclick="quickWhatsApp()">WhatsApp</a>
-<a href="tel:9477469499" class="call">Call</a>
-</div>
 
 <script>
 function quickWhatsApp(){
-window.open("https://wa.me/919477469499?text=Hi, I want best property deals",'_blank');
-}
-
-function propertyWhatsApp(property){
-window.open("https://wa.me/919477469499?text=Hi, I am interested in "+property,'_blank');
-}
-
-function formWhatsApp(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let msg=document.getElementById("msg").value;
-
-let url="https://wa.me/919477469499?text="
-+"Name: "+name+"%0aPhone: "+phone+"%0aRequirement: "+msg;
-
-window.open(url,'_blank');
+  window.open("https://wa.me/919477469499?text=Hi, I am looking for property",'_blank');
 }
 </script>
-
-</body>
-</html>
