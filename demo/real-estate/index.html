@@ -3,118 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Real Estate Agent | Find Your Dream Home</title>
+<title>Premium Real Estate | DreamHomes</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+body {
+  color: #222;
+}
+
+/* HEADER */
 header {
   position: fixed;
   width: 100%;
-  background: #0d1b2a;
-  color: white;
-  padding: 15px 30px;
+  top: 0;
+  background: rgba(13,27,42,0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
   z-index: 1000;
 }
 
 header h2 {
-  margin: 0;
-  display: inline;
-}
-
-nav {
-  float: right;
+  color: #fff;
 }
 
 nav a {
-  color: white;
-  margin-left: 20px;
+  color: #fff;
+  margin-left: 25px;
   text-decoration: none;
+  font-size: 14px;
 }
 
+/* HERO */
 .hero {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994') no-repeat center/cover;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
+  color: #fff;
+  padding: 20px;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
 }
 
 .btn {
-  background: #e63946;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
   display: inline-block;
   margin-top: 20px;
+  background: #e63946;
+  padding: 14px 30px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
+/* SECTIONS */
 .section {
-  padding: 80px 30px;
-  text-align: center;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.properties {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+/* PROPERTIES */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
 }
 
 .card {
-  width: 300px;
-  margin: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.card h3 {
-  padding: 10px;
+.card-content {
+  padding: 15px;
 }
 
+.price {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* ABOUT */
 .about {
-  background: #f1f1f1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
+.about img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* SERVICES */
 .services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+  text-align: center;
 }
 
 .service {
-  width: 250px;
-  margin: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  background: #f8f9fa;
 }
 
-.testimonials {
+/* CTA */
+.cta {
   background: #0d1b2a;
   color: white;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.contact form {
-  max-width: 500px;
-  margin: auto;
+/* CONTACT */
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
-.contact input, .contact textarea {
+form input, form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
+  border: 1px solid #ddd;
 }
 
+form button {
+  background: #e63946;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+}
+
+/* FOOTER */
 footer {
   background: #000;
   color: white;
@@ -122,9 +190,19 @@ footer {
   padding: 20px;
 }
 
+/* MOBILE */
 @media(max-width:768px){
-  .hero h1 {font-size: 30px;}
-  nav {float:none; text-align:center;}
+  .about, .contact-box {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
 }
 </style>
 </head>
@@ -143,71 +221,87 @@ footer {
 
 <section class="hero">
   <div>
-    <h1>Find Your Dream Home</h1>
-    <p>Buy, Sell & Rent Properties Easily</p>
-    <a href="#contact" class="btn">Get Consultation</a>
+    <h1>Find Premium Properties</h1>
+    <p>Buy, Sell & Invest with Confidence</p>
+    <a href="#contact" class="btn">Book Consultation</a>
   </div>
 </section>
 
 <section id="properties" class="section">
   <h2>Featured Properties</h2>
-  <div class="properties">
+  <div class="grid">
     
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-      <h3>Luxury Villa - ₹1.2 Cr</h3>
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+      <div class="card-content">
+        <h3>Luxury Villa</h3>
+        <p class="price">₹1.2 Cr</p>
+      </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
-      <h3>Modern Apartment - ₹65L</h3>
+      <div class="card-content">
+        <h3>Modern Apartment</h3>
+        <p class="price">₹65L</p>
+      </div>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1560184897-ae75f418493e">
-      <h3>Family House - ₹85L</h3>
+      <div class="card-content">
+        <h3>Family House</h3>
+        <p class="price">₹85L</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section id="about" class="section about">
-  <h2>About Us</h2>
-  <p>We help you find the best properties in your city. Trusted by hundreds of clients for buying, selling, and renting homes.</p>
+<section id="about" class="section">
+  <div class="about">
+    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa">
+    <div>
+      <h2>About Us</h2>
+      <p>We provide trusted real estate solutions helping clients buy, sell, and invest in premium properties with confidence and transparency.</p>
+    </div>
+  </div>
 </section>
 
 <section class="section">
   <h2>Our Services</h2>
   <div class="services">
-    <div class="service">
-      <h3>Buy Property</h3>
-      <p>Find verified listings at best prices.</p>
-    </div>
-    <div class="service">
-      <h3>Sell Property</h3>
-      <p>Get maximum value for your property.</p>
-    </div>
-    <div class="service">
-      <h3>Rental Services</h3>
-      <p>Quick rental deals with trusted tenants.</p>
-    </div>
+    <div class="service">Property Buying</div>
+    <div class="service">Property Selling</div>
+    <div class="service">Rental Services</div>
+    <div class="service">Investment Consulting</div>
   </div>
 </section>
 
-<section class="section testimonials">
-  <h2>What Clients Say</h2>
-  <p>"Amazing service! Found my dream home in 2 weeks."</p>
-  <p>"Highly professional and trustworthy agent."</p>
+<section class="cta">
+  <h2>Looking for the Best Deal?</h2>
+  <p>Contact us today for exclusive property deals</p>
 </section>
 
-<section id="contact" class="section contact">
+<section id="contact" class="section">
   <h2>Contact Us</h2>
-  <form onsubmit="sendWhatsApp(); return false;">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="text" id="phone" placeholder="Phone Number" required>
-    <textarea id="message" placeholder="Your Requirement"></textarea>
-    <button class="btn">Send Inquiry</button>
-  </form>
+  <div class="contact-box">
+
+    <div>
+      <h3>Get in Touch</h3>
+      <p>📞 +91 9000000000</p>
+      <p>📧 info@geolift.co.in</p>
+      <p>📍 Kolkata, India</p>
+    </div>
+
+    <form onsubmit="sendWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <textarea id="message" placeholder="Your Requirement"></textarea>
+      <button>Send Inquiry</button>
+    </form>
+
+  </div>
 </section>
 
 <footer>
