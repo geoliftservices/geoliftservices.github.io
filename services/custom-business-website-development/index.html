@@ -5066,6 +5066,12 @@ gap:20px;         /* equal spacing *
 z-index:9999;
 }
 
+  @media (min-width: 769px){
+  .call{
+    display: none;
+  }
+}
+
 .float-btn{
 width:48px;
 height:48px;
@@ -5082,6 +5088,12 @@ transition:.3s;
 
 .float-btn:hover{
 transform:translateY(-4px);
+}
+
+  @media (min-width: 769px){
+  .floating-buttons{
+    gap:12px; /* reduce space so buttons shift up */
+  }
 }
   
 </style>
