@@ -4392,7 +4392,9 @@ z-index:10000;
 /* ===== POPUP BOX ===== */
 
 .audit-box{
-background:#ffffff;
+background:rgba(255,255,255,0.08);   /* change this */
+backdrop-filter:blur(14px);           /* add this */
+
 padding:35px;
 border-radius:12px;
 width:90%;
@@ -4400,6 +4402,16 @@ max-width:420px;
 box-shadow:0 25px 60px rgba(0,0,0,0.25);
 position:relative;
 font-family:Poppins,sans-serif;
+}
+
+  .audit-box input{
+background:rgba(255,255,255,0.12);
+color:#fff;
+border:1px solid rgba(255,255,255,0.2);
+}
+
+.audit-box input::placeholder{
+color:rgba(255,255,255,0.7);
 }
 
 
