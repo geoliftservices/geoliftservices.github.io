@@ -4464,24 +4464,32 @@ color:#111827;
 
 </div>
 
-  <script>
-document.getElementById("auditForm").addEventListener("submit", function(e){
-  e.preventDefault();
+ <script>
+document.addEventListener("DOMContentLoaded", function(){
 
-  let name = document.getElementById("name").value;
-  let business = document.getElementById("business").value;
-  let phone = document.getElementById("phone").value;
-  let location = document.getElementById("location").value;
+  const form = document.getElementById("auditForm");
 
-  let message = `New Audit Request:%0A
-Name: ${name}%0A
-Business: ${business}%0A
-Phone: ${phone}%0A
+  if(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let business = document.getElementById("business").value;
+      let phone = document.getElementById("phone").value;
+      let location = document.getElementById("location").value;
+
+      let message = `New Audit Request:
+Name: ${name}
+Business: ${business}
+Phone: ${phone}
 Location: ${location}`;
 
-  let whatsappURL = `https://wa.me/919477469499?text=${message}`;
+      let whatsappURL = `https://wa.me/919477469499?text=${encodeURIComponent(message)}`;
 
-  window.open(whatsappURL, "_blank");
+      window.open(whatsappURL, "_blank");
+    });
+  }
+
 });
 
 function closeAudit(){
