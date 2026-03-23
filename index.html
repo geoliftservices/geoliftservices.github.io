@@ -1014,9 +1014,6 @@ font-family:'Poppins',sans-serif;
 
 /* ===== HERO SECTION ===== */
 
-<style>
-
-/* ===== HERO SECTION (ADVANCED) ===== */
 
 .hero{
 position:relative;
@@ -1034,7 +1031,7 @@ background:url('/images/home-banner.jpg') center/cover no-repeat;
 z-index:-3;
 }
 
-/* Dark Overlay */
+/* Overlay */
 .hero::after{
 content:'';
 position:absolute;
@@ -1043,7 +1040,8 @@ background:linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,41,59,0.75));
 z-index:-2;
 }
 
-/* Animated Gradient Glow */
+/* ===== GLOW EFFECTS ===== */
+
 .hero-glow{
 position:absolute;
 width:500px;
@@ -1056,12 +1054,30 @@ animation:moveGlow 8s infinite alternate ease-in-out;
 z-index:-1;
 }
 
+.hero-glow2{
+position:absolute;
+width:400px;
+height:400px;
+background:radial-gradient(circle, rgba(139,92,246,0.35), transparent 70%);
+bottom:-100px;
+right:-100px;
+filter:blur(80px);
+animation:moveGlow2 10s infinite alternate ease-in-out;
+z-index:-1;
+}
+
 @keyframes moveGlow{
 0%{transform:translate(0,0);}
 100%{transform:translate(200px,150px);}
 }
 
-/* Wrapper */
+@keyframes moveGlow2{
+0%{transform:translate(0,0);}
+100%{transform:translate(-150px,-100px);}
+}
+
+/* ===== WRAPPER ===== */
+
 .hero-wrapper{
 max-width:1200px;
 margin:auto;
@@ -1072,7 +1088,8 @@ gap:50px;
 flex-wrap:wrap;
 }
 
-/* LEFT CONTENT */
+/* ===== LEFT CONTENT ===== */
+
 .hero-content{
 flex:1;
 max-width:550px;
@@ -1089,6 +1106,8 @@ font-size:52px;
 font-weight:800;
 line-height:1.15;
 margin-bottom:20px;
+color:#fff;
+text-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 .hero p{
@@ -1096,6 +1115,7 @@ font-size:18px;
 opacity:0.9;
 margin-bottom:30px;
 max-width:480px;
+color:rgba(255,255,255,0.85);
 }
 
 /* Buttons */
@@ -1107,18 +1127,22 @@ margin-bottom:25px;
 }
 
 .btn-primary{
-background:linear-gradient(135deg,#6366f1,#4f46e5);
+background:linear-gradient(135deg,#6366f1,#8b5cf6);
 color:#fff;
-padding:16px 34px;
+padding:16px 36px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 15px 35px rgba(99,102,241,0.5);
-transition:0.3s;
+
+box-shadow:
+0 15px 35px rgba(99,102,241,0.5),
+0 0 25px rgba(139,92,246,0.4);
+
+transition:all 0.3s ease;
 }
 
 .btn-primary:hover{
-transform:translateY(-3px);
+transform:translateY(-3px) scale(1.03);
 }
 
 .btn-secondary{
@@ -1128,7 +1152,6 @@ padding:16px 34px;
 border-radius:50px;
 text-decoration:none;
 font-weight:500;
-backdrop-filter:blur(6px);
 transition:0.3s;
 }
 
@@ -1137,7 +1160,7 @@ background:#fff;
 color:#111;
 }
 
-/* Trust Points */
+/* Trust points */
 .trust-points{
 display:flex;
 gap:12px;
@@ -1146,55 +1169,103 @@ margin-top:20px;
 }
 
 .trust-points span{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.2);
 padding:10px 16px;
 border-radius:30px;
 font-size:13px;
 }
 
-/* RIGHT SIDE (FORM) */
+/* ===== GLASS FORM ===== */
+
 .hero-form{
 flex:1;
 max-width:400px;
-background:rgba(255,255,255,0.08);
-padding:30px;
-border-radius:20px;
-backdrop-filter:blur(12px);
-box-shadow:0 20px 60px rgba(0,0,0,0.3);
+
+background:rgba(255,255,255,0.10);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.18);
+
+padding:32px;
+border-radius:22px;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.35),
+inset 0 1px 0 rgba(255,255,255,0.25);
+
+transition:all 0.3s ease;
+}
+
+.hero-form:hover{
+transform:translateY(-6px);
 }
 
 .hero-form h3{
-margin-bottom:20px;
 font-size:20px;
 font-weight:600;
+margin-bottom:20px;
+color:#fff;
 }
 
+/* Inputs */
 .hero-form input{
 width:100%;
-padding:14px;
-margin-bottom:12px;
-border:none;
-border-radius:10px;
+padding:14px 16px;
+margin-bottom:14px;
+
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.18);
+
+border-radius:12px;
 outline:none;
+
+color:#fff;
+font-size:14px;
+transition:all 0.25s ease;
 }
 
+.hero-form input::placeholder{
+color:rgba(255,255,255,0.65);
+}
+
+.hero-form input:focus{
+border:1px solid rgba(139,92,246,0.8);
+background:rgba(255,255,255,0.18);
+box-shadow:0 0 0 3px rgba(139,92,246,0.25);
+}
+
+/* Button */
 .hero-form button{
 width:100%;
 padding:14px;
+margin-top:6px;
+
 border:none;
-border-radius:30px;
-background:#6366f1;
+border-radius:40px;
+
+background:linear-gradient(135deg,#6366f1,#8b5cf6);
 color:#fff;
+
 font-weight:600;
+font-size:15px;
+
 cursor:pointer;
-transition:0.3s;
+
+box-shadow:
+0 15px 35px rgba(99,102,241,0.5),
+0 0 20px rgba(139,92,246,0.4);
+
+transition:all 0.3s ease;
 }
 
 .hero-form button:hover{
-background:#4f46e5;
+transform:translateY(-2px) scale(1.02);
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
+
 @media(max-width:768px){
 
 .hero{
@@ -1224,8 +1295,8 @@ justify-content:center;
 }
 
 .hero-form{
-margin-top:20px;
 width:100%;
+margin-top:20px;
 }
 
 }
@@ -1235,12 +1306,13 @@ width:100%;
 
   <section class="hero">
 
-  <!-- Animated Glow -->
+  <!-- Glow effects -->
   <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
 
   <div class="hero-wrapper">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT -->
     <div class="hero-content">
 
       <div class="location">
@@ -1268,7 +1340,7 @@ width:100%;
 
     </div>
 
-    <!-- RIGHT SIDE FORM -->
+    <!-- RIGHT FORM -->
     <div class="hero-form">
 
       <h3>Get Free GMB Audit</h3>
