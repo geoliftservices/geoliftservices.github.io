@@ -2679,53 +2679,27 @@ line-height:1.2;
 
 
 <script>
+document.getElementById("auditForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-var selectedPlan="";
+  let name = document.getElementById("name").value;
+  let business = document.getElementById("business").value;
+  let phone = document.getElementById("phone").value;
+  let location = document.getElementById("location").value;
 
-document.querySelectorAll(".openAudit").forEach(btn=>{
-btn.onclick=function(){
+  let message = `New Audit Request:
+Name: ${name}
+Business: ${business}
+Phone: ${phone}
+Location: ${location}`;
 
-selectedPlan=this.getAttribute("data-plan");
+  // ✅ IMPORTANT FIX (encode message)
+  let encodedMessage = encodeURIComponent(message);
 
-document.getElementById("auditPopup").style.display="flex";
+  let whatsappURL = `https://wa.me/919477469499?text=${encodedMessage}`;
 
-}
+  window.open(whatsappURL, "_blank");
 });
-
-document.querySelector(".audit-close").onclick=function(){
-document.getElementById("auditPopup").style.display="none";
-}
-
-document.querySelector(".audit-overlay").onclick=function(){
-document.getElementById("auditPopup").style.display="none";
-}
-
-document.getElementById("auditForm").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-var name=document.getElementById("name").value;
-var business=document.getElementById("business").value;
-var location=document.getElementById("location").value;
-var gbp=document.getElementById("gbp").value;
-var description=document.getElementById("description").value;
-
-var heading = selectedPlan
-? "Hi GeoLift, I want to start a Growth Plan.%0A%0A"
-: "Hi GeoLift, I want a FREE Google Business Profile Audit.%0A%0A";
-
-var message = heading +
-(selectedPlan ? "Selected Plan: "+selectedPlan+"%0A%0A" : "")+
-"Name: "+name+"%0A"+
-"Business: "+business+"%0A"+
-"Location: "+location+"%0A"+
-"GBP Link: "+gbp+"%0A"+
-"Description: "+description;
-
-window.open("https://wa.me/919477469499?text="+message,"_blank");
-
-});
-
 </script>
   
 
