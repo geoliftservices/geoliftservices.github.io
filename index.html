@@ -1068,7 +1068,7 @@ this.parentElement.classList.toggle("active");
 
 <div style="height:120px;"></div>
 
-<!-- ===== PREMIUM HIGH-CONVERTING HERO SECTION ===== -->
+<!-- ===== CLEAN PREMIUM HERO (FINAL) ===== -->
 
 <style>
 
@@ -1077,7 +1077,7 @@ margin:0;
 font-family:'Poppins',sans-serif;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO ===== */
 
 .hero{
 position:relative;
@@ -1095,7 +1095,6 @@ background:url('/images/home-banner.jpg') center/cover no-repeat;
 z-index:-3;
 }
 
-/* Overlay */
 .hero::after{
 content:'';
 position:absolute;
@@ -1104,8 +1103,7 @@ background:linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,41,59,0.75));
 z-index:-2;
 }
 
-/* ===== GLOW EFFECTS ===== */
-
+/* Glow */
 .hero-glow,
 .hero-glow2{
 position:absolute;
@@ -1116,7 +1114,7 @@ z-index:-1;
 .hero-glow{
 width:500px;
 height:500px;
-background:radial-gradient(circle, rgba(99,102,241,0.35), transparent 70%);
+background:radial-gradient(circle, rgba(99,102,241,0.3), transparent);
 top:-100px;
 left:-100px;
 }
@@ -1124,13 +1122,12 @@ left:-100px;
 .hero-glow2{
 width:400px;
 height:400px;
-background:radial-gradient(circle, rgba(139,92,246,0.35), transparent 70%);
+background:radial-gradient(circle, rgba(139,92,246,0.3), transparent);
 bottom:-100px;
 right:-100px;
 }
 
-/* ===== WRAPPER ===== */
-
+/* Layout */
 .hero-wrapper{
 max-width:1200px;
 margin:auto;
@@ -1141,8 +1138,7 @@ gap:40px;
 flex-wrap:wrap;
 }
 
-/* ===== LEFT CONTENT ===== */
-
+/* Left */
 .hero-content{
 flex:1;
 max-width:550px;
@@ -1168,8 +1164,7 @@ margin-bottom:28px;
 max-width:480px;
 }
 
-/* ===== BUTTONS (SMALLER) ===== */
-
+/* Buttons */
 .hero-buttons{
 display:flex;
 gap:12px;
@@ -1193,12 +1188,10 @@ color:#fff;
 padding:13px 24px;
 border-radius:40px;
 text-decoration:none;
-font-weight:500;
 font-size:14px;
 }
 
-/* ===== TRUST ===== */
-
+/* Trust */
 .trust-points{
 display:flex;
 gap:10px;
@@ -1214,21 +1207,15 @@ border-radius:30px;
 font-size:12px;
 }
 
-/* ===== FORM ===== */
-
+/* Form */
 .hero-form{
 flex:1;
 max-width:420px;
-
-background:#ffffff;
+background:#fff;
 padding:28px;
-
 border-radius:16px;
 border:1px solid #e5e7eb;
-
 box-shadow:0 20px 50px rgba(0,0,0,0.15);
-
-align-self:center;
 }
 
 .hero-form h3{
@@ -1257,14 +1244,10 @@ font-weight:600;
 
 /* ===== MOBILE ===== */
 
-.mobile-cta{
-display:none;
-}
-
 @media(max-width:768px){
 
 .hero{
-padding:70px 20px 60px;
+padding:80px 20px 60px;
 text-align:center;
 }
 
@@ -1293,25 +1276,9 @@ justify-content:center;
 justify-content:center;
 }
 
-/* ❌ hide form */
+/* hide form */
 .hero-form{
 display:none;
-}
-
-/* ✅ mobile CTA */
-.mobile-cta{
-display:block;
-margin-top:15px;
-}
-
-.mobile-cta a{
-display:block;
-background:#25D366;
-color:#fff;
-padding:14px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
 }
 
 }
@@ -1352,14 +1319,9 @@ Professional business websites and Google Business Profile optimization designed
 <span>✔ Maps Ranking</span>
 </div>
 
-<!-- MOBILE CTA -->
-<div class="mobile-cta">
-<a href="https://wa.me/919477469499">Get Free Audit on WhatsApp</a>
 </div>
 
-</div>
-
-<!-- RIGHT FORM -->
+<!-- FORM (DESKTOP ONLY) -->
 <div class="hero-form">
 
 <h3>Get Free GMB Audit</h3>
