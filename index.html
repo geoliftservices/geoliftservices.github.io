@@ -1017,19 +1017,18 @@ font-family:'Poppins',sans-serif;
 
 .hero{
 position:relative;
-padding:80px 20px 80px;
+padding:140px 20px 80px;
 color:#fff;
 overflow:hidden;
 }
 
 /* Background */
-.hero{
-position:relative;
-padding:140px 20px 80px;
-color:#fff;
-overflow:hidden;
-
-background:linear-gradient(135deg,#0f172a,#1e293b);
+.hero::before{
+content:'';
+position:absolute;
+inset:0;
+background:url('/images/home-banner.jpg') center/cover no-repeat;
+z-index:-3;
 }
 
 /* Overlay */
