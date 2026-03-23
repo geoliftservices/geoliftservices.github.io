@@ -1249,14 +1249,16 @@ justify-content:center;  /* THIS FIXES IT */
 
 }
 
+<style>
+
 /* ===== CLEAN PREMIUM FORM (UPDATED) ===== */
 
 .hero-form{
 flex:1;
-max-width:440px;   /* increased */
+max-width:440px;
 
 background:#ffffff;
-padding:34px;      /* increased */
+padding:34px;
 
 border-radius:18px;
 border:1px solid #e5e7eb;
@@ -1282,7 +1284,7 @@ color:#111827;
 /* Inputs */
 .hero-form input{
 width:100%;
-padding:15px 16px;   /* slightly bigger */
+padding:15px 16px;
 margin-bottom:14px;
 
 border:1px solid #d1d5db;
@@ -1328,38 +1330,14 @@ transform:translateY(-2px);
 
 @media(max-width:768px){
 
-.hero{
-padding:60px 20px 60px;
-}
-
-.hero-wrapper{
-flex-direction:column;
-text-align:center;
-}
-
-.hero-content{
-max-width:100%;
-}
-
-.hero h1{
-font-size:32px;
-}
-
-.hero p{
-font-size:16px;
-margin:auto;
-}
-
-.hero-buttons{
-justify-content:center;
-}
-
-/* ❌ REMOVE FORM ON MOBILE */
+/* ❌ ONLY hide form — DO NOT TOUCH HERO */
 .hero-form{
 display:none;
 }
 
 }
+
+</style>
 
 
   <section class="hero">
