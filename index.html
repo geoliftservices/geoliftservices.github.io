@@ -1070,7 +1070,6 @@ this.parentElement.classList.toggle("active");
 
 <!-- ===== PREMIUM HIGH-CONVERTING HERO SECTION ===== -->
 
-
 <style>
 
 body{
@@ -1080,10 +1079,9 @@ font-family:'Poppins',sans-serif;
 
 /* ===== HERO SECTION ===== */
 
-
 .hero{
 position:relative;
-padding:80px 20px 80px;
+padding:90px 20px 80px;
 color:#fff;
 overflow:hidden;
 }
@@ -1108,38 +1106,27 @@ z-index:-2;
 
 /* ===== GLOW EFFECTS ===== */
 
-.hero-glow{
+.hero-glow,
+.hero-glow2{
 position:absolute;
+filter:blur(80px);
+z-index:-1;
+}
+
+.hero-glow{
 width:500px;
 height:500px;
 background:radial-gradient(circle, rgba(99,102,241,0.35), transparent 70%);
 top:-100px;
 left:-100px;
-filter:blur(80px);
-animation:moveGlow 8s infinite alternate ease-in-out;
-z-index:-1;
 }
 
 .hero-glow2{
-position:absolute;
 width:400px;
 height:400px;
 background:radial-gradient(circle, rgba(139,92,246,0.35), transparent 70%);
 bottom:-100px;
 right:-100px;
-filter:blur(80px);
-animation:moveGlow2 10s infinite alternate ease-in-out;
-z-index:-1;
-}
-
-@keyframes moveGlow{
-0%{transform:translate(0,0);}
-100%{transform:translate(200px,150px);}
-}
-
-@keyframes moveGlow2{
-0%{transform:translate(0,0);}
-100%{transform:translate(-150px,-100px);}
 }
 
 /* ===== WRAPPER ===== */
@@ -1150,7 +1137,7 @@ margin:auto;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:50px;
+gap:40px;
 flex-wrap:wrap;
 }
 
@@ -1168,169 +1155,163 @@ margin-bottom:12px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:50px;
 font-weight:800;
 line-height:1.15;
 margin-bottom:20px;
-color:#fff;
-text-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 .hero p{
-font-size:18px;
+font-size:17px;
 opacity:0.9;
-margin-bottom:30px;
+margin-bottom:28px;
 max-width:480px;
-color:rgba(255,255,255,0.85);
 }
 
-/* Buttons */
+/* ===== BUTTONS (SMALLER) ===== */
+
 .hero-buttons{
 display:flex;
-gap:16px;
+gap:12px;
 flex-wrap:wrap;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .btn-primary{
 background:#6366F1;
 color:#fff;
-padding:16px 36px;
-border-radius:50px;
+padding:13px 26px;
+border-radius:40px;
 text-decoration:none;
 font-weight:600;
-
-box-shadow:
-0 ;
-
-transition:all 0.3s ease;
-}
-
-.btn-primary:hover{
-transform:translateY(-3px) scale(1.03);
+font-size:14px;
 }
 
 .btn-secondary{
-border:2px solid rgba(255,255,255,0.6);
+border:1.5px solid rgba(255,255,255,0.6);
 color:#fff;
-padding:16px 34px;
-border-radius:50px;
+padding:13px 24px;
+border-radius:40px;
 text-decoration:none;
 font-weight:500;
-transition:0.3s;
+font-size:14px;
 }
 
-.btn-secondary:hover{
-background:#fff;
-color:#111;
-}
+/* ===== TRUST ===== */
 
-/* Trust points */
 .trust-points{
 display:flex;
-gap:12px;
+gap:10px;
 flex-wrap:wrap;
-margin-top:20px;
+margin-top:18px;
 }
 
 .trust-points span{
 background:rgba(255,255,255,0.12);
 border:1px solid rgba(255,255,255,0.2);
-padding:10px 16px;
+padding:8px 14px;
 border-radius:30px;
-font-size:13px;
+font-size:12px;
 }
 
-  @media(max-width:768px){
-
-.trust-points{
-justify-content:center;  /* THIS FIXES IT */
-}
-
-}
-
-/* ===== CLEAN PREMIUM FORM (UPDATED) ===== */
+/* ===== FORM ===== */
 
 .hero-form{
 flex:1;
-max-width:440px;
+max-width:420px;
 
 background:#ffffff;
-padding:34px;
+padding:28px;
 
-border-radius:18px;
+border-radius:16px;
 border:1px solid #e5e7eb;
 
-box-shadow:0 25px 60px rgba(0,0,0,0.18);
+box-shadow:0 20px 50px rgba(0,0,0,0.15);
 
-transition:0.3s ease;
+align-self:center;
 }
 
-.hero-form:hover{
-transform:translateY(-4px);
-box-shadow:0 35px 80px rgba(0,0,0,0.22);
-}
-
-/* Heading */
 .hero-form h3{
 font-size:20px;
-font-weight:600;
-margin-bottom:18px;
-color:#111827;
+margin-bottom:16px;
+color:#111;
 }
 
-/* Inputs */
 .hero-form input{
 width:100%;
-padding:15px 16px;
-margin-bottom:14px;
-
+padding:13px 15px;
+margin-bottom:12px;
 border:1px solid #d1d5db;
 border-radius:10px;
-
-font-size:14px;
-outline:none;
-transition:0.2s ease;
 }
 
-.hero-form input:focus{
-border-color:#6366f1;
-box-shadow:0 0 0 3px rgba(99,102,241,0.15);
-}
-
-/* Button */
 .hero-form button{
 width:100%;
-padding:15px;
-margin-top:8px;
-
+padding:14px;
 border:none;
 border-radius:40px;
-
 background:linear-gradient(135deg,#6366f1,#8b5cf6);
 color:#fff;
-
 font-weight:600;
-font-size:15px;
-
-cursor:pointer;
-
-box-shadow:0 12px 25px rgba(99,102,241,0.35);
-
-transition:0.3s ease;
 }
 
-.hero-form button:hover{
-transform:translateY(-2px);
-}
+/* ===== MOBILE ===== */
 
-/* ===== MOBILE FIX ===== */
+.mobile-cta{
+display:none;
+}
 
 @media(max-width:768px){
 
-/* ❌ ONLY hide form — DO NOT TOUCH HERO */
+.hero{
+padding:70px 20px 60px;
+text-align:center;
+}
+
+.hero-wrapper{
+flex-direction:column;
+}
+
+.hero-content{
+max-width:100%;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:15px;
+margin:auto;
+}
+
+.hero-buttons{
+justify-content:center;
+}
+
+.trust-points{
+justify-content:center;
+}
+
+/* ❌ hide form */
 .hero-form{
 display:none;
+}
+
+/* ✅ mobile CTA */
+.mobile-cta{
+display:block;
+margin-top:15px;
+}
+
+.mobile-cta a{
+display:block;
+background:#25D366;
+color:#fff;
+padding:14px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
 }
 
 }
@@ -1338,61 +1319,63 @@ display:none;
 </style>
 
 
-  <section class="hero">
+<section class="hero">
 
-  <!-- Glow effects -->
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
+<div class="hero-glow"></div>
+<div class="hero-glow2"></div>
 
-  <div class="hero-wrapper">
+<div class="hero-wrapper">
 
-    <!-- LEFT -->
-    <div class="hero-content">
+<!-- LEFT -->
+<div class="hero-content">
 
-      <div class="location">
-        📍 Helping Businesses Grow Across India
-      </div>
+<div class="location">
+📍 Helping Businesses Grow Across India
+</div>
 
-      <h1>
-        Build, Optimize, and Grow Your Business Online
-      </h1>
+<h1>
+Build, Optimize, and Grow Your Business Online
+</h1>
 
-      <p>
-        Professional business websites and Google Business Profile optimization designed to improve local visibility and generate consistent enquiries.
-      </p>
+<p>
+Professional business websites and Google Business Profile optimization designed to improve local visibility and generate consistent enquiries.
+</p>
 
-      <div class="hero-buttons">
-        <a href="#services" class="btn-primary">Explore Services</a>
-        <a href="#plans" class="btn-secondary">See Plans</a>
-      </div>
+<div class="hero-buttons">
+<a href="#services" class="btn-primary">Explore Services</a>
+<a href="#plans" class="btn-secondary">See Plans</a>
+</div>
 
-      <div class="trust-points">
-        <span>✔ Website Development</span>
-        <span>✔ GMB Optimization</span>
-        <span>✔ Maps Ranking</span>
-      </div>
+<div class="trust-points">
+<span>✔ Website Development</span>
+<span>✔ GMB Optimization</span>
+<span>✔ Maps Ranking</span>
+</div>
 
-    </div>
+<!-- MOBILE CTA -->
+<div class="mobile-cta">
+<a href="https://wa.me/919477469499">Get Free Audit on WhatsApp</a>
+</div>
 
-    <!-- RIGHT FORM -->
-    <div class="hero-form">
+</div>
 
-      <h3>Get Free GMB Audit</h3>
+<!-- RIGHT FORM -->
+<div class="hero-form">
 
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="text" placeholder="Business Name">
-        <button type="submit">Get Free Audit</button>
-      </form>
+<h3>Get Free GMB Audit</h3>
 
-    </div>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="text" placeholder="Business Name">
+<button type="submit">Get Free Audit</button>
+</form>
 
-  </div>
+</div>
+
+</div>
 
 </section>
-  
-<!-- CLOSE HERO SECTION -->
 
 
 
