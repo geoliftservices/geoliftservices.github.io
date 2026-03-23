@@ -445,7 +445,9 @@ scroll-behavior:smooth;
 <body>
 
 
-<!-- ===== TOP BAR ===== -->
+<!-- ===== TOP BAR FINAL ===== -->
+
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <div class="top-bar">
@@ -459,27 +461,151 @@ scroll-behavior:smooth;
     <!-- RIGHT -->
     <div class="top-bar-right">
 
+      <!-- EMAIL (hidden on mobile) -->
       <span class="hide-mobile">
         <i class="fa-regular fa-envelope"></i> contact.geolift@gmail.com
       </span>
 
-      <span>
+      <!-- PHONE -->
+      <span class="phone">
         <i class="fa-solid fa-phone"></i>
         <a href="tel:+919477469499">+91 94774 69499</a>
       </span>
 
-      <!-- SOCIAL -->
+      <!-- SOCIAL ICONS -->
       <div class="top-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
 
     </div>
 
   </div>
 </div>
+
+<style>
+
+/* ===== TOP BAR ===== */
+
+.top-bar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:linear-gradient(90deg,#0f172a,#1e293b);
+color:#e2e8f0;
+font-size:13px;
+z-index:10000;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.top-bar-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:6px 16px;
+}
+
+/* LEFT */
+.top-bar-left{
+font-weight:500;
+white-space:nowrap;
+}
+
+/* RIGHT */
+.top-bar-right{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+/* LINKS */
+.top-bar a{
+color:#e2e8f0;
+text-decoration:none;
+}
+
+/* ICON SPACING */
+.top-bar i{
+margin-right:5px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+
+.top-social{
+display:flex;
+gap:6px;
+}
+
+.top-social a{
+width:28px;
+height:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+background:rgba(255,255,255,0.06);
+
+color:#e2e8f0;
+font-size:12px;
+
+transition:all 0.3s ease;
+}
+
+/* Hover brand colors */
+.top-social a:nth-child(1):hover{ background:#1877f2; } /* Facebook */
+.top-social a:nth-child(2):hover{ background:#e1306c; } /* Instagram */
+.top-social a:nth-child(3):hover{ background:#0a66c2; } /* LinkedIn */
+.top-social a:nth-child(4):hover{ background:#ff0000; } /* YouTube */
+
+.top-social a:hover{
+transform:translateY(-2px);
+color:#fff;
+}
+
+/* ===== MOBILE FIX ===== */
+
+@media(max-width:768px){
+
+.top-bar-inner{
+justify-content:space-between;
+}
+
+/* Hide left text */
+.top-bar-left{
+display:none;
+}
+
+/* Hide email */
+.hide-mobile{
+display:none;
+}
+
+/* Reduce spacing */
+.top-bar-right{
+gap:8px;
+}
+
+/* Smaller icons */
+.top-social a{
+width:24px;
+height:24px;
+font-size:11px;
+}
+
+/* Smaller phone text */
+.phone{
+font-size:12px;
+}
+
+}
+
+</style>
   
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
