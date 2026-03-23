@@ -444,28 +444,44 @@ scroll-behavior:smooth;
 
 <body>
 
-   <!-- ===== PREMIUM TOP STRIP ===== -->
+  <!-- ===== TOP BAR WITH SOCIAL ICONS ===== -->
 <div class="top-bar">
   <div class="top-bar-inner">
 
+    <!-- LEFT (optional, can keep empty or add text) -->
+    <div class="top-bar-left">
+      📍 Serving Kolkata & India
+    </div>
 
+    <!-- RIGHT -->
     <div class="top-bar-right">
+
       <span>📧 contact.geolift@gmail.com</span>
       <span>📞 <a href="tel:+919477469499">+91 94774 69499</a></span>
+
+      <!-- SOCIAL ICONS -->
+      <div class="top-social">
+        <a href="#" target="_blank">📘</a>
+        <a href="#" target="_blank">📸</a>
+        <a href="#" target="_blank">💼</a>
+        <a href="#" target="_blank">▶️</a>
+      </div>
+
     </div>
 
   </div>
 </div>
 
-<style>
-/* ===== PREMIUM CORPORATE TOP BAR ===== */
+  <style>
+
+/* ===== TOP BAR ===== */
 
 .top-bar{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-background:linear-gradient(90deg,#0f172a,#1e293b); /* matches your site */
+background:linear-gradient(90deg,#0f172a,#1e293b);
 color:#e2e8f0;
 font-size:13px;
 z-index:10000;
@@ -482,58 +498,73 @@ padding:6px 20px;
 flex-wrap:wrap;
 }
 
+/* LEFT */
 .top-bar-left{
 display:flex;
-gap:10px;
 align-items:center;
-flex-wrap:wrap;
 font-weight:500;
 }
 
+/* RIGHT */
 .top-bar-right{
 display:flex;
-gap:18px;
 align-items:center;
+gap:16px;
 font-weight:500;
 }
 
-/* FIXED LINK COLOR (no green now) */
+/* LINKS */
 .top-bar a{
 color:#e2e8f0;
 text-decoration:none;
 }
 
-.top-bar a:hover{
-opacity:0.8;
+/* SOCIAL ICONS */
+.top-social{
+display:flex;
+align-items:center;
+gap:10px;
+margin-left:10px;
+}
+
+.top-social a{
+width:28px;
+height:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+font-size:14px;
+transition:0.3s ease;
+}
+
+.top-social a:hover{
+background:#6366f1;
+transform:translateY(-2px);
 }
 
 /* MOBILE */
 @media(max-width:768px){
+
 .top-bar-inner{
 justify-content:center;
 text-align:center;
-gap:5px;
+gap:6px;
 }
+
 .top-bar-right{
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+.top-bar-left{
 display:none;
 }
+
 }
 </style>
-
-<script>
-/* ===== ROTATING TEXT ===== */
-
-const messages =
-
-let i = 0;
-const topText = document.getElementById("topBarText");
-
-setInterval(()=>{
-i = (i + 1) % messages.length;
-topText.textContent = messages[i];
-}, 3000);
-</script>
-<!-- ===== END TOP STRIP ===== -->
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
