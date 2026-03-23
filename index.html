@@ -1014,82 +1014,106 @@ font-family:'Poppins',sans-serif;
 
 /* ===== HERO SECTION ===== */
 
+<style>
+
+/* ===== HERO SECTION (ADVANCED) ===== */
+
 .hero{
 position:relative;
-min-height:80vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+padding:140px 20px 80px;
 color:#fff;
 overflow:hidden;
-padding-bottom:20px; /* added space before stats */
 }
 
-/* Background Image */
+/* Background */
 .hero::before{
 content:'';
 position:absolute;
 inset:0;
 background:url('/images/home-banner.jpg') center/cover no-repeat;
-z-index:-2;
+z-index:-3;
 }
 
-/* Gradient Overlay */
+/* Dark Overlay */
 .hero::after{
 content:'';
 position:absolute;
 inset:0;
-background:linear-gradient(135deg, rgba(15,23,42,0.80), rgba(30,41,59,0.80));
+background:linear-gradient(135deg, rgba(15,23,42,0.92), rgba(30,41,59,0.75));
+z-index:-2;
+}
+
+/* Animated Gradient Glow */
+.hero-glow{
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle, rgba(99,102,241,0.35), transparent 70%);
+top:-100px;
+left:-100px;
+filter:blur(80px);
+animation:moveGlow 8s infinite alternate ease-in-out;
 z-index:-1;
 }
 
-/* Content */
-.hero-content{
-max-width:900px;
-padding:40px 20px;
+@keyframes moveGlow{
+0%{transform:translate(0,0);}
+100%{transform:translate(200px,150px);}
 }
 
-/* Location Text */
+/* Wrapper */
+.hero-wrapper{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+flex-wrap:wrap;
+}
+
+/* LEFT CONTENT */
+.hero-content{
+flex:1;
+max-width:550px;
+}
+
 .location{
 font-size:14px;
-opacity:0.9;
-margin-bottom:10px;
-letter-spacing:1px;
+opacity:0.85;
+margin-bottom:12px;
 }
 
-/* Headline */
 .hero h1{
-font-size:48px;
+font-size:52px;
 font-weight:800;
-line-height:1.2;
+line-height:1.15;
 margin-bottom:20px;
 }
 
-/* Subtext */
 .hero p{
 font-size:18px;
 opacity:0.9;
 margin-bottom:30px;
+max-width:480px;
 }
 
 /* Buttons */
 .hero-buttons{
 display:flex;
-justify-content:center;
-gap:20px;
+gap:16px;
 flex-wrap:wrap;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .btn-primary{
-background:#6366f1;
+background:linear-gradient(135deg,#6366f1,#4f46e5);
 color:#fff;
-padding:14px 30px;
-border-radius:40px;
+padding:16px 34px;
+border-radius:50px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 10px 30px rgba(99,102,241,0.4);
+box-shadow:0 15px 35px rgba(99,102,241,0.5);
 transition:0.3s;
 }
 
@@ -1098,13 +1122,13 @@ transform:translateY(-3px);
 }
 
 .btn-secondary{
-background:transparent;
-border:2px solid #fff;
+border:2px solid rgba(255,255,255,0.6);
 color:#fff;
-padding:12px 28px;
-border-radius:40px;
+padding:16px 34px;
+border-radius:50px;
 text-decoration:none;
 font-weight:500;
+backdrop-filter:blur(6px);
 transition:0.3s;
 }
 
@@ -1116,22 +1140,75 @@ color:#111;
 /* Trust Points */
 .trust-points{
 display:flex;
-justify-content:center;
-gap:25px;
+gap:12px;
 flex-wrap:wrap;
-font-size:14px;
-opacity:0.9;
-margin-bottom:60px;
+margin-top:20px;
 }
 
 .trust-points span{
-display:flex;
-align-items:center;
-gap:6px;
+background:rgba(255,255,255,0.08);
+padding:10px 16px;
+border-radius:30px;
+font-size:13px;
 }
 
-/* Responsive */
+/* RIGHT SIDE (FORM) */
+.hero-form{
+flex:1;
+max-width:400px;
+background:rgba(255,255,255,0.08);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(12px);
+box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+
+.hero-form h3{
+margin-bottom:20px;
+font-size:20px;
+font-weight:600;
+}
+
+.hero-form input{
+width:100%;
+padding:14px;
+margin-bottom:12px;
+border:none;
+border-radius:10px;
+outline:none;
+}
+
+.hero-form button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:30px;
+background:#6366f1;
+color:#fff;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-form button:hover{
+background:#4f46e5;
+}
+
+/* MOBILE */
 @media(max-width:768px){
+
+.hero{
+padding:120px 20px 60px;
+}
+
+.hero-wrapper{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-content{
+max-width:100%;
+}
 
 .hero h1{
 font-size:32px;
@@ -1139,49 +1216,77 @@ font-size:32px;
 
 .hero p{
 font-size:16px;
+margin:auto;
 }
 
-.stats{
-gap:40px;
+.hero-buttons{
+justify-content:center;
+}
+
+.hero-form{
+margin-top:20px;
+width:100%;
 }
 
 }
 
 </style>
 
-<section class="hero">
-<div class="floating-shape shape1"></div>
-<div class="floating-shape shape2"></div>
 
-<div class="hero-content">
+  <section class="hero">
 
+  <!-- Animated Glow -->
+  <div class="hero-glow"></div>
 
-<div class="location">
-📍 Helping Businesses Grow Across India
-</div>
+  <div class="hero-wrapper">
 
-<h1>
-Build, Optimize, and Grow Your Business Online
-</h1>
+    <!-- LEFT SIDE -->
+    <div class="hero-content">
 
-<p>
-Professional business websites and Google Business Profile optimization designed to improve local visibility, attract more customers, and generate consistent enquiries.
-</p>
+      <div class="location">
+        📍 Helping Businesses Grow Across India
+      </div>
 
-<div class="hero-buttons">
-<a href="#services" class="btn-primary">Explore Our Services</a>
-<a href="#plans" class="btn-secondary">See Plans</a>
-</div>
+      <h1>
+        Build, Optimize, and Grow Your Business Online
+      </h1>
 
-<div class="trust-points">
-<span>✔ Professional Business Website Development</span>
-<span>✔ Google Business Profile Optimization</span>
-<span>✔ Improved Google Maps Visibility</span>
-</div>
+      <p>
+        Professional business websites and Google Business Profile optimization designed to improve local visibility and generate consistent enquiries.
+      </p>
 
-</div>
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#plans" class="btn-secondary">See Plans</a>
+      </div>
 
-</section> <!-- CLOSE HERO SECTION -->
+      <div class="trust-points">
+        <span>✔ Website Development</span>
+        <span>✔ GMB Optimization</span>
+        <span>✔ Maps Ranking</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="hero-form">
+
+      <h3>Get Free GMB Audit</h3>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Business Name">
+        <button type="submit">Get Free Audit</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+  
+<!-- CLOSE HERO SECTION -->
 
 
 
