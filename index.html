@@ -1142,25 +1142,36 @@ flex-wrap:wrap;
 .hero-content{
 flex:1;
 max-width:550px;
+
+/* ✅ ADD THIS */
+display:flex;
+flex-direction:column;
+gap:22px;   /* THIS FIXES ALL SPACING */
 }
+
+  @media(max-width:768px){
+
+.hero-content{
+gap:18px;   /* slightly tighter */
+}
+
+}
+  
 
 .location{
 font-size:14px;
 opacity:0.85;
-margin-bottom:12px;
 }
 
 .hero h1{
 font-size:50px;
 font-weight:800;
 line-height:1.15;
-margin-bottom:20px;
 }
 
 .hero p{
 font-size:17px;
 opacity:0.9;
-margin-bottom:36px;
 max-width:480px;
 }
 
@@ -1204,7 +1215,6 @@ font-size:14px;
 display:flex;
 gap:10px;
 flex-wrap:wrap;
-margin-top:30px;
 }
 
 .trust-points span{
