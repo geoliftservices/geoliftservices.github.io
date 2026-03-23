@@ -4451,7 +4451,7 @@ color:#111827;
   <h3>Free Google Business Profile Audit</h3>
   <p>Get a quick visibility report & improvement suggestions.</p>
 
-  <form id="auditForm">
+ <form id="auditForm" onsubmit="return sendToWhatsApp()">
     <input type="text" id="name" placeholder="Your Name" required>
     <input type="text" id="business" placeholder="Business Name" required>
     <input type="text" id="phone" placeholder="Phone Number" required>
@@ -4465,38 +4465,26 @@ color:#111827;
 </div>
 
  <script>
-document.addEventListener("DOMContentLoaded", function(){
+function sendToWhatsApp(){
+  var name = document.getElementById("name").value;
+  var business = document.getElementById("business").value;
+  var phone = document.getElementById("phone").value;
+  var location = document.getElementById("location").value;
 
-  const form = document.getElementById("auditForm");
+  var message = "New Audit Request:\n"
+              + "Name: " + name + "\n"
+              + "Business: " + business + "\n"
+              + "Phone: " + phone + "\n"
+              + "Location: " + location;
 
-  if(form){
-    form.addEventListener("submit", function(e){
-      e.preventDefault();
+  var url = "https://wa.me/919477469499?text=" + encodeURIComponent(message);
 
-      let name = document.getElementById("name").value;
-      let business = document.getElementById("business").value;
-      let phone = document.getElementById("phone").value;
-      let location = document.getElementById("location").value;
+  // ✅ GitHub-safe redirect (no popup block)
+  window.location.href = url;
 
-      let message = `New Audit Request:
-Name: ${name}
-Business: ${business}
-Phone: ${phone}
-Location: ${location}`;
-
-      let whatsappURL = `https://wa.me/919477469499?text=${encodeURIComponent(message)}`;
-
-      window.open(whatsappURL, "_blank");
-    });
-  }
-
-});
-
-function closeAudit(){
-  document.querySelector(".audit-box").style.display = "none";
+  return false; // prevent reload
 }
 </script>
-
 
 <!-- FLOATING BUTTON -->
 
