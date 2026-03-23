@@ -444,11 +444,16 @@ scroll-behavior:smooth;
 
 <body>
 
-  <!-- ===== TOP BAR WITH SOCIAL ICONS ===== -->
+
+<!-- ===== TOP BAR ===== -->
+
+<!-- Font Awesome (icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <div class="top-bar">
   <div class="top-bar-inner">
 
-    <!-- LEFT (optional, can keep empty or add text) -->
+    <!-- LEFT -->
     <div class="top-bar-left">
       📍 Serving Kolkata & India
     </div>
@@ -456,15 +461,19 @@ scroll-behavior:smooth;
     <!-- RIGHT -->
     <div class="top-bar-right">
 
-      <span>📧 contact.geolift@gmail.com</span>
-      <span>📞 <a href="tel:+919477469499">+91 94774 69499</a></span>
+      <span><i class="fa-regular fa-envelope"></i> contact.geolift@gmail.com</span>
+
+      <span>
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:+919477469499">+91 94774 69499</a>
+      </span>
 
       <!-- SOCIAL ICONS -->
       <div class="top-social">
-        <a href="#" target="_blank">📘</a>
-        <a href="#" target="_blank">📸</a>
-        <a href="#" target="_blank">💼</a>
-        <a href="#" target="_blank">▶️</a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
 
     </div>
@@ -472,7 +481,7 @@ scroll-behavior:smooth;
   </div>
 </div>
 
-  <style>
+<style>
 
 /* ===== TOP BAR ===== */
 
@@ -500,8 +509,6 @@ flex-wrap:wrap;
 
 /* LEFT */
 .top-bar-left{
-display:flex;
-align-items:center;
 font-weight:500;
 }
 
@@ -519,32 +526,49 @@ color:#e2e8f0;
 text-decoration:none;
 }
 
-/* SOCIAL ICONS */
+/* ICON SPACING */
+.top-bar i{
+margin-right:6px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+
 .top-social{
 display:flex;
 align-items:center;
-gap:10px;
+gap:8px;
 margin-left:10px;
 }
 
 .top-social a{
-width:28px;
-height:28px;
+width:30px;
+height:30px;
 display:flex;
 align-items:center;
 justify-content:center;
+
 border-radius:50%;
-background:rgba(255,255,255,0.08);
-font-size:14px;
-transition:0.3s ease;
+background:rgba(255,255,255,0.06);
+
+color:#e2e8f0;
+font-size:13px;
+
+transition:all 0.3s ease;
 }
+
+/* Hover brand colors */
+.top-social a:nth-child(1):hover{ background:#1877f2; } /* Facebook */
+.top-social a:nth-child(2):hover{ background:#e1306c; } /* Instagram */
+.top-social a:nth-child(3):hover{ background:#0a66c2; } /* LinkedIn */
+.top-social a:nth-child(4):hover{ background:#ff0000; } /* YouTube */
 
 .top-social a:hover{
-background:#6366f1;
-transform:translateY(-2px);
+transform:translateY(-2px) scale(1.05);
+color:#fff;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
+
 @media(max-width:768px){
 
 .top-bar-inner{
@@ -553,18 +577,20 @@ text-align:center;
 gap:6px;
 }
 
+.top-bar-left{
+display:none;
+}
+
 .top-bar-right{
 flex-wrap:wrap;
 justify-content:center;
 gap:10px;
 }
 
-.top-bar-left{
-display:none;
 }
 
-}
 </style>
+  
 
 <!-- ===== PREMIUM GLASS HEADER WITH SCROLL EFFECT ===== -->
 
