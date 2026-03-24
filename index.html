@@ -1310,7 +1310,29 @@ justify-content:center;
 
 /* hide form */
 .hero-form{
-display:none;
+display:block;
+width:100%;
+max-width:100%;
+margin-top:20px;
+}
+
+  @media(max-width:768px){
+
+.hero-form{
+padding:20px;
+border-radius:14px;
+}
+
+.hero-form input{
+padding:12px;
+font-size:14px;
+}
+
+.hero-form button{
+padding:13px;
+font-size:15px;
+}
+
 }
 
 }
