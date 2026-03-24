@@ -4377,48 +4377,6 @@ color:#111827;
 
 </style>
 
-  <div class="audit-box">
-  
-  <div class="audit-close" onclick="closeAudit()">×</div>
-
-  <h3>Free Google Business Profile Audit</h3>
-  <p>Get a quick visibility report & improvement suggestions.</p>
-
- <form id="auditForm" onsubmit="return sendToWhatsApp()">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="text" id="business" placeholder="Business Name" required>
-    <input type="text" id="phone" placeholder="Phone Number" required>
-    <input type="text" id="location" placeholder="Business Location" required>
-
-    <button type="submit" class="audit-submit">
-      Request Audit
-    </button>
-  </form>
-
-</div>
-
- <script>
-function sendToWhatsApp(){
-  var name = document.getElementById("name").value;
-  var business = document.getElementById("business").value;
-  var phone = document.getElementById("phone").value;
-  var location = document.getElementById("location").value;
-
-  var message = "New Audit Request:\n"
-              + "Name: " + name + "\n"
-              + "Business: " + business + "\n"
-              + "Phone: " + phone + "\n"
-              + "Location: " + location;
-
-  var url = "https://wa.me/919477469499?text=" + encodeURIComponent(message);
-
-  // ✅ GitHub-safe redirect (no popup block)
-  window.location.href = url;
-
-  return false; // prevent reload
-}
-</script>
-
 <!-- FLOATING BUTTON -->
 
 <div class="floating-audit-btn" onclick="openAuditForm()">
