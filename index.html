@@ -1355,7 +1355,21 @@ Professional business websites and Google Business Profile optimization designed
       Submit your business details and get a quick visibility analysis of your Google Business Profile.
     </p>
 
-    <form>
+    <form onsubmit="sendAudit(event)">
+
+  <input type="text" id="h_name" placeholder="Your Name" required>
+
+  <input type="tel" id="h_phone" placeholder="Phone / WhatsApp" required>
+
+  <input type="text" id="h_business" placeholder="Business Name">
+
+  <input type="text" id="h_link" placeholder="Google Maps Link">
+
+  <button type="submit">
+    Request Audit
+  </button>
+
+</form>
 
       <input type="text" placeholder="Your Name" required>
 
@@ -2360,44 +2374,6 @@ Simple service plans designed to help businesses build a professional website, s
 </section>
 
 
-<!-- POPUP FORM -->
-
-<div id="auditPopup" class="audit-popup">
-
-<div class="audit-overlay"></div>
-
-<div class="audit-modal">
-
-<span class="audit-close">&times;</span>
-
-<h3>Business Information</h3>
-
-<p class="audit-sub">
-Submit your business information and our team will review it to assist you with the appropriate solution.
-</p>
-
-<form id="auditForm">
-
-<input type="text" id="name" placeholder="Your Name" required>
-
-<input type="text" id="business" placeholder="Business Name" required>
-
-<input type="text" id="location" placeholder="Business Location" required>
-
-<input type="url" id="gbp" placeholder="Google Business Profile Link (Optional)">
-
-<textarea id="description" rows="4" placeholder="Briefly describe your business or goals"></textarea>
-
-<button type="submit" class="audit-submit">Send Details</button>
-
-</form>
-
-</div>
-
-</div>
-
-
-
 <style>
 
 /* SECTION */
@@ -2675,33 +2651,6 @@ line-height:1.2;
 }
 
 </style>
-
-
-
-<script>
-document.getElementById("auditForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  let name = document.getElementById("name").value;
-  let business = document.getElementById("business").value;
-  let phone = document.getElementById("phone").value;
-  let location = document.getElementById("location").value;
-
-  let message = `New Audit Request:
-Name: ${name}
-Business: ${business}
-Phone: ${phone}
-Location: ${location}`;
-
-  // ✅ IMPORTANT FIX (encode message)
-  let encodedMessage = encodeURIComponent(message);
-
-  let whatsappURL = `https://wa.me/919477469499?text=${encodedMessage}`;
-
-  window.open(whatsappURL, "_blank");
-});
-</script>
-  
 
   
 
@@ -4657,6 +4606,26 @@ background:#4f46e5;
 
 </div>
 
+  <script>
+function sendAudit(e){
+  e.preventDefault();
+
+  let name = document.getElementById("h_name").value;
+  let phone = document.getElementById("h_phone").value;
+  let business = document.getElementById("h_business").value;
+  let link = document.getElementById("h_link").value;
+
+  let message = `New Audit Request:
+Name: ${name}
+Phone: ${phone}
+Business: ${business}
+Google Maps: ${link}`;
+
+  let url = `https://wa.me/919477469499?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+}
+</script>
   
 </body>
 </html>
