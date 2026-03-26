@@ -4136,6 +4136,38 @@ transform:translateY(-4px);
   color: inherit !important;
   text-decoration: none !important;
 }
+
+
+  /* REMOVE MOBILE TAP HIGHLIGHT + SQUARE CLICK EFFECT */
+.float-btn,
+.float-btn *{
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* REMOVE FOCUS / ACTIVE FLASH */
+.float-btn:focus,
+.float-btn:active{
+  outline: none !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* keep your normal shadow */
+  background-clip: padding-box;
+}
+
+/* REMOVE LINK HIGHLIGHT (VERY IMPORTANT) */
+a{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* EXTRA SAFETY */
+button, a{
+  outline: none !important;
+}
+
+  .float-btn{
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
   
 </style>
 
