@@ -1884,9 +1884,10 @@ yearCounters.forEach(c=>observer.observe(c));
 
 <style>
 
+/* SECTION */
 .services{
-padding:70px 20px;
-background:#fff;
+padding:80px 20px;
+background:linear-gradient(180deg,#f8fafc,#ffffff);
 font-family:'Poppins',sans-serif;
 }
 
@@ -1897,11 +1898,11 @@ margin:auto;
 
 .services-header{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .services-title{
-font-size:36px;
+font-size:38px;
 font-weight:800;
 color:#0f172a;
 }
@@ -1916,8 +1917,7 @@ font-size:16px;
 .services-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:40px;
+gap:30px;
 }
 
 @media(max-width:992px){
@@ -1932,119 +1932,188 @@ grid-template-columns:1fr;
 }
 }
 
-/* CARD DESIGN */
+/* CARD BASE */
 .service-card{
-height:180px;
-border-radius:16px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:#fff;
-font-weight:600;
-transition:.3s;
-cursor:pointer;
 position:relative;
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.4);
 overflow:hidden;
+cursor:pointer;
+transition:0.4s;
 }
 
-/* COLORS */
-.card-green{background:#16a34a;}
-.card-red{background:#dc2626;}
-.card-yellow{background:#facc15; color:#000;}
-.card-blue{background:#2563eb;}
-.card-purple{background:#7c3aed;}
-.card-dark{background:#0f172a;}
+/* GLOW EFFECT */
+.service-card::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:radial-gradient(circle,rgba(99,102,241,0.15),transparent 60%);
+opacity:0;
+transition:0.4s;
+}
 
-/* HOVER */
+.service-card:hover::before{
+opacity:1;
+}
+
+/* HOVER LIFT */
 .service-card:hover{
-transform:translateY(-8px) scale(1.03);
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 25px 60px rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.service-icon{
+font-size:32px;
+margin-bottom:15px;
 }
 
 /* TITLE */
 .service-card h3{
 font-size:20px;
-margin-top:10px;
+color:#0f172a;
+margin-bottom:10px;
 }
 
-/* ICON */
-.service-icon{
-font-size:30px;
+/* SHORT INFO */
+.service-info{
+font-size:14px;
+color:#64748b;
+line-height:1.5;
+}
+
+/* HIDDEN DETAILS */
+.service-hover{
+position:absolute;
+bottom:-100%;
+left:0;
+width:100%;
+padding:20px;
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:#fff;
+font-size:13px;
+transition:0.4s;
+}
+
+.service-card:hover .service-hover{
+bottom:0;
+}
+
+/* CTA */
+.service-hover span{
+display:inline-block;
+margin-top:10px;
+font-weight:600;
 }
 
 </style>
 
-  <section class="services">
+
+
+<section class="services">
 
 <div class="services-container">
 
 <div class="services-header">
-<h2 class="services-title">GMB Services That Drive Results</h2>
-<p class="services-sub">Simple. Powerful. Built for Local Growth.</p>
+<h2 class="services-title">Powerful GMB Services for Local Growth</h2>
+<p class="services-sub">Designed to rank higher, attract customers, and grow faster</p>
 </div>
 
 <div class="services-grid">
 
 <!-- SETUP -->
-<div class="service-card card-green">
+<div class="service-card" onclick="location.href='/services/gmb-setup-services/'">
 <div class="service-icon">📍</div>
 <h3>GMB Setup</h3>
+<p class="service-info">Create & optimize your profile for strong local presence.</p>
+
+<div class="service-hover">
+Complete profile setup, categories, business info, and verification guidance.
+<br><span>Know More →</span>
+</div>
 </div>
 
 <!-- LISTING -->
-<div class="service-card card-blue">
+<div class="service-card" onclick="location.href='/services/gmb-listing-service/'">
 <div class="service-icon">📌</div>
 <h3>GMB Listing</h3>
+<p class="service-info">Enhance your listing for accuracy and visibility.</p>
+
+<div class="service-hover">
+Optimize business details, services, media, and improve local relevance.
+<br><span>Know More →</span>
+</div>
 </div>
 
 <!-- OPTIMIZATION -->
-<div class="service-card card-purple">
+<div class="service-card" onclick="location.href='/services/gmb-optimization-service/'">
 <div class="service-icon">⚙️</div>
 <h3>Optimization</h3>
+<p class="service-info">Boost rankings with advanced GMB strategies.</p>
+
+<div class="service-hover">
+Keyword targeting, geo signals, competitor analysis, and performance tracking.
+<br><span>Know More →</span>
+</div>
 </div>
 
 <!-- MANAGEMENT -->
-<div class="service-card card-red">
+<div class="service-card" onclick="location.href='/services/gmb-management-services/'">
 <div class="service-icon">📊</div>
 <h3>Management</h3>
+<p class="service-info">Keep your profile active and growing consistently.</p>
+
+<div class="service-hover">
+Regular updates, posts, reviews monitoring, and ongoing improvements.
+<br><span>Know More →</span>
+</div>
 </div>
 
 <!-- RANKING -->
-<div class="service-card card-yellow">
+<div class="service-card" onclick="location.href='/services/google-maps-ranking-service/'">
 <div class="service-icon">🚀</div>
 <h3>Maps Ranking</h3>
+<p class="service-info">Rank higher on Google Maps & get more leads.</p>
+
+<div class="service-hover">
+Advanced ranking strategies, citations, authority signals, and growth tracking.
+<br><span>Know More →</span>
+</div>
 </div>
 
 <!-- VERIFICATION -->
-<div class="service-card card-dark">
+<div class="service-card" onclick="location.href='/services/gmb-verification-service/'">
 <div class="service-icon">✔️</div>
 <h3>Verification</h3>
+<p class="service-info">Resolve verification issues quickly & easily.</p>
+
+<div class="service-hover">
+Support for suspended profiles, re-verification, and issue resolution.
+<br><span>Know More →</span>
+</div>
 </div>
 
 <!-- WEBSITE -->
-<div class="service-card card-blue">
+<div class="service-card" onclick="location.href='/services/website-development/'">
 <div class="service-icon">🌐</div>
 <h3>Website Development</h3>
-</div>
+<p class="service-info">Build a professional website to boost trust.</p>
 
-<!-- LOCAL SEO -->
-<div class="service-card card-green">
-<div class="service-icon">📈</div>
-<h3>Local SEO</h3>
+<div class="service-hover">
+Fast, mobile-friendly, SEO-ready websites for local businesses.
+<br><span>Know More →</span>
 </div>
-
-<!-- SUPPORT -->
-<div class="service-card card-red">
-<div class="service-icon">🛠️</div>
-<h3>Support & Fix</h3>
 </div>
 
 </div>
 </div>
 </section>
-
 
   
 
