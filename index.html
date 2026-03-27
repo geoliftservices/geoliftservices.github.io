@@ -1877,11 +1877,117 @@ yearCounters.forEach(c=>observer.observe(c));
   
 
 
-<section id="services" class="services">
+<style>
+
+.services{
+padding:60px 20px;
+background:#ffffff;
+font-family:'poppins',sans-serif;
+}
+
+.services-container{
+max-width:1200px;
+margin:auto;
+}
+
+.services-header{
+text-align:center;
+margin-bottom:50px;
+}
+
+.services-badge{
+background:#eef2ff;
+color:#6366f1;
+padding:6px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+display:inline-block;
+margin-bottom:15px;
+}
+
+.services-title{
+font-size:38px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:15px;
+}
+
+.services-highlight{
+color:#6366f1;
+}
+
+.services-sub{
+color:#475569;
+font-size:16px;
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+/* GRID FIX */
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+@media(max-width:992px){
+.services-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+@media(max-width:600px){
+.services-grid{
+grid-template-columns:1fr;
+}
+}
+
+/* CARD FIX */
+.service-card{
+background:#fff;
+border:1px solid #e7eaf0;
+border-radius:12px;
+padding:25px;
+box-shadow:0 6px 15px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+border-color:#6d5cff;
+}
+
+.service-card h3{
+font-size:20px;
+margin-bottom:10px;
+color:#0f172a;
+}
+
+.service-desc{
+font-size:14px;
+color:#64748b;
+margin-bottom:15px;
+}
+
+.features{
+padding-left:18px;
+}
+
+.features li{
+font-size:14px;
+margin-bottom:6px;
+color:#334155;
+}
+
+</style>
+
+  <section id="services" class="services">
 
 <div class="services-container">
-
-<!-- HEADER -->
 
 <div class="services-header">
 
@@ -1899,138 +2005,53 @@ We provide end-to-end Google My Business services designed to improve visibility
 
 <div class="services-grid">
 
-
-<!-- GMB SETUP & LISTING -->
-
+<!-- CARD 1 -->
 <div class="service-card">
-
 <h3>GMB Setup & Listing Service</h3>
-
 <p class="service-desc">
 Complete GMB setup services including profile creation, listing optimization, and verification to help your business appear correctly on Google Maps.
 </p>
-
 <ul class="features">
-
 <li>New GMB Profile Creation</li>
 <li>Business Information Setup</li>
 <li>Category & Keyword Optimization</li>
 <li>Service Area Setup</li>
-<li>Business Description Optimization</li>
 <li>Map Pin Setup</li>
 <li>Verification Guidance</li>
-
 </ul>
-
-<ul class="features more-features">
-
-<li>Logo & Cover Image Setup</li>
-<li>Business Hours Configuration</li>
-<li>WhatsApp & Call Integration</li>
-<li>Review Link Creation</li>
-<li>Profile Accuracy Optimization</li>
-<li>Initial SEO Setup</li>
-
-</ul>
-
-<div class="card-links">
-
-<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
-
-<a class="know-more" href="/services/gmb-setup-services/">Know More</a>
-
 </div>
 
-</div>
-
-
-<!-- GMB OPTIMIZATION -->
-
+<!-- CARD 2 -->
 <div class="service-card">
-
 <h3>GMB Optimization Service</h3>
-
 <p class="service-desc">
 Advanced Google My Business optimization services designed to improve rankings, visibility, and performance on Google Maps.
 </p>
-
 <ul class="features">
-
 <li>Keyword Optimization</li>
 <li>Profile SEO Improvements</li>
-<li>Geo Targeting Optimization</li>
 <li>Competitor Analysis</li>
-<li>Ranking Strategy Setup</li>
-<li>Content Optimization</li>
+<li>Geo Targeting Optimization</li>
 <li>Review Strategy Guidance</li>
-
-</ul>
-
-<ul class="features more-features">
-
-<li>Google Posts Optimization</li>
-<li>Behavioral Signal Optimization</li>
-<li>Image & Media Optimization</li>
-<li>Engagement Improvements</li>
 <li>Performance Tracking</li>
-<li>Continuous Optimization</li>
-
 </ul>
-
-<div class="card-links">
-
-<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
-
-<a class="know-more" href="/services/gmb-optimization-service/">Know More</a>
-
 </div>
 
-</div>
-
-
-<!-- MANAGEMENT & RANKING -->
-
+<!-- CARD 3 -->
 <div class="service-card">
-
 <h3>GMB Management & Maps Ranking</h3>
-
 <p class="service-desc">
 Ongoing GMB management services combined with Google Maps ranking strategies to generate consistent local leads and growth.
 </p>
-
 <ul class="features">
-
 <li>Regular Profile Updates</li>
 <li>Google Posts Management</li>
 <li>Review Monitoring</li>
 <li>Local SEO Maintenance</li>
 <li>Google Maps Ranking Strategy</li>
-<li>Competitor Monitoring</li>
 <li>Lead Generation Optimization</li>
-
 </ul>
-
-<ul class="features more-features">
-
-<li>Citation Building</li>
-<li>Authority Signal Development</li>
-<li>Customer Engagement Strategy</li>
-<li>Conversion Optimization</li>
-<li>Monthly Improvements</li>
-<li>Performance Reporting</li>
-
-</ul>
-
-<div class="card-links">
-
-<span class="view-more" onclick="toggleFeatures(this)">+ View More Features</span>
-
-<a class="know-more" href="/services/gmb-management-services/">Know More</a>
-
 </div>
-
-</div>
-
 
 </div>
 </div>
