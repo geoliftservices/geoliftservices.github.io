@@ -1738,19 +1738,19 @@ document.addEventListener("click", function(e){
 
   
 
-<!-- ================= WHY CHOOSE US (PREMIUM ALT DESIGN) ================= -->
+<!-- ================= WHY CHOOSE US (UNIQUE PREMIUM CARDS) ================= -->
 
 <style>
 
 /* SECTION */
 .why-section{
   padding:90px 20px;
-  background:#f1f5f9; /* soft grey (not white) */
+  background:#f8fafc;
   font-family:Poppins,sans-serif;
 }
 
 .why-container{
-  max-width:1200px;
+  max-width:1100px;
   margin:auto;
 }
 
@@ -1758,7 +1758,7 @@ document.addEventListener("click", function(e){
 
 .why-header{
   text-align:center;
-  margin-bottom:70px;
+  margin-bottom:60px;
 }
 
 .why-badge{
@@ -1769,53 +1769,56 @@ document.addEventListener("click", function(e){
   border-radius:30px;
   font-size:13px;
   font-weight:600;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 .why-header h2{
-  font-size:40px;
+  font-size:38px;
   font-weight:800;
-  color:#0f172a; /* single color */
-  margin-bottom:12px;
+  color:#0f172a;
+  margin-bottom:10px;
 }
 
 .why-header p{
   color:#64748b;
   font-size:15px;
-  max-width:580px;
-  margin:auto;
 }
 
 /* GRID */
-
 .why-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
 }
 
-/* CARD */
+@media(max-width:768px){
+  .why-grid{grid-template-columns:1fr;}
+}
 
+/* CARD (NEW STYLE) */
 .why-card{
-  background:#ffffff;
-  border-radius:14px;
-  padding:30px 26px;
-  text-align:left; /* changed to left (premium feel) */
-  transition:.3s;
   position:relative;
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  padding:24px 22px;
+  background:#ffffff;
+  border-radius:16px;
   border:1px solid #e2e8f0;
+  transition:.3s;
+  overflow:hidden;
 }
 
-/* TOP ACCENT LINE */
+/* SIDE ACCENT */
 .why-card::before{
   content:"";
   position:absolute;
-  top:0;
   left:0;
-  width:100%;
-  height:3px;
-  background:#0f172a; /* dark premium accent */
-  opacity:0.06;
+  top:0;
+  width:4px;
+  height:100%;
+  background:#3b82f6;
+  transition:.3s;
 }
 
 /* HOVER */
@@ -1824,48 +1827,47 @@ document.addEventListener("click", function(e){
   box-shadow:0 20px 45px rgba(0,0,0,0.08);
 }
 
-/* ICON (NEW STYLE — NOT PURPLE BOX) */
+.why-card:hover::before{
+  width:6px;
+}
 
+/* ICON */
 .why-icon{
-  width:48px;
-  height:48px;
-  margin-bottom:18px;
+  min-width:44px;
+  height:44px;
+  border-radius:10px;
+  background:#eff6ff;
   display:flex;
   align-items:center;
   justify-content:center;
-  border-radius:10px;
-  background:#f8fafc;
-  border:1px solid #e2e8f0;
 }
 
 .why-icon svg{
   width:22px;
   height:22px;
-  stroke:#0f172a; /* neutral icon color */
+  stroke:#2563eb;
   stroke-width:2;
 }
 
 /* TEXT */
-
-.why-card h3{
-  font-size:18px;
+.why-content h3{
+  font-size:17px;
   font-weight:700;
-  margin-bottom:8px;
+  margin-bottom:6px;
   color:#0f172a;
 }
 
-.why-card p{
+.why-content p{
   font-size:14px;
   color:#475569;
   line-height:1.6;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-  .why-header h2{
-    font-size:28px;
-  }
+/* SUBTLE TAG (WITTY TOUCH) */
+.why-tagline{
+  font-size:12px;
+  color:#64748b;
+  margin-top:6px;
 }
 
 </style>
@@ -1876,15 +1878,11 @@ document.addEventListener("click", function(e){
 <div class="why-container">
 
 <div class="why-header">
-
 <span class="why-badge">Why Choose GeoLift</span>
 
-<h2>Why Businesses Trust GeoLift</h2>
+<h2>Why Businesses Stick With GeoLift</h2>
 
-<p>
-Clear process. Focused work. Real business results.
-</p>
-
+<p>Because results matter more than promises.</p>
 </div>
 
 
@@ -1901,11 +1899,11 @@ Clear process. Focused work. Real business results.
 </svg>
 </div>
 
-<h3>Direct, No Middle Layers</h3>
-
-<p>
-You work directly with me — faster decisions, better clarity, no delays.
-</p>
+<div class="why-content">
+<h3>No Agency Layers</h3>
+<p>You talk, I work — simple. No middlemen slowing things down.</p>
+<div class="why-tagline">Less talk. More work.</div>
+</div>
 
 </div>
 
@@ -1919,11 +1917,11 @@ You work directly with me — faster decisions, better clarity, no delays.
 </svg>
 </div>
 
-<h3>Focused GMB Expertise</h3>
-
-<p>
-Only Google Business Profile — no distractions, just local growth.
-</p>
+<div class="why-content">
+<h3>Only GMB, Nothing Else</h3>
+<p>No distractions — full focus on Google Business growth.</p>
+<div class="why-tagline">Specialized beats general.</div>
+</div>
 
 </div>
 
@@ -1937,11 +1935,11 @@ Only Google Business Profile — no distractions, just local growth.
 </svg>
 </div>
 
-<h3>Proven Growth Process</h3>
-
-<p>
-Structured steps that improve visibility, rankings, and customer reach.
-</p>
+<div class="why-content">
+<h3>Built to Rank, Not Guess</h3>
+<p>Every step is structured — no random experiments.</p>
+<div class="why-tagline">Strategy > shortcuts.</div>
+</div>
 
 </div>
 
@@ -1956,11 +1954,11 @@ Structured steps that improve visibility, rankings, and customer reach.
 </svg>
 </div>
 
-<h3>Transparent & Practical</h3>
-
-<p>
-No fake promises — just clear work, real updates, and visible progress.
-</p>
+<div class="why-content">
+<h3>No Hidden Work</h3>
+<p>You see what’s done, why it’s done, and how it helps.</p>
+<div class="why-tagline">Clear work. Clear results.</div>
+</div>
 
 </div>
 
@@ -1970,7 +1968,6 @@ No fake promises — just clear work, real updates, and visible progress.
 </div>
 
 </section>
-
 
 
 
