@@ -2118,13 +2118,12 @@ My job? Make sure yours is one of them.
 
  
 
-  
-  
+
 <style>
 
 /* SECTION */
 .faq-section{
-padding:90px 20px;
+padding:80px 20px;
 background:linear-gradient(180deg,#f8fafc,#ffffff);
 font-family:'Poppins',sans-serif;
 }
@@ -2133,34 +2132,62 @@ font-family:'Poppins',sans-serif;
 max-width:1200px;
 margin:auto;
 display:grid;
-grid-template-columns:1fr 1.2fr;
-gap:60px;
-align-items:center;
+grid-template-columns:0.9fr 1.1fr;
+gap:40px;
+align-items:flex-start;
 }
 
 @media(max-width:900px){
 .faq-container{grid-template-columns:1fr;}
 }
 
-/* LEFT */
-.faq-left h2{
-font-size:38px;
-font-weight:800;
-color:#0f172a;
+/* LEFT PANEL */
+.faq-left{
+background:linear-gradient(135deg,#2563eb,#4f46e5);
+color:#fff;
+padding:30px;
+border-radius:18px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+.faq-badge{
+display:inline-block;
+background:rgba(255,255,255,0.2);
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
 margin-bottom:15px;
 }
 
-.faq-left p{
-color:#64748b;
-margin-bottom:25px;
-line-height:1.6;
+.faq-left h2{
+font-size:30px;
+font-weight:800;
+margin-bottom:12px;
 }
 
+.faq-left p{
+font-size:14px;
+line-height:1.6;
+opacity:0.95;
+margin-bottom:20px;
+}
+
+/* TRUST BOX */
+.faq-highlight{
+background:rgba(255,255,255,0.15);
+padding:15px;
+border-radius:12px;
+font-size:13px;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+/* CTA */
 .faq-cta{
 display:inline-block;
-background:linear-gradient(135deg,#2563eb,#4f46e5);
-color:#fff;
-padding:12px 22px;
+background:#fff;
+color:#2563eb;
+padding:10px 18px;
 border-radius:8px;
 font-size:14px;
 font-weight:600;
@@ -2170,16 +2197,14 @@ transition:.3s;
 
 .faq-cta:hover{
 transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(37,99,235,0.3);
 }
 
 /* RIGHT BOX */
 .faq-box{
 background:#ffffff;
 border-radius:18px;
-padding:25px;
+padding:20px;
 border:1px solid #e2e8f0;
-box-shadow:0 10px 40px rgba(0,0,0,0.05);
 }
 
 /* ITEM */
@@ -2193,24 +2218,18 @@ border:none;
 
 /* QUESTION */
 .faq-question{
-padding:18px;
+padding:16px;
 cursor:pointer;
 display:flex;
 justify-content:space-between;
 align-items:center;
 font-weight:600;
 color:#0f172a;
-transition:.3s;
+font-size:15px;
 }
 
 .faq-question:hover{
 color:#2563eb;
-}
-
-/* ICON */
-.faq-icon{
-transition:.3s;
-font-size:18px;
 }
 
 /* ANSWER */
@@ -2218,8 +2237,8 @@ font-size:18px;
 max-height:0;
 overflow:hidden;
 opacity:0;
-transition:max-height .4s ease, opacity .3s ease;
-padding:0 18px;
+transition:all .35s ease;
+padding:0 16px;
 color:#475569;
 font-size:14px;
 line-height:1.7;
@@ -2227,14 +2246,39 @@ line-height:1.7;
 
 /* ACTIVE */
 .faq-item.active .faq-answer{
-max-height:220px;
+max-height:200px;
 opacity:1;
-padding-bottom:15px;
+padding-bottom:12px;
+}
+
+/* ICON */
+.faq-icon{
+transition:.3s;
 }
 
 .faq-item.active .faq-icon{
 transform:rotate(45deg);
 color:#2563eb;
+}
+
+/* HIDDEN */
+.hidden-faq{
+display:none;
+}
+
+/* BUTTON */
+.show-more{
+text-align:center;
+margin-top:10px;
+}
+
+.show-more button{
+background:none;
+border:none;
+color:#2563eb;
+font-weight:600;
+cursor:pointer;
+font-size:14px;
 }
 
 </style>
@@ -2246,126 +2290,142 @@ color:#2563eb;
 
 <!-- LEFT -->
 <div class="faq-left">
-<h2>GMB Service FAQs</h2>
-<p>Get clear answers about our GMB service and Google My Business optimization service. Learn how we help businesses rank higher on Google Maps and generate real leads.</p>
+
+<span class="faq-badge">GMB Service FAQs</span>
+
+<h2>Still Confused About GMB?</h2>
+
+<p>
+Our GMB service and Google My Business optimization service help businesses rank higher on Google Maps and generate real customer leads.
+</p>
+
+<div class="faq-highlight">
+✔ Rank higher in local search  
+<br>✔ Get more calls & enquiries  
+<br>✔ Optimize profile the right way (no shortcuts)
+</div>
 
 <a href="https://www.geolift.co.in/contact/" class="faq-cta">
-Get Free Consultation →
+Get Free Help →
 </a>
+
 </div>
 
 
 <!-- RIGHT -->
 <div class="faq-box">
 
-<!-- 1 -->
+<!-- VISIBLE FAQ -->
+
 <div class="faq-item">
 <div class="faq-question">
-What is a GMB service and how does it help?
+What is a GMB service?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-A GMB service improves your Google Business Profile so your business appears in local searches and Google Maps, helping customers find and contact you easily.
+A GMB service improves your Google Business Profile so your business appears in local searches and Google Maps.
 </div>
 </div>
 
-<!-- 2 -->
 <div class="faq-item">
 <div class="faq-question">
 What is Google My Business optimization service?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-Google My Business optimization service includes improving your profile, adding keywords, optimizing categories, and increasing visibility to rank higher on Google.
+It includes optimizing your profile, adding keywords, and improving visibility to rank higher on Google.
 </div>
 </div>
 
-<!-- 3 -->
 <div class="faq-item">
 <div class="faq-question">
-Can you optimize my existing GMB profile?
+Can you optimize an existing GMB profile?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-Yes, our GMB service analyzes and fixes your existing profile to improve rankings, visibility, and customer engagement.
+Yes, our GMB service fixes and improves existing profiles for better performance.
 </div>
 </div>
 
-<!-- 4 -->
 <div class="faq-item">
 <div class="faq-question">
-How does your GMB service improve ranking?
+How does GMB service improve ranking?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-Our Google My Business optimization service improves ranking by optimizing relevance, activity, and trust signals that Google actually uses.
+Our Google My Business optimization service improves real ranking factors like relevance and activity.
 </div>
 </div>
 
-<!-- 5 -->
 <div class="faq-item">
 <div class="faq-question">
-Will this GMB service increase calls and leads?
+Will I get more calls?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-Yes, better visibility from our GMB service leads to more calls, website visits, and customer enquiries.
+Yes, better visibility leads to more calls and enquiries from customers.
 </div>
 </div>
 
-<!-- 6 -->
 <div class="faq-item">
 <div class="faq-question">
-Is GMB service useful for small businesses?
+Is GMB service good for small businesses?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-Absolutely. Google My Business optimization service is especially powerful for local businesses competing in their area.
+Yes, it is one of the best ways for local businesses to grow.
 </div>
 </div>
 
-<!-- 7 -->
+
+<!-- HIDDEN FAQ -->
+<div class="hidden-faq">
+
 <div class="faq-item">
 <div class="faq-question">
 How long does GMB optimization take?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-With our GMB service, you can start seeing improvements within a few weeks depending on competition and profile condition.
+Results from our GMB service usually start within a few weeks.
 </div>
 </div>
 
-<!-- 8 -->
 <div class="faq-item">
 <div class="faq-question">
 Do you provide ongoing GMB management?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-Yes, our Google My Business optimization service includes ongoing updates, posts, and monitoring to maintain rankings.
+Yes, our Google My Business optimization service includes regular updates.
 </div>
 </div>
 
-<!-- 9 -->
 <div class="faq-item">
 <div class="faq-question">
-Can you fix suspended or unverified listings?
+Can you fix suspended profiles?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-Yes, our GMB service helps resolve verification issues and guides you through recovery processes.
+Yes, we help recover and verify listings.
 </div>
 </div>
 
-<!-- 10 -->
 <div class="faq-item">
 <div class="faq-question">
-Do I need a website with GMB service?
+Do I need a website?
 <span class="faq-icon">+</span>
 </div>
 <div class="faq-answer">
-A website is not required, but combining it with our Google My Business optimization service improves trust and conversions.
+Not required, but it improves performance with GMB service.
 </div>
+</div>
+
+</div>
+
+<!-- BUTTON -->
+<div class="show-more">
+<button onclick="toggleFAQ()">Show More ↓</button>
 </div>
 
 </div>
@@ -2376,11 +2436,12 @@ A website is not required, but combining it with our Google My Business optimiza
 
 
 <script>
+
+/* ACCORDION */
 document.querySelectorAll(".faq-question").forEach(item=>{
 item.addEventListener("click",()=>{
 const parent=item.parentElement;
 
-/* CLOSE OTHERS */
 document.querySelectorAll(".faq-item").forEach(i=>{
 if(i !== parent){i.classList.remove("active")}
 });
@@ -2388,7 +2449,24 @@ if(i !== parent){i.classList.remove("active")}
 parent.classList.toggle("active");
 });
 });
+
+/* SHOW MORE */
+function toggleFAQ(){
+const hidden=document.querySelector(".hidden-faq");
+const btn=document.querySelector(".show-more button");
+
+if(hidden.style.display === "block"){
+hidden.style.display = "none";
+btn.innerText = "Show More ↓";
+}else{
+hidden.style.display = "block";
+btn.innerText = "Show Less ↑";
+}
+}
+
 </script>
+  
+
   
   
 
