@@ -1971,271 +1971,175 @@ document.addEventListener("click", function(e){
 
 
 
-  
 
-  <!-- ================= PREMIUM ABOUT SECTION ================= -->
+  <!-- ================= PREMIUM ABOUT (FOUNDER STYLE) ================= -->
 
 <style>
 
-/* SECTION */
 .about-section{
-padding:60px 20px;
-background:#f8fafc;
-font-family:Poppins,sans-serif;
+  padding:100px 20px;
+  background:#f8fafc;
+  font-family:Poppins,sans-serif;
 }
 
 .about-container{
-max-width:1150px;
-margin:auto;
+  max-width:1150px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:60px;
 }
 
-/* HEADER */
+/* IMAGE */
 
-.about-header{
-text-align:center;
-margin-bottom:60px;
+.about-image{
+  flex:1;
 }
+
+.about-image img{
+  width:100%;
+  max-width:380px;
+}
+
+/* CONTENT */
+
+.about-content{
+  flex:1.2;
+}
+
+/* BADGE */
 
 .about-badge{
-display:inline-block;
-background:#e2e8f0;
-color:#334155;
-padding:6px 14px;
-border-radius:20px;
-font-size:13px;
-margin-bottom:15px;
+  display:inline-block;
+  background:#e2e8f0;
+  color:#334155;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:13px;
+  margin-bottom:15px;
 }
+
+/* TITLE */
 
 .about-title{
-font-size:38px;
-font-weight:800;
-color:#0f172a;
-margin-bottom:10px;
+  font-size:40px;
+  font-weight:800;
+  color:#0f172a;
+  line-height:1.3;
+  margin-bottom:20px;
 }
 
-.about-sub{
-color:#64748b;
-font-size:15px;
-max-width:600px;
-margin:auto;
+/* TEXT */
+
+.about-text{
+  font-size:15.5px;
+  color:#475569;
+  line-height:1.9;
+  margin-bottom:16px;
 }
 
-/* FEATURES (NEW STYLE) */
+/* STRONG */
 
-.about-features{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:50px;
-}
-
-.about-feature{
-background:#ffffff;
-border-radius:14px;
-padding:25px;
-border:1px solid #e2e8f0;
-transition:.3s;
-position:relative;
-overflow:hidden;
-}
-
-/* subtle accent */
-.about-feature::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:3px;
-background:#0f172a;
-opacity:0.08;
-}
-
-.about-feature:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(0,0,0,0.08);
-}
-
-.about-feature h3{
-font-size:18px;
-margin-bottom:6px;
-color:#0f172a;
-}
-
-.about-feature p{
-font-size:14px;
-color:#475569;
-line-height:1.6;
+.about-text strong{
+  color:#0f172a;
+  font-weight:600;
 }
 
 /* CTA */
 
 .about-cta{
-display:inline-block;
-margin-top:35px;
-padding:12px 26px;
-background:#0f172a;
-color:#fff;
-font-size:14px;
-border-radius:8px;
-text-decoration:none;
-cursor:pointer;
-transition:.3s;
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 28px;
+  background:#0f172a;
+  color:#fff;
+  font-size:14px;
+  border-radius:8px;
+  text-decoration:none;
+  transition:.3s;
 }
 
 .about-cta:hover{
-background:#1e293b;
-}
-
-/* EXPAND */
-
-.about-full{
-display:none;
-margin-top:40px;
-}
-
-.about-card{
-background:#ffffff;
-padding:30px;
-border-radius:14px;
-border:1px solid #e2e8f0;
-}
-
-/* STATS (NEW STYLE) */
-
-.about-stats{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:70px;
-flex-wrap:wrap;
-}
-
-.about-stat{
-background:#ffffff;
-padding:25px;
-border-radius:12px;
-border:1px solid #e2e8f0;
-min-width:200px;
-text-align:center;
-transition:.3s;
-}
-
-.about-stat:hover{
-transform:translateY(-6px);
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
-}
-
-.stat-number{
-font-size:34px;
-font-weight:800;
-color:#0f172a;
-}
-
-.stat-title{
-font-size:13px;
-color:#64748b;
-margin-top:6px;
+  background:#1e293b;
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
-.about-features{grid-template-columns:1fr;}
-.about-title{font-size:28px;}
+
+.about-container{
+  flex-direction:column;
+  text-align:center;
+}
+
+.about-image img{
+  max-width:260px;
+}
+
+.about-title{
+  font-size:28px;
+}
+
 }
 
 </style>
 
 
-<section class="about-section" id="about">
+
+<section class="about-section">
 
 <div class="about-container">
 
-<div class="about-header">
+<!-- IMAGE -->
+<div class="about-image">
+<img src="https://i.ibb.co/6WkQXzG/business-man.png" alt="Founder">
+</div>
+
+
+<!-- CONTENT -->
+<div class="about-content">
+
 <span class="about-badge">About GeoLift</span>
 
-<h2 class="about-title">Helping Businesses Get Found on Google</h2>
+<h2 class="about-title">
+Google Doesn’t Guess —  
+It Just Ranks What’s Done Right
+</h2>
 
-<p class="about-sub">
-Most profiles exist. Very few perform. That’s where structured optimization makes the difference.
-</p>
-</div>
-
-
-<!-- FEATURES -->
-
-<div class="about-features">
-
-<div class="about-feature">
-<h3>Setup That Works</h3>
-<p>Not just creating profiles — setting them up to actually perform in local search.</p>
-</div>
-
-<div class="about-feature">
-<h3>Visibility That Grows</h3>
-<p>Optimizing signals that help your business appear where customers are searching.</p>
-</div>
-
-<div class="about-feature">
-<h3>Results That Matter</h3>
-<p>More visibility, more calls, more real enquiries — not just impressions.</p>
-</div>
-
-</div>
-
-
-<a class="about-cta" onclick="toggleAbout()">Read More</a>
-
-
-<!-- EXPAND -->
-
-<div class="about-full" id="aboutFull">
-
-<div class="about-card">
-
-<h3>How It Started</h3>
-
-<p>
-Started in 2021 working with businesses struggling to get visibility despite having a GMB profile.
+<p class="about-text">
+👋 Hey, I’m <strong>Subhajit</strong> — not here to sell dreams, just here to fix what’s not working.
 </p>
 
-<p>
-The problem wasn’t presence — it was lack of proper optimization and structure.
+<p class="about-text">
+Most businesses already have a Google Business Profile.  
+The problem? <strong>It just sits there.</strong>
 </p>
 
-<h3>What We Do</h3>
+<p class="about-text">
+No visibility. No calls. No growth.  
+Basically… existing, not performing.
+</p>
 
-<ul>
-<li>Profile setup & correction</li>
-<li>Visibility optimization</li>
-<li>Local ranking improvement</li>
-<li>Structured profile growth</li>
-</ul>
+<p class="about-text">
+That’s where I step in.
+</p>
 
-</div>
+<p class="about-text">
+No shortcuts. No “secret hacks”.  
+Just <strong>proper GMB optimization</strong>, structured strategy, and consistent improvements that actually move rankings.
+</p>
 
-</div>
+<p class="about-text">
+Because let’s be honest —  
+<strong>Google isn’t confused.</strong>  
+It just ranks businesses that are optimized better.
+</p>
 
+<p class="about-text">
+My job? Make sure yours is one of them.
+</p>
 
-<!-- STATS -->
-
-<div class="about-stats">
-
-<div class="about-stat">
-<div class="stat-number counter" data-target="4">0</div>
-<div class="stat-title">Years Experience</div>
-</div>
-
-<div class="about-stat">
-<div class="stat-number counter" data-target="50">0</div>
-<div class="stat-title">Profiles Improved</div>
-</div>
-
-<div class="about-stat">
-<div class="stat-number counter-year" data-start="2026" data-end="2021">2026</div>
-<div class="stat-title">Journey Started</div>
-</div>
+<a href="/contact/" class="about-cta">Let’s Fix Your Visibility →</a>
 
 </div>
 
@@ -2243,70 +2147,7 @@ The problem wasn’t presence — it was lack of proper optimization and structu
 
 </section>
 
-
-
-<script>
-
-/* READ MORE */
-
-function toggleAbout(){
-const content=document.getElementById("aboutFull");
-content.style.display = content.style.display==="block"?"none":"block";
-}
-
-
-/* COUNTER RUN ONLY ONCE */
-
-let counted = false;
-
-const observer = new IntersectionObserver((entries)=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting && !counted){
-
-counted = true; // 🔥 stops repeating
-
-document.querySelectorAll(".counter").forEach(counter=>{
-let target=+counter.dataset.target;
-let count=0;
-let step=target/100;
-
-function update(){
-count+=step;
-if(count<target){
-counter.innerText=Math.ceil(count);
-requestAnimationFrame(update);
-}else{
-counter.innerText=target+"+";
-}
-}
-update();
-});
-
-document.querySelectorAll(".counter-year").forEach(counter=>{
-let start=+counter.dataset.start;
-let end=+counter.dataset.end;
-
-let count=start;
-
-function updateYear(){
-counter.innerText=count;
-if(count>end){
-count--;
-setTimeout(updateYear,80);
-}
-}
-updateYear();
-});
-
-}
-});
-},{threshold:0.6});
-
-document.querySelectorAll(".counter, .counter-year")
-.forEach(el=>observer.observe(el));
-
-</script>
-
+ 
 
   
   
