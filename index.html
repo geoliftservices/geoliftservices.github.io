@@ -1384,6 +1384,10 @@ line-height:1.5;
 
   
 
+
+
+
+  
 </style>
 
 
@@ -1454,20 +1458,14 @@ Professional Google My Business (GMB) services, optimization, and management to 
 </section>
 
 
-  
 
-
-
-
-
-  
 
 <style>
 
 /* SECTION */
 .services{
-  padding:60px 20px;
-  background:#ffffff;
+  padding:80px 20px;
+  background:#f8fafc;
   font-family:'Poppins',sans-serif;
 }
 
@@ -1483,7 +1481,7 @@ Professional Google My Business (GMB) services, optimization, and management to 
 }
 
 .services-title{
-  font-size:34px;
+  font-size:38px;
   font-weight:800;
   color:#0f172a;
 }
@@ -1491,13 +1489,14 @@ Professional Google My Business (GMB) services, optimization, and management to 
 .services-sub{
   color:#64748b;
   margin-top:10px;
+  font-size:16px;
 }
 
 /* GRID */
 .services-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:25px;
+  gap:28px;
 }
 
 @media(max-width:992px){
@@ -1508,103 +1507,79 @@ Professional Google My Business (GMB) services, optimization, and management to 
 }
 
 /* CARD */
-.flip-card{
-  perspective:1000px;
-  height:220px;
-  cursor:pointer;
-}
-
-.flip-inner{
-  position:relative;
-  width:100%;
-  height:100%;
-  transition:transform 0.6s ease;
-  transform-style:preserve-3d;
-}
-
-/* DESKTOP HOVER */
-.flip-card:hover .flip-inner{
-  transform:rotateY(180deg);
-}
-
-/* MOBILE ACTIVE */
-.flip-card.active .flip-inner{
-  transform:rotateY(180deg);
-}
-
-.flip-front, .flip-back{
-  position:absolute;
-  width:100%;
-  height:100%;
-  border-radius:16px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:25px;
-  backface-visibility:hidden;
-}
-
-/* FRONT */
-.flip-front{
-  background:linear-gradient(135deg,#ffffff,#eef2ff);
+.service-card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:28px;
   border:1px solid #e2e8f0;
+  transition:0.35s ease;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
 }
 
-.flip-front h3{
-  font-size:24px;
-  font-weight:800;
+/* HOVER EFFECT */
+.service-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+  border-color:#c7d2fe;
+}
+
+/* ICON */
+.service-icon{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#2563eb,#4f46e5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+/* TITLE */
+.service-card h3{
+  font-size:22px;
+  font-weight:700;
   color:#0f172a;
 }
 
-.flip-front p{
+/* DESC */
+.service-card p{
   font-size:14px;
   color:#64748b;
-  margin-top:6px;
-}
-
-/* TAP HINT */
-.tap-hint{
-  font-size:12px;
-  margin-top:8px;
-  color:#94a3b8;
-}
-
-/* BACK */
-.flip-back{
-  background:linear-gradient(135deg,#2563eb,#1e3a8a);
-  color:#fff;
-  transform:rotateY(180deg);
-}
-
-.flip-back p{
-  font-size:14px;
+  margin:10px 0 18px;
   line-height:1.6;
 }
 
-.flip-back span{
-  margin-top:10px;
-  display:inline-block;
+/* CTA */
+.service-btn{
+  font-size:14px;
   font-weight:600;
+  color:#2563eb;
+  text-decoration:none;
+}
+
+/* FEATURED CARD */
+.featured{
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:#fff;
+  border:none;
+}
+
+.featured h3,
+.featured p{
+  color:#fff;
+}
+
+.featured .service-btn{
   color:#bfdbfe;
 }
 
-/* HOVER LIFT */
-.flip-card:hover{
-  transform:translateY(-6px);
-}
-
-/* WEBSITE CARD */
-.upgrade .flip-front{
-  background:linear-gradient(135deg,#1e293b,#334155);
-}
-
-.upgrade h3{color:#fff;}
-.upgrade p{color:#cbd5f5;}
-
-.upgrade .flip-back{
-  background:linear-gradient(135deg,#0ea5e9,#0369a1);
+.featured .service-icon{
+  background:rgba(255,255,255,0.15);
 }
 
 </style>
@@ -1620,90 +1595,52 @@ Professional Google My Business (GMB) services, optimization, and management to 
 
 <div class="services-grid">
 
-<!-- CARD -->
-<div class="flip-card" onclick="flipCard(this,'https://www.geolift.co.in/gmb-setup/')">
-<div class="flip-inner">
-<div class="flip-front">
+<!-- 1 -->
+<div class="service-card" onclick="go('https://www.geolift.co.in/gmb-setup/')">
+<div class="service-icon">📍</div>
 <h3>Get Listed</h3>
-<p>Be found on Google</p>
-<p class="tap-hint">Tap to explore →</p>
-</div>
-<div class="flip-back">
-<p>We set up your GMB profile properly so customers can actually find you.</p>
-<span>Know More →</span>
-</div>
-</div>
+<p>Appear on Google Maps so customers can find your business easily.</p>
+<a class="service-btn">View Service →</a>
 </div>
 
-<div class="flip-card" onclick="flipCard(this,'https://www.geolift.co.in/gmb-optimization/')">
-<div class="flip-inner">
-<div class="flip-front">
+<!-- 2 -->
+<div class="service-card" onclick="go('https://www.geolift.co.in/gmb-optimization/')">
+<div class="service-icon">⚙️</div>
 <h3>Fix Your Profile</h3>
-<p>Stop missing customers</p>
-<p class="tap-hint">Tap to explore →</p>
-</div>
-<div class="flip-back">
-<p>We correct and optimize your listing for better visibility.</p>
-<span>Know More →</span>
-</div>
-</div>
+<p>Optimize your listing to stop losing potential customers.</p>
+<a class="service-btn">Improve Now →</a>
 </div>
 
-<div class="flip-card" onclick="flipCard(this,'https://www.geolift.co.in/gmb-optimization/')">
-<div class="flip-inner">
-<div class="flip-front">
+<!-- 3 FEATURE -->
+<div class="service-card featured" onclick="go('https://www.geolift.co.in/gmb-optimization/')">
+<div class="service-icon">📈</div>
 <h3>Rank Higher</h3>
-<p>Show up first</p>
-<p class="tap-hint">Tap to explore →</p>
-</div>
-<div class="flip-back">
-<p>Advanced strategies to push your business higher on Maps.</p>
-<span>Know More →</span>
-</div>
-</div>
+<p>Get your business to the top of Google Maps and search results.</p>
+<a class="service-btn">Grow Fast →</a>
 </div>
 
-<div class="flip-card" onclick="flipCard(this,'https://www.geolift.co.in/gmb-management/')">
-<div class="flip-inner">
-<div class="flip-front">
+<!-- 4 -->
+<div class="service-card" onclick="go('https://www.geolift.co.in/gmb-management/')">
+<div class="service-icon">🔄</div>
 <h3>Stay Active</h3>
-<p>Don’t go invisible</p>
-<p class="tap-hint">Tap to explore →</p>
-</div>
-<div class="flip-back">
-<p>Regular updates and management to keep your profile performing.</p>
-<span>Know More →</span>
-</div>
-</div>
+<p>Regular updates to keep your profile visible and performing.</p>
+<a class="service-btn">See Plans →</a>
 </div>
 
-<div class="flip-card" onclick="flipCard(this,'https://www.geolift.co.in/google-maps-ranking/')">
-<div class="flip-inner">
-<div class="flip-front">
+<!-- 5 FEATURE -->
+<div class="service-card featured" onclick="go('https://www.geolift.co.in/google-maps-ranking/')">
+<div class="service-icon">🔥</div>
 <h3>Get More Leads</h3>
-<p>Turn views into calls</p>
-<p class="tap-hint">Tap to explore →</p>
-</div>
-<div class="flip-back">
-<p>We improve Maps ranking so customers contact you.</p>
-<span>Know More →</span>
-</div>
-</div>
+<p>Turn profile views into real calls and customers.</p>
+<a class="service-btn">Get Leads →</a>
 </div>
 
-<!-- WEBSITE LAST -->
-<div class="flip-card upgrade" onclick="flipCard(this,'https://www.geolift.co.in/website-development/')">
-<div class="flip-inner">
-<div class="flip-front">
-<h3>Upgrade Online</h3>
-<p>Don’t rely on GMB only</p>
-<p class="tap-hint">Tap to explore →</p>
-</div>
-<div class="flip-back">
-<p>A website builds trust and converts visitors into customers.</p>
-<span>Know More →</span>
-</div>
-</div>
+<!-- 6 -->
+<div class="service-card" onclick="go('https://www.geolift.co.in/website-development/')">
+<div class="service-icon">🌐</div>
+<h3>Website Upgrade</h3>
+<p>Build trust with a website that converts visitors into clients.</p>
+<a class="service-btn">View Website →</a>
 </div>
 
 </div>
@@ -1712,31 +1649,10 @@ Professional Google My Business (GMB) services, optimization, and management to 
 
 
 <script>
-function flipCard(card, link){
-  if(window.innerWidth < 768){
-
-    if(card.classList.contains("active")){
-      window.location.href = link;
-    } else {
-      document.querySelectorAll(".flip-card").forEach(c => c.classList.remove("active"));
-      card.classList.add("active");
-    }
-
-  } else {
-    window.location.href = link;
-  }
+function go(link){
+  window.location.href = link;
 }
-
-/* CLOSE WHEN CLICK OUTSIDE */
-document.addEventListener("click", function(e){
-  if(!e.target.closest(".flip-card")){
-    document.querySelectorAll(".flip-card").forEach(c => c.classList.remove("active"));
-  }
-});
 </script>
-
-
-
 
 
 
