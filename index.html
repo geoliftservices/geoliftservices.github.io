@@ -1466,112 +1466,133 @@ Professional Google My Business (GMB) services, optimization, and management to 
 
 /* SECTION */
 .services{
-padding:80px 20px;
-background:#f8fafc;
-font-family:'Poppins',sans-serif;
+  padding:80px 20px;
+  background:#f8fafc;
+  font-family:'Poppins',sans-serif;
 }
 
 .services-container{
-max-width:1200px;
-margin:auto;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* HEADER */
+.services-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.services-title{
+  font-size:34px;
+  font-weight:800;
+  color:#0f172a;
+}
+
+.services-sub{
+  color:#64748b;
+  margin-top:10px;
 }
 
 /* GRID */
 .services-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
 }
 
 @media(max-width:992px){
-.services-grid{grid-template-columns:1fr 1fr;}
+  .services-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:600px){
-.services-grid{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr;}
 }
 
 /* CARD */
 .flip-card{
-perspective:1000px;
-height:230px;
-cursor:pointer;
+  perspective:1000px;
+  height:220px;
+  cursor:pointer;
 }
 
 .flip-inner{
-position:relative;
-width:100%;
-height:100%;
-transition:transform 0.6s;
-transform-style:preserve-3d;
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:transform 0.6s ease;
+  transform-style:preserve-3d;
 }
 
 .flip-card:hover .flip-inner{
-transform:rotateY(180deg);
+  transform:rotateY(180deg);
 }
 
 .flip-front, .flip-back{
-position:absolute;
-width:100%;
-height:100%;
-border-radius:18px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-backface-visibility:hidden;
+  position:absolute;
+  width:100%;
+  height:100%;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:25px;
+  backface-visibility:hidden;
 }
 
-/* FRONT STYLE (BOLD BLOCKS) */
+/* FRONT (PREMIUM DARK + LIGHT MIX) */
 .flip-front{
-color:#fff;
-font-weight:700;
+  background:linear-gradient(135deg,#ffffff,#f1f5f9);
+  border:1px solid #e2e8f0;
 }
 
-/* DIFFERENT COLORS (corporate palette) */
-.c1{background:linear-gradient(135deg,#2563eb,#1e40af);}
-.c2{background:linear-gradient(135deg,#16a34a,#166534);}
-.c3{background:linear-gradient(135deg,#f59e0b,#b45309);}
-.c4{background:linear-gradient(135deg,#7c3aed,#4c1d95);}
-.c5{background:linear-gradient(135deg,#0ea5e9,#0369a1);}
-.c6{background:linear-gradient(135deg,#ef4444,#991b1b);}
-.c7{background:linear-gradient(135deg,#111827,#1f2937);} /* website */
-
-/* BIG TEXT */
 .flip-front h3{
-font-size:26px;
-font-weight:800;
-margin-bottom:8px;
+  font-size:24px;
+  font-weight:800;
+  color:#0f172a;
 }
 
 .flip-front p{
-font-size:14px;
-opacity:0.9;
+  font-size:14px;
+  color:#64748b;
+  margin-top:6px;
 }
 
 /* BACK */
 .flip-back{
-background:#0f172a;
-color:#fff;
-transform:rotateY(180deg);
+  background:#0f172a;
+  color:#fff;
+  transform:rotateY(180deg);
 }
 
 .flip-back p{
-font-size:14px;
-line-height:1.6;
+  font-size:14px;
+  line-height:1.6;
 }
 
 .flip-back span{
-margin-top:10px;
-display:inline-block;
-font-weight:600;
-color:#60a5fa;
+  margin-top:10px;
+  display:inline-block;
+  font-weight:600;
+  color:#38bdf8;
 }
 
-/* HOVER SCALE */
+/* HOVER EFFECT */
 .flip-card:hover{
-transform:translateY(-5px);
+  transform:translateY(-6px);
+}
+
+/* WEBSITE CARD (SLIGHTLY DIFFERENT - PREMIUM) */
+.upgrade .flip-front{
+  background:linear-gradient(135deg,#111827,#1f2937);
+}
+
+.upgrade h3{
+  color:#fff;
+}
+
+.upgrade p{
+  color:#cbd5f5;
 }
 
 </style>
@@ -1580,12 +1601,17 @@ transform:translateY(-5px);
 <section class="services">
 <div class="services-container">
 
+<div class="services-header">
+  <h2 class="services-title">GMB Services That Drive Real Growth</h2>
+  <p class="services-sub">Simple actions → real business results</p>
+</div>
+
 <div class="services-grid">
 
-<!-- SETUP -->
+<!-- 1 -->
 <div class="flip-card" onclick="location.href='/services/gmb-setup-services/'">
 <div class="flip-inner">
-<div class="flip-front c1">
+<div class="flip-front">
 <h3>Get Listed</h3>
 <p>Start your presence</p>
 </div>
@@ -1596,85 +1622,71 @@ transform:translateY(-5px);
 </div>
 </div>
 
-<!-- LISTING -->
+<!-- 2 -->
 <div class="flip-card" onclick="location.href='/services/gmb-listing-service/'">
 <div class="flip-inner">
-<div class="flip-front c2">
+<div class="flip-front">
 <h3>Fix Listing</h3>
-<p>Be accurate</p>
+<p>Improve accuracy</p>
 </div>
 <div class="flip-back">
-<p>Optimize details, services, and improve local visibility.</p>
+<p>Correct details, services, and improve local visibility.</p>
 <span>Know More →</span>
 </div>
 </div>
 </div>
 
-<!-- OPTIMIZATION -->
+<!-- 3 -->
 <div class="flip-card" onclick="location.href='/services/gmb-optimization-service/'">
 <div class="flip-inner">
-<div class="flip-front c3">
+<div class="flip-front">
 <h3>Rank Higher</h3>
 <p>Boost visibility</p>
 </div>
 <div class="flip-back">
-<p>Keyword targeting, geo signals, and ranking improvements.</p>
+<p>Advanced GMB optimization and keyword targeting.</p>
 <span>Know More →</span>
 </div>
 </div>
 </div>
 
-<!-- MANAGEMENT -->
+<!-- 4 -->
 <div class="flip-card" onclick="location.href='/services/gmb-management-services/'">
 <div class="flip-inner">
-<div class="flip-front c4">
+<div class="flip-front">
 <h3>Stay Active</h3>
 <p>Keep growing</p>
 </div>
 <div class="flip-back">
-<p>Regular updates, posts, reviews, and profile management.</p>
+<p>Regular updates, posts, and profile management.</p>
 <span>Know More →</span>
 </div>
 </div>
 </div>
 
-<!-- RANKING -->
+<!-- 5 -->
 <div class="flip-card" onclick="location.href='/services/google-maps-ranking-service/'">
 <div class="flip-inner">
-<div class="flip-front c5">
+<div class="flip-front">
 <h3>Get Leads</h3>
-<p>More customers</p>
+<p>More calls</p>
 </div>
 <div class="flip-back">
-<p>Advanced Google Maps ranking to increase calls.</p>
+<p>Improve Google Maps ranking and increase enquiries.</p>
 <span>Know More →</span>
 </div>
 </div>
 </div>
 
-<!-- VERIFICATION -->
-<div class="flip-card" onclick="location.href='/services/gmb-verification-service/'">
+<!-- 6 WEBSITE LAST -->
+<div class="flip-card upgrade" onclick="location.href='/services/website-development/'">
 <div class="flip-inner">
-<div class="flip-front c6">
-<h3>Get Verified</h3>
-<p>Fix issues</p>
-</div>
-<div class="flip-back">
-<p>Resolve suspension and verification problems.</p>
-<span>Know More →</span>
-</div>
-</div>
-</div>
-
-<!-- WEBSITE (UPGRADE CARD 🔥) -->
-<div class="flip-card" onclick="location.href='/services/website-development/'">
-<div class="flip-inner">
-<div class="flip-front c7">
+<div class="flip-front">
 <h3>Upgrade Online</h3>
-<p>Turn visitors into customers</p>
+<p>Convert visitors</p>
 </div>
 <div class="flip-back">
-<p>Professional website to boost trust and conversions.</p>
+<p>Professional website to build trust and convert traffic.</p>
 <span>Know More →</span>
 </div>
 </div>
