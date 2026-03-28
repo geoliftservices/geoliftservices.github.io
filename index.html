@@ -1476,22 +1476,6 @@ max-width:1200px;
 margin:auto;
 }
 
-.services-header{
-text-align:center;
-margin-bottom:60px;
-}
-
-.services-title{
-font-size:36px;
-font-weight:800;
-color:#0f172a;
-}
-
-.services-sub{
-color:#64748b;
-margin-top:10px;
-}
-
 /* GRID */
 .services-grid{
 display:grid;
@@ -1506,10 +1490,10 @@ gap:25px;
 .services-grid{grid-template-columns:1fr;}
 }
 
-/* CARD FLIP */
+/* CARD */
 .flip-card{
 perspective:1000px;
-height:220px;
+height:230px;
 cursor:pointer;
 }
 
@@ -1525,12 +1509,11 @@ transform-style:preserve-3d;
 transform:rotateY(180deg);
 }
 
-/* FRONT */
 .flip-front, .flip-back{
 position:absolute;
 width:100%;
 height:100%;
-border-radius:16px;
+border-radius:18px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -1540,70 +1523,55 @@ padding:20px;
 backface-visibility:hidden;
 }
 
-/* FRONT STYLE */
+/* FRONT STYLE (BOLD BLOCKS) */
 .flip-front{
-background:#ffffff;
-box-shadow:0 10px 25px rgba(0,0,0,0.05);
+color:#fff;
+font-weight:700;
 }
 
+/* DIFFERENT COLORS (corporate palette) */
+.c1{background:linear-gradient(135deg,#2563eb,#1e40af);}
+.c2{background:linear-gradient(135deg,#16a34a,#166534);}
+.c3{background:linear-gradient(135deg,#f59e0b,#b45309);}
+.c4{background:linear-gradient(135deg,#7c3aed,#4c1d95);}
+.c5{background:linear-gradient(135deg,#0ea5e9,#0369a1);}
+.c6{background:linear-gradient(135deg,#ef4444,#991b1b);}
+.c7{background:linear-gradient(135deg,#111827,#1f2937);} /* website */
+
+/* BIG TEXT */
 .flip-front h3{
 font-size:26px;
 font-weight:800;
-color:#0f172a;
-margin-top:10px;
+margin-bottom:8px;
 }
 
 .flip-front p{
 font-size:14px;
-color:#64748b;
-margin-top:8px;
+opacity:0.9;
 }
 
-/* BACK STYLE */
+/* BACK */
 .flip-back{
-background:linear-gradient(135deg,#6366f1,#4f46e5);
+background:#0f172a;
 color:#fff;
 transform:rotateY(180deg);
 }
 
 .flip-back p{
 font-size:14px;
-line-height:1.5;
+line-height:1.6;
 }
 
 .flip-back span{
-margin-top:12px;
+margin-top:10px;
 display:inline-block;
 font-weight:600;
+color:#60a5fa;
 }
 
-/* ICON */
-.icon{
-font-size:28px;
-}
-
-  /* HIGHLIGHT CARD */
-.highlight{
-  transform: scale(1.05);
-}
-
-.highlight:hover{
-  transform: scale(1.08) rotateY(180deg);
-}
-
-/* PREMIUM FRONT */
-.premium{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:#fff;
-}
-
-.premium h3{
-  color:#fff;
-}
-
-/* PREMIUM BACK */
-.premium-back{
-  background:linear-gradient(135deg,#22c55e,#16a34a);
+/* HOVER SCALE */
+.flip-card:hover{
+transform:translateY(-5px);
 }
 
 </style>
@@ -1612,135 +1580,103 @@ font-size:28px;
 <section class="services">
 <div class="services-container">
 
-<div class="services-header">
-<h2 class="services-title">GMB Services That Drive Results</h2>
-<p class="services-sub">Hover to explore how each service helps your business grow</p>
-</div>
-
 <div class="services-grid">
 
-<!-- CARD -->
+<!-- SETUP -->
 <div class="flip-card" onclick="location.href='/services/gmb-setup-services/'">
 <div class="flip-inner">
-
-<div class="flip-front">
-<div class="icon">📍</div>
+<div class="flip-front c1">
 <h3>Get Listed</h3>
-<p>Start your GMB presence</p>
+<p>Start your presence</p>
 </div>
-
 <div class="flip-back">
-<p>Complete setup, categories, profile optimization & verification guidance.</p>
+<p>Complete GMB setup, categories, and profile optimization.</p>
 <span>Know More →</span>
 </div>
-
 </div>
 </div>
 
-<!-- CARD -->
+<!-- LISTING -->
 <div class="flip-card" onclick="location.href='/services/gmb-listing-service/'">
 <div class="flip-inner">
-
-<div class="flip-front">
-<div class="icon">📌</div>
-<h3>Be Accurate</h3>
-<p>Fix & improve listing</p>
+<div class="flip-front c2">
+<h3>Fix Listing</h3>
+<p>Be accurate</p>
 </div>
-
 <div class="flip-back">
-<p>Optimize business details, services, and improve local visibility.</p>
+<p>Optimize details, services, and improve local visibility.</p>
 <span>Know More →</span>
 </div>
-
 </div>
 </div>
 
-<!-- CARD -->
+<!-- OPTIMIZATION -->
 <div class="flip-card" onclick="location.href='/services/gmb-optimization-service/'">
 <div class="flip-inner">
-
-<div class="flip-front">
-<div class="icon">⚙️</div>
+<div class="flip-front c3">
 <h3>Rank Higher</h3>
-<p>Boost your position</p>
+<p>Boost visibility</p>
 </div>
-
 <div class="flip-back">
-<p>Keyword targeting, geo signals, and advanced optimization strategies.</p>
+<p>Keyword targeting, geo signals, and ranking improvements.</p>
 <span>Know More →</span>
 </div>
-
 </div>
 </div>
 
-<!-- CARD -->
+<!-- MANAGEMENT -->
 <div class="flip-card" onclick="location.href='/services/gmb-management-services/'">
 <div class="flip-inner">
-
-<div class="flip-front">
-<div class="icon">📊</div>
+<div class="flip-front c4">
 <h3>Stay Active</h3>
-<p>Consistent growth</p>
+<p>Keep growing</p>
 </div>
-
 <div class="flip-back">
-<p>Posts, updates, reviews handling, and ongoing profile improvements.</p>
+<p>Regular updates, posts, reviews, and profile management.</p>
 <span>Know More →</span>
 </div>
-
 </div>
 </div>
 
-<!-- CARD -->
+<!-- RANKING -->
 <div class="flip-card" onclick="location.href='/services/google-maps-ranking-service/'">
 <div class="flip-inner">
-
-<div class="flip-front">
-<div class="icon">🚀</div>
+<div class="flip-front c5">
 <h3>Get Leads</h3>
-<p>More calls & customers</p>
+<p>More customers</p>
 </div>
-
 <div class="flip-back">
-<p>Advanced Google Maps ranking strategies to increase enquiries.</p>
+<p>Advanced Google Maps ranking to increase calls.</p>
 <span>Know More →</span>
 </div>
-
 </div>
 </div>
 
-<!-- CARD -->
+<!-- VERIFICATION -->
 <div class="flip-card" onclick="location.href='/services/gmb-verification-service/'">
 <div class="flip-inner">
-
-<div class="flip-front">
-<div class="icon">✔️</div>
+<div class="flip-front c6">
 <h3>Get Verified</h3>
-<p>Fix profile issues</p>
+<p>Fix issues</p>
 </div>
-
 <div class="flip-back">
-<p>Resolve suspensions, verification issues, and profile recovery.</p>
+<p>Resolve suspension and verification problems.</p>
 <span>Know More →</span>
 </div>
-
 </div>
 </div>
 
-  <div class="flip-card highlight" onclick="location.href='/services/website-development/'">
+<!-- WEBSITE (UPGRADE CARD 🔥) -->
+<div class="flip-card" onclick="location.href='/services/website-development/'">
 <div class="flip-inner">
-
-<div class="flip-front premium">
-<div class="icon">🌐</div>
+<div class="flip-front c7">
 <h3>Upgrade Online</h3>
 <p>Turn visitors into customers</p>
 </div>
-
-<div class="flip-back premium-back">
-<p>High-converting, mobile-friendly website that boosts trust and supports your GMB ranking.</p>
-<span>Upgrade Now →</span>
+<div class="flip-back">
+<p>Professional website to boost trust and conversions.</p>
+<span>Know More →</span>
 </div>
-
 </div>
 </div>
 
