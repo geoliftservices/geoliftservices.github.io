@@ -1738,147 +1738,134 @@ document.addEventListener("click", function(e){
 
   
 
-<!-- ================= WHY CHOOSE US SECTION ================= -->
+<!-- ================= WHY CHOOSE US (PREMIUM ALT DESIGN) ================= -->
 
 <style>
 
+/* SECTION */
 .why-section{
-padding:70px 20px;
-background:#ffffff;
-font-family:Poppins,sans-serif;
+  padding:90px 20px;
+  background:#f1f5f9; /* soft grey (not white) */
+  font-family:Poppins,sans-serif;
 }
 
 .why-container{
-max-width:1200px;
-margin:auto;
+  max-width:1200px;
+  margin:auto;
 }
 
 /* HEADER */
 
 .why-header{
-text-align:center;
-margin-bottom:65px;
+  text-align:center;
+  margin-bottom:70px;
 }
 
 .why-badge{
-display:inline-block;
-background:#eef2ff;
-color:#6366f1;
-padding:6px 14px;
-border-radius:30px;
-font-size:13px;
-font-weight:600;
-margin-bottom:18px;
+  display:inline-block;
+  background:#e2e8f0;
+  color:#334155;
+  padding:6px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:16px;
 }
 
 .why-header h2{
-font-size:40px;
-font-weight:800;
-color:#0f172a;
-margin-bottom:18px;
-line-height:1.2;
-}
-
-.why-highlight{
-color:#6366f1;
+  font-size:40px;
+  font-weight:800;
+  color:#0f172a; /* single color */
+  margin-bottom:12px;
 }
 
 .why-header p{
-color:#64748b;
-font-size:16px;
-max-width:680px;
-margin:auto;
-line-height:1.7;
+  color:#64748b;
+  font-size:15px;
+  max-width:580px;
+  margin:auto;
 }
 
 /* GRID */
 
 .why-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
 /* CARD */
 
 .why-card{
-background:#ffffff;
-border:1px solid #e5e7eb;
-border-radius:18px;
-padding:38px 26px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.04);
-transition:.35s;
-position:relative;
-overflow:hidden;
+  background:#ffffff;
+  border-radius:14px;
+  padding:30px 26px;
+  text-align:left; /* changed to left (premium feel) */
+  transition:.3s;
+  position:relative;
+  border:1px solid #e2e8f0;
 }
 
-.why-card:hover{
-transform:translateY(-8px);
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
-border-color:#6366f1;
-}
-
-/* subtle top glow */
+/* TOP ACCENT LINE */
 .why-card::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:3px;
-background:linear-gradient(90deg,#6366f1,#4f46e5);
-opacity:0;
-transition:.3s;
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:#0f172a; /* dark premium accent */
+  opacity:0.06;
 }
 
-.why-card:hover::before{
-opacity:1;
+/* HOVER */
+.why-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.08);
 }
 
-/* ICON */
+/* ICON (NEW STYLE — NOT PURPLE BOX) */
 
 .why-icon{
-width:62px;
-height:62px;
-margin:auto;
-margin-bottom:20px;
-background:linear-gradient(135deg,#6366f1,#4f46e5);
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:14px;
-box-shadow:0 10px 25px rgba(99,102,241,.25);
+  width:48px;
+  height:48px;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  background:#f8fafc;
+  border:1px solid #e2e8f0;
 }
 
 .why-icon svg{
-width:26px;
-height:26px;
-stroke:white;
-stroke-width:2;
+  width:22px;
+  height:22px;
+  stroke:#0f172a; /* neutral icon color */
+  stroke-width:2;
 }
 
 /* TEXT */
 
 .why-card h3{
-font-size:20px;
-font-weight:700;
-margin-bottom:10px;
-color:#0f172a;
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:8px;
+  color:#0f172a;
 }
 
 .why-card p{
-font-size:14.5px;
-color:#475569;
-line-height:1.7;
+  font-size:14px;
+  color:#475569;
+  line-height:1.6;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
-.why-header h2{
-font-size:28px;
-}
+  .why-header h2{
+    font-size:28px;
+  }
 }
 
 </style>
@@ -1892,13 +1879,10 @@ font-size:28px;
 
 <span class="why-badge">Why Choose GeoLift</span>
 
-<h2>
-Why Businesses <span class="why-highlight">Trust GeoLift</span>
-</h2>
+<h2>Why Businesses Trust GeoLift</h2>
 
 <p>
-No fluff, no guesswork — just a focused approach to improve your Google Business Profile, 
-bring real visibility, and turn searches into actual customer enquiries.
+Clear process. Focused work. Real business results.
 </p>
 
 </div>
@@ -1917,11 +1901,10 @@ bring real visibility, and turn searches into actual customer enquiries.
 </svg>
 </div>
 
-<h3>Work Directly With Me</h3>
+<h3>Direct, No Middle Layers</h3>
 
 <p>
-No outsourcing or middle layers — you get direct communication, faster execution, 
-and complete clarity on what’s being done.
+You work directly with me — faster decisions, better clarity, no delays.
 </p>
 
 </div>
@@ -1936,11 +1919,10 @@ and complete clarity on what’s being done.
 </svg>
 </div>
 
-<h3>GMB-Focused Expertise</h3>
+<h3>Focused GMB Expertise</h3>
 
 <p>
-Not general SEO — specialized Google My Business optimization designed 
-to improve local visibility and map rankings.
+Only Google Business Profile — no distractions, just local growth.
 </p>
 
 </div>
@@ -1955,11 +1937,10 @@ to improve local visibility and map rankings.
 </svg>
 </div>
 
-<h3>Proven Optimization Process</h3>
+<h3>Proven Growth Process</h3>
 
 <p>
-A structured, step-by-step approach focused on accuracy, authority signals, 
-and consistent long-term ranking growth.
+Structured steps that improve visibility, rankings, and customer reach.
 </p>
 
 </div>
@@ -1975,11 +1956,10 @@ and consistent long-term ranking growth.
 </svg>
 </div>
 
-<h3>Clear & Transparent Work</h3>
+<h3>Transparent & Practical</h3>
 
 <p>
-You always know what’s happening — clear updates, practical insights, 
-and no hidden tactics or confusion.
+No fake promises — just clear work, real updates, and visible progress.
 </p>
 
 </div>
