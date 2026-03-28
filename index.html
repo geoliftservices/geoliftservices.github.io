@@ -1467,7 +1467,7 @@ Professional Google My Business (GMB) services, optimization, and management to 
 /* SECTION */
 .services{
 padding:80px 20px;
-background:linear-gradient(180deg,#f8fafc,#ffffff);
+background:#f8fafc;
 font-family:'Poppins',sans-serif;
 }
 
@@ -1482,7 +1482,7 @@ margin-bottom:60px;
 }
 
 .services-title{
-font-size:38px;
+font-size:36px;
 font-weight:800;
 color:#0f172a;
 }
@@ -1490,211 +1490,222 @@ color:#0f172a;
 .services-sub{
 color:#64748b;
 margin-top:10px;
-font-size:16px;
 }
 
 /* GRID */
 .services-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:30px;
+gap:25px;
 }
 
 @media(max-width:992px){
-.services-grid{
-grid-template-columns:1fr 1fr;
+.services-grid{grid-template-columns:1fr 1fr;}
 }
-}
-
 @media(max-width:600px){
-.services-grid{
-grid-template-columns:1fr;
-}
+.services-grid{grid-template-columns:1fr;}
 }
 
-/* CARD BASE */
-.service-card{
-position:relative;
-padding:30px;
-border-radius:20px;
-background:rgba(255,255,255,0.7);
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,0.4);
-overflow:hidden;
+/* CARD FLIP */
+.flip-card{
+perspective:1000px;
+height:220px;
 cursor:pointer;
-transition:0.4s;
 }
 
-/* GLOW EFFECT */
-.service-card::before{
-content:"";
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.6s;
+transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+/* FRONT */
+.flip-front, .flip-back{
 position:absolute;
-top:-50%;
-left:-50%;
-width:200%;
-height:200%;
-background:radial-gradient(circle,rgba(99,102,241,0.15),transparent 60%);
-opacity:0;
-transition:0.4s;
+width:100%;
+height:100%;
+border-radius:16px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+backface-visibility:hidden;
 }
 
-.service-card:hover::before{
-opacity:1;
+/* FRONT STYLE */
+.flip-front{
+background:#ffffff;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-/* HOVER LIFT */
-.service-card:hover{
-transform:translateY(-10px) scale(1.02);
-box-shadow:0 25px 60px rgba(0,0,0,0.1);
-}
-
-/* ICON */
-.service-icon{
-font-size:32px;
-margin-bottom:15px;
-}
-
-/* TITLE */
-.service-card h3{
-font-size:20px;
+.flip-front h3{
+font-size:26px;
+font-weight:800;
 color:#0f172a;
-margin-bottom:10px;
+margin-top:10px;
 }
 
-/* SHORT INFO */
-.service-info{
+.flip-front p{
 font-size:14px;
 color:#64748b;
+margin-top:8px;
+}
+
+/* BACK STYLE */
+.flip-back{
+background:linear-gradient(135deg,#6366f1,#4f46e5);
+color:#fff;
+transform:rotateY(180deg);
+}
+
+.flip-back p{
+font-size:14px;
 line-height:1.5;
 }
 
-/* HIDDEN DETAILS */
-.service-hover{
-position:absolute;
-bottom:-100%;
-left:0;
-width:100%;
-padding:20px;
-background:linear-gradient(135deg,#6366f1,#4f46e5);
-color:#fff;
-font-size:13px;
-transition:0.4s;
-}
-
-.service-card:hover .service-hover{
-bottom:0;
-}
-
-/* CTA */
-.service-hover span{
+.flip-back span{
+margin-top:12px;
 display:inline-block;
-margin-top:10px;
 font-weight:600;
+}
+
+/* ICON */
+.icon{
+font-size:28px;
 }
 
 </style>
 
 
-
 <section class="services">
-
 <div class="services-container">
 
 <div class="services-header">
-<h2 class="services-title">Powerful GMB Services for Local Growth</h2>
-<p class="services-sub">Designed to rank higher, attract customers, and grow faster</p>
+<h2 class="services-title">GMB Services That Drive Results</h2>
+<p class="services-sub">Hover to explore how each service helps your business grow</p>
 </div>
 
 <div class="services-grid">
 
-<!-- SETUP -->
-<div class="service-card" onclick="location.href='/services/gmb-setup-services/'">
-<div class="service-icon">📍</div>
-<h3>GMB Setup</h3>
-<p class="service-info">Create & optimize your profile for strong local presence.</p>
+<!-- CARD -->
+<div class="flip-card" onclick="location.href='/services/gmb-setup-services/'">
+<div class="flip-inner">
 
-<div class="service-hover">
-Complete profile setup, categories, business info, and verification guidance.
-<br><span>Know More →</span>
+<div class="flip-front">
+<div class="icon">📍</div>
+<h3>Get Listed</h3>
+<p>Start your GMB presence</p>
+</div>
+
+<div class="flip-back">
+<p>Complete setup, categories, profile optimization & verification guidance.</p>
+<span>Know More →</span>
+</div>
+
 </div>
 </div>
 
-<!-- LISTING -->
-<div class="service-card" onclick="location.href='/services/gmb-listing-service/'">
-<div class="service-icon">📌</div>
-<h3>GMB Listing</h3>
-<p class="service-info">Enhance your listing for accuracy and visibility.</p>
+<!-- CARD -->
+<div class="flip-card" onclick="location.href='/services/gmb-listing-service/'">
+<div class="flip-inner">
 
-<div class="service-hover">
-Optimize business details, services, media, and improve local relevance.
-<br><span>Know More →</span>
+<div class="flip-front">
+<div class="icon">📌</div>
+<h3>Be Accurate</h3>
+<p>Fix & improve listing</p>
+</div>
+
+<div class="flip-back">
+<p>Optimize business details, services, and improve local visibility.</p>
+<span>Know More →</span>
+</div>
+
 </div>
 </div>
 
-<!-- OPTIMIZATION -->
-<div class="service-card" onclick="location.href='/services/gmb-optimization-service/'">
-<div class="service-icon">⚙️</div>
-<h3>Optimization</h3>
-<p class="service-info">Boost rankings with advanced GMB strategies.</p>
+<!-- CARD -->
+<div class="flip-card" onclick="location.href='/services/gmb-optimization-service/'">
+<div class="flip-inner">
 
-<div class="service-hover">
-Keyword targeting, geo signals, competitor analysis, and performance tracking.
-<br><span>Know More →</span>
+<div class="flip-front">
+<div class="icon">⚙️</div>
+<h3>Rank Higher</h3>
+<p>Boost your position</p>
+</div>
+
+<div class="flip-back">
+<p>Keyword targeting, geo signals, and advanced optimization strategies.</p>
+<span>Know More →</span>
+</div>
+
 </div>
 </div>
 
-<!-- MANAGEMENT -->
-<div class="service-card" onclick="location.href='/services/gmb-management-services/'">
-<div class="service-icon">📊</div>
-<h3>Management</h3>
-<p class="service-info">Keep your profile active and growing consistently.</p>
+<!-- CARD -->
+<div class="flip-card" onclick="location.href='/services/gmb-management-services/'">
+<div class="flip-inner">
 
-<div class="service-hover">
-Regular updates, posts, reviews monitoring, and ongoing improvements.
-<br><span>Know More →</span>
+<div class="flip-front">
+<div class="icon">📊</div>
+<h3>Stay Active</h3>
+<p>Consistent growth</p>
+</div>
+
+<div class="flip-back">
+<p>Posts, updates, reviews handling, and ongoing profile improvements.</p>
+<span>Know More →</span>
+</div>
+
 </div>
 </div>
 
-<!-- RANKING -->
-<div class="service-card" onclick="location.href='/services/google-maps-ranking-service/'">
-<div class="service-icon">🚀</div>
-<h3>Maps Ranking</h3>
-<p class="service-info">Rank higher on Google Maps & get more leads.</p>
+<!-- CARD -->
+<div class="flip-card" onclick="location.href='/services/google-maps-ranking-service/'">
+<div class="flip-inner">
 
-<div class="service-hover">
-Advanced ranking strategies, citations, authority signals, and growth tracking.
-<br><span>Know More →</span>
+<div class="flip-front">
+<div class="icon">🚀</div>
+<h3>Get Leads</h3>
+<p>More calls & customers</p>
+</div>
+
+<div class="flip-back">
+<p>Advanced Google Maps ranking strategies to increase enquiries.</p>
+<span>Know More →</span>
+</div>
+
 </div>
 </div>
 
-<!-- VERIFICATION -->
-<div class="service-card" onclick="location.href='/services/gmb-verification-service/'">
-<div class="service-icon">✔️</div>
-<h3>Verification</h3>
-<p class="service-info">Resolve verification issues quickly & easily.</p>
+<!-- CARD -->
+<div class="flip-card" onclick="location.href='/services/gmb-verification-service/'">
+<div class="flip-inner">
 
-<div class="service-hover">
-Support for suspended profiles, re-verification, and issue resolution.
-<br><span>Know More →</span>
-</div>
+<div class="flip-front">
+<div class="icon">✔️</div>
+<h3>Get Verified</h3>
+<p>Fix profile issues</p>
 </div>
 
-<!-- WEBSITE -->
-<div class="service-card" onclick="location.href='/services/website-development/'">
-<div class="service-icon">🌐</div>
-<h3>Website Development</h3>
-<p class="service-info">Build a professional website to boost trust.</p>
+<div class="flip-back">
+<p>Resolve suspensions, verification issues, and profile recovery.</p>
+<span>Know More →</span>
+</div>
 
-<div class="service-hover">
-Fast, mobile-friendly, SEO-ready websites for local businesses.
-<br><span>Know More →</span>
 </div>
 </div>
 
 </div>
 </div>
 </section>
-
   
   
 
