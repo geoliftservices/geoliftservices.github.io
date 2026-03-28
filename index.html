@@ -1712,8 +1712,6 @@ Professional Google My Business (GMB) services, optimization, and management to 
 
 
 <script>
-
-/* MOBILE FLIP LOGIC */
 function flipCard(card, link){
   if(window.innerWidth < 768){
 
@@ -1729,20 +1727,12 @@ function flipCard(card, link){
   }
 }
 
-/* AUTO FLIP FIRST CARD (MOBILE) */
-window.onload = function(){
-  if(window.innerWidth < 768){
-    document.querySelector(".flip-card").classList.add("active");
-  }
-}
-
 /* CLOSE WHEN CLICK OUTSIDE */
 document.addEventListener("click", function(e){
   if(!e.target.closest(".flip-card")){
     document.querySelectorAll(".flip-card").forEach(c => c.classList.remove("active"));
   }
 });
-
 </script>
   
 
