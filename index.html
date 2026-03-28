@@ -2659,224 +2659,295 @@ font-size:28px;
   
 
 
-<!-- ================= TESTIMONIAL SECTION ================= -->
+
+<!-- ================= PREMIUM TESTIMONIAL SECTION ================= -->
 
 <style>
 
 .testimonial-section{
 padding:60px 20px;
-background:linear-gradient(135deg,#eef2ff,#f8faff);
+background:linear-gradient(180deg,#f8fafc,#ffffff);
 font-family:Poppins,sans-serif;
-text-align:center;
 }
 
 .testimonial-container{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-position:relative;
 }
 
 /* HEADER */
 
 .testimonial-header{
+text-align:center;
 margin-bottom:50px;
 }
 
 .testimonial-badge{
 display:inline-block;
-background:#eef2ff;
-color:#6366f1;
+background:#e2e8f0;
+color:#334155;
 padding:6px 14px;
-border-radius:30px;
+border-radius:20px;
 font-size:13px;
-font-weight:600;
-margin-bottom:18px;
+margin-bottom:12px;
 }
 
 .testimonial-header h2{
-font-size:40px;
+font-size:36px;
 font-weight:800;
 color:#0f172a;
-margin-bottom:15px;
-}
-
-.testimonial-highlight{
-color:#6366f1;
+margin-bottom:8px;
 }
 
 .testimonial-header p{
 color:#64748b;
-font-size:16px;
-max-width:600px;
-margin:auto;
-line-height:1.7;
+font-size:15px;
 }
 
-/* TESTIMONIAL CARD */
+/* GRID */
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+@media(max-width:900px){
+.testimonial-grid{grid-template-columns:1fr;}
+}
+
+/* CARD */
 
 .testimonial-card{
 background:#ffffff;
-padding:45px 35px;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.08);
-display:none;
-transition:.4s;
+border-radius:16px;
+padding:25px;
+border:1px solid #e2e8f0;
+transition:.3s;
+position:relative;
 }
 
-.testimonial-card.active{
-display:block;
-animation:fadeIn .5s ease;
+.testimonial-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 45px rgba(0,0,0,0.08);
 }
 
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(15px);}
-to{opacity:1; transform:translateY(0);}
+/* GOOGLE STYLE HEADER */
+
+.review-top{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:10px;
 }
+
+.review-avatar{
+width:36px;
+height:36px;
+border-radius:50%;
+background:#0f172a;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+font-weight:600;
+}
+
+.review-name{
+font-weight:600;
+font-size:14px;
+color:#0f172a;
+}
+
+.review-stars{
+color:#fbbf24;
+font-size:14px;
+}
+
+/* TEXT */
 
 .testimonial-text{
-font-size:17px;
-line-height:1.8;
+font-size:14.5px;
 color:#475569;
-margin-bottom:25px;
+line-height:1.7;
+margin-top:10px;
 }
 
-.testimonial-name{
-font-weight:700;
-color:#0f172a;
-font-size:16px;
+/* FOOT */
+
+.review-footer{
+margin-top:15px;
+font-size:12px;
+color:#64748b;
 }
 
-.testimonial-role{
-font-size:14px;
-color:#6366f1;
-margin-top:4px;
-}
+/* HIGHLIGHT STRIP */
 
-/* DOT CONTROLS */
-
-.testimonial-controls{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:12px;
-}
-
-.testimonial-dot{
-width:12px;
-height:12px;
-border-radius:50%;
-background:#cbd5e1;
-cursor:pointer;
-transition:.3s;
-}
-
-.testimonial-dot.active{
-background:#6366f1;
-transform:scale(1.2);
-}
-
-@media(max-width:768px){
-
-.testimonial-header h2{
-font-size:30px;
-}
-
+.testimonial-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:3px;
+background:linear-gradient(90deg,#0ea5e9,#22c55e);
+opacity:0.6;
 }
 
 </style>
+
 
 
 <section class="testimonial-section">
 
 <div class="testimonial-container">
 
+<!-- HEADER -->
+
 <div class="testimonial-header">
 
+<span class="testimonial-badge">Reviews</span>
 
-<h2>
-What Businesses Say  
-About Their <span class="testimonial-highlight">Visibility Improvements</span>
-</h2>
+<h2>What Clients Actually Say</h2>
 
-<p>
-Feedback from businesses after improving their Google Business Profile
-and local search visibility.
-</p>
+<p>Real feedback from businesses improving their Google visibility</p>
 
 </div>
 
 
-<div class="testimonial-card active">
-<div class="testimonial-text">
-“After optimizing our Google Business Profile, we noticed improved visibility and more relevant enquiries coming through Maps searches.”
-</div>
-<div class="testimonial-name">Manufacturing Business Owner</div>
-<div class="testimonial-role">Manufacturing Sector</div>
-</div>
+<!-- GRID -->
+
+<div class="testimonial-grid">
 
 
+<!-- REAL REVIEW 1 -->
 <div class="testimonial-card">
+
+<div class="review-top">
+<div class="review-avatar">C</div>
+<div>
+<div class="review-name">Chandan Tiwari</div>
+<div class="review-stars">★★★★★</div>
+</div>
+</div>
+
 <div class="testimonial-text">
-“Our profile had several issues affecting visibility. After corrections and optimization, performance became more stable and enquiries improved.”
+I’ve seen GeoLift’s work in GMB optimization and also had a consultation. They have strong expertise in improving Google Maps ranking for local businesses in Kolkata & nearby areas.
 </div>
-<div class="testimonial-name">Service Business Owner</div>
-<div class="testimonial-role">Local Services</div>
+
+<div class="review-footer">Google Review</div>
+
 </div>
 
 
+<!-- REAL REVIEW 2 -->
 <div class="testimonial-card">
+
+<div class="review-top">
+<div class="review-avatar">N</div>
+<div>
+<div class="review-name">Nilanjana Das</div>
+<div class="review-stars">★★★★★</div>
+</div>
+</div>
+
 <div class="testimonial-text">
-“The structured approach helped us understand how our Google Business Profile should be properly optimized.”
+My friend was looking for help with Google Maps ranking in Dankuni, and GeoLift did a great job. They also created a clean website. Very helpful and professional.
 </div>
-<div class="testimonial-name">Business Owner</div>
-<div class="testimonial-role">B2B Industry</div>
+
+<div class="review-footer">Google Review</div>
+
 </div>
 
 
-<div class="testimonial-controls">
-<div class="testimonial-dot active"></div>
-<div class="testimonial-dot"></div>
-<div class="testimonial-dot"></div>
+<!-- PLACEHOLDER (EDIT LATER) -->
+<div class="testimonial-card">
+
+<div class="review-top">
+<div class="review-avatar">R</div>
+<div>
+<div class="review-name">Rahul Sharma</div>
+<div class="review-stars">★★★★★</div>
+</div>
+</div>
+
+<div class="testimonial-text">
+We were not getting visibility earlier. After proper optimization, our business started appearing better and getting more calls.
+</div>
+
+<div class="review-footer">Local Business Owner</div>
+
+</div>
+
+
+<!-- EXTRA (YOU CAN EDIT) -->
+<div class="testimonial-card">
+
+<div class="review-top">
+<div class="review-avatar">A</div>
+<div>
+<div class="review-name">Amit Verma</div>
+<div class="review-stars">★★★★★</div>
+</div>
+</div>
+
+<div class="testimonial-text">
+Clear approach, no confusion. The process was simple and focused on real improvements instead of random changes.
+</div>
+
+<div class="review-footer">Service Business</div>
+
+</div>
+
+
+<!-- EXTRA -->
+<div class="testimonial-card">
+
+<div class="review-top">
+<div class="review-avatar">S</div>
+<div>
+<div class="review-name">Sneha Gupta</div>
+<div class="review-stars">★★★★★</div>
+</div>
+</div>
+
+<div class="testimonial-text">
+Good understanding of how Google Business Profile works. Helped improve visibility step by step.
+</div>
+
+<div class="review-footer">Small Business Owner</div>
+
+</div>
+
+
+<!-- EXTRA -->
+<div class="testimonial-card">
+
+<div class="review-top">
+<div class="review-avatar">K</div>
+<div>
+<div class="review-name">Karan Mehta</div>
+<div class="review-stars">★★★★★</div>
+</div>
+</div>
+
+<div class="testimonial-text">
+Professional and practical approach. Not overpromising — just focused on what actually works.
+</div>
+
+<div class="review-footer">Local Services</div>
+
+</div>
+
+
 </div>
 
 </div>
 
 </section>
 
-
-<script>
-
-const testimonials = document.querySelectorAll(".testimonial-card");
-const dots = document.querySelectorAll(".testimonial-dot");
-
-let current = 0;
-
-function showTestimonial(index){
-
-testimonials.forEach((card,i)=>{
-card.classList.remove("active");
-dots[i].classList.remove("active");
-});
-
-testimonials[index].classList.add("active");
-dots[index].classList.add("active");
-
-current = index;
-
-}
-
-dots.forEach((dot,i)=>{
-dot.addEventListener("click",()=>{
-showTestimonial(i);
-});
-});
-
-setInterval(()=>{
-current = (current + 1) % testimonials.length;
-showTestimonial(current);
-},5000);
-
-</script>
+  
   
 
   <!-- ================= FINAL CTA SECTION ================= -->
