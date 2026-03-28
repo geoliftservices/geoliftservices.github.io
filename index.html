@@ -2445,104 +2445,155 @@ parent.classList.toggle("active");
   
 
 
-<!-- ================= OUR PROCESS SECTION ================= -->
+<!-- ================= PREMIUM PROCESS SECTION ================= -->
 
 <style>
 
 .process-section{
 padding:60px 20px;
-background:#ffffff;
+background:linear-gradient(180deg,#ffffff,#f8fafc);
 font-family:Poppins,sans-serif;
+position:relative;
+}
+
+/* subtle background */
+.process-section::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:radial-gradient(circle at 20% 20%,rgba(14,165,233,0.06),transparent 40%),
+           radial-gradient(circle at 80% 80%,rgba(99,102,241,0.06),transparent 40%);
+pointer-events:none;
 }
 
 .process-container{
 max-width:1100px;
 margin:auto;
+position:relative;
+z-index:2;
 }
 
 /* HEADER */
 
 .process-header{
 text-align:center;
-margin-bottom:60px;
+margin-bottom:70px;
 }
 
 .process-badge{
 display:inline-block;
-background:#eef2ff;
-color:#6366f1;
+background:#e0f2fe;
+color:#0369a1;
 padding:6px 14px;
-border-radius:30px;
+border-radius:20px;
 font-size:13px;
-font-weight:600;
-margin-bottom:18px;
+margin-bottom:15px;
 }
 
 .process-header h2{
-font-size:40px;
+font-size:38px;
 font-weight:800;
 color:#0f172a;
-margin-bottom:15px;
-line-height:1.2;
-}
-
-.process-highlight{
-color:#6366f1;
+margin-bottom:10px;
 }
 
 .process-header p{
 color:#64748b;
-font-size:17px;
-max-width:700px;
-margin:auto;
-line-height:1.7;
+font-size:15px;
 }
 
-/* PROCESS GRID */
+/* GRID */
 
 .process-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:40px;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+position:relative;
 }
+
+/* CONNECT LINE */
+
+.process-grid::before{
+content:"";
+position:absolute;
+top:32px;
+left:5%;
+width:90%;
+height:2px;
+background:linear-gradient(90deg,#38bdf8,#6366f1);
+opacity:0.25;
+z-index:0;
+}
+
+/* CARD */
 
 .process-card{
+position:relative;
 text-align:center;
 padding:30px 20px;
+background:linear-gradient(135deg,#ffffff,#f8fafc);
+border-radius:16px;
+border:1px solid #e2e8f0;
+transition:.3s;
+z-index:2;
 }
 
+.process-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* NUMBER */
+
 .process-number{
-width:65px;
-height:65px;
-margin:0 auto 20px;
-background:linear-gradient(135deg,#6366f1,#4f46e5);
+width:60px;
+height:60px;
+margin:0 auto 15px;
+background:linear-gradient(135deg,#0ea5e9,#6366f1);
 color:#fff;
-font-size:22px;
+font-size:20px;
 font-weight:700;
 display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
-box-shadow:0 10px 25px rgba(99,102,241,0.3);
+box-shadow:0 10px 25px rgba(14,165,233,0.25);
 }
 
+/* TITLE */
+
 .process-card h3{
-font-size:19px;
+font-size:18px;
 font-weight:700;
-margin-bottom:12px;
+margin-bottom:8px;
 color:#0f172a;
 }
 
+/* TEXT */
+
 .process-card p{
-font-size:15px;
+font-size:14px;
 color:#475569;
-line-height:1.7;
+line-height:1.6;
 }
 
-@media(max-width:768px){
+/* MOBILE */
+
+@media(max-width:900px){
+
+.process-grid{
+grid-template-columns:1fr;
+}
+
+.process-grid::before{
+display:none;
+}
 
 .process-header h2{
-font-size:30px;
+font-size:28px;
 }
 
 }
@@ -2554,45 +2605,49 @@ font-size:30px;
 
 <div class="process-container">
 
+<!-- HEADER -->
+
 <div class="process-header">
 
+<span class="process-badge">Our Process</span>
 
-<h2>
-Our Structured  
-<span class="process-highlight">Visibility Framework</span>
-</h2>
+<h2>How We Turn Visibility Into Results</h2>
 
-<p>
-A clear and structured approach used to improve Google Business Profile visibility,
-identify optimization gaps, and build stronger local search performance.
-</p>
+<p>A structured, no-guesswork approach to improve your Google presence</p>
 
 </div>
+
+
+<!-- PROCESS -->
 
 <div class="process-grid">
 
+<!-- 1 -->
 <div class="process-card">
 <div class="process-number">01</div>
-<h3>Profile Review</h3>
-<p>Analysis of your Google Business Profile, categories, competitors, and visibility gaps.</p>
+<h3>Profile Audit</h3>
+<p>We check what’s working, what’s missing, and what’s silently holding you back.</p>
 </div>
 
+<!-- 2 -->
 <div class="process-card">
 <div class="process-number">02</div>
-<h3>Issue Identification</h3>
-<p>Finding structural, content, and consistency problems affecting profile visibility.</p>
+<h3>Gap Fixing</h3>
+<p>Fixing inconsistencies, weak signals, and profile issues that affect visibility.</p>
 </div>
 
+<!-- 3 -->
 <div class="process-card">
 <div class="process-number">03</div>
-<h3>Structured Optimization</h3>
-<p>Refining categories, services, descriptions, and key profile elements.</p>
+<h3>Smart Optimization</h3>
+<p>Improving content, categories, and structure to align with how Google ranks.</p>
 </div>
 
+<!-- 4 -->
 <div class="process-card">
 <div class="process-number">04</div>
-<h3>Guidance & Monitoring</h3>
-<p>Providing clear recommendations and monitoring improvements over time.</p>
+<h3>Growth Tracking</h3>
+<p>Monitoring improvements and guiding next steps for consistent visibility growth.</p>
 </div>
 
 </div>
@@ -2601,6 +2656,7 @@ identify optimization gaps, and build stronger local search performance.
 
 </section>
 
+  
 
 
 <!-- ================= TESTIMONIAL SECTION ================= -->
