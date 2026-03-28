@@ -2143,19 +2143,19 @@ color:#64748b;
 margin-bottom:50px;
 }
 
-/* SLIDER WRAPPER */
+/* SLIDER */
 .logo-slider{
 position:relative;
 overflow:hidden;
 }
 
-/* GRADIENT FADE (PREMIUM TOUCH) */
+/* FADE EDGE */
 .logo-slider::before,
 .logo-slider::after{
 content:"";
 position:absolute;
 top:0;
-width:100px;
+width:120px;
 height:100%;
 z-index:2;
 pointer-events:none;
@@ -2163,19 +2163,19 @@ pointer-events:none;
 
 .logo-slider::before{
 left:0;
-background:linear-gradient(to right,#ffffff,transparent);
+background:linear-gradient(to right,#fff,transparent);
 }
 
 .logo-slider::after{
 right:0;
-background:linear-gradient(to left,#ffffff,transparent);
+background:linear-gradient(to left,#fff,transparent);
 }
 
 /* TRACK */
 .logo-track{
 display:flex;
 width:max-content;
-animation:scroll 25s linear infinite;
+animation:scroll 28s linear infinite;
 }
 
 /* ITEM */
@@ -2189,12 +2189,11 @@ padding:20px;
 }
 
 .logo-item img{
-max-width:120px;
+width:120px;
 height:auto;
-transition:.3s;
 }
 
-/* HOVER (SLOW DOWN EFFECT) */
+/* HOVER PAUSE */
 .logo-slider:hover .logo-track{
 animation-play-state:paused;
 }
@@ -2211,36 +2210,41 @@ animation-play-state:paused;
 <section class="tools-section">
 
 <h2>Tools We Use to Rank & Grow Your Business</h2>
-<p>Powered by industry-leading platforms for real results in GMB service</p>
+<p>Powered by industry-leading platforms for real GMB service results</p>
 
 <div class="logo-slider">
 
 <div class="logo-track">
 
-<!-- ORIGINAL SET -->
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Semrush_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"></div>
-<div class="logo-item"><img src="https://neilpatel.com/wp-content/uploads/2020/03/ubersuggest-logo.png"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Google_Search_Console_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Moz_logo.svg"></div>
+<!-- SET -->
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googleads.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlesearchconsole.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/semrush.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ahrefs.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/moz.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/screamingfrog.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/hubspot.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/canva.svg"></div>
 
-<!-- DUPLICATE FOR LOOP -->
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Semrush_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"></div>
-<div class="logo-item"><img src="https://neilpatel.com/wp-content/uploads/2020/03/ubersuggest-logo.png"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Google_Search_Console_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg"></div>
-<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Moz_logo.svg"></div>
+<!-- DUPLICATE -->
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googleads.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlesearchconsole.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/openai.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/semrush.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/ahrefs.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/moz.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/screamingfrog.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/hubspot.svg"></div>
+<div class="logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/canva.svg"></div>
 
 </div>
 
 </div>
 
 </section>
-
 
   
 
