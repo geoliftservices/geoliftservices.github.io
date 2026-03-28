@@ -1743,7 +1743,7 @@ document.addEventListener("click", function(e){
 <style>
 
 .why-section{
-padding:60px 20px;
+padding:70px 20px;
 background:#ffffff;
 font-family:Poppins,sans-serif;
 }
@@ -1772,7 +1772,7 @@ margin-bottom:18px;
 }
 
 .why-header h2{
-font-size:42px;
+font-size:40px;
 font-weight:800;
 color:#0f172a;
 margin-bottom:18px;
@@ -1785,8 +1785,8 @@ color:#6366f1;
 
 .why-header p{
 color:#64748b;
-font-size:17px;
-max-width:720px;
+font-size:16px;
+max-width:680px;
 margin:auto;
 line-height:1.7;
 }
@@ -1796,7 +1796,7 @@ line-height:1.7;
 .why-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
+gap:30px;
 }
 
 /* CARD */
@@ -1804,37 +1804,56 @@ gap:35px;
 .why-card{
 background:#ffffff;
 border:1px solid #e5e7eb;
-border-radius:20px;
-padding:40px 28px;
+border-radius:18px;
+padding:38px 26px;
 text-align:center;
-box-shadow:0 15px 35px rgba(0,0,0,0.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.04);
 transition:.35s;
+position:relative;
+overflow:hidden;
 }
 
 .why-card:hover{
 transform:translateY(-8px);
-box-shadow:0 25px 60px rgba(0,0,0,0.1);
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
 border-color:#6366f1;
+}
+
+/* subtle top glow */
+.why-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:3px;
+background:linear-gradient(90deg,#6366f1,#4f46e5);
+opacity:0;
+transition:.3s;
+}
+
+.why-card:hover::before{
+opacity:1;
 }
 
 /* ICON */
 
 .why-icon{
-width:64px;
-height:64px;
+width:62px;
+height:62px;
 margin:auto;
-margin-bottom:22px;
+margin-bottom:20px;
 background:linear-gradient(135deg,#6366f1,#4f46e5);
 display:flex;
 align-items:center;
 justify-content:center;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(99,102,241,.35);
+border-radius:14px;
+box-shadow:0 10px 25px rgba(99,102,241,.25);
 }
 
 .why-icon svg{
-width:28px;
-height:28px;
+width:26px;
+height:26px;
 stroke:white;
 stroke-width:2;
 }
@@ -1844,12 +1863,12 @@ stroke-width:2;
 .why-card h3{
 font-size:20px;
 font-weight:700;
-margin-bottom:12px;
+margin-bottom:10px;
 color:#0f172a;
 }
 
 .why-card p{
-font-size:15px;
+font-size:14.5px;
 color:#475569;
 line-height:1.7;
 }
@@ -1857,11 +1876,9 @@ line-height:1.7;
 /* MOBILE */
 
 @media(max-width:768px){
-
 .why-header h2{
-font-size:30px;
+font-size:28px;
 }
-
 }
 
 </style>
@@ -1876,13 +1893,12 @@ font-size:30px;
 <span class="why-badge">Why Choose GeoLift</span>
 
 <h2>
-Why Businesses <span class="why-highlight">Choose GeoLift</span>
+Why Businesses <span class="why-highlight">Trust GeoLift</span>
 </h2>
 
 <p>
-A focused consulting approach designed to improve Google Business Profile
-performance through structured optimization, practical strategy,
-and transparent implementation.
+No fluff, no guesswork — just a focused approach to improve your Google Business Profile, 
+bring real visibility, and turn searches into actual customer enquiries.
 </p>
 
 </div>
@@ -1891,6 +1907,7 @@ and transparent implementation.
 <div class="why-grid">
 
 
+<!-- CARD 1 -->
 <div class="why-card">
 
 <div class="why-icon">
@@ -1900,17 +1917,17 @@ and transparent implementation.
 </svg>
 </div>
 
-<h3>Direct Consultant Handling</h3>
+<h3>Work Directly With Me</h3>
 
 <p>
-You work directly with me — no outsourcing, no agency layers,
-and no communication gaps.
+No outsourcing or middle layers — you get direct communication, faster execution, 
+and complete clarity on what’s being done.
 </p>
 
 </div>
 
 
-
+<!-- CARD 2 -->
 <div class="why-card">
 
 <div class="why-icon">
@@ -1919,17 +1936,17 @@ and no communication gaps.
 </svg>
 </div>
 
-<h3>Focused Expertise</h3>
+<h3>GMB-Focused Expertise</h3>
 
 <p>
-Specialized in optimizing Google Business Profiles
-to improve local visibility and search performance.
+Not general SEO — specialized Google My Business optimization designed 
+to improve local visibility and map rankings.
 </p>
 
 </div>
 
 
-
+<!-- CARD 3 -->
 <div class="why-card">
 
 <div class="why-icon">
@@ -1938,16 +1955,17 @@ to improve local visibility and search performance.
 </svg>
 </div>
 
-<h3>Structured Implementation</h3>
+<h3>Proven Optimization Process</h3>
 
 <p>
-Step-by-step optimization focused on profile accuracy, visibility signals, and long-term local search performance.
+A structured, step-by-step approach focused on accuracy, authority signals, 
+and consistent long-term ranking growth.
 </p>
 
 </div>
 
 
-
+<!-- CARD 4 -->
 <div class="why-card">
 
 <div class="why-icon">
@@ -1957,11 +1975,11 @@ Step-by-step optimization focused on profile accuracy, visibility signals, and l
 </svg>
 </div>
 
-<h3>Transparent Process</h3>
+<h3>Clear & Transparent Work</h3>
 
 <p>
-Clear communication and practical guidance throughout
-the optimization and improvement process.
+You always know what’s happening — clear updates, practical insights, 
+and no hidden tactics or confusion.
 </p>
 
 </div>
@@ -1972,7 +1990,6 @@ the optimization and improvement process.
 </div>
 
 </section>
-
 
 
 
