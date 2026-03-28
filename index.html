@@ -2121,18 +2121,18 @@ My job? Make sure yours is one of them.
   
 <style>
 
-/* ===== SECTION ===== */
+/* SECTION */
 .tools-section{
-padding:100px 20px;
+padding:110px 20px;
 background:linear-gradient(180deg,#f8fafc,#ffffff);
 font-family:'Poppins',sans-serif;
 text-align:center;
 overflow:hidden;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .tools-section h2{
-font-size:36px;
+font-size:38px;
 font-weight:800;
 color:#0f172a;
 margin-bottom:10px;
@@ -2140,11 +2140,10 @@ margin-bottom:10px;
 
 .tools-section p{
 color:#64748b;
-margin-bottom:60px;
-font-size:15px;
+margin-bottom:70px;
 }
 
-/* ===== SLIDER WRAPPER ===== */
+/* WRAPPER */
 .slider-wrapper{
 position:relative;
 overflow:hidden;
@@ -2156,9 +2155,9 @@ overflow:hidden;
 content:"";
 position:absolute;
 top:0;
-width:140px;
+width:160px;
 height:100%;
-z-index:2;
+z-index:3;
 pointer-events:none;
 }
 
@@ -2172,71 +2171,79 @@ right:0;
 background:linear-gradient(to left,#ffffff,transparent);
 }
 
-/* ===== ROW ===== */
+/* ROW */
 .logo-row{
 display:flex;
-gap:40px;
+gap:50px;
 width:max-content;
-padding:20px 0;
+padding:25px 0;
 }
 
 /* ANIMATION */
 .row1{
-animation:scrollLeft 30s linear infinite;
+animation:scrollLeft 32s linear infinite;
 }
-
 .row2{
-animation:scrollRight 30s linear infinite;
+animation:scrollRight 32s linear infinite;
 }
 
 @keyframes scrollLeft{
 0%{transform:translateX(0);}
 100%{transform:translateX(-50%);}
 }
-
 @keyframes scrollRight{
 0%{transform:translateX(-50%);}
 100%{transform:translateX(0);}
 }
 
-/* ===== CARD ===== */
+/* CARD */
 .logo-item{
 flex:0 0 auto;
-width:190px;
-height:95px;
+width:200px;
+height:110px;
 display:flex;
 align-items:center;
 justify-content:center;
-background:#ffffff;
-border-radius:18px;
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(6px);
+border-radius:20px;
 border:1px solid #e2e8f0;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-transition:.35s ease;
+box-shadow:0 15px 35px rgba(0,0,0,0.06);
+transition:.4s ease;
 }
 
 /* LOGO */
 .logo-item img{
-max-width:120px;
-max-height:55px;
+max-width:130px;
+max-height:60px;
 object-fit:contain;
 }
 
-/* HOVER */
+/* CENTER FOCUS EFFECT */
 .logo-item:hover{
-transform:translateY(-8px) scale(1.06);
-box-shadow:0 20px 45px rgba(0,0,0,0.12);
+transform:translateY(-10px) scale(1.12);
+box-shadow:0 25px 60px rgba(0,0,0,0.15);
 }
 
-/* PAUSE ON HOVER */
+/* SLIGHT SCALE VARIATION */
+.logo-row .logo-item:nth-child(odd){
+transform:scale(0.95);
+opacity:0.9;
+}
+.logo-row .logo-item:nth-child(even){
+transform:scale(1.05);
+}
+
+/* PAUSE */
 .slider-wrapper:hover .logo-row{
 animation-play-state:paused;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:768px){
 .logo-item{
 width:150px;
-height:80px;
+height:85px;
 }
 .logo-item img{
 max-width:100px;
@@ -2253,7 +2260,7 @@ max-width:100px;
 
 <div class="slider-wrapper">
 
-<!-- ===== ROW 1 ===== -->
+<!-- ROW 1 -->
 <div class="logo-row row1">
 
 <div class="logo-item"><img src="https://geolift.co.in/images/Google.png"></div>
@@ -2265,7 +2272,7 @@ max-width:100px;
 <div class="logo-item"><img src="https://geolift.co.in/images/HubSpot.png"></div>
 <div class="logo-item"><img src="https://geolift.co.in/images/canva.jpg"></div>
 
-<!-- duplicate -->
+<!-- DUPLICATE -->
 <div class="logo-item"><img src="https://geolift.co.in/images/Google.png"></div>
 <div class="logo-item"><img src="https://geolift.co.in/images/ads.png"></div>
 <div class="logo-item"><img src="https://geolift.co.in/images/chatgpt.png"></div>
@@ -2274,7 +2281,7 @@ max-width:100px;
 </div>
 
 
-<!-- ===== ROW 2 ===== -->
+<!-- ROW 2 -->
 <div class="logo-row row2">
 
 <div class="logo-item"><img src="https://geolift.co.in/images/ahref.png"></div>
@@ -2285,7 +2292,7 @@ max-width:100px;
 <div class="logo-item"><img src="https://geolift.co.in/images/chatgpt.png"></div>
 <div class="logo-item"><img src="https://geolift.co.in/images/semrush.png"></div>
 
-<!-- duplicate -->
+<!-- DUPLICATE -->
 <div class="logo-item"><img src="https://geolift.co.in/images/ahref.png"></div>
 <div class="logo-item"><img src="https://geolift.co.in/images/Moz.png"></div>
 <div class="logo-item"><img src="https://geolift.co.in/images/HubSpot.png"></div>
