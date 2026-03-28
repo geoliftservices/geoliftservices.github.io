@@ -2118,19 +2118,21 @@ My job? Make sure yours is one of them.
 
 
 
+  
+
 <style>
 
 /* SECTION */
 .tools-section{
-padding:70px 20px;
+padding:80px 20px;
 background:#ffffff;
 font-family:'Poppins',sans-serif;
 text-align:center;
+overflow:hidden;
 }
 
-/* HEADER */
 .tools-section h2{
-font-size:32px;
+font-size:34px;
 font-weight:800;
 color:#0f172a;
 margin-bottom:10px;
@@ -2138,58 +2140,69 @@ margin-bottom:10px;
 
 .tools-section p{
 color:#64748b;
-margin-bottom:40px;
-font-size:15px;
+margin-bottom:50px;
 }
 
-/* GRID */
-.tools-grid{
-display:grid;
-grid-template-columns:repeat(7,1fr);
-gap:25px;
-align-items:center;
-max-width:1100px;
-margin:auto;
+/* SLIDER WRAPPER */
+.logo-slider{
+position:relative;
+overflow:hidden;
 }
 
-@media(max-width:900px){
-.tools-grid{grid-template-columns:repeat(4,1fr);}
+/* GRADIENT FADE (PREMIUM TOUCH) */
+.logo-slider::before,
+.logo-slider::after{
+content:"";
+position:absolute;
+top:0;
+width:100px;
+height:100%;
+z-index:2;
+pointer-events:none;
 }
 
-@media(max-width:500px){
-.tools-grid{grid-template-columns:repeat(3,1fr);}
+.logo-slider::before{
+left:0;
+background:linear-gradient(to right,#ffffff,transparent);
 }
 
-/* LOGO BOX */
-.tool-item{
-background:#f8fafc;
-border:1px solid #e2e8f0;
-border-radius:14px;
-padding:18px;
+.logo-slider::after{
+right:0;
+background:linear-gradient(to left,#ffffff,transparent);
+}
+
+/* TRACK */
+.logo-track{
+display:flex;
+width:max-content;
+animation:scroll 25s linear infinite;
+}
+
+/* ITEM */
+.logo-item{
+flex:0 0 auto;
+width:180px;
 display:flex;
 align-items:center;
 justify-content:center;
+padding:20px;
+}
+
+.logo-item img{
+max-width:120px;
+height:auto;
 transition:.3s;
 }
 
-.tool-item img{
-max-width:80px;
-max-height:40px;
-filter:grayscale(100%);
-opacity:0.8;
-transition:.3s;
+/* HOVER (SLOW DOWN EFFECT) */
+.logo-slider:hover .logo-track{
+animation-play-state:paused;
 }
 
-/* HOVER */
-.tool-item:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-border-color:#c7d2fe;
-}
-
-.tool-item:hover img{
-filter:grayscale(0%);
-opacity:1;
+/* ANIMATION */
+@keyframes scroll{
+0%{transform:translateX(0);}
+100%{transform:translateX(-50%);}
 }
 
 </style>
@@ -2197,50 +2210,36 @@ opacity:1;
 
 <section class="tools-section">
 
-<h2>Tools We Use to Grow Your Business</h2>
-<p>We use industry-leading tools to deliver real results with our GMB service.</p>
+<h2>Tools We Use to Rank & Grow Your Business</h2>
+<p>Powered by industry-leading platforms for real results in GMB service</p>
 
-<div class="tools-grid">
+<div class="logo-slider">
 
-<!-- GOOGLE -->
-<div class="tool-item">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
-</div>
+<div class="logo-track">
 
-<!-- SEMRUSH -->
-<div class="tool-item">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Semrush_logo.svg">
-</div>
+<!-- ORIGINAL SET -->
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Semrush_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"></div>
+<div class="logo-item"><img src="https://neilpatel.com/wp-content/uploads/2020/03/ubersuggest-logo.png"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Google_Search_Console_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Moz_logo.svg"></div>
 
-<!-- CHATGPT -->
-<div class="tool-item">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg">
-</div>
+<!-- DUPLICATE FOR LOOP -->
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Semrush_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"></div>
+<div class="logo-item"><img src="https://neilpatel.com/wp-content/uploads/2020/03/ubersuggest-logo.png"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Google_Search_Console_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg"></div>
+<div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Moz_logo.svg"></div>
 
-<!-- UBERSUGGEST -->
-<div class="tool-item">
-<img src="https://neilpatel.com/wp-content/uploads/2020/03/ubersuggest-logo.png">
-</div>
-
-<!-- SEARCH CONSOLE -->
-<div class="tool-item">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Google_Search_Console_logo.svg">
-</div>
-
-<!-- GOOGLE ADS -->
-<div class="tool-item">
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg">
-</div>
-
-<!-- MOZ -->
-<div class="tool-item">
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Moz_logo.svg">
 </div>
 
 </div>
 
 </section>
-
 
 
   
