@@ -1734,7 +1734,60 @@ document.addEventListener("click", function(e){
   }
 });
 </script>
-  
+
+
+
+
+
+
+
+
+  <style>
+.results-section{
+  padding:80px 20px;
+  background:linear-gradient(180deg,#0f172a,#111827);
+}
+
+.results-container{
+  max-width:1000px;
+  margin:auto;
+}
+
+/* IMAGE CARD */
+.results-card{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 25px 70px rgba(0,0,0,0.5);
+  transition:0.4s;
+}
+
+.results-card img{
+  width:100%;
+  display:block;
+}
+
+/* HOVER EFFECT */
+.results-card:hover{
+  transform:translateY(-8px) scale(1.01);
+}
+
+/* MOBILE OPTIMIZATION */
+@media(max-width:768px){
+  .results-section{
+    padding:60px 15px;
+  }
+}
+</style>
+
+<section class="results-section">
+  <div class="results-container">
+    
+    <div class="results-card">
+      <img src="https://www.geolift.co.in/images/1image.webp">
+    </div>
+
+  </div>
+</section>
 
   
 
