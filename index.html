@@ -1972,218 +1972,177 @@ document.addEventListener("click", function(e){
 
 
   
-<!-- ================= CORPORATE ABOUT SECTION ================= -->
+
+  <!-- ================= PREMIUM ABOUT SECTION ================= -->
 
 <style>
 
+/* SECTION */
 .about-section{
 padding:60px 20px;
-background:#ffffff;
+background:#f8fafc;
 font-family:Poppins,sans-serif;
 }
 
 .about-container{
-max-width:1000px;
+max-width:1150px;
 margin:auto;
-text-align:center;
 }
 
-/* badge */
+/* HEADER */
+
+.about-header{
+text-align:center;
+margin-bottom:60px;
+}
 
 .about-badge{
 display:inline-block;
-background:#eef2ff;
-color:#6366f1;
-padding:6px 16px;
-border-radius:30px;
+background:#e2e8f0;
+color:#334155;
+padding:6px 14px;
+border-radius:20px;
 font-size:13px;
-font-weight:600;
-margin-bottom:18px;
+margin-bottom:15px;
 }
-
-/* heading */
 
 .about-title{
-font-size:42px;
+font-size:38px;
 font-weight:800;
 color:#0f172a;
-line-height:1.25;
-margin-bottom:18px;
+margin-bottom:10px;
 }
 
-.about-highlight{
-color:#6366f1;
-}
-
-/* intro */
-
-.about-intro{
-font-size:16px;
-color:#475569;
-line-height:1.9;
-max-width:720px;
+.about-sub{
+color:#64748b;
+font-size:15px;
+max-width:600px;
 margin:auto;
-margin-bottom:50px;
 }
 
-/* feature cards */
+/* FEATURES (NEW STYLE) */
 
 .about-features{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:25px;
-margin-bottom:40px;
+margin-top:50px;
 }
 
 .about-feature{
 background:#ffffff;
-padding:28px;
 border-radius:14px;
-border:1px solid #e5e7eb;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
+padding:25px;
+border:1px solid #e2e8f0;
 transition:.3s;
+position:relative;
+overflow:hidden;
+}
+
+/* subtle accent */
+.about-feature::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:3px;
+background:#0f172a;
+opacity:0.08;
 }
 
 .about-feature:hover{
 transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(0,0,0,0.08);
-border-color:#6366f1;
 }
 
 .about-feature h3{
 font-size:18px;
+margin-bottom:6px;
 color:#0f172a;
-margin-bottom:8px;
 }
 
 .about-feature p{
 font-size:14px;
-color:#64748b;
-line-height:1.7;
+color:#475569;
+line-height:1.6;
 }
 
 /* CTA */
 
 .about-cta{
 display:inline-block;
-margin-top:15px;
-padding:12px 28px;
-background:#6366f1;
+margin-top:35px;
+padding:12px 26px;
+background:#0f172a;
 color:#fff;
 font-size:14px;
-font-weight:600;
 border-radius:8px;
 text-decoration:none;
-transition:.25s;
-box-shadow:0 12px 25px rgba(99,102,241,.25);
 cursor:pointer;
+transition:.3s;
 }
 
 .about-cta:hover{
-background:#4f46e5;
-transform:translateY(-2px);
+background:#1e293b;
 }
 
-/* expandable content */
+/* EXPAND */
 
 .about-full{
-max-width:900px;
-margin:40px auto 0;
 display:none;
+margin-top:40px;
 }
 
 .about-card{
 background:#ffffff;
-border-radius:16px;
-border:1px solid #e5e7eb;
-padding:35px;
-box-shadow:0 20px 50px rgba(0,0,0,0.06);
-text-align:left;
+padding:30px;
+border-radius:14px;
+border:1px solid #e2e8f0;
 }
 
-.about-card h3{
-font-size:22px;
-margin-bottom:10px;
-color:#0f172a;
-}
-
-.about-card p{
-font-size:15px;
-color:#475569;
-line-height:1.8;
-margin-bottom:14px;
-}
-
-.about-list li{
-margin-bottom:8px;
-color:#475569;
-}
-
-/* stats */
+/* STATS (NEW STYLE) */
 
 .about-stats{
-max-width:900px;
-margin:70px auto 0;
 display:flex;
 justify-content:center;
-gap:40px;
+gap:30px;
+margin-top:70px;
+flex-wrap:wrap;
 }
 
 .about-stat{
-width:220px;
-height:120px;
-background:#fff;
-border-radius:14px;
-border:1px solid #e5e7eb;
-box-shadow:0 10px 30px rgba(0,0,0,0.05);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+background:#ffffff;
+padding:25px;
+border-radius:12px;
+border:1px solid #e2e8f0;
+min-width:200px;
+text-align:center;
 transition:.3s;
 }
 
 .about-stat:hover{
 transform:translateY(-6px);
-box-shadow:0 20px 50px rgba(0,0,0,0.1);
-border-color:#6366f1;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
 .stat-number{
-font-size:38px;
+font-size:34px;
 font-weight:800;
-color:#6366f1;
+color:#0f172a;
 }
 
 .stat-title{
-font-size:14px;
-font-weight:600;
-color:#0f172a;
+font-size:13px;
+color:#64748b;
 margin-top:6px;
 }
 
-/* mobile */
+/* MOBILE */
 
 @media(max-width:900px){
-
-.about-title{
-font-size:30px;
-}
-
-.about-features{
-grid-template-columns:1fr;
-}
-
-.about-stats{
-flex-direction:column;
-align-items:center;
-gap:20px;
-}
-
-.about-stat{
-width:260px;
-}
-
+.about-features{grid-template-columns:1fr;}
+.about-title{font-size:28px;}
 }
 
 </style>
@@ -2193,68 +2152,65 @@ width:260px;
 
 <div class="about-container">
 
-<span class="about-badge">About Us</span>
+<div class="about-header">
+<span class="about-badge">About GeoLift</span>
 
-<h2 class="about-title">
-Helping Businesses Build  
-<span class="about-highlight">Strong Local Visibility</span>
-</h2>
+<h2 class="about-title">Helping Businesses Get Found on Google</h2>
 
-<p class="about-intro">
-Many businesses create a Google Business Profile but still struggle to appear in local search results. A profile alone is not enough — it requires proper setup, structured optimization, and consistent improvements to perform well in local search results.
+<p class="about-sub">
+Most profiles exist. Very few perform. That’s where structured optimization makes the difference.
 </p>
+</div>
 
 
-<!-- FEATURE BLOCKS -->
+<!-- FEATURES -->
 
 <div class="about-features">
 
 <div class="about-feature">
-<h3>Profile Setup</h3>
-<p>Professional Google Business Profile setup that follows best practices for visibility and trust.</p>
+<h3>Setup That Works</h3>
+<p>Not just creating profiles — setting them up to actually perform in local search.</p>
 </div>
 
 <div class="about-feature">
-<h3>Visibility Optimization</h3>
-<p>Improving profile completeness and optimization signals that help businesses appear in local search.</p>
+<h3>Visibility That Grows</h3>
+<p>Optimizing signals that help your business appear where customers are searching.</p>
 </div>
 
 <div class="about-feature">
-<h3>Local Growth</h3>
-<p>Structured improvements that help businesses attract more local customers and enquiries.</p>
+<h3>Results That Matter</h3>
+<p>More visibility, more calls, more real enquiries — not just impressions.</p>
 </div>
 
 </div>
+
 
 <a class="about-cta" onclick="toggleAbout()">Read More</a>
 
-</div>
 
-
-<!-- EXPANDED CONTENT -->
+<!-- EXPAND -->
 
 <div class="about-full" id="aboutFull">
 
 <div class="about-card">
 
-<h3>Our Journey</h3>
+<h3>How It Started</h3>
 
 <p>
-The journey began in 2021 while working with businesses that needed help fixing and improving their Google Business Profiles.
+Started in 2021 working with businesses struggling to get visibility despite having a GMB profile.
 </p>
 
 <p>
-Many profiles were incomplete or poorly optimized, preventing them from appearing in local searches.
+The problem wasn’t presence — it was lack of proper optimization and structure.
 </p>
 
-<h3>What We Focus On</h3>
+<h3>What We Do</h3>
 
-<ul class="about-list">
-<li>Professional Google Business Profile setup</li>
-<li>Fixing profile visibility issues</li>
-<li>Improving profile structure</li>
-<li>Local optimization for search presence</li>
-<li>Creating profiles that generate enquiries</li>
+<ul>
+<li>Profile setup & correction</li>
+<li>Visibility optimization</li>
+<li>Local ranking improvement</li>
+<li>Structured profile growth</li>
 </ul>
 
 </div>
@@ -2262,7 +2218,7 @@ Many profiles were incomplete or poorly optimized, preventing them from appearin
 </div>
 
 
-<!-- STATS (UNCHANGED) -->
+<!-- STATS -->
 
 <div class="about-stats">
 
@@ -2283,113 +2239,76 @@ Many profiles were incomplete or poorly optimized, preventing them from appearin
 
 </div>
 
+</div>
+
 </section>
 
 
 
 <script>
 
-/* READ MORE + AUTO SCROLL */
+/* READ MORE */
 
 function toggleAbout(){
-
-const content = document.getElementById("aboutFull");
-const btn = document.querySelector(".about-cta");
-
-if(content.style.display === "block"){
-
-content.style.display = "none";
-btn.innerText = "Read More";
-
-}else{
-
-content.style.display = "block";
-btn.innerText = "Read Less";
-
-/* scroll to new content */
-
-setTimeout(function(){
-content.scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
-},100);
-
-}
-
+const content=document.getElementById("aboutFull");
+content.style.display = content.style.display==="block"?"none":"block";
 }
 
 
-/* COUNTERS */
+/* COUNTER RUN ONLY ONCE */
 
-const counters=document.querySelectorAll(".counter");
-const yearCounters=document.querySelectorAll(".counter-year");
+let counted = false;
 
-const observer=new IntersectionObserver((entries)=>{
-
+const observer = new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
+if(entry.isIntersecting && !counted){
 
-if(entry.isIntersecting){
+counted = true; // 🔥 stops repeating
 
-if(entry.target.classList.contains("counter")){
-
-let counter=entry.target;
+document.querySelectorAll(".counter").forEach(counter=>{
 let target=+counter.dataset.target;
-
 let count=0;
-let step=target/120;
+let step=target/100;
 
 function update(){
-
 count+=step;
-
 if(count<target){
 counter.innerText=Math.ceil(count);
 requestAnimationFrame(update);
 }else{
 counter.innerText=target+"+";
 }
-
 }
-
 update();
+});
 
-}
-
-if(entry.target.classList.contains("counter-year")){
-
-let counter=entry.target;
+document.querySelectorAll(".counter-year").forEach(counter=>{
 let start=+counter.dataset.start;
 let end=+counter.dataset.end;
 
 let count=start;
 
 function updateYear(){
-
 counter.innerText=count;
-
 if(count>end){
 count--;
-setTimeout(updateYear,120);
+setTimeout(updateYear,80);
 }
-
 }
-
 updateYear();
-
-}
-
-}
-
 });
 
+}
+});
 },{threshold:0.6});
 
-counters.forEach(c=>observer.observe(c));
-yearCounters.forEach(c=>observer.observe(c));
+document.querySelectorAll(".counter, .counter-year")
+.forEach(el=>observer.observe(el));
 
 </script>
 
+
+  
   
 <!-- ================= FAQ SECTION ================= -->
 
