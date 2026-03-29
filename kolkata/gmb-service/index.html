@@ -1461,32 +1461,41 @@ Professional Google My Business optimization in Kolkata to improve your Google M
 
 
 <style>
-/* Who This Service Is For */
+/* Section */
 .who-for {
   padding: 60px 20px;
-  background: #0b1220;
-  text-align: center;
+  background: linear-gradient(180deg, #0f1b2e, #0b1626);
 }
 
-.section-title {
-  font-size: 34px;
-  font-weight: 700;
-  margin-bottom: 12px;
+/* Layout */
+.who-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Left Content */
+.who-left h2 {
+  font-size: 36px;
   color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 
-.section-subtitle {
+.who-left p {
+  color: #aab6d3;
   font-size: 15px;
-  color: #94a3b8;
-  max-width: 650px;
-  margin: 0 auto 10px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .who-location {
-  font-size: 14px;
-  color: #3b82f6;
+  color: #4da3ff;
   font-weight: 500;
-  margin-bottom: 40px;
+  font-size: 14px;
 }
 
 /* Grid */
@@ -1496,10 +1505,44 @@ Professional Google My Business optimization in Kolkata to improve your Google M
   gap: 20px;
 }
 
+/* Cards */
+.who-card {
+  background: rgba(255,255,255,0.03);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s ease;
+}
+
+.who-card:hover {
+  border-color: rgba(77,163,255,0.4);
+  transform: translateY(-5px);
+}
+
+.who-card h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.who-card p {
+  font-size: 13.5px;
+  color: #aab6d3;
+  line-height: 1.5;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
+  .who-container {
+    grid-template-columns: 1fr;
+  }
+
   .who-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .who-left {
+    text-align: center;
   }
 }
 
@@ -1508,99 +1551,57 @@ Professional Google My Business optimization in Kolkata to improve your Google M
     grid-template-columns: 1fr;
   }
 }
-
-/* Cards */
-.who-card {
-  background: linear-gradient(145deg, #111827, #020617);
-  padding: 25px 20px;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.06);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Subtle hover glow */
-.who-card::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background: linear-gradient(120deg, transparent, rgba(59,130,246,0.2), transparent);
-  transition: 0.4s;
-}
-
-.who-card:hover::before {
-  left: 100%;
-}
-
-.who-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(59,130,246,0.4);
-  box-shadow: 0 10px 25px rgba(59,130,246,0.15);
-}
-
-.who-card h3 {
-  font-size: 17px;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-
-.who-card p {
-  font-size: 14px;
-  color: #94a3b8;
-  line-height: 1.5;
-}
 </style>
 
-<!-- Who This Service Is For -->
 <section class="who-for">
-  <div class="container">
+  <div class="who-container">
 
-    <h2 class="section-title">
-      Who Needs GMB Optimization in Kolkata?
-    </h2>
+    <!-- Left Side -->
+    <div class="who-left">
+      <h2>
+        Who Needs GMB Optimization in Kolkata?
+      </h2>
 
-    <p class="section-subtitle">
-      If your business depends on local customers, your Google presence should bring calls — not stay invisible.
-    </p>
+      <p>
+        If your business depends on local customers, your Google presence should bring calls — not just exist.
+      </p>
 
-    <p class="who-location">
-      Serving businesses across Kolkata, Salt Lake, New Town, Howrah & nearby areas
-    </p>
+      <p class="who-location">
+        Serving businesses across Kolkata, Salt Lake, New Town, Howrah & nearby areas
+      </p>
+    </div>
 
+    <!-- Right Grid -->
     <div class="who-grid">
 
       <div class="who-card">
         <h3>Local Service Businesses</h3>
-        <p>Electricians, plumbers, repair services — rank higher when people search “near me”.</p>
+        <p>Electricians, plumbers, repair services — rank higher when people search nearby.</p>
       </div>
 
       <div class="who-card">
         <h3>Clinics & Healthcare</h3>
-        <p>Doctors, dentists, clinics — get discovered by patients searching in your area.</p>
+        <p>Doctors, dentists, clinics — get discovered by patients in your area.</p>
       </div>
 
       <div class="who-card">
         <h3>Restaurants & Cafes</h3>
-        <p>Show up when customers search for places to eat nearby.</p>
+        <p>Appear when customers search for food and places nearby.</p>
       </div>
 
       <div class="who-card">
         <h3>Real Estate</h3>
-        <p>Capture local buyers searching for property in Kolkata.</p>
+        <p>Capture buyers searching for property in Kolkata.</p>
       </div>
 
       <div class="who-card">
         <h3>Coaching Centers</h3>
-        <p>Reach students searching for classes and institutes near them.</p>
+        <p>Reach students looking for classes near them.</p>
       </div>
 
       <div class="who-card">
         <h3>Freelancers & Small Businesses</h3>
-        <p>Build visibility and attract clients without heavy ad spend.</p>
+        <p>Build visibility and attract local clients consistently.</p>
       </div>
 
     </div>
