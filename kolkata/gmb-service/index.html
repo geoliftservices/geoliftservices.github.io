@@ -1460,92 +1460,66 @@ Professional Google My Business optimization in Kolkata to improve your Google M
 
 
 
-<!-- Who This Service Is For -->
-<section class="who-for">
-  <div class="container">
-    
-    <h2 class="section-title">
-      Who Needs GMB Optimization in Kolkata?
-    </h2>
-    
-    <p class="section-subtitle">
-      If your business depends on local customers, your Google presence should bring calls — not stay invisible.
-    </p>
-
-    <div class="who-grid">
-
-      <div class="who-card">
-        <h3>Local Service Businesses</h3>
-        <p>Electricians, plumbers, repair services — rank higher when people search “near me”.</p>
-      </div>
-
-      <div class="who-card">
-        <h3>Clinics & Healthcare</h3>
-        <p>Doctors, dentists, clinics — get discovered by patients searching in your area.</p>
-      </div>
-
-      <div class="who-card">
-        <h3>Restaurants & Cafes</h3>
-        <p>Show up when customers search for places to eat nearby.</p>
-      </div>
-
-      <div class="who-card">
-        <h3>Real Estate & Agents</h3>
-        <p>Capture local buyers searching for property in Kolkata.</p>
-      </div>
-
-      <div class="who-card">
-        <h3>Coaching & Education</h3>
-        <p>Reach students looking for classes and institutes near them.</p>
-      </div>
-
-      <div class="who-card">
-        <h3>Freelancers & Small Businesses</h3>
-        <p>Build visibility and attract clients without heavy ad spend.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<style>
+/* Who This Service Is For */
 .who-for {
-  padding: 80px 20px;
-  background: #0f172a;
-  color: #fff;
+  padding: 60px 20px;
+  background: #0b1220;
   text-align: center;
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: #ffffff;
 }
 
 .section-subtitle {
-  font-size: 16px;
-  color: #cbd5f5;
-  max-width: 600px;
-  margin: 0 auto 50px;
+  font-size: 15px;
+  color: #94a3b8;
+  max-width: 650px;
+  margin: 0 auto 10px;
 }
 
+.who-location {
+  font-size: 14px;
+  color: #3b82f6;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* Grid */
 .who-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
+/* Responsive */
+@media (max-width: 900px) {
+  .who-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .who-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
 .who-card {
-  background: linear-gradient(145deg, #1e293b, #0b1220);
-  padding: 25px;
+  background: linear-gradient(145deg, #111827, #020617);
+  padding: 25px 20px;
   border-radius: 16px;
-  transition: all 0.35s ease;
-  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.06);
   position: relative;
   overflow: hidden;
 }
 
+/* Subtle hover glow */
 .who-card::before {
   content: "";
   position: absolute;
@@ -1554,7 +1528,7 @@ Professional Google My Business optimization in Kolkata to improve your Google M
   top: 0;
   left: -100%;
   background: linear-gradient(120deg, transparent, rgba(59,130,246,0.2), transparent);
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .who-card:hover::before {
@@ -1562,23 +1536,22 @@ Professional Google My Business optimization in Kolkata to improve your Google M
 }
 
 .who-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-6px);
   border-color: rgba(59,130,246,0.4);
-  box-shadow: 0 10px 30px rgba(59,130,246,0.2);
+  box-shadow: 0 10px 25px rgba(59,130,246,0.15);
 }
 
 .who-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #fff;
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .who-card p {
   font-size: 14px;
-  color: #cbd5f5;
+  color: #94a3b8;
   line-height: 1.5;
 }
-</style>
 
   
 
