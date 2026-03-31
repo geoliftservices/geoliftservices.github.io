@@ -1511,7 +1511,7 @@ Choose from modern single page website templates or get a custom one-page websit
 
 <style>
 
-/* TEMPLATE SECTION */
+/* ================= PREMIUM TEMPLATE SECTION ================= */
 
 .template-section{
   padding:80px 20px;
@@ -1526,79 +1526,22 @@ Choose from modern single page website templates or get a custom one-page websit
 }
 
 .template-header h2{
-  font-size:36px;
+  font-size:38px;
   font-weight:800;
+  color:#0f172a;
   margin-bottom:10px;
 }
 
 .template-header p{
   color:#64748b;
-  margin-bottom:40px;
+  margin-bottom:50px;
 }
 
+/* GRID */
 .template-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:25px;
-}
-
-.template-card{
-  border:1px solid #e5e7eb;
-  border-radius:14px;
-  overflow:hidden;
-  transition:0.3s;
-}
-
-.template-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
-}
-
-.template-img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  border-bottom:1px solid #e5e7eb;
-}
-
-.template-content{
-  padding:16px;
-  text-align:left;
-}
-
-.template-content h3{
-  font-size:18px;
-  margin-bottom:5px;
-}
-
-.template-content p{
-  font-size:14px;
-  color:#64748b;
-}
-
-.template-features{
-  font-size:13px;
-  margin:10px 0;
-}
-
-.template-btn{
-  display:inline-block;
-  padding:8px 14px;
-  border-radius:25px;
-  font-size:13px;
-  text-decoration:none;
-  margin-top:5px;
-}
-
-.demo-btn{
-  background:#6366f1;
-  color:#fff;
-}
-
-.get-btn{
-  background:#10b981;
-  color:#fff;
-  margin-left:5px;
+  gap:28px;
 }
 
 @media(max-width:900px){
@@ -1609,17 +1552,107 @@ Choose from modern single page website templates or get a custom one-page websit
   .template-grid{grid-template-columns:1fr;}
 }
 
-
-
+/* CARD */
 .template-card{
-  display:flex;
-  flex-direction:column;
-  height:100%;
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  transition:0.4s;
+  box-shadow:0 15px 40px rgba(0,0,0,0.06);
 }
 
-.template-content{
-  flex-grow:1;
+.template-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 70px rgba(0,0,0,0.12);
 }
+
+/* IMAGE */
+.template-img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+  transition:0.4s;
+}
+
+/* OVERLAY */
+.template-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(15,23,42,0.65);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:0.4s;
+}
+
+.overlay-btn{
+  padding:11px 22px;
+  background:#6366f1;
+  color:#fff;
+  border-radius:30px;
+  font-size:14px;
+  text-decoration:none;
+  transform:translateY(12px);
+  transition:0.3s;
+}
+
+/* HOVER EFFECT */
+.template-card:hover .template-overlay{
+  opacity:1;
+}
+
+.template-card:hover .overlay-btn{
+  transform:translateY(0);
+}
+
+.template-card:hover .template-img{
+  transform:scale(1.05);
+}
+
+/* CONTENT */
+.template-content{
+  padding:18px;
+  text-align:left;
+}
+
+.template-content h3{
+  font-size:18px;
+  margin-bottom:6px;
+  color:#0f172a;
+}
+
+.template-content p{
+  font-size:14px;
+  color:#64748b;
+  margin-bottom:10px;
+}
+
+.template-features{
+  font-size:13px;
+  color:#475569;
+  margin-bottom:14px;
+  line-height:1.6;
+}
+
+/* BUTTON */
+.get-btn{
+  display:inline-block;
+  padding:9px 18px;
+  background:#10b981;
+  color:#fff;
+  border-radius:25px;
+  font-size:13px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.get-btn:hover{
+  background:#059669;
+}
+
 </style>
 
 
@@ -1635,91 +1668,149 @@ Choose from modern single page website templates or get a custom one-page websit
 
 <!-- DENTAL -->
 <div class="template-card">
-<img src="https://www.geolift.co.in/images/Screenshot_1.png">
-<div class="template-content">
-<h3>Dental Website</h3>
-<p>For clinics & healthcare</p>
-<div class="template-features">✔ Appointment ✔ Clean UI ✔ Mobile ready</div>
-<a href="https://megaone.acrothemes.com/index-dental.html" target="_blank" class="template-btn demo-btn">View Demo</a>
-<a href="https://wa.me/919477469499" class="template-btn get-btn">Get Website</a>
-</div>
+  <div style="position:relative;">
+    <img src="https://www.geolift.co.in/images/Screenshot_1.png" class="template-img">
+    <div class="template-overlay">
+      <a href="https://megaone.acrothemes.com/index-dental.html" target="_blank" class="overlay-btn">Live Preview</a>
+    </div>
+  </div>
+  <div class="template-content">
+    <h3>Dental Website Template</h3>
+    <p>Perfect for clinics & healthcare businesses</p>
+    <div class="template-features">
+      ✔ Appointment focused<br>
+      ✔ Clean UI<br>
+      ✔ Mobile responsive
+    </div>
+    <a href="https://wa.me/919477469499" class="get-btn">Get This Website</a>
+  </div>
 </div>
 
 <!-- RESTAURANT -->
 <div class="template-card">
-<img src="https://www.geolift.co.in/images/Screenshot_2.png">
-<div class="template-content">
-<h3>Restaurant Website</h3>
-<p>For cafes & food</p>
-<div class="template-features">✔ Menu ✔ Booking ✔ Modern</div>
-<a href="https://www.geolift.co.in/images/Screenshot_2.png" target="_blank" class="template-btn demo-btn">View Demo</a>
-<a href="https://wa.me/919477469499" class="template-btn get-btn">Get Website</a>
-</div>
+  <div style="position:relative;">
+    <img src="https://www.geolift.co.in/images/Screenshot_2.png" class="template-img">
+    <div class="template-overlay">
+      <a href="https://megaone.acrothemes.com/index-restaurant.html" target="_blank" class="overlay-btn">Live Preview</a>
+    </div>
+  </div>
+  <div class="template-content">
+    <h3>Restaurant Website</h3>
+    <p>Best for cafes & food businesses</p>
+    <div class="template-features">
+      ✔ Menu showcase<br>
+      ✔ Booking ready<br>
+      ✔ Modern design
+    </div>
+    <a href="https://wa.me/919477469499" class="get-btn">Get This Website</a>
+  </div>
 </div>
 
 <!-- GYM -->
 <div class="template-card">
-<img src="https://www.geolift.co.in/images/Screenshot_3.png">
-<div class="template-content">
-<h3>Gym Website</h3>
-<p>Fitness & trainers</p>
-<div class="template-features">✔ Bold ✔ CTA ✔ Fast</div>
-<a href="https://megaone.acrothemes.com/index-gym.html" target="_blank" class="template-btn demo-btn">View Demo</a>
-<a href="https://wa.me/919477469499" class="template-btn get-btn">Get Website</a>
-</div>
+  <div style="position:relative;">
+    <img src="https://www.geolift.co.in/images/Screenshot_3.png" class="template-img">
+    <div class="template-overlay">
+      <a href="https://megaone.acrothemes.com/index-gym.html" target="_blank" class="overlay-btn">Live Preview</a>
+    </div>
+  </div>
+  <div class="template-content">
+    <h3>Gym Website</h3>
+    <p>Ideal for fitness trainers & gyms</p>
+    <div class="template-features">
+      ✔ Bold modern UI<br>
+      ✔ CTA focused<br>
+      ✔ Fast loading
+    </div>
+    <a href="https://wa.me/919477469499" class="get-btn">Get This Website</a>
+  </div>
 </div>
 
 <!-- LOGISTICS -->
 <div class="template-card">
-<img src="https://www.geolift.co.in/images/Screenshot_4.png">
-<div class="template-content">
-<h3>Logistics Website</h3>
-<p>Transport businesses</p>
-<div class="template-features">✔ Professional ✔ Services ✔ Leads</div>
-<a href="https://megaone.acrothemes.com/index-logistic.html" target="_blank" class="template-btn demo-btn">View Demo</a>
-<a href="https://wa.me/919477469499" class="template-btn get-btn">Get Website</a>
-</div>
+  <div style="position:relative;">
+    <img src="https://www.geolift.co.in/images/Screenshot_4.png" class="template-img">
+    <div class="template-overlay">
+      <a href="https://megaone.acrothemes.com/index-logistic.html" target="_blank" class="overlay-btn">Live Preview</a>
+    </div>
+  </div>
+  <div class="template-content">
+    <h3>Logistics Website</h3>
+    <p>Best for transport & logistics companies</p>
+    <div class="template-features">
+      ✔ Professional layout<br>
+      ✔ Service showcase<br>
+      ✔ Lead generation
+    </div>
+    <a href="https://wa.me/919477469499" class="get-btn">Get This Website</a>
+  </div>
 </div>
 
 <!-- LAW -->
 <div class="template-card">
-<img src="https://www.geolift.co.in/images/Screenshot_5.png">
-<div class="template-content">
-<h3>Law Website</h3>
-<p>Legal services</p>
-<div class="template-features">✔ Trust ✔ Clean ✔ CTA</div>
-<a href="https://megaone.acrothemes.com/index-law.html" target="_blank" class="template-btn demo-btn">View Demo</a>
-<a href="https://wa.me/919477469499" class="template-btn get-btn">Get Website</a>
-</div>
+  <div style="position:relative;">
+    <img src="https://www.geolift.co.in/images/Screenshot_5.png" class="template-img">
+    <div class="template-overlay">
+      <a href="https://megaone.acrothemes.com/index-law.html" target="_blank" class="overlay-btn">Live Preview</a>
+    </div>
+  </div>
+  <div class="template-content">
+    <h3>Law Firm Website</h3>
+    <p>Professional template for legal services</p>
+    <div class="template-features">
+      ✔ Trust-building design<br>
+      ✔ Consultation CTA<br>
+      ✔ Clean UI
+    </div>
+    <a href="https://wa.me/919477469499" class="get-btn">Get This Website</a>
+  </div>
 </div>
 
 <!-- REAL ESTATE -->
 <div class="template-card">
-<img src="https://www.geolift.co.in/images/Screenshot_6.png">
-<div class="template-content">
-<h3>Real Estate</h3>
-<p>Property business</p>
-<div class="template-features">✔ Listings ✔ Leads ✔ UI</div>
-<a href="https://megaone.acrothemes.com/index-realestate.html" target="_blank" class="template-btn demo-btn">View Demo</a>
-<a href="https://wa.me/919477469499" class="template-btn get-btn">Get Website</a>
-</div>
+  <div style="position:relative;">
+    <img src="https://www.geolift.co.in/images/Screenshot_6.png" class="template-img">
+    <div class="template-overlay">
+      <a href="https://megaone.acrothemes.com/index-realestate.html" target="_blank" class="overlay-btn">Live Preview</a>
+    </div>
+  </div>
+  <div class="template-content">
+    <h3>Real Estate Website</h3>
+    <p>Perfect for property dealers & agents</p>
+    <div class="template-features">
+      ✔ Property listings<br>
+      ✔ Lead capture<br>
+      ✔ Modern layout
+    </div>
+    <a href="https://wa.me/919477469499" class="get-btn">Get This Website</a>
+  </div>
 </div>
 
 <!-- YOGA -->
 <div class="template-card">
-<img src="https://www.geolift.co.in/images/Screenshot_8.png">
-<div class="template-content">
-<h3>Yoga Website</h3>
-<p>Wellness & trainers</p>
-<div class="template-features">✔ Calm ✔ Booking ✔ Mobile</div>
-<a href="https://megaone.acrothemes.com/index-yoga.html" target="_blank" class="template-btn demo-btn">View Demo</a>
-<a href="https://wa.me/919477469499" class="template-btn get-btn">Get Website</a>
-</div>
+  <div style="position:relative;">
+    <img src="https://www.geolift.co.in/images/Screenshot_8.png" class="template-img">
+    <div class="template-overlay">
+      <a href="https://megaone.acrothemes.com/index-yoga.html" target="_blank" class="overlay-btn">Live Preview</a>
+    </div>
+  </div>
+  <div class="template-content">
+    <h3>Yoga & Wellness Website</h3>
+    <p>Best for yoga trainers & wellness brands</p>
+    <div class="template-features">
+      ✔ Calm UI design<br>
+      ✔ Booking CTA<br>
+      ✔ Mobile optimized
+    </div>
+    <a href="https://wa.me/919477469499" class="get-btn">Get This Website</a>
+  </div>
 </div>
 
 </div>
 </div>
 </section>
+
+
   
 
 
