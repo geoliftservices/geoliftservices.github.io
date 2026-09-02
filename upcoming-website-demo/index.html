@@ -448,6 +448,25 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 
 @media(max-width:620px){.section{padding:76px 0}}
 
+
+/* Automation layer */
+.automation-section{background:#F8FAFC;border-top:1px solid var(--line);}
+.automation-grid{display:grid;grid-template-columns:1fr .9fr;gap:72px;align-items:center;}
+.automation-copy h2{max-width:720px;}
+.automation-copy p{max-width:680px;}
+.automation-pills{display:flex;flex-wrap:wrap;gap:8px;margin:26px 0 30px;}
+.automation-pills span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;border:1px solid var(--line);padding:9px 11px;background:#fff;}
+.automation-visual{display:flex;justify-content:center;}
+.auto-card{width:min(100%,480px);background:var(--ink);border:1px solid rgba(255,255,255,.08);padding:24px;box-shadow:0 24px 60px rgba(15,23,42,.14);}
+.auto-head{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted-dark);padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.1);}
+.auto-head b{color:#D96A32;}
+.auto-step{display:flex;gap:16px;align-items:center;padding:18px 0;}
+.auto-step>span{font-family:var(--mono);font-size:11px;color:#D96A32;}
+.auto-step small{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--muted-dark);margin-bottom:4px;}
+.auto-step strong{color:#fff;font-size:15px;}
+.auto-step.active{border:1px solid rgba(217,106,50,.35);padding:15px;margin-top:2px;background:rgba(217,106,50,.06);}
+.auto-arrow{text-align:center;color:#64748B;font-family:var(--mono);font-size:12px;}
+@media(max-width:900px){.automation-grid{grid-template-columns:1fr;gap:42px;}}
 </style>
 </head>
 <body>
@@ -461,7 +480,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <img alt="GeoLift" class="logo" decoding="async" height="35" src="https://www.geolift.co.in/images/e45fb683-6afa-4cd0-a4a0-63afa5731ed9.webp" width="35"/>
 <span class="wordmark">Geo<span>Lift</span></span>
 </a>
-<nav class="links" id="navLinks"><a href="#management">Management</a><a href="#services">Services</a><a href="#multi-location">Multi-Location</a><a href="#agency">For Agencies</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+<nav class="links" id="navLinks"><a href="#management">Management</a><a href="#automation">Automation</a><a href="#services">Services</a><a href="#multi-location">Multi-Location</a><a href="#agency">For Agencies</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
 <div class="nav-cta">
 <a class="btn btn-primary" href="#contact">Request a Proposal <span class="arrow">→</span></a>
 <button aria-expanded="false" aria-label="Open menu" class="menu" id="menu">☰</button>
@@ -490,9 +509,9 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="signal s1"></div><div class="signal s2"></div><div class="signal s3"></div>
 <div class="container hero-grid">
 <div class="hero-copy reveal">
-<span class="eyebrow dark">Google Business Profile Management</span>
-<h1>Your Google Presence. <span class="accent">Professionally Managed.<br/>Commercially Accountable.</span></h1>
-<p class="hero-lead">GeoLift is the specialist Google Business Profile partner for businesses, multi-location organizations and agencies — managing profiles, reputation, local activity and scalable execution, with white-label fulfillment for agencies.</p>
+<span class="eyebrow dark">Google Business · Automation · Lead Generation</span>
+<h1>Google Business Profile Management. <span class="accent">Automation Built to Scale.</span></h1>
+<p class="hero-lead">GeoLift combines Google Business Profile management with WhatsApp automation, AI chatbots and automated lead-generation workflows — giving businesses and agencies one specialist layer for visibility, conversations and growth.</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="#contact">Bring Your Google Presence Under Control <span class="arrow">→</span></a>
 <a class="btn btn-dark" href="#agency">Explore Agency Fulfillment</a>
@@ -537,9 +556,9 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 </section>
 <section class="proof-strip">
 <div class="container proof-strip-inner">
-<div><b>ONE SPECIALIST LAYER</b><span>Google Business Profile operations</span></div>
+<div><b>ONE SPECIALIST LAYER</b><span>Google Business + automation operations</span></div>
 <div><b>HUMAN OVERSIGHT</b><span>Important actions stay accountable</span></div>
-<div><b>BUILT TO SCALE</b><span>From one profile to large networks</span></div>
+<div><b>BUILT TO CONVERT</b><span>Chatbots, WhatsApp &amp; lead workflows</span></div>
 </div>
 </section>
 <section class="trust">
@@ -562,6 +581,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="outcome-row"><span class="num">01</span><div><h3>Outdated information</h3><p>Customers act on what they see — even when the profile is no longer accurate.</p></div><span class="tag">TRUST</span></div>
 <div class="outcome-row"><span class="num">02</span><div><h3>Unmanaged reputation</h3><p>Reviews keep shaping perception whether someone is actively managing them or not.</p></div><span class="tag">REPUTATION</span></div>
 <div class="outcome-row"><span class="num">03</span><div><h3>Inconsistent execution</h3><p>As locations multiply, recurring work becomes harder to control internally.</p></div><span class="tag">CONTROL</span></div>
+<div class="outcome-row"><span class="num">04</span><div><h3>Leads left waiting</h3><p>Enquiries can arrive after hours or across channels. Without a system, response time depends on someone being available.</p></div><span class="tag">CONVERSION</span></div>
 </div>
 </div></section>
 
@@ -577,6 +597,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="pillar"><span class="num">01 / CONTROL</span><h3>Keep every location aligned.</h3><p>Business information, services, hours, attributes and content managed against a consistent standard.</p></div>
 <div class="pillar"><span class="num">02 / REPUTATION</span><h3>Stay on top of every review.</h3><p>Reviews monitored and responses managed with a quality-control step before publication.</p></div>
 <div class="pillar"><span class="num">03 / SCALE</span><h3>Grow locations without growing the workload.</h3><p>Bulk workflows and centralized oversight make larger profile networks manageable.</p></div>
+<div class="pillar"><span class="num">04 / CONVERT</span><h3>Turn enquiries into a repeatable flow.</h3><p>WhatsApp automation, AI chatbots and lead workflows can capture, qualify and follow up with prospects.</p></div>
 </div>
 </div>
 </section><section class="section why-section" id="why-geolift">
@@ -600,14 +621,16 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="container layers">
 <div class="section-head reveal">
 <span class="eyebrow dark">One operation / multiple layers</span>
-<h2>Built for Trust.</h2>
-<p>Repeatable workflows handle the volume. Human oversight handles the judgment. The result is a management layer designed for accuracy, consistency and control.</p>
+<h2>Built for Trust. Built to Convert.</h2>
+<p>Google Business management keeps your presence accurate. Automation keeps conversations moving. Lead-generation systems help turn attention into enquiries. Human oversight keeps the entire operation controlled.</p>
 <div class="layer-list">
 <div class="layer"><span class="layer-num">01</span><div><h3>Profile Control</h3><p>Core information, categories, services, hours, attributes and ongoing maintenance.</p></div></div>
 <div class="layer"><span class="layer-num">02</span><div><h3>Reputation</h3><p>Review monitoring, response management, approval workflows and escalation.</p></div></div>
 <div class="layer"><span class="layer-num">03</span><div><h3>Content &amp; Activity</h3><p>Posts, services, products and photos managed on an agreed schedule.</p></div></div>
 <div class="layer"><span class="layer-num">04</span><div><h3>Monitoring</h3><p>Important profile changes, issues and exceptions surfaced for action.</p></div></div>
-<div class="layer"><span class="layer-num">05</span><div><h3>Reporting</h3><p>Clear visibility into what was checked, changed, completed and left open.</p></div></div>
+<div class="layer"><span class="layer-num">05</span><div><h3>Automation</h3><p>WhatsApp workflows, AI-assisted chatbots and automated follow-up systems designed around your lead flow.</p></div></div>
+<div class="layer"><span class="layer-num">06</span><div><h3>Lead Generation</h3><p>Tools and workflows that capture, qualify, route and follow up with enquiries automatically.</p></div></div>
+<div class="layer"><span class="layer-num">07</span><div><h3>Reporting</h3><p>Clear visibility into profile activity, automation workflows, leads and completed work.</p></div></div>
 </div>
 </div>
 <div class="layer-visual reveal">
@@ -627,12 +650,26 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 </div>
 </div>
 </section>
+<section class="section automation-section" id="automation">
+<div class="container automation-grid">
+<div class="automation-copy reveal">
+<span class="eyebrow">Automation &amp; lead generation</span>
+<h2>Turn enquiries into a system — not another task.</h2>
+<p>GeoLift can connect the front end of your local presence with practical automation: WhatsApp workflows, AI chatbots, lead capture, routing and follow-up tools that reduce manual handling and keep opportunities moving.</p>
+<div class="automation-pills"><span>WHATSAPP AUTOMATION</span><span>AI CHATBOTS</span><span>LEAD CAPTURE</span><span>AUTO FOLLOW-UP</span><span>LEAD ROUTING</span></div>
+<a class="btn btn-primary" href="#contact">Build Your Automation Layer <span class="arrow">→</span></a>
+</div>
+<div class="automation-visual reveal">
+<div class="auto-card"><div class="auto-head"><span>LEAD FLOW / AUTOMATED</span><b>LIVE</b></div><div class="auto-step"><span>01</span><div><small>TRAFFIC</small><strong>Google / Website / Ads</strong></div></div><div class="auto-arrow">↓</div><div class="auto-step"><span>02</span><div><small>CAPTURE</small><strong>AI Chatbot / WhatsApp</strong></div></div><div class="auto-arrow">↓</div><div class="auto-step"><span>03</span><div><small>ACTION</small><strong>Qualify · Route · Follow up</strong></div></div><div class="auto-arrow">↓</div><div class="auto-step active"><span>04</span><div><small>OUTCOME</small><strong>Sales-ready enquiry</strong></div></div></div>
+</div>
+</div>
+</section>
 <section class="section" id="process">
 <div class="container">
 <div class="section-head reveal">
 <span class="eyebrow">How GeoLift operates</span>
 <h2>A disciplined process. Fewer things left to chance.</h2>
-<p>The workflow stays consistent whether you have one profile, a network of locations, or an agency client portfolio.</p>
+<p>The workflow stays consistent whether you need one managed profile, a multi-location operation, agency fulfillment, or an automation layer that turns incoming enquiries into a repeatable process.</p>
 </div>
 <div class="workflow reveal">
 <div class="step"><span class="step-num">OPS / 01</span><h3>Onboard</h3><p>Locations, access, scope and business information are organized into one operating record.</p></div>
@@ -655,6 +692,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <li>Bulk updates applied consistently across profiles</li>
 <li>Location-level monitoring and exception handling</li>
 <li>Consolidated reporting across the network</li>
+<li>Automation and lead workflows can sit alongside profile operations</li>
 </ul>
 </div>
 <div class="control reveal">
@@ -673,8 +711,8 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="agency-copy reveal">
 <span class="eyebrow dark">For agencies</span>
 <h2>Keep the Client. We Run the Operation.</h2>
-<p>Your agency keeps the relationship, strategy and brand. GeoLift runs the Google Business Profile work behind the scenes — without adding another team to your operation.</p>
-<div class="agency-badges"><span>WHITE-LABEL</span><span>BULK MANAGEMENT</span><span>REVIEW OPS</span><span>REPORTING</span><span>NDA AVAILABLE</span></div>
+<p>Your agency keeps the relationship, strategy and brand. GeoLift can run the Google Business Profile operation behind the scenes — and add white-label automation, chatbots, WhatsApp workflows and lead-generation execution without adding another team to your operation.</p>
+<div class="agency-badges"><span>WHITE-LABEL</span><span>BULK MANAGEMENT</span><span>REVIEW OPS</span><span>WHATSAPP AUTOMATION</span><span>AI CHATBOTS</span><span>LEAD GENERATION</span><span>REPORTING</span><span>NDA AVAILABLE</span></div>
 <a class="btn btn-primary" href="#contact" style="margin-top:24px">Discuss White-Label Fulfillment <span class="arrow">→</span></a>
 </div>
 <div class="flow reveal">
@@ -691,7 +729,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="reputation-copy reveal">
 <span class="eyebrow">Reputation operations</span>
 <h2>Every review is a customer touchpoint. Every response should be deliberate.</h2>
-<p>GeoLift can monitor incoming reviews, prepare responses within your agreed voice, apply quality checks and keep the workflow moving — instead of leaving your team to remember.</p>
+<p>GeoLift can monitor incoming reviews, prepare responses within your agreed voice, apply quality checks and keep the workflow moving. The same operating approach can extend into WhatsApp automation, AI chatbots and lead follow-up.</p>
 </div>
 <div class="review-card reveal">
 <div class="review-top"><span class="review-source">REVIEW / NEW ACTIVITY</span><span class="stars">★★★★★</span></div>
@@ -738,12 +776,13 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="container proof">
 <div class="proof-copy reveal">
 <span class="eyebrow">The GeoLift standard</span>
-<h2>Specialized GBP management. Built around control.</h2>
-<p>GeoLift is not trying to be everything. We focus on the operational layer behind Google Business Profiles — the recurring work that needs consistency, speed and accountability.</p>
+<h2>Google Business, automation and lead generation — under one operating standard.</h2>
+<p>GeoLift brings together the systems businesses increasingly need to win locally: managed Google Business Profiles, reputation operations, WhatsApp automation, AI chatbots and automated lead workflows — with human oversight where it matters.</p>
 </div>
 <div class="proof-grid reveal">
 <div class="proof-item"><small>SPECIALIZED</small><b>GBP-first operation</b><p>Focused on the work behind your profiles rather than a long list of unrelated marketing services.</p></div>
 <div class="proof-item"><small>CONTROLLED</small><b>Human quality checks</b><p>Important work is reviewed instead of relying on automation alone.</p></div>
+<div class="proof-item"><small>AUTOMATED</small><b>Lead workflows</b><p>Enquiries can be captured, qualified, routed and followed up through connected tools.</p></div>
 <div class="proof-item"><small>SCALABLE</small><b>Single to multi-location</b><p>The same operating discipline can extend across larger profile networks.</p></div>
 <div class="proof-item"><small>AGENCY READY</small><b>White-label delivery</b><p>Your agency can retain the client relationship while GeoLift handles fulfillment.</p></div>
 </div>
@@ -753,12 +792,12 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="section-head reveal">
 <span class="eyebrow">Pricing / operating scope</span>
 <h2>Built around the work — not a one-size-fits-all package.</h2>
-<p>Management scope depends on profile count, locations, service mix, frequency and whether GeoLift is working directly with your business or behind an agency.</p>
+<p>Scope depends on profile count, locations, management frequency and the systems you need — from GBP operations to WhatsApp automation, AI chatbots and lead-generation workflows.</p>
 </div>
 <div class="pricing-grid reveal">
-<div class="price-card"><span class="price-label">DIRECT</span><h3>Single Location</h3><p>For businesses that want their Google presence professionally managed without adding the workload internally.</p><ul><li>Profile management</li><li>Reputation operations</li><li>Ongoing maintenance</li><li>Reporting</li></ul></div>
-<div class="price-card featured"><span class="price-label">SCALE</span><h3>Multi-Location</h3><p>For organizations that need centralized execution and consistent standards across multiple locations.</p><ul><li>Centralized management</li><li>Bulk workflows</li><li>Location-level visibility</li><li>Scalable reporting</li></ul></div>
-<div class="price-card"><span class="price-label">AGENCY</span><h3>White-Label Fulfillment</h3><p>For agencies that keep the client relationship while GeoLift runs the Google Business Profile operation behind the scenes.</p><ul><li>White-label delivery</li><li>Bulk management</li><li>Review operations</li><li>Agency-ready reporting</li></ul></div>
+<div class="price-card"><span class="price-label">DIRECT</span><h3>Business Growth</h3><p>For businesses that want Google Business management plus practical automation and lead-flow support.</p><ul><li>Profile management</li><li>Reputation operations</li><li>WhatsApp / chatbot automation</li><li>Lead capture &amp; follow-up</li></ul></div>
+<div class="price-card featured"><span class="price-label">SCALE</span><h3>Multi-Location</h3><p>For organizations that need centralized Google operations and scalable lead workflows across locations.</p><ul><li>Centralized management</li><li>Bulk workflows</li><li>Automation systems</li><li>Location-level visibility</li></ul></div>
+<div class="price-card"><span class="price-label">AGENCY</span><h3>White-Label Fulfillment</h3><p>For agencies that want one behind-the-scenes partner for GBP management, automation and lead-generation execution.</p><ul><li>White-label delivery</li><li>Bulk management</li><li>Chatbots &amp; WhatsApp automation</li><li>Lead-generation workflows</li></ul></div>
 </div>
 <div class="pricing-cta reveal"><span>Tell us what you manage. We'll define the right operating scope.</span><a class="btn btn-primary" href="#contact">Request a Proposal <span class="arrow">→</span></a></div>
 </div>
@@ -773,6 +812,10 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="faq-item">
 <button class="faq-q">What exactly does GeoLift manage?<span>+</span></button>
 <div class="faq-a"><p>Depending on your scope, GeoLift can manage profile information, content and activity, reviews, multi-location coordination, monitoring and reporting. The exact scope is defined before work begins.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q">Do you provide WhatsApp automation, AI chatbots and lead generation?<span>+</span></button>
+<div class="faq-a"><p>Yes. GeoLift can build practical automation around your enquiry flow, including WhatsApp workflows, AI chatbots, lead capture, qualification, routing and follow-up. The exact tools and integrations depend on your requirements.</p></div>
 </div>
 <div class="faq-item">
 <button class="faq-q">Can you manage multiple locations?<span>+</span></button>
@@ -798,7 +841,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="contact-copy reveal">
 <span class="eyebrow dark">Start the operation</span>
 <h2>Your Google presence deserves a higher operating standard.</h2>
-<p>Tell us how many profiles you operate, what you need managed and whether you are a business or agency. We'll recommend the right operating scope — not force you into a generic package.</p>
+<p>Tell us what you need managed — Google Business Profiles, automation, chatbots, WhatsApp or lead generation — and whether you are a business or agency. We'll recommend the right operating scope.</p>
 <a class="contact-email" href="mailto:hello@geolift.co.in">hello@geolift.co.in →</a>
 </div>
 <form class="form reveal" id="proposalForm">
@@ -821,10 +864,10 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="footer-grid">
 <div class="footer-brand">
 <a class="brand" href="#top"><img alt="GeoLift" class="logo" decoding="async" height="35" src="https://www.geolift.co.in/images/e45fb683-6afa-4cd0-a4a0-63afa5731ed9.webp" width="35"/><span class="wordmark">Geo<span>Lift</span></span></a>
-<p>The specialist operating partner behind Google Business Profiles — for businesses, multi-location organizations and agencies.</p>
+<p>The specialist operating partner for Google Business Profiles, automation and lead-generation systems — for businesses, multi-location organizations and agencies.</p>
 <div aria-label="Social links" class="footer-social"><a aria-label="LinkedIn" href="#">LI</a><a aria-label="Instagram" href="#">IG</a><a aria-label="Facebook" href="#">FB</a><a aria-label="X" href="#">X</a><a aria-label="YouTube" href="#">YT</a></div>
 </div>
-<div class="footer-col"><h5>Services</h5><a href="#management">GBP Management</a><a href="#services">Profile Management</a><a href="#reputation">Reputation Management</a><a href="#services">Content &amp; Activity</a><a href="#services">Monitoring</a><a href="#services">Reporting</a></div>
+<div class="footer-col"><h5>Services</h5><a href="#management">GBP Management</a><a href="#services">Profile Management</a><a href="#reputation">Reputation Management</a><a href="#automation">WhatsApp Automation</a><a href="#automation">AI Chatbots</a><a href="#automation">Lead Generation</a><a href="#services">Monitoring &amp; Reporting</a></div>
 <div class="footer-col"><h5>Solutions</h5><a href="#multi-location">Multi-Location</a><a href="#agency">Agency Fulfillment</a><a href="#agency">White-Label</a><a href="#control">Control &amp; Security</a><a href="#why-geolift">Why GeoLift</a><a href="#pricing">Pricing</a></div>
 <div class="footer-col"><h5>Company</h5><a href="#top">Home</a><a href="#management">About the Operation</a><a href="#process">How It Works</a><a href="#industries">Industries</a><a href="#proof">The GeoLift Standard</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
 </div>
