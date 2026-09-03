@@ -1125,6 +1125,64 @@ button,input,textarea,select{font:inherit;box-sizing:border-box}
   .hero h1{font-size:34px!important;letter-spacing:-0.01em!important;word-spacing:0.07em!important;}
 }
 </style>
+  <!-- Chatbase: start network work as early as possible. -->
+  <link rel="preconnect" href="https://www.chatbase.co" crossorigin>
+  <link rel="dns-prefetch" href="//www.chatbase.co">
+  <link rel="preload" href="https://www.chatbase.co/embed.min.js" as="script" fetchpriority="high">
+  <script>
+  (function(){
+    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...arguments)=>{
+        if(!window.chatbase.q){window.chatbase.q=[]}
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase=new Proxy(window.chatbase,{
+        get(target,prop){
+          if(prop==="q") return target.q;
+          return(...args)=>target(prop,...args)
+        }
+      })
+    }
+    function loadChatbase(){
+      if(document.getElementById("B2XiwU47o7PNgzJsVQ2LP")) return;
+      const script=document.createElement("script");
+      script.src="https://www.chatbase.co/embed.min.js";
+      script.id="B2XiwU47o7PNgzJsVQ2LP";
+      script.domain="www.chatbase.co";
+      script.async=true;
+      script.fetchPriority="high";
+      document.head.appendChild(script);
+    }
+    // Start immediately. Also warm the Chatbase UI in the background so the first tap
+    // does not have to pay the iframe initialization cost. The warm-up is invisible.
+    loadChatbase();
+    (function warmChatbase(){
+      let tries=0;
+      const timer=setInterval(function(){
+        tries++;
+        try{
+          if(window.chatbase && typeof window.chatbase.open==='function' && typeof window.chatbase.close==='function'){
+            document.documentElement.classList.add('chatbase-warming');
+            window.chatbase.open();
+            setTimeout(function(){
+              try{ window.chatbase.close(); }catch(e){}
+              document.documentElement.classList.remove('chatbase-warming');
+            },1600);
+            clearInterval(timer);
+          }
+        }catch(e){}
+        if(tries>100) clearInterval(timer);
+      },100);
+    })();
+  })();
+  </script>
+
+<style id="chatbase-warmup-css">
+/* Keep the one-time background warm-up invisible. */
+html.chatbase-warming iframe[src*="chatbase.co"],
+html.chatbase-warming [id*="chatbase"],
+html.chatbase-warming [class*="chatbase"]{opacity:0!important;pointer-events:none!important;}
+</style>
 </head>
 <body>
 <header>
@@ -1672,9 +1730,7 @@ document.getElementById('proposalForm').addEventListener('submit', e => {
   window.location.href = `mailto:hello@geolift.co.in?subject=${encodeURIComponent('Management Proposal Request — '+value('business'))}&body=${encodeURIComponent(body)}`;
 });
 </script>
-  <script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="B2XiwU47o7PNgzJsVQ2LP";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
+
 <style>
 /* ===== v5 refinement ===== */
 .operating-layer-section{background:linear-gradient(180deg,#f8fafc 0%,#f3f6f9 100%)!important;}
