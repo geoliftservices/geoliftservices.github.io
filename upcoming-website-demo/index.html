@@ -1538,8 +1538,11 @@ section, .container, .wrap { max-width:100%; }
 .gl-contact-side .contact-email{position:relative;z-index:2;margin-top:22px!important;padding-top:17px!important;border-top:1px solid rgba(255,255,255,.08)!important;color:#d9e1eb!important;font-size:11px!important;text-decoration:none!important;display:flex!important;justify-content:space-between!important;width:100%!important}
 .gl-contact-side .contact-email span{color:#fe6002}
 .gl-intake-form{position:relative!important;isolation:isolate;min-width:0;background:#f7f9fb!important;border:1px solid #dce3ea!important;border-radius:20px!important;padding:34px!important;box-shadow:0 35px 100px rgba(0,0,0,.28),0 1px 0 #fff inset!important;overflow:hidden!important;color:#0f172a!important}
-.gl-intake-form:before{content:"";position:absolute;width:330px;height:330px;right:-190px;top:-190px;border:1px solid rgba(254,96,2,.16);border-radius:50%;box-shadow:0 0 0 40px rgba(254,96,2,.028),0 0 0 90px rgba(254,96,2,.014);animation:glFormOrbit 14s linear infinite;pointer-events:none}
-.gl-intake-form:after{content:"LIVE";position:absolute;right:24px;bottom:20px;font:600 7px var(--mono);letter-spacing:.16em;color:#a2adba;opacity:.65}
+/* A compact, meaningful status track replaces the oversized moving oval. */
+.gl-intake-form:before{content:"";position:absolute;left:34px;top:17px;width:205px;height:24px;border:1px solid #dfe5eb;border-radius:999px;background:rgba(255,255,255,.78);box-shadow:0 5px 16px rgba(15,23,42,.045);pointer-events:none}
+.gl-intake-form:after{content:"REVIEW SIGNAL  •  READY";position:absolute;left:48px;top:25px;font:700 7px/1 var(--mono);letter-spacing:.13em;color:#7f8b99;pointer-events:none}
+.gl-intake-form .gl-form-top{padding-top:28px}
+.gl-intake-form .gl-form-rule{margin-top:20px}
 .gl-form-top{position:relative;z-index:2;display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
 .form-kicker{font:700 8px/1 var(--mono)!important;letter-spacing:.16em!important;color:#fe6002!important}
 .gl-form-top h3{margin:10px 0 8px!important;color:#101a29!important;font-size:clamp(25px,2.5vw,34px)!important;line-height:1.02!important;letter-spacing:-.04em!important}
@@ -1561,12 +1564,66 @@ section, .container, .wrap { max-width:100%; }
 @keyframes glPulse{0%,100%{transform:translate(-50%,-50%) scale(.75);opacity:.65}50%{transform:translate(-50%,-50%) scale(1.2);opacity:1}}
 @keyframes glScan{to{transform:rotate(360deg)}}
 @keyframes glSideOrbit{to{transform:rotate(360deg)}}
+.gl-intake-signal-line{position:absolute;left:48px;top:28px;width:177px;height:2px;z-index:1;overflow:hidden;border-radius:99px;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(254,96,2,.12),transparent)}
+.gl-intake-signal-line span{position:absolute;top:0;left:-35px;width:35px;height:2px;border-radius:99px;background:linear-gradient(90deg,transparent,#fe6002,transparent);animation:glSignalTravel 2.6s cubic-bezier(.45,0,.25,1) infinite}
+@keyframes glSignalTravel{0%{transform:translateX(0);opacity:0}12%{opacity:1}88%{opacity:1}100%{transform:translateX(212px);opacity:0}}
 @keyframes glFormOrbit{to{transform:translate(8px,8px) rotate(360deg)}}
 @keyframes glBeacon{0%,100%{opacity:.45;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
 @media(max-width:900px){#contact.gl-contact-premium{padding:76px 0 70px!important}.gl-contact-title-row{grid-template-columns:1fr;gap:30px}.gl-contact-status{justify-self:start;width:130px;height:130px}.gl-contact-workspace{grid-template-columns:1fr;gap:22px}.gl-contact-side{min-height:0;padding:25px}.gl-side-steps{margin-top:12px}.gl-intake-form{padding:28px!important}}
 @media(max-width:620px){#contact.gl-contact-premium{padding:62px 0 58px!important}.gl-contact-intro{margin-bottom:36px}.gl-contact-title-row{margin-top:15px}.gl-contact-title-row h2{font-size:39px!important;line-height:1!important}.gl-contact-title-row p{font-size:13px!important;margin-top:17px!important}.gl-contact-status{width:105px;height:105px}.gl-status-ring.r1{width:78px;height:78px}.gl-status-ring.r2{width:58px;height:58px}.gl-status-ring.r3{width:34px;height:34px}.gl-status-label{bottom:-17px;font-size:7px}.gl-contact-side{padding:22px;border-radius:16px}.gl-contact-side h3{font-size:27px}.gl-intake-form{padding:22px 18px!important;border-radius:16px!important}.gl-form-top{gap:10px}.gl-form-top h3{font-size:25px!important}.gl-form-index{font-size:8px}.gl-form-rule{margin:22px 0 20px}.gl-intake-form .fields{grid-template-columns:1fr!important;gap:15px!important}.gl-intake-form .field.full{grid-column:auto}.gl-form-submit{display:block}.gl-form-submit .btn{width:100%!important;min-width:0!important}.gl-form-submit>span{display:block;max-width:none;margin-top:10px}.gl-intake-form:after{display:none}}
 @media(prefers-reduced-motion:reduce){.gl-status-ring,.gl-status-core span,.gl-status-scan,.gl-contact-side:before,.gl-intake-form:before,.gl-side-step.is-live i{animation:none!important}}
 </style>
+
+<style id="geolift-intake-path-remake">
+/* ===== Intake side panel — logical review path ===== */
+.gl-contact-side{
+  min-height:590px!important;padding:28px 30px 24px!important;
+  background:
+    radial-gradient(circle at 82% 16%,rgba(254,96,2,.075),transparent 30%),
+    linear-gradient(155deg,#0d1b2d 0%,#091525 58%,#07111e 100%)!important;
+}
+.gl-contact-side:after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:34px 34px;mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent);
+}
+.gl-side-top,.gl-side-line,.gl-process-heading,.gl-route,.gl-side-footer{position:relative;z-index:3}
+.gl-side-line{margin:18px 0 25px!important}
+.gl-process-kicker{display:block;font:700 8px var(--mono);letter-spacing:.17em;color:#fe6002;margin-bottom:10px}
+.gl-process-heading h3{font-size:clamp(27px,2.65vw,37px)!important;line-height:1.02!important;letter-spacing:-.045em!important}
+.gl-process-heading h3 em{color:#7b8ba0!important}
+.gl-process-heading p{max-width:355px!important;margin:15px 0 22px!important;color:#8392a6!important;font-size:11.5px!important;line-height:1.7!important}
+.gl-route{position:relative;display:flex;flex-direction:column;gap:0;margin-top:3px}
+.gl-route-track{position:absolute;left:15px;top:16px;bottom:16px;width:1px;background:linear-gradient(to bottom,rgba(254,96,2,.65),rgba(255,255,255,.10) 28%,rgba(255,255,255,.08) 72%,rgba(254,96,2,.22));overflow:hidden}
+.gl-route-track span{position:absolute;left:-1px;top:-34px;width:3px;height:48px;border-radius:5px;background:linear-gradient(to bottom,transparent,#fe6002,transparent);filter:drop-shadow(0 0 6px rgba(254,96,2,.7));animation:glRouteBeam 5.4s cubic-bezier(.4,0,.2,1) infinite}
+.gl-route-track i{position:absolute;left:-3px;top:0;width:7px;height:7px;border-radius:50%;background:#fe6002;box-shadow:0 0 0 5px rgba(254,96,2,.07),0 0 16px rgba(254,96,2,.45);animation:glRouteDot 5.4s cubic-bezier(.4,0,.2,1) infinite}
+.gl-route-step{position:relative;display:grid;grid-template-columns:32px 1fr;gap:13px;min-height:73px;opacity:.52;transition:opacity .35s ease,transform .35s ease}
+.gl-route-step.is-live{opacity:1;transform:translateX(2px)}
+.gl-route-node{position:relative;z-index:2;width:31px;height:31px;border:1px solid rgba(255,255,255,.11);border-radius:50%;background:#0a1727;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 5px rgba(7,17,30,.65)}
+.gl-route-node b{font:700 8px var(--mono);color:#66768b;transition:color .3s ease}.gl-route-step.is-live .gl-route-node{border-color:rgba(254,96,2,.55);box-shadow:0 0 0 5px rgba(254,96,2,.035),0 0 22px rgba(254,96,2,.08)}.gl-route-step.is-live .gl-route-node b{color:#fe6002}
+.gl-route-node span{position:absolute;width:5px;height:5px;border-radius:50%;right:-2px;top:2px;background:#34445a;opacity:0;transition:opacity .3s ease}.gl-route-step.is-live .gl-route-node span{opacity:1;background:#fe6002;animation:glBeacon 1.8s ease-in-out infinite}
+.gl-route-copy{padding:1px 0 14px}.gl-route-copy small{display:block;font:700 7px var(--mono);letter-spacing:.15em;color:#66768b;margin-bottom:4px}.gl-route-step.is-live .gl-route-copy small{color:#fe6002}.gl-route-copy strong{display:block;color:#c9d3df;font-size:11px;line-height:1.35;font-weight:650}.gl-route-step:not(.is-live) .gl-route-copy strong{color:#9aa8b9}.gl-route-copy p{margin:4px 0 0!important;max-width:320px!important;color:#64758a!important;font-size:9.5px!important;line-height:1.5!important}
+.gl-side-footer{margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,.075);display:flex;align-items:center;justify-content:space-between;gap:14px}.gl-side-footer>span{font:700 7px var(--mono);letter-spacing:.14em;color:#617187;white-space:nowrap}.gl-side-footer>span i{display:inline-block;width:5px;height:5px;border-radius:50%;background:#fe6002;margin-right:6px;box-shadow:0 0 0 4px rgba(254,96,2,.06)}.gl-side-footer .contact-email{margin:0!important;padding:0!important;border:0!important;width:auto!important;display:flex!important;gap:10px;justify-content:flex-end!important;color:#aab7c6!important;font-size:9px!important}.gl-side-footer .contact-email b{color:#fe6002;font-size:12px}
+@keyframes glRouteBeam{0%{top:-40px;opacity:0}10%{opacity:1}88%{opacity:1}100%{top:calc(100% + 4px);opacity:0}}
+@keyframes glRouteDot{0%,7%{top:0;opacity:0}12%{opacity:1}92%{top:calc(100% - 7px);opacity:1}100%{top:calc(100% - 7px);opacity:0}}
+@media(max-width:900px){.gl-contact-side{min-height:0!important}.gl-route-step{min-height:70px}.gl-side-footer{margin-top:8px}}
+@media(max-width:620px){.gl-contact-side{padding:22px!important}.gl-process-heading p{margin-bottom:19px!important}.gl-route-copy p{font-size:9px!important}.gl-side-footer{align-items:flex-start;flex-direction:column;gap:9px}.gl-side-footer .contact-email{width:100%!important;justify-content:space-between!important}}
+@media(prefers-reduced-motion:reduce){.gl-route-track span,.gl-route-track i,.gl-route-step.is-live .gl-route-node span{animation:none!important}}
+</style>
+<script>
+(function(){
+  function initIntakePath(){
+    const panel=document.querySelector('.gl-contact-side'); if(!panel)return;
+    const steps=[...panel.querySelectorAll('.gl-route-step')]; if(!steps.length)return;
+    let i=0;
+    setInterval(function(){
+      steps.forEach((s,n)=>s.classList.toggle('is-live',n===i));
+      i=(i+1)%steps.length;
+    },1900);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initIntakePath);else initIntakePath();
+})();
+</script>
 </head>
 <body>
 <header>
@@ -1854,20 +1911,40 @@ section, .container, .wrap { max-width:100%; }
 
   <div class="gl-contact-workspace">
     <div class="gl-contact-side reveal">
-      <div class="gl-side-top"><span>GEOLIFT / INTAKE</span><span>01—04</span></div>
+      <div class="gl-side-top"><span>GEOLIFT / REVIEW PATH</span><span>01—04</span></div>
       <div class="gl-side-line"></div>
-      <h3>Start with the operation.<br><em>Not a sales pitch.</em></h3>
-      <p>We use the first conversation to understand your profiles, locations, workflow and current gaps before recommending a scope.</p>
-      <div class="gl-side-steps">
-        <div class="gl-side-step is-live"><b>01</b><span>Understand your setup</span><i></i></div>
-        <div class="gl-side-step"><b>02</b><span>Identify operational gaps</span><i></i></div>
-        <div class="gl-side-step"><b>03</b><span>Define the right scope</span><i></i></div>
-        <div class="gl-side-step"><b>04</b><span>Recommend next step</span><i></i></div>
+      <div class="gl-process-heading">
+        <span class="gl-process-kicker">WHAT HAPPENS NEXT</span>
+        <h3>From your first message<br><em>to a clear scope.</em></h3>
+        <p>No generic package. We first understand the operation, then decide what actually needs to be managed.</p>
       </div>
-      <a class="contact-email" href="mailto:hello@geolift.co.in">hello@geolift.co.in <span>→</span></a>
+      <div class="gl-route" aria-label="Four-step review process">
+        <div class="gl-route-track"><span></span><i></i></div>
+        <div class="gl-route-step is-live">
+          <div class="gl-route-node"><b>01</b><span></span></div>
+          <div class="gl-route-copy"><small>CONTEXT</small><strong>You tell us what you manage</strong><p>Profiles, locations, team setup and what needs attention.</p></div>
+        </div>
+        <div class="gl-route-step">
+          <div class="gl-route-node"><b>02</b><span></span></div>
+          <div class="gl-route-copy"><small>REVIEW</small><strong>We look for the real gaps</strong><p>Where work is being missed, repeated or left unmanaged.</p></div>
+        </div>
+        <div class="gl-route-step">
+          <div class="gl-route-node"><b>03</b><span></span></div>
+          <div class="gl-route-copy"><small>SCOPE</small><strong>We map the right workload</strong><p>Management, monitoring, reputation, content and reporting as needed.</p></div>
+        </div>
+        <div class="gl-route-step">
+          <div class="gl-route-node"><b>04</b><span></span></div>
+          <div class="gl-route-copy"><small>NEXT STEP</small><strong>You get a practical recommendation</strong><p>Clear scope first. Pricing follows the actual operation.</p></div>
+        </div>
+      </div>
+      <div class="gl-side-footer">
+        <span><i></i> HUMAN REVIEW</span>
+        <a class="contact-email" href="mailto:hello@geolift.co.in">hello@geolift.co.in <b>→</b></a>
+      </div>
     </div>
 
     <form autocomplete="off" class="form gl-intake-form reveal" id="proposalForm">
+      <div class="gl-intake-signal-line" aria-hidden="true"><span></span></div>
       <div class="gl-form-top">
         <div>
           <span class="form-kicker">MANAGEMENT INTAKE</span>
