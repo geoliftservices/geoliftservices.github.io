@@ -1081,6 +1081,50 @@ button,input,textarea,select{font:inherit;box-sizing:border-box}
   }
 }
 </style>
+
+<style id="geolift-mobile-heading-gap-fix">
+@media (max-width:620px){
+  .hero h1{
+    letter-spacing:-.018em!important;
+    word-spacing:.075em!important;
+  }
+}
+@media (max-width:390px){
+  .hero h1{
+    letter-spacing:-.012em!important;
+    word-spacing:.065em!important;
+  }
+}
+</style>
+
+<style id="geolift-v28-mobile-google-business-fix">
+@media(max-width:620px){
+  .hero h1{
+    font-size:38px!important;
+    line-height:1.1!important;
+    letter-spacing:-.025em!important;
+  }
+  .hero h1 .hero-google-business{
+    display:inline-block!important;
+    white-space:nowrap!important;
+    word-spacing:.16em!important;
+    letter-spacing:-.025em!important;
+  }
+}
+@media(max-width:390px){
+  .hero h1{font-size:35px!important;line-height:1.1!important;}
+  .hero h1 .hero-google-business{word-spacing:.14em!important;}
+}
+</style>
+
+<style id="mobile-google-business-spacing-final">
+@media (max-width:620px){
+  .hero h1{font-size:38px!important;letter-spacing:-0.015em!important;word-spacing:0.08em!important;}
+}
+@media (max-width:390px){
+  .hero h1{font-size:34px!important;letter-spacing:-0.01em!important;word-spacing:0.07em!important;}
+}
+</style>
 </head>
 <body>
 <header>
@@ -1119,7 +1163,7 @@ button,input,textarea,select{font:inherit;box-sizing:border-box}
 <div class="container hero-grid">
 <div class="hero-copy reveal">
 <span class="eyebrow dark">Google Business · Automation · Lead Generation</span>
-<h1>Google Business Profile Management. <span class="accent">Automation Built to Scale.</span></h1>
+<h1><span class="hero-google-business">Google Business</span> Profile Management. <span class="accent">Automation Built to Scale.</span></h1>
 <p class="hero-lead">GeoLift combines Google Business Profile management with WhatsApp automation, AI chatbots and automated lead-generation workflows — giving businesses and agencies one specialist layer for visibility, conversations and growth.</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="/contact/">Take Control of Your Google Presence <span class="arrow">→</span></a>
@@ -3005,5 +3049,24 @@ html{scroll-padding-top:84px}
   box-shadow:0 0 0 1000px #fff inset !important;
   background-color:#fff !important;
   transition:background-color 9999s ease-out 0s !important;
+}
+</style>
+
+<style id="geolift-mobile-title-vertical-spacing-fix">
+@media (max-width:620px){
+  .hero h1{
+    font-size:38px!important;
+    line-height:1.18!important;
+    letter-spacing:-0.015em!important;
+    word-spacing:0.08em!important;
+  }
+}
+@media (max-width:390px){
+  .hero h1{
+    font-size:34px!important;
+    line-height:1.18!important;
+    letter-spacing:-0.01em!important;
+    word-spacing:0.07em!important;
+  }
 }
 </style>
