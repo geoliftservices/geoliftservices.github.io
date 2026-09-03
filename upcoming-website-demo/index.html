@@ -1105,63 +1105,74 @@ button,input,textarea,select{font:inherit;box-sizing:border-box}
   .hero h1{font-size:34px!important;letter-spacing:-0.01em!important;word-spacing:0.07em!important;}
 }
 </style>
-<!-- Chatbase: start network work as early as possible. -->
-<link crossorigin="" href="https://www.chatbase.co" rel="preconnect"/>
-<link href="//www.chatbase.co" rel="dns-prefetch"/>
-<link as="script" fetchpriority="high" href="https://www.chatbase.co/embed.min.js" rel="preload"/>
+<!-- Chatbase: eager load + silent one-time warm-up for faster first open. -->
+<link rel="preconnect" href="https://www.chatbase.co" crossorigin>
+<link rel="dns-prefetch" href="//www.chatbase.co">
+<link rel="preload" href="https://www.chatbase.co/embed.min.js" as="script" fetchpriority="high">
 <script>
-  (function(){
-    if(!window.chatbase||window.chatbase("getState")!=="initialized"){
-      window.chatbase=(...arguments)=>{
-        if(!window.chatbase.q){window.chatbase.q=[]}
-        window.chatbase.q.push(arguments)
-      };
-      window.chatbase=new Proxy(window.chatbase,{
-        get(target,prop){
-          if(prop==="q") return target.q;
-          return(...args)=>target(prop,...args)
+(function(){
+  if(!window.chatbase || window.chatbase("getState")!=="initialized"){
+    window.chatbase=(...arguments)=>{
+      if(!window.chatbase.q) window.chatbase.q=[];
+      window.chatbase.q.push(arguments);
+    };
+    window.chatbase=new Proxy(window.chatbase,{get(target,prop){
+      if(prop==="q") return target.q;
+      return (...args)=>target(prop,...args);
+    }});
+  }
+  function loadChatbase(){
+    if(document.getElementById("B2XiwU47o7PNgzJsVQ2LP")) return;
+    const script=document.createElement("script");
+    script.src="https://www.chatbase.co/embed.min.js";
+    script.id="B2XiwU47o7PNgzJsVQ2LP";
+    script.domain="www.chatbase.co";
+    script.async=true;
+    script.fetchPriority="high";
+    document.head.appendChild(script);
+  }
+  loadChatbase();
+
+  /* Warm the actual Chatbase iframe once, silently, after the page is usable.
+     This avoids making the visitor's first tap wait for iframe creation/network work.
+     No global click/touch handler is used, so footer links remain completely normal. */
+  function warm(){
+    if(window.__glChatbaseWarmed) return;
+    window.__glChatbaseWarmed=true;
+    let tries=0;
+    const timer=setInterval(function(){
+      tries++;
+      try{
+        if(window.chatbase && typeof window.chatbase.open==="function" && typeof window.chatbase.close==="function"){
+          document.documentElement.classList.add('gl-chatbase-warming');
+          window.chatbase.open();
+          setTimeout(function(){
+            try{window.chatbase.close();}catch(e){}
+            document.documentElement.classList.remove('gl-chatbase-warming');
+          },1100);
+          clearInterval(timer);
         }
-      })
-    }
-    function loadChatbase(){
-      if(document.getElementById("B2XiwU47o7PNgzJsVQ2LP")) return;
-      const script=document.createElement("script");
-      script.src="https://www.chatbase.co/embed.min.js";
-      script.id="B2XiwU47o7PNgzJsVQ2LP";
-      script.domain="www.chatbase.co";
-      script.async=true;
-      script.fetchPriority="high";
-      document.head.appendChild(script);
-    }
-    // Start immediately. Also warm the Chatbase UI in the background so the first tap
-    // does not have to pay the iframe initialization cost. The warm-up is invisible.
-    loadChatbase();
-    (function warmChatbase(){
-      let tries=0;
-      const timer=setInterval(function(){
-        tries++;
-        try{
-          if(window.chatbase && typeof window.chatbase.open==='function' && typeof window.chatbase.close==='function'){
-            document.documentElement.classList.add('chatbase-warming');
-            window.chatbase.open();
-            setTimeout(function(){
-              try{ window.chatbase.close(); }catch(e){}
-              document.documentElement.classList.remove('chatbase-warming');
-            },1600);
-            clearInterval(timer);
-          }
-        }catch(e){}
-        if(tries>100) clearInterval(timer);
-      },100);
-    })();
-  })();
-  </script>
-<style id="chatbase-warmup-css">
-/* Keep the one-time background warm-up invisible. */
-html.chatbase-warming iframe[src*="chatbase.co"],
-html.chatbase-warming [id*="chatbase"],
-html.chatbase-warming [class*="chatbase"]{opacity:0!important;pointer-events:none!important;}
+      }catch(e){}
+      if(tries>80) clearInterval(timer);
+    },100);
+  }
+  if('requestIdleCallback' in window){
+    requestIdleCallback(warm,{timeout:1800});
+  }else{
+    setTimeout(warm,900);
+  }
+})();
+</script>
+<style id="chatbase-performance-css">
+/* Silent warm-up only: never intercept taps and never alter the final launcher. */
+html.gl-chatbase-warming iframe[src*="chatbase.co"],
+html.gl-chatbase-warming [id*="chatbase"],
+html.gl-chatbase-warming [class*="chatbase"]{
+  opacity:0!important;
+  pointer-events:none!important;
+}
 </style>
+
 <style id="geolift-homepage-remake">
 /* GeoLift homepage strategic remake */
 .hero h1{max-width:700px}
@@ -1365,6 +1376,196 @@ section, .container, .wrap { max-width:100%; }
 .gl-delivery-row:hover .gl-delivery-arrow{color:#fff;border-color:rgba(232,111,47,.45);transform:translate(2px,-2px)}
 @media(max-width:1050px){.gl-delivery-container{grid-template-columns:1fr;gap:45px}.gl-delivery-intro{position:relative;top:auto}.gl-delivery-intro h2{max-width:700px}.gl-delivery-intro>p{max-width:650px}}
 @media(max-width:620px){.gl-delivery-premium{padding:78px 0 82px!important}.gl-delivery-container{gap:35px}.gl-delivery-intro h2{font-size:39px}.gl-delivery-intro>p{font-size:14px}.gl-delivery-statement{margin-top:28px}.gl-delivery-statement strong{font-size:18px}.gl-delivery-row{grid-template-columns:35px 1fr 25px;gap:10px;padding:22px 0}.gl-delivery-title{display:block}.gl-delivery-title h3{font-size:21px}.gl-delivery-title span{display:block;margin-top:7px}.gl-delivery-content>p{font-size:11px;line-height:1.65}.gl-you-get{display:block;margin-top:12px}.gl-you-get span{display:block;margin-top:4px}.gl-delivery-arrow{width:25px;height:25px;font-size:12px}.gl-delivery-row:before{left:-10px;right:-10px}}
+</style>
+
+<style id="premium-form-section-v2">
+/* ===== Premium profile-review form ===== */
+.contact{
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 76% 28%,rgba(217,106,50,.16),transparent 22%),
+    radial-gradient(circle at 88% 78%,rgba(76,120,190,.10),transparent 28%),
+    linear-gradient(135deg,#07101d 0%,#0b1627 54%,#09121f 100%) !important;
+}
+.contact:after{
+  content:"";
+  position:absolute;
+  width:520px;height:520px;
+  right:-210px;top:50%;
+  transform:translateY(-50%);
+  border:1px solid rgba(255,255,255,.045);
+  border-radius:50%;
+  box-shadow:0 0 0 70px rgba(255,255,255,.012),0 0 0 140px rgba(255,255,255,.008);
+  animation:contactOrbit 18s linear infinite;
+  pointer-events:none;
+}
+.contact .contact-copy{position:relative;z-index:3;padding-top:18px}
+.contact .contact-copy:after{
+  content:"";
+  position:absolute;left:-26px;top:2px;width:1px;height:170px;
+  background:linear-gradient(to bottom,var(--orange),rgba(217,106,50,0));
+  opacity:.65;
+}
+.contact .contact-copy h2{font-size:clamp(36px,4vw,58px);letter-spacing:-.045em;line-height:.98;max-width:520px}
+.contact .contact-copy>p{max-width:510px;color:#a8b3c3}
+.contact .contact-email{margin-top:30px}
+.contact .form{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:rgba(248,250,252,.97) !important;
+  border:1px solid rgba(255,255,255,.76) !important;
+  border-radius:22px !important;
+  padding:31px !important;
+  box-shadow:0 35px 90px rgba(0,0,0,.30),0 2px 0 rgba(255,255,255,.75) inset !important;
+  color:#0f172a;
+}
+.contact .form:before{
+  content:"";
+  position:absolute;
+  width:280px;height:280px;right:-115px;top:-135px;
+  border:1px solid rgba(217,106,50,.16);
+  border-radius:50%;
+  box-shadow:0 0 0 34px rgba(217,106,50,.035),0 0 0 78px rgba(217,106,50,.018);
+  animation:formOrbit 12s linear infinite;
+  pointer-events:none;
+}
+.contact .form:after{
+  content:"";
+  position:absolute;right:46px;top:28px;width:5px;height:5px;border-radius:50%;
+  background:var(--orange);
+  box-shadow:0 0 0 6px rgba(217,106,50,.08),0 0 22px rgba(217,106,50,.45);
+  animation:formBeacon 3.2s ease-in-out infinite;
+  pointer-events:none;
+}
+.form-head{position:relative;z-index:2;display:flex;justify-content:space-between;gap:22px;align-items:flex-start;margin-bottom:17px}
+.form-kicker{font:600 9px/1 var(--mono);letter-spacing:.15em;color:#d66a32;text-transform:uppercase}
+.form-head h3{margin:10px 0 8px;font:700 clamp(24px,2.4vw,31px)/1.05 var(--display);letter-spacing:-.035em;color:#0f172a;max-width:480px}
+.form-head p{margin:0;max-width:480px;color:#64748b;font-size:12px;line-height:1.65}
+.form-signal{position:relative;flex:0 0 66px;width:66px;height:66px;margin-top:2px}
+.signal-ring{position:absolute;inset:50%;border:1px solid rgba(217,106,50,.22);border-radius:50%;transform:translate(-50%,-50%);animation:signalSpin 8s linear infinite}
+.ring-a{width:52px;height:52px;border-left-color:transparent;border-bottom-color:rgba(217,106,50,.55)}
+.ring-b{width:34px;height:34px;border-right-color:transparent;border-top-color:rgba(15,23,42,.22);animation-direction:reverse;animation-duration:5s}
+.signal-core{position:absolute;left:50%;top:50%;width:8px;height:8px;transform:translate(-50%,-50%);border-radius:50%;background:#d96a32;box-shadow:0 0 0 6px rgba(217,106,50,.08),0 0 18px rgba(217,106,50,.35)}
+.signal-pulse{position:absolute;left:50%;top:50%;width:8px;height:8px;border:1px solid rgba(217,106,50,.35);border-radius:50%;transform:translate(-50%,-50%);animation:signalPulse 2.8s ease-out infinite}
+.pulse-b{animation-delay:1.4s}
+.form-route{position:relative;z-index:2;display:flex;align-items:center;gap:9px;margin:0 0 22px;font:600 8px/1 var(--mono);letter-spacing:.14em;color:#94a3b8}
+.form-route i{height:1px;flex:1;background:linear-gradient(90deg,rgba(15,23,42,.12),transparent)}
+.form-route i:last-child{background:linear-gradient(90deg,transparent,rgba(15,23,42,.12))}
+.contact .fields{position:relative;z-index:2;gap:15px}
+.contact .field{margin-bottom:14px}
+.contact .field label{color:#64748b;font:600 9px/1 var(--mono);letter-spacing:.05em;text-transform:uppercase;margin-bottom:7px}
+.contact .field input,.contact .field textarea,.contact .field select,.contact .custom-select-trigger{
+  border:1px solid #dbe2ea !important;
+  background:#fff !important;
+  color:#0f172a !important;
+  border-radius:9px !important;
+  padding:12px 13px !important;
+  box-shadow:0 1px 2px rgba(15,23,42,.025) inset;
+  transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;
+}
+.contact .field input::placeholder,.contact .field textarea::placeholder{color:#a1acba}
+.contact .field input:focus,.contact .field textarea:focus,.contact .field select:focus,.contact .custom-select-trigger:focus{
+  border-color:rgba(217,106,50,.62) !important;
+  box-shadow:0 0 0 3px rgba(217,106,50,.09) !important;
+  transform:translateY(-1px);
+}
+.contact .custom-select-menu{background:#fff;border:1px solid #dbe2ea;box-shadow:0 18px 45px rgba(15,23,42,.15);z-index:20}
+.contact .custom-select-menu button{color:#334155}
+.contact .form>.btn{position:relative;z-index:2;width:100% !important;min-width:0 !important;margin-top:2px;padding:14px 18px !important;border-radius:10px !important;box-shadow:0 14px 30px rgba(217,106,50,.18) !important;font-size:12px}
+.contact .form-note{position:relative;z-index:2;color:#94a3b8;max-width:none;font-size:8.5px}
+@keyframes contactOrbit{to{transform:translateY(-50%) rotate(360deg)}}
+@keyframes formOrbit{to{transform:translate(8px,-8px) rotate(360deg)}}
+@keyframes signalSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes signalPulse{0%{width:8px;height:8px;opacity:.55}75%,100%{width:54px;height:54px;opacity:0}}
+@keyframes formBeacon{0%,100%{opacity:.45;transform:scale(.85)}50%{opacity:1;transform:scale(1.2)}}
+@media(max-width:900px){
+  .contact .contact-copy:after{display:none}
+  .contact .form{padding:26px !important}
+}
+@media(max-width:620px){
+  .contact .contact-copy{padding-top:0}
+  .contact .contact-copy h2{font-size:38px}
+  .form-head{gap:12px}
+  .form-head h3{font-size:25px}
+  .form-head p{font-size:11.5px}
+  .form-signal{flex-basis:52px;width:52px;height:52px;transform:scale(.82);transform-origin:top right}
+  .contact .form{padding:22px !important;border-radius:18px !important}
+  .contact:after{width:360px;height:360px;right:-190px}
+}
+@media(prefers-reduced-motion:reduce){
+  .contact:after,.contact .form:before,.signal-ring,.signal-pulse,.signal-pulse,.contact .form:after{animation:none!important}
+}
+</style>
+
+<style id="geolift-form-total-remake">
+/* ===== GeoLift closing chapter — total form remake ===== */
+#contact.gl-contact-premium{
+  position:relative!important;overflow:hidden!important;padding:96px 0 92px!important;
+  background:#07111f!important;
+  background-image:radial-gradient(circle at 82% 16%,rgba(254,96,2,.12),transparent 25%),radial-gradient(circle at 6% 82%,rgba(65,105,150,.10),transparent 28%)!important;
+}
+#contact.gl-contact-premium:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.34;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:80px 80px;mask-image:linear-gradient(to bottom,transparent,black 22%,black 78%,transparent)}
+#contact.gl-contact-premium .container{position:relative;z-index:2}
+.gl-contact-intro{margin-bottom:54px}
+.gl-contact-eyebrow{font:700 9px/1 var(--mono);letter-spacing:.18em;color:#8b99aa;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.gl-contact-eyebrow span{color:#fe6002}
+.gl-contact-title-row{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:50px;align-items:end;margin-top:18px}
+.gl-contact-title-row h2{margin:0!important;max-width:800px!important;color:#f8fafc!important;font-size:clamp(40px,5vw,68px)!important;line-height:.96!important;letter-spacing:-.052em!important}
+.gl-contact-title-row p{max-width:620px;margin:24px 0 0!important;color:#8e9daf!important;font-size:14px!important;line-height:1.75!important}
+.gl-contact-status{height:180px;width:180px;position:relative;justify-self:end;opacity:.92}
+.gl-status-grid{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(254,96,2,.09),transparent 55%);border:1px solid rgba(255,255,255,.07)}
+.gl-status-grid:before,.gl-status-grid:after{content:"";position:absolute;left:50%;top:50%;background:rgba(255,255,255,.07);transform:translate(-50%,-50%)}
+.gl-status-grid:before{width:100%;height:1px}.gl-status-grid:after{width:1px;height:100%}
+.gl-status-ring{position:absolute;left:50%;top:50%;border:1px solid rgba(254,96,2,.25);border-radius:50%;transform:translate(-50%,-50%);animation:glRing 10s linear infinite}
+.gl-status-ring.r1{width:132px;height:132px;border-left-color:transparent}.gl-status-ring.r2{width:96px;height:96px;border-right-color:rgba(255,255,255,.18);animation-duration:6s;animation-direction:reverse}.gl-status-ring.r3{width:56px;height:56px;border-top-color:#fe6002;animation-duration:4s}
+.gl-status-core{position:absolute;left:50%;top:50%;width:20px;height:20px;border-radius:50%;background:rgba(254,96,2,.12);transform:translate(-50%,-50%);box-shadow:0 0 0 8px rgba(254,96,2,.045),0 0 32px rgba(254,96,2,.22)}
+.gl-status-core span{position:absolute;width:6px;height:6px;border-radius:50%;background:#fe6002;left:50%;top:50%;transform:translate(-50%,-50%);animation:glPulse 2.2s ease-in-out infinite}
+.gl-status-scan{position:absolute;left:50%;top:50%;height:1px;width:76px;transform-origin:left center;background:linear-gradient(90deg,rgba(254,96,2,.8),transparent);animation:glScan 4s linear infinite}
+.gl-status-label{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);white-space:nowrap;font:600 8px var(--mono);letter-spacing:.14em;color:#657489}
+.gl-contact-workspace{display:grid;grid-template-columns:.68fr 1.32fr;gap:26px;align-items:stretch}
+.gl-contact-side{position:relative;min-height:590px;padding:28px 30px;border:1px solid rgba(255,255,255,.085);border-radius:20px;background:linear-gradient(145deg,rgba(16,29,47,.78),rgba(7,17,30,.72));overflow:hidden;display:flex;flex-direction:column}
+.gl-contact-side:before{content:"";position:absolute;right:-130px;bottom:-140px;width:360px;height:360px;border:1px solid rgba(255,255,255,.045);border-radius:50%;box-shadow:0 0 0 50px rgba(255,255,255,.012),0 0 0 100px rgba(255,255,255,.008);animation:glSideOrbit 18s linear infinite}
+.gl-side-top{position:relative;z-index:2;display:flex;justify-content:space-between;color:#6f7f92;font:600 8px var(--mono);letter-spacing:.14em}
+.gl-side-line{height:1px;background:rgba(255,255,255,.08);margin:19px 0 32px}
+.gl-contact-side h3{position:relative;z-index:2;margin:0;color:#f4f7fb;font-size:clamp(26px,2.7vw,37px);line-height:1.04;letter-spacing:-.04em}
+.gl-contact-side h3 em{font-style:normal;color:#74859a}
+.gl-contact-side>p{position:relative;z-index:2;max-width:360px;margin:19px 0 30px;color:#8595a8;font-size:12px;line-height:1.75}
+.gl-side-steps{position:relative;z-index:2;margin-top:auto}
+.gl-side-step{display:grid;grid-template-columns:34px 1fr 8px;gap:13px;align-items:center;padding:14px 0;border-top:1px solid rgba(255,255,255,.065);color:#64748b;font-size:11px}
+.gl-side-step b{font:600 8px var(--mono);color:#5d6c7e}.gl-side-step i{width:5px;height:5px;border-radius:50%;background:#334155;justify-self:end}.gl-side-step.is-live{color:#cbd5e1}.gl-side-step.is-live b{color:#fe6002}.gl-side-step.is-live i{background:#fe6002;box-shadow:0 0 0 5px rgba(254,96,2,.08);animation:glBeacon 2s ease-in-out infinite}
+.gl-contact-side .contact-email{position:relative;z-index:2;margin-top:22px!important;padding-top:17px!important;border-top:1px solid rgba(255,255,255,.08)!important;color:#d9e1eb!important;font-size:11px!important;text-decoration:none!important;display:flex!important;justify-content:space-between!important;width:100%!important}
+.gl-contact-side .contact-email span{color:#fe6002}
+.gl-intake-form{position:relative!important;isolation:isolate;min-width:0;background:#f7f9fb!important;border:1px solid #dce3ea!important;border-radius:20px!important;padding:34px!important;box-shadow:0 35px 100px rgba(0,0,0,.28),0 1px 0 #fff inset!important;overflow:hidden!important;color:#0f172a!important}
+.gl-intake-form:before{content:"";position:absolute;width:330px;height:330px;right:-190px;top:-190px;border:1px solid rgba(254,96,2,.16);border-radius:50%;box-shadow:0 0 0 40px rgba(254,96,2,.028),0 0 0 90px rgba(254,96,2,.014);animation:glFormOrbit 14s linear infinite;pointer-events:none}
+.gl-intake-form:after{content:"LIVE";position:absolute;right:24px;bottom:20px;font:600 7px var(--mono);letter-spacing:.16em;color:#a2adba;opacity:.65}
+.gl-form-top{position:relative;z-index:2;display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+.form-kicker{font:700 8px/1 var(--mono)!important;letter-spacing:.16em!important;color:#fe6002!important}
+.gl-form-top h3{margin:10px 0 8px!important;color:#101a29!important;font-size:clamp(25px,2.5vw,34px)!important;line-height:1.02!important;letter-spacing:-.04em!important}
+.gl-form-top p{margin:0!important;color:#718096!important;font-size:11px!important;line-height:1.65!important}
+.gl-form-index{font:700 9px var(--mono);color:#8c98a6;white-space:nowrap}.gl-form-index span{padding:0 4px;color:#c3cad2}
+.gl-form-rule{position:relative;z-index:2;display:flex;align-items:center;gap:10px;margin:26px 0 24px;color:#8d99a7;font:700 7px var(--mono);letter-spacing:.15em}.gl-form-rule span{height:1px;flex:1;background:#dfe5eb}
+.gl-intake-form .fields{position:relative;z-index:2;display:grid!important;grid-template-columns:1fr 1fr!important;gap:17px 14px!important}
+.gl-intake-form .field{margin:0!important}.gl-intake-form .field.full{grid-column:1/-1}
+.gl-intake-form .field label{display:block!important;margin:0 0 7px!important;color:#536173!important;font:700 8px var(--mono)!important;letter-spacing:.06em!important;text-transform:uppercase!important}
+.gl-intake-form .field input,.gl-intake-form .field textarea,.gl-intake-form .custom-select-trigger{width:100%!important;box-sizing:border-box!important;border:1px solid #d6dee7!important;border-radius:9px!important;background:#fff!important;color:#132033!important;outline:none!important;box-shadow:0 1px 2px rgba(15,23,42,.025)!important;font:400 13px var(--display)!important;transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease!important}
+.gl-intake-form .field input{height:46px!important;padding:0 13px!important}.gl-intake-form .field textarea{min-height:100px!important;padding:12px 13px!important;resize:vertical!important}
+.gl-intake-form .field input::placeholder,.gl-intake-form .field textarea::placeholder{color:#a2adba!important}
+.gl-intake-form .field input:focus,.gl-intake-form .field textarea:focus,.gl-intake-form .custom-select-trigger:focus{border-color:#fe6002!important;box-shadow:0 0 0 3px rgba(254,96,2,.09)!important;transform:translateY(-1px)!important}
+.gl-intake-form .custom-select-trigger{height:46px!important;padding:0 13px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;text-align:left!important;cursor:pointer!important}
+.gl-intake-form .custom-select-menu{background:#fff!important;border:1px solid #d6dee7!important;border-radius:11px!important;box-shadow:0 20px 45px rgba(15,23,42,.17)!important;padding:7px!important}
+.gl-intake-form .custom-select-menu button{background:#fff!important;color:#263447!important;border-radius:7px!important;padding:10px 12px!important;font:500 13px var(--display)!important}.gl-intake-form .custom-select-menu button:hover,.gl-intake-form .custom-select-menu button:focus{background:#fff3eb!important;color:#fe6002!important;border-color:#ffd2bd!important}.gl-intake-form .custom-select-menu button[aria-selected=true]{background:#fe6002!important;color:#fff!important}
+.gl-form-submit{position:relative;z-index:2;display:flex;align-items:center;gap:15px;margin-top:21px}.gl-form-submit .btn{flex:0 0 auto;width:auto!important;min-width:225px!important;height:50px!important;border-radius:9px!important;margin:0!important;box-shadow:0 12px 28px rgba(254,96,2,.16)!important;font-size:12px!important}.gl-form-submit>span{color:#8a96a4;font:400 8px/1.5 var(--mono);max-width:180px}
+@keyframes glRing{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes glPulse{0%,100%{transform:translate(-50%,-50%) scale(.75);opacity:.65}50%{transform:translate(-50%,-50%) scale(1.2);opacity:1}}
+@keyframes glScan{to{transform:rotate(360deg)}}
+@keyframes glSideOrbit{to{transform:rotate(360deg)}}
+@keyframes glFormOrbit{to{transform:translate(8px,8px) rotate(360deg)}}
+@keyframes glBeacon{0%,100%{opacity:.45;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+@media(max-width:900px){#contact.gl-contact-premium{padding:76px 0 70px!important}.gl-contact-title-row{grid-template-columns:1fr;gap:30px}.gl-contact-status{justify-self:start;width:130px;height:130px}.gl-contact-workspace{grid-template-columns:1fr;gap:22px}.gl-contact-side{min-height:0;padding:25px}.gl-side-steps{margin-top:12px}.gl-intake-form{padding:28px!important}}
+@media(max-width:620px){#contact.gl-contact-premium{padding:62px 0 58px!important}.gl-contact-intro{margin-bottom:36px}.gl-contact-title-row{margin-top:15px}.gl-contact-title-row h2{font-size:39px!important;line-height:1!important}.gl-contact-title-row p{font-size:13px!important;margin-top:17px!important}.gl-contact-status{width:105px;height:105px}.gl-status-ring.r1{width:78px;height:78px}.gl-status-ring.r2{width:58px;height:58px}.gl-status-ring.r3{width:34px;height:34px}.gl-status-label{bottom:-17px;font-size:7px}.gl-contact-side{padding:22px;border-radius:16px}.gl-contact-side h3{font-size:27px}.gl-intake-form{padding:22px 18px!important;border-radius:16px!important}.gl-form-top{gap:10px}.gl-form-top h3{font-size:25px!important}.gl-form-index{font-size:8px}.gl-form-rule{margin:22px 0 20px}.gl-intake-form .fields{grid-template-columns:1fr!important;gap:15px!important}.gl-intake-form .field.full{grid-column:auto}.gl-form-submit{display:block}.gl-form-submit .btn{width:100%!important;min-width:0!important}.gl-form-submit>span{display:block;max-width:none;margin-top:10px}.gl-intake-form:after{display:none}}
+@media(prefers-reduced-motion:reduce){.gl-status-ring,.gl-status-core span,.gl-status-scan,.gl-contact-side:before,.gl-intake-form:before,.gl-side-step.is-live i{animation:none!important}}
 </style>
 </head>
 <body>
@@ -1632,38 +1833,76 @@ section, .container, .wrap { max-width:100%; }
 </div>
 </div>
 </section>
-<section class="section contact" id="contact">
-<div class="container contact-grid">
-<div class="contact-copy reveal">
-<span class="eyebrow dark">Start with a profile review</span>
-<h2>Take Google off your team's plate.</h2>
-<p>Tell us how many profiles you manage, what is currently being handled and where the operational burden sits. We'll recommend a practical management scope.</p>
-<a class="contact-email" href="mailto:hello@geolift.co.in">hello@geolift.co.in →</a>
-</div>
-<form autocomplete="off" class="form reveal" id="proposalForm">
-<div class="fields">
-<div class="field"><label for="name">Your name</label><input autocomplete="new-password" id="name" name="gl_full_name" placeholder="Full name" required=""/></div>
-<div class="field"><label for="business">Business / agency</label><input autocomplete="new-password" id="business" name="gl_business" placeholder="Company or brand" required=""/></div>
-<div class="field"><label for="email">Work email</label><input autocomplete="new-password" id="email" name="gl_work_email" placeholder="you@company.com" required="" type="email"/></div>
-<div class="field"><label for="locations">Profiles / locations</label><input autocomplete="new-password" id="locations" name="gl_locations" placeholder="e.g. 12"/></div>
-<div class="field full"><label for="type">What best describes you?</label>
-<div class="custom-select" id="typeCustom">
-<input id="type" name="gl_type" type="hidden" value="Business — single location"/>
-<button aria-expanded="false" aria-haspopup="listbox" class="custom-select-trigger" type="button">Business — single location <span aria-hidden="true">⌄</span></button>
-<div aria-label="What best describes you" class="custom-select-menu" role="listbox">
-<button aria-selected="true" data-value="Business — single location" role="option" type="button">Business — single location</button>
-<button aria-selected="false" data-value="Business — multi-location" role="option" type="button">Business — multi-location</button>
-<button aria-selected="false" data-value="Agency — white-label fulfillment" role="option" type="button">Agency — white-label fulfillment</button>
-<button aria-selected="false" data-value="Franchise / network" role="option" type="button">Franchise / network</button>
-<button aria-selected="false" data-value="Other" role="option" type="button">Other</button>
-</div>
-</div>
-</div>
-<div class="field full"><label for="message">What do you need managed?</label><textarea id="message" name="gl_message" placeholder="Tell us briefly about your profiles and current setup"></textarea></div>
-</div>
-<button class="btn btn-primary" style="width:100%" type="submit">Talk to GeoLift <span class="arrow">→</span></button>
-<p class="form-note">No commitment required. We'll review the setup and recommend the right management scope.</p>
-</form>
+<section class="section contact gl-contact-premium" id="contact">
+<div class="container">
+  <div class="gl-contact-intro reveal">
+    <div class="gl-contact-eyebrow"><span>01</span> PROFILE REVIEW</div>
+    <div class="gl-contact-title-row">
+      <div>
+        <h2>Your Google presence deserves a controlled operation.</h2>
+        <p>Tell us what you're managing, where the workload sits and what needs attention. We'll review the setup and recommend the right management scope.</p>
+      </div>
+      <div class="gl-contact-status" aria-hidden="true">
+        <div class="gl-status-grid"></div>
+        <div class="gl-status-ring r1"></div><div class="gl-status-ring r2"></div><div class="gl-status-ring r3"></div>
+        <div class="gl-status-core"><span></span></div>
+        <div class="gl-status-scan"></div>
+        <div class="gl-status-label">INTAKE / READY</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gl-contact-workspace">
+    <div class="gl-contact-side reveal">
+      <div class="gl-side-top"><span>GEOLIFT / INTAKE</span><span>01—04</span></div>
+      <div class="gl-side-line"></div>
+      <h3>Start with the operation.<br><em>Not a sales pitch.</em></h3>
+      <p>We use the first conversation to understand your profiles, locations, workflow and current gaps before recommending a scope.</p>
+      <div class="gl-side-steps">
+        <div class="gl-side-step is-live"><b>01</b><span>Understand your setup</span><i></i></div>
+        <div class="gl-side-step"><b>02</b><span>Identify operational gaps</span><i></i></div>
+        <div class="gl-side-step"><b>03</b><span>Define the right scope</span><i></i></div>
+        <div class="gl-side-step"><b>04</b><span>Recommend next step</span><i></i></div>
+      </div>
+      <a class="contact-email" href="mailto:hello@geolift.co.in">hello@geolift.co.in <span>→</span></a>
+    </div>
+
+    <form autocomplete="off" class="form gl-intake-form reveal" id="proposalForm">
+      <div class="gl-form-top">
+        <div>
+          <span class="form-kicker">MANAGEMENT INTAKE</span>
+          <h3>Let's understand your Google operation.</h3>
+          <p>A few details are enough to start. No commitment required.</p>
+        </div>
+        <div class="gl-form-index">01<span>/</span>04</div>
+      </div>
+      <div class="gl-form-rule"><span></span><b>SECURE INTAKE</b><span></span></div>
+      <div class="fields">
+        <div class="field"><label for="name">Your name</label><input autocomplete="new-password" id="name" name="gl_full_name" placeholder="Full name" required=""/></div>
+        <div class="field"><label for="business">Business / agency</label><input autocomplete="new-password" id="business" name="gl_business" placeholder="Company or brand" required=""/></div>
+        <div class="field"><label for="email">Work email</label><input autocomplete="new-password" id="email" name="gl_work_email" placeholder="you@company.com" required="" type="email"/></div>
+        <div class="field"><label for="locations">Profiles / locations</label><input autocomplete="new-password" id="locations" name="gl_locations" placeholder="e.g. 12"/></div>
+        <div class="field full"><label for="type">What best describes you?</label>
+          <div class="custom-select" id="typeCustom">
+            <input id="type" name="gl_type" type="hidden" value="Business — single location"/>
+            <button aria-expanded="false" aria-haspopup="listbox" class="custom-select-trigger" type="button">Business — single location <span aria-hidden="true">⌄</span></button>
+            <div aria-label="What best describes you" class="custom-select-menu" role="listbox">
+              <button aria-selected="true" data-value="Business — single location" role="option" type="button">Business — single location</button>
+              <button aria-selected="false" data-value="Business — multi-location" role="option" type="button">Business — multi-location</button>
+              <button aria-selected="false" data-value="Agency — white-label fulfillment" role="option" type="button">Agency — white-label fulfillment</button>
+              <button aria-selected="false" data-value="Franchise / network" role="option" type="button">Franchise / network</button>
+              <button aria-selected="false" data-value="Other" role="option" type="button">Other</button>
+            </div>
+          </div>
+        </div>
+        <div class="field full"><label for="message">What do you need managed?</label><textarea id="message" name="gl_message" placeholder="Tell us briefly about your profiles and current setup"></textarea></div>
+      </div>
+      <div class="gl-form-submit">
+        <button class="btn btn-primary" type="submit">Get a free profile review <span class="arrow">→</span></button>
+        <span>We'll review your setup before recommending a scope.</span>
+      </div>
+    </form>
+  </div>
 </div>
 </section>
 </main>
@@ -2060,8 +2299,6 @@ document.getElementById('proposalForm').addEventListener('submit', e => {
 @media(max-width:1000px){.gl-os-stage{grid-template-columns:1fr;gap:45px}.gl-os-visual{height:470px;max-width:650px;margin:auto;width:100%}.ring-outer{width:430px;height:430px}.ring-mid{width:290px;height:290px}.gl-how-flow{grid-template-columns:repeat(3,1fr);gap:38px 18px}.gl-flow-track{display:none}.gl-how-step{padding-right:4px}.gl-step-icon{margin-top:10px}.gl-how-result{align-items:flex-start;flex-direction:column}}
 @media(max-width:620px){.gl-os-section{padding:78px 0 62px!important}.gl-os-head{margin-bottom:38px}.gl-os-head h2{font-size:39px!important}.gl-os-head p{font-size:13px}.gl-os-visual{height:385px}.ring-outer{width:315px;height:315px}.ring-mid{width:220px;height:220px}.gl-os-core{width:112px;height:112px}.gl-os-core b{font-size:22px}.gl-os-node{min-width:105px;padding:8px 9px}.gl-os-node b{font-size:9px}.gl-os-node small{font-size:6px}.node-1{left:0;top:8%}.node-2{right:0;top:23%}.node-3{right:0;bottom:10%}.node-4{left:0;bottom:7%}.node-5{left:34%;top:-1%}.gl-os-sweep{width:180px}.gl-os-line{grid-template-columns:28px 1fr}.gl-os-line em{display:none}.gl-os-line p{font-size:10.5px}.gl-os-footer{flex-wrap:wrap;gap:8px}.gl-os-footer i{width:18px}.gl-how-section{padding:76px 0 70px!important}.gl-how-head{margin-bottom:40px}.gl-how-head h2{font-size:38px!important}.gl-how-flow{grid-template-columns:1fr 1fr;gap:38px 24px}.gl-how-step p{max-width:none}.gl-how-result{margin-top:45px}.gl-result-loop{gap:6px;flex-wrap:wrap}.gl-result-loop i{width:12px}}
 @media(prefers-reduced-motion:reduce){.gl-os-ring,.gl-os-orbit,.gl-os-sweep,.gl-os-particle,.gl-flow-progress,.flow-dot,.gl-result-loop i:after,.gl-os-footer i:after{animation:none!important}}
-/* Remove the auxiliary Chatbase warm-up side/edge layer; keep the normal launcher and chat window intact. */
-html.chatbase-warming iframe[src*="chatbase.co"]{display:none!important}
 </style>
 <script>
 (function(){
