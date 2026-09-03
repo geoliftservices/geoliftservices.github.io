@@ -1105,74 +1105,6 @@ button,input,textarea,select{font:inherit;box-sizing:border-box}
   .hero h1{font-size:34px!important;letter-spacing:-0.01em!important;word-spacing:0.07em!important;}
 }
 </style>
-<!-- Chatbase: eager load + silent one-time warm-up for faster first open. -->
-<link rel="preconnect" href="https://www.chatbase.co" crossorigin>
-<link rel="dns-prefetch" href="//www.chatbase.co">
-<link rel="preload" href="https://www.chatbase.co/embed.min.js" as="script" fetchpriority="high">
-<script>
-(function(){
-  if(!window.chatbase || window.chatbase("getState")!=="initialized"){
-    window.chatbase=(...arguments)=>{
-      if(!window.chatbase.q) window.chatbase.q=[];
-      window.chatbase.q.push(arguments);
-    };
-    window.chatbase=new Proxy(window.chatbase,{get(target,prop){
-      if(prop==="q") return target.q;
-      return (...args)=>target(prop,...args);
-    }});
-  }
-  function loadChatbase(){
-    if(document.getElementById("B2XiwU47o7PNgzJsVQ2LP")) return;
-    const script=document.createElement("script");
-    script.src="https://www.chatbase.co/embed.min.js";
-    script.id="B2XiwU47o7PNgzJsVQ2LP";
-    script.domain="www.chatbase.co";
-    script.async=true;
-    script.fetchPriority="high";
-    document.head.appendChild(script);
-  }
-  loadChatbase();
-
-  /* Warm the actual Chatbase iframe once, silently, after the page is usable.
-     This avoids making the visitor's first tap wait for iframe creation/network work.
-     No global click/touch handler is used, so footer links remain completely normal. */
-  function warm(){
-    if(window.__glChatbaseWarmed) return;
-    window.__glChatbaseWarmed=true;
-    let tries=0;
-    const timer=setInterval(function(){
-      tries++;
-      try{
-        if(window.chatbase && typeof window.chatbase.open==="function" && typeof window.chatbase.close==="function"){
-          document.documentElement.classList.add('gl-chatbase-warming');
-          window.chatbase.open();
-          setTimeout(function(){
-            try{window.chatbase.close();}catch(e){}
-            document.documentElement.classList.remove('gl-chatbase-warming');
-          },1100);
-          clearInterval(timer);
-        }
-      }catch(e){}
-      if(tries>80) clearInterval(timer);
-    },100);
-  }
-  if('requestIdleCallback' in window){
-    requestIdleCallback(warm,{timeout:1800});
-  }else{
-    setTimeout(warm,900);
-  }
-})();
-</script>
-<style id="chatbase-performance-css">
-/* Silent warm-up only: never intercept taps and never alter the final launcher. */
-html.gl-chatbase-warming iframe[src*="chatbase.co"],
-html.gl-chatbase-warming [id*="chatbase"],
-html.gl-chatbase-warming [class*="chatbase"]{
-  opacity:0!important;
-  pointer-events:none!important;
-}
-</style>
-
 <style id="geolift-homepage-remake">
 /* GeoLift homepage strategic remake */
 .hero h1{max-width:700px}
@@ -1656,46 +1588,7 @@ button.btn{
   .gl-form-submit{align-items:flex-start!important;}
 }
 
-/* ===== CHATBASE: remove the extra outer frame/shadow around the launcher ===== */
-iframe[src*="chatbase.co"],
-iframe[src*="chatbase"]{
-  border:0!important;
-  outline:0!important;
-}
 </style>
-<script id="geolift-chatbase-clean-frame">
-(function(){
-  function cleanChatbaseFrames(){
-    document.querySelectorAll('iframe[src*="chatbase.co"],iframe[src*="chatbase"]').forEach(function(frame){
-      try{
-        frame.style.setProperty('border','0','important');
-        frame.style.setProperty('outline','0','important');
-        frame.style.setProperty('box-shadow','none','important');
-        /* The launcher is a small fixed frame. Remove only its external wrapper decoration,
-           never the chat window itself. */
-        var r=frame.getBoundingClientRect();
-        if(r.width && r.width<430 && r.height<180){
-          var el=frame.parentElement;
-          for(var i=0;i<2 && el;i++,el=el.parentElement){
-            var cs=getComputedStyle(el);
-            if(cs.position==='fixed' || cs.position==='absolute'){
-              el.style.setProperty('border','0','important');
-              el.style.setProperty('outline','0','important');
-              el.style.setProperty('box-shadow','none','important');
-            }
-          }
-        }
-      }catch(e){}
-    });
-  }
-  cleanChatbaseFrames();
-  new MutationObserver(cleanChatbaseFrames).observe(document.documentElement,{childList:true,subtree:true});
-  setTimeout(cleanChatbaseFrames,500);
-  setTimeout(cleanChatbaseFrames,1500);
-  setTimeout(cleanChatbaseFrames,3000);
-})();
-</script>
-
 </head>
 <body>
 <header>
@@ -2461,8 +2354,32 @@ document.getElementById('proposalForm').addEventListener('submit', e => {
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initPremiumFlow);else initPremiumFlow();
 })();
 </script>
-  <script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="B2XiwU47o7PNgzJsVQ2LP";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+<!-- Chatbase: single standard website widget embed -->
+<script>
+(function(){
+  if(!window.chatbase || window.chatbase("getState") !== "initialized"){
+    window.chatbase = (...arguments) => {
+      if(!window.chatbase.q){ window.chatbase.q = []; }
+      window.chatbase.q.push(arguments);
+    };
+    window.chatbase = new Proxy(window.chatbase,{
+      get(target,prop){
+        if(prop === "q") return target.q;
+        return (...args) => target(prop,...args);
+      }
+    });
+  }
+  const onLoad = function(){
+    if(document.getElementById("B2XiwU47o7PNgzJsVQ2LP")) return;
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "B2XiwU47o7PNgzJsVQ2LP";
+    script.domain = "www.chatbase.co";
+    document.body.appendChild(script);
+  };
+  if(document.readyState === "complete") onLoad();
+  else window.addEventListener("load", onLoad);
+})();
 </script>
 </body>
 </html>
