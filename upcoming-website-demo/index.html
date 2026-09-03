@@ -1624,6 +1624,78 @@ section, .container, .wrap { max-width:100%; }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initIntakePath);else initIntakePath();
 })();
 </script>
+
+<style id="geolift-cta-fit-and-chat-clean">
+/* ===== CTA FIT: buttons hug their content instead of stretching ===== */
+.btn,
+a.btn,
+button.btn{
+  width:max-content!important;
+  max-width:100%!important;
+  flex:0 0 auto!important;
+}
+.hero-actions .btn,
+.cta-band-actions .btn,
+.pricing-cta .btn,
+.gl-form-submit .btn{
+  width:max-content!important;
+  max-width:100%!important;
+}
+@media(max-width:700px){
+  .hero-actions{width:100%;}
+  .hero-actions .btn,
+  .cta-band-actions .btn,
+  .pricing-cta .btn,
+  .gl-form-submit .btn,
+  .form .btn,
+  .form button[type="submit"]{
+    width:max-content!important;
+    max-width:100%!important;
+    flex:0 0 auto!important;
+  }
+  .gl-form-submit{align-items:flex-start!important;}
+}
+
+/* ===== CHATBASE: remove the extra outer frame/shadow around the launcher ===== */
+iframe[src*="chatbase.co"],
+iframe[src*="chatbase"]{
+  border:0!important;
+  outline:0!important;
+}
+</style>
+<script id="geolift-chatbase-clean-frame">
+(function(){
+  function cleanChatbaseFrames(){
+    document.querySelectorAll('iframe[src*="chatbase.co"],iframe[src*="chatbase"]').forEach(function(frame){
+      try{
+        frame.style.setProperty('border','0','important');
+        frame.style.setProperty('outline','0','important');
+        frame.style.setProperty('box-shadow','none','important');
+        /* The launcher is a small fixed frame. Remove only its external wrapper decoration,
+           never the chat window itself. */
+        var r=frame.getBoundingClientRect();
+        if(r.width && r.width<430 && r.height<180){
+          var el=frame.parentElement;
+          for(var i=0;i<2 && el;i++,el=el.parentElement){
+            var cs=getComputedStyle(el);
+            if(cs.position==='fixed' || cs.position==='absolute'){
+              el.style.setProperty('border','0','important');
+              el.style.setProperty('outline','0','important');
+              el.style.setProperty('box-shadow','none','important');
+            }
+          }
+        }
+      }catch(e){}
+    });
+  }
+  cleanChatbaseFrames();
+  new MutationObserver(cleanChatbaseFrames).observe(document.documentElement,{childList:true,subtree:true});
+  setTimeout(cleanChatbaseFrames,500);
+  setTimeout(cleanChatbaseFrames,1500);
+  setTimeout(cleanChatbaseFrames,3000);
+})();
+</script>
+
 </head>
 <body>
 <header>
