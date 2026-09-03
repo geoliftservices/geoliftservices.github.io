@@ -982,6 +982,75 @@ button,input,textarea,select{font:inherit;box-sizing:border-box}
   .footer-brand{grid-column:auto}
 }
 </style>
+
+<style id="geolift-v21-dropdown-email-final">
+/* Final visual cleanup requested: dark dropdown options + orange left-aligned email. */
+#contact .field select{
+  color-scheme:light !important;
+  background:#fff !important;
+  color:#162130 !important;
+}
+#contact .field select option{
+  background:#0b1220 !important;
+  color:#fff !important;
+}
+#contact .field select option:checked,
+#contact .field select option:hover{
+  background:#0b1220 !important;
+  color:#fff !important;
+}
+#contact .contact-email{
+  display:block !important;
+  width:max-content !important;
+  max-width:100% !important;
+  margin-left:0 !important;
+  margin-right:auto !important;
+  text-align:left !important;
+  color:#fe6002 !important;
+}
+</style>
+
+<style id="geolift-v23-custom-select-black">
+/* v23: fully custom dropdown. No native <select>, so Chrome/Windows blue highlight cannot appear. */
+#contact .custom-select{position:relative;width:100%;z-index:20;}
+#contact .custom-select-trigger{width:100%;height:44px;padding:0 13px;border:1px solid #d5dce5;border-radius:8px;background:#fff!important;color:#162130!important;font:400 14px var(--display);text-align:left;display:flex;align-items:center;justify-content:space-between;cursor:pointer;appearance:none;-webkit-appearance:none;}
+#contact .custom-select-trigger:hover,#contact .custom-select-trigger:active{background:#fff!important;color:#162130!important;}
+#contact .custom-select-trigger:focus{outline:none;border-color:#fe6002;box-shadow:0 0 0 2px rgba(254,96,2,.08);}
+#contact .custom-select-trigger span{font-size:18px;line-height:1;transform:translateY(-2px);}
+#contact .custom-select-menu{display:none;position:absolute;z-index:9999;left:0;right:0;top:calc(100% + 8px);background:#fff!important;border:1px solid #d9e0e8;border-radius:10px;padding:7px;box-shadow:0 18px 40px rgba(15,23,42,.16);}
+#contact .custom-select.open .custom-select-menu{display:block;}
+#contact .custom-select-menu button{display:block;width:100%;border:1px solid transparent!important;background:#fff!important;color:#162130!important;padding:11px 13px;margin:2px 0;border-radius:7px;text-align:left;font:500 14px var(--display);cursor:pointer;appearance:none;-webkit-appearance:none;transition:background .16s ease,color .16s ease,border-color .16s ease,transform .16s ease;}
+#contact .custom-select-menu button:hover,#contact .custom-select-menu button:focus{background:#fff3eb!important;color:#fe6002!important;border-color:#ffd2bd!important;outline:none;}
+#contact .custom-select-menu button[aria-selected="true"]{background:#fe6002!important;color:#fff!important;border-color:#fe6002!important;box-shadow:0 5px 14px rgba(254,96,2,.16);}
+#contact .custom-select-menu button[aria-selected="true"]:hover,#contact .custom-select-menu button[aria-selected="true"]:focus{background:#fe6002!important;color:#fff!important;}
+</style>
+<script>
+(function(){
+  function initCustomSelect(){
+    const wrap=document.getElementById('typeCustom'); if(!wrap || wrap.dataset.ready==='1') return;
+    const input=document.getElementById('type');
+    const trigger=wrap.querySelector('.custom-select-trigger');
+    const menu=wrap.querySelector('.custom-select-menu');
+    const opts=[...menu.querySelectorAll('[role="option"]')];
+    wrap.dataset.ready='1';
+    function setValue(v){input.value=v; trigger.childNodes[0].nodeValue=v+' '; opts.forEach(o=>o.setAttribute('aria-selected',o.dataset.value===v?'true':'false'));}
+    function close(){wrap.classList.remove('open');trigger.setAttribute('aria-expanded','false');}
+    trigger.addEventListener('click',e=>{e.stopPropagation(); const open=!wrap.classList.contains('open'); document.querySelectorAll('.custom-select.open').forEach(x=>x.classList.remove('open')); wrap.classList.toggle('open',open); trigger.setAttribute('aria-expanded',String(open));});
+    opts.forEach(o=>o.addEventListener('click',e=>{e.stopPropagation();setValue(o.dataset.value);close();trigger.focus();}));
+    document.addEventListener('click',e=>{if(!wrap.contains(e.target)) close();});
+    trigger.addEventListener('keydown',e=>{if(e.key==='Escape'){close();} if(e.key==='Enter'||e.key===' '){e.preventDefault();trigger.click();}});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initCustomSelect); else initCustomSelect();
+})();
+</script>
+<style id="geolift-v24-dropdown-polish">
+/* v24: premium spaced dropdown — white panel, orange selected/hover state. */
+#contact #typeCustom .custom-select-menu{background:#fff!important;border:1px solid #d9e0e8!important;border-radius:10px!important;padding:7px!important;gap:0!important;box-shadow:0 18px 40px rgba(15,23,42,.16)!important;}
+#contact #typeCustom .custom-select-menu button{background:#fff!important;color:#162130!important;margin:3px 0!important;border:1px solid transparent!important;border-radius:7px!important;padding:11px 13px!important;}
+#contact #typeCustom .custom-select-menu button:hover,#contact #typeCustom .custom-select-menu button:focus{background:#fff3eb!important;color:#fe6002!important;border-color:#ffd2bd!important;}
+#contact #typeCustom .custom-select-menu button[aria-selected="true"]{background:#fe6002!important;color:#fff!important;border-color:#fe6002!important;box-shadow:0 5px 14px rgba(254,96,2,.16)!important;}
+#contact #typeCustom .custom-select-menu button[aria-selected="true"]:hover,#contact #typeCustom .custom-select-menu button[aria-selected="true"]:focus{background:#fe6002!important;color:#fff!important;}
+</style>
 </head>
 <body>
 <header>
@@ -1388,12 +1457,20 @@ button,input,textarea,select{font:inherit;box-sizing:border-box}
 </div>
 <form class="form reveal" id="proposalForm" autocomplete="off">
 <div class="fields">
-<div class="field"><label for="name">Your name</label><input autocomplete="off" id="name" name="name" autocomplete="new-password" placeholder="Full name" required=""/></div>
-<div class="field"><label for="business">Business / agency</label><input autocomplete="off" id="business" name="business" autocomplete="new-password" placeholder="Company or brand" required=""/></div>
-<div class="field"><label for="email">Work email</label><input autocomplete="off" id="email" name="email" autocomplete="new-password" placeholder="you@company.com" required="" type="email"/></div>
-<div class="field"><label for="locations">Locations</label><input autocomplete="off" id="locations" name="locations" autocomplete="new-password" placeholder="e.g. 12"/></div>
-<div class="field full"><label for="type">What best describes you?</label><select id="type" name="type"><option>Business — single location</option><option>Business — multi-location</option><option>Agency — white-label fulfillment</option><option>Other</option></select></div>
-<div class="field full"><label for="message">What do you need managed?</label><textarea id="message" name="message" placeholder="Tell us briefly about your profiles and current setup"></textarea></div>
+<div class="field"><label for="name">Your name</label><input autocomplete="off" id="name" name="gl_full_name" autocomplete="new-password" placeholder="Full name" required=""/></div>
+<div class="field"><label for="business">Business / agency</label><input autocomplete="off" id="business" name="gl_business" autocomplete="new-password" placeholder="Company or brand" required=""/></div>
+<div class="field"><label for="email">Work email</label><input autocomplete="off" id="email" name="gl_work_email" autocomplete="new-password" placeholder="you@company.com" required="" type="email"/></div>
+<div class="field"><label for="locations">Locations</label><input autocomplete="off" id="locations" name="gl_locations" autocomplete="new-password" placeholder="e.g. 12"/></div>
+<div class="field full"><label for="type">What best describes you?</label><div class="custom-select" id="typeCustom">
+<input type="hidden" id="type" name="gl_type" value="Business — single location">
+<button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">Business — single location <span aria-hidden="true">⌄</span></button>
+<div class="custom-select-menu" role="listbox" aria-label="What best describes you">
+<button type="button" role="option" aria-selected="true" data-value="Business — single location">Business — single location</button>
+<button type="button" role="option" aria-selected="false" data-value="Business — multi-location">Business — multi-location</button>
+<button type="button" role="option" aria-selected="false" data-value="Agency — white-label fulfillment">Agency — white-label fulfillment</button>
+<button type="button" role="option" aria-selected="false" data-value="Other">Other</button>
+</div></div></div>
+<div class="field full"><label for="message">What do you need managed?</label><textarea id="message" name="gl_message" placeholder="Tell us briefly about your profiles and current setup"></textarea></div>
 </div>
 <button class="btn btn-primary" style="width:100%" type="submit">Request Management Proposal <span class="arrow">→</span></button>
 <p class="form-note">No commitment required. We review your setup and respond with a practical management scope.</p>
@@ -1508,16 +1585,17 @@ document.getElementById('proposalForm').addEventListener('submit', e => {
   e.preventDefault();
   const form = e.currentTarget;
   const data = new FormData(form);
+  const value = id => document.getElementById(id)?.value || '';
   const body = [
-    `Name: ${data.get('name')}`,
-    `Business / agency: ${data.get('business')}`,
-    `Email: ${data.get('email')}`,
-    `Locations: ${data.get('locations') || 'Not specified'}`,
-    `Type: ${data.get('type')}`,
+    `Name: ${value('name')}`,
+    `Business / agency: ${value('business')}`,
+    `Email: ${value('email')}`,
+    `Locations: ${value('locations') || 'Not specified'}`,
+    `Type: ${value('type')}`,
     '',
-    `${data.get('message') || ''}`
+    `${value('message') || ''}`
   ].join('\\n');
-  window.location.href = `mailto:hello@geolift.co.in?subject=${encodeURIComponent('Management Proposal Request — '+data.get('business'))}&body=${encodeURIComponent(body)}`;
+  window.location.href = `mailto:hello@geolift.co.in?subject=${encodeURIComponent('Management Proposal Request — '+value('business'))}&body=${encodeURIComponent(body)}`;
 });
 </script>
   <script>
@@ -1801,6 +1879,16 @@ document.getElementById('proposalForm').addEventListener('submit', e => {
 }
 </style>
 
+
+<style id="geolift-v20-form-white-focus">
+/* v20: never allow browser focus/autofill preview to turn proposal fields dark. */
+#contact #proposalForm .field input,#contact #proposalForm .field input:hover,#contact #proposalForm .field input:focus,#contact #proposalForm .field input:active,#contact #proposalForm .field select,#contact #proposalForm .field select:hover,#contact #proposalForm .field select:focus,#contact #proposalForm .field select:active,#contact #proposalForm .field textarea,#contact #proposalForm .field textarea:hover,#contact #proposalForm .field textarea:focus,#contact #proposalForm .field textarea:active{background:#fff!important;background-color:#fff!important;background-image:none!important;color:#162130!important;-webkit-text-fill-color:#162130!important;color-scheme:light!important;caret-color:#162130!important}
+#contact #proposalForm .field input:-webkit-autofill,#contact #proposalForm .field input:-webkit-autofill:hover,#contact #proposalForm .field input:-webkit-autofill:focus,#contact #proposalForm .field input:-webkit-autofill:active{-webkit-text-fill-color:#162130!important;-webkit-box-shadow:0 0 0 1000px #fff inset!important;box-shadow:0 0 0 1000px #fff inset!important;background:#fff!important;background-color:#fff!important}
+#contact #proposalForm .field select option{background:#fff!important;color:#162130!important}
+</style>
+<script>
+(function(){const form=document.getElementById('proposalForm');if(!form)return;form.setAttribute('autocomplete','off');form.querySelectorAll('input,textarea,select').forEach(el=>{el.setAttribute('autocomplete','new-password');el.setAttribute('data-lpignore','true');el.setAttribute('data-1p-ignore','true');});})();
+</script>
 </body>
 </html>
 
