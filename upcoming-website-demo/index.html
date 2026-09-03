@@ -65,10 +65,10 @@ p{color:var(--muted)}
 header{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(15,23,42,.76);backdrop-filter:blur(18px)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px}
-.logo{width:35px;height:35px;border-radius:9px;display:block;object-fit:cover}
-.wordmark{font:800 20px var(--display);color:#fff;letter-spacing:-.04em}.wordmark span{color:var(--orange)}
-.links{display:flex;align-items:center;gap:27px}
-.links a{font-size:13px;font-weight:600;color:#CBD5E1;transition:.2s}.links a:hover{color:#fff}
+.logo{width:39px;height:39px;border-radius:9px;display:block;object-fit:cover}
+.wordmark{font:800 21px var(--display);color:#fff;letter-spacing:-.04em}.wordmark span{color:var(--orange)}
+.links{display:flex;align-items:center;gap:29px}
+.links a{font-size:14px;font-weight:600;color:#CBD5E1;transition:.2s}.links a:hover{color:#fff}
 .nav-cta{display:flex;gap:12px;align-items:center}
 .menu{display:none;border:0;background:none;color:#fff;font-size:25px}
 
@@ -99,6 +99,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid r
 .ops-name{font:500 10px var(--mono);color:#94A3B8;letter-spacing:.1em}
 .live{font:500 9px var(--mono);color:#4ADE80;display:flex;align-items:center;gap:6px}.live:before{content:"";width:6px;height:6px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.1)}
 .ops-body{padding:20px}
+.ops-status-rail{position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:8px;padding:8px 10px;background:rgba(15,23,42,.94);border:1px solid rgba(255,255,255,.10);border-radius:7px;box-shadow:0 12px 30px rgba(0,0,0,.18);font:500 8px var(--mono);white-space:nowrap}.ops-status-rail span{color:var(--orange);letter-spacing:.08em}.ops-status-rail b{color:#CBD5E1;font-weight:500}.ops-status-rail em{color:#4ADE80;font-style:normal}
 .ops-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:17px}.ops-head small{font:10px var(--mono);color:#64748B}.ops-head strong{font:600 15px var(--display);color:#fff;display:block;margin-top:4px}.sample{font:500 9px var(--mono);color:var(--orange);border:1px solid rgba(217,106,50,.12);background:rgba(217,106,50,.04);padding:5px 8px;border-radius:20px}
 .metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .metric{border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025);border-radius:8px;padding:13px}
@@ -186,7 +187,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid r
 
 .industries{background:var(--paper)}.industry-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.industry{padding:22px 12px;border:1px solid var(--line);background:#fff;border-radius:9px;text-align:center;font-size:12px;font-weight:700;transition:.25s}.industry:hover{border-color:#FCD34D;transform:translateY(-3px);box-shadow:0 10px 25px rgba(15,23,42,.05)}
 
-.proof{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.proof h2{margin-top:20px}.proof-copy p{font-size:16px;margin-top:18px;line-height:1.75}.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:13px;overflow:hidden}.proof-item{background:#fff;padding:26px}.proof-item small{font:500 9px var(--mono);color:#94A3B8}.proof-item b{display:block;font:600 20px var(--display);margin-top:12px}.proof-item p{font-size:12px;margin-top:5px}
+.proof{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.proof h2{margin-top:20px}.proof-copy p{font-size:16px;margin-top:18px;line-height:1.75}.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:13px;overflow:hidden}.proof-item{background:#fff;padding:26px}.proof-item small{font:500 9px var(--mono);color:#94A3B8}.proof-item b{display:block;font:600 20px var(--display);margin-top:12px}.proof-item p{font-size:12px;margin-top:5px}
 
 .faq{max-width:850px;margin:auto}.faq-item{border-top:1px solid var(--line)}.faq-q{width:100%;display:flex;justify-content:space-between;gap:20px;padding:22px 0;border:0;background:none;text-align:left;font:700 15px var(--display);color:var(--ink)}.faq-q span{font:500 18px var(--mono);color:var(--orange)}.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}.faq-a p{font-size:13px;line-height:1.7;padding:0 35px 21px 0}.faq-item.open .faq-a{max-height:180px}
 
@@ -356,44 +357,6 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
   .hero-network *,.section:after,.metric:before,.review-card:before{animation:none!important}
 }
 
-/* GeoLift premium motion layer */
-.gx-motion-field{
-  position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;
-  opacity:.42;
-}
-.gx-orbit{
-  position:absolute; width:360px; height:360px; border:1px solid rgba(217,106,50,.04);
-  border-radius:50%; right:-150px; top:18vh; animation:gx-orbit 24s linear infinite;
-}
-.gx-orbit::before,.gx-orbit::after{
-  content:""; position:absolute; inset:34px; border:1px solid rgba(217,106,50,.025);
-  border-radius:50%;
-}
-.gx-orbit::after{ inset:88px; }
-.gx-orbit-dot{
-  position:absolute; width:7px; height:7px; border-radius:50%;
-  background:#FE6002; box-shadow:0 0 22px rgba(217,106,50,.16);
-  left:50%; top:-4px; transform:translateX(-50%);
-}
-.gx-scan{
-  position:absolute; left:7%; right:7%; height:1px;
-  background:linear-gradient(90deg,transparent,rgba(217,106,50,.05),transparent);
-  animation:gx-scan 11s ease-in-out infinite;
-}
-.gx-scan.s2{animation-delay:4s}
-.gx-scan.s3{animation-delay:7s}
-@keyframes gx-orbit{to{transform:rotate(360deg)}}
-@keyframes gx-scan{
-  0%,100%{top:12%;opacity:0}
-  15%{opacity:.8}
-  50%{top:76%;opacity:.28}
-  85%{opacity:.7}
-}
-@media(max-width:700px){.gx-motion-field{opacity:.25}.gx-orbit{width:250px;height:250px;right:-140px}}
-@media(prefers-reduced-motion:reduce){
-  .gx-orbit,.gx-scan{animation:none!important}
-}
-
 /* Meaningful micro-interactions */
 .card,.feature,.panel,.step,.price-card,.faq-item,.industry-card,.metric,.engagement{
   transition:transform .45s cubic-bezier(.2,.8,.2,1),border-color .45s ease,box-shadow .45s ease;
@@ -466,23 +429,19 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 .auto-step strong{color:#fff;font-size:15px;}
 .auto-step.active{border:1px solid rgba(217,106,50,.35);padding:15px;margin-top:2px;background:rgba(217,106,50,.06);}
 .auto-arrow{text-align:center;color:#64748B;font-family:var(--mono);font-size:12px;}
-@media(max-width:900px){.automation-grid{grid-template-columns:1fr;gap:42px;}}
+@media(max-width:900px){.automation-grid{grid-template-columns:1fr;gap:42px}.proof-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
-<div aria-hidden="true" class="gx-motion-field">
-<div class="gx-orbit"><span class="gx-orbit-dot"></span></div>
-<div class="gx-scan"></div><div class="gx-scan s2"></div><div class="gx-scan s3"></div>
-</div>
 <header>
 <div class="container nav">
-<a aria-label="GeoLift home" class="brand" href="#top">
+<a aria-label="GeoLift home" class="brand" href="/">
 <img alt="GeoLift" class="logo" decoding="async" height="35" src="https://www.geolift.co.in/images/e45fb683-6afa-4cd0-a4a0-63afa5731ed9.webp" width="35"/>
 <span class="wordmark">Geo<span>Lift</span></span>
 </a>
-<nav class="links" id="navLinks"><a href="#management">Management</a><a href="#automation">Automation</a><a href="#services">Services</a><a href="#multi-location">Multi-Location</a><a href="#agency">For Agencies</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
+<nav class="links" id="navLinks"><a href="/management/">Management</a><a href="/automation/">Automation</a><a href="/services/">Services</a><a href="/multi-location/">Multi-Location</a><a href="/for-agencies/">For Agencies</a><a href="/pricing/">Pricing</a><a href="/faq/">FAQ</a></nav>
 <div class="nav-cta">
-<a class="btn btn-primary" href="#contact">Request a Proposal <span class="arrow">→</span></a>
+<a class="btn btn-primary" href="/contact/">Request a Proposal <span class="arrow">→</span></a>
 <button aria-expanded="false" aria-label="Open menu" class="menu" id="menu">☰</button>
 </div>
 </div>
@@ -513,10 +472,10 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <h1>Google Business Profile Management. <span class="accent">Automation Built to Scale.</span></h1>
 <p class="hero-lead">GeoLift combines Google Business Profile management with WhatsApp automation, AI chatbots and automated lead-generation workflows — giving businesses and agencies one specialist layer for visibility, conversations and growth.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#contact">Bring Your Google Presence Under Control <span class="arrow">→</span></a>
+<a class="btn btn-primary" href="/contact/">Bring Your Google Presence Under Control <span class="arrow">→</span></a>
 <a class="btn btn-dark" href="#agency">Explore Agency Fulfillment</a>
 </div>
-<p class="hero-note">Human oversight · Controlled access · Scalable operations · White-label ready · No ranking guarantees</p>
+<p class="hero-note">Human oversight · Controlled access · Scalable operations · White-label ready · Built for accountable execution</p>
 </div>
 <div class="ops-shell reveal">
 <div class="ops-glow"></div>
@@ -546,11 +505,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 </div>
 </div>
 </div>
-<div class="toast">
-<small>REPUTATION / 01</small>
-<strong>New 5★ review</strong>
-<p>Response drafted → quality check</p>
-</div>
+<div class="ops-status-rail" aria-hidden="true"><span>REPUTATION</span><b>Review workflow</b><em>Quality checked</em></div>
 </div>
 </div>
 </section>
@@ -657,7 +612,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <h2>Turn enquiries into a system — not another task.</h2>
 <p>GeoLift can connect the front end of your local presence with practical automation: WhatsApp workflows, AI chatbots, lead capture, routing and follow-up tools that reduce manual handling and keep opportunities moving.</p>
 <div class="automation-pills"><span>WHATSAPP AUTOMATION</span><span>AI CHATBOTS</span><span>LEAD CAPTURE</span><span>AUTO FOLLOW-UP</span><span>LEAD ROUTING</span></div>
-<a class="btn btn-primary" href="#contact">Build Your Automation Layer <span class="arrow">→</span></a>
+<a class="btn btn-primary" href="/contact/">Build Your Automation Layer <span class="arrow">→</span></a>
 </div>
 <div class="automation-visual reveal">
 <div class="auto-card"><div class="auto-head"><span>LEAD FLOW / AUTOMATED</span><b>LIVE</b></div><div class="auto-step"><span>01</span><div><small>TRAFFIC</small><strong>Google / Website / Ads</strong></div></div><div class="auto-arrow">↓</div><div class="auto-step"><span>02</span><div><small>CAPTURE</small><strong>AI Chatbot / WhatsApp</strong></div></div><div class="auto-arrow">↓</div><div class="auto-step"><span>03</span><div><small>ACTION</small><strong>Qualify · Route · Follow up</strong></div></div><div class="auto-arrow">↓</div><div class="auto-step active"><span>04</span><div><small>OUTCOME</small><strong>Sales-ready enquiry</strong></div></div></div>
@@ -713,7 +668,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <h2>Keep the Client. We Run the Operation.</h2>
 <p>Your agency keeps the relationship, strategy and brand. GeoLift can run the Google Business Profile operation behind the scenes — and add white-label automation, chatbots, WhatsApp workflows and lead-generation execution without adding another team to your operation.</p>
 <div class="agency-badges"><span>WHITE-LABEL</span><span>BULK MANAGEMENT</span><span>REVIEW OPS</span><span>WHATSAPP AUTOMATION</span><span>AI CHATBOTS</span><span>LEAD GENERATION</span><span>REPORTING</span><span>NDA AVAILABLE</span></div>
-<a class="btn btn-primary" href="#contact" style="margin-top:24px">Discuss White-Label Fulfillment <span class="arrow">→</span></a>
+<a class="btn btn-primary" href="/contact/" style="margin-top:24px">Discuss White-Label Fulfillment <span class="arrow">→</span></a>
 </div>
 <div class="flow reveal">
 <div class="flow-box"><small>YOUR AGENCY</small><b>Strategy · Relationship · Brand</b></div>
@@ -776,7 +731,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="container proof">
 <div class="proof-copy reveal">
 <span class="eyebrow">The GeoLift standard</span>
-<h2>Google Business, automation and lead generation — under one operating standard.</h2>
+<h2>One operating standard for Google Business, automation and lead generation.</h2>
 <p>GeoLift brings together the systems businesses increasingly need to win locally: managed Google Business Profiles, reputation operations, WhatsApp automation, AI chatbots and automated lead workflows — with human oversight where it matters.</p>
 </div>
 <div class="proof-grid reveal">
@@ -785,6 +740,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="proof-item"><small>AUTOMATED</small><b>Lead workflows</b><p>Enquiries can be captured, qualified, routed and followed up through connected tools.</p></div>
 <div class="proof-item"><small>SCALABLE</small><b>Single to multi-location</b><p>The same operating discipline can extend across larger profile networks.</p></div>
 <div class="proof-item"><small>AGENCY READY</small><b>White-label delivery</b><p>Your agency can retain the client relationship while GeoLift handles fulfillment.</p></div>
+<div class="proof-item"><small>OWNERSHIP</small><b>Your business stays yours</b><p>Client ownership remains clear while GeoLift operates within the access and scope you approve.</p></div>
 </div>
 </div>
 </section><section class="section pricing-section" id="pricing">
@@ -799,7 +755,7 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <div class="price-card featured"><span class="price-label">SCALE</span><h3>Multi-Location</h3><p>For organizations that need centralized Google operations and scalable lead workflows across locations.</p><ul><li>Centralized management</li><li>Bulk workflows</li><li>Automation systems</li><li>Location-level visibility</li></ul></div>
 <div class="price-card"><span class="price-label">AGENCY</span><h3>White-Label Fulfillment</h3><p>For agencies that want one behind-the-scenes partner for GBP management, automation and lead-generation execution.</p><ul><li>White-label delivery</li><li>Bulk management</li><li>Chatbots &amp; WhatsApp automation</li><li>Lead-generation workflows</li></ul></div>
 </div>
-<div class="pricing-cta reveal"><span>Tell us what you manage. We'll define the right operating scope.</span><a class="btn btn-primary" href="#contact">Request a Proposal <span class="arrow">→</span></a></div>
+<div class="pricing-cta reveal"><span>Tell us what you manage. We'll define the right operating scope.</span><a class="btn btn-primary" href="/contact/">Request a Proposal <span class="arrow">→</span></a></div>
 </div>
 </section>
 <section class="section" id="faq">
@@ -867,11 +823,11 @@ footer{background:#0B1220;border-top:1px solid rgba(255,255,255,.07);color:#94A3
 <p>The specialist operating partner for Google Business Profiles, automation and lead-generation systems — for businesses, multi-location organizations and agencies.</p>
 <div aria-label="Social links" class="footer-social"><a aria-label="LinkedIn" href="#">LI</a><a aria-label="Instagram" href="#">IG</a><a aria-label="Facebook" href="#">FB</a><a aria-label="X" href="#">X</a><a aria-label="YouTube" href="#">YT</a></div>
 </div>
-<div class="footer-col"><h5>Services</h5><a href="#management">GBP Management</a><a href="#services">Profile Management</a><a href="#reputation">Reputation Management</a><a href="#automation">WhatsApp Automation</a><a href="#automation">AI Chatbots</a><a href="#automation">Lead Generation</a><a href="#services">Monitoring &amp; Reporting</a></div>
-<div class="footer-col"><h5>Solutions</h5><a href="#multi-location">Multi-Location</a><a href="#agency">Agency Fulfillment</a><a href="#agency">White-Label</a><a href="#control">Control &amp; Security</a><a href="#why-geolift">Why GeoLift</a><a href="#pricing">Pricing</a></div>
-<div class="footer-col"><h5>Company</h5><a href="#top">Home</a><a href="#management">About the Operation</a><a href="#process">How It Works</a><a href="#industries">Industries</a><a href="#proof">The GeoLift Standard</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+<div class="footer-col"><h5>Services</h5><a href="/management/">GBP Management</a><a href="/services/profile-management/">Profile Management</a><a href="/services/reputation-management/">Reputation Management</a><a href="/automation/whatsapp/">WhatsApp Automation</a><a href="/automation/ai-chatbots/">AI Chatbots</a><a href="/lead-generation/">Lead Generation</a><a href="/services/monitoring-reporting/">Monitoring &amp; Reporting</a></div>
+<div class="footer-col"><h5>Solutions</h5><a href="/multi-location/">Multi-Location</a><a href="/for-agencies/">Agency Fulfillment</a><a href="/for-agencies/white-label/">White-Label</a><a href="/control/">Control &amp; Security</a><a href="/why-geolift/">Why GeoLift</a><a href="/pricing/">Pricing</a></div>
+<div class="footer-col"><h5>Company</h5><a href="#top">Home</a><a href="/about/">About the Operation</a><a href="/how-it-works/">How It Works</a><a href="/industries/">Industries</a><a href="/standard/">The GeoLift Standard</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
 </div>
-<div class="bottom"><span>© 2026 GeoLift. All rights reserved.</span><span><a href="#contact">Privacy</a> · <a href="#contact">Terms</a> · Rankings are determined by Google's systems and are never guaranteed.</span></div>
+<div class="bottom"><span>© 2026 GeoLift. All rights reserved.</span><span><a href="/contact/">Privacy</a> · <a href="/contact/">Terms</a> · Rankings are determined by Google's systems and are never guaranteed.</span></div>
 </div>
 </footer>
 <script>
@@ -977,7 +933,7 @@ document.getElementById('proposalForm').addEventListener('submit', e => {
 @media (max-width:620px){
   .container{width:calc(100% - 32px)}
   .nav{height:70px}
-  .brand .wordmark{font-size:18px}
+  .brand .wordmark{font-size:19px}.logo{width:37px;height:37px}
   .links{top:70px;max-height:calc(100vh - 70px);overflow:auto;padding:18px 20px}
   .links a{width:100%;padding:8px 0}
   .hero{padding-top:112px;padding-bottom:72px;overflow:hidden}
@@ -987,6 +943,7 @@ document.getElementById('proposalForm').addEventListener('submit', e => {
   .hero-actions{display:flex;flex-direction:column;gap:10px;width:100%}
   .hero-actions .btn,.hero .btn{width:100%;justify-content:center;min-height:48px}
   .hero-visual{margin-top:4px}
+  .ops-status-rail{position:static;margin-top:12px;width:max-content;max-width:100%;white-space:normal}
   .hero-network .orb{width:300px;height:300px;right:-150px;top:100px}
   .hero-network .crosshair{width:220px;height:220px;right:-30px;top:150px}
   .section{padding:68px 0}
