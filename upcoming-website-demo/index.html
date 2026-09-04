@@ -1671,25 +1671,6 @@ button.btn{
   }
 }
 </style>
-
-<style id="geolift-typography-refinement">
-/* Typography refinement only — preserves layout, colors and visual system */
-:root{--gl-body-size:15px;--gl-body-line:1.65;}
-body{font-size:var(--gl-body-size);line-height:var(--gl-body-line);}
-.hero h1{font-size:clamp(44px,5.2vw,68px);line-height:1.02;}
-section h2,.section-title{font-size:clamp(42px,4.2vw,54px);line-height:1.06;}
-.gl-operating-model h2,.operating-model h2{font-size:clamp(42px,4.2vw,54px)!important;}
-h3{font-size:20px;}
-.gl-operating-model p,.operating-model p,.gl-service-copy p,.service-copy p{font-size:15px;}
-.small,.eyebrow,.section-eyebrow,.mono,.micro,.meta{font-size:9px;}
-button,input,select,textarea{font-family:inherit;}
-@media (max-width:900px){
-  .hero h1{font-size:clamp(38px,7vw,50px);}
-  section h2,.section-title,.gl-operating-model h2,.operating-model h2{font-size:clamp(31px,6vw,40px)!important;}
-  h3{font-size:19px;}
-  .gl-operating-model p,.operating-model p,.gl-service-copy p,.service-copy p{font-size:14px;}
-}
-</style>
 </head>
 <body>
 <header>
@@ -1701,7 +1682,7 @@ button,input,select,textarea{font-family:inherit;}
 <nav class="links" id="navLinks"><a href="/">Home</a><a href="/management/">Management</a><a href="/multi-location/">Multi-Location</a><a href="/for-agencies/">Agencies</a><a href="/franchises/">Franchises</a><a href="/automation/">Automation</a></nav>
 <div class="nav-cta">
 <a class="btn btn-primary" href="#contact">Talk to GeoLift <span class="arrow">→</span></a>
-<button aria-expanded="false" aria-label="Open menu" class="menu" id="menu">☰</button>
+<button type="button" aria-expanded="false" aria-label="Open menu" class="menu" id="menu">☰</button>
 </div>
 </div>
 </header>
@@ -4601,17 +4582,7 @@ h2{
   color:#E9783D;
 }
 
-/* Bottom "add another" cue */
-#faq .faq:after{
-  content:"MORE QUESTIONS CAN BE ADDED AS YOUR SERVICE EVOLVES";
-  display:block;
-  padding:15px 28px 16px;
-  border-top:1px solid #e7edf2;
-  color:#93A2B4;
-  font:600 8px/1.4 var(--mono);
-  letter-spacing:.12em;
-  text-align:right;
-}
+
 
 /* Respect reduced-motion preferences */
 @media(prefers-reduced-motion:reduce){
@@ -4638,11 +4609,6 @@ h2{
   #faq .faq-a p{
     padding:0 0 20px !important;
     font-size:12px !important;
-  }
-  #faq .faq:after{
-    padding:13px 18px;
-    text-align:left;
-    font-size:7px;
   }
 }
 
