@@ -1908,8 +1908,10 @@ button.btn{
       </div>
     </div>
 
-    <form autocomplete="off" class="form gl-intake-form reveal" id="proposalForm">
-      <div class="gl-intake-signal-line" aria-hidden="true"><span></span></div>
+    <form autocomplete="off" class="form gl-intake-form reveal" id="proposalForm"
+      action="https://formspree.io/f/xrpgknaz" method="POST">
+      <input type="hidden" name="_subject" value="New GeoLift Profile Review Request">
+<div class="gl-intake-signal-line" aria-hidden="true"><span></span></div>
       <div class="gl-form-top">
         <div>
           <span class="form-kicker">MANAGEMENT INTAKE</span>
@@ -2028,22 +2030,7 @@ document.querySelectorAll('.faq-q').forEach(button => {
   });
 });
 
-document.getElementById('proposalForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const data = new FormData(form);
-  const value = id => document.getElementById(id)?.value || '';
-  const body = [
-    `Name: ${value('name')}`,
-    `Business / agency: ${value('business')}`,
-    `Email: ${value('email')}`,
-    `Locations: ${value('locations') || 'Not specified'}`,
-    `Type: ${value('type')}`,
-    '',
-    `${value('message') || ''}`
-  ].join('\\n');
-  window.location.href = `mailto:hello@geolift.co.in?subject=${encodeURIComponent('Management Proposal Request — '+value('business'))}&body=${encodeURIComponent(body)}`;
-});
+/* Form submission is handled by the form action above. */
 </script>
 <style>
 /* ===== v5 refinement ===== */
