@@ -1671,6 +1671,35 @@ button.btn{
   }
 }
 </style>
+
+<style id="geolift-mobile-menu-final">
+@media(max-width:900px){
+  .menu{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:5px!important;
+    width:42px!important;
+    height:42px!important;
+    min-width:42px!important;
+    min-height:42px!important;
+    padding:0!important;
+    margin-left:auto!important;
+    font-size:0!important;
+    line-height:0!important;
+  }
+  .menu span{
+    display:block!important;
+    width:26px!important;
+    height:2px!important;
+    border-radius:2px!important;
+    background:#fff!important;
+    flex:0 0 2px!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header>
@@ -1682,7 +1711,7 @@ button.btn{
 <nav class="links" id="navLinks"><a href="/">Home</a><a href="/management/">Management</a><a href="/multi-location/">Multi-Location</a><a href="/for-agencies/">Agencies</a><a href="/franchises/">Franchises</a><a href="/automation/">Automation</a></nav>
 <div class="nav-cta">
 <a class="btn btn-primary" href="#contact">Talk to GeoLift <span class="arrow">→</span></a>
-<button type="button" aria-expanded="false" aria-label="Open menu" class="menu" id="menu">☰</button>
+<button type="button" aria-expanded="false" aria-label="Open menu" class="menu" id="menu"><span></span><span></span><span></span></button>
 </div>
 </div>
 </header>
@@ -2927,7 +2956,7 @@ html{scroll-padding-top:84px}
   .brand{gap:9px}.logo{width:36px;height:36px;border-radius:9px}
   .brand .wordmark{font-size:19px}
   .nav-cta{gap:0}
-  .menu{font-size:27px;padding:8px 0 8px 10px;line-height:1}
+  .menu{font-size:31px!important;padding:7px 0 7px 10px!important;line-height:1!important;min-width:42px!important;min-height:42px!important}
   .links{top:68px;max-height:calc(100svh - 68px);padding:14px 20px 20px;gap:0}
   .links a{font-size:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
   .links a:last-child{border-bottom:0}
@@ -4609,6 +4638,11 @@ h2{
   #faq .faq-a p{
     padding:0 0 20px !important;
     font-size:12px !important;
+  }
+  #faq .faq:after{
+    padding:13px 18px;
+    text-align:left;
+    font-size:7px;
   }
 }
 
