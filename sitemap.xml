@@ -1,60 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
-    <loc>https://geolift.co.in/</loc>
+    <loc>https://www.geolift.co.in/</loc>
   </url>
-
   <url>
-    <loc>https://geolift.co.in/gmb-services/</loc>
+    <loc>https://www.geolift.co.in/management/</loc>
   </url>
-
   <url>
-    <loc>https://geolift.co.in/gmb-setup/</loc>
+    <loc>https://www.geolift.co.in/multi-location/</loc>
   </url>
-
   <url>
-    <loc>https://geolift.co.in/gmb-management/</loc>
+    <loc>https://www.geolift.co.in/agencies/</loc>
   </url>
-
   <url>
-    <loc>https://geolift.co.in/google-maps-ranking/</loc>
+    <loc>https://www.geolift.co.in/franchises/</loc>
   </url>
-
   <url>
-    <loc>https://geolift.co.in/gmb-verification/</loc>
+    <loc>https://www.geolift.co.in/automation/</loc>
   </url>
-
-  <url>
-    <loc>https://geolift.co.in/gmb-optimization/</loc>
-  </url>
-
-  <url>
-    <loc>https://geolift.co.in/website-development/</loc>
-  </url>
-
-  <url>
-    <loc>https://geolift.co.in/website-development/single-page-website/</loc>
-  </url>
-
-  <url>
-    <loc>https://geolift.co.in/website-development/affordable-website-development/</loc>
-  </url>
-
-  <url>
-    <loc>https://geolift.co.in/website-development/cheap-website-development/</loc>
-  </url>
-
-  <url>
-    <loc>https://geolift.co.in/privacy-policy/</loc>
-  </url>
-
-  <url>
-    <loc>https://geolift.co.in/terms/</loc>
-  </url>
-
-  <url>
-    <loc>https://geolift.co.in/disclaimer/</loc>
-  </url>
-
 </urlset>
