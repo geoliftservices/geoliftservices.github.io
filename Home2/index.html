@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>GeoLift — Google Business Profile Management & Growth Infrastructure</title>
+  <meta content="GeoLift powers local SEO, Google Business Profile management, review automation, and multi-location agency operations." name="description"/>
+  <meta content="index, follow" name="robots"/>
+  <link href="https://www.geolift.co.in/" rel="canonical"/>
+  <meta content="#0B1220" name="theme-color"/>
+  <link href="https://www.geolift.co.in/images/ChatGPT_Image_Sep_4__2026__02_35_34_PM-removebg-preview.png" rel="icon" type="image/png"/>
+  <link href="https://www.geolift.co.in/images/ChatGPT_Image_Sep_4__2026__02_35_34_PM-removebg-preview.png" rel="shortcut icon"/>
+  <link href="https://www.geolift.co.in/images/ChatGPT_Image_Sep_4__2026__02_35_34_PM-removebg-preview.png" rel="apple-touch-icon"/>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --ink: #0B1220;
+      --ink-surface: #0F172A;
+      --ink-card: #111C31;
+      --ink-card-hover: #17243D;
+      --white: #FFFFFF;
+      --paper: #F8FAFC;
+      --line: #E2E8F0;
+      --line-dark: rgba(255, 255, 255, 0.08);
+      --muted: #64748B;
+      --muted-dark: #94A3B8;
+      --orange: #E9783D;
+      --orange-glow: rgba(233, 120, 61, 0.15);
+      --orange-soft: rgba(233, 120, 61, 0.08);
+      --green: #22C55E;
+      --green-soft: rgba(34, 197, 94, 0.1);
+      --display: 'Manrope', sans-serif;
+      --body: 'DM Sans', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+      --max: 1240px;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body);
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body::selection { background: var(--orange); color: var(--white); }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    :focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(var(--max), calc(100% - 48px)); margin: 0 auto; }
+    .mono { font-family: var(--mono); }
+    
+    /* Typography System */
+    .eyebrow {
+      font: 600 11px/1 var(--mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      box-shadow: 0 0 0 4px var(--orange-soft);
+    }
+    
+    h1, h2, h3, h4 { font-family: var(--display); letter-spacing: -0.04em; }
+    h1 { font-size: clamp(42px, 5.5vw, 72px); line-height: 1.02; font-weight: 800; }
+    h2 { font-size: clamp(32px, 3.8vw, 52px); line-height: 1.08; font-weight: 700; }
+    h3 { font-size: 20px; line-height: 1.25; font-weight: 700; }
+    p { color: var(--muted); }
+
+    /* Button Tokens */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      box-shadow: 0 8px 24px var(--orange-glow);
+    }
+    .btn-primary:hover {
+      background: #D8672C;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px var(--orange-glow);
+    }
+    .btn-dark {
+      border-color: rgba(255, 255, 255, 0.15);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .btn-dark:hover {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+    .btn-light {
+      border-color: var(--line);
+      color: var(--ink);
+      background: var(--white);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .btn-light:hover {
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+    .arrow { transition: transform 0.2s ease; }
+    .btn:hover .arrow { transform: translateX(4px); }
+
+    /* Header / Nav */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line-dark);
+      background: rgba(11, 18, 32, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; }
+    .wordmark { font: 800 22px var(--display); color: var(--white); letter-spacing: -0.04em; }
+    .wordmark span { color: var(--orange); }
+    .links { display: flex; align-items: center; gap: 32px; }
+    .links a { font-size: 14px; font-weight: 600; color: #CBD5E1; transition: color 0.2s; }
+    .links a:hover { color: var(--white); }
+    .nav-cta { display: flex; gap: 12px; align-items: center; }
+    .menu { display: none; border: 0; background: none; color: var(--white); font-size: 24px; }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 160px 0 100px;
+      background: radial-gradient(circle at 75% 25%, rgba(233, 120, 61, 0.08), transparent 40%),
+                  radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05), transparent 40%),
+                  var(--ink);
+      color: var(--white);
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 4;
+    }
+    .hero h1 { margin-top: 20px; color: var(--white); }
+    .hero h1 .accent { color: var(--orange); }
+    .hero-lead { font-size: 18px; line-height: 1.65; color: #94A3B8; margin-top: 24px; max-width: 540px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+    .hero-note { font: 400 12px var(--mono); color: var(--muted); margin-top: 20px; }
+
+    /* Hero Network Background Overlay */
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.25;
+      background-image: linear-gradient(var(--line-dark) 1px, transparent 1px),
+                        linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at 60% 40%, #000 20%, transparent 80%);
+    }
+
+    /* Live Operational Board Visual */
+    .ops-shell { position: relative; z-index: 5; }
+    .ops {
+      background: var(--ink-card);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+      transform: perspective(1000px) rotateY(-2deg);
+      transition: transform 0.5s ease;
+    }
+    .ops:hover { transform: perspective(1000px) rotateY(0deg) translateY(-4px); }
+    .ops-bar {
+      height: 44px;
+      padding: 0 16px;
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid var(--line-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dots { display: flex; gap: 6px; }
+    .dots i { width: 8px; height: 8px; border-radius: 50%; background: #334155; }
+    .ops-name { font: 500 11px var(--mono); color: var(--muted-dark); }
+    .live { font: 500 10px var(--mono); color: #4ADE80; display: flex; align-items: center; gap: 6px; }
+    .live::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+    }
+    .ops-body { padding: 24px; }
+    .ops-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+    .ops-head small { font: 11px var(--mono); color: var(--muted); }
+    .ops-head strong { font: 600 16px var(--display); color: var(--white); display: block; margin-top: 2px; }
+    .sample {
+      font: 500 10px var(--mono);
+      color: var(--orange);
+      border: 1px solid var(--orange-soft);
+      background: rgba(233, 120, 61, 0.05);
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .metric {
+      border: 1px solid var(--line-dark);
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 10px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+    .metric b { font: 600 22px var(--mono); color: var(--white); display: block; }
+    .metric b.green { color: #4ADE80; }
+    .metric b.orange { color: var(--orange); }
+    .metric span { font-size: 10px; color: var(--muted); display: block; margin-top: 2px; }
+
+    .activity { margin-top: 20px; border-top: 1px solid var(--line-dark); padding-top: 16px; }
+    .activity-title { font: 500 10px var(--mono); color: var(--muted); letter-spacing: 0.08em; margin-bottom: 12px; }
+    .activity-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      font-size: 12px;
+      color: #CBD5E1;
+    }
+    .activity-row:last-child { border: 0; }
+    .check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--green-soft);
+      color: #4ADE80;
+      font-size: 10px;
+      flex-shrink: 0;
+    }
+    .check.warn { background: rgba(233, 120, 61, 0.1); color: var(--orange); }
+    .activity-row em { margin-left: auto; font: 400 10px var(--mono); font-style: normal; color: var(--muted); }
+
+    /* Interactive Operational Toggles (New Feature Component) */
+    .ops-controls {
+      margin-top: 18px;
+      display: flex;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.8);
+      padding: 4px;
+      border-radius: 8px;
+      border: 1px solid var(--line-dark);
+    }
+    .ops-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font: 500 11px var(--mono);
+      padding: 8px 0;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .ops-btn.active {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    /* Trust Section */
+    .trust { border-bottom: 1px solid var(--line); background: var(--white); padding: 24px 0; }
+    .trust-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .trust-label { font: 500 11px var(--mono); color: var(--muted); letter-spacing: 0.1em; }
+    .trust-items { display: flex; gap: 36px; flex-wrap: wrap; align-items: center; }
+    .trust-items span { font: 700 14px var(--display); color: #475569; letter-spacing: -0.02em; }
+
+    /* Layout Sections General */
+    .section { padding: 100px 0; position: relative; }
+    .section-head { max-width: 680px; margin-bottom: 56px; }
+    .section-head h2 { margin-top: 16px; }
+    .section-head p { font-size: 17px; line-height: 1.7; margin-top: 16px; color: var(--muted); }
+    
+    .dark-section { background: var(--ink); color: var(--white); }
+    .dark-section h2 { color: var(--white); }
+    .dark-section p { color: var(--muted-dark); }
+
+    /* Pillars */
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+    .pillar { padding: 40px 32px 24px 0; border-right: 1px solid var(--line); }
+    .pillar:last-child { border-right: 0; padding-right: 0; }
+    .pillar .num { font: 600 12px var(--mono); color: var(--orange); }
+    .pillar h3 { margin-top: 16px; }
+    .pillar p { font-size: 14px; margin-top: 12px; color: var(--muted); }
+
+    /* Core Layers Architecture */
+    .layers { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; align-items: start; }
+    .layer-list { border-top: 1px solid var(--line-dark); }
+    .layer {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line-dark);
+      display: grid;
+      grid-template-columns: 60px 1fr;
+      gap: 16px;
+      transition: padding 0.25s ease;
+      cursor: pointer;
+    }
+    .layer:hover { padding-left: 8px; }
+    .layer-num { font: 500 11px var(--mono); color: var(--muted); padding-top: 4px; }
+    .layer:hover .layer-num { color: var(--orange); }
+    .layer h3 { color: var(--white); font-size: 20px; }
+    .layer p { font-size: 14px; margin-top: 8px; color: var(--muted-dark); }
+
+    /* Visual Signal Board (Sticky Map Component) */
+    .layer-visual { position: sticky; top: 100px; }
+    .signal-board {
+      border: 1px solid var(--line-dark);
+      border-radius: 16px;
+      background: var(--ink-card);
+      padding: 24px;
+      overflow: hidden;
+    }
+    .board-top { display: flex; justify-content: space-between; align-items: center; font: 500 11px var(--mono); color: var(--muted); }
+    .board-top b { color: var(--orange); font-weight: 500; }
+    .map {
+      height: 320px;
+      margin-top: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      position: relative;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px;
+      overflow: hidden;
+    }
+    .node {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #334155;
+      border: 2px solid #64748B;
+    }
+    .node.good { background: var(--green); border-color: #86EFAC; }
+    .node.hot { background: var(--orange); border-color: #FDE68A; animation: pulse 2s infinite; }
+    .n1 { left: 20%; top: 30%; }
+    .n2 { left: 45%; top: 60%; }
+    .n3 { left: 75%; top: 25%; }
+    .n4 { left: 60%; top: 75%; }
+    @keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(233, 120, 61, 0.2); } }
+
+    .board-footer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 16px; }
+    .board-stat { padding: 12px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--line-dark); border-radius: 8px; }
+    .board-stat b { display: block; font: 600 18px var(--mono); color: var(--white); }
+    .board-stat span { font-size: 10px; color: var(--muted); }
+
+    /* Workflow Matrix */
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .step {
+      background: var(--ink-surface);
+      border: 1px solid var(--line-dark);
+      border-radius: 14px;
+      padding: 32px;
+      transition: all 0.3s ease;
+    }
+    .step:hover {
+      background: var(--ink-card-hover);
+      border-color: rgba(233, 120, 61, 0.3);
+      transform: translateY(-2px);
+    }
+    .step-num { font: 600 11px var(--mono); color: var(--orange); }
+    .step h3 { color: var(--white); margin-top: 16px; }
+    .step p { font-size: 14px; margin-top: 10px; color: var(--muted-dark); }
+
+    /* Interactive Tabbed Feature Showcase (New Section) */
+    .tab-section { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .tab-nav { display: flex; justify-content: center; gap: 12px; margin-bottom: 40px; flex-wrap: wrap; }
+    .tab-nav-btn {
+      padding: 12px 24px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--muted);
+      transition: all 0.2s ease;
+    }
+    .tab-nav-btn.active {
+      background: var(--ink);
+      color: var(--white);
+      border-color: var(--ink);
+    }
+    .tab-content { display: none; background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 40px; }
+    .tab-content.active { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+
+    /* Multi-Location Scaling & Control */
+    .scale { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .bullets { margin-top: 24px; display: grid; gap: 12px; }
+    .bullets li { display: flex; gap: 12px; font-size: 14px; color: #334155; }
+    .bullets li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+    
+    .control { background: var(--ink); border-radius: 16px; padding: 24px; border: 1px solid var(--line-dark); }
+    .control-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; }
+    .control-head span { font: 500 10px var(--mono); color: var(--muted); }
+    .control-head b { font: 500 10px var(--mono); color: #4ADE80; }
+    .control-row {
+      display: grid;
+      grid-template-columns: 1fr 80px 80px;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border-top: 1px solid var(--line-dark);
+      font-size: 12px;
+      color: #CBD5E1;
+    }
+    .state {
+      font: 500 9px var(--mono);
+      padding: 4px 8px;
+      border-radius: 12px;
+      text-align: center;
+      color: #4ADE80;
+      background: var(--green-soft);
+    }
+    .state.attn { color: var(--orange); background: rgba(233, 120, 61, 0.1); }
+
+    /* Agency Architecture */
+    .agency-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 60px; align-items: center; }
+    .flow { border: 1px solid var(--line-dark); border-radius: 16px; padding: 24px; background: rgba(255, 255, 255, 0.02); }
+    .flow-box { padding: 20px; border: 1px solid var(--line-dark); border-radius: 10px; background: var(--ink-card); text-align: center; color: var(--white); }
+    .flow-box small { display: block; font: 500 9px var(--mono); color: var(--muted); margin-bottom: 4px; }
+    .flow-box b { font: 700 16px var(--display); }
+    .flow-line {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font: 500 10px var(--mono);
+      color: var(--orange);
+      position: relative;
+    }
+    .flow-line::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--orange);
+      opacity: 0.3;
+    }
+
+    /* Reputation Engine */
+    .reputation { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 60px; align-items: center; }
+    .review-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: 0 20px 50px rgba(0,0,0,0.04); }
+    .review-top { display: flex; align-items: center; justify-content: space-between; }
+    .review-source { font: 500 10px var(--mono); color: var(--muted); }
+    .stars { color: var(--orange); letter-spacing: 2px; }
+    .review-text { font: 600 18px var(--display); line-height: 1.4; margin-top: 16px; color: var(--ink); }
+    .review-flow { margin-top: 24px; display: grid; grid-template-columns: 1fr 20px 1fr 20px 1fr; align-items: center; gap: 6px; }
+    .review-stage { padding: 10px; border: 1px solid var(--line); border-radius: 8px; text-align: center; }
+    .review-stage small { font: 500 8px var(--mono); color: var(--muted); display: block; }
+    .review-stage b { font-size: 11px; margin-top: 2px; display: block; }
+    .review-stage.ok { border-color: #BBF7D0; background: #F0FDF4; }
+    .review-stage.ok b { color: #15803D; }
+
+    /* Industry Showcase Grid */
+    .industries { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .industry-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .industry {
+      padding: 24px 12px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      border-radius: 10px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.25s ease;
+    }
+    .industry:hover {
+      border-color: var(--orange);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+    }
+
+    /* Quantitative Proof Grid */
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .proof-item { background: var(--paper); border: 1px solid var(--line); padding: 32px; border-radius: 12px; }
+    .proof-item small { font: 500 10px var(--mono); color: var(--muted); }
+    .proof-item b { display: block; font: 700 28px var(--display); color: var(--ink); margin-top: 8px; }
+    .proof-item p { font-size: 13px; margin-top: 6px; color: var(--muted); }
+
+    /* FAQ System */
+    .faq { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-q {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 0;
+      border: 0;
+      background: none;
+      text-align: left;
+      font: 700 17px var(--display);
+      color: var(--ink);
+    }
+    .faq-q span { font: 500 18px var(--mono); color: var(--orange); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-a p { font-size: 14px; line-height: 1.7; padding-bottom: 24px; color: var(--muted); }
+    .faq-item.open .faq-a { max-height: 200px; }
+
+    /* Contact Form Infrastructure */
+    .contact { background: var(--ink); color: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; align-items: start; }
+    .form { background: var(--ink-card); border: 1px solid var(--line-dark); border-radius: 16px; padding: 32px; }
+    .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { margin-bottom: 16px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { display: block; font-size: 12px; color: var(--muted-dark); margin-bottom: 6px; }
+    .field input, .field textarea, .field select {
+      width: 100%;
+      border: 1px solid var(--line-dark);
+      background: var(--ink-surface);
+      color: var(--white);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 14px;
+      outline: none;
+    }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--orange); }
+
+    /* Call to Action Banner */
+    .cta-band {
+      background: linear-gradient(135deg, var(--ink-card), var(--ink));
+      border-top: 1px solid var(--line-dark);
+      border-bottom: 1px solid var(--line-dark);
+      padding: 80px 0;
+      color: var(--white);
+    }
+    .cta-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+
+    /* Footer */
+    footer { background: #070C14; border-top: 1px solid var(--line-dark); color: var(--muted-dark); padding: 60px 0 30px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 40px; }
+    .footer-brand p { font-size: 13px; margin-top: 12px; max-width: 280px; color: var(--muted); }
+    .footer-col h5 { font: 600 10px var(--mono); color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 13px; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--white); }
+    .bottom { border-top: 1px solid var(--line-dark); margin-top: 48px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; font: 400 11px var(--mono); color: var(--muted); }
+
+    /* Responsive Queries */
+    @media (max-width: 992px) {
+      .hero-grid, .layers, .scale, .reputation, .agency-grid, .contact-grid, .cta-band-inner { grid-template-columns: 1fr; gap: 40px; flex-direction: column; align-items: flex-start; }
+      .layer-visual { position: relative; top: 0; }
+      .pillars { grid-template-columns: 1fr; }
+      .pillar { border-right: 0; border-bottom: 1px solid var(--line); padding-right: 0; }
+      .industry-grid { grid-template-columns: repeat(3, 1fr); }
+      .proof-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .tab-content.active { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .links { position: fixed; inset: 76px 0 0 0; background: var(--ink); padding: 32px; flex-direction: column; align-items: flex-start; display: none; }
+      .links.open { display: flex; }
+      .nav-cta .btn { display: none; }
+      .menu { display: block; }
+      .industry-grid { grid-template-columns: repeat(2, 1fr); }
+      .metric-grid { grid-template-columns: repeat(2, 1fr); }
+      .fields { grid-template-columns: 1fr; }
+      .review-flow { grid-template-columns: 1fr; gap: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <img src="https://www.geolift.co.in/images/ChatGPT_Image_Sep_4__2026__02_35_34_PM-removebg-preview.png" alt="GeoLift Logo" class="logo"/>
+        <span class="wordmark">Geo<span>Lift</span></span>
+      </a>
+      
+      <nav class="links" id="navLinks">
+        <a href="#solutions">Solutions</a>
+        <a href="#features">Platform</a>
+        <a href="#agency">Agencies</a>
+        <a href="#reputation">Reputation</a>
+        <a href="#proof">Impact</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Book Consultation <span class="arrow">→</span></a>
+        <button class="menu" id="menuToggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="grid-bg"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Local Growth Infrastructure</span>
+        <h1>Scale Your Local Search &amp; Google Presence <span class="accent">Without Friction</span></h1>
+        <p class="hero-lead">GeoLift provides automated Google Business Profile management, local SEO execution, white-label scaling, and reputation engineering for brands and agencies.</p>
+        
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Start Infrastructure Setup <span class="arrow">→</span></a>
+          <a href="#features" class="btn btn-dark">Explore System Architecture</a>
+        </div>
+        <p class="hero-note">✓ Enterprise Grade Security &nbsp;•&nbsp; Multi-Location Managed &nbsp;•&nbsp; White-Label Ready</p>
+      </div>
+
+      <!-- Real-Time Ops Card Mockup -->
+      <div class="ops-shell">
+        <div class="ops">
+          <div class="ops-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <span class="ops-name">ENGINE_CONTROL // GBP-LIVE</span>
+            <span class="live">ACTIVE</span>
+          </div>
+          <div class="ops-body">
+            <div class="ops-head">
+              <div>
+                <small>CLIENT NODE ID: 8841-IND</small>
+                <strong>GeoLift Core Ops Dashboard</strong>
+              </div>
+              <span class="sample">Live Telemetry</span>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric">
+                <b class="green">+142%</b>
+                <span>Local Search</span>
+              </div>
+              <div class="metric">
+                <b class="orange">4.9★</b>
+                <span>Avg Rating</span>
+              </div>
+              <div class="metric">
+                <b>1,240</b>
+                <span>Actions/Mo</span>
+              </div>
+              <div class="metric">
+                <b class="green">100%</b>
+                <span>Sync Status</span>
+              </div>
+            </div>
+
+            <div class="activity">
+              <div class="activity-title">AUTOMATED OPERATIONAL STREAM</div>
+              <div class="activity-row">
+                <span class="check">✓</span>
+                <span>GBP Citation Map Audit Completed</span>
+                <em>Just now</em>
+              </div>
+              <div class="activity-row">
+                <span class="check">✓</span>
+                <span>Review Response Pipeline Executed</span>
+                <em>2m ago</em>
+              </div>
+              <div class="activity-row">
+                <span class="check warn">!</span>
+                <span>Duplicate Listing Detected &amp; Suppressed</span>
+                <em>14m ago</em>
+              </div>
+            </div>
+
+            <div class="ops-controls">
+              <button class="ops-btn active" onclick="switchOpsTab(this, 'sync')">Auto-Sync</button>
+              <button class="ops-btn" onclick="switchOpsTab(this, 'seo')">Local SEO</button>
+              <button class="ops-btn" onclick="switchOpsTab(this, 'reviews')">Reviews</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust">
+    <div class="container trust-row">
+      <span class="trust-label">TRUSTED FOR LOCAL INFRASTRUCTURE &amp; GROWTH:</span>
+      <div class="trust-items">
+        <span>MULTI-LOCATION RETAIL</span>
+        <span>HOSPITALITY GROUPS</span>
+        <span>DIGITAL AGENCIES</span>
+        <span>HEALTHCARE NETWORKS</span>
+        <span>FRANCHISE SYSTEMS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section class="section" id="solutions">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Strategic Capabilities</span>
+        <h2>Built to Resolve the Complexities of Local Search</h2>
+        <p>GeoLift replaces fragmented manual efforts with structured operational workflows that build local authority systematically.</p>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <span class="num">01 // VISIBILITY</span>
+          <h3>Google Business Optimization</h3>
+          <p>Continuous optimization of profile assets, categories, geo-attributes, products, and operational metadata to maximize Map Pack presence.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">02 // AUTOMATION</span>
+          <h3>Review &amp; Sentiment Control</h3>
+          <p>Turn customer transactions into steady review velocity with automated generation, monitoring, and intelligent response mechanisms.</p>
+        </div>
+        <div class="pillar">
+          <span class="num">03 // SCALE</span>
+          <h3>Agency White-Label Hub</h3>
+          <p>Deliver enterprise-grade local SEO and listing execution to your clients under your own agency brand with dedicated client reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform System Architecture (Dark Section) -->
+  <section class="section dark-section" id="features">
+    <div class="container">
+      <div class="layers">
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">System Architecture</span>
+            <h2>Four Layers of Local Engine Execution</h2>
+            <p>Our platform handles every detail of local discovery, trust verification, and ranking mechanics.</p>
+          </div>
+
+          <div class="layer-list">
+            <div class="layer">
+              <span class="layer-num">01</span>
+              <div>
+                <h3>Signal Optimization Layer</h3>
+                <p>Auditing, profile synchronization, NAP consistency, and deep entity connection across local search networks.</p>
+              </div>
+            </div>
+            <div class="layer">
+              <span class="layer-num">02</span>
+              <div>
+                <h3>Content &amp; Post Broadcast</h3>
+                <p>Scheduled local updates, offer broadcasts, dynamic updates, and photo deployments to signal consistent business activity.</p>
+              </div>
+            </div>
+            <div class="layer">
+              <span class="layer-num">03</span>
+              <div>
+                <h3>Reputation Shield Engine</h3>
+                <p>Real-time review alerts, compliant automated responses, negative feedback triage, and review growth campaigns.</p>
+              </div>
+            </div>
+            <div class="layer">
+              <span class="layer-num">04</span>
+              <div>
+                <h3>Ownership Recovery &amp; Support</h3>
+                <p>Resolving access disputes, fighting spam listings, submitting third-party complaints, and handling suspension recovery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Visual Board -->
+        <div class="layer-visual">
+          <div class="signal-board">
+            <div class="board-top">
+              <span>LOCAL_GRID_SCANNER // ACTIVE</span>
+              <b>RADIUS: 10 KM</b>
+            </div>
+            <div class="map">
+              <div class="node n1 good"></div>
+              <div class="node n2 hot"></div>
+              <div class="node n3 good"></div>
+              <div class="node n4 good"></div>
+            </div>
+            <div class="board-footer">
+              <div class="board-stat">
+                <b>#1 - #3</b>
+                <span>Map Rank Target</span>
+              </div>
+              <div class="board-stat">
+                <b>100%</b>
+                <span>NAP Sync Score</span>
+              </div>
+              <div class="board-stat">
+                <b>0.2s</b>
+                <span>Sync Latency</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabbed Platform Capabilities (Interactive Component) -->
+  <section class="section tab-section">
+    <div class="container">
+      <div class="section-head" style="text-align: center; margin: 0 auto 40px;">
+        <span class="eyebrow">Operational Modules</span>
+        <h2>Designed for Modern Growth Teams</h2>
+      </div>
+
+      <div class="tab-nav">
+        <button class="tab-nav-btn active" onclick="switchTab(event, 'tab-single')">Single Business</button>
+        <button class="tab-nav-btn" onclick="switchTab(event, 'tab-multi')">Multi-Location Brands</button>
+        <button class="tab-nav-btn" onclick="switchTab(event, 'tab-agency')">Agencies &amp; Resellers</button>
+      </div>
+
+      <div id="tab-single" class="tab-content active">
+        <div>
+          <span class="eyebrow">For Single Location Businesses</span>
+          <h2 style="margin-top: 12px;">Dominate Your Immediate Service Area</h2>
+          <p style="margin-top: 16px;">Turn local intent into calls, visits, and bookings. We optimize every aspect of your Google profile so local customers find you first.</p>
+          <ul class="bullets">
+            <li>Guaranteed NAP consistency across search directories</li>
+            <li>Weekly local content updates and photo deployments</li>
+            <li>Automated review request campaigns via SMS/WhatsApp</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Local Dashboard" style="border-radius: 12px; border: 1px solid var(--line);"/>
+        </div>
+      </div>
+
+      <div id="tab-multi" class="tab-content">
+        <div>
+          <span class="eyebrow">For Franchise &amp; Chain Operations</span>
+          <h2 style="margin-top: 12px;">Centralized Control Across Hundreds of Outlets</h2>
+          <p style="margin-top: 16px;">Maintain brand consistency while adapting to regional search variances. Deploy updates, manage reviews, and monitor rankings globally.</p>
+          <ul class="bullets">
+            <li>Bulk update capabilities for business hours and offers</li>
+            <li>Centralized dashboard for multi-branch performance analytics</li>
+            <li>Role-based access controls for local franchise managers</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Multi Location Scaling" style="border-radius: 12px; border: 1px solid var(--line);"/>
+        </div>
+      </div>
+
+      <div id="tab-agency" class="tab-content">
+        <div>
+          <span class="eyebrow">For Digital Agencies</span>
+          <h2 style="margin-top: 12px;">Scale Local SEO Services with Zero Overheads</h2>
+          <p style="margin-top: 16px;">Deliver high-margin local listing and reputation management services under your own agency branding with our white-label fulfillment.</p>
+          <ul class="bullets">
+            <li>Custom white-label client reporting dashboards</li>
+            <li>Automated listing issue recovery and support routing</li>
+            <li>High-margin recurring revenue model for your agency</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Agency White Label" style="border-radius: 12px; border: 1px solid var(--line);"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Location Scale & Control -->
+  <section class="section">
+    <div class="container scale">
+      <div class="scale-copy">
+        <span class="eyebrow">Multi-Location Infrastructure</span>
+        <h2>Centralized Governance for Expanding Brands</h2>
+        <p>Managing multiple locations individually leads to data drift and brand dilution. GeoLift unifies location management into a single operational interface.</p>
+        <ul class="bullets">
+          <li>Bulk attribute update and holiday hour management</li>
+          <li>Location-level permissions and audit logging</li>
+          <li>Unified review streaming and escalation routing</li>
+        </ul>
+      </div>
+
+      <div class="control">
+        <div class="control-head">
+          <span>LOCATION INFRASTRUCTURE MATRIX</span>
+          <b>ALL STATIONS NORMAL</b>
+        </div>
+        <div class="control-row header">
+          <span>LOCATION NAME</span>
+          <span>STATUS</span>
+          <span>HEALTH</span>
+        </div>
+        <div class="control-row">
+          <span>GeoLift - Central Hub</span>
+          <span class="state">SYNCED</span>
+          <span>99.8%</span>
+        </div>
+        <div class="control-row">
+          <span>GeoLift - North Branch</span>
+          <span class="state">SYNCED</span>
+          <span>98.2%</span>
+        </div>
+        <div class="control-row">
+          <span>GeoLift - West Outlet</span>
+          <span class="state attn">ACTION</span>
+          <span>91.0%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reputation Engine -->
+  <section class="section dark-section" id="reputation">
+    <div class="container reputation">
+      <div class="review-card">
+        <div class="review-top">
+          <span class="review-source">GOOGLE REVIEWS // VERIFIED</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="review-text">
+          "The automated review funnel transformed our local trust. We went from 20 to over 300 positive reviews in months."
+        </div>
+        <div class="review-flow">
+          <div class="review-stage">
+            <small>STAGE 01</small>
+            <b>Transaction</b>
+          </div>
+          <div class="review-arrow">→</div>
+          <div class="review-stage">
+            <small>STAGE 02</small>
+            <b>Request</b>
+          </div>
+          <div class="review-arrow">→</div>
+          <div class="review-stage ok">
+            <small>STAGE 03</small>
+            <b>5-Star Published</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="reputation-copy">
+        <span class="eyebrow">Reputation Engine</span>
+        <h2>Turn Satisfied Customers into Local Search Dominance</h2>
+        <p>Reviews are the single largest factor in conversion rate and local Map Pack placement. GeoLift automates review collection and response handling ethically and effectively.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Showcase -->
+  <section class="section industries">
+    <div class="container">
+      <div class="section-head" style="text-align: center; margin: 0 auto 48px;">
+        <span class="eyebrow">Vertical Adaptability</span>
+        <h2>Tailored to Your Industry’s Local Dynamics</h2>
+      </div>
+
+      <div class="industry-grid">
+        <div class="industry">Healthcare &amp; Clinics</div>
+        <div class="industry">Hotels &amp; Hospitality</div>
+        <div class="industry">Legal Services</div>
+        <div class="industry">Home Services</div>
+        <div class="industry">Automotive &amp; Dealers</div>
+        <div class="industry">Retail Chains</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quantitative Impact & Proof -->
+  <section class="section" id="proof">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Measurable Results</span>
+        <h2>Performance Benchmarks Delivered</h2>
+      </div>
+
+      <div class="proof-grid">
+        <div class="proof-item">
+          <small>LOCAL SEARCH MAP PACK</small>
+          <b>+185%</b>
+          <p>Average increase in Local Pack impressions across managed profiles within 90 days.</p>
+        </div>
+        <div class="proof-item">
+          <small>CONVERSION RATE</small>
+          <b>3.4x</b>
+          <p>Higher action rate (calls, directions, web clicks) from fully optimized Google profiles.</p>
+        </div>
+        <div class="proof-item">
+          <small>REPUTATION VELOCITY</small>
+          <b>+420</b>
+          <p>Net new verified positive reviews generated per client annually on average.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head" style="text-align: center; margin: 0 auto 48px;">
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2>Clear Answers on Local Execution</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What is included in Google Business Profile management? <span>+</span>
+          </button>
+          <div class="faq-a">
+            <p>Our management covers end-to-end profile setup, category optimization, weekly local posts, photo updates, review request automation, spam listing suppression, and continuous performance tracking.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can GeoLift help recover lost or suspended profile ownership? <span>+</span>
+          </button>
+          <div class="faq-a">
+            <p>Yes. We specialize in Google Business Profile ownership recovery, third-party complaint forms, policy violation appeals, and resolving unauthorized access by legacy agencies or third parties.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How does the white-label agency program work? <span>+</span>
+          </button>
+          <div class="faq-a">
+            <p>Agencies can leverage GeoLift as their back-end fulfillment engine. We manage the profiles, audits, and reporting, while you deliver unbranded or co-branded reports and dashboards directly to your clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy">
+        <span class="eyebrow">Get Started</span>
+        <h2>Upgrade Your Local Search Infrastructure</h2>
+        <p>Whether you manage a single business, a multi-location brand, or a growing agency, GeoLift has the tools and expertise to scale your presence.</p>
+        
+        <p style="margin-top: 24px; font-family: var(--mono); color: var(--orange);">
+          Direct Inquiry: contact@geolift.co.in
+        </p>
+      </div>
+
+      <div class="form">
+        <form onsubmit="handleFormSubmit(event)">
+          <div class="fields">
+            <div class="field">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" required placeholder="John"/>
+            </div>
+            <div class="field">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" required placeholder="Doe"/>
+            </div>
+            <div class="field full">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" required placeholder="john@company.com"/>
+            </div>
+            <div class="field full">
+              <label for="type">Business Model</label>
+              <select id="type">
+                <option value="single">Single Business Owner</option>
+                <option value="multi">Multi-Location Brand</option>
+                <option value="agency">Marketing Agency / Reseller</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">Project Context / Requirements</label>
+              <textarea id="message" placeholder="Tell us about your locations, current GBP issues, or growth goals..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 12px;">Submit Request <span class="arrow">→</span></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-band">
+    <div class="container cta-band-inner">
+      <div>
+        <h2>Ready to Scale Your Local Presence?</h2>
+        <p>Get in touch with our local SEO specialists and see how GeoLift can drive measurable search growth.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Get Started Now <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand">
+            <img src="https://www.geolift.co.in/images/ChatGPT_Image_Sep_4__2026__02_35_34_PM-removebg-preview.png" alt="GeoLift Logo" class="logo"/>
+            <span class="wordmark">Geo<span>Lift</span></span>
+          </a>
+          <p>Local search engine optimization and Google Business Profile infrastructure built for scale, reliability, and growth.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Solutions</h5>
+          <a href="#solutions">Google Profile Growth</a>
+          <a href="#reputation">Reputation Management</a>
+          <a href="#features">Local SEO Audits</a>
+          <a href="#agency">Agency Reseller Hub</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#proof">About GeoLift</a>
+          <a href="#proof">Case Studies</a>
+          <a href="#contact">Contact Support</a>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Google Third-Party Policy Compliance</a>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <span>© 2026 GeoLift Solutions. All Rights Reserved.</span>
+        <span>Google Business Profile is a trademark of Google LLC.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Navigation Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      menuToggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+    });
+
+    // FAQ Accordion Toggle
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const isOpen = item.classList.contains('open');
+      
+      document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+      document.querySelectorAll('.faq-q span').forEach(el => el.textContent = '+');
+      
+      if (!isOpen) {
+        item.classList.add('open');
+        button.querySelector('span').textContent = '−';
+      }
+    }
+
+    // Tab Switcher Script
+    function switchTab(event, tabId) {
+      document.querySelectorAll('.tab-nav-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // Dashboard Switcher Mockup Functionality
+    function switchOpsTab(btn, mode) {
+      document.querySelectorAll('.ops-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const activityContainer = document.querySelector('.activity');
+      if (mode === 'sync') {
+        activityContainer.innerHTML = `
+          <div class="activity-title">AUTOMATED OPERATIONAL STREAM</div>
+          <div class="activity-row"><span class="check">✓</span><span>GBP Citation Map Audit Completed</span><em>Just now</em></div>
+          <div class="activity-row"><span class="check">✓</span><span>Review Response Pipeline Executed</span><em>2m ago</em></div>
+          <div class="activity-row"><span class="check warn">!</span><span>Duplicate Listing Detected &amp; Suppressed</span><em>14m ago</em></div>
+        `;
+      } else if (mode === 'seo') {
+        activityContainer.innerHTML = `
+          <div class="activity-title">LOCAL SEO OPTIMIZATION STREAM</div>
+          <div class="activity-row"><span class="check">✓</span><span>Keyword Geo-Grid Scanned</span><em>1m ago</em></div>
+          <div class="activity-row"><span class="check">✓</span><span>Schema Metadata Updated</span><em>10m ago</em></div>
+          <div class="activity-row"><span class="check">✓</span><span>Local Backlink Verification Passed</span><em>1h ago</em></div>
+        `;
+      } else if (mode === 'reviews') {
+        activityContainer.innerHTML = `
+          <div class="activity-title">REPUTATION &amp; REVIEWS STREAM</div>
+          <div class="activity-row"><span class="check">✓</span><span>5-Star Review Received via SMS Request</span><em>3m ago</em></div>
+          <div class="activity-row"><span class="check">✓</span><span>Automated Thank-You Reply Published</span><em>3m ago</em></div>
+          <div class="activity-row"><span class="check">✓</span><span>Monthly Sentiment Analysis Generated</span><em>2h ago</em></div>
+        `;
+      }
+    }
+
+    // Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! Your inquiry has been submitted successfully. The GeoLift team will get in touch shortly.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
