@@ -2778,33 +2778,61 @@ section.services .service-cards > :nth-child(3){
 }
 </style>
 
+
+<style id="nav-anchor-map">
+  .nav-anchor-map{position:relative;top:-100px;display:block;height:0;overflow:hidden;visibility:hidden;}
+</style>
+<style id="white-label-dropdown-edge-fix">
+@media(min-width:851px){
+  .desktop-nav .drop:last-of-type .drop-panel{
+    left:auto!important;
+    right:0!important;
+    transform:translateY(8px);
+  }
+  .desktop-nav .drop:last-of-type:hover .drop-panel{
+    transform:none;
+  }
+}
+</style>
 </head>
 
 
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a href="/" class="brand" aria-label="GeoLift home"><span class="geo">Geo</span><span>Lift</span></a>
+    <a href="#home" class="brand" aria-label="GeoLift home"><span class="geo">Geo</span><span>Lift</span></a>
     <nav class="desktop-nav">
-      <div class="drop"><a href="/google-business-profile-management/">GBP Services <span>⌄</span></a><div class="drop-panel">
-        <div><small>GOOGLE BUSINESS PROFILE</small><a href="/google-business-profile-management/">GBP Management</a><a href="/google-business-profile-optimization/">GBP Optimization</a><a href="/gmb-setup/">GBP Setup & Verification</a><a href="/gmb-suspension-recovery/">Suspension Recovery</a><a href="/gmb-reviews-management/">Reviews Management</a></div>
-        <div><small>LOCAL MAPS</small><a href="/google-maps-ranking/">Google Maps Ranking</a><a href="/local-citations/">Local Citations</a><a href="/location-pages/">Location Pages</a><a href="/profile-protection/">Profile Protection</a></div>
+      <div class="drop"><a href="#gbp-services">GBP Services <span>⌄</span></a><div class="drop-panel">
+        <div><small>GOOGLE BUSINESS PROFILE</small><a href="#gbp-management">GBP Management</a><a href="#gbp-optimization">GBP Optimization</a><a href="#gbp-setup">GBP Setup & Verification</a><a href="#gbp-reviews">Reviews & Reputation</a><a href="#gbp-recovery">Suspension / Recovery</a></div>
+        <div><small>LOCAL & MULTI-LOCATION</small><a href="#maps-seo">Google Maps / Map Pack</a><a href="#multi-location-gbp">Multi-Location GBP Management</a><a href="#profile-protection">Profile Protection</a></div>
       </div></div>
-      <div class="drop"><a href="/local-seo/">Local SEO <span>⌄</span></a><div class="drop-panel">
-        <div><small>SEARCH VISIBILITY</small><a href="/local-seo/">Local SEO Services</a><a href="/local-keyword-research/">Local Keyword Research</a><a href="/on-page-seo/">On-Page SEO</a><a href="/technical-local-seo/">Technical Local SEO</a></div>
-        <div><small>SCALE</small><a href="/multi-location-seo/">Multi-Location SEO</a><a href="/local-schema/">LocalBusiness Schema</a><a href="/local-seo-audit/">Local SEO Audit</a><a href="/location-pages/">Local Landing Pages</a></div>
+      <div class="drop"><a href="#local-seo">Local SEO <span>⌄</span></a><div class="drop-panel">
+        <div><small>SEARCH VISIBILITY</small><a href="#local-seo">Local SEO</a><a href="#maps-seo">Google Maps / Map Pack</a><a href="#keyword-research">Local Keyword Research</a><a href="#on-page-seo">On-Page SEO</a></div>
+        <div><small>LOCAL GROWTH</small><a href="#location-seo">Location SEO</a><a href="#local-citations">Local Citations</a><a href="#local-seo-audit">Local SEO Audit</a></div>
       </div></div>
-      <div class="drop"><a href="/paid-ads/">Paid Growth <span>⌄</span></a><div class="drop-panel">
-        <div><small>PERFORMANCE</small><a href="/google-ads/">Google Ads</a><a href="/local-google-ads/">Local Google Ads</a><a href="/social-media-ads/">Meta Ads</a></div>
-        <div><small>CONVERSION</small><a href="/lead-generation/">Lead Generation</a><a href="/whatsapp-lead-generation/">WhatsApp Lead Capture</a><a href="/automation/">Lead Automation</a></div>
+      <div class="drop"><a href="#ai-websites">AI Websites <span>⌄</span></a><div class="drop-panel">
+        <div><small>AI WEBSITE DEVELOPMENT</small><a href="#ai-websites">AI Website Development</a><a href="#ai-websites">SEO-Ready Websites</a></div>
+        <div><small>BUSINESS WEBSITES</small><a href="#ai-websites">Local Business Websites</a><a href="#ai-websites">High-Converting Websites</a></div>
       </div></div>
-      <a href="/agencies/">For Agencies</a><a href="/multi-location/">Multi-Location</a><a href="/industries/">Industries</a>
+      <div class="drop"><a href="#social-media">Social Media <span>⌄</span></a><div class="drop-panel">
+        <div><small>SOCIAL MEDIA</small><a href="#social-media">Social Media Management</a><a href="#social-media">Social Media Posting</a><a href="#social-media">Facebook & Instagram Management</a></div>
+        <div><small>CONTENT & ENGAGEMENT</small><a href="#social-media">Content Planning</a><a href="#social-media">Community Engagement</a><a href="#social-media">Social Media Reporting</a></div>
+      </div></div>
+      <div class="drop"><a href="#paid-ads">Paid Ads <span>⌄</span></a><div class="drop-panel">
+        <div><small>PERFORMANCE</small><a href="#google-ads">Google Ads</a><a href="#local-google-ads">Local Google Ads</a></div>
+        <div><small>LEAD GENERATION</small><a href="#lead-generation">Lead Generation</a><a href="#whatsapp-leads">WhatsApp Lead Capture</a></div>
+      </div></div>
+      <div class="drop"><a href="#white-label">White Label <span>⌄</span></a><div class="drop-panel">
+        <div><small>AGENCY GBP SERVICES</small><a href="#white-label">White-Label GBP Management</a><a href="#multi-location-gbp">Multi-Location GBP Management</a><a href="#gbp-optimization">GBP Optimization</a></div>
+        <div><small>AGENCY SUPPORT</small><a href="#gbp-setup">GBP Setup & Verification</a><a href="#gbp-reviews">Reviews & Reputation</a><a href="#gbp-recovery">GBP Suspension / Recovery</a></div>
+      </div></div>
     </nav>
-    <div class="nav-right"><a href="/contact/" class="nav-contact-link">Contact</a><a href="#contact" class="btn btn-dark">Free Local Audit <b>→</b></a><button class="hamb" id="hamb"><i></i><i></i><i></i></button></div>
+    <div class="nav-right"><a href="#contact" class="nav-contact-link">Contact</a><a href="#contact" class="btn btn-dark">Free Local Audit <b>→</b></a><button class="hamb" id="hamb" aria-label="Open menu"><i></i><i></i><i></i></button></div>
   </div>
 </header>
 
 <main>
+  <span id="gbp-management" class="nav-anchor-map"></span><span id="gbp-optimization" class="nav-anchor-map"></span><span id="gbp-setup" class="nav-anchor-map"></span><span id="gbp-reviews" class="nav-anchor-map"></span><span id="gbp-recovery" class="nav-anchor-map"></span><span id="maps-seo" class="nav-anchor-map"></span><span id="multi-location-gbp" class="nav-anchor-map"></span><span id="profile-protection" class="nav-anchor-map"></span><span id="local-seo" class="nav-anchor-map"></span><span id="keyword-research" class="nav-anchor-map"></span><span id="on-page-seo" class="nav-anchor-map"></span><span id="location-seo" class="nav-anchor-map"></span><span id="local-citations" class="nav-anchor-map"></span><span id="local-seo-audit" class="nav-anchor-map"></span><span id="ai-websites" class="nav-anchor-map"></span><span id="seo-ready-websites" class="nav-anchor-map"></span><span id="local-business-websites" class="nav-anchor-map"></span><span id="high-converting-websites" class="nav-anchor-map"></span><span id="paid-ads" class="nav-anchor-map"></span><span id="google-ads" class="nav-anchor-map"></span><span id="local-google-ads" class="nav-anchor-map"></span><span id="lead-generation" class="nav-anchor-map"></span><span id="whatsapp-leads" class="nav-anchor-map"></span><span id="white-label" class="nav-anchor-map"></span>
 <section class="hero" id="home" aria-label="GeoLift local growth services">
   <div class="hero__orb hero__orb--a" aria-hidden="true"></div>
   <div class="hero__orb hero__orb--b" aria-hidden="true"></div>
@@ -2914,10 +2942,7 @@ section.services .service-cards > :nth-child(3){
         <div class="growth-live"><i></i> LIVE</div>
       </div>
 
-      <div class="growth-dashboard__metric">
-        <strong>AI + SEO</strong>
-        <span>signal intelligence layer</span>
-      </div>
+      
 
       <div class="growth-chart">
         <div class="growth-chart__grid"></div>
@@ -2936,17 +2961,9 @@ section.services .service-cards > :nth-child(3){
         </svg>
       </div>
 
-      <div class="growth-stat growth-stat--one">
-        <strong>AI READY</strong>
-        <span>search signal analysis</span>
-      </div>
       <div class="growth-stat growth-stat--two">
         <strong>LIVE</strong>
         <span>intent monitoring</span>
-      </div>
-      <div class="growth-stat growth-stat--three">
-        <strong>HUMAN</strong>
-        <span>QA before action</span>
       </div>
 
       <div class="growth-mini">
@@ -2993,7 +3010,7 @@ section.services .service-cards > :nth-child(3){
   </div>
 </section>
 
-<section class="section services" id="services">
+<section class="section services" id="gbp-services">
   <div class="container">
     <div class="section-head"><div><div class="label">03 / OUR SERVICES</div><h2>A local growth stack built around <em>search intent.</em></h2></div><a class="btn btn-line" href="/services/">View All Services →</a></div>
     <div class="service-master">
