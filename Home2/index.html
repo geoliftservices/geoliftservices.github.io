@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GeoLift — Local SEO & Google Business Profile Growth Agency</title>
+<title>GeoLift — Local SEO, GBP & Paid Growth Agency</title>
 <meta name="description" content="GeoLift is a Local SEO and Google Business Profile growth agency helping businesses, multi-location brands and agencies get found locally, generate more calls and scale local acquisition.">
 <meta name="robots" content="index,follow"><link rel="canonical" href="https://www.geolift.co.in/">
 <meta property="og:title" content="GeoLift — Local SEO & Growth Agency"><meta property="og:description" content="Get found locally. Get more calls. Scale your business."><meta property="og:url" content="https://www.geolift.co.in/"><meta property="og:type" content="website">
@@ -274,6 +274,2510 @@ section.services .service-cards > :nth-child(3){
 }
 </style>
 
+<style>
+
+/* =========================================================
+   GeoLift Hero — unified, responsive, conflict-free
+   ========================================================= */
+.hero{
+  --hero-navy:#0b2340;
+  --hero-blue:#155eef;
+  --hero-blue-dark:#0e49c7;
+  --hero-teal:#18a77f;
+  --hero-ink:#12263f;
+  --hero-muted:#50657d;
+  --hero-border:#dbe6f2;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  min-height:clamp(680px,88vh,820px);
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 78% 42%,rgba(21,94,239,.10),transparent 28%),
+    radial-gradient(circle at 8% 90%,rgba(24,167,127,.06),transparent 25%),
+    linear-gradient(135deg,#f8fbff 0%,#fff 52%,#f4f8fd 100%);
+  color:var(--hero-ink);
+}
+.hero__container{
+  width:min(1200px,calc(100% - 48px));
+  margin:0 auto;
+}
+.hero__track{position:relative;width:100%;min-height:620px;}
+.hero__slide{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(12px);
+  transition:opacity .72s ease,transform .72s cubic-bezier(.22,.61,.36,1),visibility .72s;
+  pointer-events:none;
+}
+.hero__slide.is-active{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+.hero__copy{
+  width:min(650px,52%);
+  position:relative;
+  z-index:8;
+  padding-top:28px;
+}
+.hero__eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:20px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  color:#45617d;
+}
+.hero__eyebrow span{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--hero-blue);
+  box-shadow:0 0 0 5px rgba(21,94,239,.10);
+}
+.hero h1{
+  margin:0;
+  max-width:680px;
+  color:var(--hero-navy);
+  font-size:clamp(46px,5.1vw,72px);
+  line-height:1.1;
+  letter-spacing:-.045em;
+  font-weight:760;
+}
+.hero h1 strong{font-weight:800;color:var(--hero-blue)}
+.hero__copy>p{
+  max-width:620px;
+  margin:24px 0 30px;
+  color:#3e536b;
+  font-size:clamp(16px,1.25vw,19px);
+  line-height:1.68;
+  font-weight:450;
+}
+.hero__actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+}
+.hero__btn{
+  min-height:54px;
+  padding:0 21px;
+  border-radius:12px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:750;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+}
+.hero__btn--primary{
+  color:#fff;
+  background:var(--hero-blue);
+  box-shadow:0 12px 28px rgba(21,94,239,.22);
+}
+.hero__btn--primary:hover{
+  transform:translateY(-2px) scale(1.015);
+  background:var(--hero-blue-dark);
+  box-shadow:0 17px 34px rgba(21,94,239,.30),0 0 0 5px rgba(21,94,239,.07);
+}
+.hero__btn--primary span{font-size:18px;line-height:1}
+.hero__btn--secondary{
+  color:var(--hero-navy);
+  background:rgba(255,255,255,.78);
+  border:1px solid #cfddea;
+}
+.hero__btn--secondary:hover{
+  transform:translateY(-2px);
+  background:#fff;
+  border-color:#9db4ce;
+}
+.hero__signals{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 22px;
+  margin-top:30px;
+  color:#667a90;
+  font-size:12px;
+}
+.hero__signals span{display:inline-flex;align-items:center;gap:7px}
+.hero__signals b{
+  color:var(--hero-blue);
+  font-size:10px;
+  letter-spacing:.05em;
+}
+
+/* Shared visual: no photos, no per-slide boards */
+.hero__visual{
+  position:absolute;
+  z-index:5;
+  width:min(610px,46vw);
+  right:max(24px,calc((100vw - 1200px)/2 - 10px));
+  top:50%;
+  transform:translateY(-50%);
+  pointer-events:none;
+}
+.growth-dashboard{
+  position:relative;
+  width:100%;
+  aspect-ratio:1.25/1;
+  min-height:420px;
+  padding:26px;
+  border:1px solid rgba(211,225,240,.95);
+  border-radius:30px;
+  background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(243,248,254,.98));
+  box-shadow:0 30px 80px rgba(9,39,72,.14);
+  overflow:hidden;
+}
+.growth-dashboard:before{
+  content:"";
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(21,94,239,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(21,94,239,.045) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.85),transparent 95%);
+}
+.growth-dashboard:after{
+  content:"";
+  position:absolute;
+  width:240px;height:240px;
+  right:-100px;top:-120px;
+  border:1px solid rgba(21,94,239,.10);
+  border-radius:50%;
+  box-shadow:0 0 0 30px rgba(21,94,239,.025),0 0 0 62px rgba(21,94,239,.018);
+  animation:heroOrbit 7s ease-in-out infinite;
+}
+@keyframes heroOrbit{50%{transform:scale(1.08) rotate(8deg)}}
+
+.growth-dashboard__top,
+.growth-dashboard__metric,
+.growth-chart,
+.growth-stat,
+.growth-mini{position:relative;z-index:2}
+.growth-dashboard__top{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:20px;
+}
+.growth-dashboard__top span{
+  display:block;
+  color:#6b8097;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.growth-dashboard__top strong{
+  display:block;
+  margin-top:7px;
+  color:var(--hero-navy);
+  font-size:17px;
+}
+.growth-live{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:7px 10px;border:1px solid #d7e4ef;border-radius:999px;
+  color:#28785f;background:#f3fbf8;font-size:10px;font-weight:800;
+}
+.growth-live i{
+  width:6px;height:6px;border-radius:50%;background:var(--hero-teal);
+  box-shadow:0 0 0 4px rgba(24,167,127,.10);
+}
+.growth-dashboard__metric{
+  margin-top:22px;
+  display:flex;align-items:baseline;gap:10px;
+}
+.growth-dashboard__metric strong{
+  color:var(--hero-navy);
+  font-size:clamp(30px,3vw,42px);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.growth-dashboard__metric span{color:#5e738a;font-size:12px;font-weight:650}
+.growth-chart{
+  height:235px;
+  margin-top:15px;
+}
+.growth-chart__grid{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(#cbd9e8 1px,transparent 1px);
+  background-size:100% 25%;
+  opacity:.45;
+}
+.growth-chart svg{width:100%;height:100%;overflow:visible}
+.growth-chart__area{fill:url(#geoGrowthFill)}
+.growth-chart__line{
+  fill:none;
+  stroke:var(--hero-blue);
+  stroke-width:5;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:1;
+  stroke-dashoffset:1;
+  animation:drawHeroLine 2.6s cubic-bezier(.65,0,.25,1) forwards;
+}
+@keyframes drawHeroLine{to{stroke-dashoffset:0}}
+.growth-point{
+  fill:#fff;
+  stroke:var(--hero-blue);
+  stroke-width:4;
+  animation:heroPoint 2.4s ease-in-out infinite;
+}
+.growth-point--2{animation-delay:.35s}.growth-point--3{animation-delay:.7s}
+@keyframes heroPoint{50%{r:8;filter:drop-shadow(0 0 6px rgba(21,94,239,.35))}}
+
+.growth-stat{
+  position:absolute;
+  padding:10px 13px;
+  min-width:120px;
+  border:1px solid #d9e5f0;
+  border-radius:13px;
+  background:rgba(255,255,255,.95);
+  box-shadow:0 12px 28px rgba(10,42,75,.10);
+  animation:heroFloat 4.8s ease-in-out infinite;
+}
+.growth-stat strong{display:block;color:var(--hero-blue);font-size:16px}
+.growth-stat span{display:block;margin-top:2px;color:#65798f;font-size:10px;font-weight:650}
+.growth-stat--one{right:25px;top:106px}
+.growth-stat--two{left:25px;bottom:67px;animation-delay:.65s}
+.growth-stat--three{right:25px;bottom:22px;animation-delay:1.1s}
+@keyframes heroFloat{50%{transform:translateY(-7px)}}
+
+.growth-mini{
+  display:flex;align-items:center;gap:9px;
+  position:absolute;left:26px;right:26px;bottom:22px;
+  color:#71849a;font-size:9px;font-weight:800;letter-spacing:.08em;
+}
+.growth-mini b{
+  flex:1;height:5px;border-radius:99px;
+  background:linear-gradient(90deg,#155eef,#18a77f);
+  opacity:.65;
+}
+
+/* Decorations are subtle and never compete with copy */
+.hero__orb{
+  position:absolute;border-radius:50%;pointer-events:none;z-index:0;
+}
+.hero__orb--a{
+  width:390px;height:390px;right:-150px;top:-160px;
+  border:1px solid rgba(21,94,239,.08);
+  box-shadow:0 0 0 50px rgba(21,94,239,.025);
+}
+.hero__orb--b{
+  width:240px;height:240px;left:-150px;bottom:-130px;
+  border:1px solid rgba(24,167,127,.08);
+}
+.hero__dots{
+  position:absolute;z-index:15;left:50%;
+  bottom:26px;transform:translateX(-50%);
+  display:flex;align-items:center;gap:7px;
+}
+.hero__dots button{
+  width:28px;height:4px;padding:0;border:0;border-radius:99px;
+  background:#c9d7e5;cursor:pointer;transition:.25s ease;
+}
+.hero__dots button.is-active{width:46px;background:var(--hero-blue)}
+.hero__dots span{
+  margin-left:10px;color:#71849a;font-size:10px;font-weight:800;
+  letter-spacing:.08em;
+}
+.hero__dots span b{color:var(--hero-navy)}
+
+@media (max-width:1100px){
+  .hero__copy{width:55%}
+  .hero__visual{width:45vw;right:20px}
+  .growth-dashboard{min-height:390px;padding:22px}
+  .growth-chart{height:205px}
+  .hero h1{font-size:clamp(43px,5.3vw,60px)}
+}
+@media (max-width:900px){
+  .hero{min-height:760px}
+  .hero__track{min-height:690px}
+  .hero__copy{width:58%;padding-top:0}
+  .hero__visual{width:43vw}
+  .growth-dashboard{min-height:350px}
+  .growth-stat--one{right:14px}.growth-stat--two{left:14px}.growth-stat--three{right:14px}
+}
+@media (max-width:767px){
+  .hero{
+    min-height:720px;
+    align-items:flex-start;
+    padding:105px 0 54px;
+  }
+  .hero__container{width:min(100% - 32px,600px)}
+  .hero__track{min-height:0}
+  .hero__slide{position:absolute;align-items:flex-start}
+  .hero__copy{
+    width:100%;
+    padding:0;
+  }
+  .hero__eyebrow{margin-bottom:13px;font-size:10px}
+  .hero h1{
+    max-width:100%;
+    font-size:clamp(38px,10.5vw,50px);
+    line-height:1.1;
+    letter-spacing:-.038em;
+  }
+  .hero__copy>p{
+    margin:17px 0 20px;
+    font-size:15px;
+    line-height:1.55;
+    max-width:100%;
+  }
+  .hero__actions{gap:9px}
+  .hero__btn{
+    min-height:50px;
+    padding:0 16px;
+    font-size:13px;
+  }
+  .hero__signals{
+    margin-top:18px;
+    gap:8px 14px;
+    font-size:10px;
+  }
+  .hero__visual{
+    width:calc(100% - 32px);
+    max-width:520px;
+    right:16px;
+    top:auto;
+    bottom:72px;
+    transform:none;
+    opacity:.98;
+  }
+  .growth-dashboard{
+    min-height:250px;
+    aspect-ratio:1.34/1;
+    padding:16px;
+    border-radius:22px;
+  }
+  .growth-dashboard__top strong{font-size:14px}
+  .growth-dashboard__metric{margin-top:13px}
+  .growth-dashboard__metric strong{font-size:28px}
+  .growth-dashboard__metric span{font-size:10px}
+  .growth-chart{height:125px;margin-top:5px}
+  .growth-stat{padding:7px 9px;min-width:92px}
+  .growth-stat strong{font-size:12px}.growth-stat span{font-size:8px}
+  .growth-stat--one{right:12px;top:72px}
+  .growth-stat--two{left:12px;bottom:48px}
+  .growth-stat--three{right:12px;bottom:13px}
+  .growth-mini{left:16px;right:16px;bottom:9px;font-size:7px}
+  .hero__orb--a{width:220px;height:220px;right:-130px;top:-80px;opacity:.55}
+  .hero__orb--b{width:150px;height:150px;left:-100px;bottom:-70px;opacity:.45}
+  .hero__dots{bottom:24px}
+}
+@media (max-width:480px){
+  .hero{min-height:700px;padding-top:96px}
+  .hero__visual{bottom:67px}
+  .growth-dashboard{min-height:220px}
+  .growth-chart{height:103px}
+  .growth-dashboard__top span{font-size:8px}
+  .growth-dashboard__top strong{font-size:12px}
+  .growth-dashboard__metric strong{font-size:25px}
+  .growth-dashboard__metric span{font-size:9px}
+  .growth-stat{display:none}
+  .growth-mini{bottom:8px}
+  .hero__signals span:nth-child(3){display:none}
+}
+@media (max-width:360px){
+  .hero{min-height:675px}
+  .hero h1{font-size:36px}
+  .hero__copy>p{font-size:14px}
+  .hero__btn{width:100%}
+  .hero__actions .hero__btn--secondary{width:auto;flex:1}
+  .hero__visual{width:calc(100% - 24px);right:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero *,
+  .hero *::before,
+  .hero *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+
+</style>
+
+<style id="geolift-hero-v13-polish">
+/* --- Hero polish: visible eyebrow, smaller modern heading, stronger shared visual --- */
+.hero{min-height:clamp(650px,84vh,790px)}
+.hero__track{min-height:590px}
+.hero__slide{padding-top:10px}
+.hero__copy{padding-top:8px}
+.hero__eyebrow{
+  position:relative!important;
+  z-index:20!important;
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  color:#3d5874!important;
+  line-height:1.2!important;
+  margin-bottom:18px!important;
+}
+.hero__eyebrow span{display:inline-block!important;flex:none!important}
+.hero h1{
+  font-size:clamp(40px,4.35vw,62px)!important;
+  line-height:1.1!important;
+  letter-spacing:-.04em!important;
+  max-width:620px!important;
+}
+.hero__copy>p{
+  max-width:590px!important;
+  color:#3b5068!important;
+  font-size:clamp(15px,1.12vw,18px)!important;
+  line-height:1.62!important;
+}
+.hero__visual{
+  width:min(590px,44vw)!important;
+  right:max(24px,calc((100vw - 1200px)/2 - 2px))!important;
+}
+.growth-dashboard{
+  min-height:405px!important;
+  border-radius:28px!important;
+  background:linear-gradient(145deg,#ffffff 0%,#f6f9fd 100%)!important;
+  box-shadow:0 26px 70px rgba(11,35,64,.13)!important;
+}
+.growth-dashboard__top strong{font-size:18px!important}
+.growth-dashboard__metric{margin-top:18px!important}
+.growth-dashboard__metric strong{font-size:clamp(31px,3vw,40px)!important}
+.growth-chart{height:210px!important;margin-top:9px!important}
+.growth-stat{
+  min-width:125px!important;
+  backdrop-filter:blur(8px);
+}
+.growth-stat--one{right:22px!important;top:101px!important}
+.growth-stat--two{left:22px!important;bottom:61px!important}
+.growth-stat--three{right:22px!important;bottom:19px!important}
+
+/* The slider swaps only the left content; the visual is intentionally shared. */
+.hero__visual{transition:none!important}
+.hero__slide .hero__visual{display:none!important}
+.hero>.hero__visual{display:block!important}
+
+/* Cleaner, more meaningful dashboard labels */
+.growth-dashboard__metric span{max-width:190px}
+.growth-mini b{background:linear-gradient(90deg,#155eef 0%,#4e88f2 50%,#18a77f 100%)!important}
+
+/* Tablet */
+@media (max-width:1024px) and (min-width:768px){
+  .hero{min-height:700px}
+  .hero__track{min-height:610px}
+  .hero__copy{width:56%!important}
+  .hero__visual{width:42vw!important;right:18px!important}
+  .hero h1{font-size:clamp(39px,4.7vw,52px)!important}
+  .hero__copy>p{font-size:15px!important}
+}
+
+/* Mobile: keep eyebrow visible and prevent it being covered by the dashboard */
+@media(max-width:767px){
+  .hero{
+    min-height:700px!important;
+    padding:92px 0 48px!important;
+  }
+  .hero__track{min-height:0!important}
+  .hero__copy{
+    width:100%!important;
+    padding-top:0!important;
+  }
+  .hero__eyebrow{
+    margin-bottom:12px!important;
+    font-size:10px!important;
+  }
+  .hero h1{
+    font-size:clamp(35px,9.8vw,46px)!important;
+    line-height:1.1!important;
+  }
+  .hero__copy>p{
+    font-size:14.5px!important;
+    line-height:1.55!important;
+    margin-top:15px!important;
+  }
+  .hero__visual{
+    width:calc(100% - 32px)!important;
+    right:16px!important;
+    bottom:62px!important;
+  }
+  .growth-dashboard{
+    min-height:235px!important;
+    aspect-ratio:1.35/1!important;
+    padding:16px!important;
+    border-radius:21px!important;
+  }
+  .growth-chart{height:110px!important}
+  .growth-stat{display:none!important}
+}
+
+/* Very small phones */
+@media(max-width:380px){
+  .hero{min-height:670px!important;padding-top:88px!important}
+  .hero h1{font-size:34px!important}
+  .hero__copy>p{font-size:14px!important}
+  .hero__visual{bottom:58px!important;width:calc(100% - 24px)!important;right:12px!important}
+}
+</style>
+
+
+<style id="geolift-hero-v14-motion-alignment">
+/* Fixed left-column geometry: every slide occupies identical copy space. */
+.hero__track{position:relative!important}
+.hero__slide{width:100%!important}
+.hero__container{display:block!important}
+.hero__copy{
+  width:min(650px,52%)!important;
+  min-height:470px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  align-items:flex-start!important;
+}
+.hero__eyebrow{height:18px!important;display:flex!important;align-items:center!important}
+.hero h1{min-height:136px!important;display:flex!important;align-items:flex-start!important}
+.hero__copy>p{min-height:92px!important}
+.hero__actions{min-height:54px!important}
+.hero__signals{min-height:30px!important}
+
+/* Continuous motion on the single shared right-side growth visual. */
+.hero__visual{will-change:transform}
+.growth-dashboard{
+  animation:geoDashboardFloat 5s ease-in-out infinite!important;
+  transform-origin:center center;
+}
+.growth-dashboard:after{animation:geoOrbit 7s ease-in-out infinite!important}
+.growth-chart__line{
+  animation:
+    drawHeroLine 2.6s cubic-bezier(.65,0,.25,1) forwards,
+    geoLineGlow 2.8s ease-in-out 2.6s infinite!important;
+}
+.growth-point{animation:heroPoint 2.4s ease-in-out infinite!important}
+.growth-stat{animation:heroFloat 4.8s ease-in-out infinite!important}
+@keyframes geoDashboardFloat{
+  0%,100%{transform:translate3d(0,0,0) rotate(0deg)}
+  50%{transform:translate3d(0,-8px,0) rotate(.25deg)}
+}
+@keyframes geoLineGlow{
+  0%,100%{filter:drop-shadow(0 0 0 rgba(21,94,239,0))}
+  50%{filter:drop-shadow(0 0 9px rgba(21,94,239,.38))}
+}
+
+/* Keep the visual stationary relative to the layout while its internals animate. */
+.hero__visual{transform:translateY(-50%)!important}
+@media(max-width:767px){
+  .hero__copy{
+    min-height:390px!important;
+    justify-content:flex-start!important;
+  }
+  .hero h1{
+    min-height:108px!important;
+  }
+  .hero__copy>p{
+    min-height:82px!important;
+  }
+  .hero__actions{min-height:50px!important}
+  .hero__signals{min-height:24px!important}
+  .hero__visual{
+    transform:none!important;
+  }
+}
+@media(max-width:380px){
+  .hero__copy{min-height:365px!important}
+  .hero h1{min-height:100px!important}
+  .hero__copy>p{min-height:78px!important}
+}
+
+/* Respect accessibility settings. */
+@media(prefers-reduced-motion:reduce){
+  .growth-dashboard,
+  .growth-dashboard:after,
+  .growth-chart__line,
+  .growth-point,
+  .growth-stat{animation:none!important}
+}
+</style>
+
+<style id="geolift-hero-v15-plain-visual">
+.hero{background:radial-gradient(circle at 78% 40%,rgba(21,94,239,.065),transparent 27%),linear-gradient(135deg,#fbfdff 0%,#fff 55%,#f7faff 100%)!important}
+.hero__visual{width:min(600px,45vw)!important;right:max(28px,calc((100vw - 1200px)/2 - 4px))!important}
+.growth-dashboard{min-height:0!important;aspect-ratio:1.2/1!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;animation:none!important}
+.growth-dashboard:before,.growth-dashboard:after{display:none!important}
+.growth-dashboard__top{position:absolute!important;left:10%!important;top:4%!important;width:80%!important;z-index:4!important}
+.growth-dashboard__top strong{font-size:17px!important;color:#102b49!important}
+.growth-dashboard__metric{position:absolute!important;left:10%!important;top:20%!important;margin:0!important;z-index:4!important}
+.growth-dashboard__metric strong{font-size:42px!important;color:#0b2340!important}
+.growth-chart{position:absolute!important;left:0!important;right:0!important;bottom:8%!important;height:58%!important;margin:0!important;z-index:2!important}
+.growth-chart__grid{opacity:.28!important}
+.growth-stat{z-index:5!important;border:1px solid rgba(213,226,239,.9)!important;border-radius:12px!important;background:rgba(255,255,255,.94)!important;box-shadow:0 12px 28px rgba(11,35,64,.09)!important}
+.growth-stat--one{right:2%!important;top:30%!important}.growth-stat--two{left:2%!important;bottom:23%!important}.growth-stat--three{right:5%!important;bottom:5%!important}
+.hero h1{font-size:clamp(38px,4.05vw,58px)!important;line-height:1.08!important;letter-spacing:-.055em!important;word-spacing:-.025em!important;max-width:600px!important;font-weight:760!important}
+.hero h1 strong{letter-spacing:-.055em!important}.hero__copy{width:min(625px,51%)!important}.hero__copy>p{max-width:565px!important;margin-top:20px!important}
+.hero h1{min-height:124px!important}.hero__copy>p{min-height:84px!important}
+@media(max-width:1024px) and (min-width:768px){.hero__copy{width:55%!important}.hero__visual{width:43vw!important;right:12px!important}.hero h1{font-size:clamp(37px,4.5vw,51px)!important;letter-spacing:-.05em!important}}
+@media(max-width:767px){.hero__visual{width:calc(100% - 30px)!important;right:15px!important;bottom:64px!important}.growth-dashboard{aspect-ratio:1.28/1!important}.growth-dashboard__top{left:5%!important;top:0!important;width:90%!important}.growth-dashboard__metric{left:5%!important;top:16%!important}.growth-dashboard__metric strong{font-size:30px!important}.growth-chart{bottom:7%!important;height:60%!important}.growth-stat--one{right:0!important;top:28%!important}.growth-stat--two{left:0!important;bottom:22%!important}.growth-stat--three{right:2%!important;bottom:3%!important}.hero h1{min-height:96px!important;font-size:clamp(34px,9.2vw,44px)!important;line-height:1.08!important;letter-spacing:-.05em!important;word-spacing:-.02em!important}.hero__copy>p{min-height:78px!important}}
+@media(max-width:380px){.hero h1{font-size:33px!important;letter-spacing:-.045em!important}}
+</style>
+<style id="geolift-hero-v16-final-polish">
+/* Single-color headline: premium black, blue reserved for accents/CTAs */
+.hero h1,
+.hero h1 strong{
+  color:#101820!important;
+}
+.hero h1{
+  font-size:clamp(38px,4vw,57px)!important;
+  line-height:1.08!important;
+  letter-spacing:-.052em!important;
+  word-spacing:-.02em!important;
+}
+/* Slightly more breathing room between copy and visual */
+.hero__copy{
+  width:min(610px,49%)!important;
+}
+.hero__visual{
+  width:min(575px,43vw)!important;
+  right:max(16px,calc((100vw - 1200px)/2 - 18px))!important;
+}
+@media(max-width:1024px) and (min-width:768px){
+  .hero__copy{width:52%!important}
+  .hero__visual{width:42vw!important}
+  .hero h1{font-size:clamp(37px,4.35vw,51px)!important}
+}
+@media(max-width:767px){
+  .hero__copy{width:100%!important}
+  .hero__visual{
+    width:calc(100% - 30px)!important;
+    right:15px!important;
+  }
+  .hero h1{
+    font-size:clamp(34px,9.2vw,44px)!important;
+    letter-spacing:-.05em!important;
+  }
+}
+</style>
+
+<style id="geolift-hero-v17-correction">
+/* Header stays as it was. Hero copy is moved down slightly instead. */
+.hero__copy{
+  transform:translateY(22px)!important;
+}
+.hero__eyebrow{
+  margin-bottom:18px!important;
+}
+.hero h1{
+  color:#101820!important;
+}
+
+/* Slower, calmer service transitions. */
+.hero__slide{
+  transition:opacity .95s cubic-bezier(.22,.61,.36,1),
+             transform .95s cubic-bezier(.22,.61,.36,1),
+             visibility .95s ease!important;
+}
+
+/* The right-side visual continuously travels gently down -> up,
+   independent of the 4-second service rotation. */
+.hero__visual{
+  animation:geoHeroVisualDrift 6.5s ease-in-out infinite!important;
+  will-change:transform;
+}
+@keyframes geoHeroVisualDrift{
+  0%,100%{
+    transform:translate3d(0,10px,0);
+  }
+  50%{
+    transform:translate3d(0,-14px,0);
+  }
+}
+
+/* Keep the internal graphic alive while the whole visual drifts. */
+.growth-chart__line{
+  animation:drawHeroLine 3.2s cubic-bezier(.65,0,.25,1) forwards,
+            geoLinePulse 4.5s ease-in-out 3.2s infinite!important;
+}
+.growth-point{
+  animation:heroPoint 3.2s ease-in-out infinite!important;
+}
+.growth-stat{
+  animation:heroFloat 5.2s ease-in-out infinite!important;
+}
+
+@keyframes geoLinePulse{
+  0%,100%{opacity:.9;filter:drop-shadow(0 0 0 rgba(21,94,239,0))}
+  50%{opacity:1;filter:drop-shadow(0 0 8px rgba(21,94,239,.28))}
+}
+
+/* Mobile: don't push the whole copy too far down. */
+@media(max-width:767px){
+  .hero__copy{
+    transform:translateY(10px)!important;
+  }
+  .hero__visual{
+    animation:geoHeroVisualDriftMobile 6.5s ease-in-out infinite!important;
+  }
+}
+@keyframes geoHeroVisualDriftMobile{
+  0%,100%{transform:translate3d(0,5px,0)}
+  50%{transform:translate3d(0,-8px,0)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero__visual,
+  .growth-chart__line,
+  .growth-point,
+  .growth-stat{
+    animation:none!important;
+  }
+}
+</style>
+
+
+<style id="geolift-hero-v18-type-chart-fix">
+/* Fix headline word spacing: use normal browser word spacing and tighter tracking. */
+.hero h1,
+.hero h1 strong{
+  color:#101820!important;
+  word-spacing:normal!important;
+  letter-spacing:-0.045em!important;
+  text-rendering:optimizeLegibility!important;
+  font-kerning:normal!important;
+}
+.hero h1{
+  max-width:600px!important;
+  line-height:1.08!important;
+  white-space:normal!important;
+}
+
+/* Continuous live movement of the growth line itself. */
+.growth-chart__line{
+  stroke-dasharray:12 9!important;
+  stroke-dashoffset:0!important;
+  animation:geoGrowthLineMove 2.2s linear infinite!important;
+  will-change:stroke-dashoffset,filter!important;
+}
+@keyframes geoGrowthLineMove{
+  from{
+    stroke-dashoffset:0;
+    filter:drop-shadow(0 0 1px rgba(21,94,239,.12));
+  }
+  to{
+    stroke-dashoffset:-42;
+    filter:drop-shadow(0 0 7px rgba(21,94,239,.32));
+  }
+}
+
+/* A subtle moving highlight travels along the growth curve. */
+.growth-point{
+  animation:geoGrowthPoint 2.6s ease-in-out infinite!important;
+}
+@keyframes geoGrowthPoint{
+  0%,100%{opacity:.72;transform:scale(.92)}
+  50%{opacity:1;transform:scale(1.14)}
+}
+
+@media(max-width:767px){
+  .hero h1{
+    letter-spacing:-0.04em!important;
+    word-spacing:normal!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .growth-chart__line,.growth-point{animation:none!important}
+}
+</style>
+
+
+<style id="geolift-growth-v19-continuous-rise">
+/* Replace the dotted/dashed motion with a continuously drawing upward growth curve. */
+.growth-chart__line{
+  stroke-dasharray:520!important;
+  stroke-dashoffset:520!important;
+  animation:geoGrowthDrawUp 3.8s cubic-bezier(.55,.08,.18,1) infinite!important;
+  filter:none!important;
+}
+@keyframes geoGrowthDrawUp{
+  0%{
+    stroke-dashoffset:520;
+    opacity:.45;
+  }
+  12%{
+    opacity:1;
+  }
+  72%{
+    stroke-dashoffset:0;
+    opacity:1;
+  }
+  82%{
+    stroke-dashoffset:0;
+    opacity:1;
+  }
+  100%{
+    stroke-dashoffset:-520;
+    opacity:.45;
+  }
+}
+
+/* Remove the previous moving-point/dot effect entirely. */
+.growth-point{
+  animation:none!important;
+  opacity:0!important;
+  display:none!important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .growth-chart__line{
+    animation:none!important;
+    stroke-dashoffset:0!important;
+  }
+}
+</style>
+
+
+<style id="geolift-ai-hero-layer">
+/* AI-powered visual layer — designed to feel intelligent, not gimmicky */
+.hero{
+  background:
+    radial-gradient(circle at 73% 35%,rgba(42,119,255,.16),transparent 23%),
+    radial-gradient(circle at 92% 15%,rgba(75,225,205,.14),transparent 22%),
+    radial-gradient(circle at 15% 92%,rgba(23,105,255,.08),transparent 25%),
+    linear-gradient(135deg,#f8fbff 0%,#ffffff 48%,#eef7ff 100%) !important;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.5;
+  background:
+    linear-gradient(90deg,rgba(23,105,255,.035) 1px,transparent 1px),
+    linear-gradient(rgba(23,105,255,.035) 1px,transparent 1px);
+  background-size:54px 54px;
+  mask-image:radial-gradient(circle at 72% 44%,#000 0%,transparent 62%);
+}
+.hero:after{
+  content:"AI";
+  position:absolute;
+  right:4%;
+  top:5%;
+  z-index:0;
+  font-size:clamp(150px,24vw,330px);
+  line-height:1;
+  font-weight:900;
+  letter-spacing:-.12em;
+  color:rgba(23,105,255,.028);
+  pointer-events:none;
+}
+.hero__visual{
+  z-index:5;
+}
+.growth-dashboard{
+  background:
+    radial-gradient(circle at 76% 24%,rgba(42,119,255,.13),transparent 27%),
+    radial-gradient(circle at 25% 82%,rgba(25,181,165,.08),transparent 25%),
+    linear-gradient(145deg,rgba(255,255,255,.98),rgba(239,247,255,.98)) !important;
+  border-color:rgba(165,195,224,.85);
+}
+.growth-dashboard:before{
+  background-image:
+    linear-gradient(rgba(23,105,255,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(23,105,255,.055) 1px,transparent 1px) !important;
+  background-size:38px 38px !important;
+}
+
+/* AI network sits behind the existing growth chart */
+.ai-command-layer{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+.ai-orbit{
+  position:absolute;
+  border:1px solid rgba(23,105,255,.10);
+  border-radius:50%;
+  right:7%;
+  top:9%;
+  width:270px;
+  height:270px;
+}
+.ai-orbit--one{
+  box-shadow:0 0 0 26px rgba(23,105,255,.022),0 0 0 58px rgba(23,105,255,.014);
+  animation:aiOrbitPulse 5.5s ease-in-out infinite;
+}
+.ai-orbit--two{
+  width:190px;
+  height:190px;
+  right:15%;
+  top:17%;
+  border-color:rgba(25,181,165,.12);
+  animation:aiOrbitRotate 12s linear infinite;
+}
+@keyframes aiOrbitPulse{50%{transform:scale(1.055);opacity:.7}}
+@keyframes aiOrbitRotate{to{transform:rotate(360deg)}}
+
+.ai-network{
+  position:absolute;
+  width:330px;
+  height:260px;
+  right:2%;
+  top:8%;
+  opacity:.72;
+}
+.ai-node{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#1769ff;
+  box-shadow:0 0 0 5px rgba(23,105,255,.08),0 0 18px rgba(23,105,255,.24);
+  animation:aiNodePulse 2.8s ease-in-out infinite;
+}
+.ai-node.n1{left:15%;top:31%}.ai-node.n2{left:43%;top:12%;animation-delay:.25s}
+.ai-node.n3{left:76%;top:30%;animation-delay:.5s}.ai-node.n4{left:25%;top:70%;animation-delay:.75s}
+.ai-node.n5{left:56%;top:57%;animation-delay:1s}.ai-node.n6{left:88%;top:73%;animation-delay:1.25s}
+@keyframes aiNodePulse{50%{transform:scale(1.45);box-shadow:0 0 0 8px rgba(23,105,255,.045),0 0 24px rgba(23,105,255,.3)}}
+
+.ai-link{
+  position:absolute;
+  height:1px;
+  transform-origin:left center;
+  background:linear-gradient(90deg,rgba(23,105,255,.05),rgba(23,105,255,.4),rgba(25,181,165,.16));
+  opacity:.8;
+}
+.ai-link.l1{width:105px;left:17%;top:33%;transform:rotate(-27deg)}
+.ai-link.l2{width:112px;left:45%;top:14%;transform:rotate(29deg)}
+.ai-link.l3{width:145px;left:27%;top:71%;transform:rotate(-23deg)}
+.ai-link.l4{width:110px;left:57%;top:58%;transform:rotate(28deg)}
+.ai-link.l5{width:135px;left:76%;top:33%;transform:rotate(76deg)}
+
+.ai-core{
+  position:absolute;
+  right:29%;
+  top:29%;
+  width:82px;
+  height:82px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.9);
+  border:1px solid rgba(23,105,255,.25);
+  box-shadow:0 15px 45px rgba(23,105,255,.16),inset 0 0 28px rgba(23,105,255,.05);
+  animation:aiCoreFloat 4.5s ease-in-out infinite;
+}
+.ai-core-ring{
+  position:absolute;
+  inset:-7px;
+  border-radius:50%;
+  border:1px dashed rgba(25,181,165,.42);
+  animation:aiCoreSpin 9s linear infinite;
+}
+.ai-core strong{
+  font-size:25px;
+  letter-spacing:-1px;
+  line-height:1;
+  color:#123b72;
+}
+.ai-core small{
+  position:absolute;
+  bottom:12px;
+  font-size:6px;
+  letter-spacing:.12em;
+  color:#71869a;
+  font-weight:850;
+}
+@keyframes aiCoreFloat{50%{transform:translateY(-8px)}}
+@keyframes aiCoreSpin{to{transform:rotate(360deg)}}
+
+.ai-pulse-label{
+  position:absolute;
+  z-index:3;
+  padding:7px 10px;
+  border:1px solid rgba(203,219,233,.95);
+  border-radius:9px;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(8px);
+  box-shadow:0 10px 25px rgba(8,35,63,.08);
+  color:#71849a;
+  font-size:7px;
+  letter-spacing:.08em;
+  font-weight:850;
+  animation:aiLabelFloat 4s ease-in-out infinite;
+}
+.ai-pulse-label b{
+  margin-left:5px;
+  color:#18a77f;
+  font-size:6px;
+}
+.label-a{right:8%;top:47%}
+.label-b{right:33%;top:65%;animation-delay:.7s}
+.label-c{right:4%;top:78%;animation-delay:1.2s}
+@keyframes aiLabelFloat{50%{transform:translateY(-5px)}}
+
+.ai-badge{
+  position:absolute;
+  left:24px;
+  bottom:72px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:9px 12px;
+  border-radius:999px;
+  background:rgba(6,38,77,.92);
+  color:#dcecf8;
+  border:1px solid rgba(126,190,230,.24);
+  box-shadow:0 12px 28px rgba(6,38,77,.14);
+  font-size:8px;
+  letter-spacing:.1em;
+  font-weight:850;
+}
+.ai-spark{
+  color:#7ee4d6;
+  font-size:12px;
+  animation:aiSpark 1.8s ease-in-out infinite;
+}
+@keyframes aiSpark{50%{transform:scale(1.3) rotate(12deg);text-shadow:0 0 12px rgba(126,228,214,.6)}}
+
+/* Add an intelligent status strip to the existing hero copy */
+.hero__copy:after{
+  content:"AI-ASSISTED INSIGHTS  •  HUMAN QA  •  LIVE SIGNAL MONITORING";
+  display:block;
+  width:max-content;
+  max-width:100%;
+  margin-top:20px;
+  padding:8px 11px;
+  border:1px solid #d5e3ed;
+  border-radius:999px;
+  background:rgba(255,255,255,.62);
+  color:#55718d;
+  font-size:8px;
+  font-weight:850;
+  letter-spacing:.1em;
+  box-shadow:0 8px 20px rgba(8,35,63,.035);
+}
+@media(max-width:900px){
+  .ai-network{right:-2%;transform:scale(.9);transform-origin:top right}
+  .ai-core{right:25%;top:27%}
+}
+@media(max-width:767px){
+  .hero:after{font-size:145px;right:-8%;top:7%}
+  .ai-orbit{width:220px;height:220px;right:2%;top:4%}
+  .ai-orbit--two{width:155px;height:155px;right:13%;top:12%}
+  .ai-network{width:270px;height:220px;right:-4%;top:4%;transform:scale(.8)}
+  .ai-core{width:66px;height:66px;right:29%;top:23%}
+  .ai-core strong{font-size:20px}
+  .ai-pulse-label{font-size:6px;padding:6px 8px}
+  .ai-badge{left:16px;bottom:58px;font-size:7px}
+  .hero__copy:after{font-size:7px;letter-spacing:.06em}
+}
+@media(prefers-reduced-motion:reduce){
+  .ai-orbit--one,.ai-orbit--two,.ai-node,.ai-core,.ai-core-ring,.ai-pulse-label,.ai-spark{animation:none!important}
+}
+</style>
+
+
+<style id="geolift-final-alignment-v4">
+/* FINAL ALIGNMENT PASS — preserve the previous AI design, only fix geometry */
+.hero{
+  overflow:hidden !important;
+}
+.hero__track{
+  min-height:620px !important;
+}
+.hero__slide{
+  align-items:center !important;
+}
+.hero__copy{
+  box-sizing:border-box !important;
+  padding-top:56px !important;
+  padding-bottom:34px !important;
+}
+.hero__eyebrow{
+  margin-top:8px !important;
+}
+.hero h1{
+  margin-top:14px !important;
+  margin-bottom:18px !important;
+  max-width:650px !important;
+}
+.hero__copy > p{
+  max-width:610px !important;
+  margin-bottom:22px !important;
+  line-height:1.68 !important;
+}
+.hero__actions{
+  margin-top:0 !important;
+}
+.hero__signals{
+  margin-top:22px !important;
+}
+
+/* Keep right visual vertically centered and away from the header */
+.hero__visual{
+  top:54% !important;
+  transform:translateY(-50%) !important;
+}
+.growth-dashboard{
+  transform:translateY(8px) !important;
+}
+.ai-command-layer{
+  transform:translateY(8px) !important;
+}
+
+/* Avoid any visual/text collisions */
+.ai-badge{
+  bottom:52px !important;
+}
+.label-a{top:43% !important}
+.label-b{top:69% !important}
+.label-c{top:82% !important}
+
+/* Desktop */
+@media(min-width:901px){
+  .hero{
+    min-height:700px !important;
+  }
+  .hero__track{
+    min-height:640px !important;
+  }
+  .hero__copy{
+    width:min(650px,52%) !important;
+    min-height:470px !important;
+    justify-content:center !important;
+  }
+  .hero__visual{
+    width:min(590px,48vw) !important;
+    right:max(20px,calc((100vw - 1200px)/2 - 4px)) !important;
+  }
+}
+
+/* Tablet */
+@media(min-width:768px) and (max-width:1100px){
+  .hero__copy{
+    padding-top:70px !important;
+    width:54% !important;
+  }
+  .hero__visual{
+    width:49vw !important;
+    right:8px !important;
+  }
+}
+
+/* Mobile — do not let the header overlap the hero copy */
+@media(max-width:767px){
+  .hero{
+    min-height:760px !important;
+  }
+  .hero__track{
+    min-height:690px !important;
+  }
+  .hero__slide{
+    align-items:flex-start !important;
+    padding-top:0 !important;
+  }
+  .hero__copy{
+    width:100% !important;
+    min-height:0 !important;
+    padding:108px 0 0 !important;
+  }
+  .hero__eyebrow{
+    margin-top:0 !important;
+    margin-bottom:14px !important;
+  }
+  .hero h1{
+    margin-top:0 !important;
+    margin-bottom:16px !important;
+    max-width:100% !important;
+  }
+  .hero__copy > p{
+    margin-bottom:20px !important;
+    max-width:100% !important;
+  }
+  .hero__actions{
+    margin-top:0 !important;
+  }
+  .hero__copy:after{
+    margin-top:14px !important;
+  }
+
+  /* visual starts lower, beneath the primary copy/CTA */
+  .hero__visual{
+    top:485px !important;
+    transform:translateY(0) !important;
+    width:100% !important;
+    height:260px !important;
+    right:0 !important;
+  }
+  .growth-dashboard{
+    transform:none !important;
+    padding:12px 4px !important;
+  }
+  .ai-command-layer{
+    transform:none !important;
+  }
+  .ai-badge{
+    bottom:30px !important;
+  }
+  .label-a{top:28% !important}
+  .label-b{top:57% !important}
+  .label-c{top:72% !important}
+
+  .hero__dots{
+    bottom:8px !important;
+  }
+}
+
+/* Small phones: extra clearance under header and prevent cramped buttons */
+@media(max-width:480px){
+  .hero{
+    min-height:790px !important;
+  }
+  .hero__track{
+    min-height:715px !important;
+  }
+  .hero__copy{
+    padding-top:102px !important;
+  }
+  .hero h1{
+    max-width:360px !important;
+  }
+  .hero__actions{
+    width:100% !important;
+  }
+  .hero__btn{
+    min-height:47px !important;
+  }
+  .hero__visual{
+    top:505px !important;
+    height:250px !important;
+  }
+}
+
+/* No animation should push content into the header during initial paint */
+@media(prefers-reduced-motion:reduce){
+  .hero__slide,
+  .hero__copy,
+  .hero__visual{
+    transform:none !important;
+  }
+}
+</style>
+
+
+<style id="geolift-clean-hero-gutter">
+/* Small, controlled separation only — preserve the existing hero design */
+@media(min-width:901px){
+  .hero__copy{
+    padding-right:clamp(22px,2.4vw,38px) !important;
+    box-sizing:border-box !important;
+  }
+  .hero__visual{
+    padding-left:clamp(18px,2vw,32px) !important;
+    box-sizing:border-box !important;
+  }
+}
+@media(min-width:768px) and (max-width:900px){
+  .hero__copy{
+    padding-right:22px !important;
+    box-sizing:border-box !important;
+  }
+  .hero__visual{
+    padding-left:18px !important;
+    box-sizing:border-box !important;
+  }
+}
+@media(max-width:767px){
+  /* On mobile, keep the original stacking but add a clean breathing space. */
+  .hero__copy{
+    padding-bottom:18px !important;
+  }
+  .hero__visual{
+    margin-top:12px !important;
+  }
+}
+</style>
+
+
+<style id="geolift-heading-alignment-v6">
+/* Align the right visual with the top of the left hero content */
+@media(min-width:901px){
+  .hero__slide{
+    align-items:flex-start !important;
+  }
+  .hero__copy{
+    padding-top:86px !important;
+  }
+  .hero__visual{
+    top:0 !important;
+    transform:translateY(64px) !important;
+  }
+
+  /* Keep every hero headline to a maximum of two lines */
+  .hero h1{
+    max-width:620px !important;
+    text-wrap:balance !important;
+    line-height:1.02 !important;
+  }
+
+  /* Slightly more breathing room between continuous heading words */
+  .hero h1{
+    word-spacing:.015em !important;
+  }
+}
+
+/* Tablet */
+@media(min-width:768px) and (max-width:900px){
+  .hero__slide{
+    align-items:flex-start !important;
+  }
+  .hero__copy{
+    padding-top:78px !important;
+  }
+  .hero__visual{
+    top:0 !important;
+    transform:translateY(70px) !important;
+  }
+  .hero h1{
+    max-width:540px !important;
+    line-height:1.03 !important;
+    text-wrap:balance !important;
+  }
+}
+
+/* Mobile: headline stays clean, continuous and no more than two lines where possible */
+@media(max-width:767px){
+  .hero__copy{
+    padding-top:108px !important;
+  }
+  .hero__visual{
+    top:470px !important;
+    transform:none !important;
+  }
+  .hero h1{
+    max-width:390px !important;
+    line-height:.99 !important;
+    letter-spacing:-.055em !important;
+    text-wrap:balance !important;
+    word-spacing:0 !important;
+  }
+}
+
+/* Very small phones: don't force awkward overflow */
+@media(max-width:380px){
+  .hero h1{
+    max-width:340px !important;
+    font-size:clamp(35px,11.4vw,43px) !important;
+  }
+}
+</style>
+
+
+<style id="geolift-correct-top-edge-v7">
+/* Correct top-edge alignment: right visual begins exactly at the same vertical
+   level as the left eyebrow/top text, not above it. */
+@media(min-width:901px){
+  .hero__slide{
+    align-items:flex-start !important;
+  }
+  .hero__copy{
+    padding-top:86px !important;
+  }
+  .hero__visual{
+    top:auto !important;
+    margin-top:86px !important;
+    transform:none !important;
+  }
+
+  /* Keep the main heading to two lines maximum on desktop. */
+  .hero h1{
+    max-width:610px !important;
+    line-height:1.02 !important;
+    text-wrap:balance !important;
+    overflow:visible !important;
+  }
+}
+
+/* Tablet: same top-edge principle */
+@media(min-width:768px) and (max-width:900px){
+  .hero__slide{
+    align-items:flex-start !important;
+  }
+  .hero__copy{
+    padding-top:78px !important;
+  }
+  .hero__visual{
+    top:auto !important;
+    margin-top:78px !important;
+    transform:none !important;
+  }
+  .hero h1{
+    max-width:535px !important;
+    line-height:1.03 !important;
+    text-wrap:balance !important;
+  }
+}
+
+/* Mobile: preserve the mobile stacking; don't apply desktop top-edge positioning */
+@media(max-width:767px){
+  .hero__copy{
+    padding-top:108px !important;
+  }
+  .hero__visual{
+    margin-top:0 !important;
+    top:470px !important;
+    transform:none !important;
+  }
+  .hero h1{
+    max-width:390px !important;
+    line-height:.99 !important;
+    text-wrap:balance !important;
+  }
+}
+@media(max-width:380px){
+  .hero h1{
+    max-width:340px !important;
+    font-size:clamp(35px,11.4vw,43px) !important;
+  }
+}
+</style>
+
+
+<style id="geolift-strict-two-line-heading-v8">
+/* Strict desktop two-line heading: control width/size instead of forcing breaks */
+@media(min-width:901px){
+  .hero h1{
+    width:100% !important;
+    max-width:600px !important;
+    font-size:clamp(42px,4.25vw,62px) !important;
+    line-height:1.02 !important;
+    letter-spacing:-.055em !important;
+    text-wrap:balance !important;
+  }
+  .hero__copy{
+    max-width:620px !important;
+  }
+}
+
+/* Tablet: keep it to two lines where the available width allows */
+@media(min-width:768px) and (max-width:900px){
+  .hero h1{
+    max-width:500px !important;
+    font-size:clamp(38px,4.8vw,52px) !important;
+    line-height:1.03 !important;
+    letter-spacing:-.05em !important;
+    text-wrap:balance !important;
+  }
+}
+
+/* Mobile: prevent excessive vertical heading height; allow natural wrapping */
+@media(max-width:767px){
+  .hero h1{
+    max-width:370px !important;
+    font-size:clamp(38px,11.2vw,48px) !important;
+    line-height:.99 !important;
+    letter-spacing:-.055em !important;
+    text-wrap:balance !important;
+  }
+}
+@media(max-width:380px){
+  .hero h1{
+    max-width:340px !important;
+    font-size:clamp(34px,11.2vw,42px) !important;
+  }
+}
+</style>
+
+
+<style id="geolift-natural-heading-flow-v9">
+/* Natural sentence flow:
+   normal words and emphasized words remain on the SAME inline line flow.
+   The browser decides the single natural wrap point into line 2. */
+.hero h1{
+  display:block !important;
+  max-width:640px !important;
+  width:100% !important;
+  white-space:normal !important;
+  overflow-wrap:normal !important;
+  word-break:normal !important;
+  text-wrap:wrap !important;
+  line-height:1.03 !important;
+}
+.hero h1 strong{
+  display:inline !important;
+  white-space:inherit !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+/* Keep the emphasized words visually bold, but never make them a separate block. */
+.hero h1 strong::before,
+.hero h1 strong::after{
+  content:none !important;
+}
+
+@media(min-width:901px){
+  .hero h1{
+    max-width:630px !important;
+    font-size:clamp(43px,4.15vw,61px) !important;
+    letter-spacing:-.052em !important;
+  }
+}
+@media(min-width:768px) and (max-width:900px){
+  .hero h1{
+    max-width:520px !important;
+    font-size:clamp(39px,4.7vw,52px) !important;
+    letter-spacing:-.05em !important;
+  }
+}
+@media(max-width:767px){
+  .hero h1{
+    max-width:370px !important;
+    font-size:clamp(37px,11vw,48px) !important;
+    letter-spacing:-.055em !important;
+  }
+}
+</style>
+
+
+<style id="geolift-paid-heading-short-v10">
+/* Paid Ads slide: shorter sentence, naturally wraps to two lines */
+.hero__slide[data-slide="2"] h1{
+  max-width:560px !important;
+}
+@media(max-width:767px){
+  .hero__slide[data-slide="2"] h1{
+    max-width:350px !important;
+  }
+}
+</style>
+
+
+<style id="geolift-paid-two-line-v11">
+/* Paid Ads: deliberately give the sentence enough width to resolve to 2 lines */
+@media(min-width:1101px){
+  .hero__slide[data-slide="2"] .hero__copy{
+    max-width:690px !important;
+  }
+  .hero__slide[data-slide="2"] h1{
+    max-width:680px !important;
+    font-size:clamp(41px,3.85vw,58px) !important;
+    letter-spacing:-.05em !important;
+    line-height:1.03 !important;
+  }
+}
+@media(min-width:901px) and (max-width:1100px){
+  .hero__slide[data-slide="2"] .hero__copy{
+    max-width:620px !important;
+  }
+  .hero__slide[data-slide="2"] h1{
+    max-width:600px !important;
+    font-size:clamp(39px,4vw,52px) !important;
+  }
+}
+@media(min-width:768px) and (max-width:900px){
+  .hero__slide[data-slide="2"] h1{
+    max-width:540px !important;
+    font-size:clamp(37px,4.5vw,49px) !important;
+  }
+}
+@media(max-width:767px){
+  .hero__slide[data-slide="2"] h1{
+    max-width:355px !important;
+    font-size:clamp(35px,10.5vw,45px) !important;
+    line-height:1.01 !important;
+  }
+}
+</style>
+
+
+<style id="geolift-boxed-conversion-polish-v16">
+/* 1. Stronger primary CTA */
+.hero__btn--primary{
+  background:#0b2f55 !important;
+  color:#fff !important;
+  border-color:#0b2f55 !important;
+  box-shadow:0 10px 24px rgba(11,47,85,.18) !important;
+  transition:transform .22s ease,background .22s ease,box-shadow .22s ease !important;
+}
+.hero__btn--primary:hover{
+  background:#155eef !important;
+  border-color:#155eef !important;
+  transform:translateY(-2px) !important;
+  box-shadow:0 14px 30px rgba(21,94,239,.22) !important;
+}
+
+/* 2. Sharper right-panel micro labels */
+.ai-pulse-label{
+  color:#183f67 !important;
+  font-weight:700 !important;
+  letter-spacing:.02em !important;
+  background:rgba(255,255,255,.82) !important;
+  border-color:rgba(55,108,163,.26) !important;
+  box-shadow:0 8px 20px rgba(15,58,100,.07) !important;
+}
+.ai-pulse-label b{
+  color:#155eef !important;
+  font-weight:800 !important;
+}
+.ai-core small{
+  color:#496b8b !important;
+  font-weight:700 !important;
+}
+.growth-stat strong{
+  color:#173f68 !important;
+}
+.growth-stat span{
+  color:#526f8d !important;
+}
+
+/* 3. Trust signal directly under CTAs */
+.hero__trust{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:15px;
+  color:#58718a;
+  font-size:9px;
+  line-height:1.35;
+}
+.hero__trust-stars{
+  color:#155eef;
+  font-size:9px;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+.hero__trust + .hero__signals{
+  margin-top:12px !important;
+}
+
+/* 4. Make the three pillars feel interactive */
+.hero__signals span{
+  position:relative;
+  transition:color .2s ease,transform .2s ease !important;
+}
+.hero__signals span:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-5px;
+  height:1px;
+  background:#155eef;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .2s ease;
+}
+.hero__signals span:hover{
+  color:#155eef !important;
+  transform:translateY(-1px);
+}
+.hero__signals span:hover:after{
+  transform:scaleX(1);
+}
+
+/* Keep the trust line compact on smaller screens */
+@media(max-width:767px){
+  .hero__trust{
+    margin-top:12px !important;
+    font-size:8px !important;
+  }
+  .hero__trust-stars{
+    font-size:8px !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero__btn--primary,
+  .hero__signals span,
+  .hero__signals span:after{
+    transition:none !important;
+  }
+}
+</style>
+
+
+<style id="geolift-principal-refactor">
+/* =========================================================
+   PRINCIPAL FRONT-END REFACTOR
+   ========================================================= */
+
+/* 1. HERO: crisp, GPU-friendly entrance */
+.hero-slide,
+.hero__slide{
+  will-change:transform,opacity;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  transform:translate3d(0,0,0);
+  -webkit-transform:translate3d(0,0,0);
+}
+
+@keyframes heroInCrisp{
+  0%{
+    opacity:0;
+    transform:translate3d(0,12px,0) scale(.98);
+    filter:blur(4px);
+  }
+  100%{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1);
+    filter:blur(0);
+  }
+}
+
+.hero__slide.is-active,
+.hero-slide.is-active{
+  animation:heroInCrisp .5s cubic-bezier(.16,1,.3,1) both;
+}
+
+.hero__slide h1,
+.hero__slide h1 strong,
+.hero__slide h1 em,
+.hero__slide h1 b{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:geometricPrecision;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+
+.hero__slide h1 strong,
+.hero__slide h1 em{
+  display:inline;
+  filter:none;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-slide,
+  .hero__slide,
+  .hero__slide.is-active,
+  .hero-slide.is-active{
+    animation:none !important;
+    transition:none !important;
+    filter:none !important;
+    transform:none !important;
+  }
+}
+
+/* 2. SERVICES: stable responsive grid, no staggered offsets */
+.services-grid,
+.service-grid,
+.services__grid,
+.service-cards,
+.services-cards{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) !important;
+  gap:24px !important;
+  align-items:stretch !important;
+}
+
+.services-grid > *,
+.service-grid > *,
+.services__grid > *,
+.service-cards > *,
+.services-cards > *{
+  position:relative !important;
+  z-index:1 !important;
+  overflow:visible !important;
+  margin-top:0 !important;
+  align-self:stretch !important;
+}
+
+/* Catch the legacy fix wrappers without depending on their child class. */
+#geolift-v9-fixes .services-grid,
+#geolift-v9-fixes .service-grid,
+#geolift-services-alignment-fix .services-grid,
+#geolift-services-alignment-fix .service-grid{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr)) !important;
+  gap:24px !important;
+  align-items:stretch !important;
+}
+
+#geolift-v9-fixes .services-grid > *,
+#geolift-v9-fixes .service-grid > *,
+#geolift-services-alignment-fix .services-grid > *,
+#geolift-services-alignment-fix .service-grid > *{
+  position:relative !important;
+  z-index:1 !important;
+  overflow:visible !important;
+  margin-top:0 !important;
+}
+
+/* 3. RICHER COLOR SYSTEM */
+:root{
+  --brand-blue:#1D4ED8;
+  --brand-cyan:#06B6D4;
+  --brand-coral:#FF5733;
+  --brand-emerald:#10B981;
+  --card-bg-gradient:linear-gradient(145deg,#FFFFFF,#F8FAFC);
+  --brand-gradient:linear-gradient(135deg,#1D4ED8,#06B6D4);
+}
+
+/* Common card surfaces */
+.service-card,
+.services-card,
+.service-item{
+  background:var(--card-bg-gradient);
+}
+
+.service-card:hover,
+.services-card:hover,
+.service-item:hover{
+  background:linear-gradient(135deg,rgba(6,182,212,.08) 0%,rgba(29,78,216,.04) 100%) !important;
+  border-color:rgba(29,78,216,.22) !important;
+}
+
+/* Gradient heading highlights */
+.hero__slide h1 em,
+.hero__slide h1 .highlight,
+.gradient-text{
+  background:linear-gradient(135deg,#1D4ED8,#06B6D4);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Colorful metric / badge / pin accents */
+.metric-badge,
+.metric-pill{
+  background:linear-gradient(135deg,rgba(29,78,216,.12),rgba(6,182,212,.12)) !important;
+  color:#173F68 !important;
+  border-color:rgba(29,78,216,.16) !important;
+}
+
+.growth-live i,
+.status-dot{
+  background:#10B981 !important;
+  box-shadow:0 0 0 4px rgba(16,185,129,.12) !important;
+}
+
+.pin,
+.bullet-icon{
+  background:linear-gradient(135deg,rgba(255,87,51,.16),rgba(6,182,212,.12)) !important;
+  color:#C83F24 !important;
+  border-color:rgba(255,87,51,.18) !important;
+}
+
+.badge{
+  background:linear-gradient(135deg,rgba(255,87,51,.15),rgba(255,87,51,.06)) !important;
+  color:#B93B23 !important;
+  border-color:rgba(255,87,51,.18) !important;
+}
+
+/* CTA adopts the richer cobalt system */
+.hero__btn--primary{
+  background:linear-gradient(135deg,#1D4ED8,#155EEF) !important;
+  border-color:#1D4ED8 !important;
+  box-shadow:0 10px 26px rgba(29,78,216,.20) !important;
+}
+.hero__btn--primary:hover{
+  background:linear-gradient(135deg,#155EEF,#06B6D4) !important;
+  border-color:#155EEF !important;
+}
+
+/* Mobile grid remains comfortable and non-overlapping */
+@media(max-width:767px){
+  .services-grid,
+  .service-grid,
+  .services__grid,
+  .service-cards,
+  .services-cards{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+}
+
+@media(min-width:768px) and (max-width:1050px){
+  .services-grid,
+  .service-grid,
+  .services__grid,
+  .service-cards,
+  .services-cards{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+</style>
+
+<style id="geolift-lead-pattern-card-fix">
+/* FINAL FIX — keep the "LEAD PATTERNS / READY" micro-card from hiding the AI badge or lower visual */
+.ai-command-layer{overflow:visible!important}
+.ai-pulse-label.label-c{
+  right:5%!important;
+  top:72%!important;
+  z-index:8!important;
+  transform:translateY(0)!important;
+}
+.ai-badge{
+  left:24px!important;
+  bottom:28px!important;
+  z-index:9!important;
+}
+@media (max-width:900px){
+  .ai-pulse-label.label-c{
+    right:4%!important;
+    top:70%!important;
+  }
+  .ai-badge{
+    left:16px!important;
+    bottom:18px!important;
+  }
+}
+@media (max-width:767px){
+  .ai-pulse-label.label-c{
+    top:67%!important;
+    right:3%!important;
+  }
+  .ai-badge{
+    left:14px!important;
+    bottom:14px!important;
+  }
+}
+</style>
+
+
+<style id="geolift-premium-hero-text-transition">
+/* PREMIUM HERO TEXT TRANSITION
+   Smooth editorial fade + lift instead of a hard slide. */
+.hero__slide .hero__copy{
+  opacity:0;
+  transform:translate3d(0,18px,0);
+  filter:blur(2px);
+  transition:
+    opacity .62s cubic-bezier(.22,.61,.36,1),
+    transform .72s cubic-bezier(.22,.61,.36,1),
+    filter .62s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity,transform,filter;
+}
+
+.hero__slide.is-active .hero__copy{
+  opacity:1;
+  transform:translate3d(0,0,0);
+  filter:blur(0);
+}
+
+/* Give the individual content elements a refined stagger. */
+.hero__slide.is-active .hero__eyebrow{
+  animation:heroTextEyebrow .55s cubic-bezier(.22,.61,.36,1) both;
+}
+.hero__slide.is-active h1{
+  animation:heroTextRise .68s .05s cubic-bezier(.22,.61,.36,1) both;
+}
+.hero__slide.is-active .hero__copy > p{
+  animation:heroTextRise .68s .11s cubic-bezier(.22,.61,.36,1) both;
+}
+.hero__slide.is-active .hero__actions{
+  animation:heroTextRise .68s .17s cubic-bezier(.22,.61,.36,1) both;
+}
+.hero__slide.is-active .hero__trust{
+  animation:heroTextRise .68s .23s cubic-bezier(.22,.61,.36,1) both;
+}
+.hero__slide.is-active .hero__signals{
+  animation:heroTextRise .68s .29s cubic-bezier(.22,.61,.36,1) both;
+}
+
+@keyframes heroTextRise{
+  from{opacity:0;transform:translate3d(0,12px,0)}
+  to{opacity:1;transform:translate3d(0,0,0)}
+}
+@keyframes heroTextEyebrow{
+  from{opacity:0;transform:translate3d(0,7px,0);letter-spacing:.16em}
+  to{opacity:1;transform:translate3d(0,0,0);letter-spacing:normal}
+}
+
+/* Prevent hidden slides from leaving interactive/visual remnants. */
+.hero__slide:not(.is-active) .hero__copy{
+  pointer-events:none;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero__slide .hero__copy,
+  .hero__slide.is-active .hero__eyebrow,
+  .hero__slide.is-active h1,
+  .hero__slide.is-active .hero__copy > p,
+  .hero__slide.is-active .hero__actions,
+  .hero__slide.is-active .hero__trust,
+  .hero__slide.is-active .hero__signals{
+    animation:none!important;
+    transition:none!important;
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+  }
+}
+</style>
+
+
+<style id="geolift-premium-heading-treatment">
+/* Premium heading treatment — subtle colour, not a solid fill */
+.hero h1{
+  color:#0B1220!important;
+  letter-spacing:-.045em!important;
+  text-wrap:balance;
+}
+
+.hero h1 strong{
+  display:inline;
+  color:transparent!important;
+  background:
+    linear-gradient(
+      105deg,
+      #155EEF 0%,
+      #3B82F6 38%,
+      #18A77F 72%,
+      #155EEF 100%
+    )!important;
+  background-size:220% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  animation:premiumHeadingFlow 7s ease-in-out infinite;
+  text-shadow:none!important;
+}
+
+@keyframes premiumHeadingFlow{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* Keep the remaining hero slide headings visually consistent */
+.hero__slide:nth-child(2) h1 strong{
+  background:linear-gradient(105deg,#123B72,#155EEF,#18A77F,#123B72)!important;
+  background-size:220% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+}
+.hero__slide:nth-child(3) h1 strong{
+  background:linear-gradient(105deg,#155EEF,#18A77F,#4F7FEA,#155EEF)!important;
+  background-size:220% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+}
+
+@media(max-width:767px){
+  .hero h1{
+    letter-spacing:-.035em!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero h1 strong{
+    animation:none!important;
+    background-position:0 50%!important;
+  }
+}
+</style>
+
+
+<style id="geolift-compound-blue-heading">
+/* UNIFIED COMPOUND HEADING STYLE — all 3 hero slides use the exact same treatment */
+.hero h1 strong{
+  color:transparent!important;
+  background:
+    linear-gradient(
+      110deg,
+      #123B72 0%,
+      #155EEF 28%,
+      #4B8FE8 50%,
+      #155EEF 72%,
+      #123B72 100%
+    )!important;
+  background-size:200% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:none!important;
+  animation:compoundBlueHeading 8s ease-in-out infinite;
+}
+
+/* Override the previous slide-specific colours so all three match */
+.hero__slide:nth-child(2) h1 strong,
+.hero__slide:nth-child(3) h1 strong{
+  background:
+    linear-gradient(
+      110deg,
+      #123B72 0%,
+      #155EEF 28%,
+      #4B8FE8 50%,
+      #155EEF 72%,
+      #123B72 100%
+    )!important;
+  background-size:200% 100%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+}
+
+@keyframes compoundBlueHeading{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero h1 strong{
+    animation:none!important;
+    background-position:0 50%!important;
+  }
+}
+</style>
+
+
+<style id="geolift-card-overlap-final-fix">
+/* FINAL HERO MICRO-CARD SPACING FIX
+   The lower "AI + HUMAN EXECUTION" badge and "LEAD PATTERNS / READY"
+   label get their own clear zones. */
+.hero__visual,
+.ai-command-layer{
+  overflow:visible!important;
+}
+
+.ai-pulse-label{
+  z-index:12!important;
+  white-space:nowrap!important;
+}
+
+.ai-badge{
+  z-index:14!important;
+  left:24px!important;
+  bottom:10px!important;
+  max-width:calc(100% - 48px)!important;
+  white-space:nowrap!important;
+}
+
+/* Move the lead-pattern card upward so it cannot cover the badge/dashboard. */
+.ai-pulse-label.label-c{
+  right:4%!important;
+  top:68%!important;
+}
+
+/* Human-QA status strip: keep it inside the left content flow rather than
+   letting it visually collide with the right-side visual. */
+.hero__copy:after{
+  position:relative!important;
+  z-index:2!important;
+  max-width:100%!important;
+  overflow:hidden!important;
+  text-overflow:ellipsis!important;
+}
+
+/* Desktop */
+@media(min-width:901px){
+  .ai-pulse-label.label-c{
+    top:68%!important;
+    right:4%!important;
+  }
+  .ai-badge{
+    bottom:8px!important;
+    left:24px!important;
+  }
+}
+
+/* Tablet */
+@media(min-width:768px) and (max-width:900px){
+  .ai-pulse-label.label-c{
+    top:64%!important;
+    right:3%!important;
+  }
+  .ai-badge{
+    bottom:8px!important;
+    left:16px!important;
+  }
+}
+
+/* Mobile */
+@media(max-width:767px){
+  .ai-pulse-label.label-c{
+    top:63%!important;
+    right:3%!important;
+  }
+  .ai-badge{
+    left:12px!important;
+    bottom:8px!important;
+    max-width:calc(100% - 24px)!important;
+    font-size:7px!important;
+  }
+}
+
+@media(max-width:480px){
+  .ai-pulse-label.label-c{
+    top:60%!important;
+  }
+  .ai-badge{
+    left:10px!important;
+    bottom:6px!important;
+  }
+}
+</style>
+
+
+<style id="geolift-human-card-final-position">
+/* FINAL POSITION:
+   Keep the three capability lines fully visible.
+   Move the AI + HUMAN EXECUTION card slightly upward, above that lower zone. */
+
+.hero__signals{
+  position:relative!important;
+  z-index:20!important;
+  overflow:visible!important;
+}
+
+/* The human execution badge belongs above the lower three-line signal area. */
+.ai-badge{
+  bottom:72px!important;
+  left:24px!important;
+  z-index:25!important;
+}
+
+/* Lift LEAD PATTERNS slightly as well, but keep it separate from HUMAN. */
+.ai-pulse-label.label-c{
+  top:64%!important;
+  right:4%!important;
+  z-index:24!important;
+}
+
+/* Make sure the left-side HUMAN QA strip and the 3 signal lines are never clipped. */
+.hero__copy{
+  overflow:visible!important;
+}
+.hero__copy:after{
+  overflow:visible!important;
+  max-width:100%!important;
+}
+
+/* Tablet */
+@media(min-width:768px) and (max-width:900px){
+  .ai-badge{
+    bottom:62px!important;
+    left:16px!important;
+  }
+  .ai-pulse-label.label-c{
+    top:61%!important;
+  }
+}
+
+/* Mobile: keep the three lines visible and put HUMAN card just above them. */
+@media(max-width:767px){
+  .ai-badge{
+    bottom:54px!important;
+    left:12px!important;
+    max-width:calc(100% - 24px)!important;
+  }
+  .ai-pulse-label.label-c{
+    top:59%!important;
+    right:3%!important;
+  }
+}
+
+@media(max-width:480px){
+  .ai-badge{
+    bottom:48px!important;
+    left:10px!important;
+  }
+  .ai-pulse-label.label-c{
+    top:57%!important;
+  }
+}
+</style>
+
+
+<style id="geolift-human-execution-spacing-fix">
+/* HUMAN EXECUTION badge: separate it clearly from QUERY INTENT / LIVE. */
+.ai-badge{
+  bottom:52px!important;
+  left:24px!important;
+  z-index:30!important;
+  transform:translateY(0)!important;
+}
+
+/* Give the badge its own breathing room and prevent it from touching LIVE. */
+.ai-badge{
+  margin-top:14px!important;
+  padding:7px 11px!important;
+}
+
+/* Keep QUERY INTENT / LIVE clearly above it. */
+.ai-pulse-label.label-a{
+  z-index:32!important;
+  top:40%!important;
+}
+.ai-pulse-label.label-b{
+  z-index:31!important;
+}
+.ai-pulse-label.label-c{
+  z-index:31!important;
+}
+
+/* Tablet */
+@media(min-width:768px) and (max-width:900px){
+  .ai-badge{
+    bottom:46px!important;
+    left:16px!important;
+  }
+  .ai-pulse-label.label-a{
+    top:34%!important;
+  }
+}
+
+/* Mobile */
+@media(max-width:767px){
+  .ai-badge{
+    bottom:42px!important;
+    left:12px!important;
+    margin-top:12px!important;
+  }
+  .ai-pulse-label.label-a{
+    top:27%!important;
+  }
+}
+
+@media(max-width:480px){
+  .ai-badge{
+    bottom:38px!important;
+    left:10px!important;
+  }
+}
+</style>
+
+
+<style id="geolift-query-intent-separated">
+/* QUERY INTENT / LIVE — move it away from the LEAD PATTERNS / READY card. */
+.ai-pulse-label.label-a{
+  right:10%!important;
+  top:30%!important;
+  z-index:40!important;
+}
+
+/* Keep LEAD PATTERNS / READY in its own lower-right zone. */
+.ai-pulse-label.label-c{
+  right:4%!important;
+  top:64%!important;
+  z-index:35!important;
+}
+
+/* Prevent the two cards from visually touching. */
+.ai-pulse-label.label-a,
+.ai-pulse-label.label-c{
+  transform:translateY(0)!important;
+}
+
+/* Tablet */
+@media(min-width:768px) and (max-width:900px){
+  .ai-pulse-label.label-a{
+    right:8%!important;
+    top:25%!important;
+  }
+  .ai-pulse-label.label-c{
+    right:3%!important;
+    top:60%!important;
+  }
+}
+
+/* Mobile */
+@media(max-width:767px){
+  .ai-pulse-label.label-a{
+    right:5%!important;
+    top:22%!important;
+  }
+  .ai-pulse-label.label-c{
+    right:3%!important;
+    top:59%!important;
+  }
+}
+
+@media(max-width:480px){
+  .ai-pulse-label.label-a{
+    right:4%!important;
+    top:19%!important;
+  }
+  .ai-pulse-label.label-c{
+    top:56%!important;
+  }
+}
+</style>
+
+
+<style id="geolift-query-intent-final-fix">
+/* QUERY INTENT — give it a completely independent position.
+   It must sit above/right of the AI core and never touch LEAD PATTERNS. */
+.ai-command-layer .label-a{
+  position:absolute!important;
+  right:9%!important;
+  top:18%!important;
+  z-index:60!important;
+  transform:none!important;
+}
+
+/* LEAD PATTERNS stays distinctly below QUERY INTENT. */
+.ai-command-layer .label-c{
+  position:absolute!important;
+  right:4%!important;
+  top:67%!important;
+  z-index:50!important;
+  transform:none!important;
+}
+
+/* AI + HUMAN stays below the upper labels, without collision. */
+.ai-command-layer .ai-badge{
+  z-index:55!important;
+}
+
+/* Make sure labels never get clipped by the visual wrapper. */
+.ai-command-layer,
+.hero__visual{
+  overflow:visible!important;
+}
+
+/* Tablet */
+@media (min-width:768px) and (max-width:900px){
+  .ai-command-layer .label-a{
+    right:6%!important;
+    top:14%!important;
+  }
+  .ai-command-layer .label-c{
+    right:3%!important;
+    top:63%!important;
+  }
+}
+
+/* Mobile */
+@media (max-width:767px){
+  .ai-command-layer .label-a{
+    right:4%!important;
+    top:10%!important;
+  }
+  .ai-command-layer .label-c{
+    right:3%!important;
+    top:59%!important;
+  }
+}
+
+@media (max-width:480px){
+  .ai-command-layer .label-a{
+    right:3%!important;
+    top:8%!important;
+  }
+  .ai-command-layer .label-c{
+    top:56%!important;
+  }
+}
+</style>
+
+
+<style id="header-spacing-final-fix">
+/* Header spacing: give Contact and the primary CTA a cleaner separation */
+@media(min-width:851px){
+  .site-header .nav{
+    gap:36px!important;
+  }
+  .desktop-nav{
+    gap:28px!important;
+  }
+  .nav-right{
+    gap:28px!important;
+  }
+  .nav-contact-link{
+    margin-right:2px!important;
+  }
+}
+</style>
+
 </head>
 
 
@@ -301,53 +2805,167 @@ section.services .service-cards > :nth-child(3){
 </header>
 
 <main>
-<section class="hero hero-slider" id="home">
-  <div class="hero-orb orb-a"></div><div class="hero-orb orb-b"></div>
-  <div class="hero-slider-track">
-    <article class="hero-slide is-active">
-      <div class="container hero-grid">
-        <div class="hero-copy"><div class="eyebrow"><span></span> GOOGLE BUSINESS PROFILE MANAGEMENT</div>
+<section class="hero" id="home" aria-label="GeoLift local growth services">
+  <div class="hero__orb hero__orb--a" aria-hidden="true"></div>
+  <div class="hero__orb hero__orb--b" aria-hidden="true"></div>
+
+  <div class="hero__track">
+    <!-- Slide 1 -->
+    <article class="hero__slide is-active" data-slide="0">
+      <div class="hero__container">
+        <div class="hero__copy">
+          <div class="hero__eyebrow"><span></span> AI-ASSISTED LOCAL GROWTH · GOOGLE BUSINESS PROFILE</div>
           <h1>Make your Google profile work <strong>every day.</strong></h1>
           <p>Hands-on GBP management for businesses, agencies and multi-location teams — keeping profiles accurate, active, monitored and ready to turn local searches into enquiries.</p>
-          <div class="hero-actions"><a href="#contact" class="btn btn-dark btn-large">Get Your Free Local Audit <b>→</b></a><a href="/google-business-profile-management/" class="btn btn-line btn-large">Explore GBP Services</a></div>
-          <div class="hero-signals"><span><b>01</b> Profile management</span><span><b>02</b> Review workflows</span><span><b>03</b> Monitoring & reporting</span></div>
-        </div>
-        <div class="hero-stage"><div class="hero-photo photo-gbp"></div><div class="stage-back">GBP<br>CONTROL</div>
-          <div class="floating-ui ui-main"><div class="ui-top"><span>PROFILE CONTROL</span><b>LIVE</b></div><div class="profile-row"><div class="avatar">G</div><div><strong>Your Business</strong><small>Google Business Profile</small></div><em>✓</em></div><div class="ui-stat"><span>Profile health</span><strong>96%</strong></div><div class="ui-progress"><i></i></div><div class="ui-mini"><span>Reviews <b>24</b></span><span>Posts <b>08</b></span><span>Issues <b>01</b></span></div></div>
-          <div class="stage-chip chip-one"><strong>REVIEWS</strong><span>Monitored</span></div><div class="stage-chip chip-two"><strong>GBP</strong><span>Optimized</span></div>
+
+          <div class="hero__actions">
+            <a class="hero__btn hero__btn--primary" href="#contact">Get Your Free Local Audit <span>→</span></a>
+            <a class="hero__btn hero__btn--secondary" href="/google-business-profile-management/">Explore GBP Services</a>
+          </div>
+
+          <div class="hero__trust" aria-label="GeoLift trust signal">
+            <span class="hero__trust-stars" aria-hidden="true">★★★★★</span>
+            <span>Built for businesses, agencies & multi-location teams</span>
+          </div>
+
+          <div class="hero__signals" aria-label="GBP capabilities">
+            <span><b>01</b> AI-assisted insights</span>
+            <span><b>02</b> Human QA & execution</span>
+            <span><b>03</b> Continuous monitoring</span>
+          </div>
         </div>
       </div>
     </article>
-    <article class="hero-slide">
-      <div class="container hero-grid">
-        <div class="hero-copy"><div class="eyebrow"><span></span> LOCAL SEO & MAP PACK GROWTH</div>
+
+    <!-- Slide 2 -->
+    <article class="hero__slide" data-slide="1">
+      <div class="hero__container">
+        <div class="hero__copy">
+          <div class="hero__eyebrow"><span></span> LOCAL SEO & MAP PACK GROWTH</div>
           <h1>Build local visibility that <strong>compounds.</strong></h1>
           <p>Connect your website, location pages, local signals and Google presence into one structured Local SEO system designed around the places and services you actually want to win.</p>
-          <div class="hero-actions"><a href="#contact" class="btn btn-dark btn-large">Get Your Local SEO Audit <b>→</b></a><a href="/local-seo/" class="btn btn-line btn-large">Explore Local SEO</a></div>
-          <div class="hero-signals"><span><b>01</b> Location architecture</span><span><b>02</b> Map Pack signals</span><span><b>03</b> Local content</span></div>
-        </div>
-        <div class="hero-stage"><div class="hero-photo photo-seo"></div><div class="stage-back">LOCAL<br>SEO</div>
-          <div class="seo-board"><div class="seo-head"><span>LOCAL SEARCH / MARKET</span><b>GROWTH VIEW</b></div><div class="seo-search">best service in Kolkata <span>⌕</span></div><div class="seo-rank"><div><small>MAP PACK</small><strong>#01</strong><span>Visibility ↑</span></div><div><small>ORGANIC</small><strong>#03</strong><span>Coverage ↑</span></div><div><small>LOCAL PAGES</small><strong>18</strong><span>Indexed</span></div></div><div class="seo-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-          <div class="stage-chip chip-three"><strong>LOCAL PAGES</strong><span>Built to rank</span></div><div class="stage-chip chip-two"><strong>MAP PACK</strong><span>Tracked</span></div>
+
+          <div class="hero__actions">
+            <a class="hero__btn hero__btn--primary" href="#contact">Get Your Local SEO Audit <span>→</span></a>
+            <a class="hero__btn hero__btn--secondary" href="/local-seo/">Explore Local SEO</a>
+          </div>
+
+          <div class="hero__signals" aria-label="Local SEO capabilities">
+            <span><b>01</b> Location architecture</span>
+            <span><b>02</b> Map Pack signals</span>
+            <span><b>03</b> Local content</span>
+          </div>
         </div>
       </div>
     </article>
-    <article class="hero-slide">
-      <div class="container hero-grid">
-        <div class="hero-copy"><div class="eyebrow"><span></span> PAID ADS · PERFORMANCE ADD-ON</div>
-          <h1>Turn high-intent searches into <strong>more enquiries.</strong></h1>
+
+    <!-- Slide 3 -->
+    <article class="hero__slide" data-slide="2">
+      <div class="hero__container">
+        <div class="hero__copy">
+          <div class="hero__eyebrow"><span></span> PAID ADS · PERFORMANCE ADD-ON</div>
+          <h1>Turn high-intent searches into <strong>more leads.</strong></h1>
           <p>Layer focused Google and Meta campaigns over your local search foundation to capture demand faster — with calls, WhatsApp conversations and landing-page leads built into the journey.</p>
-          <div class="hero-actions"><a href="#contact" class="btn btn-dark btn-large">Plan Your Growth Campaign <b>→</b></a><a href="/google-ads/" class="btn btn-line btn-large">Explore Paid Ads</a></div>
-          <div class="hero-signals"><span><b>01</b> Local Google Ads</span><span><b>02</b> Meta campaigns</span><span><b>03</b> WhatsApp lead capture</span></div>
-        </div>
-        <div class="hero-stage"><div class="hero-photo photo-ads"></div><div class="stage-back">PAID<br>GROWTH</div>
-          <div class="ads-board"><div class="ads-head"><span>CAMPAIGN OVERVIEW</span><b>ACTIVE</b></div><div class="ads-number"><small>QUALIFIED ENQUIRIES</small><strong>+38%</strong><span>vs previous period</span></div><div class="ads-bars"><div><span>Google</span><i><b style="width:82%"></b></i></div><div><span>Meta</span><i><b style="width:64%"></b></i></div><div><span>WhatsApp</span><i><b style="width:76%"></b></i></div></div><div class="ads-tags"><span>CALLS</span><span>WHATSAPP</span><span>LEADS</span></div></div>
-          <div class="stage-chip chip-one"><strong>GOOGLE ADS</strong><span>Local intent</span></div><div class="stage-chip chip-three"><strong>WHATSAPP</strong><span>Lead capture</span></div>
+
+          <div class="hero__actions">
+            <a class="hero__btn hero__btn--primary" href="#contact">Plan Your Growth Campaign <span>→</span></a>
+            <a class="hero__btn hero__btn--secondary" href="/google-ads/">Explore Paid Ads</a>
+          </div>
+
+          <div class="hero__signals" aria-label="Paid growth capabilities">
+            <span><b>01</b> Local Google Ads</span>
+            <span><b>02</b> Meta campaigns</span>
+            <span><b>03</b> WhatsApp lead capture</span>
+          </div>
         </div>
       </div>
     </article>
   </div>
-  <div class="hero-dots"><button class="active" data-slide="0"></button><button data-slide="1"></button><button data-slide="2"></button><span>01 / 03</span></div>
+
+  <!-- One shared visual for all three slides -->
+  <div class="hero__visual" aria-hidden="true">
+
+      <div class="ai-command-layer" aria-hidden="true">
+        <div class="ai-orbit ai-orbit--one"></div>
+        <div class="ai-orbit ai-orbit--two"></div>
+        <div class="ai-network">
+          <i class="ai-node n1"></i><i class="ai-node n2"></i><i class="ai-node n3"></i>
+          <i class="ai-node n4"></i><i class="ai-node n5"></i><i class="ai-node n6"></i>
+          <span class="ai-link l1"></span><span class="ai-link l2"></span>
+          <span class="ai-link l3"></span><span class="ai-link l4"></span>
+          <span class="ai-link l5"></span>
+        </div>
+        <div class="ai-core">
+          <span class="ai-core-ring"></span>
+          <strong>AI</strong>
+          <small>LOCAL SIGNALS</small>
+        </div>
+        <div class="ai-pulse-label label-a">QUERY INTENT <b>LIVE</b></div>
+        <div class="ai-pulse-label label-b">MAP SIGNALS <b>ANALYZING</b></div>
+        <div class="ai-pulse-label label-c">LEAD PATTERNS <b>READY</b></div>
+        <div class="ai-badge"><span class="ai-spark">✦</span> AI + HUMAN EXECUTION</div>
+      </div>
+    <div class="growth-dashboard">
+      <div class="growth-dashboard__top">
+        <div>
+          <span>GEOLIFT / LOCAL GROWTH</span>
+          <strong>Demand is moving up</strong>
+        </div>
+        <div class="growth-live"><i></i> LIVE</div>
+      </div>
+
+      <div class="growth-dashboard__metric">
+        <strong>AI + SEO</strong>
+        <span>signal intelligence layer</span>
+      </div>
+
+      <div class="growth-chart">
+        <div class="growth-chart__grid"></div>
+        <svg viewBox="0 0 600 245" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="geoGrowthFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#155EEF" stop-opacity=".25"/>
+              <stop offset="1" stop-color="#155EEF" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path class="growth-chart__area" d="M0 210 C55 204 78 188 120 191 S183 163 224 171 S288 139 329 146 S390 111 430 122 S486 78 520 91 S563 52 600 25 L600 245 L0 245Z"/>
+          <path class="growth-chart__line" pathLength="1" d="M0 210 C55 204 78 188 120 191 S183 163 224 171 S288 139 329 146 S390 111 430 122 S486 78 520 91 S563 52 600 25"/>
+          <circle cx="224" cy="171" r="6" class="growth-point"/>
+          <circle cx="430" cy="122" r="6" class="growth-point growth-point--2"/>
+          <circle cx="520" cy="91" r="6" class="growth-point growth-point--3"/>
+        </svg>
+      </div>
+
+      <div class="growth-stat growth-stat--one">
+        <strong>AI READY</strong>
+        <span>search signal analysis</span>
+      </div>
+      <div class="growth-stat growth-stat--two">
+        <strong>LIVE</strong>
+        <span>intent monitoring</span>
+      </div>
+      <div class="growth-stat growth-stat--three">
+        <strong>HUMAN</strong>
+        <span>QA before action</span>
+      </div>
+
+      <div class="growth-mini">
+        <span>SEARCH</span>
+        <b></b>
+        <span>MAPS</span>
+        <b></b>
+        <span>LEADS</span>
+        <b></b>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__dots" aria-label="Hero slides">
+    <button class="is-active" type="button" data-slide-to="0" aria-label="Show Google Business Profile slide"></button>
+    <button type="button" data-slide-to="1" aria-label="Show Local SEO slide"></button>
+    <button type="button" data-slide-to="2" aria-label="Show Paid Growth slide"></button>
+    <span><b>01</b> / 03</span>
+  </div>
 </section>
 
 <section class="brand-rail">
@@ -617,13 +3235,45 @@ document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>
 
 <script>
 (function(){
- const slides=[...document.querySelectorAll('.hero-slide')], dots=[...document.querySelectorAll('.hero-dots button')], count=slides.length; let current=0,timer;
- function show(i){current=(i+count)%count;slides.forEach((s,n)=>s.classList.toggle('is-active',n===current));dots.forEach((d,n)=>d.classList.toggle('active',n===current));const label=document.querySelector('.hero-dots span');if(label)label.textContent=String(current+1).padStart(2,'0')+' / '+String(count).padStart(2,'0')}
- function start(){clearInterval(timer);timer=setInterval(()=>show(current+1),6500)} dots.forEach((d,i)=>d.addEventListener('click',()=>{show(i);start()})); start();
- const prev=document.getElementById('reviewPrev'),next=document.getElementById('reviewNext'),track=document.querySelector('.review-track');let ri=0;const cards=[...document.querySelectorAll('.review-card')];
- function move(dir){const card=cards[0];const gap=16;const max=Math.max(0,cards.length-1);ri=Math.max(0,Math.min(max,ri+dir));track.style.transform='translateX(-'+(ri*(card.offsetWidth+gap))+'px)'}
- if(prev)prev.addEventListener('click',()=>move(-1));if(next)next.addEventListener('click',()=>move(1));
- let rt=setInterval(()=>{ri=(ri+1)%cards.length;move(0)},5000);const rc=document.querySelector('.review-carousel');if(rc){rc.addEventListener('mouseenter',()=>clearInterval(rt));rc.addEventListener('mouseleave',()=>{rt=setInterval(()=>{ri=(ri+1)%cards.length;move(0)},5000)})}
+  const hero = document.querySelector('.hero');
+  if(!hero) return;
+
+  const slides = [...hero.querySelectorAll('.hero__slide')];
+  const dots = [...hero.querySelectorAll('[data-slide-to]')];
+  const counter = hero.querySelector('.hero__dots span b');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let index = 0;
+  let timer;
+
+  function showSlide(next){
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide,i)=>{
+      slide.classList.toggle('is-active', i === index);
+      slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+    });
+    dots.forEach((dot,i)=>{
+      dot.classList.toggle('is-active', i === index);
+      dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+    });
+    if(counter) counter.textContent = String(index + 1).padStart(2,'0');
+  }
+
+  function start(){
+    clearInterval(timer);
+    if(!reduceMotion && slides.length > 1){
+      timer = setInterval(()=>showSlide(index + 1),4000);
+    }
+  }
+
+  dots.forEach((dot,i)=>{
+    dot.addEventListener('click', ()=>{
+      showSlide(i);
+      start();
+    });
+  });
+
+  showSlide(0);
+  start();
 })();
 </script><script>
 (function(){
@@ -650,4 +3300,52 @@ document.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>
 })();
 </script>
 
+<script>
+
+(function(){
+  const hero = document.querySelector('.hero');
+  if(!hero) return;
+
+  const slides = [...hero.querySelectorAll('.hero__slide')];
+  const dots = [...hero.querySelectorAll('[data-slide-to]')];
+  const counter = hero.querySelector('.hero__dots span b');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let index = 0;
+  let timer = null;
+
+  function showSlide(next){
+    index = (next + slides.length) % slides.length;
+    slides.forEach((slide,i)=>slide.classList.toggle('is-active',i===index));
+    dots.forEach((dot,i)=>{
+      dot.classList.toggle('is-active',i===index);
+      dot.setAttribute('aria-current',i===index ? 'true' : 'false');
+    });
+    if(counter) counter.textContent = String(index+1).padStart(2,'0');
+  }
+
+  function start(){
+    if(reduceMotion) return;
+    clearInterval(timer);
+    timer = setInterval(()=>showSlide(index + 1),4000);
+  }
+
+  dots.forEach((dot,i)=>{
+    dot.addEventListener('click',()=>{
+      showSlide(i);
+      start();
+    });
+  });
+
+  hero.addEventListener('mouseenter',()=>clearInterval(timer));
+  hero.addEventListener('mouseleave',start);
+  hero.addEventListener('focusin',()=>clearInterval(timer));
+  hero.addEventListener('focusout',start);
+
+  showSlide(0);
+  start();
+})();
+
+</script>
 </body>
+</body>
+</html>
