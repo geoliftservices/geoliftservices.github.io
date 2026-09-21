@@ -651,6 +651,432 @@ button,.btn,.cta,.form-submit{font-size:14px}
   .pro-location-bottom a{display:inline-block;margin-top:10px}
 }
 
+
+/* Smoother, slower hero transitions */
+.hero-slide,
+.hero-content,
+.hero-visual,
+.hero-heading,
+.hero-copy {
+  transition-timing-function: cubic-bezier(.22,.61,.36,1) !important;
+  transition-duration: 900ms !important;
+}
+
+
+/* Hero: 4-second rotation with a gentle, slow transition */
+.hero-slide,
+.hero-content,
+.hero-visual,
+.hero-heading,
+.hero-copy {
+  transition-timing-function: cubic-bezier(.25,.65,.35,1) !important;
+  transition-duration: 1050ms !important;
+}
+
+
+
+/* Desktop: keep the transition control visually aligned with the hero
+   content, with enough breathing room from the CTA and viewport edge. */
+@media (min-width: 901px){
+  .hero-slider-nav,
+  .hero-controls,
+  .hero-dots,
+  .hero-indicators{
+    position:absolute;
+    left:clamp(24px,5vw,80px);
+    bottom:clamp(24px,4vw,52px);
+  }
+}
+
+/* Tablet/mobile: move the indicator below the hero copy/CTA so it does
+   not collide with the heading, buttons, or visual. */
+@media (max-width: 900px){
+  .hero-slider-nav,
+  .hero-controls,
+  .hero-dots,
+  .hero-indicators{
+    position:absolute;
+    left:50%;
+    bottom:16px;
+    transform:translateX(-50%);
+    width:max-content;
+  }
+}
+
+/* Small phones: give the controls a little more separation from the
+   bottom edge while keeping them centered. */
+@media (max-width: 480px){
+  .hero-slider-nav,
+  .hero-controls,
+  .hero-dots,
+  .hero-indicators{
+    bottom:11px;
+  }
+}
+
+
+/* Actual hero heading transition controls */
+.hero-heading-slider{position:relative}
+.hero-heading-dots{
+  display:flex!important;
+  align-items:center;
+  gap:8px;
+  width:max-content;
+  margin-top:22px!important;
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+}
+.hero-heading-dot{
+  display:block!important;
+  width:28px!important;
+  height:3px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:99px!important;
+  background:#c9d8dc!important;
+  opacity:1!important;
+  cursor:pointer;
+  transition:width .8s cubic-bezier(.22,.61,.36,1),background .8s ease,transform .8s ease!important;
+}
+.hero-heading-dot.active{
+  width:52px!important;
+  background:#15999a!important;
+}
+
+/* Keep the actual heading slide transition gentle. */
+.hero-heading-slide{
+  transition:opacity 1.05s cubic-bezier(.22,.61,.36,1),transform 1.05s cubic-bezier(.22,.61,.36,1)!important;
+}
+
+@media(max-width:900px){
+  .hero-heading-dots{
+    margin:18px auto 0!important;
+    justify-content:center!important;
+  }
+  .hero-heading-dot{width:24px!important}
+  .hero-heading-dot.active{width:45px!important}
+}
+@media(max-width:480px){
+  .hero-heading-dots{
+    margin-top:16px!important;
+  }
+}
+
+
+/* Hero indicator lines: directly above CTA buttons */
+.hero-heading-dots{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:max-content!important;
+  margin:20px 0 15px!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  z-index:5!important;
+}
+.hero-actions{
+  position:relative!important;
+  z-index:4!important;
+}
+@media(max-width:900px){
+  .hero-heading-dots{
+    justify-content:center!important;
+    margin:18px auto 14px!important;
+  }
+}
+@media(max-width:480px){
+  .hero-heading-dots{
+    margin:16px auto 13px!important;
+  }
+}
+
+
+/* Definitive hero transition placement */
+.hero-transition-row{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:100%!important;
+  height:4px!important;
+  margin:18px 0 15px!important;
+  padding:0!important;
+  position:relative!important;
+  z-index:20!important;
+}
+.hero-transition-row .hero-heading-dots{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  width:max-content!important;
+  height:3px!important;
+  margin:0!important;
+  padding:0!important;
+  position:static!important;
+  transform:none!important;
+}
+.hero-transition-row .hero-heading-dot{
+  flex:0 0 auto!important;
+}
+.hero-actions{
+  position:relative!important;
+  z-index:19!important;
+  margin-top:0!important;
+}
+@media(max-width:900px){
+  .hero-transition-row{
+    justify-content:center!important;
+    margin:16px 0 13px!important;
+  }
+  .hero-transition-row .hero-heading-dots{
+    justify-content:center!important;
+  }
+}
+@media(max-width:480px){
+  .hero-transition-row{
+    margin:14px 0 12px!important;
+  }
+}
+
+
+/* Hero transition lines: centered within the LEFT content column */
+.hero-transition-row{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  height:4px!important;
+  margin:18px 0 15px!important;
+  padding:0!important;
+  position:relative!important;
+  z-index:20!important;
+}
+.hero-transition-row .hero-heading-dots{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:max-content!important;
+  margin:0!important;
+  position:static!important;
+  transform:none!important;
+}
+@media(max-width:900px){
+  .hero-transition-row{
+    justify-content:center!important;
+  }
+}
+
+
+/* Balanced hero headings: same scale and exactly two lines */
+.hero-heading-slide h1{
+  line-height:1.08!important;
+  min-height:2.16em!important;
+  max-width:620px!important;
+  text-wrap:balance!important;
+}
+.hero-heading-slide h1 br{
+  display:block!important;
+}
+@media(max-width:900px){
+  .hero-heading-slide h1{
+    line-height:1.08!important;
+    min-height:2.16em!important;
+    max-width:100%!important;
+    text-wrap:balance!important;
+  }
+}
+
+
+/* Final balanced hero headline sizing */
+.hero-heading-slide h1{
+  width:100%!important;
+  max-width:560px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  line-height:1.08!important;
+  min-height:2.16em!important;
+  text-wrap:nowrap!important;
+}
+.hero-heading-slide h1 br{display:block!important}
+@media(max-width:900px){
+  .hero-heading-slide h1{
+    max-width:100%!important;
+    font-size:clamp(30px,7.5vw,42px)!important;
+    line-height:1.08!important;
+    min-height:2.16em!important;
+    white-space:nowrap!important;
+  }
+}
+@media(max-width:380px){
+  .hero-heading-slide h1{
+    font-size:29px!important;
+  }
+}
+
+
+/* Keep hero headlines safely inside the left content column */
+.hero-heading-slide h1{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:500px!important;
+  margin-left:0!important;
+  margin-right:auto!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+  white-space:normal!important;
+  text-wrap:balance!important;
+}
+.hero-heading-slide{
+  min-width:0!important;
+  max-width:100%!important;
+  overflow:visible!important;
+}
+@media(min-width:901px){
+  .hero-heading-slide h1{
+    max-width:500px!important;
+  }
+}
+@media(max-width:900px){
+  .hero-heading-slide h1{
+    max-width:100%!important;
+    font-size:clamp(29px,7vw,40px)!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    text-wrap:balance!important;
+  }
+}
+@media(max-width:380px){
+  .hero-heading-slide h1{
+    font-size:28px!important;
+  }
+}
+
+
+/* Mobile hero: compact, balanced and conversion-focused */
+@media (max-width:900px){
+  .hero{
+    min-height:auto!important;
+    height:auto!important;
+    padding-top:34px!important;
+    padding-bottom:32px!important;
+  }
+  .hero .container{
+    min-height:auto!important;
+  }
+  .hero-content{
+    padding-top:0!important;
+    padding-bottom:0!important;
+  }
+  .hero-heading-slide{
+    min-height:0!important;
+    height:auto!important;
+  }
+  .hero-heading-slide h1{
+    margin-top:0!important;
+    margin-bottom:10px!important;
+    line-height:1.08!important;
+    min-height:0!important;
+  }
+  .hero-heading-slide p,
+  .hero-copy{
+    margin-top:0!important;
+    margin-bottom:13px!important;
+  }
+  .hero-transition-row{
+    margin:11px 0 11px!important;
+    height:3px!important;
+  }
+  .hero-actions{
+    margin-top:0!important;
+    gap:9px!important;
+  }
+  .hero-visual{
+    margin-top:25px!important;
+    min-height:0!important;
+  }
+}
+
+@media(max-width:600px){
+  .hero{
+    padding-top:27px!important;
+    padding-bottom:27px!important;
+  }
+  .hero-heading-slide h1{
+    font-size:clamp(28px,8vw,36px)!important;
+    line-height:1.07!important;
+    margin-bottom:8px!important;
+  }
+  .hero-heading-slide p,
+  .hero-copy{
+    font-size:12px!important;
+    line-height:1.5!important;
+    margin-bottom:11px!important;
+  }
+  .hero-transition-row{
+    margin:9px 0 10px!important;
+  }
+  .hero-visual{
+    margin-top:20px!important;
+  }
+}
+
+@media(max-width:380px){
+  .hero{
+    padding-top:23px!important;
+    padding-bottom:23px!important;
+  }
+  .hero-heading-slide h1{
+    font-size:27px!important;
+  }
+  .hero-visual{
+    margin-top:16px!important;
+  }
+}
+
+
+/* Mobile hero slider: remove the fixed desktop-height gap.
+   The active heading/description determines the slider height, so the
+   transition lines sit immediately below the description. */
+@media(max-width:900px){
+  .hero-heading-slider{
+    min-height:0!important;
+    height:auto!important;
+    overflow:visible!important;
+  }
+  .hero-heading-slide{
+    position:absolute!important;
+    inset:0!important;
+    height:auto!important;
+  }
+  .hero-heading-slide.active{
+    position:relative!important;
+    inset:auto!important;
+    height:auto!important;
+  }
+  .hero-heading-slide .hero-lead{
+    margin:9px 0 0!important;
+  }
+  .hero-transition-row{
+    margin:10px 0 11px!important;
+    height:3px!important;
+  }
+}
+@media(max-width:600px){
+  .hero-heading-slide .hero-lead{
+    margin-top:8px!important;
+  }
+  .hero-transition-row{
+    margin-top:9px!important;
+    margin-bottom:10px!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -667,19 +1093,20 @@ button,.btn,.cta,.form-submit{font-size:14px}
 <div class="reveal show"><span class="eyebrow">EAR • HEARING • ENT CARE</span>
 <div class="hero-heading-slider" aria-live="polite">
   <div class="hero-heading-slide active">
-    <h1>Hear better.<br>Feel more confident.</h1>
+    <h1>Hear Better.<br>Live Better.</h1>
     <p class="hero-lead">Having trouble hearing, ear pain, or another ENT concern? Start with a clear assessment and understand your next steps.</p>
   </div>
   <div class="hero-heading-slide">
-    <h1>Better ear health.<br><em>Specialist ENT care.</em></h1>
+    <h1>Expert ENT.<br>Complete Care.</h1>
     <p class="hero-lead">From everyday ear concerns to specialist ENT conditions, get the right clinical assessment and understand your treatment options clearly.</p>
   </div>
   <div class="hero-heading-slide">
-    <h1>Find the Right Aid.<br>Hear Better.</h1>
+    <h1>Find Your Aid.<br>Hear Better.</h1>
     <p class="hero-lead">Explore modern hearing solutions with guidance on selection, fitting and everyday comfort based on your hearing needs.</p>
   </div>
 </div>
-<div class="hero-actions"><a class="btn primary" href="https://wa.me/918583014007?text=Hello%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Chanditala%20Hearing%20Clinic." target="_blank" rel="noopener noreferrer">Book a Free Trial</a><a class="btn secondary" href="#services">Explore Services / Products </a></div><div class="hero-heading-dots" aria-label="Hero services"><button class="hero-heading-dot active" data-slide="0" aria-label="Hearing"></button><button class="hero-heading-dot" data-slide="1" aria-label="ENT"></button><button class="hero-heading-dot" data-slide="2" aria-label="Hearing aids"></button></div>
+<div class="hero-transition-row"><div class="hero-heading-dots" aria-label="Hero services"><button class="hero-heading-dot active" data-slide="0" aria-label="Hearing"></button><button class="hero-heading-dot" data-slide="1" aria-label="ENT"></button><button class="hero-heading-dot" data-slide="2" aria-label="Hearing aids"></button></div></div>
+<div class="hero-actions"><a class="btn primary" href="https://wa.me/918583014007?text=Hello%2C%20I%27d%20like%20to%20book%20a%20free%20trial%20at%20Chanditala%20Hearing%20Clinic." target="_blank" rel="noopener noreferrer">Book a Free Trial</a><a class="btn secondary" href="#services">Explore Services / Products </a></div>
 <div class="hero-reassurance"><div class="reassurance"><i>✓</i> Hearing assessment</div><div class="reassurance"><i>✓</i> Hearing-aid guidance</div><div class="reassurance"><i>✓</i> Specialist ear care</div></div>
 <p class="hero-note">You do not have to decide on a hearing aid before understanding your hearing.</p></div>
 
@@ -939,7 +1366,7 @@ document.querySelectorAll('.faq-item button').forEach(b=>b.onclick=()=>{const it
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
 const heroSlides=document.querySelectorAll('.hero-heading-slide'),heroDots=document.querySelectorAll('.hero-heading-dot');let heroIndex=0,heroTimer;
 function showHeroSlide(i){heroIndex=i;heroSlides.forEach((s,n)=>s.classList.toggle('active',n===i));heroDots.forEach((d,n)=>d.classList.toggle('active',n===i))}
-function startHeroRotation(){clearInterval(heroTimer);heroTimer=setInterval(()=>showHeroSlide((heroIndex+1)%heroSlides.length),4500)}
+function startHeroRotation(){clearInterval(heroTimer);heroTimer=setInterval(()=>showHeroSlide((heroIndex+1)%heroSlides.length), 4000)}
 heroDots.forEach(d=>d.addEventListener('click',()=>{showHeroSlide(Number(d.dataset.slide));startHeroRotation()}));startHeroRotation();
 
 
@@ -978,8 +1405,8 @@ if(reviewTrack && reviewNext && reviewPrev){
   };
   reviewNext.addEventListener('click',()=>{reviewIndex++;if(reviewIndex>=reviewCards.length-reviewVisible()+1)reviewIndex=0;reviewUpdate()});
   reviewPrev.addEventListener('click',()=>{reviewIndex--;if(reviewIndex<0)reviewIndex=Math.max(0,reviewCards.length-reviewVisible());reviewUpdate()});
-  let reviewTimer=setInterval(()=>{reviewIndex++;if(reviewIndex>=reviewCards.length-reviewVisible()+1)reviewIndex=0;reviewUpdate()},5000);
-  [reviewNext,reviewPrev].forEach(b=>b.addEventListener('click',()=>{clearInterval(reviewTimer);reviewTimer=setInterval(()=>{reviewIndex++;if(reviewIndex>=reviewCards.length-reviewVisible()+1)reviewIndex=0;reviewUpdate()},5000)}));
+  let reviewTimer=setInterval(()=>{reviewIndex++;if(reviewIndex>=reviewCards.length-reviewVisible()+1)reviewIndex=0;reviewUpdate()}, 4000);
+  [reviewNext,reviewPrev].forEach(b=>b.addEventListener('click',()=>{clearInterval(reviewTimer);reviewTimer=setInterval(()=>{reviewIndex++;if(reviewIndex>=reviewCards.length-reviewVisible()+1)reviewIndex=0;reviewUpdate()}, 4000)}));
   window.addEventListener('resize',reviewUpdate);
   reviewUpdate();
 }
