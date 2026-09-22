@@ -1301,6 +1301,894 @@ button,.btn,.cta,.form-submit{font-size:14px}
 }
 </style>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="brand-marquee-size-fix">
+/* Compact brand marquee cards with larger, clearer logos */
+.brand-marquee{
+  width:100%;
+  overflow:hidden;
+}
+.brand-marquee-track{
+  display:flex;
+  align-items:center;
+  width:max-content;
+  gap:0;
+  animation:brandContinuousLeft 27s linear infinite;
+  will-change:transform;
+}
+.brand-marquee-item{
+  width:150px !important;
+  min-width:150px !important;
+  flex:0 0 150px !important;
+  height:74px !important;
+  padding:5px 8px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  box-sizing:border-box !important;
+}
+.brand-marquee-item img{
+  display:block !important;
+  width:138px !important;
+  max-width:100% !important;
+  height:58px !important;
+  max-height:58px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+}
+@keyframes brandContinuousLeft{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+.brand-marquee:hover .brand-marquee-track{
+  animation-play-state:paused;
+}
+
+@media(max-width:900px){
+  .brand-marquee-item{
+    width:145px !important;
+    min-width:145px !important;
+    flex-basis:145px !important;
+    height:70px !important;
+  }
+  .brand-marquee-item img{
+    width:134px !important;
+    height:56px !important;
+    max-height:56px !important;
+  }
+}
+@media(max-width:760px){
+  .brand-marquee-track{animation-duration:22s}
+  .brand-marquee-item{
+    width:145px !important;
+    min-width:145px !important;
+    flex-basis:145px !important;
+    height:67px !important;
+    padding:4px 7px !important;
+  }
+  .brand-marquee-item img{
+    width:134px !important;
+    height:53px !important;
+    max-height:53px !important;
+  }
+}
+@media(max-width:420px){
+  .brand-marquee-item{
+    width:140px !important;
+    min-width:140px !important;
+    flex-basis:140px !important;
+  }
+  .brand-marquee-item img{
+    width:130px !important;
+    height:50px !important;
+    max-height:50px !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .brand-marquee-track{animation:none !important}
+}
+</style>
+
+
+<style id="brand-marquee-four-items-fix">
+/* Brand marquee: compact cards, edge-to-edge logos, exactly 4 visible on desktop */
+.brand-marquee{
+  width:100%;
+  overflow:hidden;
+}
+.brand-marquee-track{
+  display:flex;
+  align-items:center;
+  width:max-content;
+  gap:0 !important;
+  animation:brandContinuousLeft 27s linear infinite;
+  will-change:transform;
+}
+.brand-marquee-item{
+  width:calc((100vw - 0px) / 4) !important;
+  max-width:170px !important;
+  min-width:0 !important;
+  flex:0 0 calc((100vw - 0px) / 4) !important;
+  height:74px !important;
+  padding:0 !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.brand-marquee-item img{
+  display:block !important;
+  width:100% !important;
+  max-width:100% !important;
+  height:62px !important;
+  max-height:62px !important;
+  margin:0 !important;
+  padding:0 !important;
+  object-fit:contain !important;
+  object-position:center !important;
+}
+@keyframes brandContinuousLeft{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(-50%,0,0)}
+}
+.brand-marquee:hover .brand-marquee-track{
+  animation-play-state:paused;
+}
+
+/* Keep 4 complete items visible inside the actual section container */
+@media(min-width:901px){
+  .brand-marquee-item{
+    width:25% !important;
+    flex-basis:25% !important;
+    max-width:none !important;
+  }
+}
+
+/* Tablet: 4 compact items still visible */
+@media(min-width:601px) and (max-width:900px){
+  .brand-marquee-item{
+    width:25vw !important;
+    flex-basis:25vw !important;
+    max-width:none !important;
+    height:68px !important;
+  }
+  .brand-marquee-item img{
+    height:55px !important;
+    max-height:55px !important;
+  }
+}
+
+/* Mobile: retain readable logos without forcing tiny 4-across cards */
+@media(max-width:600px){
+  .brand-marquee-track{animation-duration:22s}
+  .brand-marquee-item{
+    width:150px !important;
+    min-width:150px !important;
+    flex-basis:150px !important;
+    height:65px !important;
+  }
+  .brand-marquee-item img{
+    width:100% !important;
+    height:52px !important;
+    max-height:52px !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .brand-marquee-track{animation:none !important}
+}
+</style>
+
+
+
+
+<style>@media(max-width:760px){.hero h1{font-size:50px!important;line-height:1.06!important;letter-spacing:-.045em!important}}</style>
+<style>
+/* Final hero alignment correction */
+.hero-grid{align-items:center!important}
+.hero-grid>.reveal:first-child{width:min(100%,620px)!important}
+.hero-content{width:100%!important;max-width:620px!important}
+.hero-heading-bg{padding:0!important;border-radius:22px!important}
+.hero-heading-slide h1{font-size:clamp(34px,4.1vw,48px)!important;line-height:1.08!important;letter-spacing:-.035em!important;max-width:500px!important;margin:0!important}
+.hero-heading-slide h1 span{font-size:.78em!important;letter-spacing:-.02em!important}
+.hero-heading-slide .hero-lead{max-width:560px!important;font-size:13px!important;line-height:1.55!important}
+.hero-offer-badges{max-width:620px!important}
+@media(max-width:900px){.hero-grid{gap:18px!important}.hero-grid>.reveal:first-child{width:100%!important}.hero-content{max-width:none!important}.hero-heading-slide h1{font-size:clamp(31px,8.5vw,43px)!important;max-width:100%!important;line-height:1.08!important}.hero-heading-slide h1 span{font-size:.82em!important}.hero-heading-slide .hero-lead{font-size:12.5px!important}.hero-offer-badges{max-width:none!important}.hero-visual{height:320px!important;min-height:320px!important;margin-top:2px!important}}
+@media(max-width:600px){.hero{padding:28px 0 28px!important}.hero-heading-slide h1{font-size:clamp(29px,8.8vw,37px)!important}.hero-heading-slide h1 span{font-size:.84em!important}.hero-heading-slide .hero-lead{font-size:12px!important;line-height:1.5!important}.hero-offer-badges{margin-top:12px!important}.hero-offer-badges div{padding:8px 10px!important}.hero-visual{height:285px!important;min-height:285px!important;margin-top:0!important}.ear-scene{inset:12px 8px 48px!important}.ear-svg{width:min(68%,275px)!important}.card-top{top:7px!important}.card-bottom{bottom:40px!important}}
+@media(max-width:380px){.hero-heading-slide h1{font-size:28px!important}.hero-heading-slide h1 span{font-size:.85em!important}.hero-visual{height:265px!important;min-height:265px!important}}
+
+/* =========================================================
+   PRODUCT SHOWCASE — selected hearing-aid models
+   ========================================================= */
+.product-showcase{
+  position:relative;
+  padding:82px 0 86px;
+  background:linear-gradient(180deg,#f7fbfc 0%,#ffffff 48%,#f8fcfd 100%);
+  border-top:1px solid #e1ecef;
+  overflow:hidden;
+}
+.product-showcase:before{
+  content:"";
+  position:absolute;
+  width:620px;
+  height:620px;
+  border-radius:50%;
+  right:-390px;
+  top:-360px;
+  border:1px solid rgba(8,127,192,.08);
+  pointer-events:none;
+}
+.product-showcase-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:35px;
+  margin-bottom:30px;
+  position:relative;
+  z-index:1;
+}
+.product-copy{max-width:760px}
+.product-copy h2{
+  margin:7px 0 12px;
+  color:var(--navy)!important;
+  font-size:clamp(31px,3.7vw,48px);
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+.product-copy p{
+  max-width:720px;
+  margin:0;
+  color:#627880;
+  font-size:14px;
+  line-height:1.72;
+}
+.product-filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:22px;
+  position:relative;
+  z-index:3;
+}
+.product-filter{
+  appearance:none;
+  border:1px solid #d8e7eb;
+  background:#fff;
+  color:#45616d;
+  border-radius:999px;
+  padding:9px 15px;
+  min-height:38px;
+  font:800 11px "DM Sans",sans-serif;
+  cursor:pointer;
+  transition:.2s ease;
+}
+.product-filter:hover{
+  border-color:#9ed2d5;
+  transform:translateY(-1px);
+}
+.product-filter.active{
+  color:#fff;
+  border-color:var(--navy);
+  background:linear-gradient(135deg,var(--navy),#0a668a);
+  box-shadow:0 8px 20px rgba(6,59,88,.15);
+}
+.product-slider-shell{
+  display:grid;
+  grid-template-columns:45px minmax(0,1fr) 45px;
+  align-items:center;
+  gap:10px;
+  position:relative;
+}
+.product-viewport{
+  min-width:0;
+  overflow:hidden;
+  padding:5px 2px 12px;
+}
+.product-track{
+  display:flex;
+  gap:16px;
+  will-change:transform;
+  transition:transform .55s cubic-bezier(.2,.75,.25,1);
+}
+.product-card{
+  flex:0 0 calc((100% - 32px)/3);
+  min-width:0;
+  border:1px solid #dce8eb;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 12px 32px rgba(20,60,80,.07);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.product-card:hover{
+  transform:translateY(-4px);
+  border-color:#c3dfe4;
+  box-shadow:0 18px 38px rgba(20,60,80,.11);
+}
+.product-image-wrap{
+  height:235px;
+  margin:10px 10px 0;
+  border-radius:17px;
+  background:linear-gradient(145deg,#f7fbfc,#eef7f8);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.product-image-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  padding:12px;
+}
+.product-info{
+  padding:19px 20px 20px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.product-brand{
+  display:inline-flex;
+  align-items:center;
+  align-self:flex-start;
+  padding:5px 9px;
+  border-radius:999px;
+  background:#eaf7f7;
+  color:#087c82;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+.product-info h3{
+  margin:9px 0 7px;
+  color:var(--navy);
+  font-size:20px;
+  line-height:1.18;
+  letter-spacing:-.02em;
+}
+.product-type{
+  color:#66808a;
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.product-info p{
+  color:#60757d;
+  font-size:13px;
+  line-height:1.6;
+  margin:0 0 13px;
+}
+.product-feature-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:auto;
+}
+.product-feature{
+  padding:6px 8px;
+  border:1px solid #e1ebed;
+  border-radius:8px;
+  color:#365966;
+  background:#fbfdfd;
+  font-size:10px;
+  font-weight:800;
+}
+.product-arrow{
+  width:45px;
+  height:45px;
+  border:1px solid #d8e7eb;
+  background:#fff;
+  color:var(--navy);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:29px;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(20,60,80,.07);
+  transition:.2s ease;
+  position:relative;
+  z-index:2;
+}
+.product-arrow:hover{
+  transform:translateY(-2px);
+  border-color:#9ed2d5;
+  box-shadow:0 12px 24px rgba(20,60,80,.11);
+}
+.product-arrow:disabled{
+  opacity:.35;
+  cursor:default;
+  transform:none;
+}
+.product-slider-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-top:9px;
+}
+.product-dots{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-height:8px;
+}
+.product-dots button{
+  width:7px;
+  height:7px;
+  border:0;
+  padding:0;
+  border-radius:50%;
+  background:#c9dce1;
+  cursor:pointer;
+  transition:.25s ease;
+}
+.product-dots button.active{
+  width:23px;
+  border-radius:5px;
+  background:var(--teal);
+}
+.product-disclaimer{
+  color:#82949a;
+  font-size:10px;
+  line-height:1.5;
+  text-align:right;
+}
+@media(max-width:1050px){
+  .product-card{flex-basis:calc((100% - 16px)/2)}
+}
+@media(max-width:760px){
+  .product-showcase{padding:64px 0 68px}
+  .product-showcase-head{display:block;margin-bottom:24px}
+  .product-copy h2{font-size:30px}
+  .product-copy p{font-size:14px}
+  .product-note{margin-top:17px;display:inline-block}
+  .product-filters{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    padding:2px 1px 8px;
+    margin-right:-14px;
+    scrollbar-width:none;
+  }
+  .product-filters::-webkit-scrollbar{display:none}
+  .product-filter{flex:0 0 auto}
+  .product-slider-shell{grid-template-columns:38px minmax(0,1fr) 38px;gap:6px}
+  .product-card{flex-basis:100%;border-radius:19px}
+  .product-image-wrap{height:245px;margin:8px 8px 0}
+  .product-info{padding:18px 18px 19px}
+  .product-info h3{font-size:20px}
+  .product-info p{font-size:13px}
+  .product-arrow{width:38px;height:38px;font-size:25px}
+  .product-slider-footer{display:block;margin-top:7px}
+  .product-dots{justify-content:center;margin-bottom:11px}
+  .product-disclaimer{text-align:center;display:block}
+}
+@media(max-width:420px){
+  .product-image-wrap{height:220px}
+  .product-info h3{font-size:19px}
+}
+@media(prefers-reduced-motion:reduce){
+  .product-track{transition:none}
+}
+
+</style>
+
+
+
+
+<style id="hearing-solutions-final-design">
+.hearing-solutions{
+  position:relative;
+  padding:76px 0 72px;
+  background:#f7fbfc;
+  color:#173744;
+}
+.hearing-solutions__header{
+  max-width:780px;
+  margin:0 auto 34px;
+  text-align:center;
+}
+.hearing-solutions__eyebrow{
+  color:#087fc0;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.13em;
+  line-height:1.2;
+}
+.hearing-solutions__header h2{
+  margin:9px 0 11px;
+  color:#063b58;
+  font-family:Manrope,"Plus Jakarta Sans",Arial,sans-serif;
+  font-size:clamp(32px,3.7vw,48px);
+  line-height:1.07;
+  letter-spacing:-.035em;
+}
+.hearing-solutions__header p{
+  max-width:720px;
+  margin:0 auto;
+  color:#62777f;
+  font-size:14px;
+  line-height:1.72;
+}
+.hearing-solutions__grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.hearing-solution-card{
+  position:relative;
+  display:flex;
+  min-width:0;
+  flex-direction:column;
+  overflow:hidden;
+  border:1px solid #d9e7ea;
+  border-radius:19px;
+  background:#fff;
+  box-shadow:0 8px 26px rgba(6,59,88,.055);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.hearing-solution-card:hover{
+  transform:translateY(-4px);
+  border-color:#bcd9df;
+  box-shadow:0 17px 38px rgba(6,59,88,.105);
+}
+.hearing-solution-card--featured{
+  border:1.5px solid #75bdc5;
+  box-shadow:0 12px 34px rgba(16,168,162,.11);
+}
+.hearing-solution-card__featured-badge{
+  position:absolute;
+  top:13px;
+  right:13px;
+  z-index:2;
+  padding:6px 9px;
+  border-radius:999px;
+  background:#10a8a2;
+  color:#fff;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.07em;
+}
+.hearing-solution-card__top{
+  display:flex;
+  min-height:118px;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:18px 19px;
+  background:linear-gradient(135deg,#edf8fa,#f9fcfd);
+}
+.hearing-solution-card--featured .hearing-solution-card__top{
+  background:linear-gradient(135deg,#e6f6f6,#f8fcfd);
+}
+.hearing-solution-card__icon{
+  display:grid;
+  width:65px;
+  height:65px;
+  flex:0 0 65px;
+  place-items:center;
+  border:1px solid #cce2e6;
+  border-radius:17px;
+  background:#fff;
+  color:#087fc0;
+}
+.hearing-solution-card__icon svg{
+  width:42px;
+  height:42px;
+}
+.hearing-solution-card__type{
+  align-self:flex-start;
+  margin-top:3px;
+  padding:6px 8px;
+  border-radius:7px;
+  background:#fff;
+  color:#063b58;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.hearing-solution-card__body{
+  display:flex;
+  flex:1;
+  flex-direction:column;
+  padding:20px 20px 19px;
+}
+.hearing-solution-card__label{
+  margin-bottom:6px;
+  color:#087fc0;
+  font-size:9px;
+  font-weight:900;
+  letter-spacing:.09em;
+}
+.hearing-solution-card__body h3{
+  margin:0 0 8px;
+  color:#063b58;
+  font-family:Manrope,"Plus Jakarta Sans",Arial,sans-serif;
+  font-size:22px;
+  line-height:1.13;
+}
+.hearing-solution-card__body > p{
+  margin:0 0 15px;
+  color:#61757d;
+  font-size:12px;
+  line-height:1.6;
+}
+.hearing-solution-card__features{
+  display:grid;
+  gap:8px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.hearing-solution-card__features li{
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  padding:7px 9px;
+  border:1px solid #e2edef;
+  border-radius:8px;
+  background:#f9fbfc;
+  color:#4e646c;
+  font-size:10px;
+  line-height:1.35;
+}
+.hearing-solution-card__features li span{
+  color:#10a8a2;
+  font-size:11px;
+  font-weight:900;
+}
+.hearing-solution-card__target{
+  margin-top:14px;
+  padding:9px 10px;
+  border-radius:8px;
+  background:#eef8f8;
+  color:#567079;
+  font-size:10px;
+  line-height:1.4;
+}
+.hearing-solution-card__target strong{
+  color:#063b58;
+}
+.hearing-solutions__button{
+  display:inline-flex;
+  min-height:46px;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  margin-top:17px;
+  padding:10px 13px;
+  border-radius:9px;
+  font-size:10px;
+  font-weight:900;
+  line-height:1.2;
+  text-align:center;
+  text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.hearing-solutions__button:hover{
+  transform:translateY(-1px);
+}
+.hearing-solutions__button--outline{
+  border:1px solid #cbdfe3;
+  background:#fff;
+  color:#063b58 !important;
+}
+.hearing-solutions__button--outline:hover{
+  background:#f4fafb;
+}
+.hearing-solutions__button--primary{
+  border:1px solid #087fc0;
+  background:#087fc0;
+  color:#fff !important;
+  box-shadow:0 7px 17px rgba(8,127,192,.16);
+}
+.hearing-solutions__button--primary:hover{
+  box-shadow:0 10px 23px rgba(8,127,192,.22);
+}
+.hearing-solutions__brand-strip{
+  display:grid;
+  grid-template-columns:1.05fr 1.45fr auto;
+  gap:25px;
+  align-items:center;
+  margin-top:30px;
+  padding:22px 24px;
+  border:1px solid #d8e6e9;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 7px 23px rgba(6,59,88,.04);
+}
+.hearing-solutions__brand-copy h3{
+  margin:6px 0 6px;
+  color:#063b58;
+  font-size:18px;
+  line-height:1.2;
+}
+.hearing-solutions__brand-copy p{
+  margin:0;
+  color:#6a7c82;
+  font-size:10px;
+  line-height:1.55;
+}
+.hearing-solutions__brand-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:7px;
+}
+.hearing-solutions__brand-list span{
+  display:flex;
+  min-height:42px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #dce8eb;
+  border-radius:8px;
+  background:#fbfdfe;
+  color:#35515d;
+  font-size:11px;
+  font-weight:900;
+}
+.hearing-solutions__warranty{
+  display:flex;
+  min-width:145px;
+  align-items:flex-start;
+  gap:8px;
+  padding:10px 11px;
+  border:1px solid #d6ebe8;
+  border-radius:9px;
+  background:#f2faf9;
+}
+.hearing-solutions__warranty > span{
+  color:#10a8a2;
+  font-size:16px;
+  font-weight:900;
+  line-height:1;
+}
+.hearing-solutions__warranty p{
+  margin:0;
+  color:#60777d;
+  font-size:8.5px;
+  line-height:1.45;
+}
+.hearing-solutions__warranty strong{
+  color:#063b58;
+}
+.hearing-solutions__cta-panel{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  margin-top:18px;
+  padding:24px 26px;
+  border-radius:16px;
+  background:#063b58;
+}
+.hearing-solutions__cta-panel .hearing-solutions__eyebrow{
+  color:#8fd5d2;
+}
+.hearing-solutions__cta-panel h3{
+  margin:6px 0 5px;
+  color:#fff;
+  font-size:20px;
+  line-height:1.2;
+}
+.hearing-solutions__cta-panel p{
+  margin:0;
+  color:#c4d7dd;
+  font-size:10.5px;
+  line-height:1.5;
+}
+.hearing-solutions__button--panel{
+  flex:0 0 auto;
+  min-height:48px;
+  background:#fff;
+  color:#063b58 !important;
+}
+.hearing-solutions__note{
+  max-width:900px;
+  margin:15px auto 0;
+  color:#7b8e94;
+  font-size:8.5px;
+  line-height:1.5;
+  text-align:center;
+}
+@media(max-width:1024px){
+  .hearing-solutions__brand-strip{
+    grid-template-columns:1fr;
+  }
+  .hearing-solutions__brand-list{
+    grid-template-columns:repeat(6,1fr);
+  }
+  .hearing-solutions__warranty{
+    width:max-content;
+  }
+}
+@media(max-width:900px){
+  .hearing-solutions__grid{
+    grid-template-columns:1fr;
+    max-width:650px;
+    margin:0 auto;
+  }
+  .hearing-solutions__brand-list{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+@media(max-width:767px){
+  .hearing-solutions{
+    padding:58px 0 55px;
+  }
+  .hearing-solutions__header{
+    margin-bottom:24px;
+    text-align:left;
+  }
+  .hearing-solutions__header h2{
+    font-size:31px;
+  }
+  .hearing-solutions__header p{
+    font-size:13px;
+  }
+  .hearing-solution-card__top{
+    min-height:108px;
+  }
+  .hearing-solution-card__body{
+    padding:18px 16px 17px;
+  }
+  .hearing-solutions__button{
+    min-height:48px;
+  }
+  .hearing-solutions__brand-strip{
+    padding:19px;
+  }
+  .hearing-solutions__brand-list{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .hearing-solutions__warranty{
+    width:auto;
+  }
+  .hearing-solutions__cta-panel{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:20px 18px;
+  }
+  .hearing-solutions__button--panel{
+    width:100%;
+  }
+}
+</style>
+
+<style id="product-showcase-v2-css">
+/* =========================================================
+   PRODUCT SHOWCASE V2 — integrated with the clinic journey
+   ========================================================= */
+.product-showcase-v2{padding:86px 0 82px;background:linear-gradient(180deg,#f4fafc 0%,#ffffff 44%,#f7fbfc 100%);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.product-showcase-v2:before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;right:-360px;top:-340px;border:1px solid rgba(8,127,192,.08);pointer-events:none}
+.product-showcase-v2:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;left:-260px;bottom:-210px;background:radial-gradient(circle,rgba(16,168,162,.08),transparent 68%);pointer-events:none}
+.product-v2-intro{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:42px;align-items:end;margin-bottom:34px;position:relative;z-index:1}
+.product-v2-copy{max-width:760px}.product-v2-copy h2{margin:7px 0 13px;color:var(--navy)!important;font-size:clamp(34px,4vw,51px);line-height:1.06;letter-spacing:-.045em}.product-v2-copy h2 em{font-style:normal;color:var(--teal)}.product-v2-copy p{max-width:720px;margin:0;color:#627880;font-size:15px;line-height:1.72}
+.product-v2-note{padding:17px 18px;border:1px solid #d8e8eb;border-radius:17px;background:rgba(255,255,255,.82);box-shadow:0 10px 28px rgba(6,59,88,.05)}.product-v2-note span{display:block;color:var(--blue);font-size:9px;font-weight:900;letter-spacing:.13em}.product-v2-note strong{display:block;margin-top:6px;color:var(--navy);font:800 15px Manrope}.product-v2-note small{display:block;margin-top:5px;color:#78909a;font-size:10px;line-height:1.45}
+.product-v2-path{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr;align-items:center;padding:17px 20px;margin-bottom:34px;border:1px solid #dce9ec;border-radius:18px;background:#fff;box-shadow:0 8px 25px rgba(6,59,88,.045);position:relative;z-index:1}.product-v2-path>div{min-width:0}.product-v2-path span{display:block;color:var(--teal);font-size:9px;font-weight:900;letter-spacing:.1em}.product-v2-path b{display:block;margin-top:3px;color:var(--navy);font-size:11px}.product-v2-path small{display:block;margin-top:2px;color:#7a8e96;font-size:9px}.product-v2-path i{height:1px;background:#d8e7eb;position:relative}.product-v2-path i:after{content:"›";position:absolute;right:-2px;top:-9px;color:#9bb2ba;font-style:normal;font-size:15px}
+.product-v2-toolbar{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:16px;position:relative;z-index:5}.product-v2-label{display:block;margin-bottom:8px;color:#78909a;font-size:9px;font-weight:900;letter-spacing:.13em}.product-v2-filters{margin:0!important}.product-v2-filters .product-filter{min-height:37px;padding:8px 14px;font-size:11px}.product-v2-result{flex:0 0 auto;color:#607780;font-size:10px;font-weight:800;padding-bottom:10px}
+.product-slider-v2{position:relative;z-index:1}.product-viewport-v2{padding:5px 2px 14px}.product-track-v2{gap:17px}.product-track-v2 .product-card{flex-basis:calc((100% - 34px)/3);min-height:100%;border-radius:21px;box-shadow:0 12px 30px rgba(20,60,80,.065)}.product-track-v2 .product-image-wrap{height:230px;margin:9px 9px 0;border-radius:16px;background:radial-gradient(circle at 50% 45%,#fff 0,#f1f8f9 63%,#e8f3f5 100%);position:relative}.product-track-v2 .product-image-wrap:after{content:"HEARING AID";position:absolute;left:12px;bottom:10px;padding:4px 7px;border-radius:999px;background:rgba(255,255,255,.82);color:#78909a;font-size:7px;font-weight:900;letter-spacing:.1em}.product-track-v2 .product-image-wrap img{padding:17px}.product-track-v2 .product-info{padding:18px 19px 19px}.product-track-v2 .product-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.product-track-v2 .product-brand{padding:5px 9px;font-size:9px}.product-track-v2 .product-ideal{max-width:145px;text-align:right;color:#7b8e95;font-size:8px;line-height:1.35}.product-track-v2 .product-ideal b{color:#4c6975}.product-track-v2 .product-info h3{font-size:19px;margin:10px 0 5px}.product-track-v2 .product-type{font-size:10px;margin-bottom:9px;color:#52717c}.product-track-v2 .product-description{font-size:12px;line-height:1.62;min-height:58px;margin-bottom:12px}.product-track-v2 .product-feature-list{display:grid;gap:6px;list-style:none;margin:0 0 15px;padding:0}.product-track-v2 .product-feature-list li{font-size:9px;line-height:1.4;color:#506c76}.product-track-v2 .product-feature-list li span{display:inline-grid;place-items:center;width:17px;height:17px;margin-right:5px;border-radius:50%;background:#e7f6f4;color:var(--teal);font-weight:900}.product-track-v2 .product-feature-list strong{color:var(--navy);font-weight:800}.product-track-v2 .product-card-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:auto}.product-track-v2 .product-cta{display:flex;align-items:center;justify-content:center;gap:5px;min-height:38px;padding:8px 9px;border-radius:9px;font-size:9px;font-weight:900;text-align:center}.product-track-v2 .product-cta-primary{background:linear-gradient(135deg,var(--navy),#0a668a);color:#fff}.product-track-v2 .product-cta-secondary{border:1px solid #d7e6e9;background:#fff;color:var(--navy);cursor:pointer}.product-track-v2 .product-cta:hover{transform:translateY(-1px)}
+.product-arrow-v2{width:43px;height:43px;font-size:29px}.product-footer-v2{margin-top:5px}.product-footer-v2 .product-disclaimer{font-size:9px}.product-v2-bottom{margin-top:27px;display:grid;grid-template-columns:.8fr 1.2fr;gap:18px;align-items:stretch;position:relative;z-index:1}.product-v2-brandline{padding:18px 20px;border:1px solid #dce8eb;border-radius:16px;background:#fff}.product-v2-brandline span{display:block;color:#80949c;font-size:8px;font-weight:900;letter-spacing:.12em}.product-v2-brandline strong{display:block;margin-top:7px;color:var(--navy);font-size:11px;line-height:1.55}.product-v2-cta{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;border-radius:16px;background:var(--navy);box-shadow:0 14px 32px rgba(6,59,88,.13)}.product-v2-cta b{display:block;color:#fff;font-size:12px}.product-v2-cta span{display:block;margin-top:4px;color:#bcd6df;font-size:10px;line-height:1.45}.product-v2-cta .btn{flex:0 0 auto;padding:11px 14px;font-size:10px;background:#fff;color:var(--navy);box-shadow:none}.product-v2-cta .btn:hover{background:#f0fbfc}
+.product-compare-modal[hidden]{display:none}.product-compare-modal{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:20px}.product-compare-backdrop{position:absolute;inset:0;background:rgba(4,30,43,.62);backdrop-filter:blur(7px)}.product-compare-dialog{position:relative;z-index:2;width:min(560px,100%);max-height:90vh;overflow:auto;padding:32px;border-radius:24px;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.25)}.product-compare-close{position:absolute;right:15px;top:13px;width:34px;height:34px;border:0;border-radius:50%;background:#eef6f7;color:var(--navy);font-size:22px;cursor:pointer}.product-compare-dialog h2{font-size:32px;margin:7px 0}.product-compare-dialog>div{padding-right:4px}.product-compare-type{font-size:11px!important;font-weight:800;color:var(--blue)!important;margin-bottom:8px}.product-compare-dialog p{font-size:13px;line-height:1.65}.product-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:20px 0}.product-compare-grid div{padding:13px;border:1px solid var(--line);border-radius:12px;background:#fbfeff}.product-compare-grid span{display:block;color:#8a9ca3;font-size:8px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}.product-compare-grid strong{display:block;margin-top:5px;color:var(--navy);font-size:11px}.product-compare-cta{display:flex;align-items:center;justify-content:center;min-height:45px;padding:12px 15px;border-radius:11px;background:linear-gradient(135deg,var(--navy),#0a668a);color:#fff;font-size:11px;font-weight:900}
+@media(max-width:1050px){.product-v2-intro{grid-template-columns:1fr 250px}.product-track-v2 .product-card{flex-basis:calc((100% - 17px)/2)}}
+@media(max-width:760px){.product-showcase-v2{padding:62px 0 66px}.product-v2-intro{grid-template-columns:1fr;gap:18px;margin-bottom:26px}.product-v2-copy h2{font-size:31px}.product-v2-copy p{font-size:14px}.product-v2-note{max-width:360px}.product-v2-path{grid-template-columns:1fr 1fr;gap:17px 14px;padding:17px}.product-v2-path i{display:none}.product-v2-toolbar{display:block;margin-bottom:13px}.product-v2-label{margin-bottom:7px}.product-v2-filters{flex-wrap:nowrap!important;overflow-x:auto!important;padding-bottom:7px!important;margin-right:-14px!important;scrollbar-width:none}.product-v2-filters::-webkit-scrollbar{display:none}.product-v2-filters .product-filter{flex:0 0 auto}.product-v2-result{display:block;padding:7px 0 0}.product-slider-v2{grid-template-columns:36px minmax(0,1fr) 36px;gap:5px}.product-arrow-v2{width:36px;height:36px;font-size:25px}.product-track-v2 .product-card{flex-basis:100%;border-radius:19px}.product-track-v2 .product-image-wrap{height:245px}.product-track-v2 .product-info{padding:18px}.product-v2-bottom{grid-template-columns:1fr;gap:12px}.product-v2-cta{display:block}.product-v2-cta .btn{margin-top:13px;width:100%}.product-compare-dialog{padding:25px 20px}.product-compare-grid{grid-template-columns:1fr}.product-footer-v2{display:block}.product-footer-v2 .product-dots{justify-content:center;margin-bottom:10px}.product-footer-v2 .product-disclaimer{text-align:center}}
+@media(max-width:420px){.product-v2-path{grid-template-columns:1fr}.product-v2-path>div{padding-bottom:2px}.product-track-v2 .product-image-wrap{height:220px}.product-track-v2 .product-info h3{font-size:18px}.product-track-v2 .product-card-actions{grid-template-columns:1fr}.product-v2-cta{padding:17px}.product-v2-cta span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.product-track-v2{transition:none!important}}
+</style>
 </head>
 <body>
 <div class="notice"><div class="container notice-inner"><div class="mobile-top-info"><span class="mobile-hours">10:00 AM – 6:00 PM</span><span class="mobile-closed">Closed Monday</span></div><a class="mobile-top-cta" href="https://wa.me/918583014007?text=Hello%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20Chanditala%20Hearing%20Clinic.">Book Appointment →</a></div></div>
@@ -1424,56 +2312,84 @@ button,.btn,.cta,.form-submit{font-size:14px}
 
 
 
-<section class="brands-section" id="hearing-aids" aria-label="Hearing aid brands and options">
+
+<section class="product-showcase product-showcase-v2" id="hearing-aids" aria-label="Hearing aid products and hearing solutions">
   <div class="container">
-    <div class="brands-heading">
-      <span class="eyebrow">HEARING AID SOLUTIONS</span>
-      <h2>Find the right hearing aid for your lifestyle.</h2>
-      <p>Choose from leading hearing aid brands and different styles. We help you compare suitable options, arrange fitting and guide you through your trial.</p>
+    <div class="product-v2-intro reveal">
+      <div class="product-v2-copy">
+        <span class="eyebrow">HEARING AIDS &amp; TECHNOLOGY</span>
+        <h2>Find the right hearing aid for <em>your life.</em></h2>
+        <p>Choosing a hearing aid is not only about technology. We look at your hearing assessment, listening needs, comfort and everyday routine before helping you explore suitable options.</p>
+      </div>
+      <div class="product-v2-note">
+        <span>OUR APPROACH</span>
+        <strong>Test → Discuss → Trial → Fit</strong>
+        <small>Your hearing profile guides the choice.</small>
+      </div>
     </div>
 
-    <div class="brands-marquee-area">
-      <div class="brands-mini-label">Leading brands available</div>
-      <div class="brand-marquee" aria-label="Hearing aid brands">
-        <div class="brand-marquee-track">
-          <div class="brand-marquee-item"><img src="https://media.consumeraffairs.com/files/logos/phonak-hearing-aids_logo_1991.jpg" alt="Phonak logo"></div>
-          <div class="brand-marquee-item"><img src="https://advancedhearingdocs.com/wp-content/uploads/2024/06/Signia.png" alt="Signia logo"></div>
-          <div class="brand-marquee-item"><img src="https://img.favpng.com/5/3/0/hearing-aid-logo-widex-brand-product-png-favpng-DAv92TKpkz4kZX1jjt2BgYR92.jpg" alt="Widex logo"></div>
-          <div class="brand-marquee-item"><img src="https://seeklogo.com/images/S/starkey-logo-5DD0F56C64-seeklogo.com.png" alt="Starkey logo"></div>
-          <div class="brand-marquee-item"><img src="https://www.thcp.co.uk/app/uploads/2022/12/oticon-logo-768x768.jpg" alt="Oticon logo"></div>
-          <div class="brand-marquee-item"><img src="https://www.thcp.co.uk/app/uploads/2022/12/resound-logo.jpg" alt="ReSound logo"></div>
-          <div class="brand-marquee-item"><img src="https://cdn.freebiesupply.com/logos/thumbs/2x/bernafon-2-logo.png" alt="Bernafon logo"></div>
-          <div class="brand-marquee-item"><img src="https://media.consumeraffairs.com/files/logos/phonak-hearing-aids_logo_1991.jpg" alt="Phonak logo"></div>
-          <div class="brand-marquee-item"><img src="https://advancedhearingdocs.com/wp-content/uploads/2024/06/Signia.png" alt="Signia logo"></div>
-          <div class="brand-marquee-item"><img src="https://img.favpng.com/5/3/0/hearing-aid-logo-widex-brand-product-png-favpng-DAv92TKpkz4kZX1jjt2BgYR92.jpg" alt="Widex logo"></div>
-          <div class="brand-marquee-item"><img src="https://seeklogo.com/images/S/starkey-logo-5DD0F56C64-seeklogo.com.png" alt="Starkey logo"></div>
-          <div class="brand-marquee-item"><img src="https://www.thcp.co.uk/app/uploads/2022/12/oticon-logo-768x768.jpg" alt="Oticon logo"></div>
-          <div class="brand-marquee-item"><img src="https://www.thcp.co.uk/app/uploads/2022/12/resound-logo.jpg" alt="ReSound logo"></div>
-          <div class="brand-marquee-item"><img src="https://cdn.freebiesupply.com/logos/thumbs/2x/bernafon-2-logo.png" alt="Bernafon logo"></div>
+    <div class="product-v2-path reveal">
+      <div><span>01</span><b>Hearing assessment</b><small>Understand your hearing profile</small></div>
+      <i></i>
+      <div><span>02</span><b>Shortlist options</b><small>Match style &amp; technology</small></div>
+      <i></i>
+      <div><span>03</span><b>Trial &amp; fitting</b><small>Experience before deciding</small></div>
+      <i></i>
+      <div><span>04</span><b>Follow-up care</b><small>Fine-tuning when needed</small></div>
+    </div>
+
+    <div class="product-v2-toolbar reveal">
+      <div>
+        <span class="product-v2-label">EXPLORE BY BRAND</span>
+        <div class="product-filters product-v2-filters" role="tablist" aria-label="Filter hearing aids by brand">
+          <button class="product-filter active" type="button" role="tab" aria-selected="true" data-brand="all">All</button>
+          <button class="product-filter" type="button" role="tab" aria-selected="false" data-brand="Phonak">Phonak</button>
+          <button class="product-filter" type="button" role="tab" aria-selected="false" data-brand="Signia">Signia</button>
+          <button class="product-filter" type="button" role="tab" aria-selected="false" data-brand="Starkey">Starkey</button>
+          <button class="product-filter" type="button" role="tab" aria-selected="false" data-brand="Oticon">Oticon</button>
+          <button class="product-filter" type="button" role="tab" aria-selected="false" data-brand="ReSound">ReSound</button>
+          <button class="product-filter" type="button" role="tab" aria-selected="false" data-brand="Widex">Widex</button>
         </div>
       </div>
+      <span class="product-v2-result" id="productResultCount">12 options</span>
     </div>
 
-    <div class="aid-styles">
-      <div class="aid-style-intro">
-        <span class="eyebrow">HEARING AID STYLES</span>
-        <h3>Options for different needs.</h3>
-        <p>Your hearing assessment, comfort and daily routine help determine the right style.</p>
+    <div class="product-slider-shell product-slider-v2 reveal">
+      <button class="product-arrow product-arrow-v2" id="productPrev" type="button" aria-label="Previous hearing aids">‹</button>
+      <div class="product-viewport product-viewport-v2">
+        <div class="product-track product-track-v2" id="hearingProductGrid"></div>
       </div>
-      <div class="aid-style-list">
-        <span><b>BTE</b><small>Behind-The-Ear</small></span>
-        <span><b>RIC</b><small>Receiver-In-Canal</small></span>
-        <span><b>CIC / IIC</b><small>In-Canal styles</small></span>
-        <span><b>Rechargeable</b><small>Digital hearing aids</small></span>
-      </div>
+      <button class="product-arrow product-arrow-v2" id="productNext" type="button" aria-label="Next hearing aids">›</button>
     </div>
 
-    <div class="accessory-line">
-      <span><b>Accessories &amp; support</b> Genuine batteries, custom ear moulds and compatible accessories available.</span>
+    <div class="product-slider-footer product-footer-v2">
+      <div class="product-dots" id="productDots" aria-label="Hearing aid product slides"></div>
+      <p class="product-disclaimer">Models, colours, features and availability may vary by hearing profile and market.</p>
+    </div>
+
+    <div class="product-v2-bottom reveal">
+      <div class="product-v2-brandline">
+        <span>BRANDS AVAILABLE TO EXPLORE</span>
+        <strong>Phonak · Signia · Starkey · Oticon · ReSound · Widex</strong>
+      </div>
+      <div class="product-v2-cta">
+        <div>
+          <b>Not sure where to start?</b>
+          <span>Start with your hearing assessment — then explore the options that fit you.</span>
+        </div>
+        <a class="btn primary" href="https://wa.me/918583014007?text=Hi%20Chanditala%20Hearing%20Clinic%2C%20I%27d%20like%20to%20book%20a%20hearing%20assessment%20and%20explore%20suitable%20hearing%20aid%20options." target="_blank" rel="noopener noreferrer">Book Hearing Test / Trial <span>→</span></a>
+      </div>
     </div>
   </div>
 </section>
 
+<div class="product-compare-modal" id="productCompareModal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+  <div class="product-compare-backdrop" data-close-compare></div>
+  <div class="product-compare-dialog">
+    <button class="product-compare-close" type="button" data-close-compare aria-label="Close">×</button>
+    <div id="compareContent"></div>
+  </div>
+</div>
 
 
 <section class="reviews-premium" id="reviews">
@@ -1676,21 +2592,304 @@ if(reviewTrack && reviewNext && reviewPrev){
 
 
 
+
+<script>
+(function(){
+  const products = [
+    {
+      brand:"Phonak",
+      name:"Audéo Sphere Infinio",
+      type:"Rechargeable · RIC",
+      description:"AI-powered speech separation for challenging listening environments, with universal connectivity.",
+      features:["Dedicated AI chip","Rechargeable","Bluetooth"],
+      image:"https://www.phonak.com/content/phonak/in/en/hearing-devices/hearing-aids/audeo-sphere/_jcr_content/root/container/hero/image.coreimg.png/1772709179219/ph-pic-audeo-i-sphere-p4-with-easy-guard-infinio-symbol.png",
+      source:"https://www.phonak.com/en-in/hearing-devices/hearing-aids/audeo-sphere"
+    },
+    {
+      brand:"Phonak",
+      name:"Audéo R Infinio",
+      type:"Rechargeable · RIC",
+      description:"An adaptive rechargeable hearing aid with AI technology and universal Bluetooth connectivity.",
+      features:["AI technology","Rechargeable","Universal connectivity"],
+      image:"https://www.phonak.com/content/phonak/in/en/hearing-devices/hearing-aids/audeo-infinio/_jcr_content/root/container/hero/image.coreimg.png/1762534975333/ph-pic-audeo-i-r-p6-with-easy-guard-infinio-symbol.png",
+      source:"https://www.phonak.com/en-in/hearing-devices/hearing-aids/audeo-infinio"
+    },
+    {
+      brand:"Phonak",
+      name:"Virto R Infinio",
+      type:"Custom · In-the-Ear",
+      description:"A custom-crafted rechargeable option designed around the individual ear for a discreet fit.",
+      features:["Custom fit","Rechargeable","SmartSpeech"],
+      image:"https://www.phonak.com/content/phonak/in/en/hearing-devices/hearing-aids/virto-infinio/_jcr_content/root/container/hero_copy/image.coreimg.png/1781089586067/ph-pic-virto-i-r-reddot-i-f-2026-1080x1080px.png",
+      source:"https://www.phonak.com/en-in/hearing-devices/hearing-aids/virto-infinio"
+    },
+    {
+      brand:"Signia",
+      name:"Pure Charge&Go IX",
+      type:"Rechargeable · RIC",
+      description:"A small rechargeable RIC designed around conversation, connectivity and all-day use.",
+      features:["Rechargeable","Bluetooth","App control"],
+      image:"https://cdn.signia.net/-/media/signia/global/images/campaigns/signia-ix/pure-chargego-bct-ix/pure-charge-go-bct-ix_congress_54578_holding-ha_circle_1000x1000.jpg?extension=webp&hash=1E3938C39590C5AA5926A3BEAA01250B&rev=f2398f0f9ea84420a1450e26c5eeccd0",
+      source:"https://www.signia.net/en-in/hearing-aids/integrated-xperience/pure-charge-go-ix/"
+    },
+    {
+      brand:"Signia",
+      name:"Active Pro IX",
+      type:"Earbud-style · Rechargeable",
+      description:"An earbud-style hearing solution with rechargeable power, connectivity and app-based control.",
+      features:["Earbud fit","Rechargeable","App control"],
+      image:"https://cdn.signia.net/-/media/signia/global/images/campaigns/signia-ix/active-ix/active-ix_holding-earbud-pair_circle-ha_1000x1000.jpg?extension=webp&hash=558539B64F708EEF372C4CBECA3B99C2&rev=7d03337201d9427fab5880967c20e80a",
+      source:"https://www.signia.net/en-in/"
+    },
+    {
+      brand:"Signia",
+      name:"Styletto IX",
+      type:"Slim · Rechargeable",
+      description:"A slim, discreet rechargeable design built for natural conversation and modern connectivity.",
+      features:["Slim design","Rechargeable","Bluetooth"],
+      image:"https://cdn.signia.net/-/media/signia/global/images/campaigns/signia-ix/styletto-ix/styletto-ix_woman-head-sideview_circle_montage_1000x1000.jpg?extension=webp&hash=3B7202AAC06B0F598D760B9282077CF6&rev=0bc90d76a10047918573124e4ac49545",
+      source:"https://www.signia.net/en-in/"
+    },
+    {
+      brand:"Starkey",
+      name:"Genesis AI",
+      type:"AI · Rechargeable",
+      description:"Starkey's AI hearing platform with automatic sound adjustments, connectivity and health features.",
+      features:["AI processing","Rechargeable","Health features"],
+      image:"https://www.starkey.com/-/media/ConsumerSites/Images/Renderings/Parameters/FullWidth/Starkey/Genesis_wGlow-transparent",
+      source:"https://www.starkey.com/hearing-aids/genesis-artificial-intelligence-hearing-aids"
+    },
+    {
+      brand:"Starkey",
+      name:"Edge AI",
+      type:"AI · Advanced noise processing",
+      description:"AI-based sound processing designed to classify complex soundscapes, enhance speech and reduce noise.",
+      features:["Edge AI","Speech focus","Noise reduction"],
+      image:"https://www.starkey.com/-/media/ConsumerSites/Images/Renderings/ItemSource/RichTextBlocks/Starkey/afton_product_renders_shadow_dark_bg",
+      source:"https://www.starkey.com/hearing-aids/edge-artificial-intelligence-hearing-aids"
+    },
+    {
+      brand:"Oticon",
+      name:"Intent miniRITE",
+      type:"Rechargeable · Bluetooth",
+      description:"A discreet rechargeable hearing aid using sensor-driven technology to adapt support to listening needs.",
+      features:["4D Sensors","Rechargeable","Bluetooth"],
+      image:"https://www.oticon.com/_next/image?q=75&url=https%3A%2F%2Fassets.ha.demant.com%2F-%2Fmedia%2Fproject%2Fhearing-aid%2Foticon%2Fshared%2Fimages%2Fglobal%2Fproducts%2Fhero-mobile-768x1024%2Fot_hero_mobile_family_intent_minirite_minibte_768x1024.jpg%3Fh%3D1024%26iar%3D0%26w%3D768%26rev%3D365c33e6884c44a594b5b397c2b51f12%26hash%3D78E8AE3BD9DEDA35539CAB1654B410D1&w=3840",
+      source:"https://www.oticon.com/products/hearing-aids/family/intent"
+    },
+    {
+      brand:"ReSound",
+      name:"Vivia",
+      type:"AI · Rechargeable",
+      description:"A compact AI hearing aid family focused on natural hearing, speech focus and modern connectivity.",
+      features:["Intelligence Augmented","Auracast","Rechargeable"],
+      image:"https://www.resound.com/-/media/0ada16778d3245ddbfbc3450759750aa.ashx",
+      source:"https://www.resound.com/en/hearing-aids/resound-hearing-aids/resound-vivia"
+    },
+    {
+      brand:"ReSound",
+      name:"Nexia Micro RIE",
+      type:"Rechargeable · RIE",
+      description:"A discreet rechargeable RIE option with Bluetooth LE Audio and Auracast connectivity.",
+      features:["Rechargeable","Auracast","RIE"],
+      image:"https://pro.resound.com/-/media/partnerportal/resound/products/nexia/product-renderings/rs_nx_microrie_60_rhi_sparkling_silver_mrie.ashx?centercrop=1&hash=A7641CBCAF01C92586CAFF63E7A1CF75&usecustomfunctions=1&w=242",
+      source:"https://pro.resound.com/en-us/products/hearing-aids/nexia"
+    },
+    {
+      brand:"Widex",
+      name:"SmartRIC",
+      type:"RIC · Rechargeable",
+      description:"A slim rechargeable RIC design with a high-positioned microphone layout and up to 37 hours of battery life.",
+      features:["Up to 37 hours","Rechargeable","Natural sound"],
+      image:"https://azurecdn.widex.com/-/media/widex/global/images/campaigns/smartric/widex-smartric_dust_1000x1000.jpg?extension=webp&hash=F2E7C61040E0B8F884D35020D70E021A&rev=836b676966ee40b2a2abb437c805ca62",
+      source:"https://www.widex.com/en-in/hearing-aids/smartric/"
+    }
+  ];
+
+  const grid = document.getElementById("hearingProductGrid");
+  const filters = Array.from(document.querySelectorAll(".product-filter"));
+  const modal = document.getElementById("productCompareModal");
+  const compareContent = document.getElementById("compareContent");
+  if(!grid || !modal || !compareContent) return;
+
+  const idealFor = {
+    "Audéo Sphere Infinio":"Challenging listening environments",
+    "Audéo R Infinio":"Everyday connectivity",
+    "Virto R Infinio":"Discreet custom-fit preference",
+    "Pure Charge&Go IX":"Conversation & connectivity",
+    "Active Pro IX":"Earbud-style preference",
+    "Styletto IX":"Slim, discreet styling",
+    "Genesis AI":"AI & connected everyday use",
+    "Edge AI":"Complex sound environments",
+    "Intent miniRITE":"Adaptive everyday listening",
+    "Vivia":"Natural hearing & connectivity",
+    "Nexia Micro RIE":"Discreet rechargeable RIE",
+    "SmartRIC":"Slim rechargeable RIC"
+  };
+
+  let activeBrand = "all";
+  let visible = products.slice();
+
+  function escapeHtml(value){
+    return String(value).replace(/[&<>"']/g,function(ch){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[ch];
+    });
+  }
+
+  function whatsappUrl(item){
+    const message =
+      "Hi Chanditala Hearing Clinic, I would like to book a free demo for " +
+      item.brand + " " + item.name +
+      ". Please share availability, fitting details and what I should bring.";
+    return "https://wa.me/918583014007?text=" + encodeURIComponent(message);
+  }
+
+  function render(){
+    grid.innerHTML = visible.map(function(item){
+      const ideal = idealFor[item.name] || "Discuss with our hearing care team";
+      return `
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img src="${item.image}" alt="${escapeHtml(item.brand)} ${escapeHtml(item.name)} hearing aid" loading="lazy" decoding="async">
+          </div>
+
+          <div class="product-info">
+            <div class="product-card-top">
+              <span class="product-brand">${escapeHtml(item.brand)}</span>
+              <span class="product-ideal"><b>Ideal for</b> ${escapeHtml(ideal)}</span>
+            </div>
+
+            <h3>${escapeHtml(item.name)}</h3>
+            <div class="product-type">${escapeHtml(item.type)}</div>
+            <p class="product-description">${escapeHtml(item.description)}</p>
+
+            <ul class="product-feature-list">
+              <li><span aria-hidden="true">✓</span><strong>Feature:</strong> ${escapeHtml(item.features[0] || "—")}</li>
+              <li><span aria-hidden="true">✓</span><strong>Power:</strong> ${escapeHtml(item.features[1] || "—")}</li>
+              <li><span aria-hidden="true">✓</span><strong>Connectivity:</strong> ${escapeHtml(item.features[2] || "—")}</li>
+            </ul>
+
+            <div class="product-card-actions">
+              <a class="product-cta product-cta-primary" href="${whatsappUrl(item)}" target="_blank" rel="noopener noreferrer">
+                Book Free Demo <span aria-hidden="true">→</span>
+              </a>
+              <button class="product-cta product-cta-secondary" type="button" data-compare="${escapeHtml(item.name)}">
+                Compare Features
+              </button>
+            </div>
+          </div>
+        </article>`;
+    }).join("");
+
+    grid.querySelectorAll("[data-compare]").forEach(function(button){
+      button.addEventListener("click", function(){
+        const item = products.find(function(product){
+          return product.name === button.dataset.compare;
+        });
+        if(item) openCompare(item);
+      });
+    });
+  }
+
+  function openCompare(item){
+    const ideal = idealFor[item.name] || "Discuss with our hearing care team";
+    compareContent.innerHTML = `
+      <span class="eyebrow">${escapeHtml(item.brand)}</span>
+      <h2 id="compareTitle">${escapeHtml(item.name)}</h2>
+      <p class="product-compare-type">${escapeHtml(item.type)}</p>
+      <p>${escapeHtml(item.description)}</p>
+      <div class="product-compare-grid">
+        <div><span>Feature</span><strong>${escapeHtml(item.features[0] || "—")}</strong></div>
+        <div><span>Power</span><strong>${escapeHtml(item.features[1] || "—")}</strong></div>
+        <div><span>Connectivity</span><strong>${escapeHtml(item.features[2] || "—")}</strong></div>
+        <div><span>Ideal for</span><strong>${escapeHtml(ideal)}</strong></div>
+      </div>
+      <a class="product-cta product-cta-primary product-compare-cta" href="${whatsappUrl(item)}" target="_blank" rel="noopener noreferrer">
+        Book Free Demo <span aria-hidden="true">→</span>
+      </a>`;
+    modal.hidden = false;
+    modal.setAttribute("aria-hidden","false");
+    document.body.classList.add("product-modal-open");
+    const close = modal.querySelector(".product-compare-close");
+    if(close) close.focus();
+  }
+
+  function closeCompare(){
+    modal.hidden = true;
+    modal.setAttribute("aria-hidden","true");
+    document.body.classList.remove("product-modal-open");
+  }
+
+  modal.querySelectorAll("[data-close-compare]").forEach(function(el){
+    el.addEventListener("click", closeCompare);
+  });
+
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape" && !modal.hidden) closeCompare();
+  });
+
+  function setBrand(brand){
+    activeBrand = brand;
+    visible = brand === "all" ? products.slice() : products.filter(function(item){
+      return item.brand === brand;
+    });
+
+    filters.forEach(function(btn){
+      const active = btn.dataset.brand === brand;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+    });
+
+    render();
+  }
+
+  filters.forEach(function(button){
+    button.addEventListener("click", function(){
+      setBrand(button.dataset.brand);
+    });
+  });
+
+  render();
+})();
+</script>
+
+
+<script>
+(function(){
+  const grid=document.getElementById('hearingProductGrid');
+  const prev=document.getElementById('productPrev');
+  const next=document.getElementById('productNext');
+  const dots=document.getElementById('productDots');
+  const count=document.getElementById('productResultCount');
+  if(!grid||!prev||!next||!dots) return;
+  let index=0, timer=null;
+  const visible=()=>window.innerWidth<=760?1:(window.innerWidth<=1050?2:3);
+  function update(){
+    const cards=[...grid.children];
+    const v=Math.min(visible(),Math.max(1,cards.length));
+    const max=Math.max(0,cards.length-v);
+    index=Math.min(Math.max(0,index),max);
+    const gap=parseFloat(getComputedStyle(grid).gap)||17;
+    const width=cards[0]?cards[0].getBoundingClientRect().width:0;
+    grid.style.transform=width?`translate3d(-${index*(width+gap)}px,0,0)`:'none';
+    prev.disabled=index<=0;
+    next.disabled=index>=max;
+    const pages=Math.max(1,max+1);
+    dots.innerHTML='';
+    for(let i=0;i<pages;i++){
+      const b=document.createElement('button'); b.type='button'; b.setAttribute('aria-label','Show product slide '+(i+1));
+      b.className=i===index?'active':''; b.addEventListener('click',()=>{index=i;update();restart()}); dots.appendChild(b);
+    }
+    if(count) count.textContent=cards.length+' option'+(cards.length===1?'':'s');
+  }
+  function move(dir){index+=dir;update();restart()}
+  function restart(){clearInterval(timer); if(!document.hidden && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){timer=setInterval(()=>{const cards=[...grid.children];const max=Math.max(0,cards.length-visible());if(max<1)return;index=index>=max?0:index+1;update()},5200)}}
+  prev.addEventListener('click',()=>move(-1)); next.addEventListener('click',()=>move(1));
+  grid.addEventListener('click',e=>{if(e.target.closest('[data-compare]')){setTimeout(update,40)}});
+  const observer=new MutationObserver(()=>{index=0;requestAnimationFrame(()=>{update();restart()})}); observer.observe(grid,{childList:true});
+  window.addEventListener('resize',()=>requestAnimationFrame(update));
+  document.addEventListener('visibilitychange',()=>document.hidden?clearInterval(timer):restart());
+  update(); restart();
+})();
+</script>
 </body></html>
-
-<style>@media(max-width:760px){.hero h1{font-size:50px!important;line-height:1.06!important;letter-spacing:-.045em!important}}</style>
-
-<style>
-/* Final hero alignment correction */
-.hero-grid{align-items:center!important}
-.hero-grid>.reveal:first-child{width:min(100%,620px)!important}
-.hero-content{width:100%!important;max-width:620px!important}
-.hero-heading-bg{padding:0!important;border-radius:22px!important}
-.hero-heading-slide h1{font-size:clamp(34px,4.1vw,48px)!important;line-height:1.08!important;letter-spacing:-.035em!important;max-width:500px!important;margin:0!important}
-.hero-heading-slide h1 span{font-size:.78em!important;letter-spacing:-.02em!important}
-.hero-heading-slide .hero-lead{max-width:560px!important;font-size:13px!important;line-height:1.55!important}
-.hero-offer-badges{max-width:620px!important}
-@media(max-width:900px){.hero-grid{gap:18px!important}.hero-grid>.reveal:first-child{width:100%!important}.hero-content{max-width:none!important}.hero-heading-slide h1{font-size:clamp(31px,8.5vw,43px)!important;max-width:100%!important;line-height:1.08!important}.hero-heading-slide h1 span{font-size:.82em!important}.hero-heading-slide .hero-lead{font-size:12.5px!important}.hero-offer-badges{max-width:none!important}.hero-visual{height:320px!important;min-height:320px!important;margin-top:2px!important}}
-@media(max-width:600px){.hero{padding:28px 0 28px!important}.hero-heading-slide h1{font-size:clamp(29px,8.8vw,37px)!important}.hero-heading-slide h1 span{font-size:.84em!important}.hero-heading-slide .hero-lead{font-size:12px!important;line-height:1.5!important}.hero-offer-badges{margin-top:12px!important}.hero-offer-badges div{padding:8px 10px!important}.hero-visual{height:285px!important;min-height:285px!important;margin-top:0!important}.ear-scene{inset:12px 8px 48px!important}.ear-svg{width:min(68%,275px)!important}.card-top{top:7px!important}.card-bottom{bottom:40px!important}}
-@media(max-width:380px){.hero-heading-slide h1{font-size:28px!important}.hero-heading-slide h1 span{font-size:.85em!important}.hero-visual{height:265px!important;min-height:265px!important}}
-</style>
