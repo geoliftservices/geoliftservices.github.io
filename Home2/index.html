@@ -3031,44 +3031,834 @@ section.services .service-cards > :nth-child(3){
 }
 </style>
 
+
+<style id="geolift-header-remake-final">
+/* =========================================================
+   GeoLift — final premium navigation
+   ========================================================= */
+.site-header{
+  height:88px!important;
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  right:0!important;
+  z-index:1000!important;
+  background:rgba(255,255,255,.88)!important;
+  border-bottom:1px solid rgba(216,228,239,.75)!important;
+  box-shadow:0 8px 30px rgba(8,35,63,.035)!important;
+  backdrop-filter:blur(18px)!important;
+}
+.site-header.scrolled{
+  position:fixed!important;
+  background:rgba(255,255,255,.97)!important;
+  border-bottom-color:#dce6f0!important;
+  box-shadow:0 10px 35px rgba(8,35,63,.08)!important;
+}
+.site-header .nav{
+  height:88px!important;
+  gap:30px!important;
+}
+.site-header .brand{
+  flex:0 0 auto!important;
+  font-size:25px!important;
+  letter-spacing:-1.5px!important;
+  font-weight:850!important;
+}
+.site-header .brand .geo{color:#0757C9!important}
+
+.site-header .desktop-nav{
+  display:flex!important;
+  align-items:center!important;
+  gap:25px!important;
+  margin-left:auto!important;
+}
+.site-header .desktop-nav>a,
+.site-header .desktop-nav .drop>a{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:6px!important;
+  height:88px!important;
+  padding:0!important;
+  color:#29435E!important;
+  font-size:13px!important;
+  font-weight:750!important;
+  white-space:nowrap!important;
+  line-height:1!important;
+}
+.site-header .desktop-nav>a:hover,
+.site-header .desktop-nav .drop>a:hover{
+  color:#0757C9!important;
+}
+.site-header .drop{
+  position:relative!important;
+}
+.site-header .drop>a span{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:12px!important;
+  height:12px!important;
+  color:#70849A!important;
+  font-size:13px!important;
+  transition:transform .2s ease!important;
+}
+.site-header .drop:hover>a span{transform:rotate(180deg)!important}
+
+.site-header .drop-panel.nav-mega{
+  position:absolute!important;
+  top:73px!important;
+  left:50%!important;
+  width:760px!important;
+  padding:0!important;
+  display:grid!important;
+  grid-template-columns:250px 1fr!important;
+  gap:0!important;
+  border:1px solid #dce6ef!important;
+  border-radius:18px!important;
+  background:#fff!important;
+  box-shadow:0 28px 80px rgba(7,27,52,.16)!important;
+  overflow:hidden!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  transform:translate(-50%,10px)!important;
+  transition:opacity .2s ease,visibility .2s ease,transform .2s ease!important;
+}
+.site-header .drop:hover .drop-panel.nav-mega{
+  opacity:1!important;
+  visibility:visible!important;
+  transform:translate(-50%,0)!important;
+}
+.nav-mega-intro{
+  padding:28px 24px!important;
+  background:linear-gradient(145deg,#06264D,#0757C9)!important;
+  color:#fff!important;
+}
+.nav-mega-intro small{
+  display:block!important;
+  color:#9EDBEA!important;
+  font-size:9px!important;
+  font-weight:800!important;
+  letter-spacing:.14em!important;
+  margin-bottom:13px!important;
+}
+.nav-mega-intro strong{
+  display:block!important;
+  font-size:20px!important;
+  line-height:1.18!important;
+  letter-spacing:-.5px!important;
+}
+.nav-mega-intro p{
+  margin:12px 0 20px!important;
+  color:#D5E5F1!important;
+  font-size:11px!important;
+  line-height:1.65!important;
+}
+.nav-mega-view{
+  display:inline-flex!important;
+  align-items:center!important;
+  color:#fff!important;
+  font-size:11px!important;
+  font-weight:800!important;
+}
+.nav-mega-view:hover{color:#9EDBEA!important}
+
+.nav-mega-columns{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:24px 28px!important;
+  padding:27px 28px!important;
+  background:#fff!important;
+}
+.nav-mega-columns>div{min-width:0!important}
+.nav-mega-columns small{
+  display:block!important;
+  margin-bottom:9px!important;
+  color:#8494A7!important;
+  font-size:8px!important;
+  font-weight:800!important;
+  letter-spacing:.14em!important;
+}
+.nav-mega-columns a{
+  display:block!important;
+  margin:0!important;
+  padding:7px 0!important;
+  color:#193450!important;
+  font-size:11px!important;
+  font-weight:650!important;
+  line-height:1.35!important;
+}
+.nav-mega-columns a:hover{
+  color:#0757C9!important;
+  transform:translateX(2px)!important;
+}
+.nav-mega-services{width:790px!important}
+.nav-mega-industries{width:735px!important}
+.nav-mega-resources{width:720px!important}
+
+.site-header .nav-right{
+  display:flex!important;
+  align-items:center!important;
+  gap:15px!important;
+  margin-left:0!important;
+}
+.site-header .nav-contact-link{
+  color:#29435E!important;
+  font-size:13px!important;
+  font-weight:750!important;
+}
+.site-header .nav-contact-link:hover{color:#0757C9!important}
+.site-header .nav-right>.btn{
+  padding:13px 18px!important;
+  border-radius:9px!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  white-space:nowrap!important;
+}
+.site-header .btn-dark{
+  background:#09233F!important;
+  color:#fff!important;
+  box-shadow:0 9px 22px rgba(9,35,63,.12)!important;
+}
+.site-header .btn-dark:hover{
+  background:#0757C9!important;
+  transform:translateY(-1px)!important;
+}
+.site-header .hamb{display:none!important}
+.site-header .mobile-menu-cta{display:none!important}
+
+/* Prevent the desktop mega menus from causing horizontal overflow. */
+.site-header,
+.site-header *{box-sizing:border-box!important}
+
+/* Tablet */
+@media(max-width:1120px) and (min-width:851px){
+  .site-header .desktop-nav{gap:17px!important}
+  .site-header .desktop-nav>a,
+  .site-header .desktop-nav .drop>a{font-size:11px!important}
+  .site-header .nav-contact-link{display:none!important}
+  .site-header .nav-right{gap:8px!important}
+  .site-header .nav-right>.btn{padding:12px 14px!important}
+}
+
+/* Mobile */
+@media(max-width:850px){
+  .site-header,
+  .site-header.scrolled{
+    position:fixed!important;
+    top:0!important;
+    height:72px!important;
+    background:rgba(255,255,255,.97)!important;
+    border-bottom:1px solid #dce6f0!important;
+    box-shadow:0 8px 28px rgba(8,35,63,.06)!important;
+  }
+  .site-header .nav{
+    height:72px!important;
+    gap:0!important;
+  }
+  .site-header .brand{font-size:24px!important}
+  .site-header .nav-right{margin-left:auto!important}
+  .site-header .nav-contact-link,
+  .site-header .nav-right>.btn{display:none!important}
+  .site-header .hamb{
+    display:flex!important;
+    width:42px!important;
+    height:42px!important;
+    padding:0!important;
+    margin:0!important;
+    align-items:center!important;
+    justify-content:center!important;
+    flex-direction:column!important;
+    border:1px solid #d7e3ec!important;
+    border-radius:11px!important;
+    background:#fff!important;
+    cursor:pointer!important;
+  }
+  .site-header .hamb i{
+    display:block!important;
+    width:20px!important;
+    height:2px!important;
+    margin:2.5px!important;
+    background:#09233F!important;
+    transition:transform .2s ease,opacity .2s ease!important;
+  }
+  .site-header.menu-open .hamb i:nth-child(1){transform:translateY(5px) rotate(45deg)!important}
+  .site-header.menu-open .hamb i:nth-child(2){opacity:0!important}
+  .site-header.menu-open .hamb i:nth-child(3){transform:translateY(-5px) rotate(-45deg)!important}
+
+  .site-header .desktop-nav{
+    position:absolute!important;
+    top:72px!important;
+    left:14px!important;
+    right:14px!important;
+    width:auto!important;
+    max-height:calc(100dvh - 84px)!important;
+    overflow-y:auto!important;
+    display:none!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:0!important;
+    margin:0!important;
+    padding:10px!important;
+    background:#fff!important;
+    border:1px solid #dce6ef!important;
+    border-radius:16px!important;
+    box-shadow:0 25px 70px rgba(7,27,52,.16)!important;
+  }
+  .site-header .desktop-nav.open{display:flex!important}
+  .site-header .desktop-nav>a,
+  .site-header .desktop-nav .drop>a{
+    width:100%!important;
+    height:auto!important;
+    min-height:50px!important;
+    padding:13px 12px!important;
+    border-radius:10px!important;
+    justify-content:space-between!important;
+    font-size:14px!important;
+  }
+  .site-header .desktop-nav>a:hover,
+  .site-header .desktop-nav .drop>a:hover{
+    background:#f5f9fc!important;
+  }
+  .site-header .drop>a span{font-size:16px!important}
+  .site-header .drop.mobile-open>a span{transform:rotate(180deg)!important}
+
+  .site-header .drop-panel.nav-mega{
+    position:static!important;
+    width:100%!important;
+    max-width:none!important;
+    display:none!important;
+    grid-template-columns:1fr!important;
+    margin:0 0 6px!important;
+    padding:0!important;
+    border:1px solid #e0e8ef!important;
+    border-radius:12px!important;
+    box-shadow:none!important;
+    transform:none!important;
+    opacity:1!important;
+    visibility:visible!important;
+    overflow:hidden!important;
+  }
+  .site-header .drop.mobile-open .drop-panel.nav-mega{
+    display:grid!important;
+  }
+  .nav-mega-intro{
+    padding:19px!important;
+  }
+  .nav-mega-intro strong{font-size:17px!important}
+  .nav-mega-intro p{font-size:11px!important;margin-bottom:14px!important}
+  .nav-mega-columns{
+    grid-template-columns:1fr 1fr!important;
+    gap:12px 18px!important;
+    padding:18px!important;
+  }
+  .nav-mega-columns a{
+    padding:6px 0!important;
+    font-size:11px!important;
+  }
+  .site-header .mobile-menu-cta{
+    display:flex!important;
+    min-height:52px!important;
+    margin:8px 0 2px!important;
+    padding:0 16px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border-radius:10px!important;
+    background:#09233F!important;
+    color:#fff!important;
+    font-size:13px!important;
+    font-weight:800!important;
+  }
+  .site-header .mobile-menu-cta b{font-size:17px!important;margin-left:8px!important}
+}
+
+/* Small phones */
+@media(max-width:520px){
+  .site-header .desktop-nav{
+    left:10px!important;
+    right:10px!important;
+    border-radius:14px!important;
+  }
+  .nav-mega-columns{grid-template-columns:1fr!important}
+  .nav-mega-intro strong{font-size:16px!important}
+}
+</style>
+
+
+<style id="geolift-header-final-fix">
+/* FINAL HEADER FIX — one CTA + reliable Resources menu */
+
+/* Only the desktop header CTA is visible on desktop. */
+.site-header .mobile-menu-cta{display:none!important}
+
+/* Resources is a pure dropdown trigger. */
+.site-header .desktop-nav .drop > .menu-trigger{
+  cursor:pointer!important;
+}
+.site-header .desktop-nav .drop > .menu-trigger:focus-visible{
+  outline:2px solid #0757C9!important;
+  outline-offset:4px!important;
+  border-radius:4px!important;
+}
+
+/* Keep mega menus positioned predictably. */
+.site-header .desktop-nav .drop-panel.nav-mega{
+  z-index:1005!important;
+}
+
+/* Mobile: exactly ONE Get a Proposal CTA — the header CTA. */
+@media(max-width:850px){
+  .site-header .nav-right>.btn{
+    display:none!important;
+  }
+
+  .site-header .desktop-nav{
+    padding-bottom:12px!important;
+  }
+
+  /* Re-add exactly one CTA at the bottom of the opened mobile menu. */
+  .site-header .desktop-nav:after{
+    content:"Get a Proposal  →";
+    display:flex!important;
+    min-height:50px!important;
+    margin:12px 0 0!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border-radius:10px!important;
+    background:#09233F!important;
+    color:#fff!important;
+    font-size:13px!important;
+    font-weight:800!important;
+    cursor:pointer!important;
+  }
+
+  /* Mobile dropdowns must open by click, never hover. */
+  .site-header .drop:hover .drop-panel.nav-mega{
+    display:none!important;
+    opacity:1!important;
+    visibility:visible!important;
+    transform:none!important;
+  }
+  .site-header .drop.mobile-open:hover .drop-panel.nav-mega{
+    display:grid!important;
+  }
+
+  .site-header .drop-panel.nav-mega{
+    opacity:1!important;
+    visibility:visible!important;
+    transform:none!important;
+  }
+}
+
+/* Desktop: CTA only in nav-right; no duplicate menu CTA. */
+@media(min-width:851px){
+  .site-header .nav-right>.btn{
+    display:inline-flex!important;
+  }
+}
+</style>
+
+
+<style id="resources-dropdown-position-final-v4">
+/* RESOURCES — dedicated desktop positioning. Keep the panel compact and anchored to Resources. */
+@media (min-width:851px){
+  .site-header .desktop-nav .drop:has(> .menu-trigger){
+    position:relative!important;
+  }
+
+  .site-header .desktop-nav .drop-panel.nav-mega-resources{
+    left:auto!important;
+    right:-18px!important;
+    top:73px!important;
+    width:560px!important;
+    max-width:calc(100vw - 32px)!important;
+    grid-template-columns:190px 1fr!important;
+    transform:translateY(8px)!important;
+    opacity:0!important;
+    visibility:hidden!important;
+  }
+
+  /* Hover and click/open state use the same exact position. */
+  .site-header .desktop-nav .drop:hover > .drop-panel.nav-mega-resources,
+  .site-header .desktop-nav .drop.desktop-open > .drop-panel.nav-mega-resources{
+    left:auto!important;
+    right:-18px!important;
+    top:73px!important;
+    transform:translateY(0)!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+
+  .site-header .nav-mega-resources .nav-mega-intro{
+    padding:24px 20px!important;
+  }
+  .site-header .nav-mega-resources .nav-mega-columns{
+    padding:24px 20px!important;
+    gap:20px!important;
+  }
+}
+</style>
+
+
+<style id="geolift-mega-menu-equal-height-v5">
+/* Keep Services, Industries and Resources visually identical in height. */
+@media (min-width:851px){
+  .site-header .desktop-nav .drop-panel.nav-mega{
+    height:320px!important;
+    min-height:320px!important;
+    max-height:320px!important;
+    box-sizing:border-box!important;
+    align-items:stretch!important;
+    overflow:hidden!important;
+  }
+
+  .site-header .desktop-nav .drop-panel.nav-mega .nav-mega-intro,
+  .site-header .desktop-nav .drop-panel.nav-mega .nav-mega-columns{
+    height:100%!important;
+    box-sizing:border-box!important;
+  }
+
+  .site-header .desktop-nav .drop-panel.nav-mega .nav-mega-intro{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+
+  .site-header .desktop-nav .drop-panel.nav-mega .nav-mega-view{
+    margin-top:auto!important;
+  }
+
+  .site-header .desktop-nav .drop-panel.nav-mega .nav-mega-columns{
+    align-content:start!important;
+  }
+
+  .site-header .desktop-nav .drop-panel.nav-mega-resources{
+    height:320px!important;
+    min-height:320px!important;
+    max-height:320px!important;
+  }
+}
+</style>
+
+<style id="resources-dropdown-final-exact-fix">
+/* Resources must use the exact same vertical anchor as Services and Industries. */
+@media (min-width:851px){
+  .site-header .desktop-nav .drop > .drop-panel.nav-mega-resources,
+  .site-header .desktop-nav .drop:hover > .drop-panel.nav-mega-resources,
+  .site-header .desktop-nav .drop.desktop-open > .drop-panel.nav-mega-resources{
+    top:73px!important;
+    margin-top:0!important;
+  }
+}
+</style>
+
+<style id="geolift-header-center-final-v9">
+@media (min-width:851px){
+  .site-header .nav{position:relative!important;}
+  .site-header .desktop-nav{
+    position:absolute!important;
+    left:50%!important;
+    top:50%!important;
+    transform:translate(-50%,-50%)!important;
+    margin:0!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:25px!important;
+    white-space:nowrap!important;
+  }
+  .site-header .desktop-nav > a,
+  .site-header .desktop-nav .drop > a{
+    font-size:13px!important;
+    line-height:1.2!important;
+    font-weight:750!important;
+  }
+  .site-header .nav-right{
+    margin-left:auto!important;
+    display:flex!important;
+    align-items:center!important;
+    gap:24px!important;
+  }
+}
+</style>
+
+<style id="geolift-services-dropdown-only-fix-v14">
+/* SERVICES DROPDOWN ONLY — preserve all other header/dropdowns exactly as-is. */
+@media (min-width:851px){
+  .site-header .desktop-nav .drop:first-child{position:relative!important;}
+
+  .site-header .desktop-nav .drop:first-child > .drop-panel.nav-mega-services{
+    position:absolute!important;
+    top:73px!important;
+    left:50%!important;
+    right:auto!important;
+    width:820px!important;
+    min-width:820px!important;
+    max-width:calc(100vw - 32px)!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    padding:0!important;
+    box-sizing:border-box!important;
+    display:grid!important;
+    grid-template-columns:235px minmax(0,1fr)!important;
+    gap:0!important;
+    overflow:visible!important;
+    transform:translate(-50%,10px)!important;
+    opacity:0!important;
+    visibility:hidden!important;
+  }
+
+  .site-header .desktop-nav .drop:first-child:hover > .drop-panel.nav-mega-services{
+    opacity:1!important;
+    visibility:visible!important;
+    transform:translate(-50%,0)!important;
+  }
+
+  .site-header .drop-panel.nav-mega-services .nav-mega-intro{
+    min-width:0!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:28px 24px!important;
+    box-sizing:border-box!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega-services .nav-mega-intro small,
+  .site-header .drop-panel.nav-mega-services .nav-mega-intro strong,
+  .site-header .drop-panel.nav-mega-services .nav-mega-intro p,
+  .site-header .drop-panel.nav-mega-services .nav-mega-intro .nav-mega-view{
+    max-width:100%!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    white-space:normal!important;
+  }
+
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns{
+    min-width:0!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:28px 28px!important;
+    box-sizing:border-box!important;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-auto-rows:auto!important;
+    gap:24px 34px!important;
+    align-content:start!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns > div{
+    min-width:0!important;
+    width:auto!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns small{
+    display:block!important;
+    width:auto!important;
+    height:auto!important;
+    margin:0 0 8px!important;
+    padding:0!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    line-height:1.3!important;
+    letter-spacing:.09em!important;
+  }
+
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns a{
+    display:block!important;
+    width:auto!important;
+    max-width:100%!important;
+    min-width:0!important;
+    height:auto!important;
+    margin:0!important;
+    padding:6px 0!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    line-height:1.4!important;
+    font-size:12px!important;
+    box-sizing:border-box!important;
+  }
+}
+</style>
+
+
+<style id="geolift-services-menu-content-v17">
+/* Services megamenu content update — preserve existing structure while supporting readable subtext. */
+@media (min-width:851px){
+  .site-header .drop-panel.nav-mega-services{
+    width:850px!important;
+    max-width:calc(100vw - 32px)!important;
+  }
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:22px 28px!important;
+    padding:26px 28px!important;
+  }
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns > div{
+    min-width:0!important;
+  }
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns a{
+    display:block!important;
+    padding:7px 0!important;
+    color:#193450!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    line-height:1.25!important;
+  }
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns a b{
+    display:block!important;
+    font-size:12px!important;
+    font-weight:800!important;
+    line-height:1.3!important;
+  }
+  .site-header .drop-panel.nav-mega-services .nav-mega-columns .nav-service-desc{
+    display:block!important;
+    margin-top:3px!important;
+    color:#71839a!important;
+    font-size:10px!important;
+    font-weight:500!important;
+    line-height:1.35!important;
+    white-space:normal!important;
+    overflow:visible!important;
+  }
+}
+</style>
+
 </head>
 
 
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a href="#home" class="brand" aria-label="GeoLift home"><span class="geo">Geo</span><span>Lift</span></a>
-    <nav class="desktop-nav">
-      <div class="drop"><a href="#gbp-services">GBP Services <span>⌄</span></a><div class="drop-panel">
-        <div><small>GOOGLE BUSINESS PROFILE</small><a href="#gbp-management">GBP Management</a><a href="#gbp-optimization">GBP Optimization</a><a href="#gbp-setup">GBP Setup & Verification</a><a href="#gbp-reviews">Reviews & Reputation</a><a href="#gbp-recovery">Suspension / Recovery</a></div>
-        <div><small>LOCAL & MULTI-LOCATION</small><a href="#maps-seo">Google Maps / Map Pack</a><a href="#multi-location-gbp">Multi-Location GBP Management</a><a href="#profile-protection">Profile Protection</a></div>
-      </div></div>
-      <div class="drop"><a href="#local-seo">Local SEO <span>⌄</span></a><div class="drop-panel">
-        <div><small>SEARCH VISIBILITY</small><a href="#local-seo">Local SEO</a><a href="#keyword-research">Local Keyword Research</a><a href="#on-page-seo">On-Page SEO</a></div>
-        <div><small>LOCAL GROWTH</small><a href="#local-citations">Local Citations</a><a href="#local-seo-audit">Local SEO Audit</a></div>
-      </div></div>
-      <div class="drop"><a href="#ai-websites">AI Websites <span>⌄</span></a><div class="drop-panel">
-        <div><small>AI WEBSITE DEVELOPMENT</small><a href="#ai-websites">AI Website Development</a><a href="#ai-websites">SEO-Ready Websites</a></div>
-        <div><small>BUSINESS WEBSITES</small><a href="#ai-websites">Local Business Websites</a><a href="#ai-websites">High-Converting Websites</a><a href="#ai-websites">Landing Pages</a></div>
-      </div></div>
-      <div class="drop"><a href="#social-media">Social Media <span>⌄</span></a><div class="drop-panel">
-        <div><small>SOCIAL MEDIA</small><a href="#social-media">Social Media Management</a><a href="#social-media">Social Media Posting</a><a href="#social-media">Facebook & Instagram Management</a></div>
-        <div><small>CONTENT & ENGAGEMENT</small><a href="#social-media">Content Planning</a><a href="#social-media">Community Engagement</a><a href="#social-media">Social Media Reporting</a></div>
-      </div></div>
-      <div class="drop"><a href="#paid-ads">Paid Ads <span>⌄</span></a><div class="drop-panel">
-        <div><small>PERFORMANCE</small><a href="#google-ads">Google Ads</a><a href="#meta-ads">Meta Ads</a></div>
-        <div><small>LEAD GENERATION</small><a href="#lead-generation">Lead Generation</a><a href="#whatsapp-leads">WhatsApp Lead Capture</a></div>
-      </div></div>
-      <div class="drop"><a href="#white-label">White Label <span>⌄</span></a><div class="drop-panel">
-        <div><small>AGENCY GBP SERVICES</small><a href="#white-label">White-Label GBP Management</a><a href="#multi-location-gbp">Multi-Location GBP Management</a><a href="#gbp-optimization">GBP Optimization</a></div>
-        <div><small>AGENCY SUPPORT</small><a href="#gbp-setup">GBP Setup & Verification</a><a href="#gbp-reviews">Reviews & Reputation</a><a href="#gbp-recovery">GBP Suspension / Recovery</a></div>
-      </div></div>
+    <a href="#home" class="brand" aria-label="GeoLift home">
+      <span class="geo">Geo</span><span>Lift</span>
+    </a>
 
-      <!-- Mobile-only utility links -->
-      <a href="#contact" class="mobile-menu-link">Contact</a>
-      <a href="#contact" class="mobile-menu-cta">Get a Proposal <b>→</b></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+
+      <div class="drop">
+        <a href="#gbp-services" aria-haspopup="true">Services <span>⌄</span></a>
+        <div class="drop-panel nav-mega nav-mega-services">
+          <div class="nav-mega-intro">
+            <small>GEOLIFT SERVICES</small>
+            <strong>Local visibility, growth &amp; lead generation.</strong>
+            <p>Focused services for businesses that want to be found, trusted and chosen locally.</p>
+            <a class="nav-mega-view" href="/services/">View all services →</a>
+          </div>
+          <div class="nav-mega-columns">
+            <div>
+              <small>LOCAL SEARCH</small>
+              <a href="#gbp-management"><b>Google Business Profile Management</b><span class="nav-service-desc">Optimize, manage, and scale local map rankings.</span></a>
+              <a href="#local-seo"><b>Hyper-Local SEO</b><span class="nav-service-desc">Rank top in localized organic and Map Pack searches.</span></a>
+              <a href="#multi-location-gbp"><b>Multi-Location SEO &amp; GBP</b><span class="nav-service-desc">Scalable local search for multi-branch businesses.</span></a>
+              <a href="#gbp-reviews"><b>Reputation &amp; Review Growth</b><span class="nav-service-desc">Automate review collection and build local brand trust.</span></a>
+            </div>
+            <div>
+              <small>GROWTH &amp; ADS</small>
+              <a href="#google-ads"><b>Google Search &amp; Local Ads</b><span class="nav-service-desc">Capture high-intent customers actively searching for your services.</span></a>
+              <a href="#meta-ads"><b>Meta &amp; Social Paid Ads</b><span class="nav-service-desc">Target local audiences across Instagram and Facebook.</span></a>
+              <a href="#lead-generation"><b>Performance Lead Campaigns</b><span class="nav-service-desc">End-to-end setups built for inbound phone calls and enquiries.</span></a>
+            </div>
+            <div>
+              <small>WEB &amp; FUNNELS</small>
+              <a href="#high-converting-websites"><b>High-Converting Websites</b><span class="nav-service-desc">Custom, fast, and mobile-first sites built for local SEO.</span></a>
+              <a href="#lead-generation"><b>Landing Pages &amp; Lead Funnels</b><span class="nav-service-desc">High-converting landing pages built specifically for ad traffic.</span></a>
+              <a href="#social-media"><b>Social Media Presence</b><span class="nav-service-desc">Consistent brand management across key social channels.</span></a>
+            </div>
+            <div>
+              <small>FOR AGENCIES</small>
+              <a href="#white-label"><b>White-Label GBP &amp; SEO</b><span class="nav-service-desc">Complete execution and fulfillment under your own agency brand.</span></a>
+              <a href="#multi-location-gbp"><b>Multi-Location Fulfillment</b><span class="nav-service-desc">Deliver scalable local campaigns without adding internal staff.</span></a>
+              <a href="#gbp-setup"><b>Verification &amp; Reinstatement</b><span class="nav-service-desc">Profile audits, verification help, and reinstatement support.</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="drop">
+        <a href="#industries" aria-haspopup="true">Industries <span>⌄</span></a>
+        <div class="drop-panel nav-mega nav-mega-industries">
+          <div class="nav-mega-intro">
+            <small>INDUSTRIES</small>
+            <strong>Local search shaped around the customer journey.</strong>
+            <p>Strategy adapts to the service, location, competition and buying cycle of each market.</p>
+            <a class="nav-mega-view" href="/industries/">Explore industries →</a>
+          </div>
+          <div class="nav-mega-columns nav-industry-grid">
+            <div>
+              <small>HEALTH &amp; WELLNESS</small>
+              <a href="/industries/healthcare/">Healthcare &amp; Clinics</a>
+              <a href="/industries/fitness/">Fitness &amp; Wellness</a>
+            </div>
+            <div>
+              <small>LOCAL SERVICES</small>
+              <a href="/industries/home-services/">Home Services</a>
+              <a href="/industries/professional-services/">Professional Services</a>
+            </div>
+            <div>
+              <small>BUSINESS &amp; EDUCATION</small>
+              <a href="/industries/education/">Education</a>
+              <a href="/industries/retail/">Retail &amp; Local Businesses</a>
+            </div>
+            <div>
+              <small>GROWTH AT SCALE</small>
+              <a href="/industries/hospitality/">Hospitality</a>
+              <a href="/industries/multi-location/">Multi-Location Businesses</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#why-geolift">Why GeoLift</a>
+
+      <div class="drop">
+        <a href="#" class="menu-trigger" aria-haspopup="true" aria-expanded="false">Resources <span>⌄</span></a>
+        <div class="drop-panel nav-mega nav-mega-resources">
+          <div class="nav-mega-intro">
+            <small>RESOURCES</small>
+            <strong>Useful insight without the noise.</strong>
+            <p>Explore practical information about local search, GBP and growth.</p>
+            <a class="nav-mega-view" href="/blog/">View insights →</a>
+          </div>
+          <div class="nav-mega-columns">
+            <div>
+              <small>PROOF</small>
+              <a href="#cases">Case Studies</a>
+              <a href="/case-studies/">Client Work</a>
+            </div>
+            <div>
+              <small>LOCAL SEARCH</small>
+              <a href="/blog/google-business-profile/">GBP Insights</a>
+              <a href="/blog/local-seo/">Local SEO Guide</a>
+            </div>
+            <div>
+              <small>SCALING</small>
+              <a href="/blog/multi-location-seo/">Multi-Location SEO</a>
+              <a href="/blog/">Latest Insights</a>
+            </div>
+            <div>
+              <small>HELP</small>
+              <a href="#faq">FAQs</a>
+              <a href="#contact">Request an Audit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#contact">Contact</a>
+
     </nav>
-    <div class="nav-right"><a href="#contact" class="nav-contact-link">Contact</a><a href="#contact" class="btn btn-dark">Get a Proposal <b>→</b></a><button class="hamb" id="hamb" aria-label="Open menu"><i></i><i></i><i></i></button></div>
+
+    <div class="nav-right">
+      <a href="#contact" class="btn btn-dark">Get a Proposal <b>→</b></a>
+      <button class="hamb" id="hamb" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+        <i></i><i></i><i></i>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -3088,7 +3878,7 @@ section.services .service-cards > :nth-child(3){
           <p>Strategic Google Business Profile management for businesses, agencies and multi-location brands — keeping your local presence optimized, active and ready to convert high-intent searches into enquiries.</p>
 
           <div class="hero__actions">
-            <a class="hero__btn hero__btn--primary" href="#contact">Get Your Get a Proposal <span>→</span></a>
+            <a class="hero__btn hero__btn--primary" href="#contact">Get a Proposal <span>→</span></a>
             <a class="hero__btn hero__btn--secondary" href="/google-business-profile-management/">Explore GBP Services</a>
           </div>
 
@@ -3314,7 +4104,7 @@ section.services .service-cards > :nth-child(3){
   </div>
 </section>
 
-<section class="section experience">
+<section class="section experience" id="why-geolift">
   <div class="container">
     <div class="experience-head"><div><div class="label">06 / WHY GEOLIFT</div><h2>Built for businesses that want <em>ownership, not noise.</em></h2></div><p>We keep the model practical: clear scope, recurring execution, human quality control and reporting that connects marketing work to business actions.</p></div>
     <div class="experience-grid">
@@ -3333,7 +4123,7 @@ section.services .service-cards > :nth-child(3){
   </div>
 </section>
 
-<section class="section industries">
+<section class="section industries" id="industries">
   <div class="container"><div class="section-head"><div><div class="label">08 / INDUSTRIES</div><h2>Local search changes with <em>the customer journey.</em></h2></div><p>We adapt the strategy to the service, location, competition and decision cycle of each market.</p></div>
     <div class="industry-grid">
       <a href="/industries/home-services/"><b>Home Services</b><span>Repair · HVAC · Pest</span><i>↗</i></a>
@@ -3375,7 +4165,7 @@ section.services .service-cards > :nth-child(3){
   </div>
 </section>
 
-<section class="section cases">
+<section class="section cases" id="cases">
   <div class="container"><div class="section-head"><div><div class="label">12 / WORK & INSIGHTS</div><h2>Proof should be <em>specific.</em></h2></div><a href="/case-studies/" class="arrow-link">View case studies →</a></div>
     <div class="case-grid">
       <article class="case-large"><div class="case-visual cv1"><span>LOCAL SEARCH</span><strong>SEARCH → MAPS → CALL</strong></div><small>CASE STUDY / LOCAL SEO</small><h3>Building a stronger local footprint around high-intent service searches.</h3><a href="/case-studies/">Read case study →</a></article>
@@ -3395,7 +4185,7 @@ section.services .service-cards > :nth-child(3){
   </div>
 </section>
 
-<section class="section faq">
+<section class="section faq" id="faq">
   <div class="container faq-grid"><div><div class="label">15 / FAQ</div><h2>The questions that come <em>before growth.</em></h2></div><div class="faqs">
     <details><summary>What does GeoLift specialize in?<b>+</b></summary><p>Our core specialization is Local SEO and Google Business Profile management, supported by location pages, citations, reputation workflows, reporting and optional paid acquisition.</p></details>
     <details><summary>Can I start with GBP management only?<b>+</b></summary><p>Yes. Services can be scoped independently and expanded when your business is ready for a broader local growth program.</p></details>
@@ -3407,7 +4197,7 @@ section.services .service-cards > :nth-child(3){
 
 <section class="section cta" id="contact">
   <div class="container cta-grid"><div class="cta-copy"><div class="label light">16 / START A CONVERSATION</div><h2>Find the gaps. <em>Build the system. Grow locally.</em></h2><p>Tell us about your business, target services and locations. We'll review the local search opportunity and recommend the right starting point.</p><div class="cta-checks"><span>✓ Local SEO review</span><span>✓ GBP review</span><span>✓ Location opportunity</span><span>✓ No obligation</span></div><a href="mailto:hello@geolift.co.in">hello@geolift.co.in →</a></div>
-    <form class="audit-form" action="https://formspree.io/f/xrpgknaz" method="POST"><input type="hidden" name="_subject" value="GeoLift Free Local SEO Audit Request"><div class="form-head"><small>FREE LOCAL AUDIT</small><strong>Tell us about your business</strong></div><div class="fields"><label>Your Name<input name="name" required placeholder="Your name"></label><label>Business / Brand<input name="business" required placeholder="Business name"></label><label>Work Email<input name="email" type="email" required placeholder="you@company.com"></label><label>Phone / WhatsApp<input name="phone" placeholder="+91"></label><label>Service Needed<select name="service" required><option value="">Select a service</option><option>Local SEO & Map Pack Optimization</option><option>Google Business Profile Management</option><option>Paid Ads Add-On</option><option>White-Label Agency Fulfillment</option></select></label><label>Target Locations<input name="locations" placeholder="Kolkata, Howrah..."></label><label class="wide">Anything else we should know?<textarea name="message" rows="4" placeholder="Tell us about your current visibility or goal."></textarea></label></div><button class="btn btn-dark btn-large" type="submit">Request Get a Proposal <b>→</b></button><small class="privacy-note">Your details are used only to respond to your enquiry.</small></form>
+    <form class="audit-form" action="https://formspree.io/f/xrpgknaz" method="POST"><input type="hidden" name="_subject" value="GeoLift Free Local SEO Audit Request"><div class="form-head"><small>FREE LOCAL AUDIT</small><strong>Tell us about your business</strong></div><div class="fields"><label>Your Name<input name="name" required placeholder="Your name"></label><label>Business / Brand<input name="business" required placeholder="Business name"></label><label>Work Email<input name="email" type="email" required placeholder="you@company.com"></label><label>Phone / WhatsApp<input name="phone" placeholder="+91"></label><label>Service Needed<select name="service" required><option value="">Select a service</option><option>Local SEO & Map Pack Optimization</option><option>Google Business Profile Management</option><option>Paid Ads Add-On</option><option>White-Label Agency Fulfillment</option></select></label><label>Target Locations<input name="locations" placeholder="Kolkata, Howrah..."></label><label class="wide">Anything else we should know?<textarea name="message" rows="4" placeholder="Tell us about your current visibility or goal."></textarea></label></div><button class="btn btn-dark btn-large" type="submit">Request a Proposal <b>→</b></button><small class="privacy-note">Your details are used only to respond to your enquiry.</small></form>
   </div>
 </section>
 </main>
@@ -3565,7 +4355,14 @@ body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
   function closeMenu(){
     nav.classList.remove('open');
     header.classList.remove('menu-open');
-    nav.querySelectorAll('.drop.mobile-open').forEach(d=>d.classList.remove('mobile-open'));
+    nav.querySelectorAll('.drop.desktop-open').forEach(d=>d.classList.remove('desktop-open'));
+    nav.querySelectorAll('.drop > a.menu-trigger').forEach(t=>t.setAttribute('aria-expanded','false'));
+    hamb.setAttribute('aria-expanded','false');
+    nav.querySelectorAll('.drop.mobile-open').forEach(d=>{
+      d.classList.remove('mobile-open');
+      const trigger=d.querySelector('.menu-trigger');
+      if(trigger) trigger.setAttribute('aria-expanded','false');
+    });
   }
 
   hamb.addEventListener('click',function(){
@@ -3578,18 +4375,64 @@ body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
   nav.querySelectorAll('.drop > a').forEach(trigger=>{
     trigger.addEventListener('click',function(e){
       if(window.innerWidth<=850){
+        e.preventDefault();
         const drop=trigger.parentElement;
         const wasOpen=drop.classList.contains('mobile-open');
-        e.preventDefault();
-        nav.querySelectorAll('.drop.mobile-open').forEach(d=>{if(d!==drop)d.classList.remove('mobile-open')});
+
+        nav.querySelectorAll('.drop.mobile-open').forEach(d=>{
+          if(d!==drop){
+            d.classList.remove('mobile-open');
+            const t=d.querySelector('.menu-trigger');
+            if(t) t.setAttribute('aria-expanded','false');
+          }
+        });
+
         drop.classList.toggle('mobile-open',!wasOpen);
+        trigger.setAttribute('aria-expanded',String(!wasOpen));
+      } else if(trigger.classList.contains('menu-trigger')){
+        /* Resources is a dropdown trigger on desktop too. */
+        e.preventDefault();
+        const drop=trigger.parentElement;
+        const wasOpen=drop.classList.contains('desktop-open');
+        nav.querySelectorAll('.drop.desktop-open').forEach(d=>d.classList.remove('desktop-open'));
+        nav.querySelectorAll('.drop > a.menu-trigger').forEach(t=>t.setAttribute('aria-expanded','false'));
+        if(!wasOpen){
+          drop.classList.add('desktop-open');
+          trigger.setAttribute('aria-expanded','true');
+        }
       }
     });
   });
 
-  nav.querySelectorAll('.drop-panel a, .desktop-nav > a').forEach(link=>link.addEventListener('click',closeMenu));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
-  window.addEventListener('resize',()=>{if(window.innerWidth>850)closeMenu()});
+  nav.querySelectorAll('.drop-panel a').forEach(link=>{
+    link.addEventListener('click',function(){
+      if(window.innerWidth<=850) closeMenu();
+    });
+  });
+
+  nav.querySelectorAll('.desktop-nav > a:not(.drop > a)').forEach(link=>{
+    link.addEventListener('click',closeMenu);
+  });
+
+  /* The single mobile CTA is generated by CSS at the bottom of the menu. */
+  nav.addEventListener('click',function(e){
+    if(window.innerWidth<=850 &&
+       e.target===nav){
+      const rect=nav.getBoundingClientRect();
+      if(e.clientY >= rect.bottom-64){
+        window.location.hash='contact';
+        closeMenu();
+      }
+    }
+  });
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') closeMenu();
+  });
+
+  window.addEventListener('resize',()=>{
+    if(window.innerWidth>850) closeMenu();
+  });
 })();
 </script>
 
@@ -3706,5 +4549,466 @@ body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,
 })();
 
 </script>
+
+<style id="resources-dropdown-alignment-final">
+@media (min-width:851px){
+  .site-header .desktop-nav .drop:has(a[href="#resources"]) .drop-panel,
+  .site-header .desktop-nav .resources-drop .drop-panel{
+    top:34px!important;
+    margin-top:0!important;
+    transform:translateY(0)!important;
+  }
+  .site-header .desktop-nav .drop:has(a[href="#resources"]):hover .drop-panel,
+  .site-header .desktop-nav .resources-drop:hover .drop-panel{
+    top:34px!important;
+    transform:translateY(0)!important;
+  }
+}
+</style>
+
+<style id="geolift-all-dropdowns-clean-fix">
+/* =========================================================
+   GEO LIFT — ALL DESKTOP DROPDOWNS CLEAN FIX
+   One consistent system for Services / Industries / Resources.
+   No clipped headings, no fixed-height text traps, no overlap.
+   ========================================================= */
+@media (min-width:851px){
+  .site-header .desktop-nav .drop{position:relative!important;}
+
+  .site-header .desktop-nav .drop > .drop-panel.nav-mega{
+    position:absolute!important;
+    top:73px!important;
+    left:50%!important;
+    right:auto!important;
+    width:820px!important;
+    max-width:calc(100vw - 32px)!important;
+    min-width:0!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    padding:0!important;
+    margin:0!important;
+    display:grid!important;
+    grid-template-columns:235px minmax(0,1fr)!important;
+    gap:0!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+    border:1px solid #dce6ef!important;
+    border-radius:18px!important;
+    background:#fff!important;
+    opacity:0!important;
+    visibility:hidden!important;
+    transform:translate(-50%,10px)!important;
+    transition:opacity .2s ease,visibility .2s ease,transform .2s ease!important;
+  }
+
+  .site-header .desktop-nav .drop:hover > .drop-panel.nav-mega,
+  .site-header .desktop-nav .drop.desktop-open > .drop-panel.nav-mega{
+    top:73px!important;
+    opacity:1!important;
+    visibility:visible!important;
+    transform:translate(-50%,0)!important;
+  }
+
+  /* All three dropdowns use the same readable content area. */
+  .site-header .drop-panel.nav-mega .nav-mega-intro{
+    width:auto!important;
+    min-width:0!important;
+    height:auto!important;
+    min-height:100%!important;
+    padding:28px 24px!important;
+    box-sizing:border-box!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-intro small{
+    display:block!important;
+    margin:0 0 13px!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    line-height:1.3!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-intro strong{
+    display:block!important;
+    max-width:none!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+    line-height:1.22!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-intro p{
+    display:block!important;
+    max-width:none!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+    line-height:1.6!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-view{
+    white-space:nowrap!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns{
+    width:auto!important;
+    min-width:0!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-template-rows:auto auto!important;
+    align-content:start!important;
+    gap:24px 30px!important;
+    padding:27px 28px!important;
+    box-sizing:border-box!important;
+    overflow:visible!important;
+    background:#fff!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns > div{
+    min-width:0!important;
+    width:auto!important;
+    height:auto!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns small{
+    display:block!important;
+    margin:0 0 8px!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    line-height:1.3!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns a{
+    display:block!important;
+    width:auto!important;
+    max-width:none!important;
+    min-width:0!important;
+    height:auto!important;
+    margin:0!important;
+    padding:6px 0!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+    line-height:1.4!important;
+    box-sizing:border-box!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns a:hover{
+    transform:translateX(2px)!important;
+  }
+
+  /* Keep each menu centered under its trigger without custom offsets. */
+  .site-header .desktop-nav .drop:first-child > .drop-panel.nav-mega-services,
+  .site-header .desktop-nav .drop:nth-of-type(2) > .drop-panel.nav-mega-industries,
+  .site-header .desktop-nav .drop > .drop-panel.nav-mega-resources{
+    left:50%!important;
+    right:auto!important;
+    top:73px!important;
+  }
+}
+
+/* =========================================================
+   MOBILE DROPDOWNS
+   ========================================================= */
+@media (max-width:850px){
+  .site-header .desktop-nav .drop > .drop-panel.nav-mega{
+    position:static!important;
+    top:auto!important;
+    left:auto!important;
+    right:auto!important;
+    width:100%!important;
+    max-width:none!important;
+    min-width:0!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0 0 6px!important;
+    padding:0!important;
+    display:none!important;
+    grid-template-columns:1fr!important;
+    overflow:hidden!important;
+    transform:none!important;
+    opacity:1!important;
+    visibility:visible!important;
+    box-sizing:border-box!important;
+  }
+
+  .site-header .desktop-nav .drop.mobile-open > .drop-panel.nav-mega{
+    display:grid!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-intro{
+    min-width:0!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:20px!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-intro strong{
+    font-size:17px!important;
+    line-height:1.25!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    overflow-wrap:break-word!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-intro p{
+    font-size:11px!important;
+    line-height:1.6!important;
+    white-space:normal!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-template-rows:auto!important;
+    gap:14px 18px!important;
+    padding:18px!important;
+    overflow:visible!important;
+    box-sizing:border-box!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns > div{
+    min-width:0!important;
+    overflow:visible!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns small{
+    margin-bottom:7px!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    line-height:1.3!important;
+  }
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns a{
+    height:auto!important;
+    min-height:0!important;
+    padding:6px 0!important;
+    font-size:11px!important;
+    line-height:1.4!important;
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    overflow-wrap:anywhere!important;
+  }
+}
+
+@media (max-width:520px){
+  .site-header .drop-panel.nav-mega .nav-mega-columns{
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+  }
+}
+</style>
+
+<style id="geolift-resources-final-position-fix">
+/* Resources: keep the dropdown anchored to the Resources trigger instead of centering it under the whole nav. */
+@media (min-width:851px){
+  .site-header .desktop-nav .drop:has(> .menu-trigger){
+    position:relative!important;
+  }
+  .site-header .desktop-nav .drop > .drop-panel.nav-mega-resources,
+  .site-header .desktop-nav .drop:hover > .drop-panel.nav-mega-resources,
+  .site-header .desktop-nav .drop.desktop-open > .drop-panel.nav-mega-resources{
+    left:auto!important;
+    right:-10px!important;
+    top:73px!important;
+    width:650px!important;
+    max-width:calc(100vw - 32px)!important;
+    min-width:0!important;
+    transform:translateY(10px)!important;
+    box-sizing:border-box!important;
+  }
+  .site-header .desktop-nav .drop:hover > .drop-panel.nav-mega-resources,
+  .site-header .desktop-nav .drop.desktop-open > .drop-panel.nav-mega-resources{
+    transform:translateY(0)!important;
+  }
+  .site-header .nav-mega-resources .nav-mega-intro{
+    min-width:0!important;
+    padding:26px 22px!important;
+  }
+  .site-header .nav-mega-resources .nav-mega-columns{
+    min-width:0!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    padding:26px 24px!important;
+    gap:20px 26px!important;
+  }
+  .site-header .nav-mega-resources .nav-mega-columns > div{
+    min-width:0!important;
+  }
+  .site-header .nav-mega-resources .nav-mega-columns a{
+    white-space:normal!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    line-height:1.4!important;
+  }
+}
+</style>
+
+<style id="geolift-readable-header-dropdown-text">
+/* Final typography pass: larger, readable header + dropdown text without changing layout. */
+@media (min-width:851px){
+  .site-header .desktop-nav{gap:24px!important;}
+  .site-header .desktop-nav > a,
+  .site-header .desktop-nav .drop > a{
+    font-size:14px!important;
+    line-height:1.2!important;
+    font-weight:750!important;
+  }
+  .site-header .nav-contact-link{font-size:14px!important;}
+  .site-header .nav-right > .btn{font-size:13px!important;}
+
+  .site-header .drop-panel.nav-mega .nav-mega-columns small{
+    font-size:10px!important;
+    line-height:1.3!important;
+    letter-spacing:.12em!important;
+    margin-bottom:10px!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-columns a{
+    font-size:13px!important;
+    line-height:1.45!important;
+    padding:7px 0!important;
+    font-weight:650!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-columns a b{
+    font-size:13px!important;
+    line-height:1.4!important;
+    font-weight:800!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-columns .nav-service-desc{
+    font-size:11px!important;
+    line-height:1.45!important;
+    margin-top:4px!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-intro small{
+    font-size:10px!important;
+    line-height:1.3!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-intro strong{
+    font-size:18px!important;
+    line-height:1.28!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-intro p{
+    font-size:12px!important;
+    line-height:1.6!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-view{
+    font-size:12px!important;
+  }
+}
+@media (max-width:850px){
+  .site-header .desktop-nav > a,
+  .site-header .desktop-nav .drop > a{
+    font-size:15px!important;
+    line-height:1.3!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-columns small{
+    font-size:10px!important;
+    line-height:1.35!important;
+    letter-spacing:.1em!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-columns a{
+    font-size:13px!important;
+    line-height:1.45!important;
+    padding:7px 0!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-columns a b{
+    font-size:13px!important;
+    line-height:1.4!important;
+  }
+  .site-header .drop-panel.nav-mega .nav-mega-columns .nav-service-desc{
+    font-size:11px!important;
+    line-height:1.45!important;
+  }
+}
+</style>
+
+
+<style id="geolift-mobile-final-responsive">
+/* FINAL MOBILE PASS — header + hero only */
+@media (max-width:850px){
+  html,body{overflow-x:hidden!important;}
+  .site-header,.site-header.scrolled{height:70px!important;min-height:70px!important;}
+  .site-header .nav{height:70px!important;min-height:70px!important;width:calc(100% - 28px)!important;max-width:none!important;}
+  .site-header .brand{font-size:23px!important;line-height:1!important;white-space:nowrap!important;}
+  .site-header .nav-right{margin-left:auto!important;display:flex!important;align-items:center!important;gap:8px!important;}
+  .site-header .nav-right>.btn{display:none!important;}
+  .site-header .hamb{width:42px!important;height:42px!important;flex:0 0 42px!important;border-radius:11px!important;}
+  .site-header .desktop-nav{top:70px!important;left:10px!important;right:10px!important;width:auto!important;max-height:calc(100dvh - 82px)!important;padding:10px!important;border-radius:15px!important;}
+  .site-header .desktop-nav>a,.site-header .desktop-nav .drop>a{min-height:48px!important;padding:12px 13px!important;font-size:15px!important;line-height:1.3!important;}
+  .site-header .drop-panel.nav-mega{max-width:100%!important;}
+
+  .hero{
+    min-height:760px!important;
+    padding:92px 0 28px!important;
+    overflow:hidden!important;
+  }
+  .hero__container{width:calc(100% - 30px)!important;max-width:620px!important;}
+  .hero__track{height:680px!important;min-height:680px!important;}
+  .hero__slide{align-items:flex-start!important;padding-top:4px!important;}
+  .hero__copy{width:100%!important;min-height:0!important;max-width:none!important;transform:none!important;padding:0!important;}
+  .hero__eyebrow{font-size:9px!important;line-height:1.45!important;letter-spacing:.09em!important;margin-bottom:12px!important;max-width:100%!important;}
+  .hero h1{font-size:clamp(34px,9.5vw,45px)!important;line-height:1.06!important;letter-spacing:-.045em!important;max-width:100%!important;min-height:0!important;margin:0!important;}
+  .hero__copy>p{font-size:15px!important;line-height:1.55!important;margin:15px 0 19px!important;max-width:100%!important;min-height:0!important;}
+  .hero__actions{width:100%!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;}
+  .hero__btn{width:100%!important;min-height:49px!important;padding:0 12px!important;font-size:12px!important;line-height:1.25!important;text-align:center!important;}
+  .hero__signals{gap:8px 14px!important;margin-top:15px!important;font-size:10px!important;line-height:1.4!important;min-height:0!important;}
+  .hero__visual{width:calc(100% - 30px)!important;right:15px!important;left:auto!important;bottom:8px!important;top:auto!important;transform:none!important;}
+  .growth-dashboard{width:100%!important;min-height:205px!important;aspect-ratio:1.35/1!important;border-radius:22px!important;padding:16px!important;}
+  .growth-chart{height:52%!important;}
+  .growth-dashboard__top strong{font-size:13px!important;}
+  .growth-dashboard__top span{font-size:8px!important;}
+  .growth-dashboard__metric strong{font-size:28px!important;}
+  .growth-dashboard__metric span{font-size:9px!important;}
+  .growth-stat{display:none!important;}
+}
+
+@media (max-width:520px){
+  .site-header .nav{width:calc(100% - 20px)!important;}
+  .site-header .brand{font-size:22px!important;}
+  .hero{min-height:735px!important;padding-top:88px!important;}
+  .hero__track{height:655px!important;min-height:655px!important;}
+  .hero__container{width:calc(100% - 28px)!important;}
+  .hero__eyebrow{font-size:8.5px!important;}
+  .hero h1{font-size:clamp(33px,10vw,42px)!important;}
+  .hero__copy>p{font-size:14px!important;}
+  .hero__btn{font-size:11.5px!important;padding:0 9px!important;}
+  .hero__visual{width:calc(100% - 24px)!important;right:12px!important;bottom:7px!important;}
+  .growth-dashboard{min-height:190px!important;border-radius:19px!important;}
+}
+
+@media (max-width:380px){
+  .hero{min-height:700px!important;padding-top:84px!important;}
+  .hero__track{height:625px!important;min-height:625px!important;}
+  .hero h1{font-size:32px!important;}
+  .hero__copy>p{font-size:13.5px!important;}
+  .hero__actions{grid-template-columns:1fr!important;}
+  .hero__btn{min-height:47px!important;}
+  .hero__signals span:nth-child(3){display:none!important;}
+  .hero__visual{bottom:5px!important;}
+  .growth-dashboard{min-height:175px!important;}
+}
+</style>
+
 </body>
 </html>
