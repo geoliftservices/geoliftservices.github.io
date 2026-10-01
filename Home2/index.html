@@ -3727,6 +3727,368 @@ section.services .service-cards > :nth-child(3){
 }
 </style>
 
+<style id="geolift-platform-ecosystem">
+/* GeoLift platform ecosystem — premium bridge below hero */
+.geolift-platforms{
+  position:relative;
+  padding:34px 0 30px!important;
+  background:#06264D!important;
+  color:#fff;
+  overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.geolift-platforms:before{
+  content:"";
+  position:absolute;
+  width:520px;height:520px;
+  right:-190px;top:-300px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,166,214,.22),transparent 68%);
+  pointer-events:none;
+}
+.geolift-platforms:after{
+  content:"";
+  position:absolute;
+  width:380px;height:380px;
+  left:-260px;bottom:-300px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(7,87,201,.25),transparent 68%);
+  pointer-events:none;
+}
+.geolift-platforms .container{position:relative;z-index:2}
+.platforms-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:18px;
+}
+.platforms-label{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  color:#A9C4DD;
+  font-size:9px;
+  font-weight:850;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.platforms-label i{
+  width:20px;height:2px;
+  background:#18B5A5;
+  border-radius:99px;
+}
+.platforms-top p{
+  margin:0;
+  color:#8FAAC2;
+  font-size:11px;
+}
+.platforms-grid{
+  display:grid;
+  grid-template-columns:1.25fr repeat(4,1fr);
+  gap:9px;
+}
+.platform-card{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 14px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:13px;
+  background:rgba(255,255,255,.055);
+  backdrop-filter:blur(8px);
+  transition:.25s ease;
+}
+.platform-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(24,181,165,.55);
+  background:rgba(255,255,255,.09);
+}
+.platform-card--primary{
+  background:linear-gradient(135deg,rgba(255,255,255,.11),rgba(24,181,165,.10));
+  border-color:rgba(24,181,165,.35);
+}
+.platform-mark{
+  width:35px;height:35px;
+  flex:0 0 35px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:#fff;
+  color:#0757C9;
+  font-size:14px;
+  font-weight:900;
+}
+.platform-card strong{
+  display:block;
+  color:#fff;
+  font-size:12px;
+  line-height:1.2;
+}
+.platform-card span{
+  display:block;
+  margin-top:4px;
+  color:#8FAAC2;
+  font-size:9px;
+  line-height:1.2;
+}
+.platform-card>b{
+  margin-left:auto;
+  align-self:flex-start;
+  color:#5E7B96;
+  font:800 8px/1 monospace;
+}
+.platforms-foot{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:16px;
+  color:#68849E;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+.platforms-foot i{
+  width:28px;height:1px;
+  background:#31506D;
+}
+@media(max-width:950px){
+  .platforms-grid{grid-template-columns:repeat(3,1fr)}
+  .platform-card--primary{grid-column:span 2}
+}
+@media(max-width:600px){
+  .geolift-platforms{padding:28px 0 24px!important}
+  .platforms-top{display:block;margin-bottom:15px}
+  .platforms-top p{margin-top:7px;font-size:10px}
+  .platforms-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .platform-card--primary{grid-column:span 2}
+  .platform-card{min-height:66px;padding:11px}
+  .platform-mark{width:31px;height:31px;flex-basis:31px;font-size:12px}
+  .platform-card strong{font-size:10px}
+  .platform-card span{font-size:8px}
+  .platform-card>b{display:none}
+  .platforms-foot{gap:7px;font-size:7px;white-space:nowrap}
+  .platforms-foot i{width:12px}
+}
+</style>
+<style id="geolift-platform-showcase-final">
+
+/* FINAL PLATFORM SHOWCASE — bold, readable, eye-catching */
+.geolift-platforms{
+  position:relative!important;
+  padding:86px 0 68px!important;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(0,166,214,.20),transparent 28%),
+    radial-gradient(circle at 5% 85%,rgba(23,105,224,.20),transparent 30%),
+    #06264D!important;
+  color:#fff!important;
+  overflow:hidden!important;
+}
+.geolift-platforms:before{
+  content:"LOCAL";
+  position:absolute;
+  right:-30px;
+  bottom:-72px;
+  font-size:180px;
+  line-height:1;
+  font-weight:950;
+  letter-spacing:-12px;
+  color:rgba(255,255,255,.025);
+  pointer-events:none;
+}
+.platforms-heading{
+  max-width:900px;
+  margin:0 auto 48px;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+.platforms-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#7EDBD2;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.platforms-kicker span{
+  width:28px;height:2px;background:#18B5A5;border-radius:99px;
+}
+.platforms-heading h2{
+  margin:16px 0 12px;
+  color:#fff!important;
+  font-size:clamp(38px,4.5vw,64px)!important;
+  line-height:1.03!important;
+  letter-spacing:-2.8px!important;
+}
+.platforms-heading h2 em{
+  color:#7EDBD2!important;
+  font-style:normal;
+}
+.platforms-heading p{
+  margin:0 auto;
+  max-width:620px;
+  color:#AFC3D7;
+  font-size:16px;
+  line-height:1.65;
+}
+.platforms-showcase{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:15px;
+  position:relative;
+  z-index:2;
+}
+.platform-tile{
+  position:relative;
+  min-height:235px;
+  padding:27px;
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.065);
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease;
+}
+.platform-tile:hover{
+  transform:translateY(-7px);
+  border-color:rgba(126,219,210,.60);
+  box-shadow:0 22px 55px rgba(0,0,0,.22);
+}
+.platform-tile--google{
+  grid-row:span 2;
+  min-height:485px;
+  background:linear-gradient(145deg,#0A3970 0%,#0757C9 55%,#00A6D6 100%);
+}
+.platform-tile--maps{background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(24,181,165,.12))}
+.platform-tile--gbp{background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(7,87,201,.13))}
+.platform-tile--meta{background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(124,108,255,.14))}
+.platform-tile--whatsapp{background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(32,200,107,.13))}
+.tile-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#A8C0D6;
+  font:800 9px/1 monospace;
+  letter-spacing:.12em;
+}
+.tile-top i{
+  font-style:normal;
+  color:#7EDBD2;
+  font-size:8px;
+}
+.tile-icon{
+  width:58px;height:58px;
+  margin-top:35px;
+  display:grid;
+  place-items:center;
+  border-radius:16px;
+  background:#fff;
+  color:#0757C9;
+  font-size:24px;
+  font-weight:950;
+  box-shadow:0 10px 30px rgba(0,0,0,.13);
+}
+.platform-tile--google .tile-icon{
+  width:76px;height:76px;
+  margin-top:72px;
+  border-radius:21px;
+  font-size:32px;
+}
+.platform-tile h3{
+  margin:18px 0 8px;
+  color:#fff!important;
+  font-size:24px!important;
+  line-height:1.1!important;
+  letter-spacing:-.5px;
+}
+.platform-tile--google h3{
+  font-size:38px!important;
+  letter-spacing:-1.5px;
+}
+.platform-tile p{
+  margin:0;
+  max-width:360px;
+  color:#B9CBDB;
+  font-size:13px;
+  line-height:1.65;
+}
+.platform-tile--google p{
+  max-width:430px;
+  font-size:15px;
+  line-height:1.7;
+}
+.tile-arrow{
+  position:absolute;
+  right:25px;
+  bottom:23px;
+  width:38px;height:38px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:50%;
+  color:#fff;
+  font-size:17px;
+}
+.platforms-bottom{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  margin-top:30px;
+  color:#7F9BB5;
+  font-size:9px;
+  letter-spacing:.16em;
+  font-weight:900;
+}
+.platforms-bottom span{color:#3D6382;font-size:14px}
+.platforms-bottom strong{color:#C4D5E4}
+@media(max-width:900px){
+  .geolift-platforms{padding:70px 0 55px!important}
+  .platforms-showcase{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto;
+  }
+  .platform-tile--google{
+    grid-column:span 2;
+    grid-row:auto;
+    min-height:380px;
+  }
+  .platform-tile--google .tile-icon{margin-top:45px}
+}
+@media(max-width:600px){
+  .geolift-platforms{padding:60px 0 42px!important}
+  .platforms-heading{margin-bottom:30px}
+  .platforms-kicker{font-size:9px}
+  .platforms-heading h2{
+    font-size:38px!important;
+    letter-spacing:-1.8px!important;
+  }
+  .platforms-heading p{font-size:14px}
+  .platforms-showcase{grid-template-columns:1fr;gap:11px}
+  .platform-tile,.platform-tile--google{
+    grid-column:auto;
+    min-height:205px;
+    padding:23px;
+  }
+  .platform-tile--google{min-height:330px}
+  .platform-tile--google .tile-icon{margin-top:42px}
+  .platform-tile--google h3{font-size:32px!important}
+  .platform-tile h3{font-size:22px!important}
+  .platform-tile p,.platform-tile--google p{font-size:13px}
+  .platforms-bottom{
+    gap:7px;
+    font-size:7px;
+    letter-spacing:.08em;
+  }
+  .platforms-bottom span{font-size:10px}
+}
+
+</style>
 </head>
 
 
@@ -3864,7 +4226,7 @@ section.services .service-cards > :nth-child(3){
 
 <main>
   <span id="gbp-management" class="nav-anchor-map"></span><span id="gbp-optimization" class="nav-anchor-map"></span><span id="gbp-setup" class="nav-anchor-map"></span><span id="gbp-reviews" class="nav-anchor-map"></span><span id="gbp-recovery" class="nav-anchor-map"></span><span id="maps-seo" class="nav-anchor-map"></span><span id="multi-location-gbp" class="nav-anchor-map"></span><span id="profile-protection" class="nav-anchor-map"></span><span id="local-seo" class="nav-anchor-map"></span><span id="keyword-research" class="nav-anchor-map"></span><span id="on-page-seo" class="nav-anchor-map"></span><span id="location-seo" class="nav-anchor-map"></span><span id="local-citations" class="nav-anchor-map"></span><span id="local-seo-audit" class="nav-anchor-map"></span><span id="ai-websites" class="nav-anchor-map"></span><span id="seo-ready-websites" class="nav-anchor-map"></span><span id="local-business-websites" class="nav-anchor-map"></span><span id="high-converting-websites" class="nav-anchor-map"></span><span id="paid-ads" class="nav-anchor-map"></span><span id="google-ads" class="nav-anchor-map"></span><span id="local-google-ads" class="nav-anchor-map"></span><span id="lead-generation" class="nav-anchor-map"></span><span id="whatsapp-leads" class="nav-anchor-map"></span><span id="white-label" class="nav-anchor-map"></span>
-<section class="hero" id="home" aria-label="GeoLift local growth services">
+<section class="hero" id="home" aria-label="GeoLift full-stack digital marketing services">
   <div class="hero__orb hero__orb--a" aria-hidden="true"></div>
   <div class="hero__orb hero__orb--b" aria-hidden="true"></div>
 
@@ -3873,24 +4235,24 @@ section.services .service-cards > :nth-child(3){
     <article class="hero__slide is-active" data-slide="0">
       <div class="hero__container">
         <div class="hero__copy">
-          <div class="hero__eyebrow"><span></span> LOCAL SEARCH & GROWTH · GOOGLE BUSINESS PROFILE</div>
-          <h1>Turn Your Google Presence Into a <strong>Growth Engine.</strong></h1>
-          <p>Strategic Google Business Profile management for businesses, agencies and multi-location brands — keeping your local presence optimized, active and ready to convert high-intent searches into enquiries.</p>
+          <div class="hero__eyebrow"><span></span> AI-POWERED DIGITAL MARKETING AGENCY</div>
+          <h1>Turn Your Entire Digital Presence Into a <strong>Predictable Revenue Engine.</strong></h1>
+          <p>We combine AI intelligence with complete marketing execution—from search visibility and high-converting websites to targeted ads—engineered to deliver maximum ROI and consistent customer growth.</p>
 
           <div class="hero__actions">
-            <a class="hero__btn hero__btn--primary" href="#contact">Get a Proposal <span>→</span></a>
-            <a class="hero__btn hero__btn--secondary" href="/google-business-profile-management/">Explore GBP Services</a>
+            <a class="hero__btn hero__btn--primary" href="#contact">Get a Free Growth Audit <span>→</span></a>
+            <a class="hero__btn hero__btn--secondary" href="/google-business-profile-management/">Explore Marketing Solutions</a>
           </div>
 
           <div class="hero__trust" aria-label="GeoLift trust signal">
             <span class="hero__trust-stars" aria-hidden="true">★★★★★</span>
-            <span>Built for businesses, agencies & multi-location teams</span>
+            <span>AI-Powered Strategy • Guaranteed Transparency • Proven Revenue Focus</span>
           </div>
 
-          <div class="hero__signals" aria-label="GBP capabilities">
-            <span><b>01</b> AI-assisted insights</span>
-            <span><b>02</b> Human QA & execution</span>
-            <span><b>03</b> Continuous monitoring</span>
+          <div class="hero__signals" aria-label="Full-stack digital marketing capabilities">
+            <span><b>01</b> 100% ROI Focused</span>
+            <span><b>02</b> AI Market Intelligence</span>
+            <span><b>03</b> Complete Execution</span>
           </div>
         </div>
       </div>
@@ -3900,19 +4262,19 @@ section.services .service-cards > :nth-child(3){
     <article class="hero__slide" data-slide="1">
       <div class="hero__container">
         <div class="hero__copy">
-          <div class="hero__eyebrow"><span></span> LOCAL SEO & MAP PACK GROWTH</div>
-          <h1>Build Local Visibility That <strong>Drives Real Demand.</strong></h1>
-          <p>Connect your website, Google Business Profile, location signals and search strategy into one structured Local SEO system built around the markets you want to grow.</p>
+          <div class="hero__eyebrow"><span></span> ORGANIC GROWTH · SEARCH & WEBSITES</div>
+          <h1>Capture Customers Wherever They <strong>Search and Decide.</strong></h1>
+          <p>Whether your customers search locally or nationally, we build modern websites and search strategies that rank your business at the top and turn site visitors into paying clients.</p>
 
           <div class="hero__actions">
-            <a class="hero__btn hero__btn--primary" href="#contact">Get Your Local SEO Audit <span>→</span></a>
-            <a class="hero__btn hero__btn--secondary" href="/local-seo/">Explore Local SEO</a>
+            <a class="hero__btn hero__btn--primary" href="#contact">Audit Your Digital Presence <span>→</span></a>
+            <a class="hero__btn hero__btn--secondary" href="/local-seo/">Explore SEO & Websites</a>
           </div>
 
-          <div class="hero__signals" aria-label="Local SEO capabilities">
-            <span><b>01</b> Location architecture</span>
-            <span><b>02</b> Map Pack signals</span>
-            <span><b>03</b> Local content</span>
+          <div class="hero__signals" aria-label="Search and website capabilities">
+            <span><b>01</b> Top Search Rankings</span>
+            <span><b>02</b> High-Converting Sites</span>
+            <span><b>03</b> Data-Driven Strategy</span>
           </div>
         </div>
       </div>
@@ -3922,19 +4284,19 @@ section.services .service-cards > :nth-child(3){
     <article class="hero__slide" data-slide="2">
       <div class="hero__container">
         <div class="hero__copy">
-          <div class="hero__eyebrow"><span></span> PAID ADS · PERFORMANCE ADD-ON</div>
-          <h1>Capture Demand When Customers Are <strong>Ready to Act.</strong></h1>
-          <p>Focused Google and Meta campaigns designed to complement your organic visibility and turn high-intent searches into calls, WhatsApp conversations and qualified enquiries.</p>
+          <div class="hero__eyebrow"><span></span> PERFORMANCE MARKETING · GOOGLE & META ADS</div>
+          <h1>Scale Inbound Leads with <strong>Precision Paid Campaigns.</strong></h1>
+          <p>Get immediate inbound enquiries with targeted Google and Meta ad campaigns engineered by AI to optimize ad spend, maximize ROAS, and capture ready-to-buy customers.</p>
 
           <div class="hero__actions">
-            <a class="hero__btn hero__btn--primary" href="#contact">Plan Your Growth Campaign <span>→</span></a>
-            <a class="hero__btn hero__btn--secondary" href="/google-ads/">Explore Paid Ads</a>
+            <a class="hero__btn hero__btn--primary" href="#contact">Calculate Your Ad ROI <span>→</span></a>
+            <a class="hero__btn hero__btn--secondary" href="/google-ads/">Explore Paid Campaigns</a>
           </div>
 
-          <div class="hero__signals" aria-label="Paid growth capabilities">
-            <span><b>01</b> Local Google Ads</span>
-            <span><b>02</b> Meta campaigns</span>
-            <span><b>03</b> WhatsApp lead capture</span>
+          <div class="hero__signals" aria-label="Paid performance capabilities">
+            <span><b>01</b> Max ROAS Targeting</span>
+            <span><b>02</b> Instant Lead Flow</span>
+            <span><b>03</b> Transparent Analytics</span>
           </div>
         </div>
       </div>
@@ -4009,16 +4371,66 @@ section.services .service-cards > :nth-child(3){
   </div>
 
   <div class="hero__dots" aria-label="Hero slides">
-    <button class="is-active" type="button" data-slide-to="0" aria-label="Show Google Business Profile slide"></button>
-    <button type="button" data-slide-to="1" aria-label="Show Local SEO slide"></button>
-    <button type="button" data-slide-to="2" aria-label="Show Paid Growth slide"></button>
+    <button class="is-active" type="button" data-slide-to="0" aria-label="Show Full-Stack Digital Marketing slide"></button>
+    <button type="button" data-slide-to="1" aria-label="Show Search and Websites slide"></button>
+    <button type="button" data-slide-to="2" aria-label="Show Paid Campaigns slide"></button>
     <span><b>01</b> / 03</span>
   </div>
 </section>
 
-<section class="brand-rail">
-  <div class="container rail-inner"><span>BUILT AROUND THE PLATFORMS LOCAL BUSINESSES ACTUALLY USE</span>
-    <div class="platform-mini"><span>Google Search</span><span>Google Maps</span><span>Google Business Profile</span><span>Meta</span><span>WhatsApp</span></div>
+<section class="brand-rail geolift-platforms" aria-label="GeoLift local growth ecosystem">
+  <div class="container">
+    <div class="platforms-heading">
+      <div class="platforms-kicker"><span></span> WHERE LOCAL GROWTH HAPPENS</div>
+      <h2>Built for the platforms <em>customers use every day.</em></h2>
+      <p>One connected strategy across search, maps, social and direct conversations.</p>
+    </div>
+
+    <div class="platforms-showcase">
+      <div class="platform-tile platform-tile--google">
+        <div class="tile-top"><span>01</span><i>DISCOVERY</i></div>
+        <div class="tile-icon">G</div>
+        <h3>Google Search</h3>
+        <p>Be visible when customers are actively looking for what you offer.</p>
+        <div class="tile-arrow">↗</div>
+      </div>
+
+      <div class="platform-tile platform-tile--maps">
+        <div class="tile-top"><span>02</span><i>LOCAL INTENT</i></div>
+        <div class="tile-icon">⌖</div>
+        <h3>Google Maps</h3>
+        <p>Turn nearby searches into directions, calls and visits.</p>
+        <div class="tile-arrow">↗</div>
+      </div>
+
+      <div class="platform-tile platform-tile--gbp">
+        <div class="tile-top"><span>03</span><i>TRUST</i></div>
+        <div class="tile-icon">★</div>
+        <h3>Business Profile</h3>
+        <p>Keep your profile active, accurate and ready to convert.</p>
+        <div class="tile-arrow">↗</div>
+      </div>
+
+      <div class="platform-tile platform-tile--meta">
+        <div class="tile-top"><span>04</span><i>DEMAND</i></div>
+        <div class="tile-icon">M</div>
+        <h3>Meta</h3>
+        <p>Extend local reach and create demand beyond search.</p>
+        <div class="tile-arrow">↗</div>
+      </div>
+
+      <div class="platform-tile platform-tile--whatsapp">
+        <div class="tile-top"><span>05</span><i>CONVERSION</i></div>
+        <div class="tile-icon">◔</div>
+        <h3>WhatsApp</h3>
+        <p>Give interested customers a direct path to your team.</p>
+        <div class="tile-arrow">↗</div>
+      </div>
+    </div>
+
+    <div class="platforms-bottom">
+      <strong>SEARCH</strong><span>→</span><strong>DISCOVERY</strong><span>→</span><strong>TRUST</strong><span>→</span><strong>LEADS</strong>
+    </div>
   </div>
 </section>
 
