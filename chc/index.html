@@ -6031,7 +6031,19 @@ if(reviewTrack && reviewNext && reviewPrev){
   .chc-footer-brand,.chc-footer-contact{grid-column:auto;}
 }
 </style>
-<script id="chc-preloader-js">(function(){function hide(){var e=document.getElementById('chc-preloader');if(e)e.classList.add('chc-loaded')}if(document.readyState==='complete'){setTimeout(hide,3600)}else{window.addEventListener('load',function(){setTimeout(hide,3600)},{once:true})}setTimeout(hide,5600)})();</script>
+<style id="chc-preloader-medium-final">
+/* Mid-speed preloader: between the original 3–4s and the fast ~1s version. */
+#chc-preloader{transition:opacity .72s cubic-bezier(.22,1,.36,1),visibility .72s ease!important}
+.chc-loader-logo{animation-duration:1.65s!important;animation-delay:.08s!important}
+.chc-loader-logo-wrap{animation-duration:1.8s!important}
+.chc-loader-logo-wrap:before{animation-duration:1.9s!important}
+.chc-loader-logo-wrap:after{animation-duration:2s!important}
+.chc-loader-name{animation-delay:1.02s!important;animation-duration:.58s!important}
+.chc-loader-sub{animation-delay:1.12s!important;animation-duration:.5s!important}
+.chc-loader-line{animation-delay:1.18s!important;animation-duration:.42s!important}
+.chc-loader-line span{animation-duration:1.45s!important;animation-delay:1.05s!important}
+</style>
+<script id="chc-preloader-js">(function(){function hide(){var e=document.getElementById('chc-preloader');if(e)e.classList.add('chc-loaded')}if(document.readyState==='complete'){setTimeout(hide,1700)}else{window.addEventListener('load',function(){setTimeout(hide,1700)},{once:true})}setTimeout(hide,2300)})();</script>
 
 <script id="mobile-cta-scroll-script">
 (function(){
