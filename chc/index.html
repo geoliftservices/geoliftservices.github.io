@@ -6889,6 +6889,28 @@ if(reviewTrack && reviewNext && reviewPrev){
   }
 }
 </style>
+
+<style id="hero-heading-3-percent-smaller-both">
+/* Hero heading: 3% smaller for both desktop and mobile */
+@media (min-width:761px){
+  .hero-heading-slide h1,
+  .hero h1{
+    font-size:clamp(42px,5.04vw,68px) !important;
+  }
+}
+@media (max-width:760px){
+  .hero-heading-slide h1,
+  .hero h1{
+    font-size:clamp(37px,10.65vw,47.5px) !important;
+  }
+}
+@media (max-width:420px){
+  .hero-heading-slide h1,
+  .hero h1{
+    font-size:35px !important;
+  }
+}
+</style>
 </body></html>
 <style id="styles-premium-refresh">
 /* Premium Hearing Aid Styles refresh */
